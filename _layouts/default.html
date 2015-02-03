@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9" lang=""><![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang=""><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+{% include head.html %}
+
+<body class="pl">
+    <nav class="pl-nav-skip sr">
+        <h2 class="pl-nav-skip-title">Skip to:</h2>
+        <a class="pl-action-skip" href="#content-main">this page's main content</a>
+        <a class="pl-action-skip" href="#nav-patterns">list of edX patterns</a>
+        <a class="pl-action-skip" href="#nav-documentation">list of edX documentation</a>
+    </nav>
+
+    <hr class="pl-divider pl-sr">
+
+    <div class="pl-wrapper-view">
+        {% include header.html %}
+
+        <hr class="pl-divider pl-sr">
+
+        <div class="pl-wrapper-content-supplemental">
+            {% include navigation.html %}
+        </div>
+
+        <hr class="pl-divider pl-sr">
+
+        <div class="pl-wrapper-content-main">
+            <main class="pl-content pl-content-main" id="content-main">
+                {{ content }}
+            </main>
+        </div>
+
+        <hr class="pl-divider pl-sr">
+
+        {% include footer.html %}
+    </div>
+
+    {% include assets-secondary.html %}
+</body>
+</html>
+
