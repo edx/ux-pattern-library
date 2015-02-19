@@ -1,0 +1,35 @@
+<nav class="pl-nav pl-nav-elements" id="pl-nav-elements">
+    <h2 class="pl-nav-title">Elements</h2>
+
+    <ul class="nav-list list-elements">
+        {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
+        {% for post in sorted_elements_posts %}
+        <li class="element">
+            {% if page.title == "Home" %}
+            <a href="#{{post.slug}}">{{post.title}}</a>
+            {% else %}
+            <a href="{{post.url}}">{{post.title}}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<nav class="pl-nav pl-nav-documentation" id="pl-nav-documentation">
+    <h2 class="pl-nav-title">Standards &amp; Styleguides</h2>
+
+    <ul class="nav-list list-styleguides">
+        <li class="styleguide">
+            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General">General Styleguide</a>
+        </li>
+        <li class="styleguide">
+            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML">HTMLS Styleguide</a>
+        </li>
+        <li class="styleguide">
+            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS">Sass &amp; CSS Styleguide</a>
+        </li>
+        <li class="styleguide">
+            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility">Accessibility Styleguide</a>
+        </li>
+    </ul>
+</nav>
