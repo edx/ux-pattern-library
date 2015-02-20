@@ -4,7 +4,7 @@ title:        Example - Kitchen Sink
 date:         2015-02-5 00:00:00
 
 categories:   elements
-tags:         
+tags:
 - example
 
 slug:         example-kitchen-sink
@@ -26,17 +26,40 @@ description:  This is a kitchen sink of common HTML elements
 <h1 id="headings-with-text">Headings with Text</h1>
 
 <h1>Heading 1</h1>
-<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
+    Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at,
+    tincidunt nec, gravida vehicula, nisl.
+</p>
+
 <h2>Heading 2</h2>
-<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
+    Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at,
+    tincidunt nec, gravida vehicula, nisl.
+</p>
+
 <h3>Heading 3</h3>
-<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
+    Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at,
+    tincidunt nec, gravida vehicula, nisl.
+</p>
+
 <h4>Heading 4</h4>
-<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
+    Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at,
+    tincidunt nec, gravida vehicula, nisl.
+</p>
+
 <h5>Heading 5</h5>
-<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
+    Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at,
+    tincidunt nec, gravida vehicula, nisl.
+</p>
+
 <h6>Heading 6</h6>
-<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
+    Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at,
+    tincidunt nec, gravida vehicula, nisl.
+</p>
 
 <hr />
 
@@ -44,33 +67,50 @@ description:  This is a kitchen sink of common HTML elements
 
 <h2 id="paragraph">Paragraphs and Images</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.</p>
-<p>Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.</p>
-
-<p><img alt="Placeholder Image and Some Alt Text" src="http://placehold.it/350x150" title="A title element for this placeholder image."></p>
-
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.</p>
+<p>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est.
+    Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.
+</p>
+<p>
+    Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa
+    quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas
+    ornare tortor.
+</p>
+<p>
+    <img alt="Placeholder Image and Some Alt Text" src="http://placehold.it/350x150" title="A title element for this placeholder image.">
+</p>
+<p>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est.
+    Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.
+</p>
 
 <h2>Blockquote</h2>
+<p>
+    This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+</p>
 
-<p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 <blockquote>
-    "<strong>This is a blockquote.<strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl."
+    "<strong>This is a blockquote.</strong>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est.
+    Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero
+    nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl."
 </blockquote>
+
 <p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 
 <h2>Figure-Caption</h2>
-
 <figure>
     <img src="http://placehold.it/350x150" alt="A placeholder figure image." />
     <figcaption>The figcaption element example</figcaption>
 </figure>
 
 <h2>Details-Summary</h2>
-
 <details>
     <summary>The summary element example</summary>
-    <p>The details example text. It may be styled differently based on what browser or operating system you are using.</p>
+    <p>
+        The details example text. It may be styled differently based on what browser or operating
+        system you are using.
+    </p>
 </details>
 
 <hr />
@@ -108,14 +148,19 @@ description:  This is a kitchen sink of common HTML elements
 
 <h1 id="monospace">Monospace / Preformatted</h1>
 <p>Code block wrapped in "pre" and "code" tags</p>
-<pre><code>// Loop through Divs using Javascript.
-    var divs = document.querySelectorAll('div'), i;
+<pre><code>
+// Loop through Divs using Javascript.
+var divs = document.querySelectorAll('div'), i;
 
-    for (i = 0; i < divs.length; ++i) {
+for (i = 0; i < divs.length; ++i) {
     divs[i].style.color = "green";
 }</code></pre>
 <p>Monospace Text wrapped in "pre" tags</p>
-<pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p></pre>
+<pre>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est.
+Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero
+nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+</pre>
 
 <hr />
 
@@ -175,18 +220,26 @@ description:  This is a kitchen sink of common HTML elements
     <caption>This is a table caption</caption>
     <thead>
         <tr>
-            <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+            <th>Table Header 1</th>
+            <th>Table Header 2</th>
+            <th>Table Header 3</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            <td>Division 1</td>
+            <td>Division 2</td>
+            <td>Division 3</td>
         </tr>
         <tr class="even">
-            <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            <td>Division 1</td>
+            <td>Division 2</td>
+            <td>Division 3</td>
         </tr>
         <tr>
-            <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            <td>Division 1</td>
+            <td>Division 2</td>
+            <td>Division 3</td>
         </tr>
         <tr>
             <td colspan="3">A row with a cell spanning all 3 columns</td>
@@ -194,7 +247,9 @@ description:  This is a kitchen sink of common HTML elements
     </tbody>
     <tfoot>
         <tr>
-            <th>Table Footer 1</th><th>Table Footer 2</th><th>Table Footer 3</th>
+            <th>Table Footer 1</th>
+            <th>Table Footer 2</th>
+            <th>Table Footer 3</th>
         </tr>
     </tfoot>
 </table>
@@ -204,7 +259,6 @@ description:  This is a kitchen sink of common HTML elements
 <h1 id="form_elements">Media and Form Elements</h1>
 
 <h2>Media</h2>
-
 <h3>The Audio Element:</h3>
 <audio controls>
     <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg" />
@@ -224,7 +278,6 @@ description:  This is a kitchen sink of common HTML elements
 <iframe width="560" height="315" src="http://www.youtube.com/embed/l4f9QF0SGuQ" frameborder="0" allowfullscreen></iframe>
 
 <h2>Form Elements</h2>
-
 <p>The Fieldset:</p>
 <fieldset>
     <legend>Legend</legend>
@@ -232,31 +285,38 @@ description:  This is a kitchen sink of common HTML elements
     <p>The Form:</p>
 
     <form>
-        <p><label for="text_field">Text Field:</label><br />
+        <p>
+            <label for="text_field">Text Field:</label><br />
             <input type="text" id="text_field" />
         </p>
 
-        <p><label for="text_field_disabled">Disabled Text Field:</label><br />
+        <p>
+            <label for="text_field_disabled">Disabled Text Field:</label><br />
             <input type="text" id="text_field_disabled" disabled value="I'm disabled" />
         </p>
 
-        <p><label for="text_field_readonly">Readonly Text Field:</label><br />
+        <p>
+            <label for="text_field_readonly">Readonly Text Field:</label><br />
             <input type="text" id="text_field_readonly" readonly value="I'm readonly" />
         </p>
 
-        <p><label for="text_area">Text Area:</label><br />
+        <p>
+            <label for="text_area">Text Area:</label><br />
             <textarea id="text_area"></textarea>
         </p>
 
-        <p><label for="text_area_disabled">Disabled Text Area:</label><br />
+        <p>
+            <label for="text_area_disabled">Disabled Text Area:</label><br />
             <textarea id="text_area_disabled" disabled>I'm disabled</textarea>
         </p>
 
-        <p><label for="text_area">Readonly Text Area:</label><br />
+        <p>
+            <label for="text_area">Readonly Text Area:</label><br />
             <textarea id="text_area" readonly>I'm readonly</textarea>
         </p>
 
-        <p><label for="select_element">Select Element:</label><br />
+        <p>
+            <label for="select_element">Select Element:</label><br />
             <select id="select_element">
                 <optgroup label="Option Group 1">
                     <option value="1">Option 1</option>
@@ -270,70 +330,84 @@ description:  This is a kitchen sink of common HTML elements
             </select>
         </p>
 
-        <p><label for="select_element_disabled">Disabled Select Element:</label><br/>
+        <p>
+            <label for="select_element_disabled">Disabled Select Element:</label><br/>
             <select id="select_element_disabled" disabled>
                 <option value="1">Unselectable Option</option>
                 <option value="2">This option should not even be seen</option>
             </select>
         </p>
 
-        <p>Radio Buttons:<br />
+        <p>
+            Radio Buttons:<br />
             <label><input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1</label><br/>
             <label><input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2</label><br/>
             <label><input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3</label><br/>
             <label><input type="radio" class="radio" name="radio_button" value="radio_4" disabled /> Radio Disabled</label><br/>
         </p>
 
-        <p>Checkboxes:<br />
+        <p>
+            Checkboxes:<br />
             <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Checkbox 1</label><br/>
             <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Checkbox 2</label><br/>
             <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Checkbox 3</label><br/>
             <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_4" disabled /> Checkbox Disabled</label><br/>
         </p>
 
-        <p><label for="password">Password:</label><br />
+        <p>
+            <label for="password">Password:</label><br />
             <input type="password" class="password" id="password" />
         </p>
 
-        <p><label for="file">File Input:</label><br />
+        <p>
+            <label for="file">File Input:</label><br />
             <input type="file" class="file" id="file" />
         </p>
 
         <h3>HTML5-specific Form Elements</h3>
 
-        <p><label for="email">Email:</label><br />
+        <p>
+            <label for="email">Email:</label><br />
             <input type="email" id="email" />
         </p>
 
-        <p><label for="url">URL:</label><br />
+        <p>
+            <label for="url">URL:</label><br />
             <input type="url" id="url" />
         </p>
 
-        <p><label for="tel">Telephone:</label><br />
+        <p>
+            <label for="tel">Telephone:</label><br />
             <input type="tel" id="tel" />
         </p>
 
-        <p><label for="number">Number:</label><br />
+        <p>
+            <label for="number">Number:</label><br />
             <input type="number" id="number" min="0" max="10" step="1" value="5" />
         </p>
 
-        <p><label for="search">Search:</label><br />
+        <p>
+            <label for="search">Search:</label><br />
             <input type="search" id="search" />
         </p>
 
-        <p><label for="date">Date:</label><br />
+        <p>
+            <label for="date">Date:</label><br />
             <input type="date" id="date" />
         </p>
 
-        <p><label for="time">Time:</label><br />
+        <p>
+            <label for="time">Time:</label><br />
             <input type="time" id="time" />
         </p>
 
-        <p><label for="color">Color:</label><br />
+        <p>
+            <label for="color">Color:</label><br />
             <input type="color" id="color" />
         </p>
 
-        <p><label for="datalist">Datalist:</label><br />
+        <p>
+            <label for="datalist">Datalist:</label><br />
             <input list="browsers" name="browser" type="datalist" id="datalist" />
             <datalist id="browsers">
                 <option value="Internet Explorer" />
@@ -344,19 +418,23 @@ description:  This is a kitchen sink of common HTML elements
             </datalist>
         </p>
 
-        <p><label for="range">Range:</label><br />
+        <p>
+            <label for="range">Range:</label><br />
             <input type="range" id="range" name="points" min="1" max="10" />
         </p>
 
-        <p><label for="output">Output:</label><br />
+        <p>
+            <label for="output">Output:</label><br />
             <output name="result" id="output">42</output>
         </p>
 
-        <p><label for="progress">Progress:</label><br />
+        <p>
+            <label for="progress">Progress:</label><br />
             <progress id="progress" value="65" max="100"></progress>
         </p>
 
-        <p><label for="meter">Meter:</label><br />
+        <p>
+            <label for="meter">Meter:</label><br />
             <meter id="meter" min="200" max="500" value="350">350 degrees</meter>
         </p>
 
