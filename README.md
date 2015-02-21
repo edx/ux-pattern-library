@@ -11,6 +11,11 @@ This library contains the following:
 - - -
 
 ## Usage
+To work on the code of this project, you'll need the following things installed on your local machine.
+
+1. [Jekyll](http://jekyllrb.com/)
+2. [NodeJS](http://nodejs.org/)
+3. [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages
 
 ### Install Jekyll
 The Pattern Library is managed through Jekyll, so you'll need to install that initially. [Jekyll requires Ruby, Rubygems and a Linux, Unix or Mac OSX system](http://jekyllrb.com/docs/installation/).
@@ -24,13 +29,54 @@ Windows users: Windows users have a bit more work to do, but luckily [@juthilo](
 
 You may also need to install Pygments, the Python syntax highlighter for code snippets that plays nicely with Jekyll (which we use to highlight Front End source code). Read more about this in [the Jekyll docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
-### Run Locally
-To view the Pattern Library locally, start a Jekyll server (which will watch for changes to templates and elements in the library and rebuild the site locally). In a terminal, from the ux-pattern-library root directory, run:
+### Install NodeJS
+If you've never used Node or npm before, you'll need to install Node. If you use homebrew, do:
 
 ```
-$ jekyll serve
+brew install node
 ```
-Open http://localhost:4000 in your browser
+
+Otherwise, you can download and install from [here](http://nodejs.org/download/).
+
+### Install Gulp + Project Dependencies
+From the directory you've checked out this repo into locally, run:
+
+```
+npm install
+```
+
+This runs through all dependencies listed in package.json and downloads them to a node_modules folder in your project directory.
+
+#### The Gulp Command
+To run the version of gulp installed local to the project, in the root of your this project, run:
+
+```
+./node_modules/.bin/gulp
+```
+
+**WAT.** Why can't I just run `gulp`? Well, you could install gulp globally with `npm install -g gulp`, which will add the gulp script to your global bin folder, but it's always better to use the version that's specified in your project's package.json.  My solution to this is to simply alias `./node_modules/.bin/gulp` to `gulp`. Open up `~/.zshrc` or `~./bashrc` and add the following line:
+
+```
+alias gulp='node_modules/.bin/gulp'
+```
+
+Now, running `gulp` in the project directory will use the version specified and installed from the `package.json` file.
+
+### Run Locally (w/ Gulp Workflow)
+To view the Pattern Library locally (and to watch for any local changes to content/assets), run the `default` gulp task with:
+
+```
+gulp
+```
+
+This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['sass', sass_PL', 'images', 'images_PL', 'jekyll-rebuild', jekyll-build' 'watch']`
+
+* The `sass` and `sass_PL` tasks compile your css files.
+* `images` and `images_PL` copies images from a source folder, performs optimizations, the outputs them into the build folder
+* `jekyll-build` and `jekyll-rebuild` run the local jekyll server/preview and re-process any layouts, posts, or templates changed.
+* `watch` which will run the browserifyTask with a `devMode` flag that enables sourcemaps for Sass. The task itself starts watching source files and will re-run the appropriate tasks when those files change.
+
+**NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task suffixed with `*_PL` refers to the reference site UI and not the elements.
 
 ### Publishing & Viewing Remotely
 The most up-to-date version of the library can be viewed on our public domain, **http://code.edx.org/ux-pattern-library**
@@ -48,6 +94,16 @@ When contributing, please:
 **NOTE**: We are currently not accepting contributions from individuals outside of edX. Once we have more progress under our belts and awareness of the standards and methods used to in this library, we'll be reaching out to more individuals for support.
 
 If you have questions in the meantime, please email [ux@edx.org](mailto:ux@edx.org).
+
+- - -
+
+##Heads Ups
+
+###Pattern Library Elements vs. Reference Site UI
+This repository contains both the code needed to generate pattern library elements as well as a reference site to view/learn about these elements. When and where possible, we've tried to keep the assets needed for both separate by:
+
+* prefixing any reference site UI with `pl-*` class names in our site templates and Sass/CSS;
+* containing any reference site UI within the ``_src/pl/`` directory.
 
 - - -
 

@@ -1,8 +1,4 @@
-# Permalinks
-permalink:              /:categories/:title/
-relative_permalinks:    true
-
-# Setup
+# Meta
 title:                  edX Pattern Library
 tagline:                The Visual, UI, and Front End Styleguide for edX
 url:                    http://code.edx.org/ux-pattern-library
@@ -11,12 +7,18 @@ author:
     url:                  http://www.edx.org
     email:                ux@edx.org
 
+# Site
+baseurl:                /
+permalink:              /:categories/:title/
+relative_permalinks:    true
+
+# Local
+exclude:                ["node_modules", "gulpfile.js", "package.json"]
+
 # Custom vars
 github:
     repo:                 https://github.com/edx/ux-pattern-library
 
-# Site/View Config
-baseurl:                /
 
 # Plugins
 highlighter:            pygments;
