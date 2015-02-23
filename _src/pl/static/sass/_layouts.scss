@@ -1,0 +1,35 @@
+// ------------------------------
+// edX Pattern Library Site: Layouts
+
+// About: styling for generic layouts and responsive support.
+
+// ------------------------------
+// #RESPONSIVE
+// ------------------------------
+// breakpoints
+
+// ------------------------------
+// #LAYOUT
+// ------------------------------
+// view overall
+.pl-wrapper-view {
+    @include outer-container();
+}
+
+// main content
+.pl-wrapper-content-main {
+    width: calc(100% - $pl-content-supplemental-width);
+    margin-left: $pl-content-supplemental-width;
+}
+
+// sidebar
+.pl-wrapper-content-supplemental {
+    @include size($pl-content-supplemental-width 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: rem(4) solid palette(grayscale, x-dark);
+    background: palette(grayscale, dark);
+    color: palette(grayscale, x-light);
+    font-size: font-size(base);
+}
