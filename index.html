@@ -1,0 +1,54 @@
+---
+layout: default
+title: Index
+viewclass:  index
+---
+<div class="pl-list-elements">
+
+    {% for post in site.posts %}
+    <div class="pl-wrapper-element">
+        <article class="pl-element pl-element-{{ post.slug }}" id="{{ post.slug }}">
+            <h1 class="pl-element-title">{{ post.title }}</h1>
+
+            <ul class="pl-element-navigation">
+                <li><a href="#{{post.slug}}-view">{{post.title}}</a></li>
+                <li><a href="#{{post.slug}}-source">Markup</a></li>
+                <li><a href="#{{post.slug}}-styling">Styling</a></li>
+                <li><a href="#{{post.slug}}-info">Info</a></li>
+            </ul>
+
+            <div class="pl-element-view" id="element-view">
+                <h2 class="pl-element-view-title"><code>.{{post.title|downcase}}</code> Preview</h2>
+                {{ post.content }}
+            </div>
+
+            <div class="pl-element-source" id="element-source">
+                <h2 class="pl-element-source-title">{{post.title}} Markup</h2>
+
+                <pre class="pl-language-markup">
+                    <code>{{post.content|escape}}</code>
+                </pre>
+            </div>
+
+            <div class="pl-element-source" id="element-styling">
+                <h2 class="pl-element-source-title">{{post.title}} Style</h2>
+                <p>You can find <a href="{{post.scssurl}}">the original source of the <code>CSS</code> as <code>.scss</code></a></p>
+            </div>
+
+            <div class="pl-element-info" id="element-info">
+                <h2 class="pl-element-info-title">{{post.title}} Style</h2>
+                {{post.title}}
+            </div>
+
+            <div class="pl-element-meta">
+                <p>
+                    <span class="pl-element-meta-label">Last updated on </span>
+                    <time class="pl-element-meta-value element-edit-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
+                </p>
+            </div>
+
+            <a class="pl-element-permalink" href="{{post.url}}">{{post.title}} permalink</a>
+        </article>
+    </div>
+    {% endfor %}
+</div>
