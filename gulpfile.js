@@ -5,7 +5,11 @@ var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
     autoprefixer    = require('gulp-autoprefixer'),
     minifyCSS       = require('gulp-minify-css'),
+    jshint          = require('gulp-jshint'),
+    uglify          = require('gulp-uglify'),
     imagemin        = require('gulp-imagemin'),
+    concat          = require('gulp-concat'),
+    rename          = require('gulp-rename'),
     filter          = require('gulp-filter'),
     cp              = require('child_process');
 
@@ -21,15 +25,19 @@ var basePath = {
 var srcAssets = {
     styles:     basePath.src + '/static/sass/**/*.scss',
     scripts:    basePath.src + '/static/js/**/*.js',
-    images:     basePath.src + '/static/images/**'
+    images:     basePath.src + '/static/images/**',
+    vendor:     basePath.src + '/vendor/**'
 };
 
 var destAssets = {
     styles:         basePath.dest + '/css',
     styles_local:   sitePath + '/' + basePath.dest + '/css',
     scripts:        basePath.dest + '/js',
+    scripts_local:  sitePath + '/' + basePath.dest + '/js',
     images:         basePath.dest + '/images',
-    images_local:   sitePath + '/' + basePath.dest + '/images'
+    images_local:   sitePath + '/' + basePath.dest + '/images',
+    vendor:         basePath.dest + '/vendor',
+    vendor_local:   sitePath + '/' + basePath.dest + '/vendor'
 };
 
 // set up: paths for pattern library UI rendering
@@ -41,15 +49,19 @@ var basePath_PL = {
 var srcAssets_PL = {
     styles:     basePath_PL.src + '/static/sass/**/*.scss',
     scripts:    basePath_PL.src + '/static/js/**/*.js',
-    images:     basePath_PL.src + '/static/images/**'
+    images:     basePath_PL.src + '/static/images/**',
+    vendor:     basePath_PL.src + '/vendor/**'
 };
 
 var destAssets_PL = {
     styles:         basePath_PL.dest + '/css',
     styles_local:   sitePath + '/' + basePath_PL.dest + '/css',
     scripts:        basePath_PL.dest + '/js',
+    scripts_local:  sitePath + '/' + basePath_PL.dest + '/js',
     images:         basePath_PL.dest + '/images',
-    images_local:   sitePath + '/' + basePath_PL.dest + '/images'
+    images_local:   sitePath + '/' + basePath_PL.dest + '/images',
+    vendor:         basePath_PL.dest + '/vendor',
+    vendor_local:   sitePath + '/' + basePath_PL.dest + '/vendor'
 };
 
 // task: sass compile - elements
@@ -94,6 +106,29 @@ gulp.task('images_PL', function() {
         .pipe(gulp.dest(destAssets_PL.images));
 });
 
+gulp.task('scripts_PL-lint', function(){
+    return gulp.src([
+        'gulpfile.js',
+        srcAssets_PL.scripts
+    ])
+    .pipe(jshint()) // Edit the .jshintrc file to change the options
+    .pipe(jshint.reporter('default'));
+});
+
+gulp.task('scripts_PL', ['scripts_PL-lint'], function(){
+    return gulp.src([
+            // setup script sequence
+            basePath_PL.src + '/vendor/jquery/jquery-2.1.3.min.js',
+            basePath_PL.src + '/vendor/jquery/jquery.smooth-scroll.js',
+            basePath_PL.src + '/static/js/ui.js'
+        ])
+        .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(destAssets_PL.scripts_local)) // move just for browersync + local preview
+        .pipe(gulp.dest(destAssets_PL.scripts));
+});
+
 // task: build jekyll site
 gulp.task('jekyll-build', function(done) {
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
@@ -106,7 +141,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
 });
 
 // task: wait for jekyll, then launch server
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass','sass_PL','images','images_PL','scripts_PL','jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: sitePath
@@ -118,6 +153,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 gulp.task('watch', function() {
     gulp.watch(srcAssets.styles, ['sass']);
     gulp.watch(srcAssets_PL.styles, ['sass_PL']);
+    gulp.watch(srcAssets_PL.scripts, ['scripts_PL']);
     gulp.watch(srcAssets.images, ['images']);
     gulp.watch(srcAssets_PL.images, ['images_PL']);
     gulp.watch(['index.html', '_layouts/*', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
