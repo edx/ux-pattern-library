@@ -1,7 +1,4 @@
-_site
-.sass-cache
-
-# Ignore docs files
+# Ignore: docs files
 _gh_pages
 _site
 .ruby-version
@@ -18,7 +15,7 @@ _site
 *.vi
 *~
 
-# OS or Editor folders
+# Ignore: OS or Editor folders
 .DS_Store
 ._*
 Thumbs.db
@@ -32,5 +29,7 @@ nbproject
 *.sublime-workspace
 .idea
 
-# Folders to ignore
+#Ignore: Front End/Local Development
+_site
+.sass-cache
 node_modules
