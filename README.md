@@ -38,7 +38,7 @@ brew install node
 
 Otherwise, you can download and install from [here](http://nodejs.org/download/).
 
-### Install Gulp + Project Dependencies
+### Install/Update Gulp + Project Dependencies
 From the directory you've checked out this repo into locally, run:
 
 ```
@@ -46,6 +46,8 @@ npm install
 ```
 
 This runs through all dependencies listed in package.json and downloads them to a node_modules folder in your project directory.
+
+**NOTE: You may need to run this more than just once (if encountering errors when running the gulp command) as new dependencies may have been added**
 
 #### The Gulp Command
 To run the version of gulp installed local to the project, in the root of your this project, run:
