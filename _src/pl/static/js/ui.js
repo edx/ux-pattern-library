@@ -7,7 +7,7 @@ $(document).ready(function() {
     $html.removeClass('no-js');
 
     $('a[href^="#"]').bind('click', smoothScrollLink);
-    // $('pl-nav .pl-link').bind('click', navShowCurrent);
+    $('a[rel="external"]').bind('click', newWindowLink);
 
     // smoothscroll to target links
     function smoothScrollLink(e) {
@@ -22,11 +22,11 @@ $(document).ready(function() {
         });
     }
 
-    // show indicator for current element in navigation
-    // function navShowCurrent(e) {
-    //     (e).preventDefault();
-    //     if ($(this).href == window.location.href) {
-    //         $(this).closest('.nav-list-item').addClass('is-current');
-    //     }
-    // }
+    // open external links in new windows
+    function newWindowLink(e) {
+        (e).preventDefault();
+
+        var $url = $(this).attr('href');
+        window.open($url);
+    }
 });
