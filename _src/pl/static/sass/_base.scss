@@ -1,1 +1,71 @@
+// ------------------------------
+// edX Pattern Library Site: Base
 
+// About: Base resets and definitons (using shared resources from elements when appropriate).
+
+// ------------------------------
+// #RESET
+// ------------------------------
+@import '../../../static/sass/base/normalize';
+
+* {
+    box-sizing: border-box;
+}
+
+// ------------------------------
+// #BASE
+// ------------------------------
+// basic
+html, body {
+    height: 100%;
+    color: palette(grayscale, x-dark);
+}
+
+.pl {
+    background: palette(grayscale, x-light);
+    font-size: $font-scale-medium;
+    font-family: $font-stack-sans-serif;
+}
+
+.pl-wrapper-view {
+    background: palette(grayscale, x-light);
+}
+
+// links
+.pl-link {
+    @include transition(all 0.15s ease-in-out);
+    border-bottom: rem(1) solid $color-transparent;
+    color: palette(primary, base);
+    text-decoration: none;
+
+    // STATE: hover, active, focus
+    &:hover,
+    &:active,
+    &:focus {
+        border-bottom-color: palette(primary, sat);
+        color: palette(primary, sat);
+    }
+}
+
+// images
+.pl img,
+.pl picture {
+  max-width: 100%;
+  margin: 0;
+}
+
+.pl pre {
+    margin: 0;
+}
+
+// utility
+.pl-sr {
+    @extend %sr;
+}
+
+// ------------------------------
+// #TYPOGRAPHY
+// ------------------------------
+.pl-heading {
+    @extend %reset-headings;
+}

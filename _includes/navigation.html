@@ -1,14 +1,14 @@
 <nav class="pl-nav pl-nav-elements" id="pl-nav-elements">
-    <h2 class="pl-nav-title">Elements</h2>
+    <h2 class="pl-heading pl-nav-title">Elements</h2>
 
     <ul class="nav-list list-elements">
         {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
         {% for post in sorted_elements_posts %}
-        <li class="element">
+        <li class="nav-list-item">
             {% if page.title == "Home" %}
-            <a href="#{{post.slug}}">{{post.title}}</a>
+            <a class="pl-link" href="#{{post.slug}}">{{post.title}}</a>
             {% else %}
-            <a href="{{post.url}}">{{post.title}}</a>
+            <a class="pl-link" href="{{post.url}}">{{post.title}}</a>
             {% endif %}
         </li>
         {% endfor %}
@@ -16,20 +16,33 @@
 </nav>
 
 <nav class="pl-nav pl-nav-documentation" id="pl-nav-documentation">
-    <h2 class="pl-nav-title">Standards &amp; Styleguides</h2>
+    <h2 class="pl-heading pl-nav-title">Standards &amp; Documentation</h2>
 
-    <ul class="nav-list list-styleguides">
-        <li class="styleguide">
-            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General">General Styleguide</a>
+    <ul class="pl-list nav-list list-styleguides">
+        <li class="nav-list-item">
+            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General">General Styleguide</a>
         </li>
-        <li class="styleguide">
-            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML">HTMLS Styleguide</a>
+        <li class="nav-list-item">
+            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML">HTMLS Styleguide</a>
         </li>
-        <li class="styleguide">
-            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS">Sass &amp; CSS Styleguide</a>
+        <li class="nav-list-item">
+            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS">Sass &amp; CSS Styleguide</a>
         </li>
-        <li class="styleguide">
-            <a rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility">Accessibility Styleguide</a>
+        <li class="nav-list-item">
+            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility">Accessibility Styleguide</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="pl-nav pl-nav-project" id="pl-nav-project">
+    <h2 class="pl-heading pl-nav-title">About This Project</h2>
+
+    <ul class="nav-list list-project">
+        <li class="nav-list-item">
+            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/">View on Github</a>
+        </li>
+        <li class="nav-list-item">
+            <a class="pl-link" rel="external" href="https://openedx.atlassian.net/browse/UX-1396">Project Planning</a>
         </li>
     </ul>
 </nav>

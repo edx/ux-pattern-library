@@ -1,15 +1,17 @@
-<div class="pl-wrapper-header-site">
-    <header class="pl-header-site">
-        {% if page.title == "Home" %}
-        <h1 class="pl-header-site-title">
-            <a href="{{ site.baseurl }}">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-        </h1>
-        {% else %}
-        <h2 class="pl-header-site-title">
-            <a href="{{ site.baseurl }}">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-        </h2>
-        {% endif %}
-    </header>
-</div>
+<header class="pl-header-site">
+    {% if page.title == "Home" %}
+    <h1 class="pl-header-site-title">
+        <a class="pl-link title-name" href="{{ site.baseurl }}">
+            {{ site.title }}
+        </a>
+        <span class="title-description">{{ site.tagline }}</span>
+    </h1>
+    {% else %}
+    <h2 class="pl-header-site-title">
+        <a class="pl-link title-name" href="{{ site.baseurl }}">
+            {{ site.title }}
+        </a>
+        <span class="title-description">{{ site.tagline }}</span>
+    </h2>
+    {% endif %}
+</header>

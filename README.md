@@ -38,7 +38,7 @@ brew install node
 
 Otherwise, you can download and install from [here](http://nodejs.org/download/).
 
-### Install Gulp + Project Dependencies
+### Install/Update Gulp + Project Dependencies
 From the directory you've checked out this repo into locally, run:
 
 ```
@@ -46,6 +46,8 @@ npm install
 ```
 
 This runs through all dependencies listed in package.json and downloads them to a node_modules folder in your project directory.
+
+**NOTE: You may need to run this more than just once (if encountering errors when running the gulp command) as new dependencies may have been added**
 
 #### The Gulp Command
 To run the version of gulp installed local to the project, in the root of your this project, run:
@@ -94,6 +96,13 @@ When contributing, please:
 **NOTE**: We are currently not accepting contributions from individuals outside of edX. Once we have more progress under our belts and awareness of the standards and methods used to in this library, we'll be reaching out to more individuals for support.
 
 If you have questions in the meantime, please email [ux@edx.org](mailto:ux@edx.org).
+
+### Resources and Background Information
+When contributing, its assumed that you're already familar with the following:
+
+* [Our Front End Coding Styleguides](https://github.com/edx/ux-pattern-library/wiki)
+* [Jekyll in General](http://jekyllrb.com/docs/home/)
+* [Writing Posts in Jekyll](http://jekyllrb.com/docs/posts/)
 
 - - -
 

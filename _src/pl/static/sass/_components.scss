@@ -1,0 +1,279 @@
+// ------------------------------
+// edX Pattern Library Site: Components
+
+// About: styling for specific UI components ranging from global to modular.
+
+// ------------------------------
+// #HEADINGS
+// ------------------------------
+
+// ------------------------------
+// #CONTROLS
+// ------------------------------
+
+// ------------------------------
+// #HEADER
+// ------------------------------
+.pl-header-site {
+    margin: spacing-v(large) spacing-h(base) spacing-v(base) spacing-h(base);
+}
+
+.pl-header-site-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.pl-header-site-title {
+    margin-bottom: spacing-v(base);
+
+    .title-name, .title-description {
+        display: block;
+    }
+
+    .title-name {
+        margin-bottom: spacing-v(x-small);
+        color: palette(grayscale, white);
+        font-size: font-size(base);
+        font-weight: font-weight(semi-bold);
+        text-transform: uppercase;
+        letter-spacing: rem(2);
+
+        // STATE: hover, active, focus
+        &:hover,
+        &:active,
+        &:focus {
+            color: palette(primary, sat);
+        }
+    }
+
+    .title-description {
+        color: palette(grayscale, mid-light);
+        font-size: font-size(mid-small);
+        font-weight: font-weight(normal);
+    }
+
+    .pl-link {
+        border: none;
+    }
+}
+
+// ------------------------------
+// #NAVIGATION
+// ------------------------------
+// navigation - sidebar-based
+.pl-nav {
+    margin-bottom: spacing-v(large);
+
+    // CASE: last element
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-list {
+        @extend %reset-lists;
+        margin: 0;
+    }
+
+
+    .pl-link {
+        @include transition(background 0.25s ease-in-out);
+        display: block;
+        border-bottom: rem(1) solid palette(grayscale, x-dark);
+        padding: spacing-v(small) spacing-h(base);
+        color: palette(grayscale, x-light);
+        text-decoration: none;
+        font-size: font-size(mid-small);
+
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
+            color: palette(primary, sat);
+            background: palette(grayscale, x-dark);
+        }
+
+        // is-current indicator
+        &:before {
+            @include size(rem(5));
+            position: relative;
+            left: -(spacing-h(small));
+            display: none;
+            vertical-align: middle;
+            content: '';
+            border-radius: 100%;
+            background: palette(primary, sat);
+        }
+    }
+
+    // CASE: last element
+    .nav-list-item:last-child {
+
+       .pl-link {
+            border-bottom: 0;
+       }
+    }
+
+    // CASE: item is current
+    .nav-list-item.is-current {
+
+        .pl-link:before {
+            display: inline-block;
+        }
+    }
+}
+
+.pl-nav-title {
+    margin: 0 spacing-h(base) spacing-v(x-small) spacing-h(base);
+    color: palette(grayscale, mid-light);
+    font-size: font-size(small);
+    font-weight: font-weight(semi-bold);
+    text-transform: uppercase;
+    letter-spacing: rem(2);
+}
+
+// navigation - tabs
+.pl-tab {
+    margin-bottom: spacing-v(large);
+
+    // CASE: last element
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .pl-heading {
+        margin-bottom: spacing-v(mid-small);
+        color: $heading-color;
+        font-size: font-size(mid-large);
+        font-weight: font-weight(semi-bold);
+        font-size: line-height(base);
+    }
+}
+
+.pl-tab-content {
+    @include transition(box-shadow 0.50s ease-in-out);
+    border: rem(1) solid palette(grayscale, x-light);
+    @include pad(spacing-v(base) spacing-h(base));
+    background: palette(grayscale, white);
+    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
+
+    // STATE: hover, active, focus
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+    }
+}
+
+// ------------------------------
+// #SIDEBAR
+// ------------------------------
+.pl-wrapper-content-supplemental {
+    background: palette(grayscale, mid-dark);
+    border-right: rem(4) solid  palette(grayscale, x-dark);
+    color: palette(grayscale, x-light);
+    font-size: font-size(base);
+}
+
+// ------------------------------
+// #MAIN CONTENT
+// ------------------------------
+.pl-wrapper-content-main {
+    background: palette(grayscale, xx-light);
+    font-size: font-size(base);
+}
+
+// ------------------------------
+// #FOOTER
+// ------------------------------
+.pl-footer-site {
+    margin: spacing-v(base) spacing-h(base);
+}
+
+.pl-footer-site-copyright {
+    font-size: font-size(mid-small);
+    color: palette(grayscale, mid-light);
+}
+
+// ------------------------------
+// #ELEMENTS
+// ------------------------------
+.pl-wrapper-element {
+    @include outer-container();
+}
+
+.pl-element {
+    @include transition(all 0.25s ease-in-out);
+    @include pad(spacing-v(x-large) spacing-h(base));
+    border-bottom: rem(4) solid palette(grayscale, mid-dark);
+
+    // CASE: element is focused on in current URL
+    &:target {
+        box-shadow: inset spacing-h(x-small) 0 0 0 palette(primary, light);
+    }
+
+    .pl-wrapper-element:first-child & {
+        padding-top: spacing-v(large);
+    }
+
+    // CASE: last element
+    .pl-wrapper-element:last-child & {
+        border-bottom: 0;
+    }
+}
+
+.pl-element-header {
+    @include row();
+    margin-bottom: spacing-v(base);
+    border-bottom: 1px solid palette(grayscale, dark);
+    padding-bottom: spacing-v(small);
+}
+
+.pl-element-title {
+    @include span-columns(4);
+    margin-bottom: spacing-v(x-small);
+    color: $heading-color;
+    font-size: font-size(large);
+    font-weight: font-weight(semi-bold);
+}
+
+.pl-element-meta {
+    @include span-columns(4);
+    @include omega();
+    @extend %reset-lists;
+    color: palette(grayscale, mid-light);
+    font-size: font-size(small);
+    text-align: right;
+
+    .meta {
+       display: inline-block;
+       vertical-align: middle;
+       margin-right: spacing-h(xx-small);
+
+       &:last-child {
+        margin-right: 0;
+       }
+    }
+
+    .meta-updated {
+        margin-right: spacing-h(small);
+    }
+}
+
+.pl-element-navigation {
+    @extend %sr;
+}
+
+.pl-element-info {
+    @extend %reset-copy;
+    color: palette(grayscale, mid-light);
+    margin-bottom: spacing-v(large);
+}
+
+// markup section of element
+.pl-element-markup {
+
+    code {
+        font-family: $code-font-family;
+    }
+}

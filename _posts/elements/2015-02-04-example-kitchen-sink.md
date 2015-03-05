@@ -9,7 +9,10 @@ tags:
 
 slug:         example-kitchen-sink
 scssurl:      "https://github.com/edx/ux-pattern-library/blob/master/[path_to_source_sass_file].scss"
+
 description:  This is a kitchen sink of common HTML elements
+
+info:  Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.
 ---
 
 <h1 id="headings">Headings</h1>

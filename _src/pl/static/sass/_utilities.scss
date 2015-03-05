@@ -1,0 +1,319 @@
+// ------------------------------
+// edX Pattern Library Site: Utilities
+
+// About: configuration, functions, variables, mixins, and general helpers for rendering.
+
+// ------------------------------
+// #CONFIG
+// ------------------------------
+// grid- customizations
+$pl-content-supplemental-width: rem(300); // width of supplemental content sidebar
+$pl-tab-label-height: rem(2); // height of tab labels
+
+// grid - settings
+$max-width: calc(100% - $pl-content-supplemental-width); // override neat's default
+$grid-columns: 8;
+$column: rem(20);
+$gutter: rem(20);
+$visual-grid: true;
+$visual-grid-color: palette(primary, light);
+
+// grid - baseline
+$baseline-v: rem(20);
+$baseline-h: rem(40);
+
+// brand/visuals
+$brand-primary:         rgb(0, 160, 227); // edX blue
+$brand-secondary:       rgb(184, 57, 104); // edX pink
+
+// colors
+$color-base-primary:    $brand-primary;
+$color-base-secondary:  $brand-secondary;
+$color-gray: hsla(58%, 4%, 29%, 1.0);
+$color-transparent:     hsla(0%, 0%, 0%, 0.0);
+
+// colors - palettes
+$palettes: (
+    primary:        (
+        base:       $color-base-primary,
+        mid-light:  tint($color-base-primary, 10%),
+        light:      tint($color-base-primary, 25%),
+        x-light:    tint($color-base-primary, 55%),
+        mid-dark:   shade($color-base-primary, 10%),
+        dark:       shade($color-base-primary, 25%),
+        x-dark:     shade($color-base-primary, 55%),
+        mid-sat:    saturate($color-base-primary, 10%),
+        sat:        saturate($color-base-primary, 20%),
+        x-sat:      saturate($color-base-primary, 30%),
+        mid-trans:  transparentize($color-base-primary, 0.25),
+        trans:      transparentize($color-base-primary, 0.50),
+        x-trans:    transparentize($color-base-primary, 0.75),
+        xx-trans:   transparentize($color-base-primary, 0.95)
+    ),
+    secondary:      (
+        base:       $color-base-secondary,
+        mid-light:  tint($color-base-secondary, 10%),
+        light:      tint($color-base-secondary, 25%),
+        x-light:    tint($color-base-secondary, 55%),
+        mid-dark:   shade($color-base-secondary, 10%),
+        dark:       shade($color-base-secondary, 25%),
+        x-dark:     shade($color-base-secondary, 55%),
+        mid-sat:    saturate($color-base-secondary, 10%),
+        sat:        saturate($color-base-secondary, 20%),
+        x-sat:      saturate($color-base-secondary, 30%),
+        mid-trans:  transparentize($color-base-secondary, 0.25),
+        trans:      transparentize($color-base-secondary, 0.50),
+        x-trans:    transparentize($color-base-secondary, 0.75),
+        xx-trans:   transparentize($color-base-secondary, 0.95)
+    ),
+    grayscale:           (
+        base:       $color-gray,
+        mid-light:  tint($color-gray, 40%),
+        light:      tint($color-gray, 60%),
+        x-light:    tint($color-gray, 80%),
+        xx-light:   tint($color-gray, 90%),
+        white:      tint($color-gray, 98%),
+        white-t:    tint($color-gray, 100%),
+        mid-dark:   shade($color-gray, 40%),
+        dark:       shade($color-gray, 60%),
+        x-dark:     shade($color-gray, 80%),
+        xx-dark:    shade($color-gray, 90%),
+        black:      shade($color-gray, 98%),
+        black-t:    shade($color-gray, 100%),
+        mid-trans:  transparentize($color-gray, 0.25),
+        trans:      transparentize($color-gray, 0.50),
+        x-trans:    transparentize($color-gray, 0.75),
+        xx-trans:   transparentize($color-gray, 0.95)
+    )
+);
+
+// typography - font imports
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Light-webfont', 300);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-LightItalic-webfont', 300, italic);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Regular-webfont', 400);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Italic-webfont', 400, italic);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Semibold-webfont', 600);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-SemiboldItalic-webfont', 600, italic);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Bold-webfont', 700);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-BoldItalic-webfont', 700, italic);
+
+// typography - font stack
+$font-stack-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-stack-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+
+// typography - responsive base scale
+$font-scale-small: 14;
+$font-scale-medium: 16;
+$font-scale-large: 16;
+$font-scale-base: $font-scale-medium;
+
+$em-base: $font-scale-medium; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
+
+// typography - size scale
+$font-sizes: (
+    base:           16,
+    mid-small:      14,
+    small:          12,
+    x-small:        10,
+    mid-large:      18,
+    large:          24,
+    x-large:        32,
+    xx-large:       43,
+);
+
+// typography - line-height scale
+$line-heights: (
+    base:           1.25,
+    mid-small:      1,
+    small:          0.75,
+    x-small:        0.75,
+    mid-large:      1.25,
+    large:          1.48,
+    x-large:        1.48
+);
+
+// typography - size scale
+$font-weights: (
+    normal:         400,
+    light:          300,
+    x-light:        200,
+    semi-bold:      600,
+    bold:           700,
+    x-bold:         800
+);
+
+// z-index depth scale
+$z-depths: (
+    base:           0,
+    mid-back:       -10,
+    back:           -100,
+    very-back:      -1000,
+    mid-front:      10,
+    front:          100,
+    very-front:     1000
+);
+
+$spacing-v: (
+    base:       $baseline-v,
+    mid-small:  ($baseline-v*0.75),
+    small:      ($baseline-v/2),
+    x-small:    ($baseline-v/4),
+    mid-large:  ($baseline-v*1.5),
+    large:      ($baseline-v*2),
+    x-large:    ($baseline-v*4)
+);
+
+$spacing-h: (
+    base:       $baseline-h,
+    mid-small:  ($baseline-h*0.75),
+    small:      ($baseline-h/2),
+    x-small:    ($baseline-h/4),
+    xx-small:   ($baseline-h/8),
+    mid-large:  ($baseline-h*1.5),
+    large:      ($baseline-h*2),
+    x-large:    ($baseline-h*4)
+);
+
+// config - headings
+$heading-font-family: $font-stack-sans-serif;
+$heading-color: palette(grayscale, dark);
+
+// config - copy
+$copy-font-family: $font-stack-sans-serif;
+
+// config - code
+$code-font-family: $font-stack-monospace;
+
+// ------------------------------
+// #FUNCTIONS
+// ------------------------------
+// get colors from defined palettes map values
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// get font sizes from defined map values
+@function font-size($key) {
+  @if map-has-key($font-sizes, $key) {
+    @return rem(map-get($font-sizes, $key));
+  }
+
+  @warn "Unknown `#{$key}` in $font-sizes.";
+  @return null;
+}
+
+// get line-heights from defined map values
+@function line-height($key) {
+  @if map-has-key($line-heights, $key) {
+    @return map-get($line-heights, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $line-heights.";
+  @return null;
+}
+
+// get font sizes from defined map values
+@function font-weight($key) {
+  @if map-has-key($font-weights, $key) {
+    @return map-get($font-weights, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $font-weights.";
+  @return null;
+}
+
+// get z-indexes from defined map values
+@function z-index($key) {
+  @if map-has-key($z-depths, $key) {
+    @return map-get($z-depths, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-depths.";
+  @return null;
+}
+
+// get vertical spacings from defined map values
+@function spacing-v($key) {
+  @if map-has-key($spacing-v, $key) {
+    @return map-get($spacing-v, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $spacing-v.";
+  @return null;
+}
+
+// get horizontal spacings from defined map values
+@function spacing-h($key) {
+  @if map-has-key($spacing-h, $key) {
+    @return map-get($spacing-h, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $spacing-h.";
+  @return null;
+}
+
+// ------------------------------
+// #MIXINS
+// ------------------------------
+
+// ------------------------------
+// #HELPERS
+// ------------------------------
+// add UI cue for non-native controls
+%fake-link {
+  cursor: pointer;
+}
+
+// disable behavior
+%state-disabled {
+  pointer-events: none;
+  outline: none;
+  cursor: default;
+}
+
+// reset non-content minded lists
+%no-list {
+  list-style: none;
+  text-indent: 0;
+}
+
+// make text only readable/viewable to assistive tech
+%sr {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// pl-based reset - lists
+%reset-lists {
+    @extend %no-list;
+    margin: 0;
+    padding: 0;
+}
+
+// pl-based reset - headings
+%reset-headings {
+    margin: 0 0 spacing-h(small) 0;
+    font-family: $heading-font-family;
+    font-size: font-size(base);
+    line-height: line-height(base);
+}
+
+// pl-based reset - copy
+%reset-copy {
+    font-family: $copy-font-family;
+    font-size: font-size(base);
+    line-height: line-height(large);
+}
+
+// pl-based reset - code
+%reset-code {
+    font-family: $code-font-family;
+    font-size: font-size(base);
+    line-height: line-height(large);
+}
