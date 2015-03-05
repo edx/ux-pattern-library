@@ -35,9 +35,9 @@
         margin-bottom: spacing-v(x-small);
         color: palette(grayscale, white);
         font-size: font-size(base);
-        font-weight: font-weight(semi-bold);
+        font-weight: font-weight(bold);
         text-transform: uppercase;
-        letter-spacing: rem(2);
+        letter-spacing: rem(1);
 
         // STATE: hover, active, focus
         &:hover,
@@ -84,6 +84,7 @@
         color: palette(grayscale, x-light);
         text-decoration: none;
         font-size: font-size(mid-small);
+        font-weight: font-weight(semi-bold);
 
         // STATE: hover, active, and focus
         &:hover,
@@ -175,7 +176,7 @@
     font-size: font-size(small);
     font-weight: font-weight(semi-bold);
     text-transform: uppercase;
-    letter-spacing: rem(2);
+    letter-spacing: rem(1);
 }
 
 // navigation - tabs
@@ -237,8 +238,11 @@
 }
 
 .pl-footer-site-copyright {
-    font-size: font-size(mid-small);
-    color: palette(grayscale, mid-light);
+
+    .pl-copy {
+        font-size: font-size(mid-small);
+        color: palette(grayscale, mid-light);
+    }
 }
 
 // ------------------------------
