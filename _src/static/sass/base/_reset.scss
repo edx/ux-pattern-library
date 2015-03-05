@@ -1,0 +1,82 @@
+// ------------------------------
+// edX Pattern Library: Reset
+
+// About: Sass partial for resetting and setting base elements.
+
+// #SETTINGS
+// Global:    Global overrides and resets
+// Base:      Base overrides and resets
+// ----------------------------
+
+
+// ----------------------------
+// Global
+// ----------------------------
+* {
+    box-sizing: border-box; // Reset the box model for easier management
+}
+
+
+// ----------------------------
+// Base
+// ----------------------------
+body {
+    font-size: $font-size;
+    min-width: $min-width;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+    font-family: $font-sans;
+}
+
+a {
+    @include transition(color $timing-fastest ease-in-out 0s);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+h1,
+h2,
+h3 {
+    @include page-title('sans');
+}
+
+h4,
+h5,
+h6 {
+    @include page-title('serif');
+}
+
+p {
+    @include font-size();
+    @include line-height();
+}
+
+figure {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    figcaption {
+        @include line-height();
+        font-family: $font-serif;
+        font-style: italic;
+    }
+}
+
+.icon {
+    @extend %icon-font;
+}
+
+[class*="wrapper-"] {
+    @include clearfix();
+    width: 100%;
+}

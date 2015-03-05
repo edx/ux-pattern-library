@@ -13,14 +13,19 @@
 @import '../../vendor/bi-app/bi-app-rtl';   // RTL support
 
 // ------------------------------
-// #UTILITIES
-// ------------------------------
-// TBD
-
-// ------------------------------
 // #BASE
 // ------------------------------
-// TBD
+@import 'base/normalize';
+@import 'base/reset';
+@import 'base/typography';
+
+// ------------------------------
+// #UTILITIES
+// ------------------------------
+@import 'utilities/variables';
+@import 'utilities/functions';
+@import 'utilities/mixins';
+@import 'utilities/helpers';
 
 // ------------------------------
 // #COMPONENTS
