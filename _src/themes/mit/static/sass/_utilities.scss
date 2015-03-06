@@ -1,0 +1,22 @@
+// ----------------------------
+// MIT (Example file)
+// This file provides utility overrides for base/_utilities in the main platform compile.
+// It allows instutions to provide alternative values when displaying the application.
+// ----------------------------
+
+
+// reset of links
+%link {
+    @include transition(all timing(x-fast) ease-in-out);
+    border-bottom: rem(1) solid $transparent;
+    color: palette(primary, base);
+    text-decoration: none;
+
+    // STATE: hover, active, focus
+    &:hover,
+    &:active,
+    &:focus {
+        border-bottom-color: palette(primary, sat);
+        color: palette(primary, sat);
+    }
+}
