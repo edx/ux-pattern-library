@@ -106,7 +106,7 @@ body,html{height:100%;color:#0f0f0e}
 .pl-element-meta .meta{display:inline-block;vertical-align:middle;margin-right:.3125rem}
 .pl-element-meta .meta:last-child{margin-right:0}
 .pl-element-meta .meta-updated{margin-right:1.25rem}
-.pl-element-info{color:#949490;margin-bottom:2.5rem}
+.pl-element-info{color:#4d4d47;margin-bottom:2.5rem}
 .pl-element-markup code{font-family:'Bitstream Vera Sans Mono',Consolas,Courier,monospace}
 .pl-wrapper-view{margin-left:auto;margin-right:auto}
 .pl-wrapper-view::after{clear:both;display:table}

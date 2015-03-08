@@ -313,7 +313,7 @@
 
 .pl-element-info {
     @extend %reset-copy;
-    color: palette(grayscale, mid-light);
+    color: palette(grayscale, base);
     margin-bottom: spacing-v(large);
 }
 
