@@ -13,7 +13,7 @@ permalink:                  /:categories/:title/
 relative_permalinks:        true
 
 # Local
-exclude:                    ["node_modules", "gulpfile.js", "package.json"]
+exclude:                    ["node_modules", "gulp", "gulpfile.js", "package.json"]
 
 # Custom vars
 github:
