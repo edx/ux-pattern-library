@@ -8,18 +8,25 @@ $(document).ready(function() {
 
     $('a[href^="#"]').bind('click', smoothScrollLink);
     $('a[rel="external"]').bind('click', newWindowLink);
+    $('.pl-nav-elements .pl-link').bind('click', navigationHighlight);
 
     // smoothscroll to target links
     function smoothScrollLink(e) {
-        (e).preventDefault();
 
         $.smoothScroll({
             offset: -200,
             easing: 'swing',
+            preventDefault: false,
             speed: 1000,
             scrollElement: null,
             scrollTarget: $(this).attr('href')
         });
+    }
+
+    // smoothscroll to target links
+    function navigationHighlight(e) {
+        $('.pl-nav-elements .pl-link').removeClass('is-current');
+        $(this).addClass('is-current');
     }
 
     // open external links in new windows

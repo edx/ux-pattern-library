@@ -89,20 +89,8 @@
         &:hover,
         &:active,
         &:focus {
-            color: palette(primary, sat);
+            color: palette(primary, light);
             background: palette(grayscale, x-dark);
-        }
-
-        // is-current indicator
-        &:before {
-            @include size(rem(5));
-            position: relative;
-            left: -(spacing-h(small));
-            display: none;
-            vertical-align: middle;
-            content: '';
-            border-radius: 100%;
-            background: palette(primary, sat);
         }
     }
 
@@ -119,6 +107,64 @@
 
         .pl-link:before {
             display: inline-block;
+        }
+    }
+}
+
+// internal site navigation
+.pl-nav-internal {
+
+    .pl-link {
+        position: relative;
+
+        // is-current indicator
+        &:before {
+            @include transition(opacity 0.25s ease-in-out);
+            @include size(rem(5));
+            position: absolute;
+            top: rem(18);
+            left: spacing-h(small);
+            content: '';
+            border-radius: 100%;
+            opacity: 0;
+            background: palette(primary, light);
+        }
+
+        // STATE: is current navigation item
+        &.is-current {
+            color: palette(primary, light);
+            background: palette(grayscale, x-dark);
+
+            &:before {
+                opacity: 1.0;
+            }
+        }
+    }
+}
+
+// external site navigation
+.pl-nav-external {
+
+    .pl-link {
+
+        .pl-icon {
+            @include transition(opacity 0.25s ease-in-out);
+            display: inline-block;
+            vertical-align: baseline;
+            margin-right: (spacing-h(xx-small));
+            font-size: font-size(large);
+            line-height: line-height(none);
+            opacity: 0.25;
+        }
+
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
+
+            .pl-icon {
+                opacity: 1.0;
+            }
         }
     }
 }
@@ -146,7 +192,7 @@
         color: $heading-color;
         font-size: font-size(mid-large);
         font-weight: font-weight(semi-bold);
-        font-size: line-height(base);
+        line-height: line-height(base);
     }
 }
 
@@ -205,11 +251,12 @@
 .pl-element {
     @include transition(all 0.25s ease-in-out);
     @include pad(spacing-v(x-large) spacing-h(base));
-    border-bottom: rem(4) solid palette(grayscale, mid-dark);
+    border-bottom: rem(2) solid palette(grayscale, mid-dark);
+    box-shadow: inset spacing-h(xx-small) 0 0 0 $color-transparent;
 
     // CASE: element is focused on in current URL
     &:target {
-        box-shadow: inset spacing-h(x-small) 0 0 0 palette(primary, light);
+        box-shadow: inset spacing-h(xx-small) 0 0 0 palette(primary, light);
     }
 
     .pl-wrapper-element:first-child & {
@@ -266,7 +313,7 @@
 
 .pl-element-info {
     @extend %reset-copy;
-    color: palette(grayscale, mid-light);
+    color: palette(grayscale, base);
     margin-bottom: spacing-v(large);
 }
 
