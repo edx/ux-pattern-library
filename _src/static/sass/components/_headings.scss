@@ -1,0 +1,138 @@
+// ------------------------------
+// edX Pattern Library: Components - Headings
+
+// About: Contains base styling for headings. Adapted from http://typecast.com/blog/a-more-modern-scale-for-web-typography
+// ----------------------------
+
+// #GLOBALS
+// #HEADINGS
+// H1
+// H2
+// H3
+// H4, H5, H6
+// ----------------------------
+
+
+// ----------------------------
+// #GLOBALS
+// ----------------------------
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size-adjust: 0.5;
+}
+
+// Let's style main headings differently from lesser beings
+h1,
+h2,
+h3 {
+    font-family: $font-sans;
+}
+
+// And now for the lesser folk
+h4,
+h5,
+h6 {
+    font-family: $font-serif;
+}
+
+
+// ----------------------------
+// #HEADINGS
+// ----------------------------
+// H1
+// ----------------------------
+h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+@media (min-width: 43.75rem) {
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.125;
+    }
+}
+
+@media (min-width: 56.25rem) {
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.05;
+    }
+}
+
+
+// ----------------------------
+// H2
+// ----------------------------
+h2 {
+    font-size: 1.625rem;
+    line-height: 1.15384615;
+}
+
+@media (min-width: 43.75rem) {
+
+    h2 {
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+}
+
+@media (min-width: 56.25rem) {
+
+    h2 {
+        font-size: 2.25rem;
+        line-height: 1.25;
+    }
+}
+
+
+// ----------------------------
+// H3
+// ----------------------------
+h3 {
+    font-size: 1.375rem;
+    line-height: 1.13636364;
+}
+
+@media (min-width: 43.75rem) {
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+}
+
+@media (min-width: 56.25rem) {
+
+    h3 {
+        font-size: 1.75rem;
+        line-height: 1.25;
+    }
+}
+
+
+// ----------------------------
+// H4, H5, H5
+// ----------------------------
+h4,
+h5,
+h6 {
+    font-size: 1.125rem;
+    line-height: 1.11111111;
+}
+
+@media (min-width: 43.75rem) {
+
+    h4,
+    h5,
+    h6 {
+        line-height: 1.22222222;
+    }
+}
