@@ -2,3 +2,74 @@
 // edX Pattern Library: Functions
 
 // About: Sass partial for defining Sass helper functions.
+
+// #FUNCTIONS
+
+
+// ----------------------------
+// FUNCTIONS
+// ----------------------------
+// get colors from defined palettes map values
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// get font sizes from defined map values
+@function font-size($key) {
+  @if map-has-key($font-sizes, $key) {
+    @return rem(map-get($font-sizes, $key));
+  }
+
+  @warn "Unknown `#{$key}` in $font-sizes.";
+  @return null;
+}
+
+// get line-heights from defined map values
+@function line-height($key) {
+  @if map-has-key($line-heights, $key) {
+    @return map-get($line-heights, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $line-heights.";
+  @return null;
+}
+
+// get font sizes from defined map values
+@function font-weight($key) {
+  @if map-has-key($font-weights, $key) {
+    @return map-get($font-weights, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $font-weights.";
+  @return null;
+}
+
+// get z-indexes from defined map values
+@function z-index($key) {
+  @if map-has-key($z-depths, $key) {
+    @return map-get($z-depths, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-depths.";
+  @return null;
+}
+
+// get vertical spacings from defined map values
+@function spacing-v($key) {
+  @if map-has-key($spacing-v, $key) {
+    @return map-get($spacing-v, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $spacing-v.";
+  @return null;
+}
+
+// get horizontal spacings from defined map values
+@function spacing-h($key) {
+  @if map-has-key($spacing-h, $key) {
+    @return map-get($spacing-h, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $spacing-h.";
+  @return null;
+}

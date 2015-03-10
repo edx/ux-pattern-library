@@ -1,4 +1,115 @@
 // ------------------------------
-// edX Pattern Library: Variables
+// edX Pattern Library: Helpers
 
 // About: Sass partial for defining extends and re-usable elements at the Sass compile level.
+
+// #EXTENDS
+
+
+// ----------------------------
+// #EXTENDS
+// ----------------------------
+// visual link
+%fake-link {
+  cursor: pointer;
+}
+
+// visual disabled
+%state-disabled {
+  pointer-events: none;
+  outline: none;
+  cursor: default;
+}
+
+// remove spacing from first/last children
+%clear-first-child {
+
+    &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+%clear-last-child {
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+// accessibility
+%a11y-hide {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+%a11y-hide-image-text {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+// reset of lists
+%no-list {
+  list-style: none;
+  text-indent: 0;
+}
+
+// reset - lists
+%reset-lists {
+    @extend %no-list;
+    margin: 0;
+    padding: 0;
+}
+
+%list-unstyled {
+    @extend %reset-lists;
+
+    li,
+    dt,
+    dd {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+%list-inline {
+    @extend %list-unstyled;
+
+    li,
+    dt,
+    dd {
+        display: inline-block;
+    }
+}
+
+// reset of typography
+%reset-headings {
+    margin: 0 0 spacing-h(small) 0;
+    font-family: $heading-font-family;
+    font-size: font-size(base);
+    line-height: line-height(base);
+}
+
+// reset - copy
+%reset-copy {
+    font-family: $copy-font-family;
+    font-size: font-size(base);
+    line-height: line-height(large);
+}
+
+// reset - code
+%reset-code {
+    font-family: $code-font-family;
+    font-size: font-size(base);
+    line-height: line-height(large);
+}

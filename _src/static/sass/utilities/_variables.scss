@@ -3,139 +3,173 @@
 
 // About: Sass partial for defining variables used throughout the applications.
 
-// #Grid:                    Grid and layout variables
-// #Fonts:                   Font definitions
-// #Colors (Palette):        Base and theme color definitions
-// #Colors (Application):    Colors for use within the entire application
-// #Timing:                  Event timing variables
+// #CONFIG:         Utility configuration
+// #GRID:           Grid and layout variables
+// #COLORS:         Base, palette and theme color definitions + application
+// #TYPOGRAPHY:     Font definitions and scales
+// #DEPTH:          Event timing variables
+// #TIMING:         Event timing variables
 
 
 // ----------------------------
-// #Grid
+// #CONFIG
 // ----------------------------
-$baseline:     rem(20);
-
-$columns:      12;
-$min-width:    rem(768);
-$max-width:    rem(1600);
-
+$em-base: $font-scale-medium; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
 
 // ----------------------------
-// #Fonts
+// #GRID
 // ----------------------------
-$font-sans:     'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-serif:    'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
-$font-size:     1rem;
-
-
-// ----------------------------
-// #Colors (Palette)
-// ----------------------------
-// Start configuration...
-// - - - - - - - - - - - - - -
-$transparent:    rgba(0, 0, 0, 0);
-$black:          rgba(0, 0, 0, 1.0);
-$gray:           rgba(127, 127, 127, 1.0);
-$white:          rgba(255, 255, 255, 1.0);
-$shadow:         rgba($black, 0.20);
-$highlight:      rgba($white, 0.30);
-$red:            rgba(178, 6, 16, 1.0);
-$orange:         rgba(237, 189, 60, 1.0);
-$yellow:         rgba(237, 189, 60, 1.0);
-$green:          rgba(37, 184, 90, 1.0);
-$blue:           rgba(0, 159, 230, 1.0);
-$indigo:         rgba(75, 0, 130, 1.0);
-$violet:         rgba(143, 0, 255, 1.0);
-$pink:           rgba(183, 37, 103, 1.0);
-// - - - - - - - - - - - - - -
-// End configuration
-// ----------------------------
-$brand-primary:      $blue;
-$brand-secondary:    $pink;
-$brand-accent:       $gray;
-
-$brand-primary-light:       tint($brand-primary, 20%);
-$brand-primary-lighter:     tint($brand-primary, 50%);
-$brand-primary-lightest:    tint($brand-primary, 75%);
-$brand-primary-dark:        shade($brand-primary, 20%);
-$brand-primary-darker:      shade($brand-primary, 50%);
-$brand-primary-darkest:     shade($brand-primary, 75%);
-
-$brand-secondary-light:       tint($brand-secondary, 20%);
-$brand-secondary-lighter:     tint($brand-secondary, 50%);
-$brand-secondary-lightest:    tint($brand-secondary, 75%);
-$brand-secondary-dark:        shade($brand-secondary, 20%);
-$brand-secondary-darker:      shade($brand-secondary, 50%);
-$brand-secondary-darkest:     shade($brand-secondary, 75%);
-
-$brand-accent-light:       tint($brand-accent, 20%);
-$brand-accent-lighter:     tint($brand-accent, 50%);
-$brand-accent-lightest:    tint($brand-accent, 75%);
-$brand-accent-dark:        shade($brand-accent, 20%);
-$brand-accent-darker:      shade($brand-accent, 50%);
-$brand-accent-darkest:     shade($brand-accent, 75%);
-
-$gray-light:       tint($gray, 20%);
-$gray-lighter:     tint($gray, 50%);
-$gray-lightest:    tint($gray, 75%);
-$gray-dark:        shade($gray, 20%);
-$gray-darker:      shade($gray, 50%);
-$gray-darkest:     shade($gray, 75%);
-
-$blue-light:       tint($blue, 20%);
-$blue-lighter:     tint($blue, 50%);
-$blue-lightest:    tint($blue, 75%);
-$blue-dark:        shade($blue, 20%);
-$blue-darker:      shade($blue, 50%);
-$blue-darkest:     shade($blue, 75%);
-
-$pink-light:       tint($pink, 20%);
-$pink-lighter:     tint($pink, 50%);
-$pink-lightest:    tint($pink, 75%);
-$pink-dark:        shade($pink, 20%);
-$pink-darker:      shade($pink, 50%);
-$pink-darkest:     shade($pink, 75%);
-
-$red-light:       tint($red, 20%);
-$red-lighter:     tint($red, 50%);
-$red-lightest:    tint($red, 75%);
-$red-dark:        shade($red, 20%);
-$red-darker:      shade($red, 50%);
-$red-darkest:     shade($red, 75%);
-
-$green-light:       tint($green, 20%);
-$green-lighter:     tint($green, 50%);
-$green-lightest:    tint($green, 75%);
-$green-dark:        shade($green, 20%);
-$green-darker:      shade($green, 50%);
-$green-darkest:     shade($green, 75%);
-
-$yellow-light:       tint($yellow, 20%);
-$yellow-lighter:     tint($yellow, 50%);
-$yellow-lightest:    tint($yellow, 75%);
-$yellow-dark:        shade($yellow, 20%);
-$yellow-darker:      shade($yellow, 50%);
-$yellow-darkest:     shade($yellow, 75%);
-
-$orange-light:       tint($orange, 20%);
-$orange-lighter:     tint($orange, 50%);
-$orange-lightest:    tint($orange, 75%);
-$orange-dark:        shade($orange, 20%);
-$orange-darker:      shade($orange, 50%);
-$orange-darkest:     shade($orange, 75%);
-
+// grid - baseline
+$baseline:      rem(20);
+$baseline-v:    ($baseline*2);
+$baseline-h:    $baseline;
 
 // ----------------------------
-// #Colors (Application)
+// #COLORS
 // ----------------------------
-$color-draft:             $gray-lightest;
-$color-live:              $blue;
-$color-ready:             $green;
-$color-warning:           $orange-lighter;
-$color-error:             $red-lighter;
-$color-staff-only:        $black;
-$color-visibility-set:    $black;
+// color: config
+$transparent:       hsla(0%, 0%, 0%, 0.0);
 
+$gray:              hsla(0%, 0%, 49%, 1.0);
+$red:               hsla(16%, 52%, 36%, 1.0);
+$yellow:            hsla(4%, 83%, 58%, 1.0);
+$green:             hsla(39%, 50%, 43%, 1.0);
+$blue:              hsla(55%, 82%, 45%, 1.0);
+$pink:              hsla(16%, 50%, 43%, 1.0);
+
+$brand-primary:     $blue;
+$brand-secondary:   $pink;
+$brand-accent:      $gray;
+
+// colors: palettes
+$palettes: (
+    primary:        (
+        base:       $brand-primary,
+        mid-light:  tint($brand-primary, 10%),
+        light:      tint($brand-primary, 25%),
+        x-light:    tint($brand-primary, 55%),
+        mid-dark:   shade($brand-primary, 10%),
+        dark:       shade($brand-primary, 25%),
+        x-dark:     shade($brand-primary, 55%),
+        mid-sat:    saturate($brand-primary, 10%),
+        sat:        saturate($brand-primary, 20%),
+        x-sat:      saturate($brand-primary, 30%),
+        mid-trans:  transparentize($brand-primary, 0.25),
+        trans:      transparentize($brand-primary, 0.50),
+        x-trans:    transparentize($brand-primary, 0.75),
+        xx-trans:   transparentize($brand-primary, 0.95)
+    ),
+    secondary:      (
+        base:       $brand-secondary,
+        mid-light:  tint($brand-secondary, 10%),
+        light:      tint($brand-secondary, 25%),
+        x-light:    tint($brand-secondary, 55%),
+        mid-dark:   shade($brand-secondary, 10%),
+        dark:       shade($brand-secondary, 25%),
+        x-dark:     shade($brand-secondary, 55%),
+        mid-sat:    saturate($brand-secondary, 10%),
+        sat:        saturate($brand-secondary, 20%),
+        x-sat:      saturate($brand-secondary, 30%),
+        mid-trans:  transparentize($brand-secondary, 0.25),
+        trans:      transparentize($brand-secondary, 0.50),
+        x-trans:    transparentize($brand-secondary, 0.75),
+        xx-trans:   transparentize($brand-secondary, 0.95)
+    ),
+    accent:           (
+        base:       $brand-accent,
+        mid-light:  tint($brand-accent, 10%),
+        light:      tint($brand-accent, 25%),
+        x-light:    tint($brand-accent, 55%),
+        mid-dark:   shade($brand-accent, 10%),
+        dark:       shade($brand-accent, 25%),
+        x-dark:     shade($brand-accent, 55%),
+        mid-sat:    saturate($brand-accent, 10%),
+        sat:        saturate($brand-accent, 20%),
+        x-sat:      saturate($brand-accent, 30%),
+        mid-trans:  transparentize($brand-accent, 0.25),
+        trans:      transparentize($brand-accent, 0.50),
+        x-trans:    transparentize($brand-accent, 0.75),
+        xx-trans:   transparentize($brand-accent, 0.95)
+    ),
+    grayscale:           (
+        base:       $gray,
+        mid-light:  tint($gray, 40%),
+        light:      tint($gray, 60%),
+        x-light:    tint($gray, 80%),
+        xx-light:   tint($gray, 90%),
+        white:      tint($gray, 98%),
+        white-t:    tint($gray, 100%),
+        mid-dark:   shade($gray, 40%),
+        dark:       shade($gray, 60%),
+        x-dark:     shade($gray, 80%),
+        xx-dark:    shade($gray, 90%),
+        black:      shade($gray, 98%),
+        black-t:    shade($gray, 100%),
+        mid-trans:  transparentize($gray, 0.25),
+        trans:      transparentize($gray, 0.50),
+        x-trans:    transparentize($gray, 0.75),
+        xx-trans:   transparentize($gray, 0.95)
+    ),
+    green:           (
+        base:       $gray,
+        mid-light:  tint($gray, 40%),
+        light:      tint($gray, 60%),
+        x-light:    tint($gray, 80%),
+        xx-light:   tint($gray, 90%),
+        white:      tint($gray, 98%),
+        white-t:    tint($gray, 100%),
+        mid-dark:   shade($gray, 40%),
+        dark:       shade($gray, 60%),
+        x-dark:     shade($gray, 80%),
+        xx-dark:    shade($gray, 90%),
+        black:      shade($gray, 98%),
+        black-t:    shade($gray, 100%),
+        mid-trans:  transparentize($gray, 0.25),
+        trans:      transparentize($gray, 0.50),
+        x-trans:    transparentize($gray, 0.75),
+        xx-trans:   transparentize($gray, 0.95)
+    ),
+    red:           (
+        base:       $gray,
+        mid-light:  tint($gray, 40%),
+        light:      tint($gray, 60%),
+        x-light:    tint($gray, 80%),
+        xx-light:   tint($gray, 90%),
+        white:      tint($gray, 98%),
+        white-t:    tint($gray, 100%),
+        mid-dark:   shade($gray, 40%),
+        dark:       shade($gray, 60%),
+        x-dark:     shade($gray, 80%),
+        xx-dark:    shade($gray, 90%),
+        black:      shade($gray, 98%),
+        black-t:    shade($gray, 100%),
+        mid-trans:  transparentize($gray, 0.25),
+        trans:      transparentize($gray, 0.50),
+        x-trans:    transparentize($gray, 0.75),
+        xx-trans:   transparentize($gray, 0.95)
+    ),
+    yellow:           (
+        base:       $gray,
+        mid-light:  tint($gray, 40%),
+        light:      tint($gray, 60%),
+        x-light:    tint($gray, 80%),
+        xx-light:   tint($gray, 90%),
+        white:      tint($gray, 98%),
+        white-t:    tint($gray, 100%),
+        mid-dark:   shade($gray, 40%),
+        dark:       shade($gray, 60%),
+        x-dark:     shade($gray, 80%),
+        xx-dark:    shade($gray, 90%),
+        black:      shade($gray, 98%),
+        black-t:    shade($gray, 100%),
+        mid-trans:  transparentize($gray, 0.25),
+        trans:      transparentize($gray, 0.50),
+        x-trans:    transparentize($gray, 0.75),
+        xx-trans:   transparentize($gray, 0.95)
+    ),
+);
+
+// colors: applications
 $color-heading-base:       $gray-darker;
 $color-copy-base:          $gray-light;
 $color-copy-emphasized:    $gray-darker;
@@ -146,12 +180,102 @@ $link-visited:    $blue-dark;
 
 
 // ----------------------------
-// #Timing
+// #TYPOGRAPHY
 // ----------------------------
-$timing-slowest:    3.0s;
-$timing-slower:     2.0s;
-$timing-slow:       1.0s;
-$timing-base:       0.75s;
-$timing-fast:       0.50s;
-$timing-faster:     0.25s;
-$timing-fastest:    0.125s;
+// typography - typeface imports
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Light-webfont', 300, $file-formats: eot woff ttf svg);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-LightItalic-webfont', 300, italic, $file-formats: eot woff ttf svg);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Regular-webfont', 400, $file-formats: eot woff ttf svg);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Italic-webfont', 400, italic, $file-formats: eot woff ttf svg);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Semibold-webfont', 600, $file-formats: eot woff ttf svg);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-SemiboldItalic-webfont', 600, italic, $file-formats: eot woff ttf svg);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Bold-webfont', 700, $file-formats: eot woff ttf svg);
+@include font-face('Open Sans', '../fonts/OpenSans/OpenSans-BoldItalic-webfont', 700, italic, $file-formats: eot woff ttf svg);
+
+// typography - scale roots
+$font-scale-small: 14;
+$font-scale-medium: 16;
+$font-scale-large: 16;
+$font-scale-base: $font-scale-medium;
+
+$font-sizes: (
+    base:           $font-scale-base,
+    mid-small:      ceil(golden-ratio($font-scale-base, -1)),
+    small:          ceil(golden-ratio($font-scale-base, -2)),
+    x-small:        ceil(golden-ratio($font-scale-base, -3)),
+    xx-small:       ceil(golden-ratio($font-scale-base, -4)),
+    mid-large:      ceil(golden-ratio($font-scale-base, 1)),
+    large:          ceil(golden-ratio($font-scale-base, 2)),
+    x-large:        ceil(golden-ratio($font-scale-base, 3)),
+    xx-large:       ceil(golden-ratio($font-scale-base, 4)),
+);
+
+// typography - line-height scale
+$line-heights: (
+    none:           0,
+    base:           1.25,
+    mid-small:      1,
+    small:          0.75,
+    x-small:        0.75,
+    mid-large:      1.25,
+    large:          1.48,
+    x-large:        1.48
+);
+
+// typography - size scale
+$font-weights: (
+    normal:         400,
+    light:          300,
+    x-light:        200,
+    semi-bold:      600,
+    bold:           700,
+    x-bold:         800
+);
+
+// ----------------------------
+// #DEPTH
+// ----------------------------
+$z-depths: (
+    base:           1,
+    mid-back:       -10,
+    back:           -100,
+    very-back:      -1000,
+    mid-front:      10,
+    front:          100,
+    very-front:     1000
+);
+
+$spacing-v: (
+    base:       $baseline-v,
+    mid-small:  ($baseline-v*0.75),
+    small:      ($baseline-v/2),
+    x-small:    ($baseline-v/4),
+    mid-large:  ($baseline-v*1.5),
+    large:      ($baseline-v*2),
+    x-large:    ($baseline-v*4)
+);
+
+$spacing-h: (
+    base:       $baseline-h,
+    mid-small:  ($baseline-h*0.75),
+    small:      ($baseline-h/2),
+    x-small:    ($baseline-h/4),
+    xx-small:   ($baseline-h/8),
+    mid-large:  ($baseline-h*1.5),
+    large:      ($baseline-h*2),
+    x-large:    ($baseline-h*4)
+);
+
+
+// ----------------------------
+// #TIMING
+// ----------------------------
+$timing: (
+    base:       0.75s,
+    slow:       1s,
+    x-slow:     1.5s,
+    xx-slow:    2s,
+    fast:       0.5s,
+    x-fast:     0.25s,
+    xx-fast:    0.125s,
+);

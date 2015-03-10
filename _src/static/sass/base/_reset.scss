@@ -3,13 +3,12 @@
 
 // About: Sass partial for resetting and setting base elements.
 
-// #SETTINGS
-// Global:    Global overrides and resets
-// Base:      Base overrides and resets
+// GLOBAL:  Global overrides and resets
+// BASE:    Base overrides and resets
 
 
 // ----------------------------
-// Global
+// GLOBAL
 // ----------------------------
 * {
     box-sizing: border-box; // Reset the box model for easier management
@@ -17,7 +16,7 @@
 
 
 // ----------------------------
-// Base
+// BASE
 // ----------------------------
 body {
     font-size: $font-size;
