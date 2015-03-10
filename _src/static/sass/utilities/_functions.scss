@@ -1,8 +1,4 @@
-/*
- * $type (str) [primary, secondary, tetrtiary]
- */
-@mixin button($type: secondary) { // Adding a primary button is an explicit action; secondary is default
-    @if type-of($type) == string {
-        @include button($type);
-    }
-}
+// ------------------------------
+// edX Pattern Library: Functions
+
+// About: Sass partial for defining Sass helper functions.
