@@ -3,18 +3,13 @@
 
 // About: Sass partial for defining variables used throughout the applications.
 
-// #CONFIG:         Utility configuration
 // #GRID:           Grid and layout variables
 // #COLORS:         Base, palette and theme color definitions + application
 // #TYPOGRAPHY:     Font definitions and scales
 // #DEPTH:          Event timing variables
 // #TIMING:         Event timing variables
+// #APPLICATIONS:   Applying configuration
 
-
-// ----------------------------
-// #CONFIG
-// ----------------------------
-$em-base: $font-scale-medium; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
 
 // ----------------------------
 // #GRID
@@ -28,14 +23,14 @@ $baseline-h:    $baseline;
 // #COLORS
 // ----------------------------
 // color: config
-$transparent:       hsla(0%, 0%, 0%, 0.0);
+$transparent:       rgba(0, 0, 0, 0);
 
-$gray:              hsla(0%, 0%, 49%, 1.0);
-$red:               hsla(16%, 52%, 36%, 1.0);
-$yellow:            hsla(4%, 83%, 58%, 1.0);
-$green:             hsla(39%, 50%, 43%, 1.0);
-$blue:              hsla(55%, 82%, 45%, 1.0);
-$pink:              hsla(16%, 50%, 43%, 1.0);
+$gray:              rgb(127, 127, 127);
+$red:               rgb(178, 6, 16);
+$yellow:            rgb(237, 189, 60);
+$green:             rgb(37, 184, 90);
+$blue:              rgb(0, 162, 227);
+$pink:              rgb(183, 37, 103);
 
 $brand-primary:     $blue;
 $brand-secondary:   $pink;
@@ -169,20 +164,11 @@ $palettes: (
     ),
 );
 
-// colors: applications
-$color-heading-base:       $gray-darker;
-$color-copy-base:          $gray-light;
-$color-copy-emphasized:    $gray-darker;
-
-$link:            $blue;
-$link-hover:      $blue-lighter;
-$link-visited:    $blue-dark;
-
-
 // ----------------------------
 // #TYPOGRAPHY
 // ----------------------------
-// typography - typeface imports
+
+// typeface imports (TODO: these should be abstracted out once we have more than just 1)
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Light-webfont', 300, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-LightItalic-webfont', 300, italic, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Regular-webfont', 400, $file-formats: eot woff ttf svg);
@@ -192,11 +178,17 @@ $link-visited:    $blue-dark;
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Bold-webfont', 700, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-BoldItalic-webfont', 700, italic, $file-formats: eot woff ttf svg);
 
-// typography - scale roots
+// font families
+$font-family-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+
+// scale roots
 $font-scale-small: 14;
 $font-scale-medium: 16;
 $font-scale-large: 16;
 $font-scale-base: $font-scale-medium;
+
+$em-base: $font-scale-medium; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
 
 $font-sizes: (
     base:           $font-scale-base,
@@ -210,7 +202,7 @@ $font-sizes: (
     xx-large:       ceil(golden-ratio($font-scale-base, 4)),
 );
 
-// typography - line-height scale
+// line-height scale
 $line-heights: (
     none:           0,
     base:           1.25,
@@ -222,7 +214,7 @@ $line-heights: (
     x-large:        1.48
 );
 
-// typography - size scale
+// size scale
 $font-weights: (
     normal:         400,
     light:          300,
@@ -274,8 +266,51 @@ $timing: (
     base:       0.75s,
     slow:       1s,
     x-slow:     1.5s,
-    xx-slow:    2s,
     fast:       0.5s,
     x-fast:     0.25s,
-    xx-fast:    0.125s,
 );
+
+// ----------------------------
+// #APPLICATIONS
+// ----------------------------
+// scaffolding
+$view-bg: palette(grayscale, xx-light);
+
+// base component settings
+$component-focus-color: inherit;
+$component-focus-bg: palette(primary, x-light);
+$component-active-color: palette(grayscale, white);
+$component-active-bg: palette(primary, base);
+
+// base text settings
+$text-base-color: palette(grayscale, mid-dark);
+$text-base-font-family: $font-family-sans-serif;
+$text-base-font-weight: font-weight(normal);
+$text-base-focus-color: palette(grayscale, dark);
+
+// links
+$link-color: palette(primary, base);
+$link-focus-color: palette(primary, sat);
+$link-visited-color: palette(primary, dark);
+
+// headings
+$headings-base-font-family: $font-family-sans-serif;
+$headings-base-font-weight: font-weight(semi-bold);
+$headings-base-color: palette(grayscale, dark);
+
+$headings-primary-font-family: $font-family-sans-serif;
+$headings-primary-font-weight: $headings-base-font-weight;
+$headings-primary-color: palette(grayscale, x-dark);
+
+$headings-secondary-font-family: $font-family-sans-serif;
+$headings-secondary-font-weight: $headings-base-font-weight;
+$headings-secondary-color: palette(grayscale, mid-dark);
+
+// tables
+$table-cell-padding: spacing-v(small) spacing-h(small);
+$table-condensed-cell-padding: spacing-v(x-small) spacing-h(x-small);
+$table-bg: palette(grayscale, white);
+$table-accent-bg: palette(accent, base);
+$table-focus-bg: $component-focus-bg;
+$table-active-bg: $component-active-bg;
+$table-border-color: palette(grayscale, x-light);

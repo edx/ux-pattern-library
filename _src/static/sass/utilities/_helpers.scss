@@ -3,22 +3,23 @@
 
 // About: Sass partial for defining extends and re-usable elements at the Sass compile level.
 
-// #EXTENDS
-
+// #UTILITIES
+// #RESETS
 
 // ----------------------------
-// #EXTENDS
+// #UTILITIES
 // ----------------------------
-// visual link
-%fake-link {
-  cursor: pointer;
-}
-
 // visual disabled
 %state-disabled {
-  pointer-events: none;
-  outline: none;
-  cursor: default;
+    pointer-events: none;
+    outline: none;
+    cursor: default;
+}
+
+// presentational wrapper
+%wrapper {
+    @include clearfix();
+    width: 100%;
 }
 
 // remove spacing from first/last children
@@ -42,14 +43,14 @@
 
 // accessibility
 %a11y-hide {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 %a11y-hide-image-text {
@@ -58,17 +59,15 @@
     white-space: nowrap;
 }
 
+// ----------------------------
+// #UTILITIES
+// ----------------------------
 // reset of lists
-%no-list {
-  list-style: none;
-  text-indent: 0;
-}
-
-// reset - lists
 %reset-lists {
-    @extend %no-list;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-indent: 0;
 }
 
 %list-unstyled {
@@ -95,21 +94,40 @@
 // reset of typography
 %reset-headings {
     margin: 0 0 spacing-h(small) 0;
-    font-family: $heading-font-family;
+    font-family: $headings-base-font-family;
     font-size: font-size(base);
     line-height: line-height(base);
+    color: $headings-base-color;
 }
 
-// reset - copy
+// reset of copy
 %reset-copy {
-    font-family: $copy-font-family;
+    font-family: $text-base-font-family;
     font-size: font-size(base);
     line-height: line-height(large);
+    color: $text-base-color;
 }
 
-// reset - code
+// reset of code
 %reset-code {
-    font-family: $code-font-family;
+    font-family: $font-family-monospace;
     font-size: font-size(base);
     line-height: line-height(large);
+    color: $text-base-color;
+}
+
+// reset of links
+%link {
+    @include transition(all timing(x-fast) ease-in-out);
+    border-bottom: rem(1) solid $transparent;
+    color: palette(primary, base);
+    text-decoration: none;
+
+    // STATE: hover, active, focus
+    &:hover,
+    &:active,
+    &:focus {
+        border-bottom-color: palette(primary, sat);
+        color: palette(primary, sat);
+    }
 }

@@ -3,78 +3,105 @@
 
 // About: Sass partial for resetting and setting base elements.
 
-// GLOBAL:  Global overrides and resets
-// BASE:    Base overrides and resets
+// #GLOBAL:     Global overrides and resets
+// #BASE:       Base overrides and resets
+// #FORMS:      Form-focused overrides and resets
+// #ACTIONS:    links, buttons, controls overrides and resets
+// #MEDIA:      images, video, mutlmedia overrides and resets
+// #UTILITIES:  layout and use case utilities
 
 
 // ----------------------------
-// GLOBAL
+// #GLOBAL
 // ----------------------------
 * {
-    box-sizing: border-box; // Reset the box model for easier management
+    box-sizing: border-box;
 }
 
+// ----------------------------
+// #BASE
+// ----------------------------
+html, body {
 
-// ----------------------------
-// BASE
-// ----------------------------
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
 body {
-    font-size: $font-size;
-    min-width: $min-width;
+    color: $text-base-color;
+    background: $view-bg;
+    font-size: $font-scale-medium;
+    font-family: $font-family-sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-body,
-input,
-select,
-textarea,
-button {
-    font-family: $font-sans;
+// ----------------------------
+// #FORMS
+// ----------------------------
+fieldset {
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
-a {
-    @include transition(color $timing-fastest ease-in-out 0s);
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-        text-decoration: underline;
-    }
+textarea {
+    resize: vertical;
 }
 
-h1,
-h2,
-h3 {
-    @include page-title('sans');
+// ----------------------------
+// #ACTIONS
+// ----------------------------
+a,
+.link {
+    @extend %link;
 }
 
-h4,
-h5,
-h6 {
-    @include page-title('serif');
-}
-
-p {
-    @include font-size();
-    @include line-height();
-}
-
+// ----------------------------
+// #MEDIA
+// ----------------------------
 figure {
     display: inline-block;
     margin: 0;
     padding: 0;
 
+    img {
+        display: block;
+    }
+
     figcaption {
-        @include line-height();
-        font-family: $font-serif;
-        font-style: italic;
+
     }
 }
 
-.icon {
-    @extend %icon-font;
+// images
+.img,
+picture {
+    max-width: 100%;
+    margin: 0;
 }
 
-[class*="wrapper-"] {
-    @include clearfix();
-    width: 100%;
+pre {
+    margin: 0;
+}
+
+// ----------------------------
+// #UTILITIES
+// ----------------------------
+.sr-only {
+    @extend %a11y-hide;
+}
+
+.bg-replace {
+    @extend %a11y-hide-image-text;
+}
+
+[class^='wrapper'] {
+    @extend %wrapper;
 }

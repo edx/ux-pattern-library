@@ -54,6 +54,16 @@
   @return null;
 }
 
+// get timing from defined map values
+@function timing($key) {
+  @if map-has-key($timing, $key) {
+    @return map-get($timing, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-depths.";
+  @return null;
+}
+
 // get vertical spacings from defined map values
 @function spacing-v($key) {
   @if map-has-key($spacing-v, $key) {

@@ -1,49 +1,62 @@
-img,legend{border:0}
-figure,legend,td,th{padding:0}
-html{box-sizing:border-box;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+.copy,body,dl,h1,h2,h3,h4,h5,h6,ol,p,td,th,ul{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
+.bg-replace,.sr-only,svg:not(:root){overflow:hidden}
+.sr-only,fieldset,img,legend{border:0}
+.sr-only,fieldset,figure,legend,td,th{padding:0}
 *,:after,:before{box-sizing:inherit}
-h1,h2,h3,h4,h5,h6{font-weight:600;font-size:3rem}
-.icon{display:inline-block;min-width:1rem;min-height:1rem}
-.is-hidden,[hidden],template{display:none}
+*,html{box-sizing:border-box}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:url(../fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-Light-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-Light-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-Light-webfont.svg#Open Sans")format("svg")}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;src:url(../fonts/OpenSans/OpenSans-LightItalic-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-LightItalic-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-LightItalic-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-LightItalic-webfont.svg#Open Sans")format("svg")}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:url(../fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-Regular-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-Regular-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-Regular-webfont.svg#Open Sans")format("svg")}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:url(../fonts/OpenSans/OpenSans-Italic-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-Italic-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-Italic-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-Italic-webfont.svg#Open Sans")format("svg")}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:url(../fonts/OpenSans/OpenSans-Semibold-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-Semibold-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-Semibold-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-Semibold-webfont.svg#Open Sans")format("svg")}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;src:url(../fonts/OpenSans/OpenSans-SemiboldItalic-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-SemiboldItalic-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-SemiboldItalic-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-SemiboldItalic-webfont.svg#Open Sans")format("svg")}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:url(../fonts/OpenSans/OpenSans-Bold-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-Bold-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-Bold-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-Bold-webfont.svg#Open Sans")format("svg")}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;src:url(../fonts/OpenSans/OpenSans-BoldItalic-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-BoldItalic-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-BoldItalic-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-BoldItalic-webfont.svg#Open Sans")format("svg")}
+[class^=wrapper]{width:100%}
+[class^=wrapper]::after{clear:both;content:"";display:table}
+.sr-only{clip:rect(0 0 0 0);height:1px;margin:-1px;position:absolute;width:1px}
+.bg-replace{text-indent:100%;white-space:nowrap}
+pre,textarea{overflow:auto}
+h1,h2,h3,h4,h5,h6{margin:0 0 .625rem;font-size:1rem;line-height:1.25;color:#323232}
+.copy,dl,ol,p,td,th,ul{font-size:1rem;line-height:1.48;color:#4c4c4c}
+.link,a{transition:all .25s ease-in-out;border-bottom:.0625rem solid transparent;color:#00a2e3;text-decoration:none}
+.link:active,.link:focus,.link:hover,a:active,a:focus,a:hover{border-bottom-color:#00acfa;color:#00acfa}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-body{margin:0;font-size:1rem;min-width:48rem}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0;color:#4c4c4c;background:#f2f2f2;font-size:16;-webkit-font-smoothing:antialiased}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
-a{background-color:transparent;transition:color .125s ease-in-out 0s;text-decoration:none}
+[hidden],template{display:none}
+a{background-color:transparent}
 a:active,a:hover{outline:0}
 abbr[title]{border-bottom:1px dotted}
 b,optgroup,strong{font-weight:700}
 dfn{font-style:italic}
-h1{margin:.67em 0}
+h1{font-size:2em;margin:.67em 0}
 mark{background:#ff0;color:#000}
 small{font-size:80%}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
 sup{top:-.5em}
 sub{bottom:-.25em}
-svg:not(:root){overflow:hidden}
 hr{box-sizing:content-box;height:0}
-pre,textarea{overflow:auto}
+pre{margin:0}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
 button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
 button{overflow:visible}
 button,select{text-transform:none}
-button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button,html input[type=button],input[type=submit],input[type=reset]{-webkit-appearance:button;cursor:pointer}
 button[disabled],html input[disabled]{cursor:default}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 input{line-height:normal}
-figure figcaption,p{line-height:.222remrem}
 input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
 input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
 input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
-fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+textarea{resize:vertical}
 table{border-collapse:collapse;border-spacing:0}
-*{box-sizing:border-box}
-body,button,input,select,textarea{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
-a:focus,a:hover{text-decoration:underline}
-p{font-size:1.6rem}
+audio,canvas,iframe,img,svg,video{vertical-align:middle}
+fieldset{margin:0}
 figure{display:inline-block;margin:0}
-figure figcaption{font-family:'Bitstream Vera Sans Mono',Consolas,Courier,monospace;font-style:italic}
-[class*=wrapper-]{width:100%}
-[class*=wrapper-]::after{clear:both;content:"";display:table}
+figure img{display:block}
+.img,picture{max-width:100%;margin:0}

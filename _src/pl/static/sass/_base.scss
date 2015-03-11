@@ -25,6 +25,7 @@ html, body {
     background: palette(grayscale, x-light);
     font-size: $font-scale-medium;
     font-family: $font-stack-sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .pl-wrapper-view {
