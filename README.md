@@ -71,14 +71,14 @@ To view the Pattern Library locally (and to watch for any local changes to conte
 gulp
 ```
 
-This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['sass', sass_PL', 'images', 'images_PL', 'jekyll-rebuild', jekyll-build' 'watch']`
+This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['styles', pl_styles', 'images', 'pl_images', pl_scripts, jekyll-build' 'watch']`
 
-* The `sass` and `sass_PL` tasks compile your css files.
-* `images` and `images_PL` copies images from a source folder, performs optimizations, the outputs them into the build folder
+* The `styles` and `pl_styles` tasks compile your css files.
+* `images` and `pl_images` copies images from a source folder, performs optimizations, the outputs them into the build folder
 * `jekyll-build` and `jekyll-rebuild` run the local jekyll server/preview and re-process any layouts, posts, or templates changed.
-* `watch` which will run the browserifyTask with a `devMode` flag that enables sourcemaps for Sass. The task itself starts watching source files and will re-run the appropriate tasks when those files change.
+* `watch` will start watching source files and will re-run the appropriate tasks when those files change.
 
-**NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task suffixed with `*_PL` refers to the reference site UI and not the elements.
+**NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task prefixed with `pl_*` refers to the reference site UI and not the elements.
 
 ### Publishing & Viewing Remotely
 The most up-to-date version of the library can be viewed on our public domain, **http://code.edx.org/ux-pattern-library**
