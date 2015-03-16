@@ -16,70 +16,139 @@
 
 // get font sizes from defined map values
 @function font-size($key) {
-  @if map-has-key($font-sizes, $key) {
-    @return rem(map-get($font-sizes, $key));
-  }
+    @if map-has-key($font-sizes, $key) {
+        @return rem(map-get($font-sizes, $key));
+    }
 
-  @warn "Unknown `#{$key}` in $font-sizes.";
-  @return null;
+    @warn "Unknown `#{$key}` in $font-sizes.";
+    @return null;
 }
 
 // get line-heights from defined map values
 @function line-height($key) {
-  @if map-has-key($line-heights, $key) {
-    @return map-get($line-heights, $key);
-  }
+    @if map-has-key($line-heights, $key) {
+        @return map-get($line-heights, $key);
+    }
 
-  @warn "Unknown `#{$key}` in $line-heights.";
-  @return null;
+    @warn "Unknown `#{$key}` in $line-heights.";
+    @return null;
 }
 
 // get font sizes from defined map values
 @function font-weight($key) {
-  @if map-has-key($font-weights, $key) {
-    @return map-get($font-weights, $key);
-  }
+    @if map-has-key($font-weights, $key) {
+        @return map-get($font-weights, $key);
+    }
 
-  @warn "Unknown `#{$key}` in $font-weights.";
-  @return null;
+    @warn "Unknown `#{$key}` in $font-weights.";
+    @return null;
 }
 
 // get z-indexes from defined map values
 @function z-index($key) {
-  @if map-has-key($z-depths, $key) {
-    @return map-get($z-depths, $key);
-  }
+    @if map-has-key($z-depths, $key) {
+        @return map-get($z-depths, $key);
+    }
 
-  @warn "Unknown `#{$key}` in $z-depths.";
-  @return null;
+    @warn "Unknown `#{$key}` in $z-depths.";
+    @return null;
 }
 
 // get timing from defined map values
 @function timing($key) {
-  @if map-has-key($timing, $key) {
-    @return map-get($timing, $key);
-  }
+    @if map-has-key($timing, $key) {
+        @return map-get($timing, $key);
+    }
 
-  @warn "Unknown `#{$key}` in $z-depths.";
-  @return null;
+    @warn "Unknown `#{$key}` in $z-depths.";
+    @return null;
 }
 
 // get vertical spacings from defined map values
 @function spacing-vertical($key) {
-  @if map-has-key($spacing-vertical, $key) {
-    @return map-get($spacing-vertical, $key);
-  }
+    @if map-has-key($spacing-vertical, $key) {
+        @return map-get($spacing-vertical, $key);
+    }
 
-  @warn "Unknown `#{$key}` in $spacing-vertical.";
-  @return null;
+    @warn "Unknown `#{$key}` in $spacing-vertical.";
+    @return null;
 }
 
 // get horizontal spacings from defined map values
 @function spacing-horizontal($key) {
-  @if map-has-key($spacing-horizontal, $key) {
-    @return map-get($spacing-horizontal, $key);
-  }
+    @if map-has-key($spacing-horizontal, $key) {
+        @return map-get($spacing-horizontal, $key);
+    }
 
-  @warn "Unknown `#{$key}` in $spacing-horizontal.";
-  @return null;
+    @warn "Unknown `#{$key}` in $spacing-horizontal.";
+    @return null;
+}
+
+// Check color contrast ratio for background and foreground colors
+// Adapted from Pelle Wessman (https://gist.github.com/voxpelli)
+//                            (https://gist.github.com/voxpelli/6304812)
+// Who, in turn, adapted it from Lea Verou (http://lea.verou.me/)
+//                            (https://github.com/LeaVerou/contrast-ratio)
+
+// About:
+// Useful function to determine color contrast ratio between two different colors. It currently lacks
+// alpha-transparency support.
+
+// Attributes:
+// $base = The background color
+// $color1 = $colorN = Colors to be tested
+// $tolerance = How lenient the check is, defaults to zero
+
+// Usage:
+// (Sass/CSS) color: pick_best_color(#f00, (#fff, #666));
+
+// Example:
+// color: pick_best_color($base, ($color1, $color2), $tolerance);
+
+@function color_luminance($color) {
+    $rgba: red($color), green($color), blue($color);
+    $rgba2: ();
+
+    @for $i from 1 through 3 {
+        $rgb: nth($rgba, $i);
+        $rgb: $rgb / 255;
+        $rgb: if($rgb < .03928, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2.4));
+        $rgba2: append($rgba2, $rgb);
+    }
+
+    @return .2126 * nth($rgba2, 1) + .7152 * nth($rgba2, 2) + 0.0722 * nth($rgba2, 3);
+}
+
+@function color_contrast($color1, $color2) {
+    $luminance1: color_luminance($color1) + .05;
+    $luminance2: color_luminance($color2) + .05;
+    $ratio: $luminance1 / $luminance2;
+
+    @if $luminance2 > $luminance1 {
+        $ratio: 1 / $ratio;
+    }
+
+    $ratio: round($ratio * 10) / 10;
+
+    @return $ratio;
+}
+
+@function pick_best_color($base, $colors, $tolerance: 0) {
+    $contrast: color_contrast($base, nth($colors, 1));
+    $best: nth($colors, 1);
+
+    @for $i from 2 through length($colors) {
+        $current_contrast: color_contrast($base, nth($colors, $i));
+
+        @if ($current_contrast - $contrast > $tolerance) {
+            $contrast: color_contrast($base, nth($colors, $i));
+            $best: nth($colors, $i);
+        }
+    }
+
+    @if ($contrast < 3) {
+        @warn "Contrast ratio of #{$best} on #{$base} is pretty bad, just #{$contrast}";
+    }
+
+    @return $best;
 }
