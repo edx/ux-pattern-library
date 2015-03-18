@@ -73,23 +73,8 @@ body,html{height:100%;color:#0f0f0e}
 .pl-nav{margin-bottom:2.5rem}
 .pl-nav:last-child{margin-bottom:0}
 .pl-nav .nav-list{margin:0}
-<<<<<<< HEAD
-.pl-nav .pl-link{transition:background .25s ease-in-out;display:block;border-bottom:.0625rem solid #0f0f0e;padding:.625rem 2.5rem;color:#dbdbda;text-decoration:none;font-size:.875rem}
-<<<<<<< HEAD
-.pl-nav .pl-link:active,.pl-nav .pl-link:focus,.pl-nav .pl-link:hover{color:#3fb7ea;background:#0f0f0e}
-=======
-<<<<<<< HEAD
-.pl-nav .pl-link:active,.pl-nav .pl-link:focus,.pl-nav .pl-link:hover{color:#00a9fa;background:#0f0f0e}
-.pl-nav .pl-link:before{height:.3125rem;width:.3125rem;position:relative;left:-1.25rem;display:none;vertical-align:middle;content:'';border-radius:100%;background:#00a9fa}
-.pl-element-header::after,.pl-wrapper-element::after,.pl-wrapper-view::after{content:""}
-=======
 .pl-nav .pl-link{transition:background .25s ease-in-out;display:block;border-bottom:.0625rem solid #0f0f0e;padding:.625rem 2.5rem;color:#dbdbda;text-decoration:none;font-size:.875rem;font-weight:600}
 .pl-nav .pl-link:active,.pl-nav .pl-link:focus,.pl-nav .pl-link:hover{color:#3fb7ea;background:#0f0f0e}
->>>>>>> feb6b80... UX-1525, Creating base styles
-=======
-.pl-nav .pl-link:active,.pl-nav .pl-link:focus,.pl-nav .pl-link:hover{color:#3fb7ea;background:#0f0f0e}
->>>>>>> 9ebcc38... improving pattern site navigation:
->>>>>>> UX-1525, Creating base styles
 .pl-nav .nav-list-item:last-child .pl-link{border-bottom:0}
 .pl-nav .nav-list-item.is-current .pl-link:before{display:inline-block}
 .pl-nav-internal .pl-link:before{transition:opacity .25s ease-in-out;height:.3125rem;width:.3125rem;position:absolute;top:1.125rem;left:1.25rem;content:'';border-radius:100%;opacity:0;background:#3fb7ea}
