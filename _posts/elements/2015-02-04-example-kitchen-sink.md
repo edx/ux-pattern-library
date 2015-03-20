@@ -17,33 +17,33 @@ info:  Vestibulum id ligula porta felis euismod semper. Donec id elit non mi por
 
 <h1 id="headings">Headings</h1>
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+<h1 class="hd-1">Artisan Portland forage yr Vice. Craft beer tattooed fap sustainable migas street art</h1>
+<h2 class="hd-2">Selfies kale chips actually, Echo park four dollar toast dreamcatcher typewriter Neutra +1 polaroid single-origin coffee viral chia iPhone</h2>
+<h3 class="hd-3">Godard Chillwave Roof party cred. Neutra fap pop-up deep v fixie</h3>
+<h4 class="hd-4">Artisan Portland forage yr Vice. Craft beer tattooed fap sustainable migas street art</h4>
+<h5 class="hd-5">Selfies kale chips actually, Echo park four dollar toast dreamcatcher typewriter Neutra +1 polaroid single-origin coffee viral chia iPhone</h5>
+<h6 class="hd-6">Godard Chillwave Roof party cred. Neutra fap pop-up deep v fixie</h6>
 
 <section class="group">
     <h1 id="headings-with-text">Headings with Text</h1>
 
     <article>
-        <h1>Heading 1</h1>
+        <h1 class="hd-1">Artisan Portland forage yr Vice. Craft beer tattooed fap sustainable migas street art</h1>
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliqua. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
 
-        <h2>Heading 2</h2>
+        <h2 class="hd-2">Selfies kale chips actually, Echo park four dollar toast dreamcatcher typewriter Neutra +1 polaroid single-origin coffee viral chia iPhone</h2>
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
 
-        <h3>Heading 3</h3>
+        <h3 class="hd-3">Godard Chillwave Roof party cred. Neutra fap pop-up deep v fixie</h3>
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
 
-        <h4>Heading 4</h4>
+        <h4 class="hd-4">Artisan Portland forage yr Vice. Craft beer tattooed fap sustainable migas street art</h4>
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
 
-        <h5>Heading 5</h5>
+        <h5 class="hd-5">Selfies kale chips actually, Echo park four dollar toast dreamcatcher typewriter Neutra +1 polaroid single-origin coffee viral chia iPhone</h5>
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
 
-        <h6>Heading 6</h6>
+        <h6 class="hd-6">Godard Chillwave Roof party cred. Neutra fap pop-up deep v fixie</h6>
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
     </article>
 </section>
