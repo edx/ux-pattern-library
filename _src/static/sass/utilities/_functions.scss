@@ -44,6 +44,16 @@
   @return null;
 }
 
+// get letter spacing from defined map values
+@function letter-spacing($key) {
+  @if map-has-key($letter-spacing, $key) {
+    @return map-get($letter-spacing, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $letter-spacing.";
+  @return null;
+}
+
 // get z-indexes from defined map values
 @function z-index($key) {
   @if map-has-key($z-depths, $key) {
@@ -67,7 +77,7 @@
 // get vertical spacings from defined map values
 @function spacing-vertical($key) {
   @if map-has-key($spacing-vertical, $key) {
-    @return map-get($spacing-vertical, $key);
+    @return rem(map-get($spacing-vertical, $key));
   }
 
   @warn "Unknown `#{$key}` in $spacing-vertical.";
@@ -77,7 +87,7 @@
 // get horizontal spacings from defined map values
 @function spacing-horizontal($key) {
   @if map-has-key($spacing-horizontal, $key) {
-    @return map-get($spacing-horizontal, $key);
+    @return rem(map-get($spacing-horizontal, $key));
   }
 
   @warn "Unknown `#{$key}` in $spacing-horizontal.";
