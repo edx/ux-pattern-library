@@ -3,12 +3,19 @@
 
 // About: Sass partial for defining variables used throughout the applications.
 
+// #UNITS:          Basic units of measurement
 // #GRID:           Grid and layout variables
 // #COLORS:         Base, palette and theme color definitions + application
 // #TYPOGRAPHY:     Font definitions and scales
 // #DEPTH:          Event timing variables
 // #TIMING:         Event timing variables
 // #APPLICATIONS:   Applying configuration
+
+
+// ----------------------------
+// #UNITS
+// ----------------------------
+$em-base: 16; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
 
 
 // ----------------------------
@@ -167,8 +174,9 @@ $palettes: (
 // ----------------------------
 // #TYPOGRAPHY
 // ----------------------------
+// typography: config
 
-// typeface imports (TODO: these should be abstracted out once we have more than just 1)
+// typography: config - imports (TODO: these should be abstracted out once we have more than just 1)
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Light-webfont', 300, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-LightItalic-webfont', 300, italic, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Regular-webfont', 400, $file-formats: eot woff ttf svg);
@@ -178,31 +186,32 @@ $palettes: (
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Bold-webfont', 700, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-BoldItalic-webfont', 700, italic, $file-formats: eot woff ttf svg);
 
-// font families
+// typography: config - stacks
 $font-family-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
 
-// scale roots
-$font-scale-small: 14;
-$font-scale-medium: 16;
-$font-scale-large: 16;
+// typography: config - scale
+$modular-scale-ratio: $perfect-fourth;
+
+$font-scale-small: 16;
+$font-scale-medium: 18;
+$font-scale-large: 18;
 $font-scale-base: $font-scale-medium;
 
-$em-base: $font-scale-medium; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
-
+// typography: sizes
 $font-sizes: (
     base:           $font-scale-base,
-    mid-small:      ceil(golden-ratio($font-scale-base, -1)),
-    small:          ceil(golden-ratio($font-scale-base, -2)),
-    x-small:        ceil(golden-ratio($font-scale-base, -3)),
-    xx-small:       ceil(golden-ratio($font-scale-base, -4)),
-    mid-large:      ceil(golden-ratio($font-scale-base, 1)),
-    large:          ceil(golden-ratio($font-scale-base, 2)),
-    x-large:        ceil(golden-ratio($font-scale-base, 3)),
-    xx-large:       ceil(golden-ratio($font-scale-base, 4)),
+    mid-small:      modular-scale(-1, $font-scale-base),
+    small:          modular-scale(-2, $font-scale-base),
+    x-small:        modular-scale(-3, $font-scale-base),
+    xx-small:       modular-scale(-4, $font-scale-base),
+    mid-large:      modular-scale(1, $font-scale-base),
+    large:          modular-scale(2, $font-scale-base),
+    x-large:        modular-scale(3, $font-scale-base),
+    xx-large:       modular-scale(4, $font-scale-base)
 );
 
-// line-height scale
+// typography: line-height
 $line-heights: (
     none:           0,
     base:           1.25,
@@ -214,7 +223,7 @@ $line-heights: (
     x-large:        1.48
 );
 
-// size scale
+// typography: weights
 $font-weights: (
     normal:         400,
     light:          300,
