@@ -5,7 +5,58 @@
 // ----------------------------
 
 
-// reset of links
+// ----------------------------
+// #COLORS
+// ----------------------------
+$mit-maroon:                    rgba(163, 31, 52, 1.0);
+$dark-gray:                     rgba(138, 139, 140, 1.0);
+$light-gray:                    rgba(194, 192, 191, 1.0);
+
+$brand-primary:                 $mit-maroon;
+$brand-secondary:               $dark-gray;
+$brand-accent:                  $light-gray;
+
+
+// ----------------------------
+// #TYPOGRAPHY
+// Font families
+// ----------------------------
+@import url("http://fonts.googleapis.com/css?family=Lato:400,900,400italic");
+
+// Font families
+$font-family-sans-serif: 'Lato', sans-serif;
+
+
+// ----------------------------
+// #APPLICATIONS
+// Scaffolding
+// Base text settings
+// Links
+// Headings
+// ----------------------------
+// Scaffolding
+$view-bg: rgba(235, 235, 235, 1.0);
+
+// Base text settings
+$text-base-color: $dark-gray;
+$text-base-focus-color: $brand-primary;
+
+// Links
+$link-color: $brand-primary;
+$link-focus-color: saturate($brand-primary, 20%);
+$link-visited-color: desaturate($brand-primary, 20%);
+
+// Headings
+$headings-base-color: $dark-gray;
+$headings-primary-color: $black;
+$headings-secondary-color: $light-gray;
+
+
+// ----------------------------
+// #EXTENDS
+// Links
+// ----------------------------
+// Links
 %link {
     @include transition(all timing(x-fast) ease-in-out);
     border-bottom: rem(1) solid $transparent;
