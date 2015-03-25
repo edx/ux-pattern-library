@@ -59,7 +59,7 @@
 // ----------------------------
 .hd-1 {
     font-size: font-size(xx-large);
-    line-height: line-height(xx-large);
+    line-height: line-height(mid-large);
 }
 
 
@@ -68,7 +68,7 @@
 // ----------------------------
 .hd-2 {
     font-size: font-size(x-large);
-    line-height: line-height(x-large);
+    line-height: line-height(mid-large);
 }
 
 
@@ -77,7 +77,7 @@
 // ----------------------------
 .hd-3 {
     font-size: font-size(large);
-    line-height: line-height(large);
+    line-height: line-height(mid-large);
 
     &.deemphasized,
     &.secondary {
