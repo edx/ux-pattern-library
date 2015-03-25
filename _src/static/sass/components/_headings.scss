@@ -27,6 +27,7 @@
 .hd-4,
 .hd-5,
 .hd-6 {
+    margin-top: ($baseline*1.5);
     font-family: $headings-base-font-family;
     font-weight: $headings-base-font-weight;
     color: $headings-base-color;
