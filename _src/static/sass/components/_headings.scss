@@ -27,7 +27,6 @@
 .hd-4,
 .hd-5,
 .hd-6 {
-    margin-top: ($baseline*1.5);
     font-family: $headings-base-font-family;
     font-weight: $headings-base-font-weight;
     color: $headings-base-color;
@@ -45,7 +44,6 @@
     }
 }
 
-.h4-4,
 .hd-5,
 .hd-6 {
     font-weight: $headings-primary-font-weight;
@@ -60,7 +58,7 @@
 // ----------------------------
 .hd-1 {
     font-size: font-size(xx-large);
-    line-height: line-height(mid-large);
+    line-height: line-height(xx-large);
 }
 
 
@@ -69,7 +67,7 @@
 // ----------------------------
 .hd-2 {
     font-size: font-size(x-large);
-    line-height: line-height(mid-large);
+    line-height: line-height(x-large);
 }
 
 
@@ -78,7 +76,7 @@
 // ----------------------------
 .hd-3 {
     font-size: font-size(large);
-    line-height: line-height(mid-large);
+    line-height: line-height(large);
 
     &.deemphasized,
     &.secondary {
@@ -91,6 +89,7 @@
 // H4
 // ----------------------------
 .hd-4 {
+    font-weight: font-weight(bold);
     font-size: font-size(mid-large);
     line-height: line-height(mid-large);
 
@@ -105,8 +104,8 @@
 // H5
 // ----------------------------
 .hd-5 {
-    font-size: font-size(base);
-    line-height: line-height(mid-large);
+    font-size: font-size(mid-small);
+    line-height: line-height(mid-small);
 
     &.deemphasized,
     &.secondary {
@@ -119,7 +118,7 @@
 // H6
 // ----------------------------
 .hd-6 {
-    font-size: font-size(mid-small);
+    font-size: font-size(base);
     line-height: line-height(base);
 
     &.deemphasized,

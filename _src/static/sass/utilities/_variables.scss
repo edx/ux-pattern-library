@@ -193,36 +193,31 @@ $font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace
 // typography: config - scale
 $modular-scale-ratio: $perfect-fourth;
 
-$font-scale-small: 16;
-$font-scale-medium: 18;
+$font-scale-small: 14;
+$font-scale-medium: 16;
 $font-scale-large: 18;
 $font-scale-base: $font-scale-medium;
 
-$em-base: $font-scale-medium; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
-
-// typography: sizes
+// typography: sizes (pixels)
 $font-sizes: (
-    xx-large:       modular-scale(4, $font-scale-base),
-    x-large:        modular-scale(3, $font-scale-base),
-    large:          modular-scale(2, $font-scale-base),
-    mid-large:      modular-scale(1, $font-scale-base),
-    base:           $font-scale-base,
-    mid-small:      modular-scale(-1, $font-scale-base),
-    small:          modular-scale(-2, $font-scale-base),
-    x-small:        modular-scale(-3, $font-scale-base),
-    xx-small:       modular-scale(-4, $font-scale-base),
+    xx-large:       43,
+    x-large:        32,
+    large:          24,
+    mid-large:      21,
+    mid-small:      18,
+    base:           $font-scale-base
 );
 
-// typography: line-height
+// typography: line-height (pixels)
 $line-heights: (
-    none:           0,
-    base:           1.25,
-    mid-small:      1,
-    small:          0.75,
-    x-small:        0.75,
-    mid-large:      1.25,
-    large:          1.48,
-    x-large:        1.48
+    xx-large:       58,
+    x-large:        47,
+    large:          36,
+    mid-large:      31,
+    mid-small:      26,
+    small:          24,
+    base:           24,
+    none:           0
 );
 
 // typography: weights
@@ -233,6 +228,17 @@ $font-weights: (
     semi-bold:      600,
     bold:           700,
     x-bold:         800
+);
+
+// typography: letter-spacing
+$letter-spacing: (
+    normal:         0,
+    tightest:       -3,
+    tighter:        -2,
+    tight:          -.095rem,
+    loose:          -.075rem,
+    looser:         -.025rem,
+    loosest:        3
 );
 
 // ----------------------------
