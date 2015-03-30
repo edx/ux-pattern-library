@@ -7,13 +7,13 @@
 // 12, 14, 16, 18, 21, 24, 32, 43
 // ----------------------------
 
-// #GLOBALS
-// #HEADINGS
+// #GLOBAL
+// #INDIVIDUAL HEADINGS
 // ----------------------------
 
 
 // ----------------------------
-// #GLOBALS
+// #GLOBAL
 // ----------------------------
 .hd-1,
 .hd-2,
@@ -22,21 +22,28 @@
 .hd-5,
 .hd-6 {
 
+    &.emphasized {
+        font-weight: $headings-font-weight-bold;
+    }
+
     &.de-emphasized {
-        font-weight: $headings-secondary-font-weight;
         color: $headings-secondary-color;
     }
 }
 
 .hd-5,
 .hd-6 {
-    font-weight: $headings-primary-font-weight;
+    font-weight: $headings-font-weight-bold;
     text-transform: uppercase;
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
 }
 
 
 // ----------------------------
-// #HEADINGS
+// #INDIVIDUAL HEADINGS
 // ----------------------------
 // Level one heading
 .hd-1 {
@@ -68,10 +75,6 @@
     font-weight: font-weight(bold);
     font-size: font-size(mid-large);
     line-height: line-height(mid-large);
-
-    &.de-emphasized {
-        color: palette(grayscale, mid-dark);
-    }
 }
 
 
@@ -79,10 +82,6 @@
 .hd-5 {
     font-size: font-size(mid-small);
     line-height: line-height(mid-small);
-
-    &.de-emphasized {
-        color: palette(grayscale, mid-dark);
-    }
 }
 
 
@@ -90,8 +89,4 @@
 .hd-6 {
     font-size: font-size(small);
     line-height: line-height(small);
-
-    &.de-emphasized {
-        color: palette(grayscale, mid-dark);
-    }
 }

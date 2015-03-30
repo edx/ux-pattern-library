@@ -312,16 +312,18 @@ $link-focus-color: palette(primary, sat);
 $link-visited-color: palette(primary, dark);
 
 // headings
+$headings-font-weight-normal: font-weight(normal);
+$headings-font-weight-bold: font-weight(semi-bold);
+$headings-font-weight-x-bold: font-weight(bold);
+
 $headings-base-font-family: $font-family-sans-serif;
-$headings-base-font-weight: font-weight(semi-bold);
+$headings-base-font-weight: $headings-font-weight-normal;
 $headings-base-color: palette(grayscale, mid-dark);
 
 $headings-primary-font-family: $font-family-sans-serif;
-$headings-primary-font-weight: font-weight(x-bold);
 $headings-primary-color: palette(grayscale, x-dark);
 
 $headings-secondary-font-family: $font-family-sans-serif;
-$headings-secondary-font-weight: $headings-base-font-weight;
 $headings-secondary-color: palette(grayscale, base);
 
 // tables
