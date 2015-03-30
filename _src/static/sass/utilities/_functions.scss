@@ -27,7 +27,7 @@
 // get line-heights from defined map values
 @function line-height($key) {
   @if map-has-key($line-heights, $key) {
-    @return rem(map-get($line-heights, $key));
+    @return map-get($line-heights, $key);
   }
 
   @warn "Unknown `#{$key}` in $line-heights.";

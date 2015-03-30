@@ -48,13 +48,6 @@ p, ol, ul, dl, td, th {
     @extend %reset-copy;
 }
 
-p,
-li,
-dt,
-dd {
-    line-height: line-height(base);
-}
-
 // ----------------------------
 // #METADATA
 // ----------------------------

@@ -95,6 +95,7 @@
 %reset-headings {
     margin: 0 0 spacing-horizontal(small) 0;
     font-family: $headings-base-font-family;
+    font-weight: $headings-base-font-weight;
     font-size: font-size(base);
     line-height: line-height(base);
     color: $headings-base-color;
@@ -104,7 +105,7 @@
 %reset-copy {
     font-family: $text-base-font-family;
     font-size: font-size(base);
-    line-height: line-height(large);
+    line-height: line-height(base);
     color: $text-base-color;
 }
 

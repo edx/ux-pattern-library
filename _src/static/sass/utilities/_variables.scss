@@ -15,7 +15,7 @@
 // ----------------------------
 // #UNITS
 // ----------------------------
-$em-base: 16; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
+$em-base: 18; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
 
 
 // ----------------------------
@@ -193,30 +193,31 @@ $font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace
 // typography: config - scale
 $modular-scale-ratio: $perfect-fourth;
 
-$font-scale-small: 14;
-$font-scale-medium: 16;
+$font-scale-small: 16;
+$font-scale-medium: 18;
 $font-scale-large: 18;
 $font-scale-base: $font-scale-medium;
 
-// typography: sizes (pixels)
+// typography: sizes
 $font-sizes: (
-    xx-large:       43,
-    x-large:        32,
+    xx-large:       38,
+    x-large:        28,
     large:          24,
     mid-large:      21,
-    mid-small:      18,
+    mid-small:      16,
+    small:          14,
     base:           $font-scale-base
 );
 
-// typography: line-height (pixels)
+// typography: line-height
 $line-heights: (
-    xx-large:       58,
-    x-large:        47,
-    large:          36,
-    mid-large:      31,
-    mid-small:      26,
-    small:          24,
-    base:           24,
+    xx-large:       1.40,
+    x-large:        1.40,
+    large:          1.50,
+    mid-large:      1.60,
+    mid-small:      1.60,
+    small:          1.5,
+    base:           1.5,
     none:           0
 );
 
@@ -233,12 +234,12 @@ $font-weights: (
 // typography: letter-spacing
 $letter-spacing: (
     normal:         0,
-    tightest:       -3,
-    tighter:        -2,
-    tight:          -.095rem,
-    loose:          -.075rem,
-    looser:         -.025rem,
-    loosest:        3
+    xx-tight:       -3,
+    x-tight:        -2,
+    tight:          -.095,
+    loose:          -.075,
+    x-loose:        -.025,
+    xx-loose:       3
 );
 
 // ----------------------------

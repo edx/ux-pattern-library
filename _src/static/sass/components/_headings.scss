@@ -9,12 +9,6 @@
 
 // #GLOBALS
 // #HEADINGS
-// H1
-// H2
-// H3
-// H4
-// H5
-// H6
 // ----------------------------
 
 
@@ -27,18 +21,8 @@
 .hd-4,
 .hd-5,
 .hd-6 {
-    font-family: $headings-base-font-family;
-    font-weight: $headings-base-font-weight;
-    color: $headings-base-color;
 
-    &.emphasized,
-    &.primary {
-        font-weight: $headings-primary-font-weight;
-        color: $headings-primary-color;
-    }
-
-    &.deemphasized,
-    &.secondary {
+    &.de-emphasized {
         font-weight: $headings-secondary-font-weight;
         color: $headings-secondary-color;
     }
@@ -54,75 +38,60 @@
 // ----------------------------
 // #HEADINGS
 // ----------------------------
-// H1
-// ----------------------------
+// Level one heading
 .hd-1 {
     font-size: font-size(xx-large);
     line-height: line-height(xx-large);
 }
 
 
-// ----------------------------
-// H2
-// ----------------------------
+// Level two heading
 .hd-2 {
     font-size: font-size(x-large);
     line-height: line-height(x-large);
 }
 
 
-// ----------------------------
-// H3
-// ----------------------------
+// Level three heading
 .hd-3 {
     font-size: font-size(large);
     line-height: line-height(large);
 
-    &.deemphasized,
-    &.secondary {
+    &.de-emphasized {
         color: palette(grayscale, base);
     }
 }
 
 
-// ----------------------------
-// H4
-// ----------------------------
+// Level four heading
 .hd-4 {
     font-weight: font-weight(bold);
     font-size: font-size(mid-large);
     line-height: line-height(mid-large);
 
-    &.deemphasized,
-    &.secondary {
+    &.de-emphasized {
         color: palette(grayscale, mid-dark);
     }
 }
 
 
-// ----------------------------
-// H5
-// ----------------------------
+// Level five heading
 .hd-5 {
     font-size: font-size(mid-small);
     line-height: line-height(mid-small);
 
-    &.deemphasized,
-    &.secondary {
+    &.de-emphasized {
         color: palette(grayscale, mid-dark);
     }
 }
 
 
-// ----------------------------
-// H6
-// ----------------------------
+// Level six heading
 .hd-6 {
-    font-size: font-size(base);
-    line-height: line-height(base);
+    font-size: font-size(small);
+    line-height: line-height(small);
 
-    &.deemphasized,
-    &.secondary {
+    &.de-emphasized {
         color: palette(grayscale, mid-dark);
     }
 }
