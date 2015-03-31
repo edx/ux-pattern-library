@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+{% include head.html %}
+
+<body class="pl view-{{ page.viewclass }}">
+    <nav class="pl-nav-skip pl-sr">
+        <h2 class="pl-nav-skip-title">Skip to:</h2>
+        <a class="pl-action-skip" href="#content-main">this page's main content</a>
+        <a class="pl-action-skip" href="#nav-patterns">list of edX patterns</a>
+        <a class="pl-action-skip" href="#nav-documentation">list of edX documentation</a>
+    </nav>
+
+    <hr class="pl-divider pl-sr">
+
+    <div class="pl-wrapper-view">
+        <div class="pl-wrapper-content" id="content-top">
+            <div class="pl-wrapper-content-supplemental">
+                {% include sidebar.html %}
+            </div>
+
+            <hr class="pl-divider pl-sr">
+
+            <div class="pl-wrapper-content-main">
+                <main class="pl-content pl-content-main" id="content-main">
+                    {{ content }}
+                </main>
+            </div>
+        </div>
+    </div>
+
+    {% include assets-secondary.html %}
+</body>
+</html>
+

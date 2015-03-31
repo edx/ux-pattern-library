@@ -1,0 +1,68 @@
+---
+layout: default
+category: elements
+viewclass:  element
+---
+
+<div class="pl-wrapper-element">
+    <article class="pl-element pl-element-{{ page.slug }}">
+        <header class="pl-element-header">
+            <h1 class="pl-heading pl-element-title">{{ page.title }}</h1>
+
+            <ul class="pl-list pl-element-meta">
+                <li class="meta meta-updated">
+                    <span class="pl-element-meta-updated-label">Last updated on </span>
+                    <time class="pl-element-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
+                </li>
+            </ul>
+        </header>
+
+
+        <ul class="pl-tab-labels pl-list pl-element-navigation">
+            <li class="pl-tab-label">
+                <a class="pl-link" href="#{{page.slug}}-preview">{{page.title}}</a>
+            </li>
+            <li class="pl-tab-label">
+                <a class="pl-link" href="#{{page.slug}}-markup">Markup</a>
+            </li>
+            <li class="pl-tab-label">
+                <a class="pl-link" href="#{{page.slug}}-styling">Styling</a>
+            </li>
+            <li class="pl-tab-label">
+                <a class="pl-link" href="#{{page.slug}}-info">Info</a>
+            </li>
+        </ul>
+
+        <div class="pl-element-info">
+            <p>{{page.info}}</p>
+        </div>
+
+        <div class="pl-tabs">
+            <div class="pl-tab pl-element-preview" id="{{page.slug}}-preview">
+                <h2 class="pl-heading pl-element-preview-title">{{page.title}} Preview</h2>
+
+                <div class="pl-tab-content">
+                    {{page.content}}
+                </div>
+            </div>
+
+            <div class="pl-tab pl-element-markup" id="{{page.slug}}-markup">
+                <h2 class="pl-heading pl-element-markup-title">{{page.title}} Markup</h2>
+
+                <div class="pl-tab-content">
+                    {% highlight html %}
+                    {{page.content}}
+                    {% endhighlight %}
+                </div>
+            </div>
+
+            <div class="pl-tab pl-element-styling" id="{{page.slug}}-styling">
+                <h2 class="pl-heading pl-element-style-title">{{page.title}} Style</h2>
+
+                <div class="pl-tab-content">
+                    <p>You can find <a class="pl-link" href="{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>

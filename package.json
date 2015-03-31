@@ -1,0 +1,31 @@
+{
+  "name": "edx-ux-pattern-library",
+  "version": "0.2.0",
+  "description": "Gulp and Jekyll front end workflow with common tasks for edX's UX Pattern Library site",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edx/ux-pattern-library.git"
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-changed": "latest",
+    "gulp-concat": "latest",
+    "gulp-filesize": "0.0.6",
+    "gulp-filter": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jshint": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "lodash": "latest",
+    "require-dir": "latest",
+    "run-sequence": "latest"
+  }
+}

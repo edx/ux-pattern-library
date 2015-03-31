@@ -1,0 +1,330 @@
+// ------------------------------
+// edX Pattern Library Site: Components
+
+// About: styling for specific UI components ranging from global to modular.
+
+// ------------------------------
+// #HEADINGS
+// ------------------------------
+
+// ------------------------------
+// #CONTROLS
+// ------------------------------
+
+// ------------------------------
+// #HEADER
+// ------------------------------
+.pl-header-site {
+    margin: spacing-v(large) spacing-h(base) spacing-v(base) spacing-h(base);
+}
+
+.pl-header-site-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.pl-header-site-title {
+    margin-bottom: spacing-v(base);
+
+    .title-name, .title-description {
+        display: block;
+    }
+
+    .title-name {
+        margin-bottom: spacing-v(x-small);
+        color: palette(grayscale, white);
+        font-size: font-size(base);
+        font-weight: font-weight(bold);
+        text-transform: uppercase;
+        letter-spacing: rem(1);
+
+        // STATE: hover, active, focus
+        &:hover,
+        &:active,
+        &:focus {
+            color: palette(primary, sat);
+        }
+    }
+
+    .title-description {
+        color: palette(grayscale, mid-light);
+        font-size: font-size(mid-small);
+        font-weight: font-weight(normal);
+    }
+
+    .pl-link {
+        border: none;
+    }
+}
+
+// ------------------------------
+// #NAVIGATION
+// ------------------------------
+// navigation - sidebar-based
+.pl-nav {
+    margin-bottom: spacing-v(large);
+
+    // CASE: last element
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-list {
+        @extend %reset-lists;
+        margin: 0;
+    }
+
+
+    .pl-link {
+        @include transition(background 0.25s ease-in-out);
+        display: block;
+        border-bottom: rem(1) solid palette(grayscale, x-dark);
+        padding: spacing-v(small) spacing-h(base);
+        color: palette(grayscale, x-light);
+        text-decoration: none;
+        font-size: font-size(mid-small);
+        font-weight: font-weight(semi-bold);
+
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
+            color: palette(primary, light);
+            background: palette(grayscale, x-dark);
+        }
+    }
+
+    // CASE: last element
+    .nav-list-item:last-child {
+
+       .pl-link {
+            border-bottom: 0;
+       }
+    }
+
+    // CASE: item is current
+    .nav-list-item.is-current {
+
+        .pl-link:before {
+            display: inline-block;
+        }
+    }
+}
+
+// internal site navigation
+.pl-nav-internal {
+
+    .pl-link {
+        position: relative;
+
+        // is-current indicator
+        &:before {
+            @include transition(opacity 0.25s ease-in-out);
+            @include size(rem(5));
+            position: absolute;
+            top: rem(18);
+            left: spacing-h(small);
+            content: '';
+            border-radius: 100%;
+            opacity: 0;
+            background: palette(primary, light);
+        }
+
+        // STATE: is current navigation item
+        &.is-current {
+            color: palette(primary, light);
+            background: palette(grayscale, x-dark);
+
+            &:before {
+                opacity: 1.0;
+            }
+        }
+    }
+}
+
+// external site navigation
+.pl-nav-external {
+
+    .pl-link {
+
+        .pl-icon {
+            @include transition(opacity 0.25s ease-in-out);
+            display: inline-block;
+            vertical-align: baseline;
+            margin-right: (spacing-h(xx-small));
+            font-size: font-size(large);
+            line-height: line-height(none);
+            opacity: 0.25;
+        }
+
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
+
+            .pl-icon {
+                opacity: 1.0;
+            }
+        }
+    }
+}
+
+.pl-nav-title {
+    margin: 0 spacing-h(base) spacing-v(x-small) spacing-h(base);
+    color: palette(grayscale, mid-light);
+    font-size: font-size(small);
+    font-weight: font-weight(semi-bold);
+    text-transform: uppercase;
+    letter-spacing: rem(1);
+}
+
+// navigation - tabs
+.pl-tab {
+    margin-bottom: spacing-v(large);
+
+    // CASE: last element
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .pl-heading {
+        margin-bottom: spacing-v(mid-small);
+        color: $heading-color;
+        font-size: font-size(mid-large);
+        font-weight: font-weight(semi-bold);
+        line-height: line-height(base);
+    }
+}
+
+.pl-tab-content {
+    @include transition(box-shadow 0.50s ease-in-out);
+    border: rem(1) solid palette(grayscale, x-light);
+    @include pad(spacing-v(base) spacing-h(base));
+    background: palette(grayscale, white);
+    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
+
+    // STATE: hover, active, focus
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+    }
+}
+
+// ------------------------------
+// #SIDEBAR
+// ------------------------------
+.pl-wrapper-content-supplemental {
+    background: palette(grayscale, mid-dark);
+    border-right: rem(4) solid  palette(grayscale, x-dark);
+    color: palette(grayscale, x-light);
+    font-size: font-size(base);
+}
+
+// ------------------------------
+// #MAIN CONTENT
+// ------------------------------
+.pl-wrapper-content-main {
+    background: palette(grayscale, xx-light);
+    font-size: font-size(base);
+}
+
+// ------------------------------
+// #FOOTER
+// ------------------------------
+.pl-footer-site {
+    margin: spacing-v(base) spacing-h(base);
+}
+
+.pl-footer-site-copyright {
+
+    .pl-copy {
+        font-size: font-size(mid-small);
+        color: palette(grayscale, mid-light);
+    }
+}
+
+// ------------------------------
+// #ELEMENTS
+// ------------------------------
+.pl-wrapper-element {
+    @include outer-container();
+}
+
+.pl-element {
+    @include transition(all 0.25s ease-in-out);
+    @include pad(spacing-v(x-large) spacing-h(base));
+    border-bottom: rem(2) solid palette(grayscale, mid-dark);
+    box-shadow: inset spacing-h(xx-small) 0 0 0 $color-transparent;
+
+    // CASE: element is focused on in current URL
+    &:target {
+        box-shadow: inset spacing-h(xx-small) 0 0 0 palette(primary, light);
+    }
+
+    .pl-wrapper-element:first-child & {
+        padding-top: spacing-v(large);
+    }
+
+    // CASE: last element
+    .pl-wrapper-element:last-child & {
+        border-bottom: 0;
+    }
+}
+
+.pl-element-header {
+    @include row();
+    margin-bottom: spacing-v(base);
+    border-bottom: 1px solid palette(grayscale, dark);
+    padding-bottom: spacing-v(small);
+}
+
+.pl-element-title {
+    @include span-columns(4);
+    margin-bottom: spacing-v(x-small);
+    color: $heading-color;
+    font-size: font-size(large);
+    font-weight: font-weight(semi-bold);
+}
+
+.pl-element-meta {
+    @include span-columns(4);
+    @include omega();
+    @extend %reset-lists;
+    color: palette(grayscale, mid-light);
+    font-size: font-size(small);
+    text-align: right;
+
+    .meta {
+       display: inline-block;
+       vertical-align: middle;
+       margin-right: spacing-h(xx-small);
+
+       &:last-child {
+        margin-right: 0;
+       }
+    }
+
+    .meta-updated {
+        margin-right: spacing-h(small);
+    }
+}
+
+.pl-element-navigation {
+    @extend %sr;
+}
+
+.pl-element-info {
+    @extend %reset-copy;
+    color: palette(grayscale, base);
+    margin-bottom: spacing-v(large);
+}
+
+// markup section of element
+.pl-element-markup {
+
+    code {
+        font-family: $code-font-family;
+    }
+}
