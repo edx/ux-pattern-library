@@ -1,8 +1,6 @@
 .bg-replace,.sr-only,svg:not(:root){overflow:hidden}
-.copy,body,dl,h1,h2,h3,h4,h5,h6,ol,p,td,th,ul{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
 .sr-only,fieldset,img,legend{border:0}
 .sr-only,fieldset,figure,legend,td,th{padding:0}
-h1,h2,h3,h4,h5,h6{font-size:1.125rem}
 *,:after,:before{box-sizing:inherit}
 *,html{box-sizing:border-box}
 @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:url(../fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-Light-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-Light-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-Light-webfont.svg#Open Sans")format("svg")}
@@ -18,13 +16,13 @@ h1,h2,h3,h4,h5,h6{font-size:1.125rem}
 .sr-only{clip:rect(0 0 0 0);height:1px;margin:-1px;position:absolute;width:1px}
 .bg-replace{text-indent:100%;white-space:nowrap}
 pre,textarea{overflow:auto}
-h1,h2,h3,h4,h5,h6{margin:0 0 .625rem;line-height:1.25;color:#323232}
-.copy,dl,ol,p,td,th,ul{font-size:1.125rem;line-height:1.48;color:#4c4c4c}
-.link,a{transition:all .25s ease-in-out;border-bottom:.0625rem solid transparent;color:#00a2e3;text-decoration:none}
+.hd-1,.hd-2,.hd-3,.hd-4,.hd-5,.hd-6,h1,h2,h3,h4,h5,h6{margin:0 0 .55556rem;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:1rem;line-height:1.5;color:#4c4c4c}
+.copy,dl,ol,p,td,th,ul{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#4c4c4c}
+.link,a{transition:all .25s ease-in-out;border-bottom:.05556rem solid transparent;color:#00a2e3;text-decoration:none}
 .link:active,.link:focus,.link:hover,a:active,a:focus,a:hover{border-bottom-color:#00acfa;color:#00acfa}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0;color:#4c4c4c;background:#f2f2f2;font-size:18;-webkit-font-smoothing:antialiased}
+body{margin:0;color:#4c4c4c;background:#f2f2f2;font-size:18;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
@@ -34,7 +32,7 @@ a:active,a:hover{outline:0}
 abbr[title]{border-bottom:1px dotted}
 b,optgroup,strong{font-weight:700}
 dfn{font-style:italic}
-h1{margin:.67em 0;font-size:3.552rem}
+h1{margin:.67em 0;font-size:2.11111rem}
 mark{background:#ff0;color:#000}
 small{font-size:80%}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -44,12 +42,15 @@ hr{box-sizing:content-box;height:0}
 pre{margin:0}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
 button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+.hd-1.emphasized,.hd-2.emphasized,.hd-3.emphasized,.hd-4.emphasized,.hd-5,.hd-5.emphasized,.hd-6,.hd-6.emphasized{font-weight:600}
+.hd-1.de-emphasized,.hd-2.de-emphasized,.hd-3.de-emphasized,.hd-4.de-emphasized,.hd-5.de-emphasized,.hd-6.de-emphasized{color:#7f7f7f}
 button{overflow:visible}
 button,select{text-transform:none}
 button,html input[type=button],input[type=submit],input[type=reset]{-webkit-appearance:button;cursor:pointer}
 button[disabled],html input[disabled]{cursor:default}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 input{line-height:normal}
+.hd-1,.hd-2{line-height:1.4}
 input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
 input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
@@ -61,7 +62,19 @@ fieldset{margin:0}
 figure{display:inline-block;margin:0}
 figure img{display:block}
 .img,picture{max-width:100%;margin:0}
-h2{font-size:2.66467rem}
-h3{font-size:1.999rem}
-h4{font-size:1.49962rem}
-h6{font-size:.84396rem}
+.hd-1,.hd-2{margin-bottom:1.11111rem}
+h2{font-size:1.55556rem}
+h3{font-size:1.33333rem}
+h4{font-size:1.16667rem}
+h5{font-size:1rem}
+h6{font-size:.88889rem}
+.hd-5,.hd-6{text-transform:uppercase}
+.hd-4,.hd-5.emphasized,.hd-6.emphasized{font-weight:700}
+.hd-1{font-size:2.11111rem}
+.hd-2{font-size:1.55556rem}
+.hd-3,.hd-4,.hd-5,.hd-6{margin-bottom:.55556rem}
+.hd-3{font-size:1.33333rem;line-height:1.5}
+.hd-4,.hd-5{line-height:1.6}
+.hd-4{font-size:1.16667rem}
+.hd-5{font-size:.88889rem}
+.hd-6{font-size:.77778rem;line-height:1.5}
