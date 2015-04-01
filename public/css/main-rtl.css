@@ -16,7 +16,7 @@
 .sr-only{clip:rect(0 0 0 0);height:1px;margin:-1px;position:absolute;width:1px}
 .bg-replace{text-indent:100%;white-space:nowrap}
 pre,textarea{overflow:auto}
-.hd-1,.hd-2,.hd-3,.hd-4,.hd-5,.hd-6,h1,h2,h3,h4,h5,h6{margin:0 0 .55556rem;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:1rem;line-height:1.5;color:#4c4c4c}
+.hd-1,.hd-2,.hd-3,.hd-4,.hd-5,.hd-6,h1,h2,h3,h4,h5,h6{margin:0 0 1.11111rem;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:1rem;line-height:1.5;color:#4c4c4c}
 .copy,dl,ol,p,td,th,ul{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#4c4c4c}
 .link,a{transition:all .25s ease-in-out;border-bottom:.05556rem solid transparent;color:#00a2e3;text-decoration:none}
 .link:active,.link:focus,.link:hover,a:active,a:focus,a:hover{border-bottom-color:#00acfa;color:#00acfa}
