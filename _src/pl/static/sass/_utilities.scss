@@ -34,7 +34,7 @@ $color-transparent: rgba(0, 0, 0, 0);
 
 // colors - palettes
 $palettes: (
-    primary:        (
+    primary: (
         base:       $color-base-primary,
         mid-light:  tint($color-base-primary, 10%),
         light:      tint($color-base-primary, 25%),
@@ -50,7 +50,7 @@ $palettes: (
         x-trans:    transparentize($color-base-primary, 0.75),
         xx-trans:   transparentize($color-base-primary, 0.95)
     ),
-    secondary:      (
+    secondary: (
         base:       $color-base-secondary,
         mid-light:  tint($color-base-secondary, 10%),
         light:      tint($color-base-secondary, 25%),
@@ -66,7 +66,7 @@ $palettes: (
         x-trans:    transparentize($color-base-secondary, 0.75),
         xx-trans:   transparentize($color-base-secondary, 0.95)
     ),
-    grayscale:           (
+    grayscale: (
         base:       $color-gray,
         mid-light:  tint($color-gray, 40%),
         light:      tint($color-gray, 60%),

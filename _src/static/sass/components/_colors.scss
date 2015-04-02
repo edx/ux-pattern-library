@@ -1,0 +1,478 @@
+// ------------------------------
+// edX Pattern Library: Components - Colors
+
+// About: Contains base styling for demonstration and utility color palette stylng.
+// ----------------------------
+
+// #SWATCH LAYOUT
+// #SWATCH RENDERING
+// ----------------------------
+
+// ----------------------------
+// #SWATCH LAYOUT
+// ----------------------------
+.swatch-set {
+    @extend %clear-last-child;
+    padding-bottom: spacing-vertical(base);
+    border-bottom: spacing-vertical(xx-small) solid palette(grayscale, xx-light);
+    margin-bottom: spacing-vertical(base);
+}
+
+.swatch {
+    @include transition(all timing(x-fast) ease-in-out);
+    display: inline-block;
+    width: spacing-vertical(x-large);
+    margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
+    border: 1px solid palette(grayscale, x-light);
+    border-radius: spacing-horizontal(xx-small);
+    padding: spacing-vertical(x-small) spacing-horizontal(small);
+    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
+    background: palette(grayscale, white);
+    color: palette(grayscale, white);
+
+    // STATE: hover, focus, and active
+    &:hover, &:focus, &:active {
+        @include transform(scale(1.05));
+        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+    }
+}
+
+.swatch-color {
+    display: block;
+    margin: 0 0 spacing-vertical(x-small) 0;
+    padding: spacing-vertical(mid-large) spacing-horizontal(mid-small);
+    text-align: center;
+
+    .color-class {
+        font-size: font-size(mid-small);
+        text-transform: lowercase;
+
+        // CASE: light text on dark bg
+        &.lod {
+            color: palette(grayscale, white);
+        }
+
+        // CASE: dark text on light bg
+        &.dol {
+            color: palette(grayscale, black);
+        }
+    }
+
+    // CASE: base color
+    &.base {
+
+        .color-class {
+            font-weight: font-weight(bold);
+        }
+    }
+}
+
+.swatch-meta {
+    white-space: nowrap;
+    font-size: font-size(small);
+    font-weight: font-weight(normal);
+    text-align: center;
+    color: palette(grayscale, mid-dark);
+
+    .color-rgb {
+        @include ellipsis();
+    }
+}
+
+// ----------------------------
+// #SWATCH RENDERING
+// ----------------------------
+.brand-primary {
+
+    &.base {
+        background: palette(primary, base);
+    }
+
+    &.mid-light {
+        background: palette(primary, mid-light);
+    }
+
+    &.light {
+        background: palette(primary, light);
+    }
+
+    &.x-light {
+        background: palette(primary, x-light);
+    }
+
+    &.mid-dark {
+        background: palette(primary, mid-dark);
+    }
+
+    &.dark {
+        background: palette(primary, dark);
+    }
+
+    &.x-dark {
+        background: palette(primary, x-dark);
+    }
+
+    &.mid-sat {
+        background: palette(primary, mid-sat);
+    }
+
+    &.sat {
+        background: palette(primary, sat);
+    }
+
+    &.x-sat {
+        background: palette(primary, x-sat);
+    }
+
+    &.mid-trans {
+        background: palette(primary, mid-trans);
+    }
+
+    &.trans {
+        background: palette(primary, trans);
+    }
+
+    &.x-trans {
+        background: palette(primary, x-trans);
+    }
+
+    &.xx-trans {
+        background: palette(primary, xx-trans);
+    }
+}
+
+.brand-secondary {
+    background: palette(secondary, base);
+
+    &.base {
+        background: palette(secondary, base);
+    }
+
+    &.mid-light {
+        background: palette(secondary, mid-light);
+    }
+
+    &.light {
+        background: palette(secondary, light);
+    }
+
+    &.x-light {
+        background: palette(secondary, x-light);
+    }
+
+    &.mid-dark {
+        background: palette(secondary, mid-dark);
+    }
+
+    &.dark {
+        background: palette(secondary, dark);
+    }
+
+    &.x-dark {
+        background: palette(secondary, x-dark);
+    }
+
+    &.mid-sat {
+        background: palette(secondary, mid-sat);
+    }
+
+    &.sat {
+        background: palette(secondary, sat);
+    }
+
+    &.x-sat {
+        background: palette(secondary, x-sat);
+    }
+
+    &.mid-trans {
+        background: palette(secondary, mid-trans);
+    }
+
+    &.trans {
+        background: palette(secondary, trans);
+    }
+
+    &.x-trans {
+        background: palette(secondary, x-trans);
+    }
+
+    &.xx-trans {
+        background: palette(secondary, xx-trans);
+    }
+}
+
+.brand-accent {
+    background: palette(accent, base);
+
+    &.base {
+        background: palette(accent, base);
+    }
+
+    &.mid-light {
+        background: palette(accent, mid-light);
+    }
+
+    &.light {
+        background: palette(accent, light);
+    }
+
+    &.x-light {
+        background: palette(accent, x-light);
+    }
+
+    &.mid-dark {
+        background: palette(accent, mid-dark);
+    }
+
+    &.dark {
+        background: palette(accent, dark);
+    }
+
+    &.x-dark {
+        background: palette(accent, x-dark);
+    }
+
+    &.mid-sat {
+        background: palette(accent, mid-sat);
+    }
+
+    &.sat {
+        background: palette(accent, sat);
+    }
+
+    &.x-sat {
+        background: palette(accent, x-sat);
+    }
+
+    &.mid-trans {
+        background: palette(accent, mid-trans);
+    }
+
+    &.trans {
+        background: palette(accent, trans);
+    }
+
+    &.x-trans {
+        background: palette(accent, x-trans);
+    }
+
+    &.xx-trans {
+        background: palette(accent, xx-trans);
+    }
+}
+
+.grayscale {
+    background: palette(grayscale, base);
+
+    &.base {
+        background: palette(grayscale, base);
+    }
+
+    &.mid-light {
+        background: palette(grayscale, mid-light);
+    }
+
+    &.light {
+        background: palette(grayscale, light);
+    }
+
+    &.x-light {
+        background: palette(grayscale, x-light);
+    }
+
+    &.xx-light {
+        background: palette(grayscale, xx-light);
+    }
+
+    &.white {
+        background: palette(grayscale, white);
+    }
+
+    &.white-t {
+        background: palette(grayscale, white-t);
+    }
+
+    &.mid-dark {
+        background: palette(grayscale, mid-dark);
+    }
+
+    &.dark {
+        background: palette(grayscale, dark);
+    }
+
+    &.x-dark {
+        background: palette(grayscale, x-dark);
+    }
+
+    &.xx-dark {
+        background: palette(grayscale, xx-dark);
+    }
+
+    &.black {
+        background: palette(grayscale, black);
+    }
+
+    &.black-t {
+        background: palette(grayscale, black-t);
+    }
+
+    &.trans {
+        background: palette(grayscale, trans);
+    }
+
+    &.mid-trans {
+        background: palette(grayscale, mid-trans);
+    }
+
+    &.x-trans {
+        background: palette(grayscale, x-trans);
+    }
+
+    &.xx-trans {
+        background: palette(grayscale, xx-trans);
+    }
+}
+
+.grayscale-cool {
+    background: palette(grayscale-cool, base);
+
+    &.base {
+        background: palette(grayscale-cool, base);
+    }
+
+    &.mid-light {
+        background: palette(grayscale-cool, mid-light);
+    }
+
+    &.light {
+        background: palette(grayscale-cool, light);
+    }
+
+    &.x-light {
+        background: palette(grayscale-cool, x-light);
+    }
+
+    &.xx-light {
+        background: palette(grayscale-cool, xx-light);
+    }
+
+    &.white {
+        background: palette(grayscale-cool, white);
+    }
+
+    &.white-t {
+        background: palette(grayscale-cool, white-t);
+    }
+
+    &.mid-dark {
+        background: palette(grayscale-cool, mid-dark);
+    }
+
+    &.dark {
+        background: palette(grayscale-cool, dark);
+    }
+
+    &.x-dark {
+        background: palette(grayscale-cool, x-dark);
+    }
+
+    &.xx-dark {
+        background: palette(grayscale-cool, xx-dark);
+    }
+
+    &.black {
+        background: palette(grayscale-cool, black);
+    }
+
+    &.black-t {
+        background: palette(grayscale-cool, black-t);
+    }
+
+    &.trans {
+        background: palette(grayscale-cool, trans);
+    }
+
+    &.mid-trans {
+        background: palette(grayscale-cool, mid-trans);
+    }
+
+    &.x-trans {
+        background: palette(grayscale-cool, x-trans);
+    }
+
+    &.xx-trans {
+        background: palette(grayscale-cool, xx-trans);
+    }
+}
+
+.grayscale-warm {
+    background: palette(grayscale-warm, base);
+
+    &.base {
+        background: palette(grayscale-warm, base);
+    }
+
+    &.mid-light {
+        background: palette(grayscale-warm, mid-light);
+    }
+
+    &.light {
+        background: palette(grayscale-warm, light);
+    }
+
+    &.x-light {
+        background: palette(grayscale-warm, x-light);
+    }
+
+    &.xx-light {
+        background: palette(grayscale-warm, xx-light);
+    }
+
+    &.white {
+        background: palette(grayscale-warm, white);
+    }
+
+    &.white-t {
+        background: palette(grayscale-warm, white-t);
+    }
+
+    &.mid-dark {
+        background: palette(grayscale-warm, mid-dark);
+    }
+
+    &.dark {
+        background: palette(grayscale-warm, dark);
+    }
+
+    &.x-dark {
+        background: palette(grayscale-warm, x-dark);
+    }
+
+    &.xx-dark {
+        background: palette(grayscale-warm, xx-dark);
+    }
+
+    &.black {
+        background: palette(grayscale-warm, black);
+    }
+
+    &.black-t {
+        background: palette(grayscale-warm, black-t);
+    }
+
+    &.trans {
+        background: palette(grayscale-warm, trans);
+    }
+
+    &.mid-trans {
+        background: palette(grayscale-warm, mid-trans);
+    }
+
+    &.x-trans {
+        background: palette(grayscale-warm, x-trans);
+    }
+
+    &.xx-trans {
+        background: palette(grayscale-warm, xx-trans);
+    }
+}
