@@ -36,16 +36,6 @@ $(document).ready(function() {
         window.open($(this).attr('href'));
     }
 
-    // palette values
-    if ($('.swatch').length) {
-
-        $('.swatch').each(function() {
-            var rgb = $(this).find('.swatch-color').css('backgroundColor');
-
-            $(this).find('.swatch-meta .color-rgb').text(rgb);
-        });
-    }
-
     // tabbed interfaces
     var Tabs = {
 
