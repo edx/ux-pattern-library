@@ -311,14 +311,42 @@
     }
 }
 
-.pl-element-navigation {
-    @extend %sr;
+.pl-tab-wrapper {
+
+    .is-hidden {
+        @extend %sr;
+    }
+
+    .pl-tab-labels {
+        @extend %reset-lists;
+        margin-bottom: spacing-v(base);
+
+        .pl-tab-label {
+            display: inline-block;
+
+            .pl-link {
+                display: block;
+                padding: 1rem;
+                border-top: 1px solid transparent;
+                background: palette(grayscale, x-light);
+
+                &:hover,
+                &:focus {
+                    border-color: transparent;
+                }
+
+                &.is-active {
+                    background: transparent;
+                    border-top: 1px solid palette(primary, light);
+                }
+            }
+        }
+    }
 }
 
 .pl-element-info {
     @extend %reset-copy;
     color: palette(grayscale, base);
-    margin-bottom: spacing-v(large);
 }
 
 // markup section of element
