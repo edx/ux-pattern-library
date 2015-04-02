@@ -88,4 +88,14 @@ $(document).ready(function() {
     if ($('.pl-tab-wrapper').length) {
         Tabs.init();
     }
+
+    // palette values
+    if ($('.swatch').length) {
+
+        $('.swatch').each(function() {
+            var rgb = $(this).find('.swatch-color').css('backgroundColor');
+
+            $(this).find('.swatch-meta .color-rgb').text(rgb);
+        });
+    }
 });

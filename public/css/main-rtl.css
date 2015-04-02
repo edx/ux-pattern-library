@@ -86,7 +86,8 @@ h6{font-size:.88889rem}
 .swatch .swatch-color{display:block;width:100%;height:67px;text-align:center;line-height:67px}
 .swatch .swatch-color .color-class.dol{color:#4c4c4c}
 .swatch .swatch-meta{list-style:none;margin:0;padding:3%;font-weight:400;color:#444}
-.swatch .swatch-meta .color-hex,.swatch .swatch-meta .color-rgb{display:block}
+.swatch .swatch-meta .color-hex{display:none;width:100%;white-space:nowrap;text-overflow:clip}
+.swatch .swatch-meta .color-rgb{display:block;width:100%;white-space:nowrap;text-overflow:clip}
 .swatch.endpoints{width:46%;height:50px;margin:1%}
 .swatch.endpoints .swatch-color{height:30px;line-height:30px}
 .swatch.endpoints .swatch-color .color-class{line-height:30px}
