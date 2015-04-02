@@ -32,7 +32,7 @@ a:active,a:hover{outline:0}
 abbr[title]{border-bottom:1px dotted}
 b,optgroup,strong{font-weight:700}
 dfn{font-style:italic}
-h1{margin:.67em 0;font-size:2.11111rem}
+h1{margin:.67em 0;font-size:1.55556rem}
 mark{background:#ff0;color:#000}
 small{font-size:80%}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -42,7 +42,7 @@ hr{box-sizing:content-box;height:0}
 pre{margin:0}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
 button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
-.hd-1.emphasized,.hd-2.emphasized,.hd-3.emphasized,.hd-4.emphasized,.hd-5,.hd-5.emphasized,.hd-6,.hd-6.emphasized{font-weight:600}
+.hd-1.emphasized,.hd-2.emphasized,.hd-3.emphasized,.hd-4.emphasized,.hd-5.emphasized,.hd-6,.hd-6.emphasized,.hd-7{font-weight:600}
 .hd-1.de-emphasized,.hd-2.de-emphasized,.hd-3.de-emphasized,.hd-4.de-emphasized,.hd-5.de-emphasized,.hd-6.de-emphasized{color:#7f7f7f}
 button{overflow:visible}
 button,select{text-transform:none}
@@ -63,18 +63,18 @@ figure{display:inline-block;margin:0}
 figure img{display:block}
 .img,picture{max-width:100%;margin:0}
 .hd-1,.hd-2{margin-bottom:1.11111rem}
-h2{font-size:1.55556rem}
-h3{font-size:1.33333rem}
-h4{font-size:1.16667rem}
-h5{font-size:1rem}
+h2{font-size:1.33333rem}
+h3{font-size:1.16667rem}
+h4,h5{font-size:1rem}
 h6{font-size:.88889rem}
-.hd-5,.hd-6{text-transform:uppercase}
-.hd-4,.hd-5.emphasized,.hd-6.emphasized{font-weight:700}
+.hd-6,.hd-7{text-transform:uppercase}
+.hd-4,.hd-5,.hd-6.emphasized,.hd-7.emphasized{font-weight:700}
 .hd-1{font-size:2.11111rem}
 .hd-2{font-size:1.55556rem}
-.hd-3,.hd-4,.hd-5,.hd-6{margin-bottom:.55556rem}
+.hd-3,.hd-4,.hd-5,.hd-6,.hd-7{margin-bottom:.55556rem}
 .hd-3{font-size:1.33333rem;line-height:1.5}
-.hd-4,.hd-5{line-height:1.6}
+.hd-4,.hd-5,.hd-6{line-height:1.6}
 .hd-4{font-size:1.16667rem}
-.hd-5{font-size:.88889rem}
-.hd-6{font-size:.77778rem;line-height:1.5}
+.hd-5{font-size:1rem}
+.hd-6{font-size:.88889rem}
+.hd-7{font-size:.77778rem;line-height:1.5}
