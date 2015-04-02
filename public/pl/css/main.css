@@ -1,5 +1,6 @@
 .pl-element-info,.pl-heading{font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
 img,legend{border:0}
+.pl-header-site-title .title-name,.pl-nav-title{text-transform:uppercase;letter-spacing:.0625rem}
 .pl-element-meta,.pl-element-title{display:block;width:48.21067%;float:left}
 *,:after,:before{box-sizing:inherit}
 *,html{box-sizing:border-box}
@@ -65,11 +66,7 @@ body,html{height:100%;color:#181818}
 .pl-header-site{margin:2.5rem 2.5rem 1.25rem}
 .pl-header-site-title{display:inline-block;vertical-align:middle;margin:0 0 1.25rem}
 .pl-header-site-title .title-description,.pl-header-site-title .title-name{display:block}
-<<<<<<< HEAD
 .pl-header-site-title .title-name{margin-bottom:.3125rem;color:#fcfcfc;font-size:1rem;font-weight:700}
-=======
-.pl-header-site-title .title-name{margin-bottom:.3125rem;color:#fbfbfb;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.0625rem}
->>>>>>> WIP color swatches
 .pl-header-site-title .title-name:active,.pl-header-site-title .title-name:focus,.pl-header-site-title .title-name:hover{color:#00a9fa}
 .pl-header-site-title .title-description{color:#afafaf;font-size:.875rem;font-weight:400}
 .pl-header-site-title .pl-link{border:none}
@@ -86,11 +83,7 @@ body,html{height:100%;color:#181818}
 .pl-nav-internal .pl-link.is-current:before{opacity:1}
 .pl-nav-external .pl-link .pl-icon{transition:opacity .25s ease-in-out;display:inline-block;vertical-align:baseline;margin-right:.3125rem;font-size:1.5rem;line-height:0;opacity:.25}
 .pl-nav-external .pl-link:active .pl-icon,.pl-nav-external .pl-link:focus .pl-icon,.pl-nav-external .pl-link:hover .pl-icon{opacity:1}
-<<<<<<< HEAD
 .pl-nav-title{margin:0 2.5rem .3125rem;color:#afafaf;font-size:.75rem;font-weight:600}
-=======
-.pl-nav-title{margin:0 2.5rem .3125rem;color:#949490;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.0625rem}
->>>>>>> WIP color swatches
 .pl-tab{margin-bottom:2.5rem}
 .pl-tab:last-child{margin-bottom:0}
 .pl-tab .pl-heading{margin-bottom:.9375rem;color:palette(grayscale,dark);font-size:1.125rem;font-weight:600;line-height:1.25}
@@ -118,86 +111,7 @@ body,html{height:100%;color:#181818}
 .pl-wrapper-view{margin-left:auto;margin-right:auto}
 .pl-wrapper-view::after{clear:both;display:table}
 .pl-wrapper-content-main{width:calc(100% - $pl-content-supplemental-width);margin-left:18.75rem}
-<<<<<<< HEAD
 .pl-wrapper-content-supplemental{height:100%;width:18.75rem;position:fixed;top:0;left:0;border-right:.25rem solid #181818;background:#313131;color:#e4e4e4;font-size:1rem}
-=======
-.pl-wrapper-content-supplemental{height:100%;width:18.75rem;position:fixed;top:0;left:0;border-right:.25rem solid #0f0f0e;background:#1e1e1c;color:#dbdbda;font-size:1rem}
-.swatch{display:inline-block;width:20%;height:95px;margin:1% 6%;padding:0;border-bottom:2px solid #25b85a;background:#fff;color:#fff;box-shadow:0 1px 1px rgba(0,0,0,.15)}
-.swatch.inaccessible{border-bottom:2px solid #b20610}
-.swatch .swatch-color{display:block;width:100%;height:67px;text-align:center;line-height:67px}
-.swatch .swatch-color .color-class{font-size:.75rem;text-transform:uppercase}
-.swatch .swatch-meta{list-style:none;margin:0;padding:3%;font-size:.625rem;font-weight:700;color:#444;text-transform:uppercase}
-.swatch .swatch-meta .color-hex,.swatch .swatch-meta .color-rgb{display:block}
-.swatch.endpoints{width:46%;height:50px;margin:1%}
-.swatch.endpoints .swatch-color{height:30px;line-height:30px}
-.swatch.endpoints .swatch-color .color-class{line-height:30px}
-.swatch.brand{width:29%;height:140px;margin:1.67%}
-.swatch.brand .swatch-color{height:110px;line-height:110px}
-.swatch.brand .swatch-color .color-class{line-height:80px}
-.swatch.brand .swatch-meta{padding:3%}
-.swatch.brand .swatch-meta .color-hex,.swatch.brand .swatch-meta .color-rgb{display:inline-block;width:49%}
-.swatch.brand .swatch-meta .color-rgb{text-align:right}
-.endpoints.black{background:#000}
-.endpoints.white{background:#fff}
-.brand-primary.base{background:#00a0e3}
-.brand-primary.mid-light{background:#19a9e5}
-.brand-primary.light{background:#3fb7ea}
-.brand-primary.x-light{background:#8cd4f2}
-.brand-primary.mid-dark{background:#0090cc}
-.brand-primary.dark{background:#0078aa}
-.brand-primary.x-dark{background:#004866}
-.brand-primary.mid-sat{background:#00a5ee}
-.brand-primary.sat{background:#00a9fa}
-.brand-primary.x-sat{background:#00aeff}
-.brand-primary.mid-trans{background:rgba(0,160,227,.75)}
-.brand-primary.trans{background:rgba(0,160,227,.5)}
-.brand-primary.x-trans{background:rgba(0,160,227,.25)}
-.brand-primary.xx-trans{background:rgba(0,160,227,.05)}
-.brand-secondary,.brand-secondary.base{background:#b83968}
-.brand-secondary.mid-light{background:#bf4c77}
-.brand-secondary.light{background:#c96a8d}
-.brand-secondary.x-light{background:#dfa5bb}
-.brand-secondary.mid-dark{background:#a5335d}
-.brand-secondary.dark{background:#8a2a4e}
-.brand-secondary.x-dark{background:#52192e}
-.brand-secondary.mid-sat{background:#c42d65}
-.brand-secondary.sat{background:#d02162}
-.brand-secondary.x-sat{background:#dc155f}
-.brand-secondary.mid-trans{background:rgba(184,57,104,.75)}
-.brand-secondary.trans{background:rgba(184,57,104,.5)}
-.brand-secondary.x-trans{background:rgba(184,57,104,.25)}
-.brand-secondary.xx-trans{background:rgba(184,57,104,.05)}
-<<<<<<< HEAD
-.brand-accent,.brand-accent.base{background:#00a0e3}
-.brand-accent.mid-light{background:#19a9e5}
-.brand-accent.light{background:#3fb7ea}
-.brand-accent.x-light{background:#8cd4f2}
-.brand-accent.mid-dark{background:#0090cc}
-.brand-accent.dark{background:#0078aa}
-.brand-accent.mid-sat{background:#00a5ee}
-.brand-accent.sat{background:#00a9fa}
-.brand-accent.x-sat{background:#00aeff}
-.brand-accent.mid-trans{background:rgba(0,160,227,.75)}
-.brand-accent.trans{background:rgba(0,160,227,.5)}
-.brand-accent.x-trans{background:rgba(0,160,227,.25)}
-.brand-accent.xx-trans{background:rgba(0,160,227,.05)}
->>>>>>> WIP color swatches
-=======
-.brand-accent,.brand-accent.base{background:#7f7f7f}
-.brand-accent.mid-light{background:#8b8b8b}
-.brand-accent.light{background:#9f9f9f}
-.brand-accent.x-light{background:#c5c5c5}
-.brand-accent.mid-dark{background:#727272}
-.brand-accent.dark{background:#5f5f5f}
-.brand-accent.x-dark{background:#393939}
-.brand-accent.mid-sat{background:#8c7272}
-.brand-accent.sat{background:#986666}
-.brand-accent.x-sat{background:#a55959}
-.brand-accent.mid-trans{background:rgba(127,127,127,.75)}
-.brand-accent.trans{background:rgba(127,127,127,.5)}
-.brand-accent.x-trans{background:rgba(127,127,127,.25)}
-.brand-accent.xx-trans{background:rgba(127,127,127,.05)}
->>>>>>> Adding color swatches
 .pl.view-index .pl-wrapper-link-top{text-align:center}
 .pl.view-index .pl-link-top{display:inline-block;padding:.625rem}
 .pl.view-index .pl-link-top .pl-icon{font-size:2rem;font-weight:600}
