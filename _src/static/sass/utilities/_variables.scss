@@ -45,7 +45,7 @@ $brand-accent:      $gray;
 
 // colors: palettes
 $palettes: (
-    primary:        (
+    primary: (
         base:       $brand-primary,
         mid-light:  tint($brand-primary, 10%),
         light:      tint($brand-primary, 25%),
@@ -63,7 +63,7 @@ $palettes: (
         x-trans:    transparentize($brand-primary, 0.75),
         xx-trans:   transparentize($brand-primary, 0.95)
     ),
-    secondary:      (
+    secondary: (
         base:       $brand-secondary,
         mid-light:  tint($brand-secondary, 10%),
         light:      tint($brand-secondary, 25%),
@@ -81,7 +81,7 @@ $palettes: (
         x-trans:    transparentize($brand-secondary, 0.75),
         xx-trans:   transparentize($brand-secondary, 0.95)
     ),
-    accent:           (
+    accent: (
         base:       $brand-accent,
         mid-light:  tint($brand-accent, 10%),
         light:      tint($brand-accent, 25%),
@@ -99,7 +99,7 @@ $palettes: (
         x-trans:    transparentize($brand-accent, 0.75),
         xx-trans:   transparentize($brand-accent, 0.95)
     ),
-    grayscale:           (
+    grayscale: (
         base:       $gray,
         mid-light:  tint($gray, 40%),
         light:      tint($gray, 50%),
@@ -118,7 +118,7 @@ $palettes: (
         x-trans:    transparentize($gray, 0.75),
         xx-trans:   transparentize($gray, 0.95)
     ),
-    green:           (
+    green: (
         base:       $green,
         mid-light:  tint($green, 40%),
         light:      tint($green, 60%),
@@ -133,7 +133,7 @@ $palettes: (
         x-trans:    transparentize($green, 0.75),
         xx-trans:   transparentize($green, 0.95)
     ),
-    red:           (
+    red: (
         base:       $red,
         mid-light:  tint($red, 40%),
         light:      tint($red, 60%),
@@ -148,7 +148,7 @@ $palettes: (
         x-trans:    transparentize($red, 0.75),
         xx-trans:   transparentize($red, 0.95)
     ),
-    yellow:           (
+    yellow: (
         base:       $yellow,
         mid-light:  tint($yellow, 40%),
         light:      tint($yellow, 60%),
