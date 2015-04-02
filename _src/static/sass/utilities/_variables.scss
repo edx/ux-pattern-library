@@ -33,6 +33,8 @@ $baseline-horizontal:    $baseline;
 $transparent:       rgba(0, 0, 0, 0);
 
 $gray:              rgb(127, 127, 127);
+$gray-cool:         rgb(96, 125, 139);
+$gray-warm:         rgb(79, 74, 73);
 $red:               rgb(178, 6, 16);
 $yellow:            rgb(237, 189, 60);
 $green:             rgb(37, 184, 90);
@@ -117,6 +119,44 @@ $palettes: (
         trans:      transparentize($gray, 0.50),
         x-trans:    transparentize($gray, 0.75),
         xx-trans:   transparentize($gray, 0.95)
+    ),
+    grayscale-cool: (
+        base:       $gray-cool,
+        mid-light:  tint($gray-cool, 40%),
+        light:      tint($gray-cool, 50%),
+        x-light:    tint($gray-cool, 75%),
+        xx-light:   tint($gray-cool, 90%),
+        white:      tint($gray-cool, 98%),
+        white-t:    tint($gray-cool, 100%),
+        mid-dark:   shade($gray-cool, 40%),
+        dark:       shade($gray-cool, 50%),
+        x-dark:     shade($gray-cool, 75%),
+        xx-dark:    shade($gray-cool, 90%),
+        black:      shade($gray-cool, 98%),
+        black-t:    shade($gray-cool, 100%),
+        mid-trans:  transparentize($gray-cool, 0.25),
+        trans:      transparentize($gray-cool, 0.50),
+        x-trans:    transparentize($gray-cool, 0.75),
+        xx-trans:   transparentize($gray-cool, 0.95)
+    ),
+    grayscale-warm: (
+        base:       $gray-warm,
+        mid-light:  tint($gray-warm, 40%),
+        light:      tint($gray-warm, 50%),
+        x-light:    tint($gray-warm, 75%),
+        xx-light:   tint($gray-warm, 90%),
+        white:      tint($gray-warm, 98%),
+        white-t:    tint($gray-warm, 100%),
+        mid-dark:   shade($gray-warm, 40%),
+        dark:       shade($gray-warm, 50%),
+        x-dark:     shade($gray-warm, 75%),
+        xx-dark:    shade($gray-warm, 90%),
+        black:      shade($gray-warm, 98%),
+        black-t:    shade($gray-warm, 100%),
+        mid-trans:  transparentize($gray-warm, 0.25),
+        trans:      transparentize($gray-warm, 0.50),
+        x-trans:    transparentize($gray-warm, 0.75),
+        xx-trans:   transparentize($gray-warm, 0.95)
     ),
     green: (
         base:       $green,
