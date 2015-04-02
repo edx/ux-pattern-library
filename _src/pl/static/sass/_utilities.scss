@@ -23,14 +23,14 @@ $baseline-v: rem(20);
 $baseline-h: rem(40);
 
 // brand/visuals
-$brand-primary:         rgb(0, 160, 227); // edX blue
+$brand-primary:         rgb(0, 160, 227);  // edX blue
 $brand-secondary:       rgb(184, 57, 104); // edX pink
 
 // colors
 $color-base-primary:    $brand-primary;
 $color-base-secondary:  $brand-secondary;
-$color-gray: hsla(58%, 4%, 29%, 1.0);
-$color-transparent:     hsla(0%, 0%, 0%, 0.0);
+$color-gray: rgb(123, 123, 123);
+$color-transparent: rgba(0, 0, 0, 0);
 
 // colors - palettes
 $palettes: (
