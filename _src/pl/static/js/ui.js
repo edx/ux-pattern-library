@@ -6,9 +6,9 @@ $(document).ready(function() {
     // JS is enabled/available
     $html.removeClass('no-js');
 
-    $('a[href^="#"]').bind('click', smoothScrollLink);
-    $('a[rel="external"]').bind('click', newWindowLink);
-    $('.pl-nav-elements .pl-link').bind('click', navigationHighlight);
+    $('a[href^="#"]').on('click', smoothScrollLink);
+    $('a[rel="external"]').on('click', newWindowLink);
+    $('.pl-nav-elements .pl-link').on('click', navigationHighlight);
 
     // smoothscroll to target links
     function smoothScrollLink(e) {
@@ -31,9 +31,18 @@ $(document).ready(function() {
 
     // open external links in new windows
     function newWindowLink(e) {
-        (e).preventDefault();
+        e.preventDefault();
 
-        var $url = $(this).attr('href');
-        window.open($url);
+        window.open($(this).attr('href'));
+    }
+
+    // palette values
+    if ($('.swatch').length) {
+
+        $('.swatch').each(function() {
+            var rgb = $(this).find('.swatch-color').css('backgroundColor');
+
+            $(this).find('.swatch-meta .color-rgb').text(rgb);
+        });
     }
 });

@@ -44,9 +44,18 @@
         color: #444;
         text-transform: uppercase;
 
-        .color-hex,
+        .color-hex {
+            display: none;
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: clip;
+        }
+
         .color-rgb {
             display: block;
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: clip;
         }
     }
 
