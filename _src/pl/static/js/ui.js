@@ -6,7 +6,7 @@ $(document).ready(function() {
     // JS is enabled/available
     $html.removeClass('no-js');
 
-    $('a[href^="#"]').not('.pl-link').on('click', smoothScrollLink);
+    $('a[href^="#"]').not('.pl-tab-wrapper .pl-link').on('click', smoothScrollLink);
     $('a[rel="external"]').on('click', newWindowLink);
     $('.pl-nav-elements .pl-link').on('click', navigationHighlight);
 
@@ -53,14 +53,14 @@ $(document).ready(function() {
             this.handleTabClick();
         },
 
-        resetInterface: function() {
+        resetInterface: function(wrapper) {
             var that = this;
 
-            that.vars.tab.find('.pl-link').each(function() {
+            wrapper.find('.pl-link').each(function() {
                 $(this).removeClass(that.vars.activeClass);
             });
 
-            that.vars.panel.each(function() {
+            wrapper.find(that.vars.panel).each(function() {
                 $(this).removeClass(that.vars.activeClass).addClass(that.vars.hiddenClass);
             });
         },
@@ -72,7 +72,8 @@ $(document).ready(function() {
                 e.preventDefault();
 
                 var content = $(this).attr('href');
-                that.resetInterface();
+
+                that.resetInterface($(this).parent().parent().parent());
                 that.makeActive($(this), content);
             });
         },
@@ -87,5 +88,15 @@ $(document).ready(function() {
 
     if ($('.pl-tab-wrapper').length) {
         Tabs.init();
+    }
+
+    // palette values
+    if ($('.swatch').length) {
+
+        $('.swatch').each(function() {
+            var rgb = $(this).find('.swatch-color').css('backgroundColor');
+
+            $(this).find('.swatch-meta .color-rgb').text(rgb);
+        });
     }
 });
