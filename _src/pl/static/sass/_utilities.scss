@@ -25,6 +25,7 @@ $baseline-h: rem(40);
 // brand/visuals
 $brand-primary:         rgb(0, 160, 227);  // edX blue
 $brand-secondary:       rgb(184, 57, 104); // edX pink
+$brand-accent:          rgb(127, 127, 127); // edX gray
 
 // colors
 $color-base-primary:    $brand-primary;
@@ -34,7 +35,7 @@ $color-transparent: rgba(0, 0, 0, 0);
 
 // colors - palettes
 $palettes: (
-    primary:        (
+    primary: (
         base:       $color-base-primary,
         mid-light:  tint($color-base-primary, 10%),
         light:      tint($color-base-primary, 25%),
@@ -50,7 +51,7 @@ $palettes: (
         x-trans:    transparentize($color-base-primary, 0.75),
         xx-trans:   transparentize($color-base-primary, 0.95)
     ),
-    secondary:      (
+    secondary: (
         base:       $color-base-secondary,
         mid-light:  tint($color-base-secondary, 10%),
         light:      tint($color-base-secondary, 25%),
@@ -66,7 +67,7 @@ $palettes: (
         x-trans:    transparentize($color-base-secondary, 0.75),
         xx-trans:   transparentize($color-base-secondary, 0.95)
     ),
-    grayscale:           (
+    grayscale: (
         base:       $color-gray,
         mid-light:  tint($color-gray, 40%),
         light:      tint($color-gray, 60%),
@@ -84,6 +85,22 @@ $palettes: (
         trans:      transparentize($color-gray, 0.50),
         x-trans:    transparentize($color-gray, 0.75),
         xx-trans:   transparentize($color-gray, 0.95)
+    ),
+    accent: (
+        base:       $brand-accent,
+        mid-light:  tint($brand-accent, 10%),
+        light:      tint($brand-accent, 25%),
+        x-light:    tint($brand-accent, 55%),
+        mid-dark:   shade($brand-accent, 10%),
+        dark:       shade($brand-accent, 25%),
+        x-dark:     shade($brand-accent, 55%),
+        mid-sat:    saturate($brand-accent, 10%),
+        sat:        saturate($brand-accent, 20%),
+        x-sat:      saturate($brand-accent, 30%),
+        mid-trans:  transparentize($brand-accent, 0.25),
+        trans:      transparentize($brand-accent, 0.50),
+        x-trans:    transparentize($brand-accent, 0.75),
+        xx-trans:   transparentize($brand-accent, 0.95)
     )
 );
 
