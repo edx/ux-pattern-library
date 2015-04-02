@@ -17,10 +17,14 @@ viewclass:  element
             </ul>
         </header>
 
+        <div class="pl-element-info">
+            <p>{{page.info}}</p>
+        </div>
+
         {% if page.tags contains "pattern" %}
         <ul class="pl-tab-labels pl-list pl-element-navigation">
             <li class="pl-tab-label">
-                <a class="pl-link" href="#{{page.slug}}-preview">{{page.title}}</a>
+                <a class="pl-link is-active" href="#{{page.slug}}-preview">{{page.title}}</a>
             </li>
             <li class="pl-tab-label">
                 <a class="pl-link" href="#{{page.slug}}-markup">Markup</a>
@@ -33,10 +37,6 @@ viewclass:  element
             </li>
         </ul>
         {% endif %}
-
-        <div class="pl-element-info">
-            <p>{{page.info}}</p>
-        </div>
 
         <div class="pl-tabs">
             <div class="pl-tab pl-element-preview" id="{{page.slug}}-preview">

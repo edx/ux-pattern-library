@@ -6,7 +6,7 @@ $(document).ready(function() {
     // JS is enabled/available
     $html.removeClass('no-js');
 
-    $('a[href^="#"]').on('click', smoothScrollLink);
+    $('a[href^="#"]').not('.pl-link').on('click', smoothScrollLink);
     $('a[rel="external"]').on('click', newWindowLink);
     $('.pl-nav-elements .pl-link').on('click', navigationHighlight);
 
@@ -44,5 +44,58 @@ $(document).ready(function() {
 
             $(this).find('.swatch-meta .color-rgb').text(rgb);
         });
+    }
+
+    // tabbed interfaces
+    var Tabs = {
+
+        vars: {
+            tabContainer:   $('.pl-tab-wrapper'),
+            tabs:           $('.pl-tab-labels'),
+            tab:            $('.pl-tab-label'),
+            panels:         $('.pl-tabs'),
+            panel:          $('.pl-tab'),
+            activeClass:    'is-active',
+            hiddenClass:    'is-hidden',
+        },
+
+        init: function() {
+            this.handleTabClick();
+        },
+
+        resetInterface: function() {
+            var that = this;
+
+            that.vars.tab.find('.pl-link').each(function() {
+                $(this).removeClass(that.vars.activeClass);
+            });
+
+            that.vars.panel.each(function() {
+                $(this).removeClass(that.vars.activeClass).addClass(that.vars.hiddenClass);
+            });
+        },
+
+        handleTabClick: function() {
+            var that = this;
+
+            that.vars.tab.find('.pl-link').on('click', function(e) {
+                e.preventDefault();
+
+                var content = $(this).attr('href');
+                that.resetInterface();
+                that.makeActive($(this), content);
+            });
+        },
+
+        makeActive: function(tab, content) {
+            var that = this;
+
+            tab.addClass(that.vars.activeClass);
+            $(content).addClass(that.vars.activeClass).removeClass(that.vars.hiddenClass);
+        }
+    }
+
+    if ($('.pl-tab-wrapper').length) {
+        Tabs.init();
     }
 });
