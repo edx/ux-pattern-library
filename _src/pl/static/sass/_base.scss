@@ -64,6 +64,11 @@ html, body {
     @extend %sr;
 }
 
+// stateful
+.is-hidden {
+    @extend %sr;
+}
+
 // ------------------------------
 // #TYPOGRAPHY
 // ------------------------------
