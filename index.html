@@ -24,52 +24,52 @@ viewclass:  index
                 </ul>
             </header>
 
-            <ul class="pl-tab-labels pl-list pl-element-navigation">
-                <li class="pl-tab-label">
-                    <a class="pl-link" href="#{{post.slug}}-view">{{post.title}}</a>
-                </li>
-                <li class="pl-tab-label">
-                    <a class="pl-link" href="#{{post.slug}}-markup">Markup</a>
-                </li>
-                <li class="pl-tab-label">
-                    <a class="pl-link" href="#{{post.slug}}-styling">Styling</a>
-                </li>
-                <li class="pl-tab-label">
-                    <a class="pl-link" href="#{{post.slug}}-info">Info</a>
-                </li>
-            </ul>
-
             <div class="pl-element-info">
                 <p>{{post.info}}</p>
             </div>
 
-            <div class="pl-tabs">
-                <div class="pl-tab pl-element-preview" id="{post.slug}}-preview">
-                    <h2 class="pl-heading pl-element-preview-title">{{post.title}} Preview</h2>
+            <div class="pl-tab-wrapper">
+                <ul class="pl-tab-labels pl-list pl-element-navigation">
+                    <li class="pl-tab-label">
+                        <a class="pl-link is-active" href="#{{post.slug}}-preview">Preview</a>
+                    </li>
+                    <li class="pl-tab-label">
+                        <a class="pl-link" href="#{{post.slug}}-markup">Markup</a>
+                    </li>
+                    <li class="pl-tab-label">
+                        <a class="pl-link" href="#{{post.slug}}-styling">Styling</a>
+                    </li>
+                </ul>
 
-                    <div class="pl-tab-content">
-                        {{post.content}}
+                <div class="pl-tabs">
+                    <div class="pl-tab pl-element-preview is-active" id="{{post.slug}}-preview">
+                        <h2 class="pl-heading pl-tab-heading pl-element-preview-title">{{post.title}} Preview</h2>
+
+                        <div class="pl-tab-content">
+                            {{post.content}}
+                        </div>
                     </div>
-                </div>
 
-                <div class="pl-tab pl-element-markup" id="{post.slug}}-markup">
-                    <h2 class="pl-heading pl-element-markup-title">{{post.title}} Markup</h2>
+                    <div class="pl-tab pl-element-markup is-hidden" id="{{post.slug}}-markup">
+                        <h2 class="pl-heading pl-tab-heading pl-element-markup-title">{{post.title}} Markup</h2>
 
-                    <div class="pl-tab-content">
-                        {% highlight html %}
-                        {{post.content}}
-                        {% endhighlight %}
+                        <div class="pl-tab-content">
+                            {% highlight html %}
+                            {{post.content}}
+                            {% endhighlight %}
+                        </div>
                     </div>
-                </div>
 
-                <div class="pl-tab pl-element-styling" id="{post.slug}}-styling">
-                    <h2 class="pl-heading pl-element-styling-title">{{post.title}} Style</h2>
+                    <div class="pl-tab pl-element-styling is-hidden" id="{{post.slug}}-styling">
+                        <h2 class="pl-heading pl-tab-heading pl-element-styling-title">{{post.title}} Style</h2>
 
-                    <div class="pl-tab-content">
-                        <p>View <a class="pl-link" href="{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                        <div class="pl-tab-content">
+                            <p>View <a class="pl-link" href="{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </article>
     </div>
     {% endfor %}
