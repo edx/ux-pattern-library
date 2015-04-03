@@ -311,35 +311,47 @@
     }
 }
 
-.pl-tab-wrapper {
 
-    .pl-tab-labels {
-        @extend %reset-lists;
-        margin-bottom: spacing-v(base);
+// element info tabs
+.pl-tab-labels {
+    @include clearfix();
+    @extend %reset-lists;
+    border-bottom: spacing-v(x-small) solid palette(grayscale, x-light);
+}
 
-        .pl-tab-label {
-            display: inline-block;
+.pl-tab-heading {
+    @extend %sr;
+}
 
-            .pl-link {
-                display: block;
-                padding: 1rem;
-                border-top: 1px solid transparent;
-                background: palette(grayscale, x-light);
+.pl-tab-label {
+    // display: inline-block;
+    float: left;
+    position: relative;
+    bottom: -(spacing-v(x-small));
 
-                &:hover,
-                &:focus {
-                    border-color: transparent;
-                }
+    .pl-link {
+        display: block;
+        margin: 0;
+        border-bottom: spacing-v(x-small) solid $color-transparent;
+        padding: spacing-v(small) spacing-h(small);
+        font-weight: font-weight(semi-bold);
+        color: palette(grayscale, base);
 
-                &.is-active {
-                    background: transparent;
-                    border-top: 1px solid palette(primary, light);
-                }
-            }
+        &:hover,
+        &:focus {
+            border-bottom-color: palette(primary, sat);
+            color: palette(primary, sat);
+        }
+
+        &.is-active {
+            border-bottom-color: palette(grayscale, x-dark);
+            color: palette(grayscale, x-dark);
         }
     }
 }
 
+
+// element info
 .pl-element-info {
     @extend %reset-copy;
     color: palette(grayscale, base);
