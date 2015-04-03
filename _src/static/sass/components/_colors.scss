@@ -1,120 +1,87 @@
-// color swatches
-.swatch {
-    display: inline-block;
-    width: 20%;
-    height: 95px;
-    margin: 1% 6%;
-    padding: 0;
-    border-bottom: 2px solid transparent;
-    background: white;
-    color: white;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+// ------------------------------
+// edX Pattern Library: Components - Colors
 
-    &.inaccessible {
-        border-bottom: 2px solid $red;
+// About: Contains base styling for demonstration and utility color palette stylng.
+// ----------------------------
+
+// #SWATCH LAYOUT
+// #SWATCH RENDERING
+// ----------------------------
+
+// ----------------------------
+// #SWATCH LAYOUT
+// ----------------------------
+.swatch-set {
+    @extend %clear-last-child;
+    padding-bottom: spacing-vertical(base);
+    border-bottom: spacing-vertical(xx-small) solid palette(grayscale, xx-light);
+    margin-bottom: spacing-vertical(base);
+}
+
+.swatch {
+    @include transition(all timing(x-fast) ease-in-out);
+    width: spacing-vertical(x-large);
+    display: inline-block;
+    margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
+    border: 1px solid palette(grayscale, x-light);
+    border-radius: spacing-horizontal(xx-small);
+    padding: spacing-vertical(x-small) spacing-horizontal(small);
+    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
+    background: palette(grayscale, white);
+    color: palette(grayscale, white);
+
+    // STATE: hover, focus, and active
+    &:hover, &:focus, &:active {
+        @include transform(scale(1.05));
+        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+    }
+}
+
+.swatch-color {
+    display: block;
+    margin: 0 0 spacing-vertical(x-small) 0;
+    padding: spacing-vertical(mid-large) spacing-horizontal(mid-small);
+    text-align: center;
+
+    .color-class {
+        font-size: font-size(mid-small);
+        text-transform: lowercase;
+
+        // CASE: light text on dark bg
+        &.lod {
+            color: palette(grayscale, white);
+        }
+
+        // CASE: dark text on light bg
+        &.dol {
+            color: palette(grayscale, black);
+        }
     }
 
-    .swatch-color {
-        display: block;
-        width: 100%;
-        height: 67px;
-        text-align: center;
-        line-height: 67px;
+    // CASE: base color
+    &.base {
 
         .color-class {
-            font-size: font-size(small);
-            text-transform: uppercase;
-
-            &.lod {
-                color: #ffffff;
-            }
-
-            &.dol {
-                color: $text-base-color;
-            }
-        }
-    }
-
-    .swatch-meta {
-        list-style: none;
-        margin: 0;
-        padding: 3%;
-        font-size: font-size(small);
-        font-weight: font-weight(normal);
-        color: #444;
-        text-transform: uppercase;
-
-        .color-hex {
-            display: none;
-            width: 100%;
-            white-space: nowrap;
-            text-overflow: clip;
-        }
-
-        .color-rgb {
-            display: block;
-            width: 100%;
-            white-space: nowrap;
-            text-overflow: clip;
-        }
-    }
-
-    &.endpoints {
-        width: 46%;
-        height: 50px;
-        margin: 1%;
-
-        .swatch-color {
-            height: 30px;
-            line-height: 30px;
-
-            .color-class {
-                line-height: 30px;
-            }
-        }
-    }
-
-    &.brand {
-        width: 29%;
-        height: 140px;
-        margin: 1.67%;
-
-        .swatch-color {
-            height: 110px;
-            line-height: 110px;
-
-            .color-class {
-                line-height: 80px;
-            }
-        }
-
-        .swatch-meta {
-            padding: 2%;
-
-            .color-hex,
-            .color-rgb {
-                display: inline-block;
-                width: 49%;
-            }
-
-            .color-rgb {
-                text-align: right;
-            }
+            font-weight: font-weight(bold);
         }
     }
 }
 
-.endpoints {
+.swatch-meta {
+    white-space: nowrap;
+    font-size: font-size(small);
+    font-weight: font-weight(normal);
+    text-align: center;
+    color: palette(grayscale, mid-dark);
 
-    &.black {
-        background: #000000;
-    }
-
-    &.white {
-        background: #ffffff;
+    .color-rgb {
+        @include ellipsis();
     }
 }
 
+// ----------------------------
+// #SWATCH RENDERING
+// ----------------------------
 .brand-primary {
 
     &.base {
