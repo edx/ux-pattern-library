@@ -17,7 +17,7 @@ viewclass:  element
             </ul>
         </header>
 
-
+        {% if page.tags contains "pattern" %}
         <ul class="pl-tab-labels pl-list pl-element-navigation">
             <li class="pl-tab-label">
                 <a class="pl-link" href="#{{page.slug}}-preview">{{page.title}}</a>
@@ -32,6 +32,7 @@ viewclass:  element
                 <a class="pl-link" href="#{{page.slug}}-info">Info</a>
             </li>
         </ul>
+        {% endif %}
 
         <div class="pl-element-info">
             <p>{{page.info}}</p>
@@ -46,6 +47,7 @@ viewclass:  element
                 </div>
             </div>
 
+            {% if page.tags contains "pattern" %}
             <div class="pl-tab pl-element-markup" id="{{page.slug}}-markup">
                 <h2 class="pl-heading pl-element-markup-title">{{page.title}} Markup</h2>
 
@@ -63,6 +65,7 @@ viewclass:  element
                     <p>You can find <a class="pl-link" href="{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                 </div>
             </div>
+            {% endif %}
         </div>
     </article>
 </div>
