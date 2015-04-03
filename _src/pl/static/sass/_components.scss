@@ -187,14 +187,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+}
 
-    .pl-heading {
-        margin-bottom: spacing-v(mid-small);
-        color: $heading-color;
-        font-size: font-size(mid-large);
-        font-weight: font-weight(semi-bold);
-        line-height: line-height(base);
-    }
+.pl-tab-heading {
+    @extend %sr;
 }
 
 .pl-tab-content {

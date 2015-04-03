@@ -32,15 +32,12 @@ viewclass:  element
             <li class="pl-tab-label">
                 <a class="pl-link" href="#{{page.slug}}-styling">Styling</a>
             </li>
-            <li class="pl-tab-label">
-                <a class="pl-link" href="#{{page.slug}}-info">Info</a>
-            </li>
         </ul>
         {% endif %}
 
         <div class="pl-tabs">
-            <div class="pl-tab pl-element-preview" id="{{page.slug}}-preview">
-                <h2 class="pl-heading pl-element-preview-title">{{page.title}} Preview</h2>
+            <div class="pl-tab pl-element-preview is-active" id="{{page.slug}}-preview">
+                <h2 class="pl-heading pl-tab-heading pl-element-preview-title">{{page.title}} Preview</h2>
 
                 <div class="pl-tab-content">
                     {{page.content}}

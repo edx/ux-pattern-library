@@ -86,7 +86,6 @@ body,html{height:100%;color:#181818}
 .pl-nav-title{margin:0 2.5rem .3125rem;color:#afafaf;font-size:.75rem;font-weight:600}
 .pl-tab{margin-bottom:2.5rem}
 .pl-tab:last-child{margin-bottom:0}
-.pl-tab .pl-heading{margin-bottom:.9375rem;color:palette(grayscale,dark);font-size:1.125rem;font-weight:600;line-height:1.25}
 .pl-tab-content{transition:box-shadow .5s ease-in-out;border:.0625rem solid #e4e4e4;padding:1.25rem 2.5rem;background:#fcfcfc;box-shadow:0 .125rem .125rem 0 rgba(123,123,123,.05)}
 .pl-tab-content:active,.pl-tab-content:focus,.pl-tab-content:hover{box-shadow:0 .125rem .125rem 0 rgba(123,123,123,.25)}
 .pl-wrapper-content-main{background:#f1f1f1;font-size:1rem}
