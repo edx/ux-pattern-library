@@ -29,6 +29,7 @@ viewclass:  index
             </div>
 
             <div class="pl-tab-wrapper">
+                {% if post.tags contains "pattern" %}
                 <ul class="pl-tab-labels pl-list pl-element-navigation">
                     <li class="pl-tab-label">
                         <a class="pl-link is-active" href="#{{post.slug}}-preview">Preview</a>
@@ -40,6 +41,7 @@ viewclass:  index
                         <a class="pl-link" href="#{{post.slug}}-styling">Styling</a>
                     </li>
                 </ul>
+                {% endif %}
 
                 <div class="pl-tabs">
                     <div class="pl-tab pl-element-preview is-active" id="{{post.slug}}-preview">
@@ -50,6 +52,7 @@ viewclass:  index
                         </div>
                     </div>
 
+                    {% if post.tags contains "pattern" %}
                     <div class="pl-tab pl-element-markup is-hidden" id="{{post.slug}}-markup">
                         <h2 class="pl-heading pl-tab-heading pl-element-markup-title">{{post.title}} Markup</h2>
 
@@ -68,6 +71,7 @@ viewclass:  index
                         </div>
                     </div>
                 </div>
+                {% endif %}
             </div>
 
         </article>
