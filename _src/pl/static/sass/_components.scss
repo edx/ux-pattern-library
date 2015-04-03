@@ -313,10 +313,6 @@
 
 .pl-tab-wrapper {
 
-    .is-hidden {
-        @extend %sr;
-    }
-
     .pl-tab-labels {
         @extend %reset-lists;
         margin-bottom: spacing-v(base);
