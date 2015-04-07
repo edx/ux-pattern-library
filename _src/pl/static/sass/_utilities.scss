@@ -23,18 +23,18 @@ $baseline-v: rem(20);
 $baseline-h: rem(40);
 
 // brand/visuals
-$brand-primary:         rgb(0, 160, 227); // edX blue
+$brand-primary:         rgb(0, 160, 227);  // edX blue
 $brand-secondary:       rgb(184, 57, 104); // edX pink
 
 // colors
 $color-base-primary:    $brand-primary;
 $color-base-secondary:  $brand-secondary;
-$color-gray: hsla(58%, 4%, 29%, 1.0);
-$color-transparent:     hsla(0%, 0%, 0%, 0.0);
+$color-gray: rgb(123, 123, 123);
+$color-transparent: rgba(0, 0, 0, 0);
 
 // colors - palettes
 $palettes: (
-    primary:        (
+    primary: (
         base:       $color-base-primary,
         mid-light:  tint($color-base-primary, 10%),
         light:      tint($color-base-primary, 25%),
@@ -50,7 +50,7 @@ $palettes: (
         x-trans:    transparentize($color-base-primary, 0.75),
         xx-trans:   transparentize($color-base-primary, 0.95)
     ),
-    secondary:      (
+    secondary: (
         base:       $color-base-secondary,
         mid-light:  tint($color-base-secondary, 10%),
         light:      tint($color-base-secondary, 25%),
@@ -66,7 +66,7 @@ $palettes: (
         x-trans:    transparentize($color-base-secondary, 0.75),
         xx-trans:   transparentize($color-base-secondary, 0.95)
     ),
-    grayscale:           (
+    grayscale: (
         base:       $color-gray,
         mid-light:  tint($color-gray, 40%),
         light:      tint($color-gray, 60%),

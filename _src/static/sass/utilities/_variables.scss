@@ -33,6 +33,8 @@ $baseline-horizontal:    $baseline;
 $transparent:       rgba(0, 0, 0, 0);
 
 $gray:              rgb(127, 127, 127);
+$gray-cool:         rgb(96, 125, 139);
+$gray-warm:         rgb(79, 74, 73);
 $red:               rgb(178, 6, 16);
 $yellow:            rgb(237, 189, 60);
 $green:             rgb(37, 184, 90);
@@ -45,14 +47,16 @@ $brand-accent:      $gray;
 
 // colors: palettes
 $palettes: (
-    primary:        (
+    primary: (
         base:       $brand-primary,
         mid-light:  tint($brand-primary, 10%),
         light:      tint($brand-primary, 25%),
         x-light:    tint($brand-primary, 55%),
+        xx-light:   tint($brand-primary, 90%),
         mid-dark:   shade($brand-primary, 10%),
         dark:       shade($brand-primary, 25%),
         x-dark:     shade($brand-primary, 55%),
+        xx-dark:    shade($brand-primary, 90%),
         mid-sat:    saturate($brand-primary, 10%),
         sat:        saturate($brand-primary, 20%),
         x-sat:      saturate($brand-primary, 30%),
@@ -61,14 +65,16 @@ $palettes: (
         x-trans:    transparentize($brand-primary, 0.75),
         xx-trans:   transparentize($brand-primary, 0.95)
     ),
-    secondary:      (
+    secondary: (
         base:       $brand-secondary,
         mid-light:  tint($brand-secondary, 10%),
         light:      tint($brand-secondary, 25%),
         x-light:    tint($brand-secondary, 55%),
+        xx-light:   tint($brand-secondary, 75%),
         mid-dark:   shade($brand-secondary, 10%),
         dark:       shade($brand-secondary, 25%),
         x-dark:     shade($brand-secondary, 55%),
+        xx-dark:    shade($brand-secondary, 90%),
         mid-sat:    saturate($brand-secondary, 10%),
         sat:        saturate($brand-secondary, 20%),
         x-sat:      saturate($brand-secondary, 30%),
@@ -77,14 +83,16 @@ $palettes: (
         x-trans:    transparentize($brand-secondary, 0.75),
         xx-trans:   transparentize($brand-secondary, 0.95)
     ),
-    accent:           (
+    accent: (
         base:       $brand-accent,
         mid-light:  tint($brand-accent, 10%),
         light:      tint($brand-accent, 25%),
         x-light:    tint($brand-accent, 55%),
+        xx-light:   tint($brand-accent, 90%),
         mid-dark:   shade($brand-accent, 10%),
         dark:       shade($brand-accent, 25%),
         x-dark:     shade($brand-accent, 55%),
+        xx-dark:    shade($brand-accent, 90%),
         mid-sat:    saturate($brand-accent, 10%),
         sat:        saturate($brand-accent, 20%),
         x-sat:      saturate($brand-accent, 30%),
@@ -93,7 +101,7 @@ $palettes: (
         x-trans:    transparentize($brand-accent, 0.75),
         xx-trans:   transparentize($brand-accent, 0.95)
     ),
-    grayscale:           (
+    grayscale: (
         base:       $gray,
         mid-light:  tint($gray, 40%),
         light:      tint($gray, 50%),
@@ -112,58 +120,84 @@ $palettes: (
         x-trans:    transparentize($gray, 0.75),
         xx-trans:   transparentize($gray, 0.95)
     ),
-    green:           (
+    grayscale-cool: (
+        base:       $gray-cool,
+        mid-light:  tint($gray-cool, 40%),
+        light:      tint($gray-cool, 50%),
+        x-light:    tint($gray-cool, 75%),
+        xx-light:   tint($gray-cool, 90%),
+        white:      tint($gray-cool, 98%),
+        white-t:    tint($gray-cool, 100%),
+        mid-dark:   shade($gray-cool, 40%),
+        dark:       shade($gray-cool, 50%),
+        x-dark:     shade($gray-cool, 75%),
+        xx-dark:    shade($gray-cool, 90%),
+        black:      shade($gray-cool, 98%),
+        black-t:    shade($gray-cool, 100%),
+        mid-trans:  transparentize($gray-cool, 0.25),
+        trans:      transparentize($gray-cool, 0.50),
+        x-trans:    transparentize($gray-cool, 0.75),
+        xx-trans:   transparentize($gray-cool, 0.95)
+    ),
+    grayscale-warm: (
+        base:       $gray-warm,
+        mid-light:  tint($gray-warm, 40%),
+        light:      tint($gray-warm, 50%),
+        x-light:    tint($gray-warm, 75%),
+        xx-light:   tint($gray-warm, 90%),
+        white:      tint($gray-warm, 98%),
+        white-t:    tint($gray-warm, 100%),
+        mid-dark:   shade($gray-warm, 40%),
+        dark:       shade($gray-warm, 50%),
+        x-dark:     shade($gray-warm, 75%),
+        xx-dark:    shade($gray-warm, 90%),
+        black:      shade($gray-warm, 98%),
+        black-t:    shade($gray-warm, 100%),
+        mid-trans:  transparentize($gray-warm, 0.25),
+        trans:      transparentize($gray-warm, 0.50),
+        x-trans:    transparentize($gray-warm, 0.75),
+        xx-trans:   transparentize($gray-warm, 0.95)
+    ),
+    green: (
         base:       $green,
         mid-light:  tint($green, 40%),
         light:      tint($green, 60%),
         x-light:    tint($green, 80%),
         xx-light:   tint($green, 90%),
-        white:      tint($green, 98%),
-        white-t:    tint($green, 100%),
         mid-dark:   shade($green, 40%),
         dark:       shade($green, 60%),
         x-dark:     shade($green, 80%),
         xx-dark:    shade($green, 90%),
-        black:      shade($green, 98%),
-        black-t:    shade($green, 100%),
         mid-trans:  transparentize($green, 0.25),
         trans:      transparentize($green, 0.50),
         x-trans:    transparentize($green, 0.75),
         xx-trans:   transparentize($green, 0.95)
     ),
-    red:           (
+    red: (
         base:       $red,
         mid-light:  tint($red, 40%),
         light:      tint($red, 60%),
         x-light:    tint($red, 80%),
         xx-light:   tint($red, 90%),
-        white:      tint($red, 98%),
-        white-t:    tint($red, 100%),
         mid-dark:   shade($red, 40%),
         dark:       shade($red, 60%),
         x-dark:     shade($red, 80%),
         xx-dark:    shade($red, 90%),
-        black:      shade($red, 98%),
-        black-t:    shade($red, 100%),
         mid-trans:  transparentize($red, 0.25),
         trans:      transparentize($red, 0.50),
         x-trans:    transparentize($red, 0.75),
         xx-trans:   transparentize($red, 0.95)
     ),
-    yellow:           (
+    yellow: (
         base:       $yellow,
         mid-light:  tint($yellow, 40%),
         light:      tint($yellow, 60%),
         x-light:    tint($yellow, 80%),
         xx-light:   tint($yellow, 90%),
-        white:      tint($yellow, 98%),
-        white-t:    tint($yellow, 100%),
         mid-dark:   shade($yellow, 40%),
         dark:       shade($yellow, 60%),
         x-dark:     shade($yellow, 80%),
         xx-dark:    shade($yellow, 90%),
-        black:      shade($yellow, 98%),
-        black-t:    shade($yellow, 100%),
         mid-trans:  transparentize($yellow, 0.25),
         trans:      transparentize($yellow, 0.50),
         x-trans:    transparentize($yellow, 0.75),
@@ -200,10 +234,11 @@ $font-scale-base: $font-scale-medium;
 
 // typography: sizes
 $font-sizes: (
-    xx-large:       38,
-    x-large:        28,
-    large:          24,
-    mid-large:      21,
+    xxx-large:      38,
+    xx-large:       28,
+    x-large:        24,
+    large:          21,
+    mid-large:      18,
     mid-small:      16,
     small:          14,
     base:           $font-scale-base
@@ -260,6 +295,7 @@ $spacing-vertical: (
     mid-small:  ($baseline-vertical*0.75),
     small:      ($baseline-vertical/2),
     x-small:    ($baseline-vertical/4),
+    xx-small:    ($baseline-vertical/8),
     mid-large:  ($baseline-vertical*1.5),
     large:      ($baseline-vertical*2),
     x-large:    ($baseline-vertical*4)
