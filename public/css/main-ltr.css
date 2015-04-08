@@ -88,7 +88,7 @@ h6{font-size:.88889rem}
 .swatch-color{display:block;margin:0 0 .55556rem;padding:3.33333rem .83333rem;text-align:center}
 .swatch-color .color-class{font-size:.88889rem;text-transform:lowercase}
 .swatch-color .color-class.dol{color:#0c0c0c}
-.swatch-meta{white-space:nowrap;font-size:.77778rem;font-weight:400;text-align:center;color:#4c4c4c}
+.swatch-meta{padding:.27778rem .55556rem;white-space:nowrap;font-size:.77778rem;text-align:center;color:#4c4c4c}
 .swatch-meta .color-rgb{display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
 .brand-primary.base{background:#00a2e3}
 .brand-primary.mid-light{background:#19abe5}
