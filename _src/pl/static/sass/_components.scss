@@ -365,7 +365,19 @@
     }
 }
 
-// a11y test fail
-.a11y-color-fail {
-    @extend %a11y-test-fail;
+// ------------------------------
+// #SYSTEM FEEDBACK
+// ------------------------------
+%message {
+    font-weight: font-weight(semi-bold);
+}
+
+%message-warning {
+    @extend %message;
+    background-color: palette(warning, x-light);
+    color: palette(grayscale, black-t);
+}
+
+.fail-a11y-color {
+    @extend %message-warning;
 }

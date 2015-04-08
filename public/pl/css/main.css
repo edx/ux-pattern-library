@@ -17,7 +17,6 @@ img,legend{border:0}
 .pl-element-meta,.pl-nav .nav-list,.pl-tab-labels{list-style:none;text-indent:0;margin:0;padding:0}
 .pl-heading{margin:0 0 1.25rem;font-size:1rem;line-height:1.25}
 .pl-element-info{font-size:1rem;line-height:1.48}
-.a11y-color-fail{background-color:#ff0!important;color:#000!important}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
@@ -115,6 +114,7 @@ body,html{height:100%;color:#181818}
 .pl-tab-label .pl-link.is-active{border-bottom-color:#181818;color:#181818}
 .pl-element-info{color:#7b7b7b}
 .pl-element-markup code{font-family:'Bitstream Vera Sans Mono',Consolas,Courier,monospace}
+.fail-a11y-color{font-weight:600;background-color:#fde29d;color:#000}
 .pl-wrapper-view{margin-left:auto;margin-right:auto}
 .pl-wrapper-view::after{clear:both;display:table}
 .pl-wrapper-content-main{width:calc(100% - $pl-content-supplemental-width);margin-left:18.75rem}
