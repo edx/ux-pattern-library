@@ -77,17 +77,17 @@ h6{font-size:.88889rem}
 .hd-3,.hd-4,.hd-5,.hd-6,.hd-7{margin-bottom:.55556rem}
 .hd-3{font-size:1.33333rem;line-height:1.5}
 .hd-4,.hd-5,.hd-6{line-height:1.6}
-.swatch,.swatch-color .color-class.lod{color:#fcfcfc}
+.swatch,.swatch-color .color-class.lod{color:#f9f9f9}
 .hd-4{font-size:1.16667rem}
 .hd-5{font-size:1rem}
 .hd-6{font-size:.88889rem}
 .hd-7{font-size:.77778rem;line-height:1.5}
 .swatch-set{padding-bottom:2.22222rem;border-bottom:.27778rem solid #f2f2f2;margin-bottom:2.22222rem}
-.swatch{display:inline-block;width:8.88889rem;margin:0 .83333rem 1.66667rem 0;border:1px solid #dfdfdf;border-radius:.13889rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#fcfcfc}
+.swatch{display:inline-block;width:8.88889rem;margin:0 .83333rem 1.66667rem 0;border:1px solid #dfdfdf;border-radius:.13889rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#f9f9f9}
 .swatch:active,.swatch:focus,.swatch:hover{-webkit-transform:scale(1.05);transform:scale(1.05);box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.25)}
 .swatch-color{display:block;margin:0 0 .55556rem;padding:3.33333rem .83333rem;text-align:center}
 .swatch-color .color-class{font-size:.88889rem;text-transform:lowercase}
-.swatch-color .color-class.dol{color:#020202}
+.swatch-color .color-class.dol{color:#0c0c0c}
 .swatch-meta{white-space:nowrap;font-size:.77778rem;font-weight:400;text-align:center;color:#4c4c4c}
 .swatch-meta .color-rgb{display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
 .brand-primary.base{background:#00a2e3}
@@ -137,13 +137,12 @@ h6{font-size:.88889rem}
 .grayscale.light{background:#bfbfbf}
 .grayscale.x-light{background:#dfdfdf}
 .grayscale.xx-light{background:#f2f2f2}
-.grayscale.white{background:#fcfcfc}
+.grayscale.white{background:#f9f9f9}
 .grayscale.white-t{background:#fff}
 .grayscale.mid-dark{background:#4c4c4c}
 .grayscale.dark{background:#3f3f3f}
 .grayscale.x-dark{background:#1f1f1f}
-.grayscale.xx-dark{background:#0c0c0c}
-.grayscale.black{background:#020202}
+.grayscale.black,.grayscale.xx-dark{background:#0c0c0c}
 .grayscale.black-t{background:#000}
 .grayscale.trans{background:rgba(127,127,127,.5)}
 .grayscale.mid-trans{background:rgba(127,127,127,.75)}
