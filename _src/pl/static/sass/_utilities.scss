@@ -29,8 +29,12 @@ $brand-secondary:       rgb(184, 57, 104); // edX pink
 // colors
 $color-base-primary:    $brand-primary;
 $color-base-secondary:  $brand-secondary;
-$color-gray: rgb(123, 123, 123);
-$color-transparent: rgba(0, 0, 0, 0);
+$color-gray:            rgb(123, 123, 123);
+$color-transparent:     rgba(0, 0, 0, 0);
+
+$color-error:           rgba(220, 66, 55, 1);
+$color-warning:         rgba(252, 192, 38, 1);
+$color-success:         rgba(99, 186, 89, 1);
 
 // colors - palettes
 $palettes: (
@@ -73,17 +77,47 @@ $palettes: (
         x-light:    tint($color-gray, 80%),
         xx-light:   tint($color-gray, 90%),
         white:      tint($color-gray, 98%),
-        white-t:    tint($color-gray, 100%),
+        white-t:    rgb(255, 255, 255),
         mid-dark:   shade($color-gray, 40%),
         dark:       shade($color-gray, 60%),
         x-dark:     shade($color-gray, 80%),
         xx-dark:    shade($color-gray, 90%),
         black:      shade($color-gray, 98%),
-        black-t:    shade($color-gray, 100%),
+        black-t:    rgb(0, 0, 0),
         mid-trans:  transparentize($color-gray, 0.25),
         trans:      transparentize($color-gray, 0.50),
         x-trans:    transparentize($color-gray, 0.75),
         xx-trans:   transparentize($color-gray, 0.95)
+    ),
+    success: (
+        base:       $color-success,
+        light:      tint($color-success, 25%),
+        x-light:    tint($color-success, 55%),
+        dark:       shade($color-success, 25%),
+        x-dark:     shade($color-success, 55%),
+        sat:        saturate($color-success, 20%),
+        trans:      transparentize($color-success, 0.50),
+        x-trans:    transparentize($color-success, 0.75),
+    ),
+    warning: (
+        base:       $color-warning,
+        light:      tint($color-warning, 25%),
+        x-light:    tint($color-warning, 55%),
+        dark:       shade($color-warning, 25%),
+        x-dark:     shade($color-warning, 55%),
+        sat:        saturate($color-warning, 20%),
+        trans:      transparentize($color-warning, 0.50),
+        x-trans:    transparentize($color-warning, 0.75),
+    ),
+    error: (
+        base:       $color-error,
+        light:      tint($color-error, 25%),
+        x-light:    tint($color-error, 55%),
+        dark:       shade($color-error, 25%),
+        x-dark:     shade($color-error, 55%),
+        sat:        saturate($color-error, 20%),
+        trans:      transparentize($color-error, 0.50),
+        x-trans:    transparentize($color-error, 0.75),
     )
 );
 

@@ -68,9 +68,9 @@
 }
 
 .swatch-meta {
+    padding: spacing-vertical(xx-small) spacing-horizontal(small);
     white-space: nowrap;
     font-size: font-size(small);
-    font-weight: font-weight(normal);
     text-align: center;
     color: palette(grayscale, mid-dark);
 
