@@ -318,3 +318,9 @@ $code-font-family: $font-stack-monospace;
     font-size: font-size(base);
     line-height: line-height(large);
 }
+
+// pl-based color palette fail mark
+%a11y-test-fail {
+    background-color: yellow !important;
+    color: black !important;
+}

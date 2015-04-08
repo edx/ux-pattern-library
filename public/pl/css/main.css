@@ -17,6 +17,7 @@ img,legend{border:0}
 .pl-element-meta,.pl-nav .nav-list,.pl-tab-labels{list-style:none;text-indent:0;margin:0;padding:0}
 .pl-heading{margin:0 0 1.25rem;font-size:1rem;line-height:1.25}
 .pl-element-info{font-size:1rem;line-height:1.48}
+.a11y-color-fail{background-color:#ff0!important;color:#000!important}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}

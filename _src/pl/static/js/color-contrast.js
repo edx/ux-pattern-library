@@ -13,8 +13,7 @@ $(function() {
     var AccessibilityColorContrast = {
 
         vars: {
-            bgHilite:       'yellow', // Background color for highlights
-            fgHilite:       'black' // Foreground color for highlights
+            failClass:      'a11y-color-fail' // Class for failed palettes
         },
 
         init: function() {
@@ -37,21 +36,6 @@ $(function() {
             return hex;
         },
 
-        // rgbToHex: function(color) {
-        //     var parts = color.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/),
-        //         hex;
-
-        //     delete(parts[0]);
-
-        //     for (var i = 1; i <= 3; ++i) {
-        //         parts[i] = parseInt(parts[i]).toString(16);
-        //         if (parts[i].length == 1) parts[i] = '0' + parts[i];
-        //     }
-
-        //     hex = parts.join('');
-        //     return hex;
-        // },
-
         checkContrast: function() {
             var that = this,
                 bg, fg;
@@ -60,14 +44,6 @@ $(function() {
 
                 bg = that.getL( that.rgbaToHex( $(this).find('.swatch-color').css('backgroundColor') ) );
                 fg = that.getL( that.rgbaToHex( $(this).find('.color-class').css('color') ) );
-
-                // console.log('BG: ' + $(this).find('.swatch-color').css('backgroundColor'));
-                // console.log('BG rgbaToHex: ' + that.rgbaToHex($(this).find('.swatch-color').css('backgroundColor')));
-                // console.log('BG getL: ' + bg);
-
-                // console.log('FG: ' + $(this).find('.color-class').css('color'));
-                // console.log('FG rgbaToHex: ' + that.rgbaToHex($(this).find('.color-class').css('color')));
-                // console.log('FG getL: ' + fg);
 
                 var ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05),
                     ratios = [4.5, 3]; // 4.5 normal text AA, 3 large text AA
@@ -162,8 +138,7 @@ $(function() {
 
             $(swatch)
                 .find($('.swatch-meta'))
-                    .css('backgroundColor', that.vars.bgHilite)
-                    .css('color', that.vars.fgHilite);
+                    .addClass(that.vars.failClass);
         }
 
     };

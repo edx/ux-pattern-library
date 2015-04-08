@@ -364,3 +364,8 @@
         font-family: $code-font-family;
     }
 }
+
+// a11y test fail
+.a11y-color-fail {
+    @extend %a11y-test-fail;
+}
