@@ -10,7 +10,8 @@ gulp.task('pl_scripts', ['pl_scripts-lint'], function() {
             // setup script sequence
             './_src/pl/vendor/jquery/jquery-2.1.3.min.js',
             './_src/pl/vendor/jquery/jquery.smooth-scroll.js',
-            config.pl_src + '/ui.js'
+            config.pl_src + '/ui.js',
+            config.pl_src + '/color-contrast.js'
         ])
         .pipe(concat('main.js'))
         .pipe(uglify())
