@@ -180,3 +180,44 @@ h6{font-size:.88889rem}
 .grayscale-warm.mid-trans{background:rgba(79,74,73,.75)}
 .grayscale-warm.x-trans{background:rgba(79,74,73,.25)}
 .grayscale-warm.xx-trans{background:rgba(79,74,73,.05)}
+.btn{transition:color .1s ease-in-out 0s,border-color .1s ease-in-out 0s,background .1s ease-in-out 0s,box-shadow .1s ease-in-out 0s;display:inline-block;border-style:solid;border-radius:3px;border-width:1px}
+.btn.block{display:block;width:100%}
+.btn-base{font-size:1rem;padding:.74074rem 1.38889rem}
+.btn-large{font-size:1.16667rem;padding:1.11111rem 1.66667rem}
+.btn-small{font-size:.77778rem;padding:.55556rem .74074rem}
+.btn-default{background:#f9f9f9;border-color:#0091cc;color:#0091cc}
+.btn-default.is-focused,.btn-default.is-hovered,.btn-default:focus,.btn-default:hover{background:#0091cc;color:#f9f9f9}
+.btn-default.is-active,.btn-default.is-pressed,.btn-default:active{background:#0079aa;border-color:#0079aa}
+.btn-default.is-disabled,.btn-default:disabled{background:#f9f9f9;border-color:#dfdfdf;color:#7f7f7f}
+.btn-default-alt{background:0 0;border-color:#607d8b;color:#607d8b}
+.btn-default-alt.is-focused,.btn-default-alt.is-hovered,.btn-default-alt:focus,.btn-default-alt:hover{background:#0091cc;border-color:#0091cc;color:#f9f9f9}
+.btn-default-alt.is-active,.btn-default-alt.is-pressed,.btn-default-alt:active{background:#0079aa;border-color:#0079aa}
+.btn-default-alt.is-disabled,.btn-default-alt:disabled{background:0 0;border-color:#d7dee2;color:#9fb1b9}
+.btn-primary{background:#0091cc;border-color:#0091cc;color:#f9f9f9}
+.btn-primary.is-focused,.btn-primary.is-hovered,.btn-primary:focus,.btn-primary:hover{background:#00a2e3;border-color:#00a2e3}
+.btn-primary.is-active,.btn-primary.is-pressed,.btn-primary:active{background:#0091cc;border-color:#0091cc}
+.btn-primary.is-disabled,.btn-primary:disabled{background:#dfdfdf;border-color:#dfdfdf;color:#7f7f7f}
+.btn-secondary{background:0 0;border-color:transparent;color:#00a2e3}
+.btn-secondary.is-focused,.btn-secondary.is-hovered,.btn-secondary:focus,.btn-secondary:hover{border-color:rgba(96,125,139,.5)}
+.btn-secondary.is-active,.btn-secondary.is-pressed,.btn-secondary:active{border-color:#0079aa;color:#0091cc}
+.btn-secondary.is-disabled,.btn-secondary:disabled{border-color:#dfdfdf;color:#b2b2b2}
+.btn-secondary-alt{background:0 0;border-color:transparent;color:#607d8b}
+.btn-secondary-alt.is-focused,.btn-secondary-alt.is-hovered,.btn-secondary-alt:focus,.btn-secondary-alt:hover{background:#607d8b;border-color:#607d8b;color:#f9f9f9}
+.btn-secondary-alt.is-active,.btn-secondary-alt.is-pressed,.btn-secondary-alt:active{background:#0079aa;border-color:#0079aa}
+.btn-secondary-alt.is-disabled,.btn-secondary-alt:disabled{border-color:#dfdfdf;color:#b2b2b2}
+.btn-link{background:0 0;border-color:transparent;color:#0091cc}
+.btn-link.is-focused,.btn-link.is-hovered,.btn-link:focus,.btn-link:hover{color:#00a2e3;text-decoration:underline}
+.btn-link.is-active,.btn-link.is-pressed,.btn-link:active{color:#0079aa}
+.btn-link.is-disabled,.btn-link:disabled{display:none;color:#b2b2b2;text-decoration:none}
+.btn-elevated{background:#0091cc;box-shadow:inset 0 -3px 0 0 #0079aa;border-color:#0079aa;color:#f9f9f9}
+.btn-elevated.is-focused,.btn-elevated.is-hovered,.btn-elevated:focus,.btn-elevated:hover{background:#00a2e3;box-shadow:inset 0 -3px 0 0 #0091cc}
+.btn-elevated.is-active,.btn-elevated.is-pressed,.btn-elevated:active{background:#0079aa;box-shadow:inset 0 3px 0 0 #004866}
+.btn-elevated.is-disabled,.btn-elevated:disabled{background:#dfdfdf;border-color:#dfdfdf;box-shadow:inset 0 -1px 0 #b2b2b2;color:#7f7f7f}
+.btn-combo{border-radius:0}
+.btn-combo:first-of-type{border-top-left-radius:3px;border-bottom-left-radius:3px}
+.btn-combo:last-of-type{border-top-right-radius:3px;border-bottom-right-radius:3px}
+.btn-overlay{background:0 0;border-color:#f9f9f9;color:#f9f9f9;font-weight:600}
+.btn-overlay.is-focused,.btn-overlay.is-hovered,.btn-overlay:focus,.btn-overlay:hover{background:#f9f9f9;color:#0091cc}
+.btn-overlay.is-active,.btn-overlay.is-pressed,.btn-overlay:active{color:#004866}
+.btn-overlay.is-disabled,.btn-overlay:disabled{border-color:#dfdfdf;color:#dfdfdf}
+.btn-overlay.is-disabled:hover,.btn-overlay:disabled:hover{background:0 0;border-color:#dfdfdf;color:#dfdfdf}
