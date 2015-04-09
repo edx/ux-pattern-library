@@ -310,6 +310,55 @@ $code-font-family: $font-stack-monospace;
 // ------------------------------
 // #HELPERS
 // ------------------------------
+%state-disabled {
+    pointer-events: none;
+    outline: none;
+    cursor: default;
+}
+
+// presentational wrapper
+%wrapper {
+    @include clearfix();
+    width: 100%;
+}
+
+// remove spacing from first/last children
+%clear-first-child {
+
+    &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+%clear-last-child {
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+// accessibility
+%a11y-hide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+%a11y-hide-image-text {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
 // add UI cue for non-native controls
 %fake-link {
   cursor: pointer;
@@ -345,6 +394,27 @@ $code-font-family: $font-stack-monospace;
     @extend %no-list;
     margin: 0;
     padding: 0;
+}
+
+%list-unstyled {
+    @extend %reset-lists;
+
+    li,
+    dt,
+    dd {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+%list-inline {
+    @extend %list-unstyled;
+
+    li,
+    dt,
+    dd {
+        display: inline-block;
+    }
 }
 
 // pl-based reset - headings
