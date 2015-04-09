@@ -11,6 +11,19 @@
 // #CONTROLS
 // ------------------------------
 
+// tab panels and examples
+.example-set {
+    @extend %clear-last-child;
+    padding-bottom: spacing-v(mid-large);
+    border-bottom: spacing-v(xx-small) solid palette(grayscale, xx-light);
+    margin-bottom: spacing-v(mid-large);
+
+    .button-overlay-demo {
+        padding: spacing-v(mid-large) spacing-h(mid-large);
+        background: palette(grayscale, base);
+    }
+}
+
 // ------------------------------
 // #HEADER
 // ------------------------------
@@ -392,6 +405,8 @@
 // ------------------------------
 // #SPECIFIC ELEMENTS
 // ------------------------------
+
+// color swatches
 .pl-element-colors {
 
     .example-set {
@@ -412,6 +427,15 @@
         }
     }
 }
+
+// buttons
+.pl-element-buttons {
+
+    .example-set {
+        @include row();
+    }
+}
+
 
 // ------------------------------
 // #SYSTEM FEEDBACK
