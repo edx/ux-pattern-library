@@ -122,3 +122,4 @@ body,html{height:100%;color:#181818}
 .pl.view-index .pl-wrapper-link-top{text-align:center}
 .pl.view-index .pl-link-top{display:inline-block;padding:.625rem}
 .pl.view-index .pl-link-top .pl-icon{font-size:2rem;font-weight:600}
+.example-set{padding-bottom:spacing-vertical(base);border-bottom:spacing-vertical(xx-small)solid #f1f1f1;margin-bottom:spacing-vertical(base)}

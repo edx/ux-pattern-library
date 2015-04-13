@@ -15,7 +15,6 @@
 @font-face{font-family:'Open Sans';font-style:italic;font-weight:700;src:url(../fonts/OpenSans/OpenSans-BoldItalic-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-BoldItalic-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-BoldItalic-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-BoldItalic-webfont.svg#Open Sans")format("svg")}
 [class^=wrapper]{width:100%}
 [class^=wrapper]::after{clear:both;content:"";display:table}
-.swatch-set:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
 .sr-only{clip:rect(0 0 0 0);height:1px;margin:-1px;position:absolute;width:1px}
 .bg-replace{text-indent:100%;white-space:nowrap}
 pre,textarea{overflow:auto}
@@ -82,7 +81,6 @@ h6{font-size:.88889rem}
 .hd-5{font-size:1rem}
 .hd-6{font-size:.88889rem}
 .hd-7{font-size:.77778rem;line-height:1.5}
-.swatch-set{padding-bottom:2.22222rem;border-bottom:.27778rem solid #f2f2f2;margin-bottom:2.22222rem}
 .swatch{display:inline-block;width:8.88889rem;margin:0 .83333rem 1.66667rem 0;border:1px solid #dfdfdf;border-radius:.13889rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#f9f9f9}
 .swatch:active,.swatch:focus,.swatch:hover{-webkit-transform:scale(1.05);transform:scale(1.05);box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.25)}
 .swatch-color{display:block;margin:0 0 .55556rem;padding:3.33333rem .83333rem;text-align:center}
