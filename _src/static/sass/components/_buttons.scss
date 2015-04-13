@@ -22,21 +22,6 @@
 // ----------------------------
 
 // ----------------------------
-// #LAYOUT
-// ----------------------------
-.example-set {
-    @extend %clear-last-child;
-    padding-bottom: spacing-vertical(base);
-    border-bottom: spacing-vertical(xx-small) solid palette(grayscale, xx-light);
-    margin-bottom: spacing-vertical(base);
-
-    .button-overlay-demo {
-        padding: 2rem;
-        background: palette(grayscale, base);
-    }
-}
-
-// ----------------------------
 // #GLOBALS
 // ----------------------------
 .btn {
