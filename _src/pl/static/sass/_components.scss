@@ -14,18 +14,13 @@
 // ------------------------------
 // #HEADER
 // ------------------------------
-.pl-header-site {
-    margin: spacing-v(large) spacing-h(base) spacing-v(base) spacing-h(base);
-}
-
 .pl-header-site-title {
     display: inline-block;
     vertical-align: middle;
-    margin: 0;
-}
 
-.pl-header-site-title {
-    margin-bottom: spacing-v(base);
+    @include media($bp-large) {
+        margin: 0 0 spacing-v(base) 0;
+    }
 
     .title-name, .title-description {
         display: block;
@@ -200,7 +195,7 @@
 .pl-tab-content {
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
-    @include pad(spacing-v(base) spacing-h(base));
+    @include pad(spacing-v(base) spacing-h(mid-small));
     background: palette(grayscale, white);
     box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
 
@@ -209,6 +204,10 @@
     &:active,
     &:focus {
         box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+    }
+
+    @include media($bp-medium) {
+        @include pad(spacing-v(mid-large) spacing-h(base));
     }
 }
 
@@ -248,10 +247,6 @@
 // ------------------------------
 // #ELEMENTS
 // ------------------------------
-.pl-wrapper-element {
-    @include outer-container();
-}
-
 .pl-element {
     @include transition(all 0.25s ease-in-out);
     @include pad(spacing-v(x-large) spacing-h(base));
@@ -271,6 +266,10 @@
     .pl-wrapper-element:last-child & {
         border-bottom: 0;
     }
+
+    .example-set-hd {
+        margin-bottom: spacing-v(mid-small);
+    }
 }
 
 .pl-element-header {
@@ -281,33 +280,57 @@
 }
 
 .pl-element-title {
-    @include span-columns(4);
     margin-bottom: spacing-v(x-small);
     color: $heading-color;
     font-size: font-size(large);
     font-weight: font-weight(semi-bold);
+
+    @include media($bp-medium) {
+        @include span-columns(2);
+        margin-bottom: 0;
+    }
+
+    @include media($bp-large) {
+        @include span-columns(4);
+    }
 }
 
 .pl-element-meta {
-    @include span-columns(4);
-    @include omega();
     @extend %reset-lists;
     color: palette(grayscale, mid-light);
     font-size: font-size(small);
-    text-align: right;
+
+    @include media($bp-medium) {
+        @include span-columns(2);
+        @include omega();
+        text-align: right;
+    }
+
+    @include media($bp-large) {
+        @include span-columns(4);
+    }
 
     .meta {
-       display: inline-block;
-       vertical-align: middle;
-       margin-right: spacing-h(xx-small);
+        display: block;
 
        &:last-child {
-        margin-right: 0;
+            margin-right: 0;
+       }
+
+       @include media($bp-medium) {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: spacing-h(xx-small);
        }
     }
 
     .meta-updated {
         margin-right: spacing-h(small);
+        margin-bottom: spacing-v(x-small);
+
+        @include media($bp-medium) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -362,6 +385,31 @@
 
     code {
         font-family: $code-font-family;
+    }
+}
+
+
+// ------------------------------
+// #SPECIFIC ELEMENTS
+// ------------------------------
+.pl-element-colors {
+
+    .example-set {
+        @include row();
+    }
+
+    .swatch {
+        @include fill-parent();
+
+        @include media($bp-medium) {
+            @include span-columns(1);
+            @include omega(4n);
+        }
+
+        @include media($bp-large) {
+            @include span-columns(2);
+            @include omega(4n);
+        }
     }
 }
 

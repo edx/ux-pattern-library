@@ -8,33 +8,39 @@
 // ------------------------------
 // grid- customizations
 $pl-content-supplemental-width: rem(300); // width of supplemental content sidebar
-$pl-tab-label-height: rem(2); // height of tab labels
+$pl-tab-label-height:           rem(2); // height of tab labels
 
 // grid - settings
-$max-width: calc(100% - $pl-content-supplemental-width); // override neat's default
-$grid-columns: 8;
-$column: rem(20);
-$gutter: rem(20);
-$visual-grid: true;
-$visual-grid-color: palette(primary, light);
+$max-width:                     calc(100% - $pl-content-supplemental-width); // override neat's default
+$grid-columns:                  8;
+$column:                        rem(20);
+$gutter:                        rem(20);
+$visual-grid:                   true;
+$visual-grid-color:             palette(primary, light);
+
+// grid - breakpoints
+$bp-small:                      new-breakpoint(320px, 2);
+$bp-medium:                     new-breakpoint(800px, 4);
+$bp-large:                      new-breakpoint(1000px, 8);
+$bp-huge:                       new-breakpoint(1200px, 8);
 
 // grid - baseline
-$baseline-v: rem(20);
-$baseline-h: rem(40);
+$baseline-v:                    rem(20);
+$baseline-h:                    rem(40);
 
 // brand/visuals
-$brand-primary:         rgb(0, 160, 227);  // edX blue
-$brand-secondary:       rgb(184, 57, 104); // edX pink
+$brand-primary:                 rgb(0, 160, 227);  // edX blue
+$brand-secondary:               rgb(184, 57, 104); // edX pink
 
 // colors
-$color-base-primary:    $brand-primary;
-$color-base-secondary:  $brand-secondary;
-$color-gray:            rgb(123, 123, 123);
-$color-transparent:     rgba(0, 0, 0, 0);
+$color-base-primary:            $brand-primary;
+$color-base-secondary:          $brand-secondary;
+$color-gray:                    rgb(123, 123, 123);
+$color-transparent:             rgba(0, 0, 0, 0);
 
-$color-error:           rgba(220, 66, 55, 1);
-$color-warning:         rgba(252, 192, 38, 1);
-$color-success:         rgba(99, 186, 89, 1);
+$color-error:                   rgba(220, 66, 55, 1);
+$color-warning:                 rgba(252, 192, 38, 1);
+$color-success:                 rgba(99, 186, 89, 1);
 
 // colors - palettes
 $palettes: (
@@ -188,25 +194,35 @@ $z-depths: (
     very-front:     1000
 );
 
+// commonvertical spacing
 $spacing-v: (
-    base:       $baseline-v,
-    mid-small:  ($baseline-v*0.75),
-    small:      ($baseline-v/2),
-    x-small:    ($baseline-v/4),
-    mid-large:  ($baseline-v*1.5),
-    large:      ($baseline-v*2),
-    x-large:    ($baseline-v*4)
+    base:           $baseline-v,
+    mid-small:      ($baseline-v*0.75),
+    small:          ($baseline-v/2),
+    x-small:        ($baseline-v/4),
+    mid-large:      ($baseline-v*1.5),
+    large:          ($baseline-v*2),
+    x-large:        ($baseline-v*4)
 );
 
+// common horizontal spacing
 $spacing-h: (
-    base:       $baseline-h,
-    mid-small:  ($baseline-h*0.75),
-    small:      ($baseline-h/2),
-    x-small:    ($baseline-h/4),
-    xx-small:   ($baseline-h/8),
-    mid-large:  ($baseline-h*1.5),
-    large:      ($baseline-h*2),
-    x-large:    ($baseline-h*4)
+    base:           $baseline-h,
+    mid-small:      ($baseline-h*0.75),
+    small:          ($baseline-h/2),
+    x-small:        ($baseline-h/4),
+    xx-small:       ($baseline-h/8),
+    mid-large:      ($baseline-h*1.5),
+    large:          ($baseline-h*2),
+    x-large:        ($baseline-h*4)
+);
+
+// responsive breakpoints
+$breakpoints: (
+    small:          320px,
+    medium:         800px,
+    large:          1000px,
+    huge:           1200px
 );
 
 // config - headings
