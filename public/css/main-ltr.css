@@ -61,7 +61,7 @@ table{border-collapse:collapse;border-spacing:0}
 audio,canvas,iframe,img,svg,video{vertical-align:middle}
 fieldset{margin:0}
 figure{display:inline-block;margin:0}
-figure img{display:block}
+.swatch-color,figure img{display:block}
 .img,picture{max-width:100%;margin:0}
 pre{font-family:'Bitstream Vera Sans Mono',Consolas,Courier,monospace;margin:0}
 .hd-1,.hd-2{margin-bottom:1.11111rem}
@@ -81,9 +81,9 @@ h6{font-size:.88889rem}
 .hd-5{font-size:1rem}
 .hd-6{font-size:.88889rem}
 .hd-7{font-size:.77778rem;line-height:1.5}
-.swatch{display:inline-block;width:8.88889rem;margin:0 .83333rem 1.66667rem 0;border:1px solid #dfdfdf;border-radius:.13889rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#f9f9f9}
+.swatch{border:1px solid #dfdfdf;border-radius:.13889rem;margin-bottom:1.66667rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#f9f9f9}
 .swatch:active,.swatch:focus,.swatch:hover{-webkit-transform:scale(1.05);transform:scale(1.05);box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.25)}
-.swatch-color{display:block;margin:0 0 .55556rem;padding:3.33333rem .83333rem;text-align:center}
+.swatch-color{margin-bottom:.55556rem;padding:3.33333rem .83333rem;text-align:center}
 .swatch-color .color-class{font-size:.88889rem;text-transform:lowercase}
 .swatch-color .color-class.dol{color:#0c0c0c}
 .swatch-meta{padding:.27778rem .55556rem;white-space:nowrap;font-size:.77778rem;text-align:center;color:#4c4c4c}
