@@ -99,8 +99,8 @@
     &:active,
     &.is-pressed,
     &.is-active {
-        background: palette(primary, dark);
-        border-color: palette(primary, dark);
+        background: palette(primary, mid-dark);
+        border-color: palette(primary, mid-dark);
     }
 
     // STATE: is disabled
@@ -135,8 +135,8 @@
     &:active,
     &.is-pressed,
     &.is-active {
-        background: palette(primary, dark);
-        border-color: palette(primary, dark);
+        background: palette(primary, mid-dark);
+        border-color: palette(primary, mid-dark);
     }
 
     // STATE: is disabled
@@ -204,7 +204,7 @@
     &:active,
     &.is-pressed,
     &.is-active {
-        border-color: palette(primary, dark);
+        border-color: palette(primary, base);
         color: palette(primary, base);
     }
 
@@ -279,9 +279,9 @@
 // #ELEVATED
 // ----------------------------
 .btn-elevated {
-    background: palette(primary, mid-dark);
+    background: palette(primary, base);
     box-shadow: inset 0 0 -$buttons-elevated-shadow 0 0 palette(primary, dark);
-    border-color: palette(primary, dark);
+    border-color: palette(primary, base);
     color: palette(grayscale, white);
 
     // STATE: hover and focus
@@ -289,7 +289,7 @@
     &.is-hovered,
     &:focus,
     &.is-focused {
-        background: palette(primary, base);
+        background: palette(primary, mid-light);
         box-shadow: inset 0 0 -$buttons-elevated-shadow 0 0 palette(primary, mid-dark);
     }
 
@@ -297,7 +297,7 @@
     &:active,
     &.is-pressed,
     &.is-active {
-        background: palette(primary, dark);
+        background: palette(primary, mid-dark);
         box-shadow: inset 0 $buttons-elevated-shadow 0 0 palette(primary, x-dark);
     }
 
@@ -359,14 +359,14 @@
     &:focus,
     &.is-focused {
         background: palette(grayscale, white);
-        color: palette(primary, mid-dark);
+        color: palette(primary, base);
     }
 
     // STATE: is pressed or active
     &:active,
     &.is-pressed,
     &.is-active {
-        color: palette(primary, x-dark);
+        color: palette(primary, mid-dark);
     }
 
     // STATE: is disabled

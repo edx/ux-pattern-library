@@ -191,11 +191,11 @@ h6{font-size:.88889rem}
 .btn-small{font-size:.77778rem;padding:.55556rem}
 .btn-default{background:#fbfbfb;border-color:#007aba;color:#007aba}
 .btn-default.is-focused,.btn-default.is-hovered,.btn-default:focus,.btn-default:hover{background:#007aba;color:#fbfbfb}
-.btn-default.is-active,.btn-default.is-pressed,.btn-default:active{background:#005b8b;border-color:#005b8b}
+.btn-default.is-active,.btn-default.is-pressed,.btn-default:active{background:#00679e;border-color:#00679e}
 .btn-default.is-disabled,.btn-default:disabled{background:#fbfbfb;border-color:#dfdfdf;color:#7f7f7f}
 .btn-default-alt{background:0 0;border-color:#607d8b;color:#607d8b}
 .btn-default-alt.is-focused,.btn-default-alt.is-hovered,.btn-default-alt:focus,.btn-default-alt:hover{background:#007aba;border-color:#007aba;color:#fbfbfb}
-.btn-default-alt.is-active,.btn-default-alt.is-pressed,.btn-default-alt:active{background:#005b8b;border-color:#005b8b}
+.btn-default-alt.is-active,.btn-default-alt.is-pressed,.btn-default-alt:active{background:#00679e;border-color:#00679e}
 .btn-default-alt.is-disabled,.btn-default-alt:disabled{background:0 0;border-color:#d7dee2;color:#9fb1b9}
 .btn-primary{background:#007aba;border-color:#007aba;color:#fbfbfb}
 .btn-primary.is-focused,.btn-primary.is-hovered,.btn-primary:focus,.btn-primary:hover{background:#268dc4;border-color:#268dc4}
@@ -203,7 +203,7 @@ h6{font-size:.88889rem}
 .btn-primary.is-disabled,.btn-primary:disabled{background:#dfdfdf;border-color:#dfdfdf;color:#7f7f7f}
 .btn-secondary{background:0 0;border-color:transparent;color:#007aba}
 .btn-secondary.is-focused,.btn-secondary.is-hovered,.btn-secondary:focus,.btn-secondary:hover{border-color:rgba(96,125,139,.5)}
-.btn-secondary.is-active,.btn-secondary.is-pressed,.btn-secondary:active{border-color:#005b8b;color:#007aba}
+.btn-secondary.is-active,.btn-secondary.is-pressed,.btn-secondary:active{border-color:#007aba;color:#007aba}
 .btn-secondary.is-disabled,.btn-secondary:disabled{border-color:#dfdfdf;color:#b2b2b2}
 .btn-secondary-alt{background:0 0;border-color:transparent;color:#56707d}
 .btn-secondary-alt.is-focused,.btn-secondary-alt.is-hovered,.btn-secondary-alt:focus,.btn-secondary-alt:hover{background:#56707d;border-color:#56707d;color:#fbfbfb}
@@ -211,14 +211,14 @@ h6{font-size:.88889rem}
 .btn-secondary-alt.is-disabled,.btn-secondary-alt:disabled{border-color:#dfdfdf;color:#b2b2b2}
 .btn-secondary-alt.is-disabled.is-focused,.btn-secondary-alt.is-disabled.is-hovered,.btn-secondary-alt.is-disabled:focus,.btn-secondary-alt.is-disabled:hover,.btn-secondary-alt:disabled.is-focused,.btn-secondary-alt:disabled.is-hovered,.btn-secondary-alt:disabled:focus,.btn-secondary-alt:disabled:hover{background:0 0;border-color:#dfdfdf;color:#b2b2b2}
 .btn-link{border-color:transparent;padding:1px;background:0 0}
-.btn-elevated{background:#00679e;box-shadow:inset 0 -3px 0 0 #005b8b;border-color:#005b8b;color:#fbfbfb}
-.btn-elevated.is-focused,.btn-elevated.is-hovered,.btn-elevated:focus,.btn-elevated:hover{background:#007aba;box-shadow:inset 0 -3px 0 0 #00679e}
-.btn-elevated.is-active,.btn-elevated.is-pressed,.btn-elevated:active{background:#005b8b;box-shadow:inset 0 3px 0 0 #003653}
+.btn-elevated{background:#007aba;box-shadow:inset 0 -3px 0 0 #005b8b;border-color:#007aba;color:#fbfbfb}
+.btn-elevated.is-focused,.btn-elevated.is-hovered,.btn-elevated:focus,.btn-elevated:hover{background:#268dc4;box-shadow:inset 0 -3px 0 0 #00679e}
+.btn-elevated.is-active,.btn-elevated.is-pressed,.btn-elevated:active{background:#00679e;box-shadow:inset 0 3px 0 0 #003653}
 .btn-elevated.is-disabled,.btn-elevated:disabled{background:#dfdfdf;border-color:#dfdfdf;box-shadow:inset 0 -1px 0 #b2b2b2;color:#7f7f7f}
 .btn-combo:first-of-type{border-top-left-radius:4px;border-bottom-left-radius:4px}
 .btn-combo:last-of-type{border-top-right-radius:4px;border-bottom-right-radius:4px}
 .btn-overlay{background:0 0;border-color:#fbfbfb;color:#fbfbfb;font-weight:600}
-.btn-overlay.is-focused,.btn-overlay.is-hovered,.btn-overlay:focus,.btn-overlay:hover{background:#fbfbfb;color:#00679e}
-.btn-overlay.is-active,.btn-overlay.is-pressed,.btn-overlay:active{color:#003653}
+.btn-overlay.is-focused,.btn-overlay.is-hovered,.btn-overlay:focus,.btn-overlay:hover{background:#fbfbfb;color:#007aba}
+.btn-overlay.is-active,.btn-overlay.is-pressed,.btn-overlay:active{color:#00679e}
 .btn-overlay.is-disabled,.btn-overlay:disabled{border-color:#dfdfdf;color:#dfdfdf}
 .btn-overlay.is-disabled:hover,.btn-overlay:disabled:hover{background:0 0;border-color:#dfdfdf;color:#dfdfdf}
