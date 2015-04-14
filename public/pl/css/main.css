@@ -78,7 +78,7 @@ body,html{height:100%;color:#181818}
 .pl-nav .nav-list-item:last-child .pl-link{border-bottom:0}
 .pl-nav .nav-list-item.is-current .pl-link:before{display:inline-block}
 .pl-nav-internal .pl-link:before{transition:opacity .25s ease-in-out;height:.3125rem;width:.3125rem;position:absolute;top:1.125rem;left:1.25rem;content:'';border-radius:100%;opacity:0;background:#3fb7ea}
-.pl-element-colors .example-set::after,.pl-element-header::after,.pl-tab-labels::after,.pl-wrapper-element::after{content:""}
+.pl-element-buttons .example-set::after,.pl-element-colors .example-set::after,.pl-element-header::after,.pl-tab-labels::after,.pl-wrapper-element::after{content:""}
 .pl-nav-internal .pl-link.is-current{color:#3fb7ea;background:#181818}
 .pl-nav-internal .pl-link.is-current:before{opacity:1}
 .pl-nav-external .pl-link .pl-icon{transition:opacity .25s ease-in-out;display:inline-block;vertical-align:baseline;margin-right:.3125rem;font-size:1.5rem;line-height:0;opacity:.25}
@@ -129,11 +129,13 @@ body,html{height:100%;color:#181818}
 .pl-element-colors .swatch{float:left;display:block;margin-right:7.42297%;width:19.43277%}
 .pl-element-colors .swatch:last-child,.pl-element-colors .swatch:nth-child(4n){margin-right:0}
 .pl-element-colors .swatch:nth-child(4n+1){clear:left}}
-.fail-a11y-color{font-weight:600;background-color:#fde29d;color:#000}
 @media screen and (min-width:1000px){.pl-element-colors .swatch{float:left;display:block;margin-right:3.57866%;width:22.316%}
 .pl-element-colors .swatch:last-child,.pl-element-colors .swatch:nth-child(4n){margin-right:0}
-.pl-element-colors .swatch:nth-child(4n+1){clear:left}
-.pl-wrapper-content-main{width:calc(100% - $pl-content-supplemental-width);margin-left:18.75rem}}
+.pl-element-colors .swatch:nth-child(4n+1){clear:left}}
+.pl-element-buttons .example-set{display:block}
+.pl-element-buttons .example-set::after{clear:both;display:table}
+.fail-a11y-color{font-weight:600;background-color:#fde29d;color:#000}
+@media screen and (min-width:1000px){.pl-wrapper-content-main{width:calc(100% - $pl-content-supplemental-width);margin-left:18.75rem}}
 .pl-wrapper-element{max-width:calc(100% - $pl-content-supplemental-width);margin-left:auto;margin-right:auto}
 .pl-wrapper-element::after{clear:both;display:table}
 .pl-wrapper-content-supplemental{border-right:.25rem solid #181818;background:#313131;color:#e4e4e4;font-size:1rem}

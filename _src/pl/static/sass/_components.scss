@@ -405,6 +405,8 @@
 // ------------------------------
 // #SPECIFIC ELEMENTS
 // ------------------------------
+
+// color swatches
 .pl-element-colors {
 
     .example-set {
@@ -425,6 +427,15 @@
         }
     }
 }
+
+// buttons
+.pl-element-buttons {
+
+    .example-set {
+        @include row();
+    }
+}
+
 
 // ------------------------------
 // #SYSTEM FEEDBACK
