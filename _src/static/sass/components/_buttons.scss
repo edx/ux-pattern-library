@@ -50,7 +50,7 @@
 // ----------------------------
 .btn-base {
     font-size: font-size(mid-large);
-    padding: rem(($baseline/1.5)) rem(($baseline*1.25));
+    padding: spacing-vertical(x-small) spacing-horizontal(mid-small);
 }
 
 
@@ -59,7 +59,7 @@
 // ----------------------------
 .btn-large {
     font-size: font-size(large);
-    padding: rem($baseline) rem(($baseline*1.5));
+    padding: spacing-vertical(small) spacing-horizontal(base);
 }
 
 
@@ -68,7 +68,7 @@
 // ----------------------------
 .btn-small {
     font-size: font-size(small);
-    padding: rem(($baseline/2)) rem(($baseline/1.5));
+    padding: spacing-vertical(x-small) spacing-horizontal(small);
 }
 
 
@@ -242,6 +242,15 @@
     &.is-disabled {
         border-color: palette(grayscale, x-light);
         color: palette(grayscale, mid-light);
+
+        &:hover,
+        &.is-hovered,
+        &:focus,
+        &.is-focused {
+            background: $transparent;
+            border-color: palette(grayscale, x-light);
+            color: palette(grayscale, mid-light);
+        }
     }
 }
 

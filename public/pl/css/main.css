@@ -61,6 +61,8 @@ body,html{height:100%;color:#181818}
 .pl-link:active,.pl-link:focus,.pl-link:hover{border-bottom-color:#00a9fa;color:#00a9fa}
 .pl img,.pl picture{max-width:100%;margin:0}
 .pl pre{margin:0}
+.example-set{padding-bottom:1.875rem;border-bottom:solid #f1f1f1;margin-bottom:1.875rem}
+.example-set .button-overlay-demo{padding:1.875rem 3.75rem;background:#7b7b7b}
 .pl-header-site-title{display:inline-block;vertical-align:middle}
 @media screen and (min-width:1000px){.pl-header-site-title{margin:0 0 1.25rem}}
 .pl-header-site-title .title-description,.pl-header-site-title .title-name{display:block}
@@ -145,4 +147,3 @@ body,html{height:100%;color:#181818}
 .pl.view-index .pl-wrapper-link-top{text-align:center}
 .pl.view-index .pl-link-top{display:inline-block;padding:.625rem}
 .pl.view-index .pl-link-top .pl-icon{font-size:2rem;font-weight:600}
-.example-set{padding-bottom:spacing-vertical(base);border-bottom:spacing-vertical(xx-small)solid #f1f1f1;margin-bottom:spacing-vertical(base)}
