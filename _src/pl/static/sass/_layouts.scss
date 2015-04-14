@@ -11,25 +11,57 @@
 // ------------------------------
 // #LAYOUT
 // ------------------------------
-// view overall
-.pl-wrapper-view {
-    @include outer-container();
-}
-
 // main content
 .pl-wrapper-content-main {
-    width: calc(100% - $pl-content-supplemental-width);
-    margin-left: $pl-content-supplemental-width;
+
+    @include media($bp-large) {
+        width: calc(100% - $pl-content-supplemental-width);
+        margin-left: $pl-content-supplemental-width;
+    }
+}
+
+.pl-wrapper-element {
+    @include outer-container();
 }
 
 // sidebar
 .pl-wrapper-content-supplemental {
-    @include size($pl-content-supplemental-width 100%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-right: rem(4) solid palette(grayscale, x-dark);
     background: palette(grayscale, dark);
     color: palette(grayscale, x-light);
     font-size: font-size(base);
+
+    @include media($bp-large) {
+        @include size($pl-content-supplemental-width 100%);
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-right: rem(4) solid palette(grayscale, x-dark);
+    }
+
+    .pl-header-site {
+        padding: spacing-v(base) spacing-h(base);
+
+        @include media($bp-large) {
+            margin: spacing-v(large) spacing-h(base) spacing-v(base) spacing-h(base);
+            padding: 0;
+        }
+    }
+
+
+    .pl-nav {
+        display: none;
+
+        @include media($bp-large) {
+            display: block;
+        }
+    }
+
+    .pl-footer-site {
+        display: none;
+
+        @include media($bp-large) {
+            display: block;
+        }
+    }
 }

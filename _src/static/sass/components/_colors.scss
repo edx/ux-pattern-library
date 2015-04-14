@@ -11,20 +11,11 @@
 // ----------------------------
 // #SWATCH LAYOUT
 // ----------------------------
-.swatch-set {
-    @extend %clear-last-child;
-    padding-bottom: spacing-vertical(base);
-    border-bottom: spacing-vertical(xx-small) solid palette(grayscale, xx-light);
-    margin-bottom: spacing-vertical(base);
-}
-
 .swatch {
     @include transition(all timing(x-fast) ease-in-out);
-    display: inline-block;
-    width: spacing-vertical(x-large);
-    margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
     border: 1px solid palette(grayscale, x-light);
     border-radius: spacing-horizontal(xx-small);
+    margin-bottom: spacing-vertical(mid-small);
     padding: spacing-vertical(x-small) spacing-horizontal(small);
     box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
     background: palette(grayscale, white);
@@ -39,7 +30,7 @@
 
 .swatch-color {
     display: block;
-    margin: 0 0 spacing-vertical(x-small) 0;
+    margin-bottom: spacing-vertical(x-small);
     padding: spacing-vertical(mid-large) spacing-horizontal(mid-small);
     text-align: center;
 
@@ -68,9 +59,9 @@
 }
 
 .swatch-meta {
+    padding: spacing-vertical(xx-small) spacing-horizontal(small);
     white-space: nowrap;
     font-size: font-size(small);
-    font-weight: font-weight(normal);
     text-align: center;
     color: palette(grayscale, mid-dark);
 

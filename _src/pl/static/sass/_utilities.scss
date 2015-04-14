@@ -8,29 +8,39 @@
 // ------------------------------
 // grid- customizations
 $pl-content-supplemental-width: rem(300); // width of supplemental content sidebar
-$pl-tab-label-height: rem(2); // height of tab labels
+$pl-tab-label-height:           rem(2); // height of tab labels
 
 // grid - settings
-$max-width: calc(100% - $pl-content-supplemental-width); // override neat's default
-$grid-columns: 8;
-$column: rem(20);
-$gutter: rem(20);
-$visual-grid: true;
-$visual-grid-color: palette(primary, light);
+$max-width:                     calc(100% - $pl-content-supplemental-width); // override neat's default
+$grid-columns:                  8;
+$column:                        rem(20);
+$gutter:                        rem(20);
+$visual-grid:                   true;
+$visual-grid-color:             palette(primary, light);
+
+// grid - breakpoints
+$bp-small:                      new-breakpoint(320px, 2);
+$bp-medium:                     new-breakpoint(800px, 4);
+$bp-large:                      new-breakpoint(1000px, 8);
+$bp-huge:                       new-breakpoint(1200px, 8);
 
 // grid - baseline
-$baseline-v: rem(20);
-$baseline-h: rem(40);
+$baseline-v:                    rem(20);
+$baseline-h:                    rem(40);
 
 // brand/visuals
-$brand-primary:         rgb(0, 160, 227);  // edX blue
-$brand-secondary:       rgb(184, 57, 104); // edX pink
+$brand-primary:                 rgb(0, 160, 227);  // edX blue
+$brand-secondary:               rgb(184, 57, 104); // edX pink
 
 // colors
-$color-base-primary:    $brand-primary;
-$color-base-secondary:  $brand-secondary;
-$color-gray: rgb(123, 123, 123);
-$color-transparent: rgba(0, 0, 0, 0);
+$color-base-primary:            $brand-primary;
+$color-base-secondary:          $brand-secondary;
+$color-gray:                    rgb(123, 123, 123);
+$color-transparent:             rgba(0, 0, 0, 0);
+
+$color-error:                   rgba(220, 66, 55, 1);
+$color-warning:                 rgba(252, 192, 38, 1);
+$color-success:                 rgba(99, 186, 89, 1);
 
 // colors - palettes
 $palettes: (
@@ -73,17 +83,47 @@ $palettes: (
         x-light:    tint($color-gray, 80%),
         xx-light:   tint($color-gray, 90%),
         white:      tint($color-gray, 98%),
-        white-t:    tint($color-gray, 100%),
+        white-t:    rgb(255, 255, 255),
         mid-dark:   shade($color-gray, 40%),
         dark:       shade($color-gray, 60%),
         x-dark:     shade($color-gray, 80%),
         xx-dark:    shade($color-gray, 90%),
         black:      shade($color-gray, 98%),
-        black-t:    shade($color-gray, 100%),
+        black-t:    rgb(0, 0, 0),
         mid-trans:  transparentize($color-gray, 0.25),
         trans:      transparentize($color-gray, 0.50),
         x-trans:    transparentize($color-gray, 0.75),
         xx-trans:   transparentize($color-gray, 0.95)
+    ),
+    success: (
+        base:       $color-success,
+        light:      tint($color-success, 25%),
+        x-light:    tint($color-success, 55%),
+        dark:       shade($color-success, 25%),
+        x-dark:     shade($color-success, 55%),
+        sat:        saturate($color-success, 20%),
+        trans:      transparentize($color-success, 0.50),
+        x-trans:    transparentize($color-success, 0.75),
+    ),
+    warning: (
+        base:       $color-warning,
+        light:      tint($color-warning, 25%),
+        x-light:    tint($color-warning, 55%),
+        dark:       shade($color-warning, 25%),
+        x-dark:     shade($color-warning, 55%),
+        sat:        saturate($color-warning, 20%),
+        trans:      transparentize($color-warning, 0.50),
+        x-trans:    transparentize($color-warning, 0.75),
+    ),
+    error: (
+        base:       $color-error,
+        light:      tint($color-error, 25%),
+        x-light:    tint($color-error, 55%),
+        dark:       shade($color-error, 25%),
+        x-dark:     shade($color-error, 55%),
+        sat:        saturate($color-error, 20%),
+        trans:      transparentize($color-error, 0.50),
+        x-trans:    transparentize($color-error, 0.75),
     )
 );
 
@@ -154,25 +194,35 @@ $z-depths: (
     very-front:     1000
 );
 
+// commonvertical spacing
 $spacing-v: (
-    base:       $baseline-v,
-    mid-small:  ($baseline-v*0.75),
-    small:      ($baseline-v/2),
-    x-small:    ($baseline-v/4),
-    mid-large:  ($baseline-v*1.5),
-    large:      ($baseline-v*2),
-    x-large:    ($baseline-v*4)
+    base:           $baseline-v,
+    mid-small:      ($baseline-v*0.75),
+    small:          ($baseline-v/2),
+    x-small:        ($baseline-v/4),
+    mid-large:      ($baseline-v*1.5),
+    large:          ($baseline-v*2),
+    x-large:        ($baseline-v*4)
 );
 
+// common horizontal spacing
 $spacing-h: (
-    base:       $baseline-h,
-    mid-small:  ($baseline-h*0.75),
-    small:      ($baseline-h/2),
-    x-small:    ($baseline-h/4),
-    xx-small:   ($baseline-h/8),
-    mid-large:  ($baseline-h*1.5),
-    large:      ($baseline-h*2),
-    x-large:    ($baseline-h*4)
+    base:           $baseline-h,
+    mid-small:      ($baseline-h*0.75),
+    small:          ($baseline-h/2),
+    x-small:        ($baseline-h/4),
+    xx-small:       ($baseline-h/8),
+    mid-large:      ($baseline-h*1.5),
+    large:          ($baseline-h*2),
+    x-large:        ($baseline-h*4)
+);
+
+// responsive breakpoints
+$breakpoints: (
+    small:          320px,
+    medium:         800px,
+    large:          1000px,
+    huge:           1200px
 );
 
 // config - headings
@@ -260,6 +310,55 @@ $code-font-family: $font-stack-monospace;
 // ------------------------------
 // #HELPERS
 // ------------------------------
+%state-disabled {
+    pointer-events: none;
+    outline: none;
+    cursor: default;
+}
+
+// presentational wrapper
+%wrapper {
+    @include clearfix();
+    width: 100%;
+}
+
+// remove spacing from first/last children
+%clear-first-child {
+
+    &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+%clear-last-child {
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+// accessibility
+%a11y-hide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+%a11y-hide-image-text {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
 // add UI cue for non-native controls
 %fake-link {
   cursor: pointer;
@@ -295,6 +394,27 @@ $code-font-family: $font-stack-monospace;
     @extend %no-list;
     margin: 0;
     padding: 0;
+}
+
+%list-unstyled {
+    @extend %reset-lists;
+
+    li,
+    dt,
+    dd {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+%list-inline {
+    @extend %list-unstyled;
+
+    li,
+    dt,
+    dd {
+        display: inline-block;
+    }
 }
 
 // pl-based reset - headings

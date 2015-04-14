@@ -120,7 +120,7 @@
 // reset of links
 %link {
     @include transition(all timing(x-fast) ease-in-out);
-    border-bottom: rem(1) solid $transparent;
+    border-bottom: 1px solid $transparent;
     color: palette(primary, base);
     text-decoration: none;
 
@@ -128,7 +128,21 @@
     &:hover,
     &:active,
     &:focus {
-        border-bottom-color: palette(primary, sat);
-        color: palette(primary, sat);
+        border-bottom-color: palette(primary, mid-light);
+        color: palette(primary, mid-light);
+    }
+
+    // STATE: is disabled
+    &:disabled,
+    &.is-disabled {
+        display: none; // :)
+        color: palette(grayscale, mid-light);
+    }
+
+    // STATE: is pressed or active
+    &:active,
+    &.is-pressed,
+    &.is-active {
+        color: palette(primary, dark);
     }
 }

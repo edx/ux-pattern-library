@@ -38,7 +38,7 @@ $gray-warm:         rgb(79, 74, 73);
 $red:               rgb(178, 6, 16);
 $yellow:            rgb(237, 189, 60);
 $green:             rgb(37, 184, 90);
-$blue:              rgb(0, 162, 227);
+$blue:              rgb(0, 122, 186);
 $pink:              rgb(183, 37, 103);
 
 $brand-primary:     $blue;
@@ -49,17 +49,17 @@ $brand-accent:      $gray;
 $palettes: (
     primary: (
         base:       $brand-primary,
-        mid-light:  tint($brand-primary, 10%),
+        mid-light:  tint($brand-primary, 15%),
         light:      tint($brand-primary, 25%),
         x-light:    tint($brand-primary, 55%),
         xx-light:   tint($brand-primary, 90%),
-        mid-dark:   shade($brand-primary, 10%),
+        mid-dark:   shade($brand-primary, 15%),
         dark:       shade($brand-primary, 25%),
         x-dark:     shade($brand-primary, 55%),
         xx-dark:    shade($brand-primary, 90%),
         mid-sat:    saturate($brand-primary, 10%),
-        sat:        saturate($brand-primary, 20%),
-        x-sat:      saturate($brand-primary, 30%),
+        sat:        saturate($brand-primary, 25%),
+        x-sat:      saturate($brand-primary, 40%),
         mid-trans:  transparentize($brand-primary, 0.25),
         trans:      transparentize($brand-primary, 0.50),
         x-trans:    transparentize($brand-primary, 0.75),
@@ -107,13 +107,13 @@ $palettes: (
         light:      tint($gray, 50%),
         x-light:    tint($gray, 75%),
         xx-light:   tint($gray, 90%),
-        white:      tint($gray, 98%),
+        white:      tint($gray, 97%),
         white-t:    tint($gray, 100%),
         mid-dark:   shade($gray, 40%),
         dark:       shade($gray, 50%),
         x-dark:     shade($gray, 75%),
         xx-dark:    shade($gray, 90%),
-        black:      shade($gray, 98%),
+        black:      shade($gray, 90%),
         black-t:    shade($gray, 100%),
         mid-trans:  transparentize($gray, 0.25),
         trans:      transparentize($gray, 0.50),
@@ -128,7 +128,7 @@ $palettes: (
         xx-light:   tint($gray-cool, 90%),
         white:      tint($gray-cool, 98%),
         white-t:    tint($gray-cool, 100%),
-        mid-dark:   shade($gray-cool, 40%),
+        mid-dark:   shade($gray-cool, 10%),
         dark:       shade($gray-cool, 50%),
         x-dark:     shade($gray-cool, 75%),
         xx-dark:    shade($gray-cool, 90%),
@@ -209,8 +209,6 @@ $palettes: (
 // #TYPOGRAPHY
 // ----------------------------
 // typography: config
-
-// typography: config - imports (TODO: these should be abstracted out once we have more than just 1)
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Light-webfont', 300, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-LightItalic-webfont', 300, italic, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Regular-webfont', 400, $file-formats: eot woff ttf svg);
@@ -322,6 +320,7 @@ $timing: (
     x-slow:     1.5s,
     fast:       0.5s,
     x-fast:     0.25s,
+    xx-fast:    0.125s
 );
 
 // ----------------------------
@@ -361,6 +360,12 @@ $headings-primary-color: palette(grayscale, x-dark);
 
 $headings-secondary-font-family: $font-family-sans-serif;
 $headings-secondary-color: palette(grayscale, base);
+
+// buttons
+$buttons-border-style: solid;
+$buttons-border-size: 1px;
+$buttons-elevated-shadow: 3px;
+$buttons-border-radius: 4px;
 
 // tables
 $table-cell-padding: spacing-vertical(small) spacing-horizontal(small);

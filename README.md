@@ -4,7 +4,7 @@ The (working) Visual, UI, and Front End Styleguide for edX.
 ## Overview
 This library contains the following:
 
-* [A working preview and documentation system for edX application UI](http://code.edx.org/ux-pattern-library)
+* [A working preview and documentation system for edX application UI](http://ux.edx.org)
 * Styleguides and standards for [general Front End](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General), [HTML](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML), [Sass/CSS](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS), and [Accessibility-minded](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility) development
 * TODO: Portable Sass/CSS modules for use within edX applications
 
@@ -81,7 +81,7 @@ This will run the `default` gulp task defined in `gulpfile.js`, which has the fo
 **NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task prefixed with `pl_*` refers to the reference site UI and not the elements.
 
 ### Publishing & Viewing Remotely
-The most up-to-date version of the library can be viewed on our public domain, **http://code.edx.org/ux-pattern-library**
+The most up-to-date version of the library can be viewed on our public domain, **http://ux.edx.org**
 
 When contributing, please:
 
