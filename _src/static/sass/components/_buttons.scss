@@ -265,33 +265,13 @@
 // #LINK
 // ----------------------------
 .btn-link {
-    background: $transparent;
+    @extend %link;
+
+    // reset of inherited buttons
+    border-radius: 0;
     border-color: $transparent;
-    color: palette(primary, base);
-
-    // STATE: hover and focus
-    &:hover,
-    &.is-hovered,
-    &:focus,
-    &.is-focused {
-        color: palette(primary, base);
-        text-decoration: underline;
-    }
-
-    // STATE: is pressed or active
-    &:active,
-    &.is-pressed,
-    &.is-active {
-        color: palette(primary, dark);
-    }
-
-    // STATE: is disabled
-    &:disabled,
-    &.is-disabled {
-        display: none; // :)
-        color: palette(grayscale, mid-light);
-        text-decoration: none;
-    }
+    padding: 1px;
+    background: $transparent;
 }
 
 
