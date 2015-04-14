@@ -209,8 +209,6 @@ $palettes: (
 // #TYPOGRAPHY
 // ----------------------------
 // typography: config
-
-// typography: config - imports (TODO: these should be abstracted out once we have more than just 1)
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Light-webfont', 300, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-LightItalic-webfont', 300, italic, $file-formats: eot woff ttf svg);
 @include font-face('Open Sans', '../fonts/OpenSans/OpenSans-Regular-webfont', 400, $file-formats: eot woff ttf svg);
