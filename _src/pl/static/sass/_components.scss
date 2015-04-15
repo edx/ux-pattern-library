@@ -436,6 +436,55 @@
     }
 }
 
+.pl-element-icons {
+
+    .example-set {
+        @include row();
+    }
+
+    .swatch {
+        @include fill-parent();
+
+        .icon-display {
+            width: 32px;
+            margin: auto;
+
+            svg {
+                @include transition(fill 0.25s ease-in-out);
+                width: 100%;
+                fill: palette(primary, mid-dark);
+            }
+        }
+
+        .icon-classname {
+            text-align: center;
+            font-size: font-size(mid-small);
+            color: palette(grayscale, base);
+        }
+
+        @include media($bp-medium) {
+            @include span-columns(1);
+            @include omega(4n);
+        }
+
+        @include media($bp-large) {
+            @include span-columns(2);
+            @include omega(4n);
+        }
+
+        &:hover,
+        &:focus {
+
+            .icon-display {
+
+                svg {
+                    fill: palette(secondary, base); // demonstrating color change simplicity
+                }
+            }
+        }
+    }
+}
+
 
 // ------------------------------
 // #SYSTEM FEEDBACK

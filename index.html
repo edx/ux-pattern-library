@@ -48,6 +48,11 @@ viewclass:  index
                         <h2 class="pl-heading pl-tab-heading pl-element-preview-title">{{post.title}} Preview</h2>
 
                         <div class="pl-tab-content">
+                            {% if post.tags contains "icons" %}
+                                <input id="iconFontSlider" type="range" min="16" max="96" step="16" value="32">
+                                <input type="text" id="iconFontSliderValue" size="2" value="32">
+                            {% endif %}
+
                             {{post.content}}
                         </div>
                     </div>
@@ -70,8 +75,8 @@ viewclass:  index
                             <p>View <a class="pl-link" href="{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
-                {% endif %}
             </div>
 
         </article>
