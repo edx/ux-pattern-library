@@ -28,72 +28,81 @@ $bp-huge:                       new-breakpoint(1200px, 8);
 $baseline-v:                    rem(20);
 $baseline-h:                    rem(40);
 
-// brand/visuals
-$brand-primary:                 rgb(0, 160, 227);  // edX blue
-$brand-secondary:               rgb(184, 57, 104); // edX pink
 
 // colors
-$color-base-primary:            $brand-primary;
-$color-base-secondary:          $brand-secondary;
-$color-gray:                    rgb(123, 123, 123);
-$color-transparent:             rgba(0, 0, 0, 0);
+$transparent:       rgba(0, 0, 0, 0);
 
-$color-error:                   rgba(220, 66, 55, 1);
-$color-warning:                 rgba(252, 192, 38, 1);
-$color-success:                 rgba(99, 186, 89, 1);
+$gray:              rgb(127, 127, 127);
+$gray-cool:         rgb(96, 125, 139);
+$gray-warm:         rgb(79, 74, 73);
+$red:               rgb(178, 6, 16);
+$yellow:            rgb(237, 189, 60);
+$green:             rgb(37, 184, 90);
+$blue:              rgb(0, 122, 186);
+$pink:              rgb(183, 37, 103);
+
+$brand-primary:                 $blue;
+$brand-secondary:               $pink;
+$color-error:                   $red;
+$color-warning:                 $yellow;
+$color-success:                 $green;
 
 // colors - palettes
 $palettes: (
     primary: (
-        base:       $color-base-primary,
-        mid-light:  tint($color-base-primary, 10%),
-        light:      tint($color-base-primary, 25%),
-        x-light:    tint($color-base-primary, 55%),
-        mid-dark:   shade($color-base-primary, 10%),
-        dark:       shade($color-base-primary, 25%),
-        x-dark:     shade($color-base-primary, 55%),
-        mid-sat:    saturate($color-base-primary, 10%),
-        sat:        saturate($color-base-primary, 20%),
-        x-sat:      saturate($color-base-primary, 30%),
-        mid-trans:  transparentize($color-base-primary, 0.25),
-        trans:      transparentize($color-base-primary, 0.50),
-        x-trans:    transparentize($color-base-primary, 0.75),
-        xx-trans:   transparentize($color-base-primary, 0.95)
+        base:       $brand-primary,
+        mid-light:  tint($brand-primary, 15%),
+        light:      tint($brand-primary, 25%),
+        x-light:    tint($brand-primary, 55%),
+        xx-light:   tint($brand-primary, 90%),
+        mid-dark:   shade($brand-primary, 15%),
+        dark:       shade($brand-primary, 25%),
+        x-dark:     shade($brand-primary, 55%),
+        xx-dark:    shade($brand-primary, 90%),
+        mid-sat:    saturate($brand-primary, 10%),
+        sat:        saturate($brand-primary, 25%),
+        x-sat:      saturate($brand-primary, 40%),
+        mid-trans:  transparentize($brand-primary, 0.25),
+        trans:      transparentize($brand-primary, 0.50),
+        x-trans:    transparentize($brand-primary, 0.75),
+        xx-trans:   transparentize($brand-primary, 0.95)
     ),
     secondary: (
-        base:       $color-base-secondary,
-        mid-light:  tint($color-base-secondary, 10%),
-        light:      tint($color-base-secondary, 25%),
-        x-light:    tint($color-base-secondary, 55%),
-        mid-dark:   shade($color-base-secondary, 10%),
-        dark:       shade($color-base-secondary, 25%),
-        x-dark:     shade($color-base-secondary, 55%),
-        mid-sat:    saturate($color-base-secondary, 10%),
-        sat:        saturate($color-base-secondary, 20%),
-        x-sat:      saturate($color-base-secondary, 30%),
-        mid-trans:  transparentize($color-base-secondary, 0.25),
-        trans:      transparentize($color-base-secondary, 0.50),
-        x-trans:    transparentize($color-base-secondary, 0.75),
-        xx-trans:   transparentize($color-base-secondary, 0.95)
+        base:       $brand-secondary,
+        mid-light:  tint($brand-secondary, 10%),
+        light:      tint($brand-secondary, 25%),
+        x-light:    tint($brand-secondary, 55%),
+        xx-light:   tint($brand-secondary, 75%),
+        mid-dark:   shade($brand-secondary, 10%),
+        dark:       shade($brand-secondary, 25%),
+        x-dark:     shade($brand-secondary, 55%),
+        xx-dark:    shade($brand-secondary, 90%),
+        mid-sat:    saturate($brand-secondary, 10%),
+        sat:        saturate($brand-secondary, 20%),
+        x-sat:      saturate($brand-secondary, 30%),
+        mid-trans:  transparentize($brand-secondary, 0.25),
+        trans:      transparentize($brand-secondary, 0.50),
+        x-trans:    transparentize($brand-secondary, 0.75),
+        xx-trans:   transparentize($brand-secondary, 0.95)
     ),
     grayscale: (
-        base:       $color-gray,
-        mid-light:  tint($color-gray, 40%),
-        light:      tint($color-gray, 60%),
-        x-light:    tint($color-gray, 80%),
-        xx-light:   tint($color-gray, 90%),
-        white:      tint($color-gray, 98%),
-        white-t:    rgb(255, 255, 255),
-        mid-dark:   shade($color-gray, 40%),
-        dark:       shade($color-gray, 60%),
-        x-dark:     shade($color-gray, 80%),
-        xx-dark:    shade($color-gray, 90%),
-        black:      shade($color-gray, 98%),
-        black-t:    rgb(0, 0, 0),
-        mid-trans:  transparentize($color-gray, 0.25),
-        trans:      transparentize($color-gray, 0.50),
-        x-trans:    transparentize($color-gray, 0.75),
-        xx-trans:   transparentize($color-gray, 0.95)
+        base:       $gray,
+        mid-light:  tint($gray, 40%),
+        light:      tint($gray, 50%),
+        x-light:    tint($gray, 75%),
+        xx-light:   tint($gray, 90%),
+        white:      tint($gray, 97%),
+        white-t:    tint($gray, 100%),
+        mid-dark:   shade($gray, 40%),
+        dark:       shade($gray, 50%),
+        x-dark:     shade($gray, 75%),
+        xx-dark:    shade($gray, 90%),
+        black:      shade($gray, 90%),
+        black-t:    shade($gray, 100%),
+        mid-trans:  transparentize($gray, 0.25),
+        trans:      transparentize($gray, 0.50),
+        x-trans:    transparentize($gray, 0.75),
+        xx-trans:   transparentize($gray, 0.95)
     ),
     success: (
         base:       $color-success,
