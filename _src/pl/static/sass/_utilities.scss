@@ -6,8 +6,10 @@
 // ------------------------------
 // #CONFIG
 // ------------------------------
+$em-base: 18; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
+
 // grid- customizations
-$pl-content-supplemental-width: rem(300); // width of supplemental content sidebar
+$pl-content-supplemental-width: rem(330); // width of supplemental content sidebar
 $pl-tab-label-height:           rem(2); // height of tab labels
 
 // grid - settings
@@ -151,39 +153,37 @@ $palettes: (
 $font-stack-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-stack-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
 
-// typography - responsive base scale
-$font-scale-small: 14;
-$font-scale-medium: 16;
-$font-scale-large: 16;
+// typography: config - scale
+$font-scale-small: 16;
+$font-scale-medium: 18;
+$font-scale-large: 18;
 $font-scale-base: $font-scale-medium;
 
-$em-base: $font-scale-base; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
-
-// typography - size scale
+// typography: sizes
 $font-sizes: (
-    base:           16,
-    mid-small:      14,
-    small:          12,
-    x-small:        10,
+    xxx-large:      38,
+    xx-large:       28,
+    x-large:        24,
+    large:          21,
     mid-large:      18,
-    large:          24,
-    x-large:        32,
-    xx-large:       43,
+    mid-small:      16,
+    small:          14,
+    base:           $font-scale-base
 );
 
-// typography - line-height scale
+// typography: line-height
 $line-heights: (
-    none:           0,
-    base:           1.25,
-    mid-small:      1,
-    small:          0.75,
-    x-small:        0.75,
-    mid-large:      1.25,
-    large:          1.48,
-    x-large:        1.48
+    xx-large:       1.40,
+    x-large:        1.40,
+    large:          1.50,
+    mid-large:      1.60,
+    mid-small:      1.60,
+    small:          1.5,
+    base:           1.5,
+    none:           0
 );
 
-// typography - size scale
+// typography: weights
 $font-weights: (
     normal:         400,
     light:          300,
@@ -191,6 +191,17 @@ $font-weights: (
     semi-bold:      600,
     bold:           700,
     x-bold:         800
+);
+
+// typography: letter-spacing
+$letter-spacing: (
+    normal:         0,
+    xx-tight:       -3,
+    x-tight:        -2,
+    tight:          -.095,
+    loose:          -.075,
+    x-loose:        -.025,
+    xx-loose:       3
 );
 
 // z-index depth scale
@@ -280,6 +291,16 @@ $code-font-family: $font-stack-monospace;
   }
 
   @warn "Unknown `#{$key}` in $font-weights.";
+  @return null;
+}
+
+// get letter spacing from defined map values
+@function letter-spacing($key) {
+  @if map-has-key($letter-spacing, $key) {
+    @return map-get($letter-spacing, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $letter-spacing.";
   @return null;
 }
 

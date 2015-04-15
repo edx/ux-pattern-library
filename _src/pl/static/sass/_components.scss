@@ -87,7 +87,7 @@
     .pl-link {
         @include transition(background 0.25s ease-in-out);
         display: block;
-        border-bottom: rem(1) solid palette(grayscale, x-dark);
+        border-bottom: 1px solid palette(grayscale, x-dark);
         padding: spacing-vertical(small) spacing-horizontal(base);
         color: palette(grayscale, x-light);
         text-decoration: none;
