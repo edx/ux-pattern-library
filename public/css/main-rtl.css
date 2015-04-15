@@ -86,7 +86,7 @@ h6{font-size:.88889rem}
 .hd-7{font-size:.77778rem;line-height:1.5}
 .swatch{border:1px solid #dfdfdf;border-radius:.13889rem;margin-bottom:1.66667rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#fbfbfb}
 .swatch:active,.swatch:focus,.swatch:hover{-webkit-transform:scale(1.05);transform:scale(1.05);box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.25)}
-.swatch-color{margin-bottom:.55556rem;padding:3.33333rem .83333rem;text-align:center}
+.swatch-color{margin-bottom:.55556rem;padding:2.77778rem .83333rem;text-align:center}
 .swatch-color .color-class{font-size:.88889rem;text-transform:lowercase}
 .swatch-color .color-class.dol{color:#0c0c0c}
 .swatch-meta{padding:.27778rem .55556rem;white-space:nowrap;font-size:.77778rem;text-align:center;color:#4c4c4c}
@@ -215,6 +215,10 @@ h6{font-size:.88889rem}
 .btn-elevated.is-focused,.btn-elevated.is-hovered,.btn-elevated:focus,.btn-elevated:hover{background:#268dc4;box-shadow:inset 0 -3px 0 0 #00679e}
 .btn-elevated.is-active,.btn-elevated.is-pressed,.btn-elevated:active{background:#00679e;box-shadow:inset 0 3px 0 0 #003653}
 .btn-elevated.is-disabled,.btn-elevated:disabled{background:#dfdfdf;border-color:#dfdfdf;box-shadow:inset 0 -1px 0 #b2b2b2;color:#7f7f7f}
+.btn-elevated-alt{background:0 0;box-shadow:inset 0 -3px 0 0 #d7dee2;border-color:#d7dee2;color:#607d8b}
+.btn-elevated-alt.is-focused,.btn-elevated-alt.is-hovered,.btn-elevated-alt:focus,.btn-elevated-alt:hover{background:#268dc4;box-shadow:inset 0 -3px 0 0 #00679e;color:#fbfbfb}
+.btn-elevated-alt.is-active,.btn-elevated-alt.is-pressed,.btn-elevated-alt:active{background:#00679e;box-shadow:inset 0 3px 0 0 #003653}
+.btn-elevated-alt.is-disabled,.btn-elevated-alt:disabled{background:#dfdfdf;border-color:#dfdfdf;box-shadow:inset 0 -1px 0 #b2b2b2;color:#7f7f7f}
 .btn-combo:first-of-type{border-top-left-radius:4px;border-bottom-left-radius:4px}
 .btn-combo:last-of-type{border-top-right-radius:4px;border-bottom-right-radius:4px}
 .btn-overlay{background:0 0;border-color:#fbfbfb;color:#fbfbfb;font-weight:600}
