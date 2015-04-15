@@ -288,15 +288,18 @@ $z-depths: (
     very-front:     1000
 );
 
+// 80, 60, 50, 40, 30, 20, 10, 5
+
 $spacing-vertical: (
     base:       $baseline-vertical,
     mid-small:  ($baseline-vertical*0.75),
     small:      ($baseline-vertical/2),
-    x-small:    ($baseline-vertical/4),
-    xx-small:    ($baseline-vertical/8),
-    mid-large:  ($baseline-vertical*1.5),
-    large:      ($baseline-vertical*2),
-    x-large:    ($baseline-vertical*4)
+    x-small:   ($baseline-vertical/4),
+    xx-small:  ($baseline-vertical/8),
+    mid-large:  ($baseline-vertical*1.25),
+    large:      ($baseline-vertical*1.5),
+    x-large:    ($baseline-vertical*2),
+    xx-large:   ($baseline-vertical*4),
 );
 
 $spacing-horizontal: (
@@ -305,9 +308,12 @@ $spacing-horizontal: (
     small:      ($baseline-horizontal/2),
     x-small:    ($baseline-horizontal/4),
     xx-small:   ($baseline-horizontal/8),
+    xxx-small:  ($baseline-horizontal/8),
     mid-large:  ($baseline-horizontal*1.5),
     large:      ($baseline-horizontal*2),
-    x-large:    ($baseline-horizontal*4)
+    x-large:    ($baseline-horizontal*4),
+    xx-large:   ($baseline-horizontal*4),
+    xxx-large:  ($baseline-horizontal*4)
 );
 
 
