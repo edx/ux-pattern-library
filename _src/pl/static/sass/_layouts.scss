@@ -40,10 +40,10 @@
     }
 
     .pl-header-site {
-        padding: spacing-v(base) spacing-h(base);
+        padding: spacing-vertical(base) spacing-horizontal(base);
 
         @include media($bp-large) {
-            margin: spacing-v(large) spacing-h(base) spacing-v(base) spacing-h(base);
+            margin: spacing-vertical(large) spacing-horizontal(base) spacing-vertical(base) spacing-horizontal(base);
             padding: 0;
         }
     }

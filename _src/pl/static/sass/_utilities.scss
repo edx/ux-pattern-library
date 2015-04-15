@@ -25,8 +25,9 @@ $bp-large:                      new-breakpoint(1000px, 8);
 $bp-huge:                       new-breakpoint(1200px, 8);
 
 // grid - baseline
-$baseline-v:                    rem(20);
-$baseline-h:                    rem(40);
+$baseline:               20;
+$baseline-vertical:      $baseline;
+$baseline-horizontal:    ($baseline*2);
 
 
 // colors
@@ -156,7 +157,7 @@ $font-scale-medium: 16;
 $font-scale-large: 16;
 $font-scale-base: $font-scale-medium;
 
-$em-base: $font-scale-medium; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
+$em-base: $font-scale-base; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
 
 // typography - size scale
 $font-sizes: (
@@ -204,26 +205,26 @@ $z-depths: (
 );
 
 // commonvertical spacing
-$spacing-v: (
-    base:           $baseline-v,
-    mid-small:      ($baseline-v*0.75),
-    small:          ($baseline-v/2),
-    x-small:        ($baseline-v/4),
-    mid-large:      ($baseline-v*1.5),
-    large:          ($baseline-v*2),
-    x-large:        ($baseline-v*4)
+$spacing-vertical: (
+    base:           $baseline-vertical,
+    mid-small:      ($baseline-vertical*0.75),
+    small:          ($baseline-vertical/2),
+    x-small:        ($baseline-vertical/4),
+    mid-large:      ($baseline-vertical*1.5),
+    large:          ($baseline-vertical*2),
+    x-large:        ($baseline-vertical*4)
 );
 
 // common horizontal spacing
-$spacing-h: (
-    base:           $baseline-h,
-    mid-small:      ($baseline-h*0.75),
-    small:          ($baseline-h/2),
-    x-small:        ($baseline-h/4),
-    xx-small:       ($baseline-h/8),
-    mid-large:      ($baseline-h*1.5),
-    large:          ($baseline-h*2),
-    x-large:        ($baseline-h*4)
+$spacing-horizontal: (
+    base:           $baseline-horizontal,
+    mid-small:      ($baseline-horizontal*0.75),
+    small:          ($baseline-horizontal/2),
+    x-small:        ($baseline-horizontal/4),
+    xx-small:       ($baseline-horizontal/8),
+    mid-large:      ($baseline-horizontal*1.5),
+    large:          ($baseline-horizontal*2),
+    x-large:        ($baseline-horizontal*4)
 );
 
 // responsive breakpoints
@@ -293,22 +294,22 @@ $code-font-family: $font-stack-monospace;
 }
 
 // get vertical spacings from defined map values
-@function spacing-v($key) {
-  @if map-has-key($spacing-v, $key) {
-    @return map-get($spacing-v, $key);
+@function spacing-vertical($key) {
+  @if map-has-key($spacing-vertical, $key) {
+    @return rem(map-get($spacing-vertical, $key));
   }
 
-  @warn "Unknown `#{$key}` in $spacing-v.";
+  @warn "Unknown `#{$key}` in $spacing-vertical.";
   @return null;
 }
 
 // get horizontal spacings from defined map values
-@function spacing-h($key) {
-  @if map-has-key($spacing-h, $key) {
-    @return map-get($spacing-h, $key);
+@function spacing-horizontal($key) {
+  @if map-has-key($spacing-horizontal, $key) {
+    @return rem(map-get($spacing-horizontal, $key));
   }
 
-  @warn "Unknown `#{$key}` in $spacing-h.";
+  @warn "Unknown `#{$key}` in $spacing-horizontal.";
   @return null;
 }
 
@@ -428,7 +429,7 @@ $code-font-family: $font-stack-monospace;
 
 // pl-based reset - headings
 %reset-headings {
-    margin: 0 0 spacing-h(small) 0;
+    margin: 0 0 spacing-horizontal(small) 0;
     font-family: $heading-font-family;
     font-size: font-size(base);
     line-height: line-height(base);
