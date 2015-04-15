@@ -10,7 +10,9 @@ gulp.task('pl_scripts', ['pl_scripts-lint'], function() {
             // setup script sequence
             './_src/pl/vendor/jquery/jquery.smooth-scroll.js',
             config.pl_src + '/ui.js',
-            config.pl_src + '/color-contrast.js'
+            config.pl_src + '/size-slider.js',
+            config.pl_src + '/color-contrast.js',
+            './_src/vendor/svg4everybody/svg4everybody.min.js' // polyfill for SVGs in IE9-11
         ])
         .pipe(concat('main.js'))
         .pipe(uglify())
