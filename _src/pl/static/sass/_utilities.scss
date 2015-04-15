@@ -25,22 +25,22 @@ $bp-large:                      new-breakpoint(1000px, 8);
 $bp-huge:                       new-breakpoint(1200px, 8);
 
 // grid - baseline
-$baseline:               20;
-$baseline-vertical:      $baseline;
-$baseline-horizontal:    ($baseline*2);
+$baseline:                      20;
+$baseline-vertical:             $baseline;
+$baseline-horizontal:           ($baseline*2);
 
 
 // colors
-$transparent:       rgba(0, 0, 0, 0);
+$transparent:                   rgba(0, 0, 0, 0);
 
-$gray:              rgb(127, 127, 127);
-$gray-cool:         rgb(96, 125, 139);
-$gray-warm:         rgb(79, 74, 73);
-$red:               rgb(178, 6, 16);
-$yellow:            rgb(237, 189, 60);
-$green:             rgb(37, 184, 90);
-$blue:              rgb(0, 122, 186);
-$pink:              rgb(183, 37, 103);
+$gray:                          rgb(127, 127, 127);
+$gray-cool:                     rgb(96, 125, 139);
+$gray-warm:                     rgb(79, 74, 73);
+$red:                           rgb(178, 6, 16);
+$yellow:                        rgb(237, 189, 60);
+$green:                         rgb(37, 184, 90);
+$blue:                          rgb(0, 122, 186);
+$pink:                          rgb(183, 37, 103);
 
 $brand-primary:                 $blue;
 $brand-secondary:               $pink;
