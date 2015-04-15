@@ -11,7 +11,7 @@
 // ----------------------------
 // #SWATCH LAYOUT
 // ----------------------------
-.swatch {
+.example {
     @include transition(all timing(x-fast) ease-in-out);
     border: 1px solid palette(grayscale, x-light);
     border-radius: spacing-horizontal(xx-small);

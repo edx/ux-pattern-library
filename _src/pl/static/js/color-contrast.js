@@ -39,7 +39,7 @@ $(function() {
             var that = this,
                 bg, fg;
 
-            $('.swatch').each(function() {
+            $('.example-color').each(function() {
 
                 bg = that.getL( that.rgbaToHex( $(this).find('.swatch-color').css('backgroundColor') ) );
                 fg = that.getL( that.rgbaToHex( $(this).find('.color-class').css('color') ) );

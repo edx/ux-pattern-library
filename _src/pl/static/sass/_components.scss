@@ -224,6 +224,22 @@
     }
 }
 
+.pl-settings {
+    background: palette(grayscale, xx-light);
+    margin-bottom: spacing-vertical(large);
+    padding: spacing-vertical(small) spacing-horizontal(small);
+}
+
+.pl-setting {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: spacing-horizontal(small);
+
+    &:last-child {
+         margin-right: 0;
+    }
+}
+
 // ------------------------------
 // #SIDEBAR
 // ------------------------------
@@ -413,7 +429,7 @@
         @include row();
     }
 
-    .swatch {
+    .example-color {
         @include fill-parent();
 
         @include media($bp-medium) {
@@ -433,6 +449,55 @@
 
     .example-set {
         @include row();
+    }
+}
+
+.pl-element-icons {
+
+    .example-set {
+        @include row();
+    }
+
+    .example-icon {
+        @include fill-parent();
+
+        .icon-display {
+            width: 24px;
+            margin: auto;
+
+            svg {
+                @include transition(fill 0.25s ease-in-out);
+                width: 100%;
+                fill: palette(primary, base);
+            }
+        }
+
+        .icon-classname {
+            text-align: center;
+            font-size: font-size(mid-small);
+            color: palette(grayscale, base);
+        }
+
+        @include media($bp-medium) {
+            @include span-columns(1);
+            @include omega(4n);
+        }
+
+        @include media($bp-large) {
+            @include span-columns(2);
+            @include omega(4n);
+        }
+
+        &:hover,
+        &:focus {
+
+            .icon-display {
+
+                svg {
+                    fill: palette(primary, sat); // demonstrating color change simplicity
+                }
+            }
+        }
     }
 }
 

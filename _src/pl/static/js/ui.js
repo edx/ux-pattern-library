@@ -91,9 +91,9 @@ $(document).ready(function() {
     }
 
     // palette values
-    if ($('.swatch').length) {
+    if ($('.example').length) {
 
-        $('.swatch').each(function() {
+        $('.example').each(function() {
             var rgb = $(this).find('.swatch-color').css('backgroundColor');
 
             $(this).find('.swatch-meta .color-rgb').text(rgb);
