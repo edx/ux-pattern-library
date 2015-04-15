@@ -209,7 +209,7 @@
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
     @include pad(spacing-v(base) spacing-h(mid-small));
-    background: palette(grayscale, white);
+    background: palette(grayscale, white-t);
     box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
 
     // STATE: hover, active, focus
@@ -264,7 +264,7 @@
     @include transition(all 0.25s ease-in-out);
     @include pad(spacing-v(x-large) spacing-h(base));
     border-bottom: rem(2) solid palette(grayscale, mid-dark);
-    box-shadow: inset spacing-h(xx-small) 0 0 0 $color-transparent;
+    box-shadow: inset spacing-h(xx-small) 0 0 0 $transparent;
 
     // CASE: element is focused on in current URL
     &:target {
@@ -368,7 +368,7 @@
     .pl-link {
         display: block;
         margin: 0;
-        border-bottom: spacing-v(x-small) solid $color-transparent;
+        border-bottom: spacing-v(x-small) solid $transparent;
         padding: spacing-v(small) spacing-h(small);
         font-weight: font-weight(semi-bold);
         color: palette(grayscale, base);
