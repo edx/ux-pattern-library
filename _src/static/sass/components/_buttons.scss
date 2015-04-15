@@ -37,6 +37,7 @@
     border-style: $buttons-border-style;
     border-radius: $buttons-border-radius;
     border-width: $buttons-border-size;
+    font-weight: font-weight(semi-bold);
 
     // Display: block, one button per line, full width
     &.block {

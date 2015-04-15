@@ -183,7 +183,7 @@ h6{font-size:.88889rem}
 .grayscale-warm.mid-trans{background:rgba(79,74,73,.75)}
 .grayscale-warm.x-trans{background:rgba(79,74,73,.25)}
 .grayscale-warm.xx-trans{background:rgba(79,74,73,.05)}
-.btn{transition:color .125s ease-in-out 0s,border-color .125s ease-in-out 0s,background .125s ease-in-out 0s,box-shadow .125s ease-in-out 0s;display:inline-block;border-style:solid;border-radius:4px;border-width:1px}
+.btn{transition:color .125s ease-in-out 0s,border-color .125s ease-in-out 0s,background .125s ease-in-out 0s,box-shadow .125s ease-in-out 0s;display:inline-block;border-style:solid;border-radius:4px;border-width:1px;font-weight:600}
 .btn-combo,.btn-link{border-radius:0}
 .btn.block{display:block;width:100%}
 .btn-base{font-size:1rem;padding:.55556rem .83333rem}
