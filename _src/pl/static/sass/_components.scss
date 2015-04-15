@@ -14,12 +14,12 @@
 // tab panels and examples
 .example-set {
     @extend %clear-last-child;
-    padding-bottom: spacing-v(mid-large);
-    border-bottom: spacing-v(xx-small) solid palette(grayscale, xx-light);
-    margin-bottom: spacing-v(mid-large);
+    padding-bottom: spacing-vertical(mid-large);
+    border-bottom: spacing-vertical(xx-small) solid palette(grayscale, xx-light);
+    margin-bottom: spacing-vertical(mid-large);
 
     .button-overlay-demo {
-        padding: spacing-v(mid-large) spacing-h(mid-large);
+        padding: spacing-vertical(mid-large) spacing-horizontal(mid-large);
         background: palette(grayscale, base);
     }
 }
@@ -32,7 +32,7 @@
     vertical-align: middle;
 
     @include media($bp-large) {
-        margin: 0 0 spacing-v(base) 0;
+        margin: 0 0 spacing-vertical(base) 0;
     }
 
     .title-name, .title-description {
@@ -40,7 +40,7 @@
     }
 
     .title-name {
-        margin-bottom: spacing-v(x-small);
+        margin-bottom: spacing-vertical(x-small);
         color: palette(grayscale, white);
         font-size: font-size(base);
         font-weight: font-weight(bold);
@@ -71,7 +71,7 @@
 // ------------------------------
 // navigation - sidebar-based
 .pl-nav {
-    margin-bottom: spacing-v(large);
+    margin-bottom: spacing-vertical(large);
 
     // CASE: last element
     &:last-child {
@@ -88,7 +88,7 @@
         @include transition(background 0.25s ease-in-out);
         display: block;
         border-bottom: rem(1) solid palette(grayscale, x-dark);
-        padding: spacing-v(small) spacing-h(base);
+        padding: spacing-vertical(small) spacing-horizontal(base);
         color: palette(grayscale, x-light);
         text-decoration: none;
         font-size: font-size(mid-small);
@@ -132,7 +132,7 @@
             @include size(rem(5));
             position: absolute;
             top: rem(18);
-            left: spacing-h(small);
+            left: spacing-horizontal(small);
             content: '';
             border-radius: 100%;
             opacity: 0;
@@ -160,7 +160,7 @@
             @include transition(opacity 0.25s ease-in-out);
             display: inline-block;
             vertical-align: baseline;
-            margin-right: (spacing-h(xx-small));
+            margin-right: (spacing-horizontal(xx-small));
             font-size: font-size(large);
             line-height: line-height(none);
             opacity: 0.25;
@@ -179,7 +179,7 @@
 }
 
 .pl-nav-title {
-    margin: 0 spacing-h(base) spacing-v(x-small) spacing-h(base);
+    margin: 0 spacing-horizontal(base) spacing-vertical(x-small) spacing-horizontal(base);
     color: palette(grayscale, mid-light);
     font-size: font-size(small);
     font-weight: font-weight(semi-bold);
@@ -189,7 +189,7 @@
 
 // navigation - tabs
 .pl-tab {
-    margin-bottom: spacing-v(large);
+    margin-bottom: spacing-vertical(large);
 
     // CASE: last element
     &:last-child {
@@ -197,7 +197,7 @@
     }
 
     .pl-heading {
-        margin-bottom: spacing-v(mid-small);
+        margin-bottom: spacing-vertical(mid-small);
         color: $heading-color;
         font-size: font-size(mid-large);
         font-weight: font-weight(semi-bold);
@@ -208,7 +208,7 @@
 .pl-tab-content {
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
-    @include pad(spacing-v(base) spacing-h(mid-small));
+    @include pad(spacing-vertical(base) spacing-horizontal(mid-small));
     background: palette(grayscale, white-t);
     box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
 
@@ -220,7 +220,7 @@
     }
 
     @include media($bp-medium) {
-        @include pad(spacing-v(mid-large) spacing-h(base));
+        @include pad(spacing-vertical(mid-large) spacing-horizontal(base));
     }
 }
 
@@ -246,7 +246,7 @@
 // #FOOTER
 // ------------------------------
 .pl-footer-site {
-    margin: spacing-v(base) spacing-h(base);
+    margin: spacing-vertical(base) spacing-horizontal(base);
 }
 
 .pl-footer-site-copyright {
@@ -262,17 +262,17 @@
 // ------------------------------
 .pl-element {
     @include transition(all 0.25s ease-in-out);
-    @include pad(spacing-v(x-large) spacing-h(base));
+    @include pad(spacing-vertical(x-large) spacing-horizontal(base));
     border-bottom: rem(2) solid palette(grayscale, mid-dark);
-    box-shadow: inset spacing-h(xx-small) 0 0 0 $transparent;
+    box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
 
     // CASE: element is focused on in current URL
     &:target {
-        box-shadow: inset spacing-h(xx-small) 0 0 0 palette(primary, light);
+        box-shadow: inset spacing-horizontal(xx-small) 0 0 0 palette(primary, light);
     }
 
     .pl-wrapper-element:first-child & {
-        padding-top: spacing-v(large);
+        padding-top: spacing-vertical(large);
     }
 
     // CASE: last element
@@ -281,19 +281,19 @@
     }
 
     .example-set-hd {
-        margin-bottom: spacing-v(mid-small);
+        margin-bottom: spacing-vertical(mid-small);
     }
 }
 
 .pl-element-header {
     @include row();
-    margin-bottom: spacing-v(base);
+    margin-bottom: spacing-vertical(base);
     border-bottom: 1px solid palette(grayscale, dark);
-    padding-bottom: spacing-v(small);
+    padding-bottom: spacing-vertical(small);
 }
 
 .pl-element-title {
-    margin-bottom: spacing-v(x-small);
+    margin-bottom: spacing-vertical(x-small);
     color: $heading-color;
     font-size: font-size(large);
     font-weight: font-weight(semi-bold);
@@ -333,13 +333,13 @@
        @include media($bp-medium) {
             display: inline-block;
             vertical-align: middle;
-            margin-right: spacing-h(xx-small);
+            margin-right: spacing-horizontal(xx-small);
        }
     }
 
     .meta-updated {
-        margin-right: spacing-h(small);
-        margin-bottom: spacing-v(x-small);
+        margin-right: spacing-horizontal(small);
+        margin-bottom: spacing-vertical(x-small);
 
         @include media($bp-medium) {
             margin-bottom: 0;
@@ -352,7 +352,7 @@
 .pl-tab-labels {
     @include clearfix();
     @extend %reset-lists;
-    border-bottom: spacing-v(x-small) solid palette(grayscale, x-light);
+    border-bottom: spacing-vertical(x-small) solid palette(grayscale, x-light);
 }
 
 .pl-tab-heading {
@@ -363,13 +363,13 @@
     // display: inline-block;
     float: left;
     position: relative;
-    bottom: -(spacing-v(x-small));
+    bottom: -(spacing-vertical(x-small));
 
     .pl-link {
         display: block;
         margin: 0;
-        border-bottom: spacing-v(x-small) solid $transparent;
-        padding: spacing-v(small) spacing-h(small);
+        border-bottom: spacing-vertical(x-small) solid $transparent;
+        padding: spacing-vertical(small) spacing-horizontal(small);
         font-weight: font-weight(semi-bold);
         color: palette(grayscale, base);
 
