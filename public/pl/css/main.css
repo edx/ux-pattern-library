@@ -78,7 +78,7 @@ body,html{height:100%;color:#1f1f1f}
 .pl-nav .nav-list-item:last-child .pl-link{border-bottom:0}
 .pl-nav .nav-list-item.is-current .pl-link:before{display:inline-block}
 .pl-nav-internal .pl-link:before{transition:opacity .25s ease-in-out;height:.27778rem;width:.27778rem;position:absolute;top:1rem;left:1.11111rem;content:'';border-radius:100%;opacity:0;background:#3f9bcb}
-.pl-element-buttons .example-set::after,.pl-element-colors .example-set::after,.pl-element-header::after,.pl-tab-labels::after,.pl-wrapper-element::after{content:""}
+.pl-element-buttons .example-set::after,.pl-element-colors .example-set::after,.pl-element-header::after,.pl-element-icons .example-set::after,.pl-tab-labels::after,.pl-wrapper-element::after{content:""}
 .pl-nav-internal .pl-link.is-current{color:#3f9bcb;background:#1f1f1f}
 .pl-nav-internal .pl-link.is-current:before{opacity:1}
 .pl-nav-external .pl-link .pl-icon{transition:opacity .25s ease-in-out;display:inline-block;vertical-align:baseline;margin-right:.27778rem;font-size:1.16667rem;line-height:0;opacity:.25}
@@ -134,8 +134,21 @@ body,html{height:100%;color:#1f1f1f}
 .pl-element-colors .swatch:nth-child(4n+1){clear:left}}
 .pl-element-buttons .example-set{display:block}
 .pl-element-buttons .example-set::after{clear:both;display:table}
+.pl-element-icons .example-set{display:block}
+.pl-element-icons .example-set::after{clear:both;display:table}
+.pl-element-icons .swatch{width:100%}
+.pl-element-icons .swatch .icon-display{width:32px;margin:auto}
+.pl-element-icons .swatch .icon-display svg{transition:fill .25s ease-in-out;width:100%;fill:#00679e}
+.pl-element-icons .swatch .icon-classname{text-align:center;font-size:.88889rem;color:#7f7f7f}
+@media screen and (min-width:800px){.pl-element-icons .swatch{float:left;display:block;margin-right:7.42297%;width:19.43277%}
+.pl-element-icons .swatch:last-child,.pl-element-icons .swatch:nth-child(4n){margin-right:0}
+.pl-element-icons .swatch:nth-child(4n+1){clear:left}}
+.pl-element-icons .swatch:focus .icon-display svg,.pl-element-icons .swatch:hover .icon-display svg{fill:#b72567}
 .fail-a11y-color{font-weight:600;background-color:#f6e1a7;color:#000}
-@media screen and (min-width:1000px){.pl-wrapper-content-main{width:calc(100% - $pl-content-supplemental-width);margin-left:18.33333rem}}
+@media screen and (min-width:1000px){.pl-element-icons .swatch{float:left;display:block;margin-right:3.57866%;width:22.316%}
+.pl-element-icons .swatch:last-child,.pl-element-icons .swatch:nth-child(4n){margin-right:0}
+.pl-element-icons .swatch:nth-child(4n+1){clear:left}
+.pl-wrapper-content-main{width:calc(100% - $pl-content-supplemental-width);margin-left:18.33333rem}}
 .pl-wrapper-element{max-width:calc(100% - $pl-content-supplemental-width);margin-left:auto;margin-right:auto}
 .pl-wrapper-element::after{clear:both;display:table}
 .pl-wrapper-content-supplemental{border-right:.22222rem solid #1f1f1f;background:#3f3f3f;color:#dfdfdf;font-size:1rem}

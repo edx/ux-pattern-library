@@ -26,8 +26,16 @@ $(function() {
 
             that.vars.sliderControl.on('input', function() {
                 that.updateIconSize($(this).val());
+                that.updateAria($(this).val());
                 that.updateInputText($(this).val());
             });
+        },
+
+        updateAria: function(size) {
+            var that = this;
+
+            that.vars.sliderControl
+                .attr('aria-now', size);
         },
 
         updateIconSize: function(size) {
