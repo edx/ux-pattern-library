@@ -50,8 +50,8 @@ viewclass:  index
                         <div class="pl-tab-content">
                             {% if post.tags contains "icons" %}
                                 <label for="iconFontSlider" class="is-hidden">Drag to resize icons</label>
-                                <input id="iconFontSlider" type="range" min="16" max="96" step="16" value="32" role="slider" aria-min="16" aria-max="16" aria-now="32">
-                                <input type="text" id="iconFontSliderValue" size="2" value="32" readonly="true">
+                                <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-min="12" aria-max="144" aria-now="24">
+                                <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">
                             {% endif %}
 
                             {{post.content}}
