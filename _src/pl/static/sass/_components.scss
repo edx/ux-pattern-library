@@ -224,6 +224,22 @@
     }
 }
 
+.pl-settings {
+    background: palette(grayscale, xx-light);
+    margin-bottom: spacing-vertical(large);
+    padding: spacing-vertical(small) spacing-horizontal(small);
+}
+
+.pl-setting {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: spacing-horizontal(small);
+
+    &:last-child {
+         margin-right: 0;
+    }
+}
+
 // ------------------------------
 // #SIDEBAR
 // ------------------------------
