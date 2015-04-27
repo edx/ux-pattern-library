@@ -413,7 +413,7 @@
         @include row();
     }
 
-    .swatch {
+    .example-color {
         @include fill-parent();
 
         @include media($bp-medium) {
@@ -442,11 +442,11 @@
         @include row();
     }
 
-    .swatch {
+    .example-icon {
         @include fill-parent();
 
         .icon-display {
-            width: 32px;
+            width: 24px;
             margin: auto;
 
             svg {

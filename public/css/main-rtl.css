@@ -2,7 +2,7 @@
 .bg-replace,.sr-only,svg:not(:root){overflow:hidden}
 .sr-only,fieldset,img,legend{border:0}
 .sr-only,fieldset,figure,legend,td,th{padding:0}
-.btn-link,.link,.swatch,a{transition:all .25s ease-in-out}
+.btn-link,.example,.link,a{transition:all .25s ease-in-out}
 *,:after,:before{box-sizing:inherit}
 *,html{box-sizing:border-box}
 @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:url(../fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix)format("embedded-opentype"),url(../fonts/OpenSans/OpenSans-Light-webfont.woff)format("woff"),url(../fonts/OpenSans/OpenSans-Light-webfont.ttf)format("truetype"),url("../fonts/OpenSans/OpenSans-Light-webfont.svg#Open Sans")format("svg")}
@@ -79,13 +79,13 @@ h6{font-size:.88889rem}
 .hd-3,.hd-4,.hd-5,.hd-6,.hd-7{margin-bottom:.55556rem}
 .hd-3{font-size:1.33333rem;line-height:1.5}
 .hd-4,.hd-5,.hd-6{line-height:1.6}
-.swatch,.swatch-color .color-class.lod{color:#fbfbfb}
+.example,.swatch-color .color-class.lod{color:#fbfbfb}
 .hd-4{font-size:1.16667rem}
 .hd-5{font-size:1rem}
 .hd-6{font-size:.88889rem}
 .hd-7{font-size:.77778rem;line-height:1.5}
-.swatch{border:1px solid #dfdfdf;border-radius:.13889rem;margin-bottom:1.66667rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#fbfbfb}
-.swatch:active,.swatch:focus,.swatch:hover{-webkit-transform:scale(1.05);transform:scale(1.05);box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.25)}
+.example{border:1px solid #dfdfdf;border-radius:.13889rem;margin-bottom:1.66667rem;padding:.55556rem;box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.05);background:#fbfbfb}
+.example:active,.example:focus,.example:hover{-webkit-transform:scale(1.05);transform:scale(1.05);box-shadow:0 .11111rem .11111rem 0 rgba(127,127,127,.25)}
 .swatch-color{margin-bottom:.55556rem;padding:3.33333rem .83333rem;text-align:center}
 .swatch-color .color-class{font-size:.88889rem;text-transform:lowercase}
 .swatch-color .color-class.dol{color:#0c0c0c}
