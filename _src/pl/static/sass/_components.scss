@@ -57,7 +57,7 @@
 
     .title-description {
         color: palette(grayscale, mid-light);
-        font-size: font-size(mid-small);
+        font-size: font-size(base);
         font-weight: font-weight(normal);
     }
 
@@ -91,7 +91,7 @@
         padding: spacing-vertical(small) spacing-horizontal(base);
         color: palette(grayscale, x-light);
         text-decoration: none;
-        font-size: font-size(mid-small);
+        font-size: font-size(small);
         font-weight: font-weight(semi-bold);
 
         // STATE: hover, active, and focus
@@ -197,7 +197,7 @@
     }
 
     .pl-heading {
-        margin-bottom: spacing-vertical(mid-small);
+        margin-bottom: spacing-vertical(small);
         color: $heading-color;
         font-size: font-size(mid-large);
         font-weight: font-weight(semi-bold);
@@ -247,7 +247,6 @@
     background: palette(grayscale, mid-dark);
     border-right: rem(4) solid  palette(grayscale, x-dark);
     color: palette(grayscale, x-light);
-    font-size: font-size(base);
 }
 
 // ------------------------------
@@ -255,7 +254,6 @@
 // ------------------------------
 .pl-wrapper-content-main {
     background: palette(grayscale, xx-light);
-    font-size: font-size(base);
 }
 
 // ------------------------------
@@ -268,7 +266,7 @@
 .pl-footer-site-copyright {
 
     .pl-copy {
-        font-size: font-size(mid-small);
+        font-size: font-size(small);
         color: palette(grayscale, mid-light);
     }
 }

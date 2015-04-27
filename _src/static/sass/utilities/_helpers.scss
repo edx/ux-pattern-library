@@ -104,9 +104,6 @@
 // reset of copy
 %reset-copy {
     font-family: $text-base-font-family;
-    font-size: font-size(base);
-    line-height: line-height(base);
-    color: $text-base-color;
 }
 
 // reset of code
