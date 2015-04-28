@@ -14,7 +14,7 @@ gulp.task('pl_styles', function () {
         .pipe(autoprefixer({ browsers: ['last 2 version'] }))
         .pipe(gulp.dest(config.pl_local)) // move just for browersync + uncompressed local
         .pipe(browserSync.reload({stream:true}))
-        .pipe(minifyCSS({keepBreaks:true})) // minify and move for production
+        .pipe(minifyCSS()) // minify and move for production
         .pipe(gulp.dest(config.pl_dest))
         .pipe(size());
 });
