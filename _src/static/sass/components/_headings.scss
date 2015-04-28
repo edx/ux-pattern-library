@@ -24,6 +24,7 @@
     @extend %reset-headings;
 
     &.emphasized {
+        color: $headings-primary-color;
         font-weight: $headings-font-weight-bold;
     }
 
