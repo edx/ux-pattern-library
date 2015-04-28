@@ -84,7 +84,7 @@ $(document).ready(function() {
             tab.addClass(that.vars.activeClass);
             $(content).addClass(that.vars.activeClass).removeClass(that.vars.hiddenClass);
         }
-    }
+    };
 
     if ($('.pl-tab-wrapper').length) {
         Tabs.init();
