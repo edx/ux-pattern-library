@@ -6,7 +6,7 @@
 // ------------------------------
 // #CONFIG
 // ------------------------------
-$em-base: 18; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
+$em-base: 16; // deliberately sets bourbon-based em-base (http://bourbon.io/docs/#em-base)
 
 // grid- customizations
 $pl-content-supplemental-width: rem(330); // width of supplemental content sidebar
@@ -153,22 +153,16 @@ $palettes: (
 $font-stack-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-stack-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
 
-// typography: config - scale
-$font-scale-small: 16;
-$font-scale-medium: 18;
-$font-scale-large: 18;
-$font-scale-base: $font-scale-medium;
-
 // typography: sizes
 $font-sizes: (
     xxx-large:      38,
     xx-large:       28,
     x-large:        24,
-    large:          21,
     mid-large:      18,
-    mid-small:      16,
+    large:          21,
+    base:           16,
     small:          14,
-    base:           $font-scale-base
+    x-small:        12,
 );
 
 // typography: line-height
@@ -337,6 +331,17 @@ $code-font-family: $font-stack-monospace;
 // ------------------------------
 // #MIXINS
 // ------------------------------
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
 
 // ------------------------------
 // #HELPERS
