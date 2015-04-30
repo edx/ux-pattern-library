@@ -449,8 +449,21 @@
     .example-set {
         @include row();
     }
+
+    .btn {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: spacing-horizontal(x-small);
+        margin-bottom: spacing-vertical(x-small);
+
+        // CASE: last button in set
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
+// icons
 .pl-element-icons {
 
     .example-set {
