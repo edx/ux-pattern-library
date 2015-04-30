@@ -16,6 +16,7 @@
 // #SECONDARY-ALT (style)
 // #LINK (style)
 // #ELEVATED (type)
+// #ELEVATED-ALT (type)
 // #COMBO (type)
 // #ICONS (type)
 // #OVERLAY (type)
@@ -292,6 +293,45 @@
     &.is-focused {
         background: palette(primary, light);
         box-shadow: inset 0 0 -$buttons-elevated-shadow 0 0 palette(primary, dark);
+    }
+
+    // STATE: is pressed or active
+    &:active,
+    &.is-pressed,
+    &.is-active {
+        background: palette(primary, dark);
+        box-shadow: inset 0 $buttons-elevated-shadow 0 0 palette(primary, x-dark);
+    }
+
+    // STATE: is disabled
+    &:disabled,
+    &.is-disabled {
+        background: palette(grayscale, x-light);
+        border-color: palette(grayscale, x-light);
+        box-shadow: inset 0 -1px 0 palette(grayscale, light);
+        color: palette(grayscale, base);
+    }
+}
+
+
+// ----------------------------
+// #ELEVATED-ALT
+// ----------------------------
+.btn-elevated-alt {
+    background: $transparent;
+    box-shadow: inset 0 0 -$buttons-elevated-shadow 0 0 palette(grayscale-cool, light);
+    border-color: palette(grayscale-cool, light);
+    color: palette(primary, base);
+
+    // STATE: hover and focus
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused {
+        color: palette(grayscale, white);
+        box-shadow: inset 0 0 -$buttons-elevated-shadow 0 0 palette(primary, base);
+        border-color: palette(primary, base);
+        background: palette(primary, accent);
     }
 
     // STATE: is pressed or active
