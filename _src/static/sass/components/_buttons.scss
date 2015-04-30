@@ -106,7 +106,7 @@
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, x-light);
+        border-color: palette(grayscale, light);
         background: palette(grayscale, white);
         color: palette(grayscale, base);
     }
@@ -140,8 +140,8 @@
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, x-light);
-        background: palette(grayscale, x-light);
+        border-color: palette(grayscale, light);
+        background: palette(grayscale, light);
         color: palette(grayscale, base);
     }
 }
@@ -174,7 +174,7 @@
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, x-light);
+        border-color: palette(grayscale, light);
         color: palette(grayscale, light);
     }
 }
