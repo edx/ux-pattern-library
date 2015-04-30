@@ -37,6 +37,7 @@
     border-style: $buttons-border-style;
     border-radius: $buttons-border-radius;
     border-width: $buttons-border-size;
+    font-weight: $buttons-font-weight;
 
     // Display: block, one button per line, full width
     &.block {
@@ -55,8 +56,8 @@
 // #BASE
 // ----------------------------
 .btn-base {
-    font-size: font-size(mid-large);
-    padding: spacing-vertical(x-small) spacing-horizontal(mid-small);
+    font-size: font-size(base);
+    padding: spacing-vertical(x-small) spacing-horizontal(base);
 }
 
 
@@ -64,8 +65,8 @@
 // #LARGE
 // ----------------------------
 .btn-large {
-    font-size: font-size(large);
-    padding: spacing-vertical(small) spacing-horizontal(base);
+    font-size: font-size(mid-large);
+    padding: spacing-vertical(small) spacing-horizontal(mid-large);
 }
 
 
