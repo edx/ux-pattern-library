@@ -13,7 +13,6 @@
 // #DEFAULT-ALT (style)
 // #PRIMARY (style)
 // #SECONDARY (style)
-// #SECONDARY-ALT (style)
 // #LINK (style)
 // #ELEVATED (type)
 // #ELEVATED-ALT (type)
@@ -215,50 +214,6 @@
     &.is-disabled {
         border-color: palette(grayscale, x-light);
         color: palette(grayscale, light);
-    }
-}
-
-
-// ----------------------------
-// #SECONDARY-ALT
-// ----------------------------
-.btn-secondary-alt {
-    background: $transparent;
-    border-color: $transparent;
-    color: palette(grayscale-cool, dark);
-
-    // STATE: hover and focus
-    &:hover,
-    &.is-hovered,
-    &:focus,
-    &.is-focused {
-        background: palette(grayscale-cool, dark);
-        border-color: palette(grayscale-cool, dark);
-        color: palette(grayscale, white);
-    }
-
-    // STATE: is pressed or active
-    &:active,
-    &.is-pressed,
-    &.is-active {
-        background: palette(primary, dark);
-        border-color: palette(primary, dark);
-    }
-
-    // STATE: is disabled
-    &:disabled,
-    &.is-disabled {
-        border-color: palette(grayscale, x-light);
-        color: palette(grayscale, light);
-
-        &:hover,
-        &.is-hovered,
-        &:focus,
-        &.is-focused {
-            background: $transparent;
-            border-color: palette(grayscale, x-light);
-            color: palette(grayscale, light);
-        }
     }
 }
 
