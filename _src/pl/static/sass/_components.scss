@@ -20,7 +20,8 @@
 
     .button-overlay-demo {
         padding: spacing-vertical(mid-large) spacing-horizontal(mid-large);
-        background: palette(grayscale, base);
+        background: palette(primary, sat) url(../images/bg-overlay-example.png) 0 50% no-repeat;
+        background-size: cover;
     }
 }
 

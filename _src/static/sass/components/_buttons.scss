@@ -413,12 +413,12 @@
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, x-light);
+        border-color: palette(grayscale, trans);
         color: palette(grayscale, x-light);
 
         &:hover {
             background: $transparent;
-            border-color: palette(grayscale, x-light);
+            border-color: palette(grayscale, trans);
             color: palette(grayscale, x-light);
         }
     }
