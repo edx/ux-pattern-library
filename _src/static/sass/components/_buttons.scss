@@ -10,7 +10,6 @@
 // #LARGE (size)
 // #SMALL (size)
 // #DEFAULT (style)
-// #DEFAULT-ALT (style)
 // #PRIMARY (style)
 // #SECONDARY (style)
 // #LINK (style)
@@ -112,43 +111,6 @@
         color: palette(grayscale, base);
     }
 }
-
-
-// ----------------------------
-// #DEFAULT-ALT
-// ----------------------------
-.btn-default-alt {
-    background: $transparent;
-    border-color: palette(grayscale-cool, base);
-    color: palette(grayscale-cool, base);
-
-    // STATE: hover and focus
-    &:hover,
-    &.is-hovered,
-    &:focus,
-    &.is-focused {
-        background: palette(primary, base);
-        border-color: palette(primary, base);
-        color: palette(grayscale, white);
-    }
-
-    // STATE: is pressed or active
-    &:active,
-    &.is-pressed,
-    &.is-active {
-        background: palette(primary, dark);
-        border-color: palette(primary, dark);
-    }
-
-    // STATE: is disabled
-    &:disabled,
-    &.is-disabled {
-        background: $transparent;
-        border-color: palette(grayscale-cool, x-light);
-        color: palette(grayscale-cool, light);
-    }
-}
-
 
 // ----------------------------
 // #PRIMARY
