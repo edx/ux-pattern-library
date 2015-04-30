@@ -22,10 +22,10 @@ html, body {
 }
 
 .pl {
+    @include font-smoothing(on);
     background: palette(grayscale, x-light);
-    font-size: $font-scale-medium;
+    font-size: font-size(base);
     font-family: $font-stack-sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
 .pl-wrapper-view {
@@ -35,7 +35,7 @@ html, body {
 // links
 .pl-link {
     @include transition(all 0.15s ease-in-out);
-    border-bottom: rem(1) solid $color-transparent;
+    border-bottom: rem(1) solid $transparent;
     color: palette(primary, base);
     text-decoration: none;
 

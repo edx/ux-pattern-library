@@ -84,16 +84,16 @@ $(document).ready(function() {
             tab.addClass(that.vars.activeClass);
             $(content).addClass(that.vars.activeClass).removeClass(that.vars.hiddenClass);
         }
-    }
+    };
 
     if ($('.pl-tab-wrapper').length) {
         Tabs.init();
     }
 
     // palette values
-    if ($('.swatch').length) {
+    if ($('.example').length) {
 
-        $('.swatch').each(function() {
+        $('.example').each(function() {
             var rgb = $(this).find('.swatch-color').css('backgroundColor');
 
             $(this).find('.swatch-meta .color-rgb').text(rgb);
