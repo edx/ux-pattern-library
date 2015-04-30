@@ -137,7 +137,7 @@
     &:disabled,
     &.is-disabled {
         display: none; // :)
-        color: palette(grayscale, mid-light);
+        color: palette(grayscale, light);
     }
 
     // STATE: is pressed or active
