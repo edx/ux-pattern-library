@@ -272,7 +272,8 @@ $headings-secondary-color: palette(grayscale, base);
 $buttons-border-style: solid;
 $buttons-border-size: 1px;
 $buttons-elevated-shadow: 3px;
-$buttons-border-radius: 4px;
+$buttons-border-radius: 3px;
+$buttons-font-weight: font-weight(semi-bold);
 
 // tables
 $table-cell-padding: spacing-vertical(small) spacing-horizontal(small);
