@@ -474,13 +474,15 @@
         @include fill-parent();
 
         .icon-display {
-            width: 24px;
+            width: 100%;
+            height: 144px;
             margin: auto;
+            line-height: 144px;
+            text-align: center;
 
-            svg {
+            .icon {
                 @include transition(fill 0.25s ease-in-out);
-                width: 100%;
-                fill: palette(primary, base);
+                color: palette(primary, base);
             }
         }
 
@@ -505,8 +507,8 @@
 
             .icon-display {
 
-                svg {
-                    fill: palette(primary, sat); // demonstrating color change simplicity
+                .icon {
+                    color: palette(primary, sat); // demonstrating color change simplicity
                 }
             }
         }
