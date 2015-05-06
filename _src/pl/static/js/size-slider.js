@@ -12,7 +12,7 @@ $(function() {
         vars: {
             wrapper: $('#icons-preview'),
             heading: $('.pl-tab-heading'),
-            example: $('.example-icon .icon-display'),
+            example: $('.example-icon .icon-display .icon'),
             sliderControl: $('#iconFontSlider'),
             sliderValue: $('#iconFontSliderValue')
         },
@@ -43,7 +43,7 @@ $(function() {
         updateIconSize: function(size) {
             var that = this;
 
-            that.vars.example.css({ width: size + 'px' });
+            that.vars.example.css({ fontSize: size + 'px' });
         },
 
         updateInputText: function(size) {
