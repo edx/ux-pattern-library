@@ -2138,7 +2138,7 @@
 			}
 		},
 		"imagePref": {
-			"prefix": "fa-",
+			"prefix": "icon-",
 			"png": false,
 			"useClassSelector": true,
 			"color": 4473924,
