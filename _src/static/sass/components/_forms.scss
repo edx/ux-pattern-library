@@ -1,0 +1,408 @@
+// ------------------------------
+// edX Pattern Library: Components - Forms
+
+// About: Contains base styling for forms
+
+// #GLOBAL
+// #INPUT TEXT
+// #INPUT RADIO/CHECKBOX
+// #SELECT
+// #TEXTAREA
+// #SLIDERS
+// #PROGRESS
+
+// ----------------------------
+// #GLOBAL
+// ----------------------------
+.form {
+    display: inline-block;
+}
+
+.fieldset {
+    @include clearfix;
+    margin-bottom: spacing-vertical(mid-small);
+
+    .group-legend {
+        margin-bottom: spacing-vertical(x-small);
+    }
+
+    .field-wrapper {
+        margin-bottom: spacing-vertical(base);
+
+        .helper-text {
+            font-size: font-size(small);
+            color: $helper-text;
+        }
+    }
+
+    &.form-group {
+
+        .field-wrapper { // Generally used for radios and checkboxes
+            margin-bottom: spacing-vertical(x-small);
+        }
+
+        .helper-text { // Generally used for radios and checkboxes
+            margin-top: 0;
+            margin-left: 24px;
+        }
+    }
+}
+
+.form-label {
+    display: block;
+    margin-bottom: spacing-vertical(x-small);
+    color: $label-color;
+
+    &.inline-label {
+        margin-bottom: 0;
+    }
+
+    &.is-active,
+    &.is-selected {
+        color: $label-color-active;
+    }
+}
+
+.helper-text {
+    margin-top: spacing-vertical(x-small);
+}
+
+.input,
+.select,
+.textarea {
+    @include transition(all timing(xx-fast) ease-in-out 0s);
+    display: inline-block;
+    min-width: ($baseline*20) + px; // for the purposes of the demo... can probably get moved elsewhere...
+    padding: ($baseline/2) + px;
+    border: 1px solid $field-default-border;
+    background: $field-default-background;
+    font-family: $font-family-sans-serif;
+    font-size: font-size(base);
+    color: $field-default-text-color;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.progress {
+    @include transition(all timing(xx-fast) ease-in-out 0s);
+}
+
+// ----------------------------
+// #INPUT TEXT
+// ----------------------------
+.input-text {
+
+    &:focus,
+    &.is-active {
+        border-color: $field-default-border-focus;
+        color: $field-default-text-color-hover;
+    }
+
+    &:disabled,
+    &.is-disabled {
+        border-color: $field-disabled-border;
+        background: $field-disabled-background;
+    }
+
+    &.input-simple {
+        padding: ($baseline/2) + px 0;
+        border-width: 0 0 2px 0;
+
+        &:focus,
+        &.is-active {
+            border-color: $field-simple-border-focus;
+        }
+    }
+}
+
+// ----------------------------
+// #SELECT
+// ----------------------------
+.wrapper-replace-select {
+    position: relative;
+}
+
+.input-select {
+    height: ($baseline*2) + px;
+    line-height: ($baseline*2) + px;
+
+    &:focus,
+    &.is-active {
+        border-color: $field-default-border-focus;
+        color: $field-default-text-color-hover;
+    }
+
+    &:disabled,
+    &.is-disabled {
+        border-color: $field-disabled-border;
+        background: $field-disabled-background;
+    }
+
+    &.is-replaced {
+        position: absolute;
+        z-index: z-index(mid-front);
+    }
+
+    &.is-transparent {
+        opacity: 0;
+    }
+}
+
+.wrapper-custom-select {
+    @extend .input;
+    @extend .input-select;
+    position: absolute;
+    display: inline;
+    top: 0;
+    left: 0;
+    width: auto;
+    line-height: 100%;
+    z-index: z-index(base);
+
+    svg {
+        position: absolute;
+        right: ($baseline/2) + px;
+        height: $baseline + px;
+        width: $baseline + px;
+        fill: $field-default-border;
+    }
+
+    &:hover,
+    &:focus,
+    &.is-hover,
+    &.is-active {
+        border: 1px solid $field-default-border-focus;
+
+        svg {
+            @include transition(all timing(xx-fast) ease-in-out 0s);
+            fill: $field-default-border-focus;
+        }
+    }
+
+    &:disabled,
+    &.is-disabled {
+        cursor: default;
+        color: $field-disabled-text-color;
+    }
+}
+
+// ----------------------------
+// #RADIO / CHECKBOX
+// ----------------------------
+.wrapper-replace-radio,
+.wrapper-replace-checkbox {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+.wrapper-custom-radio,
+.wrapper-custom-checkbox {
+    display: inline-block;
+    z-index: z-index(base);
+
+    svg {
+        @include transition(all timing(xx-fast) ease-in-out 0s);
+        height: $baseline + px;
+        width: $baseline + px;
+        fill: $field-default-border;
+    }
+
+    &.is-selected {
+
+        svg {
+            fill: $field-default-border-focus;
+        }
+    }
+}
+
+.input-radio,
+.input-checkbox {
+
+    &:disabled,
+    &.is-disabled {
+
+        svg {
+            fill: $field-disabled-text-color;
+            cursor: default;
+        }
+    }
+
+    &.is-replaced {
+        position: absolute;
+        margin-top: ($baseline/4) + px;
+        z-index: z-index(mid-front);
+    }
+
+    &.is-transparent {
+        opacity: 0;
+    }
+}
+
+// ----------------------------
+// #TEXTAREA
+// ----------------------------
+.input-textarea {
+
+    &:focus,
+    &:active,
+    &.is-active {
+        border-color: $field-default-border-focus;
+        color: $field-default-text-color-hover;
+    }
+
+    &.textarea-short {
+        height: ($baseline*4.5) + px; // 3 clean lines
+    }
+
+    &.textarea-medium {
+        height: ($baseline*10) + px; // 8 clean lines
+    }
+
+    &.textarea-tall {
+        height: ($baseline*14.4) + px; // 12 clean lines
+    }
+
+    &.textarea-block {
+        width: 100%;
+    }
+}
+
+// ----------------------------
+// #SLIDERS
+// ----------------------------
+.input-slider,
+input[type="range"] {
+    -webkit-appearance: none;
+    height: ($baseline/3) + px;
+
+    // Hover states
+    &:hover,
+    &.is-hovered {
+        &::-webkit-slider-runnable-track {
+            background: $slider-default-hover;
+        }
+
+        &::-webkit-slider-thumb {
+            height: $baseline + px;
+            width: $baseline + px;
+            margin-top: -($baseline/3) + px;
+            background: $slider-default-handle-hover;
+        }
+
+        &::-moz-track {
+            background: $slider-default-hover;
+        }
+
+        &::-moz-range-thumb-thumb {
+            height: $baseline + px;
+            width: $baseline + px;
+            margin-top: -($baseline/3) + px;
+            background: $slider-default-handle-hover;
+        }
+
+        &::-ms-track {
+            background: $slider-default-hover;
+        }
+
+        &::-ms-thumb-thumb {
+            height: $baseline + px;
+            width: $baseline + px;
+            margin-top: -($baseline/3) + px;
+            background: $slider-default-handle-hover;
+        }
+    }
+
+    // Chrome track
+    &::-webkit-slider-runnable-track {
+        @include transition(all timing(xx-fast) ease-in-out 0s);
+        @include transform-origin(center center);
+        width: 100%;
+        height: ($baseline/2) + px;
+        border-radius: $slider-default-border-radius;
+        border: none;
+        background: $slider-default-track;
+        cursor: pointer;
+    }
+
+    // Mozilla/Firefox track
+    &::-moz-track {
+        @include transition(all timing(xx-fast) ease-in-out 0s);
+        @include transform-origin(center center);
+        width: 100%;
+        height: ($baseline/2) + px;
+        border-radius: $slider-default-border-radius;
+        border: none;
+        background: $slider-default-track;
+        cursor: pointer;
+    }
+
+    // IE track
+    &::-ms-track {
+        @include transition(all timing(xx-fast) ease-in-out 0s);
+        @include transform-origin(center center);
+        width: 100%;
+        height: ($baseline/2) + px;
+        border-radius: $slider-default-border-radius;
+        border: none;
+        background: $slider-default-track;
+        cursor: pointer;
+        color: transparent;
+    }
+
+    // Chrome handle
+    &::-webkit-slider-thumb {
+        @include transition(all timing(xx-fast) ease-in-out 0s);
+        -webkit-appearance: none;
+        height: ($baseline/2) + px;
+        width: ($baseline/2) + px;
+        border: none;
+        border-radius: 50%;
+        background: $slider-default-handle;
+    }
+
+    // Mozilla/Firefox handle
+    &::-moz-range-thumb {
+        @include transition(all timing(xx-fast) ease-in-out 0s);
+        height: ($baseline/2) + px;
+        width: ($baseline/2) + px;
+        border: none;
+        border-radius: 50%;
+        background: $slider-default-handle;
+    }
+
+    // IE handle
+    &::-ms-thumb {
+        @include transition(all timing(xx-fast) ease-in-out 0s);
+        height: ($baseline/2) + px;
+        width: ($baseline/2) + px;
+        border: none;
+        border-radius: $slider-default-border-radius;
+        background: $slider-default-handle;
+    }
+}
+
+// ----------------------------
+// #PROGRESS
+// ----------------------------
+.input-progress {
+    height: ($baseline/2) + px;
+
+    &[value] {
+        -webkit-appearance: none;
+
+        &::-webkit-progress-bar {
+            background: $progress-track;
+            border: none;
+            border-radius: $progress-border-radius;
+        }
+
+        &::-webkit-progress-value {
+            @include transition(all timing(xx-fast) ease-in-out 0s);
+            border-radius: $progress-border-radius;
+            background: $progress-track-done;
+        }
+    }
+}

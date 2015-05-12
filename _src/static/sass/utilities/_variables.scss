@@ -50,6 +50,7 @@ $brand-secondary-accent:    rgb(242, 108, 170);
 $success: $green;
 $warning: $yellow;
 $error: $red;
+$shadow: rgba(0, 0, 0, .25);
 
 // colors: palettes
 $palettes: (
@@ -318,6 +319,43 @@ $buttons-border-size: 1px;
 $buttons-elevated-shadow: 3px;
 $buttons-border-radius: 3px;
 $buttons-font-weight: font-weight(semi-bold);
+
+// input
+$label-color: $text-base-color;
+$label-color-active: palette(grayscale, x-dark);
+
+$field-default-background: palette(grayscale, white);
+$field-default-background-focus: $field-default-background;
+$field-default-border: palette(grayscale-cool, x-light);
+$field-default-border-focus: palette(primary, base);
+$field-default-text-color: palette(grayscale-cool, dark);
+$field-default-text-color-hover: palette(grayscale, x-dark);
+
+$field-disabled-background: palette(grayscale, x-light);
+$field-disabled-border: palette(grayscale, light);
+$field-disabled-text-color: palette(grayscale, light);
+
+$field-simple-border-focus: palette(grayscale, x-dark);
+
+$slider-default-track: palette(grayscale, light);
+$slider-default-border: $slider-default-track;
+$slider-default-border-radius: $buttons-border-radius;
+$slider-default-handle: palette(primary, light);
+$slider-default-handle-hover: palette(primary, base);
+$slider-default-focus: palette(primary, accent);
+$slider-default-hover: palette(primary, x-accent);
+
+$slider-disabled-track: palette(grayscale, x-light);
+$slider-disabled-border: $slider-disabled-track;
+$slider-disabled-handle: palette(grayscale, base);
+$slider-disabled-focus: palette(grayscale, light);
+
+$progress-track: palette(grayscale, light);
+$progress-border: $progress-track;
+$progress-border-radius: $buttons-border-radius;
+$progress-track-done: palette(primary, accent);
+
+$helper-text: palette(grayscale-cool, dark);
 
 // tables
 $table-cell-padding: spacing-vertical(small) spacing-horizontal(small);
