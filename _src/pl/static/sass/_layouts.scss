@@ -14,10 +14,10 @@
 // main content
 .pl-wrapper-content-main {
 
-    @include media($bp-large) {
-        width: calc(100% - $pl-content-supplemental-width);
-        margin-left: $pl-content-supplemental-width;
-    }
+    // @include media($bp-large) {
+    //     width: calc(100% - $pl-content-supplemental-width);
+    //     margin-left: $pl-content-supplemental-width;
+    // }
 }
 
 .pl-wrapper-element {
@@ -30,38 +30,38 @@
     color: palette(grayscale, x-light);
     font-size: font-size(base);
 
-    @include media($bp-large) {
-        @include size($pl-content-supplemental-width 100%);
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        border-right: rem(4) solid palette(grayscale, x-dark);
-    }
+    // @include media($bp-large) {
+    //     @include size($pl-content-supplemental-width 100%);
+    //     display: block;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     border-right: rem(4) solid palette(grayscale, x-dark);
+    // }
 
     .pl-header-site {
         padding: spacing-vertical(base) spacing-horizontal(base);
 
-        @include media($bp-large) {
-            margin: spacing-vertical(large) spacing-horizontal(base) spacing-vertical(base) spacing-horizontal(base);
-            padding: 0;
-        }
+        // @include media($bp-large) {
+        //     margin: spacing-vertical(large) spacing-horizontal(base) spacing-vertical(base) spacing-horizontal(base);
+        //     padding: 0;
+        // }
     }
 
 
     .pl-nav {
         display: none;
 
-        @include media($bp-large) {
-            display: block;
-        }
+        // @include media($bp-large) {
+        //     display: block;
+        // }
     }
 
     .pl-footer-site {
         display: none;
 
-        @include media($bp-large) {
-            display: block;
-        }
+        // @include media($bp-large) {
+        //     display: block;
+        // }
     }
 }
