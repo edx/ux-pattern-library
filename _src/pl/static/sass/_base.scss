@@ -25,7 +25,6 @@ html, body {
     @include font-smoothing(on);
     background: palette(grayscale, x-light);
     font-size: font-size(base);
-    font-family: $font-stack-sans-serif;
 }
 
 .pl-wrapper-view {
