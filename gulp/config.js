@@ -2,7 +2,7 @@
 
 // pattern library
 var dest = './public';
-var src = './_src';
+var src = './_src/edx-pl';
 var local = './_site';
 
 // documentation site
