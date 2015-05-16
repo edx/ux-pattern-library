@@ -110,6 +110,10 @@ pre {
     @extend %a11y-hide-image-text;
 }
 
+.is-hidden {
+    display: none;
+}
+
 [class^='wrapper'] {
     @extend %wrapper;
 }

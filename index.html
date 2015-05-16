@@ -11,9 +11,9 @@ viewclass:  index
         <article class="pl-element pl-element-{{ post.slug }}" id="{{ post.slug }}">
 
             <header class="pl-element-header">
-                <h1 class="pl-heading pl-element-title">{{ post.title }}</h1>
+                <h1 class="pl-heading pl-element-title hd-4">{{ post.title }}</h1>
 
-                <ul class="pl-list pl-element-meta">
+                <ul class="pl-list pl-element-meta copy copy-micro de-emphasized">
                     <li class="meta meta-updated">
                         <span class="pl-element-meta-updated-label">Last updated on </span>
                         <time class="pl-element-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
@@ -25,7 +25,7 @@ viewclass:  index
             </header>
 
             <div class="pl-element-info">
-                <p>{{post.info}}</p>
+                <p class="copy copy-base">{{post.info}}</p>
             </div>
 
             <div class="pl-tab-wrapper">
@@ -77,7 +77,7 @@ viewclass:  index
                         <h2 class="pl-heading pl-tab-heading pl-element-styling-title">{{post.title}} Style</h2>
 
                         <div class="pl-tab-content">
-                            <p>View <a class="pl-link" href="{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                            <p class="copy copy-base">View <a class="pl-link" href="{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                         </div>
                     </div>
                     {% endif %}
@@ -92,7 +92,7 @@ viewclass:  index
 <div class="pl-wrapper-link-top">
     <a class="pl-link pl-link-top" href="#content-top">
         <span class="pl-icon">&#65514;</span>
-        <span class="pl-sr">Return to the top of this view</span>
+        <span class="sr-only">Return to the top of this view</span>
     </a>
 </div>
 

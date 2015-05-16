@@ -4,64 +4,99 @@
 // About: styling for generic layouts and responsive support.
 
 // ------------------------------
-// #RESPONSIVE
-// ------------------------------
-// breakpoints
-
-// ------------------------------
 // #LAYOUT
 // ------------------------------
 // main content
 .pl-wrapper-content-main {
 
-    // @include media($bp-large) {
-    //     width: calc(100% - $pl-content-supplemental-width);
-    //     margin-left: $pl-content-supplemental-width;
-    // }
+    @include susy-breakpoint($bp-large, $susy) {
+        width: calc(100% - $pl-content-supplemental-width);
+        margin-left: $pl-content-supplemental-width;
+    }
 }
 
 .pl-wrapper-element {
-    @include outer-container();
+    @include container();
 }
 
 // sidebar
 .pl-wrapper-content-supplemental {
-    background: palette(grayscale, dark);
-    color: palette(grayscale, x-light);
-    font-size: font-size(base);
 
-    // @include media($bp-large) {
-    //     @include size($pl-content-supplemental-width 100%);
-    //     display: block;
-    //     position: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     border-right: rem(4) solid palette(grayscale, x-dark);
-    // }
+     @include susy-breakpoint($bp-large, $susy) {
+        @include size($pl-content-supplemental-width 100%);
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-right: rem(4) solid palette(grayscale, black);
+    }
 
     .pl-header-site {
-        padding: spacing-vertical(base) spacing-horizontal(base);
+        padding: spacing-vertical(mid-small) spacing-horizontal(mid-large);
 
-        // @include media($bp-large) {
-        //     margin: spacing-vertical(large) spacing-horizontal(base) spacing-vertical(base) spacing-horizontal(base);
-        //     padding: 0;
-        // }
+        @include susy-breakpoint($bp-large, $susy) {
+            margin: spacing-vertical(base) spacing-horizontal(mid-large);
+            padding: 0;
+        }
     }
 
 
     .pl-nav {
         display: none;
 
-        // @include media($bp-large) {
-        //     display: block;
-        // }
+        @include susy-breakpoint($bp-large, $susy) {
+            display: block;
+        }
     }
 
     .pl-footer-site {
         display: none;
 
-        // @include media($bp-large) {
-        //     display: block;
-        // }
+         @include susy-breakpoint($bp-large, $susy) {
+            display: block;
+        }
+    }
+}
+
+// element
+.pl-element-header {
+    @include container();
+}
+
+.pl-element-title {
+    margin-bottom: spacing-vertical(x-small);
+
+    @include susy-breakpoint($bp-medium, $susy) {
+        @include span(6 first);
+        margin-bottom: 0;
+    }
+}
+
+
+
+.pl-element-meta {
+
+    @include susy-breakpoint($bp-medium, $susy) {
+        @include span(4 last);
+        text-align: right;
+    }
+
+    .meta {
+        display: block;
+
+       @include susy-breakpoint($bp-medium, $susy) {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: spacing-horizontal(xx-small);
+       }
+    }
+
+    .meta-updated {
+        margin-right: spacing-horizontal(small);
+        margin-bottom: spacing-vertical(x-small);
+
+        @include susy-breakpoint($bp-medium, $susy) {
+            margin-bottom: 0;
+        }
     }
 }
