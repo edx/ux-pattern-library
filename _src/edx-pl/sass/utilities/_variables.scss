@@ -26,6 +26,22 @@ $baseline:               20;
 $baseline-vertical:      ($baseline*2);
 $baseline-horizontal:    $baseline;
 
+$susy: (
+    use-custom clearfix: true,
+    global-box-sizing: border-box,
+    math: fluid,
+    output: float,
+    columns: 12,
+    gutters: .5,
+    container: rem(1170),
+);
+
+// grid - breakpoints
+$bp-small:  320px;
+$bp-medium: 768px;
+$bp-large:  1024px;
+$bp-huge:   1280px;
+
 // ----------------------------
 // #COLORS
 // ----------------------------
@@ -172,9 +188,6 @@ $palettes: (
 $font-family-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
 
-// typography: config - scale
-$modular-scale-ratio: $perfect-fourth;
-
 // typography: sizes
 $font-sizes: (
     xxx-large:      38,
@@ -294,7 +307,7 @@ $text-de-emphasized-font-weight: font-weight(normal);
 
 // links
 $link-color: palette(primary, base);
-$link-focus-color: palette(primary, sat);
+$link-focus-color: palette(primary, accent);
 $link-visited-color: palette(primary, dark);
 
 // headings

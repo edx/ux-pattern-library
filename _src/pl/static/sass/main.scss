@@ -7,7 +7,8 @@
 // #VENDOR
 // ------------------------------
 @import '../../../vendor/bourbon/bourbon';
-@import '../../../vendor/neat/neat';
+@import '../../../vendor/susy/susy';
+@import '../../../vendor/breakpoint/breakpoint';
 @import '../../../vendor/bi-app/bi-app-ltr';   // LTR support
 
 // ------------------------------
@@ -20,7 +21,7 @@
 @import '../../../edx-pl/sass/utilities/mixins';
 @import '../../../edx-pl/sass/utilities/helpers';
 
-// @import 'utilities';
+@import 'utilities';
 
 // ------------------------------
 // #BASE
