@@ -7,9 +7,9 @@ viewclass:  element
 <div class="pl-wrapper-element">
     <article class="pl-element pl-element-{{ page.slug }}">
         <header class="pl-element-header">
-            <h1 class="pl-heading pl-element-title">{{ page.title }}</h1>
+            <h1 class="pl-heading pl-element-title hd-4">{{ page.title }}</h1>
 
-            <ul class="pl-list pl-element-meta">
+            <ul class="pl-list pl-element-meta copy copy-micro de-emphasized">
                 <li class="meta meta-updated">
                     <span class="pl-element-meta-updated-label">Last updated on </span>
                     <time class="pl-element-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
@@ -18,7 +18,7 @@ viewclass:  element
         </header>
 
         <div class="pl-element-info">
-            <p>{{page.info}}</p>
+            <p class="copy copy-base">{{page.info}}</p>
         </div>
 
         <div class="pl-tab-wrapper">
@@ -70,7 +70,7 @@ viewclass:  element
                     <h2 class="pl-heading pl-tab-heading pl-element-style-title">{{page.title}} Style</h2>
 
                     <div class="pl-tab-content">
-                        <p>You can find <a class="pl-link" href="{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                        <p class="copy copy-base">You can find <a class="pl-link" href="{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                     </div>
                 </div>
             </div>

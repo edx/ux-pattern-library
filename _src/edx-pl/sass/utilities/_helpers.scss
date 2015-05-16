@@ -136,7 +136,7 @@
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        display: none; // :)
+        display: none;
         color: palette(grayscale, light);
     }
 
