@@ -278,14 +278,14 @@
 
     // targets the first element in a parent container
     &:first-of-type {
-        border-top-left-radius: $buttons-border-radius;
-        border-bottom-left-radius: $buttons-border-radius;
+        @include border-top-left-radius($buttons-border-radius);
+        @include border-bottom-left-radius($buttons-border-radius);
     }
 
     // targets the last element in a parent container
     &:last-of-type {
-        border-top-right-radius: $buttons-border-radius;
-        border-bottom-right-radius: $buttons-border-radius;
+        @include border-top-right-radius($buttons-border-radius);
+        @include border-bottom-right-radius($buttons-border-radius);
     }
 }
 
