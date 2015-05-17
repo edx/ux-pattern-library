@@ -13,6 +13,11 @@
 @import '../../vendor/bi-app/bi-app-ltr';   // LTR support
 
 // ------------------------------
+// #UTILITIES
+// ------------------------------
+@import 'utilities/variables-ltr';
+
+// ------------------------------
 // #BUILD
 // ------------------------------
 @import 'build';                            // shared compile/build order for both LTR and RTL UI
