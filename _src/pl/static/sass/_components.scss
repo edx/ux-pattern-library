@@ -132,7 +132,7 @@
             @include size(rem(5));
             position: absolute;
             top: rem(18);
-            left: spacing-horizontal(mid-small);
+            @include left(spacing-horizontal(mid-small));
             content: '';
             border-radius: 100%;
             opacity: 0;
@@ -160,7 +160,7 @@
             @include transition(opacity 0.25s ease-in-out);
             display: inline-block;
             vertical-align: baseline;
-            margin-right: (spacing-horizontal(xx-small));
+            @include margin-right(spacing-horizontal(xx-small));
             font-size: font-size(large);
             line-height: line-height(none);
             opacity: 0.25;
@@ -215,10 +215,10 @@
 .pl-setting {
     display: inline-block;
     vertical-align: middle;
-    margin-right: spacing-horizontal(small);
+    @include margin-right(spacing-horizontal(small));
 
     &:last-child {
-         margin-right: 0;
+         @include margin-right(0);
     }
 }
 
@@ -400,7 +400,7 @@
         }
 
         .icon-classname {
-            text-align: center;
+            @include text-align(center);
             font-size: font-size(small);
             color: palette(grayscale, base);
         }

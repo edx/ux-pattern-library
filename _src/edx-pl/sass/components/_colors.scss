@@ -62,7 +62,7 @@
     padding: spacing-vertical(xx-small) spacing-horizontal(small);
     white-space: nowrap;
     font-size: font-size(small);
-    text-align: center;
+    @include text-align(center);
     color: palette(grayscale, dark);
 
     .color-rgb {
