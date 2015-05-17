@@ -1,21 +1,6 @@
 // ------------------------------
-// edX Pattern Library Site: Main Style Compile
-
-// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pl-" to avoid cascade/run-off into the element stylings.
-
-// ------------------------------
-// #VENDOR
-// ------------------------------
-@import '../../../vendor/bourbon/bourbon';
-@import '../../../vendor/susy/susy';
-@import '../../../vendor/breakpoint/breakpoint';
-@import '../../../vendor/bi-app/bi-app-ltr';   // LTR support
-
-// ------------------------------
 // #UTILITIES
 // ------------------------------
-@import '../../../edx-pl/sass/utilities/variables-ltr';
-
 @import '../../../edx-pl/sass/utilities/variables';
 @import '../../../edx-pl/sass/utilities/functions';
 @import '../../../edx-pl/sass/utilities/mixins';
