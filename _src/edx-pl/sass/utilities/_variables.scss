@@ -22,9 +22,9 @@ $em-base: 16; // deliberately sets bourbon-based em-base (http://bourbon.io/docs
 // #GRID
 // ----------------------------
 // grid - baseline
-$baseline:               20;
-$baseline-vertical:      ($baseline*2);
-$baseline-horizontal:    $baseline;
+$baseline:               20 !default;
+$baseline-vertical:      ($baseline*2) !default;
+$baseline-horizontal:    $baseline !default;
 
 $susy: (
     use-custom clearfix: true,
@@ -37,10 +37,10 @@ $susy: (
 );
 
 // grid - breakpoints
-$bp-small:  320px;
-$bp-medium: 768px;
-$bp-large:  1024px;
-$bp-huge:   1280px;
+$bp-small:  320px !default;
+$bp-medium: 768px !default;
+$bp-large:  1024px !default;
+$bp-huge:   1280px !default;
 
 // ----------------------------
 // #COLORS
@@ -57,15 +57,15 @@ $blue:                      rgb(0, 121, 188);
 $pink:                      rgb(203, 89, 141);
 
 // colors: brand
-$brand-primary:             $blue;
-$brand-primary-accent:      rgb(14, 166, 236);
-$brand-secondary:           $pink;
-$brand-secondary-accent:    rgb(242, 108, 170);
+$brand-primary:             $blue !default;
+$brand-primary-accent:      rgb(14, 166, 236) !default;
+$brand-secondary:           $pink !default;
+$brand-secondary-accent:    rgb(242, 108, 170) !default;
 
 // colors: utilities
-$success: $green;
-$warning: $yellow;
-$error: $red;
+$success: $green !default;
+$warning: $yellow !default;
+$error: $red !default;
 
 // colors: palettes
 $palettes: (
@@ -185,8 +185,8 @@ $palettes: (
 );
 
 // typography: config - stacks
-$font-family-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+$font-family-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
 
 // typography: sizes
 $font-sizes: (
@@ -285,58 +285,58 @@ $timing: (
 // #APPLICATIONS
 // ----------------------------
 // scaffolding
-$view-bg: palette(grayscale, xx-light);
+$view-bg: palette(grayscale, xx-light) !default;
 
 // base component settings
-$component-focus-color: inherit;
-$component-focus-bg: palette(primary, x-light);
-$component-active-color: palette(grayscale, white);
-$component-active-bg: palette(primary, base);
+$component-focus-color: inherit !default;
+$component-focus-bg: palette(primary, x-light) !default;
+$component-active-color: palette(grayscale, white) !default;
+$component-active-bg: palette(primary, base) !default;
 
 // base text settings
-$text-base-font-family: $font-family-sans-serif;
-$text-base-color: palette(grayscale, dark);
-$text-base-font-weight: font-weight(normal);
-$text-base-focus-color: palette(grayscale, x-dark);
+$text-base-font-family: $font-family-sans-serif !default;
+$text-base-color: palette(grayscale, dark) !default;
+$text-base-font-weight: font-weight(normal) !default;
+$text-base-focus-color: palette(grayscale, x-dark) !default;
 
-$text-emphasized-color: palette(grayscale, x-dark);
-$text-emphasized-font-weight: font-weight(normal);
+$text-emphasized-color: palette(grayscale, x-dark) !default;
+$text-emphasized-font-weight: font-weight(normal) !default;
 
-$text-de-emphasized-color: palette(grayscale, base);
-$text-de-emphasized-font-weight: font-weight(normal);
+$text-de-emphasized-color: palette(grayscale, base) !default;
+$text-de-emphasized-font-weight: font-weight(normal) !default;
 
 // links
-$link-color: palette(primary, base);
-$link-focus-color: palette(primary, accent);
-$link-visited-color: palette(primary, dark);
+$link-color: palette(primary, base) !default;
+$link-focus-color: palette(primary, accent) !default;
+$link-visited-color: palette(primary, dark) !default;
 
 // headings
-$headings-font-weight-normal: font-weight(normal);
-$headings-font-weight-bold: font-weight(semi-bold);
-$headings-font-weight-x-bold: font-weight(bold);
+$headings-font-weight-normal: font-weight(normal) !default;
+$headings-font-weight-bold: font-weight(semi-bold) !default;
+$headings-font-weight-x-bold: font-weight(bold) !default;
 
-$headings-base-font-family: $font-family-sans-serif;
-$headings-base-font-weight: $headings-font-weight-normal;
-$headings-base-color: palette(grayscale, x-dark);
+$headings-base-font-family: $font-family-sans-serif !default;
+$headings-base-font-weight: $headings-font-weight-normal !default;
+$headings-base-color: palette(grayscale, x-dark) !default;
 
-$headings-primary-font-family: $font-family-sans-serif;
-$headings-primary-color: palette(grayscale, black);
+$headings-primary-font-family: $font-family-sans-serif !default;
+$headings-primary-color: palette(grayscale, black) !default;
 
-$headings-secondary-font-family: $font-family-sans-serif;
-$headings-secondary-color: palette(grayscale, base);
+$headings-secondary-font-family: $font-family-sans-serif !default;
+$headings-secondary-color: palette(grayscale, base) !default;
 
 // buttons
-$buttons-border-style: solid;
-$buttons-border-size: 1px;
-$buttons-elevated-shadow: 3px;
-$buttons-border-radius: 3px;
-$buttons-font-weight: font-weight(semi-bold);
+$buttons-border-style: solid !default;
+$buttons-border-size: 1px !default;
+$buttons-elevated-shadow: 3px !default;
+$buttons-border-radius: 3px !default;
+$buttons-font-weight: font-weight(semi-bold) !default;
 
 // tables
-$table-cell-padding: spacing-vertical(small) spacing-horizontal(small);
-$table-condensed-cell-padding: spacing-vertical(x-small) spacing-horizontal(x-small);
-$table-bg: palette(grayscale, white);
-$table-accent-bg: palette(primary, accent);
-$table-focus-bg: $component-focus-bg;
-$table-active-bg: $component-active-bg;
-$table-border-color: palette(grayscale, x-light);
+$table-cell-padding: spacing-vertical(small) spacing-horizontal(small) !default;
+$table-condensed-cell-padding: spacing-vertical(x-small) spacing-horizontal(x-small) !default;
+$table-bg: palette(grayscale, white) !default;
+$table-accent-bg: palette(primary, accent) !default;
+$table-focus-bg: $component-focus-bg !default;
+$table-active-bg: $component-active-bg !default;
+$table-border-color: palette(grayscale, x-light) !default;
