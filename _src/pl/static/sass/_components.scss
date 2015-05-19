@@ -57,7 +57,7 @@
     }
 
     .title-description {
-        color: palette(grayscale, mid-light);
+        color: palette(grayscale, base);
         font-weight: font-weight(normal);
     }
 
@@ -180,7 +180,7 @@
 
 .pl-nav-title {
     margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small) spacing-horizontal(mid-large);
-    color: palette(grayscale, mid-light);
+    color: palette(grayscale, base);
     font-size: font-size(small);
     font-weight: font-weight(semi-bold);
     text-transform: uppercase;
