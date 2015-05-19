@@ -10,7 +10,7 @@
 
     // link back to top
     .pl-wrapper-link-top {
-        text-align: center;
+        @include text-align(center);
     }
 
     .pl-link-top {

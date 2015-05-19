@@ -14,13 +14,13 @@
 // tab panels and examples
 .example-set {
     @extend %clear-last-child;
-    padding-bottom: spacing-vertical(mid-large);
-    border-bottom: spacing-vertical(x-small) solid palette(grayscale, xx-light);
-    margin-bottom: spacing-vertical(mid-large);
+    padding-bottom: spacing-vertical(base);
+    border-bottom: rem(2) solid palette(grayscale-cool, x-light);
+    margin-bottom: spacing-vertical(base);
 
     .button-overlay-demo {
         padding: spacing-vertical(mid-large) spacing-horizontal(mid-large);
-        background: palette(primary, sat) url(../images/bg-overlay-example.png) 0 50% no-repeat;
+        background: palette(primary, accent) url(../images/bg-overlay-example.png) 0 50% no-repeat;
         background-size: cover;
     }
 }
@@ -32,8 +32,8 @@
     display: inline-block;
     vertical-align: middle;
 
-    @include media($bp-large) {
-        margin: 0 0 spacing-vertical(base) 0;
+    @include susy-breakpoint($bp-large, $susy) {
+        margin: 0;
     }
 
     .title-name, .title-description {
@@ -52,13 +52,12 @@
         &:hover,
         &:active,
         &:focus {
-            color: palette(primary, sat);
+            color: palette(primary, accent);
         }
     }
 
     .title-description {
-        color: palette(grayscale, mid-light);
-        font-size: font-size(base);
+        color: palette(grayscale, base);
         font-weight: font-weight(normal);
     }
 
@@ -72,7 +71,7 @@
 // ------------------------------
 // navigation - sidebar-based
 .pl-nav {
-    margin-bottom: spacing-vertical(large);
+    margin-bottom: spacing-vertical(mid-large);
 
     // CASE: last element
     &:last-child {
@@ -88,8 +87,8 @@
     .pl-link {
         @include transition(background 0.25s ease-in-out);
         display: block;
-        border-bottom: 1px solid palette(grayscale, x-dark);
-        padding: spacing-vertical(small) spacing-horizontal(base);
+        border-bottom: 1px solid palette(grayscale, black);
+        padding: spacing-vertical(x-small) spacing-horizontal(mid-large);
         color: palette(grayscale, x-light);
         text-decoration: none;
         font-size: font-size(small);
@@ -100,7 +99,7 @@
         &:active,
         &:focus {
             color: palette(primary, light);
-            background: palette(grayscale, x-dark);
+            background: palette(grayscale, black);
         }
     }
 
@@ -133,17 +132,17 @@
             @include size(rem(5));
             position: absolute;
             top: rem(18);
-            left: spacing-horizontal(small);
+            @include left(spacing-horizontal(mid-small));
             content: '';
             border-radius: 100%;
             opacity: 0;
-            background: palette(primary, light);
+            background: palette(primary, accent);
         }
 
         // STATE: is current navigation item
         &.is-current {
             color: palette(primary, light);
-            background: palette(grayscale, x-dark);
+            background: palette(grayscale, black);
 
             &:before {
                 opacity: 1.0;
@@ -161,7 +160,7 @@
             @include transition(opacity 0.25s ease-in-out);
             display: inline-block;
             vertical-align: baseline;
-            margin-right: (spacing-horizontal(xx-small));
+            @include margin-right(spacing-horizontal(xx-small));
             font-size: font-size(large);
             line-height: line-height(none);
             opacity: 0.25;
@@ -180,36 +179,18 @@
 }
 
 .pl-nav-title {
-    margin: 0 spacing-horizontal(base) spacing-vertical(x-small) spacing-horizontal(base);
-    color: palette(grayscale, mid-light);
+    margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small) spacing-horizontal(mid-large);
+    color: palette(grayscale, base);
     font-size: font-size(small);
     font-weight: font-weight(semi-bold);
     text-transform: uppercase;
     letter-spacing: rem(1);
 }
 
-// navigation - tabs
-.pl-tab {
-    margin-bottom: spacing-vertical(large);
-
-    // CASE: last element
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    .pl-heading {
-        margin-bottom: spacing-vertical(small);
-        color: $heading-color;
-        font-size: font-size(mid-large);
-        font-weight: font-weight(semi-bold);
-        line-height: line-height(base);
-    }
-}
-
 .pl-tab-content {
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
-    @include pad(spacing-vertical(base) spacing-horizontal(mid-small));
+    padding: spacing-vertical(base) spacing-horizontal(base);
     background: palette(grayscale, white-t);
     box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
 
@@ -220,8 +201,8 @@
         box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
     }
 
-    @include media($bp-medium) {
-        @include pad(spacing-vertical(mid-large) spacing-horizontal(base));
+    @include susy-breakpoint($bp-medium, $susy) {
+       padding: spacing-vertical(base) spacing-horizontal(mid-large);
     }
 }
 
@@ -234,10 +215,10 @@
 .pl-setting {
     display: inline-block;
     vertical-align: middle;
-    margin-right: spacing-horizontal(small);
+    @include margin-right(spacing-horizontal(small));
 
     &:last-child {
-         margin-right: 0;
+         @include margin-right(0);
     }
 }
 
@@ -245,8 +226,7 @@
 // #SIDEBAR
 // ------------------------------
 .pl-wrapper-content-supplemental {
-    background: palette(grayscale, mid-dark);
-    border-right: rem(4) solid  palette(grayscale, x-dark);
+    background: palette(grayscale-cool, x-dark);
     color: palette(grayscale, x-light);
 }
 
@@ -277,17 +257,17 @@
 // ------------------------------
 .pl-element {
     @include transition(all 0.25s ease-in-out);
-    @include pad(spacing-vertical(x-large) spacing-horizontal(base));
+    padding: spacing-vertical(mid-large) spacing-horizontal(large);
     border-bottom: rem(2) solid palette(grayscale, mid-dark);
     box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
 
     // CASE: element is focused on in current URL
     &:target {
-        box-shadow: inset spacing-horizontal(xx-small) 0 0 0 palette(primary, light);
+        box-shadow: inset spacing-horizontal(x-small) 0 0 0 palette(primary, light);
     }
 
     .pl-wrapper-element:first-child & {
-        padding-top: spacing-vertical(large);
+        padding-top: spacing-vertical(mid-large);
     }
 
     // CASE: last element
@@ -301,64 +281,12 @@
 }
 
 .pl-element-header {
-    @include row();
     margin-bottom: spacing-vertical(base);
     border-bottom: 1px solid palette(grayscale, dark);
     padding-bottom: spacing-vertical(small);
-}
 
-.pl-element-title {
-    margin-bottom: spacing-vertical(x-small);
-    color: $heading-color;
-    font-size: font-size(large);
-    font-weight: font-weight(semi-bold);
-
-    @include media($bp-medium) {
-        @include span-columns(2);
-        margin-bottom: 0;
-    }
-
-    @include media($bp-large) {
-        @include span-columns(4);
-    }
-}
-
-.pl-element-meta {
-    @extend %reset-lists;
-    color: palette(grayscale, mid-light);
-    font-size: font-size(small);
-
-    @include media($bp-medium) {
-        @include span-columns(2);
-        @include omega();
-        text-align: right;
-    }
-
-    @include media($bp-large) {
-        @include span-columns(4);
-    }
-
-    .meta {
-        display: block;
-
-       &:last-child {
-            margin-right: 0;
-       }
-
-       @include media($bp-medium) {
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: spacing-horizontal(xx-small);
-       }
-    }
-
-    .meta-updated {
-        margin-right: spacing-horizontal(small);
-        margin-bottom: spacing-vertical(x-small);
-
-        @include media($bp-medium) {
-            margin-bottom: 0;
-        }
+    .pl-element-meta {
+        @extend %reset-lists;
     }
 }
 
@@ -367,31 +295,31 @@
 .pl-tab-labels {
     @include clearfix();
     @extend %reset-lists;
-    border-bottom: spacing-vertical(x-small) solid palette(grayscale, x-light);
+    border-bottom: $pl-tab-label-height solid palette(grayscale, x-light);
 }
 
 .pl-tab-heading {
-    @extend %sr;
+    @extend %a11y-hide;
 }
 
 .pl-tab-label {
     // display: inline-block;
     float: left;
     position: relative;
-    bottom: -(spacing-vertical(x-small));
+    bottom: -(spacing-vertical(xx-small));
 
     .pl-link {
         display: block;
         margin: 0;
-        border-bottom: spacing-vertical(x-small) solid $transparent;
-        padding: spacing-vertical(small) spacing-horizontal(small);
+        border-bottom: $pl-tab-label-height solid $transparent;
+        padding: spacing-vertical(x-small) spacing-horizontal(mid-small);
         font-weight: font-weight(semi-bold);
-        color: palette(grayscale, base);
+        color: palette(grayscale, dark);
 
         &:hover,
         &:focus {
-            border-bottom-color: palette(primary, sat);
-            color: palette(primary, sat);
+            border-bottom-color: palette(primary, accent);
+            color: palette(primary, accent);
         }
 
         &.is-active {
@@ -401,18 +329,11 @@
     }
 }
 
-
-// element info
-.pl-element-info {
-    @extend %reset-copy;
-    color: palette(grayscale, base);
-}
-
 // markup section of element
 .pl-element-markup {
 
     code {
-        font-family: $code-font-family;
+        font-family: $font-family-monospace;
     }
 }
 
@@ -425,20 +346,14 @@
 .pl-element-colors {
 
     .example-set {
-        @include row();
+        @include container();
     }
 
     .example-color {
-        @include fill-parent();
+        display: block;
 
-        @include media($bp-medium) {
-            @include span-columns(1);
-            @include omega(4n);
-        }
-
-        @include media($bp-large) {
-            @include span-columns(2);
-            @include omega(4n);
+        @include susy-breakpoint($bp-medium, $susy) {
+            @include gallery(3 of 12);
         }
     }
 }
@@ -447,7 +362,7 @@
 .pl-element-buttons {
 
     .example-set {
-        @include row();
+        @include container();
     }
 
     .btn {
@@ -467,11 +382,11 @@
 .pl-element-icons {
 
     .example-set {
-        @include row();
+        @include container();
     }
 
     .example-icon {
-        @include fill-parent();
+        display: block;
 
         .icon-display {
             width: 24px;
@@ -485,19 +400,13 @@
         }
 
         .icon-classname {
-            text-align: center;
-            font-size: font-size(mid-small);
+            @include text-align(center);
+            font-size: font-size(small);
             color: palette(grayscale, base);
         }
 
-        @include media($bp-medium) {
-            @include span-columns(1);
-            @include omega(4n);
-        }
-
-        @include media($bp-large) {
-            @include span-columns(2);
-            @include omega(4n);
+        @include susy-breakpoint($bp-medium, $susy) {
+            @include gallery(3 of 12);
         }
 
         &:hover,
@@ -506,7 +415,7 @@
             .icon-display {
 
                 svg {
-                    fill: palette(primary, sat); // demonstrating color change simplicity
+                    fill: palette(primary, accent); // demonstrating color change simplicity
                 }
             }
         }
@@ -523,7 +432,7 @@
 
 %message-warning {
     @extend %message;
-    background-color: palette(warning, x-light);
+    background-color: palette(warning, light);
     color: palette(grayscale, black-t);
 }
 
