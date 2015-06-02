@@ -3,20 +3,20 @@
 
 // About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pl-" to avoid cascade/run-off into the element stylings.
 
-// NOTE: This is the left to right (LTR) configured style compile. It should mirror main-rtl w/ the exception of bi-app references.
+// NOTE: This is the left to right (RTL) configured style compile. It should mirror main-rtl w/ the exception of bi-app references.
 
 // ------------------------------
 // #VENDOR
 // ------------------------------
-@import '../../../vendor/bourbon/bourbon';
-@import '../../../vendor/susy/susy';
-@import '../../../vendor/breakpoint/breakpoint';
-@import '../../../vendor/bi-app/bi-app-ltr';               // LTR support
+@import '../../vendor/bourbon/bourbon';
+@import '../../vendor/susy/susy';
+@import '../../vendor/breakpoint/breakpoint';
+@import '../../vendor/bi-app/bi-app-rtl';               // LTR support
 
 // ------------------------------
 // #UTILITIES
 // ------------------------------
-@import '../../../edx-pl/sass/utilities/variables-ltr';
+@import '../../edx-pl/sass/utilities/variables-rtl';
 
 // ------------------------------
 // #BUILD
