@@ -18,43 +18,43 @@ module.exports = {
     },
     styles: {
         // pattern library
-        src: src + '/static/sass',
-        src_files: src + '/static/sass/**/*.scss',
-        src_static: src + '/static/css',
-        src_static_files: src + '/static/css/**/*.css',
+        src: src + '/sass',
+        src_files: src + '/sass/**/*.scss',
+        src_static: src + '/css',
+        src_static_files: src + '/css/**/*.css',
         dest: dest + '/css',
         local: local + '/public/css',
 
         // documentation site
-        pl_src: pl_src + '/static/sass',
-        pl_src_files: pl_src + '/static/sass/**/*.scss',
-        pl_src_static: src + '/static/css',
-        pl_src_static_files: src + '/static/css/**/*.css',
+        pl_src: pl_src + '/sass',
+        pl_src_files: pl_src + '/sass/**/*.scss',
+        pl_src_static: src + '/css',
+        pl_src_static_files: src + '/css/**/*.css',
         pl_dest: pl_dest + '/css',
         pl_local: local + '/public/pl/css'
     },
     images: {
         // pattern library
-        src: src + '/static/images',
-        src_files: src + '/static/images/**',
+        src: src + '/images',
+        src_files: src + '/images/**',
         dest: dest + '/images',
         local: local + '/public/images',
 
         // documentation site
-        pl_src: pl_src + '/static/images',
-        pl_src_files: pl_src + '/static/images/**',
+        pl_src: pl_src + '/images',
+        pl_src_files: pl_src + '/images/**',
         pl_dest: pl_dest + '/images',
-        pl_local: local + '/public/pl/images'
+        pl_local: local + '/public/images'
     },
     scripts: {
         // pattern library
-        src: src + '/static/js/**/*.js',
+        src: src + '/js/**/*.js',
         dest: dest + '/js',
         local: local + '/public/js',
 
         // documentation site
-        pl_src: pl_src + '/static/js',
-        pl_src_files: pl_src + '/static/js/**/*.js',
+        pl_src: pl_src + '/js',
+        pl_src_files: pl_src + '/js/**/*.js',
         pl_dest: pl_dest + '/js',
         pl_local: local + '/public/pl/js'
     },
