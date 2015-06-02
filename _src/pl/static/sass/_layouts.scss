@@ -29,7 +29,6 @@
         top: 0;
         @include left(0);
         overflow-y: scroll;
-        border-right: rem(4) solid palette(grayscale, black);
     }
 
     .pl-header-site {
