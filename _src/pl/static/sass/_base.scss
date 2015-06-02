@@ -6,11 +6,6 @@
 // ------------------------------
 // #RESET
 // ------------------------------
-@import '../../../static/sass/base/normalize';
-
-* {
-    box-sizing: border-box;
-}
 
 // ------------------------------
 // #BASE
@@ -23,55 +18,10 @@ html, body {
 
 .pl {
     @include font-smoothing(on);
-    background: palette(grayscale, x-light);
-    font-size: font-size(base);
-    font-family: $font-stack-sans-serif;
+    background: palette("grayscale-cool", "x-light");
+    font-size: font-size("base");
 }
 
 .pl-wrapper-view {
-    background: palette(grayscale, x-light);
-}
-
-// links
-.pl-link {
-    @include transition(all 0.15s ease-in-out);
-    border-bottom: rem(1) solid $transparent;
-    color: palette(primary, base);
-    text-decoration: none;
-
-    // STATE: hover, active, focus
-    &:hover,
-    &:active,
-    &:focus {
-        border-bottom-color: palette(primary, sat);
-        color: palette(primary, sat);
-    }
-}
-
-// images
-.pl img,
-.pl picture {
-  max-width: 100%;
-  margin: 0;
-}
-
-.pl pre {
-    margin: 0;
-}
-
-// utility
-.pl-sr {
-    @extend %sr;
-}
-
-// stateful
-.is-hidden {
-    @extend %sr;
-}
-
-// ------------------------------
-// #TYPOGRAPHY
-// ------------------------------
-.pl-heading {
-    @extend %reset-headings;
+    background: palette("grayscale-cool", "x-light");
 }
