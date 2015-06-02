@@ -18,25 +18,25 @@ module.exports = {
     },
     styles: {
         // pattern library
-        src: src + '/static/sass',
-        src_files: src + '/static/sass/**/*.scss',
-        src_static: src + '/static/css',
-        src_static_files: src + '/static/css/**/*.css',
+        src: src + '/sass',
+        src_files: src + '/sass/**/*.scss',
+        src_static: src + '/css',
+        src_static_files: src + '/css/**/*.css',
         dest: dest + '/css',
         local: local + '/public/css',
 
         // documentation site
         pl_src: pl_src + '/static/sass',
         pl_src_files: pl_src + '/static/sass/**/*.scss',
-        pl_src_static: src + '/static/css',
-        pl_src_static_files: src + '/static/css/**/*.css',
+        pl_src_static: src + '/css',
+        pl_src_static_files: src + '/css/**/*.css',
         pl_dest: pl_dest + '/css',
         pl_local: local + '/public/pl/css'
     },
     images: {
         // pattern library
-        src: src + '/static/images',
-        src_files: src + '/static/images/**',
+        src: src + '/images',
+        src_files: src + '/images/**',
         dest: dest + '/images',
         local: local + '/public/images',
 
@@ -48,7 +48,7 @@ module.exports = {
     },
     scripts: {
         // pattern library
-        src: src + '/static/js/**/*.js',
+        src: src + '/js/**/*.js',
         dest: dest + '/js',
         local: local + '/public/js',
 
