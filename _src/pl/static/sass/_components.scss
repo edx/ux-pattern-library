@@ -261,11 +261,6 @@
     border-bottom: rem(2) solid palette(grayscale, mid-dark);
     box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
 
-    // CASE: element is focused on in current URL
-    &:target {
-        box-shadow: inset spacing-horizontal(x-small) 0 0 0 palette(primary, light);
-    }
-
     .pl-wrapper-element:first-child & {
         padding-top: spacing-vertical(mid-large);
     }
