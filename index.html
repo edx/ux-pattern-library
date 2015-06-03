@@ -32,13 +32,13 @@ viewclass:  index
                 {% if post.tags contains "pattern" %}
                 <ul class="pl-tab-labels pl-list pl-element-navigation">
                     <li class="pl-tab-label">
-                        <a class="pl-link is-active" href="#{{post.slug}}-preview">Preview</a>
+                        <a class="pl-link pl-link-preview is-active" href="#{{post.slug}}-preview">Preview</a>
                     </li>
                     <li class="pl-tab-label">
-                        <a class="pl-link" href="#{{post.slug}}-markup">Markup</a>
+                        <a class="pl-link pl-link-markup" href="#{{post.slug}}-markup">Markup</a>
                     </li>
                     <li class="pl-tab-label">
-                        <a class="pl-link" href="#{{post.slug}}-styling">Styling</a>
+                        <a class="pl-link pl-link-styling" href="#{{post.slug}}-styling">Styling</a>
                     </li>
                 </ul>
                 {% endif %}
