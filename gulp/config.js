@@ -31,7 +31,7 @@ module.exports = {
         pldoc_src_static: src + '/css',
         pldoc_src_static_files: src + '/css/**/*.css',
         pldoc_dest: pldoc_dest + '/css',
-        pldoc_local: local + '/public/pl/css'
+        pldoc_local: local + '/public/pldoc/css'
     },
     images: {
         // pattern library
@@ -44,7 +44,7 @@ module.exports = {
         pldoc_src: pldoc_src + '/static/images',
         pldoc_src_files: pldoc_src + '/static/images/**',
         pldoc_dest: pldoc_dest + '/images',
-        pldoc_local: local + '/public/pl/images'
+        pldoc_local: local + '/public/pldoc/images'
     },
     scripts: {
         // pattern library
@@ -56,7 +56,7 @@ module.exports = {
         pldoc_src: pldoc_src + '/static/js',
         pldoc_src_files: pldoc_src + '/static/js/**/*.js',
         pldoc_dest: pldoc_dest + '/js',
-        pldoc_local: local + '/public/pl/js'
+        pldoc_local: local + '/public/pldoc/js'
     },
     vendor: {
         // pattern library
@@ -67,7 +67,7 @@ module.exports = {
         // documentation site
         pldoc_src: pldoc_src + '/vendor/**',
         pldoc_dest: pldoc_dest + '/vendor',
-        pldoc_local: local + '/public/pl/vendor'
+        pldoc_local: local + '/public/pldoc/vendor'
     },
     jekyll: {
         home: 'index.html',
