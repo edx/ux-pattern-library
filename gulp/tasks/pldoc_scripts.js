@@ -8,7 +8,7 @@ var uglify          = require('gulp-uglify');
 gulp.task('pldoc_scripts', ['pldoc_scripts-lint'], function() {
     return gulp.src([
             // setup script sequence
-            './_src/pl/vendor/jquery/jquery.smooth-scroll.js',
+            './_src/pldoc/vendor/jquery/jquery.smooth-scroll.js',
             config.pldoc_src + '/ui.js',
             config.pldoc_src + '/size-slider.js',
             config.pldoc_src + '/color-contrast.js',
