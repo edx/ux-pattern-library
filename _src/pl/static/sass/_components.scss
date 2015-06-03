@@ -375,6 +375,7 @@
 
 // icons
 .pl-element-icons {
+    @extend %element-hide-styling;
 
     .example-set {
         @include container();
