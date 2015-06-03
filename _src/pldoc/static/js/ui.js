@@ -91,12 +91,40 @@ $(document).ready(function() {
     }
 
     // palette values
+    function rgbaToHex(rgb) {
+        console.log(rgb);
+        if (typeof(rgb) !== 'undefined') {
+            var _rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i),
+                hex;
+
+            hex = (_rgb && _rgb.length === 4) ? '#' +
+                ('0' + parseInt(_rgb[1],10).toString(16)).slice(-2) +
+                ('0' + parseInt(_rgb[2],10).toString(16)).slice(-2) +
+                ('0' + parseInt(_rgb[3],10).toString(16)).slice(-2) : '';
+        } else {
+            hex = ' --- ';
+        }
+
+        return hex;
+    }
+
     if ($('.example').length) {
 
         $('.example').each(function() {
             var rgb = $(this).find('.swatch-color').css('backgroundColor');
 
-            $(this).find('.swatch-meta .color-rgb').text(rgb);
+            $(this).find('.swatch-meta .color-rgb').val(rgb);
+            $(this).find('.swatch-meta .color-hex').val(rgbaToHex(rgb));
         });
     }
+
+    $('.swatch-meta input').focus(function() {
+        var $this = $(this);
+        $this.select();
+
+        $this.mouseup(function() {
+            $this.unbind('mouseup');
+            return false;
+        });
+    });
 });

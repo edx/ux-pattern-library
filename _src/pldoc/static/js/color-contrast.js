@@ -13,7 +13,7 @@ $(function() {
     var AccessibilityColorContrast = {
 
         vars: {
-            failClass:      'fail-a11y-color' // Class for failed palettes
+            failClass: 'fail-a11y-color' // Class for failed palettes
         },
 
         init: function() {
