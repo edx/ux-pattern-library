@@ -58,6 +58,13 @@ module.exports = {
         pldoc_dest: pldoc_dest + '/js',
         pldoc_local: local + '/public/pldoc/js'
     },
+    // fonts: {
+    //     // fonts
+    //     src: src + '/fonts',
+    //     src_files: src + '/fonts/**/*.ttf',
+    //     dest: dest + '/pldoc' + src,
+    //     local: local + '/public/pldoc' + src
+    // },
     vendor: {
         // pattern library
         src: src + '/vendor/**',
