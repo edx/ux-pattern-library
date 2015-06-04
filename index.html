@@ -3,54 +3,54 @@ layout: default
 title: Home
 viewclass:  index
 ---
-<div class="pl-list-elements">
+<div class="pldoc-list-elements">
 
     {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
     {% for post in sorted_elements_posts %}
-    <div class="pl-wrapper-element">
-        <article class="pl-element pl-element-{{ post.slug }}" id="{{ post.slug }}">
+    <div class="pldoc-wrapper-element">
+        <article class="pldoc-element pldoc-element-{{ post.slug }}" id="{{ post.slug }}">
 
-            <header class="pl-element-header">
-                <h1 class="pl-heading pl-element-title hd-4">{{ post.title }}</h1>
+            <header class="pldoc-element-header">
+                <h1 class="pldoc-heading pldoc-element-title hd-4">{{ post.title }}</h1>
 
-                <ul class="pl-list pl-element-meta copy copy-micro de-emphasized">
+                <ul class="pldoc-list pldoc-element-meta copy copy-micro de-emphasized">
                     <li class="meta meta-updated">
-                        <span class="pl-element-meta-updated-label">Last updated on </span>
-                        <time class="pl-element-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
+                        <span class="pldoc-element-meta-updated-label">Last updated on </span>
+                        <time class="pldoc-element-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
                     </li>
                     <li class="meta meta-permalink">
-                        <a class="pl-link" href="{{post.url}}">Permalink</a>
+                        <a class="pldoc-link" href="{{post.url}}">Permalink</a>
                     </li>
                 </ul>
             </header>
 
-            <div class="pl-element-info">
+            <div class="pldoc-element-info">
                 <p class="copy copy-base">{{post.info}}</p>
             </div>
 
-            <div class="pl-tab-wrapper">
+            <div class="pldoc-tab-wrapper">
                 {% if post.tags contains "pattern" %}
-                <ul class="pl-tab-labels pl-list pl-element-navigation">
-                    <li class="pl-tab-label">
-                        <a class="pl-link pl-link-preview is-active" href="#{{post.slug}}-preview">Preview</a>
+                <ul class="pldoc-tab-labels pldoc-list pldoc-element-navigation">
+                    <li class="pldoc-tab-label">
+                        <a class="pldoc-link pldoc-link-preview is-active" href="#{{post.slug}}-preview">Preview</a>
                     </li>
-                    <li class="pl-tab-label">
-                        <a class="pl-link pl-link-markup" href="#{{post.slug}}-markup">Markup</a>
+                    <li class="pldoc-tab-label">
+                        <a class="pldoc-link pldoc-link-markup" href="#{{post.slug}}-markup">Markup</a>
                     </li>
-                    <li class="pl-tab-label">
-                        <a class="pl-link pl-link-styling" href="#{{post.slug}}-styling">Styling</a>
+                    <li class="pldoc-tab-label">
+                        <a class="pldoc-link pldoc-link-styling" href="#{{post.slug}}-styling">Styling</a>
                     </li>
                 </ul>
                 {% endif %}
 
-                <div class="pl-tabs">
-                    <div class="pl-tab pl-element-preview is-active" id="{{post.slug}}-preview">
-                        <h2 class="pl-heading pl-tab-heading pl-element-preview-title">{{post.title}} Preview</h2>
+                <div class="pldoc-tabs">
+                    <div class="pldoc-tab pldoc-element-preview is-active" id="{{post.slug}}-preview">
+                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-preview-title">{{post.title}} Preview</h2>
 
-                        <div class="pl-tab-content">
+                        <div class="pldoc-tab-content">
                             {% if post.tags contains "icons" %}
-                            <div class="pl-settings">
-                                <div class="pl-setting pl-setting-sizer">
+                            <div class="pldoc-settings">
+                                <div class="pldoc-setting pldoc-setting-sizer">
                                     <label for="iconFontSlider" class="is-hidden">Drag to resize icons</label>
                                     <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-min="12" aria-max="144" aria-now="24">
                                     <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">
@@ -63,21 +63,21 @@ viewclass:  index
                     </div>
 
                     {% if post.tags contains "pattern" %}
-                    <div class="pl-tab pl-element-markup is-hidden" id="{{post.slug}}-markup">
-                        <h2 class="pl-heading pl-tab-heading pl-element-markup-title">{{post.title}} Markup</h2>
+                    <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{post.slug}}-markup">
+                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-markup-title">{{post.title}} Markup</h2>
 
-                        <div class="pl-tab-content">
+                        <div class="pldoc-tab-content">
                             {% highlight html %}
                             {{post.content}}
                             {% endhighlight %}
                         </div>
                     </div>
 
-                    <div class="pl-tab pl-element-styling is-hidden" id="{{post.slug}}-styling">
-                        <h2 class="pl-heading pl-tab-heading pl-element-styling-title">{{post.title}} Style</h2>
+                    <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{post.slug}}-styling">
+                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-styling-title">{{post.title}} Style</h2>
 
-                        <div class="pl-tab-content">
-                            <p class="copy copy-base">View <a class="pl-link" href="{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                        <div class="pldoc-tab-content">
+                            <p class="copy copy-base">View <a class="pldoc-link" href="{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                         </div>
                     </div>
                     {% endif %}
@@ -89,9 +89,9 @@ viewclass:  index
     {% endfor %}
 </div>
 
-<div class="pl-wrapper-link-top">
-    <a class="pl-link pl-link-top" href="#content-top">
-        <span class="pl-icon">&#65514;</span>
+<div class="pldoc-wrapper-link-top">
+    <a class="pldoc-link pldoc-link-top" href="#content-top">
+        <span class="pldoc-icon">&#65514;</span>
         <span class="sr-only">Return to the top of this view</span>
     </a>
 </div>

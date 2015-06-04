@@ -1,63 +1,63 @@
-<nav class="pl-nav pl-nav-elements pl-nav-internal" id="pl-nav-elements">
-    <h2 class="pl-heading pl-nav-title hd-6">Elements</h2>
+<nav class="pldoc-nav pldoc-nav-elements pldoc-nav-internal" id="pldoc-nav-elements">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6">Elements</h2>
 
     <ul class="nav-list list-elements">
         {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
         {% for post in sorted_elements_posts %}
         <li class="nav-list-item">
             {% if page.title == "Home" %}
-            <a class="pl-link" href="#{{post.slug}}">{{post.title}}</a>
+            <a class="pldoc-link" href="#{{post.slug}}">{{post.title}}</a>
             {% else %}
-            <a class="pl-link" href="{{post.url}}">{{post.title}}</a>
+            <a class="pldoc-link" href="{{post.url}}">{{post.title}}</a>
             {% endif %}
         </li>
         {% endfor %}
     </ul>
 </nav>
 
-<nav class="pl-nav pl-nav-documentation pl-nav-external" id="pl-nav-documentation">
-    <h2 class="pl-heading pl-nav-title hd-6">Documentation</h2>
-    <ul class="pl-list nav-list list-styleguides">
+<nav class="pldoc-nav pldoc-nav-documentation pldoc-nav-external" id="pldoc-nav-documentation">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6">Documentation</h2>
+    <ul class="pldoc-list nav-list list-styleguides">
         <li class="nav-list-item">
-            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General">
-                <span class="pl-icon" aria-hidden="true">&#65514;</span>
+            <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General">
+                <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 General Styleguide
             </a>
         </li>
         <li class="nav-list-item">
-            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML">
-                <span class="pl-icon" aria-hidden="true">&#65514;</span>
+            <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML">
+                <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 HTMLS Styleguide
             </a>
         </li>
         <li class="nav-list-item">
-            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS">
-                <span class="pl-icon" aria-hidden="true">&#65514;</span>
+            <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS">
+                <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 Sass &amp; CSS Styleguide
             </a>
         </li>
         <li class="nav-list-item">
-            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility">
-                <span class="pl-icon" aria-hidden="true">&#65514;</span>
+            <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility">
+                <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 Accessibility Styleguide
             </a>
         </li>
     </ul>
 </nav>
 
-<nav class="pl-nav pl-nav-project pl-nav-external" id="pl-nav-project">
-    <h2 class="pl-heading pl-nav-title hd-6">About This Project</h2>
+<nav class="pldoc-nav pldoc-nav-project pldoc-nav-external" id="pldoc-nav-project">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6">About This Project</h2>
 
     <ul class="nav-list list-project">
         <li class="nav-list-item">
-            <a class="pl-link" rel="external" href="https://github.com/edx/ux-pattern-library/">
-                <span class="pl-icon" aria-hidden="true">&#65514;</span>
+            <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/">
+                <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 View on Github
             </a>
         </li>
         <li class="nav-list-item">
-            <a class="pl-link" rel="external" href="https://openedx.atlassian.net/browse/UX-1396">
-                <span class="pl-icon" aria-hidden="true">&#65514;</span>
+            <a class="pldoc-link" rel="external" href="https://openedx.atlassian.net/browse/UX-1396">
+                <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 Project Planning
             </a>
         </li>

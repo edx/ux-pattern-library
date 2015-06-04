@@ -28,7 +28,7 @@
 // ------------------------------
 // #HEADER
 // ------------------------------
-.pl-header-site-title {
+.pldoc-header-site-title {
     display: inline-block;
     vertical-align: middle;
 
@@ -61,7 +61,7 @@
         font-weight: font-weight(normal);
     }
 
-    .pl-link {
+    .pldoc-link {
         border: none;
     }
 }
@@ -70,7 +70,7 @@
 // #NAVIGATION
 // ------------------------------
 // navigation - sidebar-based
-.pl-nav {
+.pldoc-nav {
     margin-bottom: spacing-vertical(mid-large);
 
     // CASE: last element
@@ -84,7 +84,7 @@
     }
 
 
-    .pl-link {
+    .pldoc-link {
         @include transition(background 0.25s ease-in-out);
         display: block;
         border-bottom: 1px solid palette(grayscale, black);
@@ -106,7 +106,7 @@
     // CASE: last element
     .nav-list-item:last-child {
 
-       .pl-link {
+       .pldoc-link {
             border-bottom: 0;
        }
     }
@@ -114,16 +114,16 @@
     // CASE: item is current
     .nav-list-item.is-current {
 
-        .pl-link:before {
+        .pldoc-link:before {
             display: inline-block;
         }
     }
 }
 
 // internal site navigation
-.pl-nav-internal {
+.pldoc-nav-internal {
 
-    .pl-link {
+    .pldoc-link {
         position: relative;
 
         // is-current indicator
@@ -152,11 +152,11 @@
 }
 
 // external site navigation
-.pl-nav-external {
+.pldoc-nav-external {
 
-    .pl-link {
+    .pldoc-link {
 
-        .pl-icon {
+        .pldoc-icon {
             @include transition(opacity 0.25s ease-in-out);
             display: inline-block;
             vertical-align: baseline;
@@ -171,14 +171,14 @@
         &:active,
         &:focus {
 
-            .pl-icon {
+            .pldoc-icon {
                 opacity: 1.0;
             }
         }
     }
 }
 
-.pl-nav-title {
+.pldoc-nav-title {
     margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small) spacing-horizontal(mid-large);
     color: palette(grayscale, base);
     font-size: font-size(small);
@@ -187,7 +187,7 @@
     letter-spacing: rem(1);
 }
 
-.pl-tab-content {
+.pldoc-tab-content {
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
     padding: spacing-vertical(base) spacing-horizontal(base);
@@ -206,13 +206,13 @@
     }
 }
 
-.pl-settings {
+.pldoc-settings {
     background: palette(grayscale, xx-light);
     margin-bottom: spacing-vertical(large);
     padding: spacing-vertical(small) spacing-horizontal(small);
 }
 
-.pl-setting {
+.pldoc-setting {
     display: inline-block;
     vertical-align: middle;
     @include margin-right(spacing-horizontal(small));
@@ -225,7 +225,7 @@
 // ------------------------------
 // #SIDEBAR
 // ------------------------------
-.pl-wrapper-content-supplemental {
+.pldoc-wrapper-content-supplemental {
     background: palette(grayscale-cool, x-dark);
     color: palette(grayscale, x-light);
 }
@@ -233,20 +233,20 @@
 // ------------------------------
 // #MAIN CONTENT
 // ------------------------------
-.pl-wrapper-content-main {
+.pldoc-wrapper-content-main {
     background: palette(grayscale, xx-light);
 }
 
 // ------------------------------
 // #FOOTER
 // ------------------------------
-.pl-footer-site {
+.pldoc-footer-site {
     margin: spacing-vertical(base) spacing-horizontal(base);
 }
 
-.pl-footer-site-copyright {
+.pldoc-footer-site-copyright {
 
-    .pl-copy {
+    .pldoc-copy {
         font-size: font-size(small);
         color: palette(grayscale, mid-light);
     }
@@ -255,18 +255,18 @@
 // ------------------------------
 // #ELEMENTS
 // ------------------------------
-.pl-element {
+.pldoc-element {
     @include transition(all 0.25s ease-in-out);
     padding: spacing-vertical(mid-large) spacing-horizontal(large);
     border-bottom: rem(2) solid palette(grayscale, mid-dark);
     box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
 
-    .pl-wrapper-element:first-child & {
+    .pldoc-wrapper-element:first-child & {
         padding-top: spacing-vertical(mid-large);
     }
 
     // CASE: last element
-    .pl-wrapper-element:last-child & {
+    .pldoc-wrapper-element:last-child & {
         border-bottom: 0;
     }
 
@@ -275,38 +275,38 @@
     }
 }
 
-.pl-element-header {
+.pldoc-element-header {
     margin-bottom: spacing-vertical(base);
     border-bottom: 1px solid palette(grayscale, dark);
     padding-bottom: spacing-vertical(small);
 
-    .pl-element-meta {
+    .pldoc-element-meta {
         @extend %reset-lists;
     }
 }
 
 
 // element info tabs
-.pl-tab-labels {
+.pldoc-tab-labels {
     @include clearfix();
     @extend %reset-lists;
-    border-bottom: $pl-tab-label-height solid palette(grayscale, x-light);
+    border-bottom: $pldoc-tab-label-height solid palette(grayscale, x-light);
 }
 
-.pl-tab-heading {
+.pldoc-tab-heading {
     @extend %a11y-hide;
 }
 
-.pl-tab-label {
+.pldoc-tab-label {
     // display: inline-block;
     float: left;
     position: relative;
     bottom: -(spacing-vertical(xx-small));
 
-    .pl-link {
+    .pldoc-link {
         display: block;
         margin: 0;
-        border-bottom: $pl-tab-label-height solid $transparent;
+        border-bottom: $pldoc-tab-label-height solid $transparent;
         padding: spacing-vertical(x-small) spacing-horizontal(mid-small);
         font-weight: font-weight(semi-bold);
         color: palette(grayscale, dark);
@@ -325,7 +325,7 @@
 }
 
 // markup section of element
-.pl-element-markup {
+.pldoc-element-markup {
 
     code {
         font-family: $font-family-monospace;
@@ -338,7 +338,7 @@
 // ------------------------------
 
 // color swatches
-.pl-element-colors {
+.pldoc-element-colors {
 
     .example-set {
         @include container();
@@ -354,7 +354,7 @@
 }
 
 // buttons
-.pl-element-buttons {
+.pldoc-element-buttons {
 
     .example-set {
         @include container();
@@ -374,7 +374,7 @@
 }
 
 // icons
-.pl-element-icons {
+.pldoc-element-icons {
     @extend %element-hide-styling;
 
     .example-set {
