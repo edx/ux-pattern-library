@@ -6,9 +6,9 @@ $(document).ready(function() {
     // JS is enabled/available
     $html.removeClass('no-js');
 
-    $('a[href^="#"]').not('.pl-tab-wrapper .pl-link').on('click', smoothScrollLink);
+    $('a[href^="#"]').not('.pldoc-tab-wrapper .pldoc-link').on('click', smoothScrollLink);
     $('a[rel="external"]').on('click', newWindowLink);
-    $('.pl-nav-elements .pl-link').on('click', navigationHighlight);
+    $('.pldoc-nav-elements .pldoc-link').on('click', navigationHighlight);
 
     // smoothscroll to target links
     function smoothScrollLink(e) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     // smoothscroll to target links
     function navigationHighlight(e) {
-        $('.pl-nav-elements .pl-link').removeClass('is-current');
+        $('.pldoc-nav-elements .pldoc-link').removeClass('is-current');
         $(this).addClass('is-current');
     }
 
@@ -40,11 +40,11 @@ $(document).ready(function() {
     var Tabs = {
 
         vars: {
-            tabContainer:   $('.pl-tab-wrapper'),
-            tabs:           $('.pl-tab-labels'),
-            tab:            $('.pl-tab-label'),
-            panels:         $('.pl-tabs'),
-            panel:          $('.pl-tab'),
+            tabContainer:   $('.pldoc-tab-wrapper'),
+            tabs:           $('.pldoc-tab-labels'),
+            tab:            $('.pldoc-tab-label'),
+            panels:         $('.pldoc-tabs'),
+            panel:          $('.pldoc-tab'),
             activeClass:    'is-active',
             hiddenClass:    'is-hidden',
         },
@@ -56,7 +56,7 @@ $(document).ready(function() {
         resetInterface: function(wrapper) {
             var that = this;
 
-            wrapper.find('.pl-link').each(function() {
+            wrapper.find('.pldoc-link').each(function() {
                 $(this).removeClass(that.vars.activeClass);
             });
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
         handleTabClick: function() {
             var that = this;
 
-            that.vars.tab.find('.pl-link').on('click', function(e) {
+            that.vars.tab.find('.pldoc-link').on('click', function(e) {
                 e.preventDefault();
 
                 var content = $(this).attr('href');
@@ -86,7 +86,7 @@ $(document).ready(function() {
         }
     };
 
-    if ($('.pl-tab-wrapper').length) {
+    if ($('.pldoc-tab-wrapper').length) {
         Tabs.init();
     }
 

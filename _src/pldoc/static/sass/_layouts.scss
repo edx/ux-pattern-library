@@ -7,23 +7,23 @@
 // #LAYOUT
 // ------------------------------
 // main content
-.pl-wrapper-content-main {
+.pldoc-wrapper-content-main {
 
     @include susy-breakpoint($bp-large, $susy) {
-        width: calc(100% - $pl-content-supplemental-width);
-        margin-left: $pl-content-supplemental-width;
+        width: calc(100% - $pldoc-content-supplemental-width);
+        margin-left: $pldoc-content-supplemental-width;
     }
 }
 
-.pl-wrapper-element {
+.pldoc-wrapper-element {
     @include container();
 }
 
 // sidebar
-.pl-wrapper-content-supplemental {
+.pldoc-wrapper-content-supplemental {
 
      @include susy-breakpoint($bp-large, $susy) {
-        @include size($pl-content-supplemental-width 100%);
+        @include size($pldoc-content-supplemental-width 100%);
         display: block;
         position: fixed;
         top: 0;
@@ -31,7 +31,7 @@
         overflow-y: scroll;
     }
 
-    .pl-header-site {
+    .pldoc-header-site {
         padding: spacing-vertical(mid-small) spacing-horizontal(mid-large);
 
         @include susy-breakpoint($bp-large, $susy) {
@@ -41,7 +41,7 @@
     }
 
 
-    .pl-nav {
+    .pldoc-nav {
         display: none;
 
         @include susy-breakpoint($bp-large, $susy) {
@@ -49,7 +49,7 @@
         }
     }
 
-    .pl-footer-site {
+    .pldoc-footer-site {
         display: none;
 
          @include susy-breakpoint($bp-large, $susy) {
@@ -59,11 +59,11 @@
 }
 
 // element
-.pl-element-header {
+.pldoc-element-header {
     @include container();
 }
 
-.pl-element-title {
+.pldoc-element-title {
     margin-bottom: spacing-vertical(x-small);
 
     @include susy-breakpoint($bp-medium, $susy) {
@@ -74,7 +74,7 @@
 
 
 
-.pl-element-meta {
+.pldoc-element-meta {
 
     @include susy-breakpoint($bp-medium, $susy) {
         @include span(4 last);
