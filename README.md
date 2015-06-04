@@ -71,7 +71,7 @@ To view the Pattern Library locally (and to watch for any local changes to conte
 gulp
 ```
 
-This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['styles', pl_styles', 'images', 'pl_images', pl_scripts, jekyll-build' 'watch']`
+This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['styles', pl_styles', 'images', 'pl_images', scripts, pl_scripts, jekyll-build', 'watch']`
 
 * The `styles` and `pl_styles` tasks compile your css files.
 * `images` and `pl_images` copies images from a source folder, performs optimizations, the outputs them into the build folder
@@ -113,6 +113,7 @@ This repository contains both the code needed to generate pattern library elemen
 
 * prefixing any reference site UI with `pl-*` class names in our site templates and Sass/CSS;
 * containing any reference site UI within the ``_src/pl/`` directory.
+* the main pattern library files are contained within the ``_src/pattern-library`` and never compile on their own, but are rather used in this site's and other application's Sass compile files.
 
 - - -
 
