@@ -4,46 +4,46 @@ category: elements
 viewclass:  element
 ---
 
-<div class="pl-wrapper-element">
-    <article class="pl-element pl-element-{{ page.slug }}">
-        <header class="pl-element-header">
-            <h1 class="pl-heading pl-element-title hd-4">{{ page.title }}</h1>
+<div class="pldoc-wrapper-element">
+    <article class="pldoc-element pldoc-element-{{ page.slug }}">
+        <header class="pldoc-element-header">
+            <h1 class="pldoc-heading pldoc-element-title hd-4">{{ page.title }}</h1>
 
-            <ul class="pl-list pl-element-meta copy copy-micro de-emphasized">
+            <ul class="pldoc-list pldoc-element-meta copy copy-micro de-emphasized">
                 <li class="meta meta-updated">
-                    <span class="pl-element-meta-updated-label">Last updated on </span>
-                    <time class="pl-element-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
+                    <span class="pldoc-element-meta-updated-label">Last updated on </span>
+                    <time class="pldoc-element-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
                 </li>
             </ul>
         </header>
 
-        <div class="pl-element-info">
+        <div class="pldoc-element-info">
             <p class="copy copy-base">{{page.info}}</p>
         </div>
 
-        <div class="pl-tab-wrapper">
+        <div class="pldoc-tab-wrapper">
             {% if page.tags contains "pattern" %}
-            <ul class="pl-tab-labels pl-list pl-element-navigation">
-                <li class="pl-tab-label">
-                    <a class="pl-link pl-link-preview is-active" href="#{{page.slug}}-preview">Preview</a>
+            <ul class="pldoc-tab-labels pldoc-list pldoc-element-navigation">
+                <li class="pldoc-tab-label">
+                    <a class="pldoc-link pldoc-link-preview is-active" href="#{{page.slug}}-preview">Preview</a>
                 </li>
-                <li class="pl-tab-label">
-                    <a class="pl-link pl-link-markup" href="#{{page.slug}}-markup">Markup</a>
+                <li class="pldoc-tab-label">
+                    <a class="pldoc-link pldoc-link-markup" href="#{{page.slug}}-markup">Markup</a>
                 </li>
-                <li class="pl-tab-label">
-                    <a class="pl-link pl-link-styling" href="#{{page.slug}}-styling">Styling</a>
+                <li class="pldoc-tab-label">
+                    <a class="pldoc-link pldoc-link-styling" href="#{{page.slug}}-styling">Styling</a>
                 </li>
             </ul>
             {% endif %}
 
-            <div class="pl-tabs">
-                <div class="pl-tab pl-element-preview is-active" id="{{page.slug}}-preview">
-                    <h2 class="pl-heading pl-tab-heading pl-element-preview-title">{{page.title}} Preview</h2>
+            <div class="pldoc-tabs">
+                <div class="pldoc-tab pldoc-element-preview is-active" id="{{page.slug}}-preview">
+                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-preview-title">{{page.title}} Preview</h2>
 
-                    <div class="pl-tab-content">
+                    <div class="pldoc-tab-content">
                         {% if page.tags contains "icons" %}
-                        <div class="pl-settings">
-                            <div class="pl-setting pl-setting-sizer">
+                        <div class="pldoc-settings">
+                            <div class="pldoc-setting pldoc-setting-sizer">
                                 <label for="iconFontSlider" class="is-hidden">Drag to resize icons</label>
                                 <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-min="12" aria-max="144" aria-now="24">
                                 <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">
@@ -56,21 +56,21 @@ viewclass:  element
                 </div>
 
                 {% if page.tags contains "pattern" %}
-                <div class="pl-tab pl-element-markup is-hidden" id="{{page.slug}}-markup">
-                    <h2 class="pl-heading pl-tab-heading pl-element-markup-title">{{page.title}} Markup</h2>
+                <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{page.slug}}-markup">
+                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-markup-title">{{page.title}} Markup</h2>
 
-                    <div class="pl-tab-content">
+                    <div class="pldoc-tab-content">
                         {% highlight html %}
                         {{page.content}}
                         {% endhighlight %}
                     </div>
                 </div>
 
-                <div class="pl-tab pl-element-styling is-hidden" id="{{page.slug}}-styling">
-                    <h2 class="pl-heading pl-tab-heading pl-element-style-title">{{page.title}} Style</h2>
+                <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{page.slug}}-styling">
+                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-style-title">{{page.title}} Style</h2>
 
-                    <div class="pl-tab-content">
-                        <p class="copy copy-base">You can find <a class="pl-link" href="{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                    <div class="pldoc-tab-content">
+                        <p class="copy copy-base">You can find <a class="pldoc-link" href="{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                     </div>
                 </div>
             </div>

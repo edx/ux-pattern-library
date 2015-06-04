@@ -71,14 +71,14 @@ To view the Pattern Library locally (and to watch for any local changes to conte
 gulp
 ```
 
-This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['styles', pl_styles', 'images', 'pl_images', scripts, pl_scripts, jekyll-build', 'watch']`
+This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['styles', pldoc_styles', 'images', 'pldoc_images', scripts, pldoc_scripts, jekyll-build', 'watch']`
 
-* The `styles` and `pl_styles` tasks compile your css files.
-* `images` and `pl_images` copies images from a source folder, performs optimizations, the outputs them into the build folder
+* The `styles` and `pldoc_styles` tasks compile your css files.
+* `images` and `pldoc_images` copies images from a source folder, performs optimizations, the outputs them into the build folder
 * `jekyll-build` and `jekyll-rebuild` run the local jekyll server/preview and re-process any layouts, posts, or templates changed.
 * `watch` will start watching source files and will re-run the appropriate tasks when those files change.
 
-**NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task prefixed with `pl_*` refers to the reference site UI and not the elements.
+**NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task prefixed with `pldoc_*` refers to the reference site UI and not the elements.
 
 ### Publishing & Viewing Remotely
 The most up-to-date version of the library can be viewed on our public domain, **http://ux.edx.org**
@@ -111,7 +111,7 @@ When contributing, its assumed that you're already familar with the following:
 ###Pattern Library Elements vs. Reference Site UI
 This repository contains both the code needed to generate pattern library elements as well as a reference site to view/learn about these elements. When and where possible, we've tried to keep the assets needed for both separate by:
 
-* prefixing any reference site UI with `pl-*` class names in our site templates and Sass/CSS;
+* prefixing any reference site UI with `pldoc-*` class names in our site templates and Sass/CSS;
 * containing any reference site UI within the ``_src/pl/`` directory.
 * the main pattern library files are contained within the ``_src/pattern-library`` and never compile on their own, but are rather used in this site's and other application's Sass compile files.
 

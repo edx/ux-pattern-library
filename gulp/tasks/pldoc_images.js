@@ -4,11 +4,11 @@ var changed       = require('gulp-changed');
 var imagemin      = require('gulp-imagemin');
 var browserSync   = require('browser-sync');
 
-gulp.task('pl_images', function() {
-    return gulp.src(config.pl_src)
-        .pipe(changed(config.pl_dest)) // Ignore unchanged files
+gulp.task('pldoc_images', function() {
+    return gulp.src(config.pldoc_src)
+        .pipe(changed(config.pldoc_dest)) // Ignore unchanged files
         .pipe(imagemin()) // Optimize
-        .pipe(gulp.dest(config.pl_local)) // move just for browersync + uncompressed local
+        .pipe(gulp.dest(config.pldoc_local)) // move just for browersync + uncompressed local
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest(config.pl_dest));
+        .pipe(gulp.dest(config.pldoc_dest));
 });
