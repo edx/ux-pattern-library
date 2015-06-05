@@ -4,7 +4,7 @@
 // About: styling for generic layouts and responsive support.
 
 // ------------------------------
-// #LAYOUT
+// #DOC SITE LAYOUT
 // ------------------------------
 // main content
 .pldoc-wrapper-content-main {
@@ -22,7 +22,7 @@
 // sidebar
 .pldoc-wrapper-content-supplemental {
 
-     @include susy-breakpoint($bp-large, $susy) {
+    @include susy-breakpoint($bp-large, $susy) {
         @include size($pldoc-content-supplemental-width 100%);
         display: block;
         position: fixed;
@@ -52,7 +52,7 @@
     .pldoc-footer-site {
         display: none;
 
-         @include susy-breakpoint($bp-large, $susy) {
+        @include susy-breakpoint($bp-large, $susy) {
             display: block;
         }
     }
@@ -84,11 +84,11 @@
     .meta {
         display: block;
 
-       @include susy-breakpoint($bp-medium, $susy) {
+        @include susy-breakpoint($bp-medium, $susy) {
             display: inline-block;
             vertical-align: middle;
             @include margin-right(spacing-horizontal(xx-small));
-       }
+        }
     }
 
     .meta-updated {
@@ -100,3 +100,7 @@
         }
     }
 }
+
+// ------------------------------
+// #GENERAL CANVAS LAYOUT
+// ------------------------------
