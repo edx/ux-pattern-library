@@ -1,7 +1,7 @@
 // ------------------------------
 // edX Pattern Library Site: Main Style Compile
 
-// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pl-" to avoid cascade/run-off into the element stylings.
+// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
 
 // NOTE: This is the left to right (RTL) configured style compile. It should mirror main-rtl w/ the exception of bi-app references.
 
@@ -16,7 +16,7 @@
 // ------------------------------
 // #UTILITIES
 // ------------------------------
-@import '../../../edx-pl/sass/utilities/variables-rtl';
+@import '../../../pattern-library/sass/utilities/variables-rtl';
 
 // ------------------------------
 // #BUILD

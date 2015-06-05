@@ -9,15 +9,15 @@
 .pl.view-index {
 
     // link back to top
-    .pl-wrapper-link-top {
+    .pldoc-wrapper-link-top {
         @include text-align(center);
     }
 
-    .pl-link-top {
+    .pldoc-link-top {
         display: inline-block;
         padding: spacing-vertical(small) spacing-horizontal(x-small);
 
-        .pl-icon {
+        .pldoc-icon {
             font-size: font-size(x-large);
             font-weight: font-weight(semi-bold);
         }

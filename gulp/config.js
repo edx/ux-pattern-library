@@ -2,12 +2,12 @@
 
 // pattern library
 var dest = './public';
-var src = './_src/edx-pl';
+var src = './_src/pattern-library';
 var local = './_site';
 
 // documentation site
-var pl_src = './_src/pl';
-var pl_dest = './public/pl';
+var pldoc_src = './_src/pl';
+var pldoc_dest = './public/pl';
 
 module.exports = {
     browserSync: {
@@ -26,12 +26,12 @@ module.exports = {
         local: local + '/public/css',
 
         // documentation site
-        pl_src: pl_src + '/static/sass',
-        pl_src_files: pl_src + '/static/sass/**/*.scss',
-        pl_src_static: src + '/css',
-        pl_src_static_files: src + '/css/**/*.css',
-        pl_dest: pl_dest + '/css',
-        pl_local: local + '/public/pl/css'
+        pldoc_src: pldoc_src + '/static/sass',
+        pldoc_src_files: pldoc_src + '/static/sass/**/*.scss',
+        pldoc_src_static: src + '/css',
+        pldoc_src_static_files: src + '/css/**/*.css',
+        pldoc_dest: pldoc_dest + '/css',
+        pldoc_local: local + '/public/pl/css'
     },
     images: {
         // pattern library
@@ -41,10 +41,10 @@ module.exports = {
         local: local + '/public/images',
 
         // documentation site
-        pl_src: pl_src + '/static/images',
-        pl_src_files: pl_src + '/static/images/**',
-        pl_dest: pl_dest + '/images',
-        pl_local: local + '/public/pl/images'
+        pldoc_src: pldoc_src + '/static/images',
+        pldoc_src_files: pldoc_src + '/static/images/**',
+        pldoc_dest: pldoc_dest + '/images',
+        pldoc_local: local + '/public/pl/images'
     },
     scripts: {
         // pattern library
@@ -53,10 +53,10 @@ module.exports = {
         local: local + '/public/js',
 
         // documentation site
-        pl_src: pl_src + '/static/js',
-        pl_src_files: pl_src + '/static/js/**/*.js',
-        pl_dest: pl_dest + '/js',
-        pl_local: local + '/public/pl/js'
+        pldoc_src: pldoc_src + '/static/js',
+        pldoc_src_files: pldoc_src + '/static/js/**/*.js',
+        pldoc_dest: pldoc_dest + '/js',
+        pldoc_local: local + '/public/pl/js'
     },
     vendor: {
         // pattern library
@@ -65,9 +65,9 @@ module.exports = {
         local: local + '/public/vendor',
 
         // documentation site
-        pl_src: pl_src + '/vendor/**',
-        pl_dest: pl_dest + '/vendor',
-        pl_local: local + '/public/pl/vendor'
+        pldoc_src: pldoc_src + '/vendor/**',
+        pldoc_dest: pldoc_dest + '/vendor',
+        pldoc_local: local + '/public/pl/vendor'
     },
     jekyll: {
         home: 'index.html',

@@ -7,9 +7,9 @@ gulp.task('watch', ['browserSync'], function() {
     gulp.watch(config.images.src_files, ['images']);
 
     // documentation site
-    gulp.watch([config.styles.pl_src_files, config.styles.src_files], ['pl_styles']);
-    gulp.watch(config.images.pl_src_files, ['pl_images']);
-    gulp.watch(config.scripts.pl_src_files, ['pl_scripts']);
+    gulp.watch([config.styles.pldoc_src_files, config.styles.src_files], ['pldoc_styles']);
+    gulp.watch(config.images.pldoc_src_files, ['pldoc_images']);
+    // gulp.watch(config.scripts.pldoc_src_files, ['pldoc_scripts']);
 
     // local
     gulp.watch(config.jekyll.home, ['jekyll-rebuild']);
