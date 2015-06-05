@@ -1,4 +1,3 @@
-define(["jquery"], function($) {
 
     var Tabs = {
 
@@ -25,16 +24,16 @@ define(["jquery"], function($) {
 
         resetInterface: function(wrapper) {
             wrapper.find('.pldoc-link').each(function() {
-                $(this).removeClass(this.vars.activeClass);
+                $(this).removeClass(Tabs.vars.activeClass);
             });
 
             wrapper.find(that.vars.panel).each(function() {
-                $(this).removeClass(this.vars.activeClass).addClass(this.vars.hiddenClass);
+                $(this).removeClass(Tabs.vars.activeClass).addClass(Tabs.vars.hiddenClass);
             });
         },
 
         handleTabClick: function() {
-            this.vars.tab.find('.pldoc-link').on('click', function(e) {
+            Tabs.vars.tab.find('.pldoc-link').on('click', function(e) {
                 e.preventDefault();
 
                 var content = $(this).attr('href');
@@ -45,8 +44,9 @@ define(["jquery"], function($) {
         },
 
         makeActive: function(tab, content) {
-            tab.addClass(this.vars.activeClass);
-            $(content).addClass(this.vars.activeClass).removeClass(this.vars.hiddenClass);
+            tab.addClass(Tabs.vars.activeClass);
+            $(content).addClass(Tabs.vars.activeClass).removeClass(Tabs.vars.hiddenClass);
         }
     };
-});
+
+    Tabs.init();

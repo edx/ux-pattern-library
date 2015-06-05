@@ -1,4 +1,3 @@
-define(["jquery"], function($) {
 
 /*
  * Accessibility Color Contrast Tool
@@ -10,7 +9,7 @@ define(["jquery"], function($) {
  * http://webaim.org/resources/contrastchecker
  */
 
-    var AccessibilityColorContrast = {
+    var ColorContrast = {
 
         vars: {
             failClass: 'fail-a11y-color' // Class for failed palettes
@@ -128,4 +127,5 @@ define(["jquery"], function($) {
                     .addClass(that.vars.failClass);
         }
     };
-});
+
+    ColorContrast.init();

@@ -1,14 +1,18 @@
-define(["jquery", "/public/pl/js/tabs.js"], function($) {
+define(['jquery.min', 'jquery.smooth-scroll', 'tabs', 'size-slider', 'color-contrast',], function($, smoothScroll, Tabs, IconSlider, ColorContrast) {
 
-    var loadMainUI = {
+    var Ui = {
 
         // JS is enabled/available
         init: function() {
-            loadMainUI.setupHtml();
-            loadMainUI.smoothScrollLink();
-            loadMainUI.openNewWindow();
-            loadMainUI.navigationHighlight();
-            loadMainUI.setupPalettes();
+            Ui.setupHtml();
+            Ui.smoothScrollLink();
+            Ui.openNewWindow();
+            Ui.navigationHighlight();
+            Ui.setupPalettes();
+
+            Tabs.init();
+            IconSlider.init();
+            ColorContrast.init();
         },
 
         setupHtml: function() {
@@ -59,4 +63,6 @@ define(["jquery", "/public/pl/js/tabs.js"], function($) {
             window.open($(this).attr('href'));
         }
     };
+
+    Ui.init();
 });

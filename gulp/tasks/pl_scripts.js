@@ -6,7 +6,6 @@ var uglify          = require('gulp-uglify');
 gulp.task('pldoc_scripts', ['pldoc_scripts-lint'], function() {
     return gulp.src([
             // setup script sequence
-            './_src/vendor/jquery/jquery-2.1.3.min.js',
             './_src/pl/vendor/jquery-smoothScroll/jquery.smooth-scroll.js',
             config.pldoc_src + '/required.js',
             config.pldoc_src + '/ui.js',

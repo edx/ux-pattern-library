@@ -1,4 +1,3 @@
-define(["jquery"], function($) {
 
 /*
  * Icon size slider
@@ -7,7 +6,7 @@ define(["jquery"], function($) {
  * with the control.
  */
 
-    var IconFontSliderControl = {
+    var IconSlider = {
 
         vars: {
             wrapper: $('#icons-preview'),
@@ -52,4 +51,5 @@ define(["jquery"], function($) {
             that.vars.sliderValue.val(size);
         }
     };
-});
+
+    IconSlider.init();
