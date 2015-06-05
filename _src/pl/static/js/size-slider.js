@@ -11,7 +11,7 @@ define(["jquery"], function($) {
 
         vars: {
             wrapper: $('#icons-preview'),
-            heading: $('.pl-tab-heading'),
+            heading: $('.pldoc-tab-heading'),
             example: $('.example-icon .icon-display'),
             sliderControl: $('#iconFontSlider'),
             sliderValue: $('#iconFontSliderValue')

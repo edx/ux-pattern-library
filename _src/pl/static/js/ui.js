@@ -26,7 +26,7 @@ define(["jquery", "/public/pl/js/tabs.js"], function($) {
 
         // smoothscroll to target links
         smoothScrollLink: function(e) {
-            $('a[href^="#"]').not('.pl-tab-wrapper .pl-link').on('click', function() {
+            $('a[href^="#"]').not('.pldoc-tab-wrapper .pldoc-link').on('click', function() {
                 $.smoothScroll({
                     offset: -200,
                     easing: 'swing',
@@ -47,8 +47,8 @@ define(["jquery", "/public/pl/js/tabs.js"], function($) {
 
         // smoothscroll to target links
         navigationHighlight: function() {
-            $('.pl-nav-elements .pl-link').on('click', function() {
-                $('.pl-nav-elements .pl-link').removeClass('is-current');
+            $('.pldoc-nav-elements .pldoc-link').on('click', function() {
+                $('.pldoc-nav-elements .pldoc-link').removeClass('is-current');
                 $(this).addClass('is-current');
             });
         },

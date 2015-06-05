@@ -14,6 +14,6 @@ require([
     "/public/pl/js/color-contrast.js"], function($, svg4everybody, SmoothScroll, loadMainUI, Tabs, IconFontSliderControl, AccessibilityColorContrast){
         loadMainUI.init();
         Tabs.init();
-        AccessibilityColorContrast.init();
         IconFontSliderControl.init();
+        AccessibilityColorContrast.init();
 });

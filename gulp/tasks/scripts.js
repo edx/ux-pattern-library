@@ -3,7 +3,7 @@ var config          = require('../config').scripts;
 var browserSync     = require('browser-sync');
 var uglify          = require('gulp-uglify');
 
-gulp.task('scripts', ['pl_scripts-lint'], function() {
+gulp.task('scripts', ['pldoc_scripts-lint'], function() {
     return gulp.src([
             // setup script sequence
             './_src/pl/vendor/jquery/jquery-2.1.3.min.js',
