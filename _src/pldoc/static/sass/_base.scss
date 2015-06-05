@@ -16,7 +16,7 @@ html, body {
     color: palette(grayscale, x-dark);
 }
 
-.pl {
+.pldoc {
     @include font-smoothing(on);
     background: palette("grayscale-cool", "x-light");
     font-size: font-size("base");
