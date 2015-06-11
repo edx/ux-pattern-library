@@ -345,10 +345,100 @@
     }
 
     .example-color {
-        display: block;
+        @include transition(all timing(x-fast) ease-in-out);
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        padding: 0;
+        box-shadow: none;
+        background: palette(grayscale, white);
+        color: palette(grayscale, white);
 
-        @include susy-breakpoint($bp-medium, $susy) {
-            @include gallery(3 of 12);
+        &.fail-a11y-color {
+            border-left: rem($baseline/4) solid palette(warning, base);
+        }
+
+        // STATE: hover, focus, and active
+        &:hover,
+        &:focus, 
+        &:active {
+            @include transform(scale(1.05));
+            z-index: z-index(mid-front);
+            box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+        }
+
+        .swatch-color {
+            display: block;
+            margin-bottom: 0;
+            padding: spacing-vertical(mid-small) spacing-horizontal(mid-small);
+
+            .color-class {
+                display: inline-block;
+                width: 50%;
+                font-size: font-size(small);
+                text-transform: lowercase;
+
+                // CASE: light text on dark bg
+                &.lod {
+                    color: palette(grayscale, white);
+                }
+
+                // CASE: dark text on light bg
+                &.dol {
+                    color: palette(grayscale, black);
+                }
+            }
+
+            // CASE: base color
+            &.base {
+
+                .color-class {
+                    font-weight: font-weight(bold);
+                }
+            }
+        }
+
+        .swatch-meta {
+            @include text-align(center);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: z-index(mid-front);
+            display: inline-block;
+            width: 50%;
+            padding: spacing-vertical(mid-small) spacing-horizontal(mid-small);
+            white-space: nowrap;
+            font-size: font-size(x-small);
+            color: palette(grayscale, white);
+
+            .color-rgb,
+            .color-hex {
+                display: inline-block;
+                width: 50%;
+                border: 0;
+                background: transparent;
+                text-align: center;
+                font-family: $font-family-monospace;
+
+                // CASE: light text on dark bg
+                &.lod {
+                    color: palette(grayscale, white);
+                }
+
+                // CASE: dark text on light bg
+                &.dol {
+                    color: palette(grayscale, black);
+                }
+            }
+
+            .color-rgb {
+                @include ellipsis();
+            }
+
+            .color-hex {
+                text-transform: uppercase;
+            }
         }
     }
 }
@@ -430,8 +520,4 @@
     @extend %message;
     background-color: palette(warning, light);
     color: palette(grayscale, black-t);
-}
-
-.fail-a11y-color {
-    @extend %message-warning;
 }

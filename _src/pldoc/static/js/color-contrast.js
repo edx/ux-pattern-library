@@ -124,8 +124,7 @@ $(function() {
             var that = this;
 
             $(swatch)
-                .find($('.swatch-meta'))
-                    .addClass(that.vars.failClass);
+                .addClass(that.vars.failClass);
         }
 
     };
