@@ -361,7 +361,7 @@
 
         // STATE: hover, focus, and active
         &:hover,
-        &:focus, 
+        &:focus,
         &:active {
             @include transform(scale(1.05));
             z-index: z-index(mid-front);
@@ -415,6 +415,7 @@
             .color-rgb,
             .color-hex {
                 display: inline-block;
+                vertical-align: middle;
                 width: 50%;
                 border: 0;
                 background: transparent;
