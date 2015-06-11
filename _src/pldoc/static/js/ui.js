@@ -92,7 +92,6 @@ $(document).ready(function() {
 
     // palette values
     function rgbaToHex(rgb) {
-        console.log(rgb);
         if (typeof(rgb) !== 'undefined') {
             var _rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i),
                 hex;
