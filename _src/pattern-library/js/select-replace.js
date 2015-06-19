@@ -83,8 +83,6 @@ $(function() {
                 wrapper = el.parent('.' + this.vars.wrapperClass),
                 text = wrapper.find('.' + this.vars.valueClass);
 
-            console.log(el, wrapper, text);
-
             text.text(val);
         },
 
