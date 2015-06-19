@@ -4,8 +4,8 @@ category: elements
 viewclass:  element
 ---
 
-<div class="pldoc-wrapper-element">
-    <article class="pldoc-element pldoc-element-{{ page.slug }}">
+<section class="pldoc-wrapper-element">
+    <article class="pldoc-element pldoc-element-{{ page.slug }}" tabindex="-1" aria-label="{{ page.slug }}">
         <header class="pldoc-element-header">
             <h1 class="pldoc-heading pldoc-element-title hd-4">{{ page.title }}</h1>
 
@@ -25,28 +25,29 @@ viewclass:  element
             {% if page.tags contains "pattern" %}
             <ul class="pldoc-tab-labels pldoc-list pldoc-element-navigation">
                 <li class="pldoc-tab-label">
-                    <a class="pldoc-link pldoc-link-preview is-active" href="#{{page.slug}}-preview">Preview</a>
+                    <button class="pldoc-link pldoc-link-preview is-active" data-href="#{{page.slug}}-preview">Preview</button>
                 </li>
                 <li class="pldoc-tab-label">
-                    <a class="pldoc-link pldoc-link-markup" href="#{{page.slug}}-markup">Markup</a>
+                    <button class="pldoc-link pldoc-link-markup" data-href="#{{page.slug}}-markup">Markup</button>
                 </li>
                 <li class="pldoc-tab-label">
-                    <a class="pldoc-link pldoc-link-styling" href="#{{page.slug}}-styling">Styling</a>
+                    <button class="pldoc-link pldoc-link-styling" data-href="#{{page.slug}}-styling">Styling</button>
                 </li>
             </ul>
             {% endif %}
 
             <div class="pldoc-tabs">
-                <div class="pldoc-tab pldoc-element-preview is-active" id="{{page.slug}}-preview">
+                <div class="pldoc-tab pldoc-element-preview is-active" id="{{page.slug}}-preview" tabindex="-1">
                     <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-preview-title">{{page.title}} Preview</h2>
 
                     <div class="pldoc-tab-content">
                         {% if page.tags contains "icons" %}
                         <div class="pldoc-settings">
                             <div class="pldoc-setting pldoc-setting-sizer">
-                                <label for="iconFontSlider" class="is-hidden">Drag to resize icons</label>
-                                <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-min="12" aria-max="144" aria-now="24">
-                                <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">
+                                <label for="iconFontSlider" class="sr-only">Drag to resize icons</label>
+                                <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-valuemin="12" aria-valuemax="144" aria-valuenow="24">
+                                <label for="iconFontSliderValue" class="sr-only">Icon size in pixels</label>
+                                <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">px
                             </div>
                         </div>
                         {% endif %}
@@ -56,7 +57,7 @@ viewclass:  element
                 </div>
 
                 {% if page.tags contains "pattern" %}
-                <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{page.slug}}-markup">
+                <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{page.slug}}-markup" tabindex="-1">
                     <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-markup-title">{{page.title}} Markup</h2>
 
                     <div class="pldoc-tab-content">
@@ -66,7 +67,7 @@ viewclass:  element
                     </div>
                 </div>
 
-                <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{page.slug}}-styling">
+                <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{page.slug}}-styling" tabindex="-1">
                     <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-style-title">{{page.title}} Style</h2>
 
                     <div class="pldoc-tab-content">
@@ -77,4 +78,4 @@ viewclass:  element
             {% endif %}
         </div>
     </article>
-</div>
+</section>

@@ -7,8 +7,8 @@ viewclass:  index
 
     {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
     {% for post in sorted_elements_posts %}
-    <div class="pldoc-wrapper-element">
-        <article class="pldoc-element pldoc-element-{{ post.slug }}" id="{{ post.slug }}">
+    <section class="pldoc-wrapper-element">
+        <article class="pldoc-element pldoc-element-{{ post.slug }}" id="{{ post.slug }}" tabindex="-1" aria-label="{{ post.slug }}">
 
             <header class="pldoc-element-header">
                 <h1 class="pldoc-heading pldoc-element-title hd-4">{{ post.title }}</h1>
@@ -19,7 +19,7 @@ viewclass:  index
                         <time class="pldoc-element-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
                     </li>
                     <li class="meta meta-permalink">
-                        <a class="pldoc-link" href="{{post.url}}">Permalink</a>
+                        <a class="pldoc-link" href="{{post.url}}">Permalink <span class="sr-only">to {{ post.slug }}</span></a>
                     </li>
                 </ul>
             </header>
@@ -32,28 +32,29 @@ viewclass:  index
                 {% if post.tags contains "pattern" %}
                 <ul class="pldoc-tab-labels pldoc-list pldoc-element-navigation">
                     <li class="pldoc-tab-label">
-                        <a class="pldoc-link pldoc-link-preview is-active" href="#{{post.slug}}-preview">Preview</a>
+                        <button class="pldoc-link pldoc-link-preview is-active" data-href="#{{post.slug}}-preview">Preview</button
                     </li>
                     <li class="pldoc-tab-label">
-                        <a class="pldoc-link pldoc-link-markup" href="#{{post.slug}}-markup">Markup</a>
+                        <button class="pldoc-link pldoc-link-markup" data-href="#{{post.slug}}-markup">Markup</button>
                     </li>
                     <li class="pldoc-tab-label">
-                        <a class="pldoc-link pldoc-link-styling" href="#{{post.slug}}-styling">Styling</a>
+                        <button class="pldoc-link pldoc-link-styling" data-href="#{{post.slug}}-styling">Styling</button>
                     </li>
                 </ul>
                 {% endif %}
 
                 <div class="pldoc-tabs">
-                    <div class="pldoc-tab pldoc-element-preview is-active" id="{{post.slug}}-preview">
+                    <div class="pldoc-tab pldoc-element-preview is-active" id="{{post.slug}}-preview" tabindex="-1">
                         <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-preview-title">{{post.title}} Preview</h2>
 
                         <div class="pldoc-tab-content">
                             {% if post.tags contains "icons" %}
                             <div class="pldoc-settings">
                                 <div class="pldoc-setting pldoc-setting-sizer">
-                                    <label for="iconFontSlider" class="is-hidden">Drag to resize icons</label>
-                                    <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-min="12" aria-max="144" aria-now="24">
-                                    <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">
+                                    <label for="iconFontSlider" class="sr-only">Drag to resize icons</label>
+                                    <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-valuemin="12" aria-valuemax="144" aria-valuenow="24">
+                                    <label for="iconFontSliderValue" class="sr-only">Icon size in pixels</label>
+                                    <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">px
                                 </div>
                             </div>
                             {% endif %}
@@ -63,7 +64,7 @@ viewclass:  index
                     </div>
 
                     {% if post.tags contains "pattern" %}
-                    <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{post.slug}}-markup">
+                    <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{post.slug}}-markup" tabindex="-1">
                         <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-markup-title">{{post.title}} Markup</h2>
 
                         <div class="pldoc-tab-content">
@@ -73,7 +74,7 @@ viewclass:  index
                         </div>
                     </div>
 
-                    <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{post.slug}}-styling">
+                    <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{post.slug}}-styling" tabindex="-1">
                         <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-styling-title">{{post.title}} Style</h2>
 
                         <div class="pldoc-tab-content">
@@ -85,7 +86,7 @@ viewclass:  index
             </div>
 
         </article>
-    </div>
+    </section>
     {% endfor %}
 </div>
 
