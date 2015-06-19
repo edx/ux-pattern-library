@@ -36,39 +36,44 @@ $(function() {
 
                 variables.replaced.each(function(index, el) {
                     var $el = $(el),
-                        statuses = '';
+                        replaced = $el.clone(),
+                        statuses = [];
 
                     if ($el.hasClass('has-success')) {
-                        statuses += 'has-success';
+                        statuses.push('has-success');
                     }
 
                     if ($el.hasClass('has-error')) {
-                        statuses += 'has-error';
+                        statuses.push('has-error');
                     }
 
                     if ($el.is(':disabled')) {
-                        statuses += 'is-disabled';
+                        statuses.push('is-disabled');
                     }
 
                     $el.addClass(variables.replacedClass);
-                    $el.wrap('<div class="' + variables.wrapperClass + '"></div>');
-                    $el.parent('.' + variables.wrapperClass).append($('<span class="' + variables.customClass + ' ' + statuses + '" aria-hidden="true"><span class="' + variables.valueClass + '"></span><svg class="icon ' + variables.iconClass + '" title="Down arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/public/images/edx-svg/svgdefs.svg#' + variables.iconClass + '"></use></svg></span>'));
 
-                    CustomSelectReplacement.setInitialText($(this));
+                    $el.replaceWith([
+                        '<div class="' + variables.wrapperClass + '">',
+                            '<select class="' + replaced[0].className + ' is-replaced" id="' + replaced[0].id + '" name="' + replaced[0].name + '">' + replaced[0].innerHTML + '</select>',
+                            '<span class="' + variables.customClass + ' ' + statuses.join(' ') + '" aria-hidden="true">',
+                                '<span class="' + variables.valueClass + '">' + CustomSelectReplacement.setInitialText($el) + '</span>',
+                                '<svg class="icon ' + variables.iconClass + '" title="Down arrow">',
+                                    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/public/images/edx-svg/svgdefs.svg#' + variables.iconClass + '"></use>',
+                                '</svg>',
+                            '</span>',
+                        '</div>'
+                        ].join(''));
                 });
             }
         },
 
         setInitialText: function(el) {
-            var val = el.find('option:first').text(),
-                wrapper = el.parent('.' + this.vars.wrapperClass),
-                text = wrapper.find('.' + this.vars.valueClass);
-
-            text.text(val);
+            return el.find('option:first').text()
         },
 
         listenForSelectClick: function() {
-            this.vars.replaced.on('change', function(event) {
+            $('.field').on('change', this.vars.replaced, function(event) {
                 CustomSelectReplacement.updateReplacedOption($(event.target));
             });
         },
@@ -77,6 +82,8 @@ $(function() {
             var val = el.val(),
                 wrapper = el.parent('.' + this.vars.wrapperClass),
                 text = wrapper.find('.' + this.vars.valueClass);
+
+            console.log(el, wrapper, text);
 
             text.text(val);
         },

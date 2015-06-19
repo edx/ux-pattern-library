@@ -262,7 +262,7 @@
     // not to be used manually
     &.is-replaced {
         position: relative;
-        top: rem($baseline/4);
+        top: 0;
         @include left(0);
         z-index: z-index(mid-front);
         opacity: 0;
