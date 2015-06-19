@@ -194,6 +194,13 @@
     letter-spacing: rem(1);
 }
 
+.pldoc-tab {
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .pldoc-tab-content {
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
@@ -313,7 +320,10 @@
     .pldoc-link {
         display: block;
         margin: 0;
-        border-bottom: $pldoc-tab-label-height solid $transparent;
+        border-width: 0 0 $pldoc-tab-label-height 0;
+        border-color: $transparent;
+        border-style: solid;
+        background: $transparent;
         padding: spacing-vertical(x-small) spacing-horizontal(mid-small);
         font-weight: font-weight(semi-bold);
         color: palette(grayscale, dark);
