@@ -25,6 +25,13 @@
     }
 }
 
+// copyable elements
+.is-copyable {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: $font-family-monospace;
+}
+
 // ------------------------------
 // #HEADER
 // ------------------------------
@@ -340,15 +347,112 @@
 // color swatches
 .pldoc-element-colors {
 
-    .example-set {
-        @include container();
-    }
-
     .example-color {
-        display: block;
+        @include transition(all timing(x-fast) ease-in-out);
+        @include container();
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        padding: spacing-vertical(small) spacing-horizontal(base);
+        box-shadow: none;
+        color: palette(grayscale, white);
 
-        @include susy-breakpoint($bp-medium, $susy) {
-            @include gallery(3 of 12);
+        &.fail-a11y-color {
+            border-left: rem($baseline/4) solid palette(warning, base);
+        }
+
+        // STATE: hover, focus, and active
+        &:hover,
+        &:focus,
+        &:active {
+            @include transform(scale(1.02));
+            z-index: z-index(mid-front);
+        }
+
+        // CASE: dark text on light bg
+        &.dol {
+
+            .color-class,
+            .color-reference,
+            .color-meta {
+                color: palette(grayscale, black);
+            }
+        }
+
+        // CASE: light text on dark bg
+        &.lod {
+
+            .color-class,
+            .color-reference,
+            .color-meta {
+                color: palette(grayscale, white);
+            }
+        }
+
+        // color info
+        .color-info {
+            @include span(12);
+            margin-bottom: spacing-vertical(small);
+
+            @include susy-breakpoint($bp-medium, $susy) {
+                @include span(6 first);
+                margin-bottom: 0;
+            }
+        }
+
+        // color name/class
+        .color-class {
+            display: block;
+            width: 100%;
+            margin-bottom: spacing-vertical(x-small);
+            font-size: font-size(small);
+            font-weight: font-weight(semi-bold);
+            text-transform: lowercase;
+        }
+
+        // CASE: base color
+        &.base {
+            padding-top: spacing-vertical(base);
+            padding-bottom: spacing-vertical(base);
+
+            .color-class {
+                font-size: font-size(base);
+                font-weight: font-weight(bold);
+            }
+        }
+
+        // color reference
+        .color-reference {
+            display: block;
+            font-size: font-size(x-small);
+        }
+
+        // color metadata
+        .color-meta {
+            @include span(12);
+            font-size: font-size(x-small);
+            color: palette(grayscale, white);
+
+            @include susy-breakpoint($bp-medium, $susy) {
+                @include span(6 last);
+                @include text-align(right);
+            }
+
+            .color-rgb,
+            .color-hex {
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .color-rgb {
+                @include ellipsis();
+                @include margin-right(spacing-horizontal(small));
+            }
+
+            .color-hex {
+                text-transform: uppercase;
+            }
         }
     }
 }
@@ -430,8 +534,4 @@
     @extend %message;
     background-color: palette(warning, light);
     color: palette(grayscale, black-t);
-}
-
-.fail-a11y-color {
-    @extend %message-warning;
 }

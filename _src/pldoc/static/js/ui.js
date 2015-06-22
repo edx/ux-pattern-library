@@ -110,20 +110,33 @@ $(document).ready(function() {
     if ($('.example').length) {
 
         $('.example').each(function() {
-            var rgb = $(this).find('.swatch-color').css('backgroundColor');
+            var rgb = $(this).css('backgroundColor');
 
-            $(this).find('.swatch-meta .color-rgb').val(rgb);
-            $(this).find('.swatch-meta .color-hex').val(rgbaToHex(rgb));
+            $(this).find('.color-meta .color-rgb').text(rgb);
+            $(this).find('.color-meta .color-hex').text(rgbaToHex(rgb));
         });
     }
 
-    $('.swatch-meta input').focus(function() {
-        var $this = $(this);
-        $this.select();
+    // this selects all the text in an element
+    // http://stackoverflow.com/questions/12243898/how-to-select-all-text-in-contenteditable-div
+    $.fn.selectText = function() {
+        var doc = document,
+            element = this[0];
 
-        $this.mouseup(function() {
-            $this.unbind('mouseup');
-            return false;
-        });
+        if (doc.body.createTextRange) {
+            var range = doc.body.createTextRange();
+            range.moveToElementText(element);
+            range.select();
+        } else if (window.getSelection) {
+            var selection = window.getSelection();
+            var range = doc.createRange();
+            range.selectNodeContents(element);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    }
+
+    $('.is-copyable').click(function() {
+        $(this).selectText();
     });
 });
