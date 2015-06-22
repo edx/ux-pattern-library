@@ -78,6 +78,11 @@ This will run the `default` gulp task defined in `gulpfile.js`, which has the fo
 * `jekyll-build` and `jekyll-rebuild` run the local jekyll server/preview and re-process any layouts, posts, or templates changed.
 * `watch` will start watching source files and will re-run the appropriate tasks when those files change.
 
+After running the default task, your local instance of the Pattern Library can be viewable at http://localhost:3000. There are additional views:
+
+* http://localhost:3000/examples/**/* - where full page examples and demos are kept
+* http://localhost:3000/elements/**/* - permalinks for individually documented pattern library elements
+
 **NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task prefixed with `pldoc_*` refers to the reference site UI and not the elements.
 
 ### Publishing & Viewing Remotely
