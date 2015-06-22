@@ -136,7 +136,7 @@ $(document).ready(function() {
         }
     }
 
-    $('.swatch-meta div').click(function() {
+    $('.color-meta div').click(function() {
         $(this).selectText();
     });
 });
