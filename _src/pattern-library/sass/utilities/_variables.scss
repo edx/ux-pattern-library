@@ -127,6 +127,9 @@ $palettes: (
     ),
 );
 
+// shadows
+$shadow: transparentize(palette(grayscale-cool, x-dark), .5);
+
 // ----------------------------
 // #TYPOGRAPHY
 // ----------------------------
@@ -233,6 +236,27 @@ $letter-spacing: (
 );
 
 // ----------------------------
+// #FORMS
+// ----------------------------
+
+// form inputs: heights
+// values are "rows" which maps to line-height
+// primarily used in textareas
+$input-height: (
+    short:          5,
+    base:           10,
+    tall:           15
+);
+
+// form inputs: widths
+$input-width: (
+    short:          150,
+    base:           300,
+    wide:           450,
+    block:          null // value here is irrelevant but required. Null is easy to understand.
+);
+
+// ----------------------------
 // #DEPTH
 // ----------------------------
 $z-depths: (
@@ -250,7 +274,7 @@ $spacing-vertical: (
     mid-small:  ($baseline-vertical*0.75),
     small:      ($baseline-vertical/2),
     x-small:    ($baseline-vertical/4),
-    xx-small:    ($baseline-vertical/8),
+    xx-small:   ($baseline-vertical/8),
     mid-large:  ($baseline-vertical*1.5),
     large:      ($baseline-vertical*2),
     x-large:    ($baseline-vertical*4)
@@ -330,6 +354,49 @@ $buttons-border-size: 1px !default;
 $buttons-elevated-shadow: 3px !default;
 $buttons-border-radius: 3px !default;
 $buttons-font-weight: font-weight(semi-bold) !default;
+
+// forms
+$label-color: $text-base-color !default;
+$label-color-active: palette(grayscale, x-dark) !default;
+
+$input-placeholder-text: palette(grayscale-cool, light) !default;
+
+$input-background-default: palette(grayscale, white) !default;
+$input-background-default-focus: $input-background-default !default;
+$input-check-radio-background-default: palette(grayscale-cool, x-light) !default;
+$input-check-radio-background-checked: palette(primary, base) !default;
+$input-border-default: palette(grayscale, x-light) !default;
+$input-border-default-focus: palette(primary, accent) !default;
+$input-control-color: palette(primary, base) !default;
+$input-text-default: palette(grayscale-cool, x-dark) !default;
+$input-text-default-hover: palette(grayscale-cool, x-dark) !default;
+
+$input-background-disabled: palette(grayscale-cool, x-light) !default;
+$input-border-disabled: palette(grayscale-cool, light) !default;
+$input-text-disabled: palette(grayscale-cool, light) !default;
+
+$input-alt-background: $transparent !default;
+$input-alt-border-focus: palette(grayscale, x-dark) !default;
+
+$input-slider-track-default: palette(grayscale, x-light) !default;
+$input-slider-border-default: $input-slider-track-default !default;
+$input-slider-border-default-radius: $buttons-border-radius !default;
+$input-slider-handle-default: palette(primary, light) !default;
+$input-slider-handle-default-hover: palette(primary, base) !default;
+$input-slider-default-focus: palette(primary, accent) !default;
+$input-slider-default-hover: palette(primary, x-accent) !default;
+$input-slider-track-disabled: palette(grayscale, x-light) !default;
+$input-slider-disabled-border: $input-slider-track-disabled !default;
+$input-slider-handle-disabled: palette(grayscale, base) !default;
+$input-slider-disabled-focus: palette(grayscale, light) !default;
+
+$input-progress-track: palette(grayscale, x-light) !default;
+$input-progress-border: $input-progress-track !default;
+$input-progress-border-radius: $buttons-border-radius !default;
+$input-progress-track-done: palette(primary, accent) !default;
+
+$field-tip-color: palette(grayscale-cool, dark) !default;
+$field-required-indicator-color: $label-color !default;
 
 // tables
 $table-cell-padding: spacing-vertical(small) spacing-horizontal(small) !default;
