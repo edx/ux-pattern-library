@@ -25,6 +25,13 @@
     }
 }
 
+// copyable elements
+.is-copyable {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: $font-family-monospace;
+}
+
 // ------------------------------
 // #HEADER
 // ------------------------------
@@ -340,19 +347,15 @@
 // color swatches
 .pldoc-element-colors {
 
-    .example-set {
-        @include container();
-    }
-
     .example-color {
         @include transition(all timing(x-fast) ease-in-out);
+        @include container();
         position: relative;
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        padding: 0;
+        padding: spacing-vertical(small) spacing-horizontal(base);
         box-shadow: none;
-        background: palette(grayscale, white);
         color: palette(grayscale, white);
 
         &.fail-a11y-color {
@@ -363,78 +366,88 @@
         &:hover,
         &:focus,
         &:active {
-            @include transform(scale(1.05));
+            @include transform(scale(1.02));
             z-index: z-index(mid-front);
-            box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
         }
 
-        .swatch-color {
+        // CASE: dark text on light bg
+        &.dol {
+
+            .color-class,
+            .color-reference,
+            .color-meta {
+                color: palette(grayscale, black);
+            }
+        }
+
+        // CASE: light text on dark bg
+        &.lod {
+
+            .color-class,
+            .color-reference,
+            .color-meta {
+                color: palette(grayscale, white);
+            }
+        }
+
+        // color info
+        .color-info {
+            @include span(12);
+            margin-bottom: spacing-vertical(small);
+
+            @include susy-breakpoint($bp-medium, $susy) {
+                @include span(6 first);
+                margin-bottom: 0;
+            }
+        }
+
+        // color name/class
+        .color-class {
             display: block;
-            margin-bottom: 0;
-            padding: spacing-vertical(mid-small) spacing-horizontal(mid-small);
+            width: 100%;
+            margin-bottom: spacing-vertical(x-small);
+            font-size: font-size(small);
+            font-weight: font-weight(semi-bold);
+            text-transform: lowercase;
+        }
+
+        // CASE: base color
+        &.base {
+            padding-top: spacing-vertical(base);
+            padding-bottom: spacing-vertical(base);
 
             .color-class {
-                display: inline-block;
-                width: 50%;
-                font-size: font-size(small);
-                text-transform: lowercase;
-
-                // CASE: light text on dark bg
-                &.lod {
-                    color: palette(grayscale, white);
-                }
-
-                // CASE: dark text on light bg
-                &.dol {
-                    color: palette(grayscale, black);
-                }
-            }
-
-            // CASE: base color
-            &.base {
-
-                .color-class {
-                    font-weight: font-weight(bold);
-                }
+                font-size: font-size(base);
+                font-weight: font-weight(bold);
             }
         }
 
-        .swatch-meta {
-            @include text-align(center);
-            position: absolute;
-            top: 0;
-            left: 50%;
-            z-index: z-index(mid-front);
-            display: inline-block;
-            width: 50%;
-            padding: spacing-vertical(mid-small) spacing-horizontal(mid-small);
-            white-space: nowrap;
+        // color reference
+        .color-reference {
+            display: block;
+            font-size: font-size(x-small);
+        }
+
+        // color metadata
+        .color-meta {
+            @include span(12);
             font-size: font-size(x-small);
             color: palette(grayscale, white);
 
+            @include susy-breakpoint($bp-medium, $susy) {
+                @include span(6 last);
+                @include text-align(right);
+            }
+
             .color-rgb,
             .color-hex {
-                display: inline-block;
                 vertical-align: middle;
-                width: 50%;
-                border: 0;
-                background: transparent;
                 text-align: center;
-                font-family: $font-family-monospace;
-
-                // CASE: light text on dark bg
-                &.lod {
-                    color: palette(grayscale, white);
-                }
-
-                // CASE: dark text on light bg
-                &.dol {
-                    color: palette(grayscale, black);
-                }
             }
 
             .color-rgb {
                 @include ellipsis();
+                @include margin-right(spacing-horizontal(small));
             }
 
             .color-hex {
