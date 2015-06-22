@@ -1,14 +1,16 @@
-/*
- * Accessibility Color Contrast Tool
- * Runs through our list of swatches checking the contrast variance between foreground
- * and background, and highlights those swatch color combinations that don't meet AA
- * acceptance criteria.
- *
- * The majority of this code was adapted from Jared Smith of WebAIM.org
- * http://webaim.org/resources/contrastchecker
- */
+define([
+    'jquery'
+    ], function($) {
 
-$(function() {
+    /*
+     * Accessibility Color Contrast Tool
+     * Runs through our list of swatches checking the contrast variance between foreground
+     * and background, and highlights those swatch color combinations that don't meet AA
+     * acceptance criteria.
+     *
+     * The majority of this code was adapted from Jared Smith of WebAIM.org
+     * http://webaim.org/resources/contrastchecker
+     */
 
     var AccessibilityColorContrast = {
 
@@ -21,8 +23,7 @@ $(function() {
         },
 
         rgbaToHex: function(rgba) {
-            var that = this,
-                _rgba = rgba.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i),
+            var _rgba = rgba.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i),
                 hex;
 
             hex = (_rgba && _rgba.length === 4) ? '#' +
@@ -36,20 +37,19 @@ $(function() {
         },
 
         checkContrast: function() {
-            var that = this,
-                bg, fg;
+            var bg, fg, ratio;
 
             $('.example-color').each(function() {
 
-                bg = that.getL( that.rgbaToHex( $(this).find('.swatch-color').css('backgroundColor') ) );
-                fg = that.getL( that.rgbaToHex( $(this).find('.color-class').css('color') ) );
+                bg = AccessibilityColorContrast.getL( AccessibilityColorContrast.rgbaToHex( $(this).css('backgroundColor') ) );
+                fg = AccessibilityColorContrast.getL( AccessibilityColorContrast.rgbaToHex( $(this).find('.color-class').css('color') ) );
 
-                var ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05),
+                    ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05),
                     ratios = [4.5, 3]; // 4.5 normal text AA, 3 large text AA
 
                 if (ratio < ratios[0]) {
                     // Text should pass for normal sized text (non-headings)
-                    that.applyHighlighting($(this));
+                    AccessibilityColorContrast.applyHighlighting($(this));
                 }
 
                 if (ratio < ratios[1]) {
@@ -60,29 +60,28 @@ $(function() {
         },
 
         getL: function(color) {
-            var that = this,
-                R, G, B, A, L,
+            var R, G, B, A, L,
                 update = false;
 
             if (color.length == 3) {
 
-                R = that.getsRGB(color.substring(0,1) + color.substring(0,1));
-                G = that.getsRGB(color.substring(1,2) + color.substring(1,2));
-                B = that.getsRGB(color.substring(2,3) + color.substring(2,3));
+                R = AccessibilityColorContrast.getsRGB(color.substring(0,1) + color.substring(0,1));
+                G = AccessibilityColorContrast.getsRGB(color.substring(1,2) + color.substring(1,2));
+                B = AccessibilityColorContrast.getsRGB(color.substring(2,3) + color.substring(2,3));
                 update = true;
 
             } else if (color.length == 6) {
 
-                R = that.getsRGB(color.substring(0,2));
-                G = that.getsRGB(color.substring(2,4));
-                B = that.getsRGB(color.substring(4,6));
+                R = AccessibilityColorContrast.getsRGB(color.substring(0,2));
+                G = AccessibilityColorContrast.getsRGB(color.substring(2,4));
+                B = AccessibilityColorContrast.getsRGB(color.substring(4,6));
                 update = true;
 
             } else {
                 update = false;
             }
 
-            if (update === true) {
+            if (update) {
 
                 L = (0.2126 * R + 0.7152 * G + 0.0722 * B);
                 return L;
@@ -93,9 +92,7 @@ $(function() {
         },
 
         getsRGB: function(color) {
-            var that = this;
-
-            color = that.getRGB(color);
+            color = AccessibilityColorContrast.getRGB(color);
             if (color !== false) {
 
                 color = color/255;
@@ -108,8 +105,7 @@ $(function() {
         },
 
         getRGB: function(col) {
-            var that = this,
-                color;
+            var color;
 
             try {
                 color = parseInt(col, 16);
@@ -121,14 +117,11 @@ $(function() {
         },
 
         applyHighlighting: function(swatch) {
-            var that = this;
-
             $(swatch)
-                .addClass(that.vars.failClass);
+                .addClass(AccessibilityColorContrast.vars.failClass);
         }
 
     };
 
     AccessibilityColorContrast.init();
-
 });

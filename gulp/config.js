@@ -1,13 +1,13 @@
 // gulp pattern library + site configuration
 
 // pattern library
-var dest = './public';
-var src = './_src/pattern-library';
-var local = './_site';
+var dest = './public',
+    src = './_src/pattern-library',
+    local = './_site',
 
 // documentation site
-var pldoc_src = './_src/pldoc';
-var pldoc_dest = './public/pldoc';
+    pldoc_src = './_src/pldoc',
+    pldoc_dest = './public/pldoc';
 
 module.exports = {
     browserSync: {

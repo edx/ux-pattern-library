@@ -1,11 +1,11 @@
-var gulp            = require('gulp');
-var config          = require('../config').styles;
-var handleErrors    = require('../util/handleErrors');
-var browserSync     = require('browser-sync');
-var sass            = require('gulp-sass');
-var autoprefixer    = require('gulp-autoprefixer');
-var minifyCSS       = require('gulp-minify-css');
-var size            = require('gulp-filesize');
+var gulp            = require('gulp'),
+    config          = require('../config').styles,
+    handleErrors    = require('../util/handleErrors'),
+    browserSync     = require('browser-sync'),
+    sass            = require('gulp-sass'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    minifyCSS       = require('gulp-minify-css'),
+    size            = require('gulp-filesize');
 
 gulp.task('pldoc_styles', function () {
     return gulp.src(config.pldoc_src_files)
