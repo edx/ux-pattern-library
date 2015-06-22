@@ -29,21 +29,20 @@ module.exports = {
         pldoc_src: pldoc_src + '/static/sass',
         pldoc_src_files: pldoc_src + '/static/sass/**/*.scss',
         pldoc_src_static: src + '/css',
-        pldoc_src_static_files: src + '/css/**/*.css',
         pldoc_dest: pldoc_dest + '/css',
         pldoc_local: local + '/public/pldoc/css'
     },
     images: {
         // pattern library
         src: src + '/images',
-        src_files: src + '/images/**',
+        src_files: src + 'images/**',
         dest: dest + '/images',
         local: local + '/public/images',
 
         // documentation site
         pldoc_src: pldoc_src + '/static/images',
         pldoc_src_files: pldoc_src + '/static/images/**',
-        pldoc_dest: pldoc_dest + '/images',
+        pldoc_dest: pldoc_dest,
         pldoc_local: local + '/public/pldoc/images'
     },
     scripts: {
