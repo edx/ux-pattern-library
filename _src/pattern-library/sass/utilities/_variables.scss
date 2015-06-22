@@ -193,25 +193,27 @@ $font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace
 
 // typography: sizes
 $font-sizes: (
-    xxx-large:      38,
-    xx-large:       28,
-    x-large:        24,
-    large:          21,
-    mid-large:      18,
+    xxxx-large:     38,
+    xxx-large:      28,
+    xx-large:       24,
+    x-large:        21,
+    large:          18,
     base:           16,
     small:          14,
     x-small:        12,
+    xx-small:       11,
+    xxx-small:      10,
 );
 
 // typography: line-height
 $line-heights: (
+    xxx-large:      1.40,
     xx-large:       1.40,
-    x-large:        1.40,
-    large:          1.50,
-    mid-large:      1.60,
-    mid-small:      1.60,
-    small:          1.5,
+    x-large:        1.50,
+    large:          1.60,
     base:           1.5,
+    small:          1.60,
+    x-small:        1.5,
     none:           0
 );
 
