@@ -136,7 +136,7 @@ $(document).ready(function() {
         }
     }
 
-    $('.color-meta div').click(function() {
+    $('.is-copyable').click(function() {
         $(this).selectText();
     });
 });
