@@ -110,10 +110,10 @@ $(document).ready(function() {
     if ($('.example').length) {
 
         $('.example').each(function() {
-            var rgb = $(this).find('.swatch-color').css('backgroundColor');
+            var rgb = $(this).css('backgroundColor');
 
-            $(this).find('.swatch-meta .color-rgb').text(rgb);
-            $(this).find('.swatch-meta .color-hex').text(rgbaToHex(rgb));
+            $(this).find('.color-meta .color-rgb').text(rgb);
+            $(this).find('.color-meta .color-hex').text(rgbaToHex(rgb));
         });
     }
 
