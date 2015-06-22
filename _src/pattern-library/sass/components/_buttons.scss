@@ -69,10 +69,10 @@
 // ----------------------------
 .btn-large {
     padding: spacing-vertical(small) spacing-horizontal(mid-large);
-    font-size: font-size(mid-large);
+    font-size: font-size(large);
 
     .icon {
-        @include size(font-size(mid-large));
+        @include size(font-size(large));
     }
 }
 
