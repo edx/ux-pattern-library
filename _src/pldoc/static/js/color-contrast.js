@@ -1,16 +1,14 @@
-define([
-    'jquery'
-    ], function($) {
+/*
+ * Accessibility Color Contrast Tool
+ * Runs through our list of swatches checking the contrast variance between foreground
+ * and background, and highlights those swatch color combinations that don't meet AA
+ * acceptance criteria.
+ *
+ * The majority of this code was adapted from Jared Smith of WebAIM.org
+ * http://webaim.org/resources/contrastchecker
+ */
 
-    /*
-     * Accessibility Color Contrast Tool
-     * Runs through our list of swatches checking the contrast variance between foreground
-     * and background, and highlights those swatch color combinations that don't meet AA
-     * acceptance criteria.
-     *
-     * The majority of this code was adapted from Jared Smith of WebAIM.org
-     * http://webaim.org/resources/contrastchecker
-     */
+$(function() {
 
     var AccessibilityColorContrast = {
 
@@ -43,7 +41,7 @@ define([
 
             $('.example-color').each(function() {
 
-                bg = that.getL( that.rgbaToHex( $(this).css('backgroundColor') ) );
+                bg = that.getL( that.rgbaToHex( $(this).find('.swatch-color').css('backgroundColor') ) );
                 fg = that.getL( that.rgbaToHex( $(this).find('.color-class').css('color') ) );
 
                 var ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05),
@@ -132,4 +130,5 @@ define([
     };
 
     AccessibilityColorContrast.init();
+
 });
