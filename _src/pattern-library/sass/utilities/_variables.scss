@@ -322,6 +322,26 @@ $input-width: (
 
 
 // ----------------------------
+// #FORMS
+// ----------------------------
+// form inputs: heights
+// values are "rows" which maps to line-height
+// primarily used in textareas
+$input-height: (
+    short:          5,
+    base:           10,
+    tall:           15
+);
+
+// form inputs: widths
+$input-width: (
+    short:          150,
+    base:           300,
+    wide:           450,
+    block:          null // value here is irrelevant but required. Null is easy to understand.
+);
+
+// ----------------------------
 // #APPLICATIONS
 // ----------------------------
 // scaffolding
