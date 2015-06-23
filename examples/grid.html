@@ -1,0 +1,264 @@
+---
+layout: canvas
+title: Grid System Examples
+viewclass:  pldoc-view-example pldoc-view-example-grid
+related-pattern: grid
+---
+
+<!--
+edX Pattern Library Site: Grid System Example View
+
+About: This serves as a playground/testing bed for the grid system without any additional chrome.
+
+Things to note:
+
+* this does not contain any styling from the pldoc assets
+
+* this view will be viewable once you start Jekyll locally or through Github Pages hosting at [site path or url]/examples/grid.html
+
+* this view can only leverage styles rules for 1) any patterns already in the pattern library or any styles you added to the pldoc sass override partials
+
+* please see https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Grid-System for guidance on how to use the grid
+
+-->
+
+<div class="wrapper-view">
+     <div class="pldoc-wrapper-view-header">
+
+         <header class="pldoc-view-header">
+             <nav class="pldoc-breadcrumbs">
+                 <a class="pldoc-breadcrumb btn btn-link btn-small" href="{{ site.baseurl }}">Back to Pattern Library</a>
+             </nav>
+
+             <h1 class="pldoc-view-header-title hd-3">{{ page.title }}</h1>
+         </header>
+     </div>
+
+    <div class="example example-grid" id="example-grid-1">
+
+        <div class="grid-container grid-manual">
+            <h2 class="hd-3">Example Grid: Using Utility-based Classes</h2>
+
+            <div class="row">
+                <div class="col col-8">
+                    <form class="form">
+
+                        <div class="form-intructions">
+                            <h3 class="hd-3">Create an account</h3>
+                            <p class="copy copy-base">Before you can continue with ACME learning, you'll need to create an account with us. They're free and we don't spam you with ACMESpam.</p>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <legend class="form-group-hd sr-only">Required information</legend>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="first-name">First name</label>
+                                <input class="field-input input-text" type="text" id="first-name" name="first-name" aria-describedby="helper-first-name" placeholder="Jane" required>
+                                <div class="field-hint" id="helper-first-name">
+                                    <p>This allows us to personalize your experience.</p>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="last-name">Last name</label>
+                                <input class="field-input input-text" type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="email-address">Email</label>
+                                <input class="field-input input-text" type="email" id="email-address" name="email-address" placeholder="username@domain.com" aria-describedby="email-address-helper" required>
+                                <div class="field-hint" id="email-address-helper">
+                                    <p>Example: username@domain.com</p>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="username">Username</label>
+                                <input class="field-input input-text" type="text" id="username" name="username" aria-describedby="helper-username" placeholder="JaneDoe" required>
+                                <div class="field-hint" id="helper-username">
+                                    <p>You'll log in with this for future visits.</p>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="password_01">Password</label>
+                                <input class="field-input input-text" type="password" id="password_01" name="password_01" required>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button class="btn btn-primary btn-base" type="button">Create account</button>
+                            <button class="btn btn-link btn-base" type="button">Cancel registration</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col col-4">
+                    <div class="bit bit-why">
+                        <h3 class="hd-6">Why should I create an account?</h3>
+                        <p class="copy-meta">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                        </p>
+                    </div>
+
+                    <div class="bit bit-when">
+                        <h3 class="hd-6">When do I need to pay ACME learning?</h3>
+                        <p class="copy-meta">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                        </p>
+                    </div>
+
+                    <div class="bit bit-signin">
+                        <h3 class="hd-6">Already have an account?</h3>
+                        <p class="copy-meta">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                        </p>
+
+                        <a href="">Sign in!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-4">
+                    <h3 class="hd-5">Did you know?</h3>
+                    <p class="copy-base">
+                        ACME learning has the best ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                    </p>
+                </div>
+
+                <div class="col col-4">
+                    <h3 class="hd-5">Another Thing!</h3>
+                    <p class="copy-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolor quisquam totam nemo doloribus ut nulla expedita soluta, officiis adipisci minus neque iusto harum excepturi recusandae hic sint optio quo.
+                    </p>
+
+                    <a href="">Contact ACME learning</a>
+                </div>
+
+                <div class="col col-4">
+                    <h3 class="hd-5">Have Questions or Need help?</h3>
+                    <p class="copy-base">
+                        ACME learning has the best ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+
+                    <a href="">Contact ACME learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="example example-grid" id="example-grid-2">
+        <div class="grid-container grid-manual">
+            <h2 class="hd-3">Example Responsive Grid: Using Utility-based Classes</h2>
+
+            <div class="row">
+                <div class="col col-12 md-col-8 lg-col-9">
+                    <form class="form">
+
+                        <div class="form-intructions">
+                            <h3 class="hd-3">Create an account</h3>
+                            <p class="copy copy-base">Before you can continue with ACME learning, you'll need to create an account with us. They're free and we don't spam you with ACMESpam.</p>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <legend class="form-group-hd sr-only">Required information</legend>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="first-name">First name</label>
+                                <input class="field-input input-text" type="text" id="first-name" name="first-name" aria-describedby="helper-first-name" placeholder="Jane" required>
+                                <div class="field-hint" id="helper-first-name">
+                                    <p>This allows us to personalize your experience.</p>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="last-name">Last name</label>
+                                <input class="field-input input-text" type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="email-address">Email</label>
+                                <input class="field-input input-text" type="email" id="email-address" name="email-address" placeholder="username@domain.com" aria-describedby="email-address-helper" required>
+                                <div class="field-hint" id="email-address-helper">
+                                    <p>Example: username@domain.com</p>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="username">Username</label>
+                                <input class="field-input input-text" type="text" id="username" name="username" aria-describedby="helper-username" placeholder="JaneDoe" required>
+                                <div class="field-hint" id="helper-username">
+                                    <p>You'll log in with this for future visits.</p>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="field-label field-required" for="password_01">Password</label>
+                                <input class="field-input input-text" type="password" id="password_01" name="password_01" required>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button class="btn btn-primary btn-base" type="button">Create account</button>
+                            <button class="btn btn-link btn-base" type="button">Cancel registration</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col col-12 md-col-4 lg-col-3">
+                    <div class="bit bit-why">
+                        <h3 class="hd-6">Why should I create an account?</h3>
+                        <p class="copy-meta">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                        </p>
+                    </div>
+
+                    <div class="bit bit-when">
+                        <h3 class="hd-6">When do I need to pay ACME learning?</h3>
+                        <p class="copy-meta">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                        </p>
+                    </div>
+
+                    <div class="bit bit-signin">
+                        <h3 class="hd-6">Already have an account?</h3>
+                        <p class="copy-meta">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                        </p>
+
+                        <a href="">Sign in!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-12 lg-col-4">
+                    <h3 class="hd-5">Did you know?</h3>
+                    <p class="copy-base">
+                        ACME learning has the best ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus voluptates ea impedit quaerat omnis illum reiciendis suscipit nemo, illo voluptatum neque. Rem ea commodi error itaque a? Placeat, rerum! Earum?
+                    </p>
+                </div>
+
+                <div class="col col-12 lg-col-4">
+                    <h3 class="hd-5">Another Thing!</h3>
+                    <p class="copy-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolor quisquam totam nemo doloribus ut nulla expedita soluta, officiis adipisci minus neque iusto harum excepturi recusandae hic sint optio quo.
+                    </p>
+
+                    <a href="">Contact ACME learning</a>
+                </div>
+
+                <div class="col col-12 lg-col-4">
+                    <h3 class="hd-5">Have Questions or Need help?</h3>
+                    <p class="copy-base">
+                        ACME learning has the best ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+
+                    <a href="">Contact ACME learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
