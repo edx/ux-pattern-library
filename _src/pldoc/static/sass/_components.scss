@@ -486,16 +486,7 @@
     }
 
     .example-icon {
-        @include transition(all timing(x-fast) ease-in-out);
-        display: inline-block;
-        width: spacing-vertical(x-large);
-        margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
-        border: 1px solid palette(grayscale, x-light);
-        border-radius: spacing-horizontal(xx-small);
-        padding: spacing-vertical(x-small) spacing-horizontal(small);
-        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
-        background: palette(grayscale, white);
-        color: palette(grayscale, white);
+        display: block;
 
         .icon-display {
             width: 24px;
@@ -518,12 +509,8 @@
             @include gallery(3 of 12);
         }
 
-        // STATE: hover, focus, and active
         &:hover,
-        &:focus,
-        &:active {
-            @include transform(scale(1.05));
-            box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+        &:focus {
 
             .icon-display {
 
