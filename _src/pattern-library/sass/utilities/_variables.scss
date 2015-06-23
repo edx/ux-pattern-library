@@ -232,9 +232,9 @@ $letter-spacing: (
     xx-tight:       -3,
     x-tight:        -2,
     tight:          -.095,
-    loose:          -.075,
-    x-loose:        -.025,
-    xx-loose:       3
+    loose:          .5,
+    x-loose:        1,
+    xx-loose:       2
 );
 
 // ----------------------------
