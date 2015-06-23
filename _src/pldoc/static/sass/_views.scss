@@ -10,19 +10,93 @@
 
     // link back to top
     .pldoc-wrapper-link-top {
-        @include container();
         padding: 0 spacing-horizontal(large) spacing-vertical(small) spacing-horizontal(large);
     }
 
     .pldoc-link-top {
-        @include span (12 of 12);
+        display: block;
         text-align: center;
     }
 }
+
 
 // ------------------------------
 // #DETAIL
 // ------------------------------
 .pldoc.view-element {
 
+}
+
+
+// ------------------------------
+// #EXAMPLE - GRID
+// ------------------------------
+.pldoc-view {
+
+}
+
+
+// ------------------------------
+// #EXAMPLE - GRID
+// ------------------------------
+.pldoc-view-example-grid {
+
+    .example-grid {
+
+        .row {
+            margin-bottom: spacing-vertical(mid-small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .col {
+            @extend %demo-grid-column;
+        }
+    }
+
+    // semantic grid
+    #example-grid-1 {
+
+        .wrapper-content {
+            @include container();
+        }
+
+        .content-main {
+            @include span(8 of 12 first);
+            @extend %demo-grid-column;
+        }
+
+        .story {
+            @extend %demo-grid-column;
+            margin-bottom: spacing-vertical(small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .story-main {
+            @include break();
+        }
+
+        .story-secondary {
+            @include span(4 of 8);
+            @extend %demo-grid-column;
+
+            &:nth-child(2n+1) {
+                @include omega();
+            }
+        }
+
+        .content-secondary {
+            @include span(4 of 12 last);
+            @extend %demo-grid-column;
+        }
+
+        .list-related {
+            @extend %reset-lists;
+        }
+    }
 }
