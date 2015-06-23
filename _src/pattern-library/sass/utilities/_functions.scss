@@ -47,7 +47,7 @@
 // get letter spacing from defined map values
 @function letter-spacing($key) {
   @if map-has-key($letter-spacing, $key) {
-    @return map-get($letter-spacing, $key);
+    @return rem(map-get($letter-spacing, $key));
   }
 
   @warn "Unknown `#{$key}` in $letter-spacing.";

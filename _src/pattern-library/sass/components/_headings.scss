@@ -90,8 +90,9 @@
 // Level six heading
 .hd-6 {
     margin-bottom: spacing-vertical(x-small);
-    font-size: font-size(x-small);
+    font-size: font-size(small);
     line-height: line-height(small);
+    letter-spacing: letter-spacing(x-loose);
 }
 
 // Level seven heading
@@ -99,4 +100,5 @@
     margin-bottom: spacing-vertical(x-small);
     font-size: font-size(x-small);
     line-height: line-height(x-small);
+    letter-spacing: letter-spacing(x-loose);
 }
