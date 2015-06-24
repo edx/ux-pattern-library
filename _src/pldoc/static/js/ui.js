@@ -12,14 +12,13 @@ $(document).ready(function() {
 
     // smoothscroll to target links
     function smoothScrollLink(e) {
+        var this = e.target,
+            target = $(this).attr('href');
 
-        $.smoothScroll({
-            offset: -200,
-            easing: 'swing',
-            preventDefault: false,
-            speed: 1000,
-            scrollElement: null,
-            scrollTarget: $(this).attr('href')
+        $('html, body').stop().animate({
+            'scrollTop': $(target).offset().top
+        }, 1000, 'swing', function() {
+            $(target).find('.pldoc-heading').attr('tabindex', '-1').focus();
         });
     }
 
