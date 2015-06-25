@@ -70,6 +70,10 @@
         @include span(6 first);
         margin-bottom: 0;
     }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 

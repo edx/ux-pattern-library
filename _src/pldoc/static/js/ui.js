@@ -12,13 +12,14 @@ $(document).ready(function() {
 
     // smoothscroll to target links
     function smoothScrollLink(e) {
-        var this = e.target,
-            target = $(this).attr('href');
+        e.preventDefault();
+
+        var target = $(e.target).attr('href');
 
         $('html, body').stop().animate({
-            'scrollTop': $(target).offset().top
+            scrollTop: $(target).offset().top
         }, 1000, 'swing', function() {
-            $(target).find('.pldoc-heading').attr('tabindex', '-1').focus();
+            sendFocus(target);
         });
     }
 
@@ -33,6 +34,11 @@ $(document).ready(function() {
         e.preventDefault();
 
         window.open($(this).attr('href'));
+    }
+
+    // Send focus after scrolling
+    function sendFocus(target) {
+        $(target).find('.pldoc-element-title').attr('tabindex', '-1').focus();
     }
 
     // tabbed interfaces
@@ -99,11 +105,9 @@ $(document).ready(function() {
                 ('0' + parseInt(_rgb[1],10).toString(16)).slice(-2) +
                 ('0' + parseInt(_rgb[2],10).toString(16)).slice(-2) +
                 ('0' + parseInt(_rgb[3],10).toString(16)).slice(-2) : '';
-        } else {
-            hex = ' --- ';
-        }
 
-        return hex;
+            return hex;
+        }
     }
 
     if ($('.example').length) {
@@ -120,20 +124,21 @@ $(document).ready(function() {
     // http://stackoverflow.com/questions/12243898/how-to-select-all-text-in-contenteditable-div
     $.fn.selectText = function() {
         var doc = document,
-            element = this[0];
+            element = this[0],
+            range;
 
         if (doc.body.createTextRange) {
-            var range = doc.body.createTextRange();
+            range = doc.body.createTextRange();
             range.moveToElementText(element);
             range.select();
         } else if (window.getSelection) {
             var selection = window.getSelection();
-            var range = doc.createRange();
+            range = doc.createRange();
             range.selectNodeContents(element);
             selection.removeAllRanges();
             selection.addRange(range);
         }
-    }
+    };
 
     $('.is-copyable').click(function() {
         $(this).selectText();
