@@ -1,6 +1,5 @@
 ---
 category:   canvas
-viewclass:  canvas
 ---
 
 <!DOCTYPE html>
@@ -8,7 +7,7 @@ viewclass:  canvas
 
 {% include canvas-head.html %}
 
-<body class="view-{{ page.viewclass }}">
+<body class="{{ page.viewclass }}">
     {{ content }}
 
     {% include canvas-assets-secondary.html %}
