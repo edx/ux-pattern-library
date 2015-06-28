@@ -27,13 +27,20 @@ $baseline-vertical:      ($baseline*2) !default;
 $baseline-horizontal:    $baseline !default;
 
 $susy: (
-    use-custom clearfix: true,
+    columns: 12,
+    container: rem(1170),
     global-box-sizing: border-box,
+    gutters: .5,
     math: fluid,
     output: float,
-    columns: 12,
-    gutters: .5,
-    container: rem(1170),
+    use-custom: (
+        breakpoint: true,
+        background-image: true,
+        background-options: true,
+        box-sizing: false,
+        clearfix: true,
+        rem: true,
+    )
 );
 
 // grid - breakpoints
