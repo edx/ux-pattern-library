@@ -6,27 +6,23 @@
 // ------------------------------
 // #INDEX
 // ------------------------------
-.pl.view-index {
+.pldoc.view-index {
 
     // link back to top
     .pldoc-wrapper-link-top {
-        @include text-align(center);
+        @include container();
+        padding: 0 spacing-horizontal(large) spacing-vertical(small) spacing-horizontal(large);
     }
 
     .pldoc-link-top {
-        display: inline-block;
-        padding: spacing-vertical(small) spacing-horizontal(x-small);
-
-        .pldoc-icon {
-            font-size: font-size(x-large);
-            font-weight: font-weight(semi-bold);
-        }
+        @include span (12 of 12);
+        text-align: center;
     }
 }
 
 // ------------------------------
 // #DETAIL
 // ------------------------------
-.pl.view-element {
+.pldoc.view-element {
 
 }
