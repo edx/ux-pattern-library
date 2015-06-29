@@ -8,10 +8,10 @@
 // ------------------------------
 // #VENDOR
 // ------------------------------
-@import '../../../vendor/bourbon/bourbon';
-@import '../../../vendor/susy/susy';
-@import '../../../vendor/breakpoint/breakpoint';
-@import '../../../vendor/bi-app/bi-app-ltr';               // LTR support
+@import '../../../components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../../components/susy/sass/susy';
+@import '../../../components/breakpoint-sass/stylesheets/breakpoint';
+@import '../../../components/bi-app-sass/bi-app/bi-app-ltr';            // LTR support
 
 // ------------------------------
 // #UTILITIES
@@ -21,4 +21,4 @@
 // ------------------------------
 // #BUILD
 // ------------------------------
-@import 'build';                                         // shared compile/build order for both LTR and RTL UI
+@import 'build';                                                        // shared compile/build order for both LTR and RTL UI

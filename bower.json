@@ -19,6 +19,7 @@
     "susy": "~2.2.5",
     "bi-app-sass": "*",
     "breakpoint-sass": "~2.6.1",
-    "svg4everybody": "~1.0.0"
+    "svg4everybody": "~1.0.0",
+    "requirejs-plugins": "~1.0.3"
   }
 }
