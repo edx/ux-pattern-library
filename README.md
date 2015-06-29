@@ -15,7 +15,8 @@ To work on the code of this project, you'll need the following things installed 
 
 1. [Jekyll](http://jekyllrb.com/)
 2. [NodeJS](http://nodejs.org/)
-3. [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages
+3. [Bower](http://bower.io/)
+4. [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages
 
 ### Install Jekyll
 The Pattern Library is managed through Jekyll, so you'll need to install that initially. [Jekyll requires Ruby, Rubygems and a Linux, Unix or Mac OSX system](http://jekyllrb.com/docs/installation/).
@@ -37,6 +38,22 @@ brew install node
 ```
 
 Otherwise, you can download and install from [here](http://nodejs.org/download/).
+
+### Install Bower
+After instaling NodeJS, you can install [Bower](http://bower.io/), a package manager we use to download and maintain many of our vendor and external library refereces.
+
+To install Bower globally:
+```
+npm install -g bower
+```
+
+After Bower is installed, you can install all of the edX UX Pattern Library dependecies with:
+
+```
+bower install
+```
+
+NOTE: Bower packages are installed to the ``_src/components`` directory. These files should not be edited or removed outside of the Bower workflow.
 
 ### Install/Update Gulp + Project Dependencies
 From the directory you've checked out this repo into locally, run:
@@ -109,6 +126,7 @@ When contributing, its assumed that you're already familar with the following:
 * [Jekyll in General](http://jekyllrb.com/docs/home/)
 * [Writing Posts in Jekyll](http://jekyllrb.com/docs/posts/)
 * [RequireJS](http://requirejs.org)
+* [Managing Packages with Bower](http://blog.teamtreehouse.com/getting-started-bower)
 
 - - -
 
