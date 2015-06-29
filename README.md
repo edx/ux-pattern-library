@@ -125,3 +125,4 @@ This repository contains both the code needed to generate pattern library elemen
 ## Contributors
 * Chris Rodriguez (@clrux)
 * Brian Talbot (@talbs)
+* Frances Botsford (@frrrances)
