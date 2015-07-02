@@ -135,7 +135,8 @@ $palettes: (
 );
 
 // shadows
-$shadow: transparentize(palette(grayscale-cool, x-dark), .5);
+// using black-t because using a gray looks weird when it appears over black
+$shadow: transparentize(palette(grayscale, black-t), .5);
 
 // ----------------------------
 // #TYPOGRAPHY
@@ -327,19 +328,19 @@ $component-active-bg: palette(primary, base) !default;
 
 // base text settings
 $text-base-font-family: $font-family-sans-serif !default;
-$text-base-color: palette(grayscale, dark) !default;
+$text-base-color: palette(grayscale, x-dark) !default;
 $text-base-font-weight: font-weight(normal) !default;
-$text-base-focus-color: palette(grayscale, x-dark) !default;
+$text-base-focus-color: palette(grayscale, black-t) !default;
 
-$text-emphasized-color: palette(grayscale, x-dark) !default;
+$text-emphasized-color: palette(grayscale, black-t) !default;
 $text-emphasized-font-weight: font-weight(normal) !default;
 
-$text-de-emphasized-color: palette(grayscale, base) !default;
+$text-de-emphasized-color: palette(grayscale, dark) !default;
 $text-de-emphasized-font-weight: font-weight(normal) !default;
 
 // links
-$link-color: palette(primary, base) !default;
-$link-focus-color: palette(primary, accent) !default;
+$link-color: palette(primary, dark) !default;
+$link-focus-color: palette(primary, base) !default;
 $link-visited-color: palette(primary, dark) !default;
 
 // headings
@@ -351,11 +352,11 @@ $headings-base-font-family: $font-family-sans-serif !default;
 $headings-base-font-weight: $headings-font-weight-normal !default;
 $headings-base-color: palette(grayscale, x-dark) !default;
 
-$headings-primary-font-family: $font-family-sans-serif !default;
-$headings-primary-color: palette(grayscale, black) !default;
+$headings-emphasized-font-family: $font-family-sans-serif !default;
+$headings-emphasized-color: palette(grayscale, black-t) !default;
 
-$headings-secondary-font-family: $font-family-sans-serif !default;
-$headings-secondary-color: palette(grayscale, base) !default;
+$headings-de-emphasized-font-family: $font-family-sans-serif !default;
+$headings-de-emphasized-color: palette(grayscale, dark) !default;
 
 // buttons
 $buttons-border-style: solid !default;

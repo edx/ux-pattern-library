@@ -19,13 +19,21 @@ define([
         },
 
         resetInterface: function(wrapper) {
-            wrapper.find('.pldoc-link').each(function(event) {
-                event.currentTarget.removeClass(Tabs.vars.activeClass);
+            wrapper.find('.pldoc-link').each(function(i, target) {
+                $(target).removeClass(Tabs.vars.activeClass);
             });
 
-            wrapper.find(Tabs.vars.panel).each(function(event) {
-                event.currentTarget.removeClass(Tabs.vars.activeClass)
+            wrapper.find(Tabs.vars.panel).each(function(i, target) {
+                $(target).removeClass(Tabs.vars.activeClass)
                        .addClass(Tabs.vars.hiddenClass);
+            });
+        },
+
+        smoothScroll: function(target) {
+            $('html, body').stop().animate({
+                'scrollTop': ($(target).offset().top - 50)
+            }, 1000, 'swing', function() {
+                $(target).focus();
             });
         },
 
@@ -36,10 +44,11 @@ define([
                 event.preventDefault();
 
                 el = $(event.currentTarget);
-                content = el.attr('href');
+                content = el.data('href');
 
                 Tabs.resetInterface(el.closest(Tabs.vars.tabContainer));
                 Tabs.makeActive(el, content);
+                Tabs.smoothScroll(content);
             });
         },
 

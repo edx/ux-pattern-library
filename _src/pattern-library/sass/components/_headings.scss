@@ -18,12 +18,12 @@
     @extend %reset-headings;
 
     &.emphasized {
-        color: $headings-primary-color;
+        color: $headings-emphasized-color;
         font-weight: $headings-font-weight-bold;
     }
 
     &.de-emphasized {
-        color: $headings-secondary-color;
+        color: $headings-de-emphasized-color;
     }
 }
 
@@ -62,10 +62,6 @@
     margin-bottom: spacing-vertical(x-small);
     font-size: font-size(xx-large);
     line-height: line-height(x-large);
-
-    &.de-emphasized {
-        color: palette(grayscale, base);
-    }
 }
 
 
