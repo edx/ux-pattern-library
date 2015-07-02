@@ -1,11 +1,13 @@
-/*
- * Icon size slider
- * Creates a slider control which lets users scale the icons to see how
- * they might look in various sizes. The size in pixels is also displayed
- * with the control.
- */
+define([
+    'jquery'
+    ], function($) {
 
-$(function() {
+    /*
+     * Icon size slider
+     * Creates a slider control which lets users scale the icons to see how
+     * they might look in various sizes. The size in pixels is also displayed
+     * with the control.
+     */
 
     var IconFontSliderControl = {
 
@@ -22,38 +24,31 @@ $(function() {
         },
 
         listenForSlider: function() {
-            var that = this;
-
-            that.vars.sliderControl.on('input change', function() {
+            IconFontSliderControl.vars.sliderControl.on('input change', function(event) {
+                var size = event.target.value;
                 // oninput - chrome, firefox, safari
                 // onchange - ie9-11
-                that.updateIconSize($(this).val());
-                that.updateAria($(this).val());
-                that.updateInputText($(this).val());
+                // console.log(event.target.value);
+                IconFontSliderControl.updateIconSize(size);
+                IconFontSliderControl.updateAria(size);
+                IconFontSliderControl.updateInputText(size);
             });
         },
 
         updateAria: function(size) {
-            var that = this;
-
-            that.vars.sliderControl
+            IconFontSliderControl.vars.sliderControl
                 .attr('aria-now', size);
         },
 
         updateIconSize: function(size) {
-            var that = this;
-
-            that.vars.example.css({ width: size + 'px' });
+            IconFontSliderControl.vars.example.css({ width: size + 'px' });
         },
 
         updateInputText: function(size) {
-            var that = this;
-
-            that.vars.sliderValue.val(size);
+            IconFontSliderControl.vars.sliderValue.val(size);
         }
 
     };
 
     IconFontSliderControl.init();
-
 });

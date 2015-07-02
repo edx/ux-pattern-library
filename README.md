@@ -108,6 +108,7 @@ When contributing, its assumed that you're already familar with the following:
 * [Our Front End Coding Styleguides](https://github.com/edx/ux-pattern-library/wiki)
 * [Jekyll in General](http://jekyllrb.com/docs/home/)
 * [Writing Posts in Jekyll](http://jekyllrb.com/docs/posts/)
+* [RequireJS](http://requirejs.org)
 
 - - -
 

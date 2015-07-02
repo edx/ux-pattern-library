@@ -1,15 +1,18 @@
-/*
- * Select menu replacement
- * Handles functionality for the replacement select menus, which
- * allows us to style them to our liking. Accessibility is main-
- * tained via use of the default select control. The replacement 
- * control is not visible to screen readers.
- *
- * Choosing an option in the replacement menu also updates the
- * default select menu thus maintaining accessibility.
- */
+define([
+    'jquery'
+    ], function($) {
 
-$(function() {
+    /*
+     * Select menu replacement
+     * Handles functionality for the replacement select menus, which
+     * allows us to style them to our liking. Accessibility is main-
+     * tained via use of the default select control. The replacement 
+     * control is not visible to screen readers.
+     *
+     * Choosing an option in the replacement menu also updates the
+     * default select menu thus maintaining accessibility.
+     */
+
 
     var CustomSelectReplacement = {
 
