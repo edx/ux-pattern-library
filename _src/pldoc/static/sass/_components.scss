@@ -36,31 +36,42 @@
 // ------------------------------
 // #HEADER
 // ------------------------------
-.pldoc-header-site-title {
-    display: inline-block;
-    vertical-align: middle;
+.pldoc-header-site {
 
     @include susy-breakpoint($bp-screen-lg, $susy-default) {
         margin: 0;
     }
 
-    .title-name {
-        display: block;
-    }
+    .pldoc-header-site-title {
+        display: inline-block;
+        vertical-align: middle;
 
-    .title-name {
-        margin-bottom: spacing-vertical(x-small);
-        color: palette(grayscale, white);
-        font-size: font-size(base);
-        font-weight: font-weight(bold);
-        text-transform: uppercase;
-        letter-spacing: rem(1);
+        @include susy-breakpoint($bp-large, $susy) {
+            margin: 0;
+        }
 
-        // STATE: hover, active, focus
-        &:hover,
-        &:active,
-        &:focus {
-            color: palette(primary, accent);
+        .title-name {
+            display: block;
+        }
+
+        .title-name {
+            margin-bottom: spacing-vertical(x-small);
+            color: palette(grayscale, white);
+            font-size: font-size(base);
+            font-weight: font-weight(bold);
+            text-transform: uppercase;
+            letter-spacing: rem(1);
+
+            // STATE: hover, active, focus
+            &:hover,
+            &:active,
+            &:focus {
+                color: palette(primary, accent);
+            }
+        }
+
+        .pldoc-link {
+            border: none;
         }
     }
 
