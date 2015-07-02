@@ -42,6 +42,10 @@
         margin: 0;
     }
 
+    .pldoc-header-site-title {
+        display: inline-block;
+        vertical-align: middle;
+
         @include susy-breakpoint($bp-screen-lg, $susy-default) {
             margin: 0;
         }
@@ -72,6 +76,7 @@
     }
 
     .pldoc-title-description {
+
         display: block;
         color: palette(grayscale, base);
         font-weight: font-weight(normal);
