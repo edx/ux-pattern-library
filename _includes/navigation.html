@@ -1,7 +1,7 @@
-<nav class="pldoc-nav pldoc-nav-elements pldoc-nav-internal" id="pldoc-nav-elements">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6">Elements</h2>
+<nav class="pldoc-nav pldoc-nav-elements pldoc-nav-internal" id="pldoc-nav-elements" role="navigation" aria-label="Patterns and elements">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="heading-elements">Elements</h2>
 
-    <ul class="nav-list list-elements">
+    <ul class="nav-list list-elements" aria-labelledby="heading-elements">
         {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
         {% for post in sorted_elements_posts %}
         <li class="nav-list-item">
@@ -15,50 +15,56 @@
     </ul>
 </nav>
 
-<nav class="pldoc-nav pldoc-nav-documentation pldoc-nav-external" id="pldoc-nav-documentation">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6">Documentation</h2>
-    <ul class="pldoc-list nav-list list-styleguides">
+<nav class="pldoc-nav pldoc-nav-documentation pldoc-nav-external" id="pldoc-nav-documentation" role="navigation" aria-label="Documentation">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="heading-documentation">Documentation</h2>
+    <ul class="pldoc-list nav-list list-styleguides" aria-labelledby="heading-documentation">
         <li class="nav-list-item">
             <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General">
                 <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 General Styleguide
+                <span class="sr-only">Link opens in a new window</span>
             </a>
         </li>
         <li class="nav-list-item">
             <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML">
                 <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 HTMLS Styleguide
+                <span class="sr-only">Link opens in a new window</span>
             </a>
         </li>
         <li class="nav-list-item">
             <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS">
                 <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 Sass &amp; CSS Styleguide
+                <span class="sr-only">Link opens in a new window</span>
             </a>
         </li>
         <li class="nav-list-item">
             <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility">
                 <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 Accessibility Styleguide
+                <span class="sr-only">Link opens in a new window</span>
             </a>
         </li>
     </ul>
 </nav>
 
-<nav class="pldoc-nav pldoc-nav-project pldoc-nav-external" id="pldoc-nav-project">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6">About This Project</h2>
+<nav class="pldoc-nav pldoc-nav-project pldoc-nav-external" id="pldoc-nav-project" role="navigation" aria-label="About">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="heading-about">About This Project</h2>
 
-    <ul class="nav-list list-project">
+    <ul class="nav-list list-project" aria-labelledby="heading-about">
         <li class="nav-list-item">
             <a class="pldoc-link" rel="external" href="https://github.com/edx/ux-pattern-library/">
                 <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 View on Github
+                <span class="sr-only">Link opens in a new window</span>
             </a>
         </li>
         <li class="nav-list-item">
             <a class="pldoc-link" rel="external" href="https://openedx.atlassian.net/browse/UX-1396">
                 <span class="pldoc-icon" aria-hidden="true">&#65514;</span>
                 Project Planning
+                <span class="sr-only">Link opens in a new window</span>
             </a>
         </li>
     </ul>

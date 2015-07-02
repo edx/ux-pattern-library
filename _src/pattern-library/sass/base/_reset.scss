@@ -104,6 +104,13 @@ pre {
 // ----------------------------
 .sr-only {
     @extend %a11y-hide;
+    background: black !important; // providing contrast
+    color: white !important; // providing contrast
+
+    * {
+        background: black !important; // providing contrast
+        color: white !important; // providing contrast
+    }
 }
 
 .bg-replace {
