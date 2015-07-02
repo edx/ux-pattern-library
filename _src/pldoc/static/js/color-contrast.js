@@ -37,14 +37,14 @@ define([
         },
 
         checkContrast: function() {
-            var bg, fg, ratio;
+            var bg, fg, ratio, ratios;
 
             $('.example-color').each(function() {
 
                 bg = AccessibilityColorContrast.getL( AccessibilityColorContrast.rgbaToHex( $(this).css('backgroundColor') ) );
                 fg = AccessibilityColorContrast.getL( AccessibilityColorContrast.rgbaToHex( $(this).find('.color-class').css('color') ) );
 
-                    ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05),
+                    ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05);
                     ratios = [4.5, 3]; // 4.5 normal text AA, 3 large text AA
 
                 if (ratio < ratios[0]) {
