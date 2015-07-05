@@ -6,10 +6,10 @@ var gulp            = require('gulp'),
 gulp.task('scripts', ['pldoc_scripts-lint'], function() {
     return gulp.src([
             // setup script sequence
-            './_src/vendor/jquery/jquery.min.js',
-            './_src/vendor/requirejs/require.js',
+            './_src/components/jquery/dist/jquery.min.js',
+            './_src/components/requirejs-plugins/lib/require.js',
             './_src/pattern-library/js/select-replace.js',
-            './_src/vendor/svg4everybody/svg4everybody.min.js' // polyfill for SVGs in IE9-11
+            './_src/components/svg4everybody/svg4everybody.min.js' // polyfill for SVGs in IE9-11
         ])
         .pipe(uglify())
         .pipe(gulp.dest(config.local)) // move just for browersync + local preview
