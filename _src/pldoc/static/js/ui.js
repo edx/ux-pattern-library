@@ -77,9 +77,9 @@ define([
                     ('0' + parseInt(_rgb[1],10).toString(16)).slice(-2) +
                     ('0' + parseInt(_rgb[2],10).toString(16)).slice(-2) +
                     ('0' + parseInt(_rgb[3],10).toString(16)).slice(-2) : '';
-            }
 
-            return hex;
+                return hex;
+            }
         },
 
         selectText: function(textToBeSelected) {
