@@ -14,5 +14,7 @@ gulp.task('watch', ['browserSync'], function() {
     // local
     gulp.watch(config.jekyll.home, ['jekyll-rebuild']);
     gulp.watch(config.jekyll.posts, ['jekyll-rebuild']);
+    gulp.watch(config.jekyll.includes, ['jekyll-rebuild']);
+    gulp.watch(config.jekyll.examples, ['jekyll-rebuild']);
     gulp.watch(config.jekyll.layouts, ['jekyll-rebuild']);
 });
