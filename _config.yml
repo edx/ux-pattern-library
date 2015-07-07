@@ -11,6 +11,7 @@ author:
 baseurl:                    /
 permalink:                  /:categories/:title/
 relative_permalinks:        true
+exampleurl:                 examples/
 
 # Local
 exclude:                    ["node_modules", "gulp", "gulpfile.js", "package.json", "bower.json"]

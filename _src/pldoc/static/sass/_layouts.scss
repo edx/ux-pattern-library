@@ -77,7 +77,7 @@
 .pldoc-element-meta {
 
     @include susy-breakpoint($bp-medium, $susy) {
-        @include span(4 last);
+        @include span(6 last);
         @include text-align(right);
     }
 
@@ -87,12 +87,11 @@
         @include susy-breakpoint($bp-medium, $susy) {
             display: inline-block;
             vertical-align: middle;
-            @include margin-right(spacing-horizontal(xx-small));
+            @include margin-right(spacing-horizontal(small));
         }
     }
 
     .meta-updated {
-        @include margin-right(spacing-horizontal(small));
         margin-bottom: spacing-vertical(x-small);
 
         @include susy-breakpoint($bp-medium, $susy) {
