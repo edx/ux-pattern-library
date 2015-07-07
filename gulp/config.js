@@ -71,7 +71,9 @@ module.exports = {
     jekyll: {
         home: 'index.html',
         posts: '_posts/*',
-        layouts: '_layouts/*.html'
+        includes: '_includes/*',
+        examples: 'examples/*',
+        layouts: '_layouts/*'
     }
 };
 
