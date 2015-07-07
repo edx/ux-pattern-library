@@ -14,6 +14,11 @@ viewclass:  element
                     <span class="pldoc-element-meta-updated-label">Last updated on </span>
                     <time class="pldoc-element-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
                 </li>
+                {% if page.example %}
+                <li class="meta meta-examplelink">
+                    <a class="pldoc-link" href="{{ site.baseurl }}{{ site.exampleurl }}{{page.example}}"><span class="sr-only">View</span>Detailed Example</a>
+                </li>
+                {% endif %}
             </ul>
         </header>
 

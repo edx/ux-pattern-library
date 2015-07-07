@@ -21,6 +21,11 @@ viewclass:  index
                     <li class="meta meta-permalink">
                         <a class="pldoc-link" href="{{post.url}}">Permalink <span class="sr-only">to {{ post.slug }}</span></a>
                     </li>
+                    {% if post.example %}
+                    <li class="meta meta-examplelink">
+                        <a class="pldoc-link" href="{{ site.baseurl }}{{ site.exampleurl }}{{post.example}}"><span class="sr-only">View</span>Detailed Example</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </header>
 
