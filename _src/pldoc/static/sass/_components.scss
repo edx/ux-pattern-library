@@ -526,22 +526,27 @@
 
 
 // ------------------------------
-// #GRID/LAYOUT
+// #GRID
 // ------------------------------
 %demo-grid-column {
     background: $grid-debug-color;
     border: 1px solid saturate($grid-debug-color, 100%);
 
     @include susy-breakpoint($bp-screen-md, $susy-default) {
-        background: saturate($grid-debug-color, 15%);
+        background: saturate($grid-debug-color, 33%);
     }
 
     @include susy-breakpoint($bp-screen-lg, $susy-default) {
-        background: saturate($grid-debug-color, 30%);
+        background: saturate($grid-debug-color, 66%);
     }
 
     @include susy-breakpoint($bp-screen-xl, $susy-default) {
-        background: saturate($grid-debug-color, 45%);
+        background: saturate($grid-debug-color, 100%);
+    }
+
+    .example-label {
+        @extend %copy-micro;
+        display: block;
     }
 }
 
@@ -826,6 +831,43 @@
         }
     }
 }
+
+// ------------------------------
+// #LAYOUTS
+// ------------------------------
+%demo-layout-column {
+    background: $grid-debug-color;
+
+    @include susy-breakpoint($bp-screen-md, $susy-default) {
+        background: saturate($grid-debug-color, 33%);
+    }
+
+    @include susy-breakpoint($bp-screen-lg, $susy-default) {
+        background: saturate($grid-debug-color, 66%);
+    }
+
+    @include susy-breakpoint($bp-screen-xl, $susy-default) {
+        background: saturate($grid-debug-color, 100%);
+    }
+}
+
+
+
+.example-layout {
+
+    .layout-col,
+    .layout-view-col
+     {
+       @extend %demo-layout-column;
+       padding: spacing-vertical(small) spacing-horizontal(small);
+    }
+
+    .example-label {
+        @extend %copy-micro;
+        display: block;
+    }
+}
+
 
 // ------------------------------
 // #SYSTEM FEEDBACK

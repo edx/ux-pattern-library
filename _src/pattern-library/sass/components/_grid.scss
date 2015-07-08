@@ -56,7 +56,6 @@ $susy-manual: layout($susy-default $grid-manual-gutter-position);
 $susy-debug: layout($susy-default show);
 
 
-
 // ----------------------------
 // #GLOBALS
 // ----------------------------
@@ -168,7 +167,6 @@ $susy-debug: layout($susy-default show);
             @include susy-breakpoint($bp-screen-sm, $susy-manual) {
                 @include pre($i);
             }
-
         }
     }
 

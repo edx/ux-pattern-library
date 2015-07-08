@@ -56,3 +56,21 @@
         }
     }
 }
+
+// ------------------------------
+// #EXAMPLE - LAYOUTS
+// ------------------------------
+.pldoc-view-example-layouts {
+
+    .example-layout {
+        margin-bottom: spacing-vertical(large);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .example-layout-hd {
+        @extend %grid-container;
+    }
+}
