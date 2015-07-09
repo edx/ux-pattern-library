@@ -15,7 +15,8 @@ To work on the code of this project, you'll need the following things installed 
 
 1. [Jekyll](http://jekyllrb.com/)
 2. [NodeJS](http://nodejs.org/)
-3. [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages
+3. [Bower](http://bower.io/)
+4. [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages
 
 ### Install Jekyll
 The Pattern Library is managed through Jekyll, so you'll need to install that initially. [Jekyll requires Ruby, Rubygems and a Linux, Unix or Mac OSX system](http://jekyllrb.com/docs/installation/).
@@ -37,6 +38,22 @@ brew install node
 ```
 
 Otherwise, you can download and install from [here](http://nodejs.org/download/).
+
+### Install Bower
+After instaling NodeJS, you can install [Bower](http://bower.io/), a package manager we use to download and maintain many of our vendor and external library refereces.
+
+To install Bower globally:
+```
+npm install -g bower
+```
+
+After Bower is installed, you can install all of the edX UX Pattern Library dependecies with:
+
+```
+bower install
+```
+
+NOTE: Bower packages are installed to the ``_src/components`` directory. These files should not be edited or removed outside of the Bower workflow.
 
 ### Install/Update Gulp + Project Dependencies
 From the directory you've checked out this repo into locally, run:
@@ -71,14 +88,19 @@ To view the Pattern Library locally (and to watch for any local changes to conte
 gulp
 ```
 
-This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['styles', pl_styles', 'images', 'pl_images', pl_scripts, jekyll-build' 'watch']`
+This will run the `default` gulp task defined in `gulpfile.js`, which has the following task dependencies: `['styles', pldoc_styles', 'images', 'pldoc_images', scripts, pldoc_scripts, jekyll-build', 'watch']`
 
-* The `styles` and `pl_styles` tasks compile your css files.
-* `images` and `pl_images` copies images from a source folder, performs optimizations, the outputs them into the build folder
+* The `styles` and `pldoc_styles` tasks compile your css files.
+* `images` and `pldoc_images` copies images from a source folder, performs optimizations, the outputs them into the build folder
 * `jekyll-build` and `jekyll-rebuild` run the local jekyll server/preview and re-process any layouts, posts, or templates changed.
 * `watch` will start watching source files and will re-run the appropriate tasks when those files change.
 
-**NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task prefixed with `pl_*` refers to the reference site UI and not the elements.
+After running the default task, your local instance of the Pattern Library can be viewable at http://localhost:3000. There are additional views:
+
+* http://localhost:3000/examples/**/* - where full page examples and demos are kept
+* http://localhost:3000/elements/**/* - permalinks for individually documented pattern library elements
+
+**NOTE: some gulp tasks had to be separated to support both the pattern library 1)elements and 2)reference site UI separately.** Any task prefixed with `pldoc_*` refers to the reference site UI and not the elements.
 
 ### Publishing & Viewing Remotely
 The most up-to-date version of the library can be viewed on our public domain, **http://ux.edx.org**
@@ -103,6 +125,8 @@ When contributing, its assumed that you're already familar with the following:
 * [Our Front End Coding Styleguides](https://github.com/edx/ux-pattern-library/wiki)
 * [Jekyll in General](http://jekyllrb.com/docs/home/)
 * [Writing Posts in Jekyll](http://jekyllrb.com/docs/posts/)
+* [RequireJS](http://requirejs.org)
+* [Managing Packages with Bower](http://blog.teamtreehouse.com/getting-started-bower)
 
 - - -
 
@@ -111,11 +135,13 @@ When contributing, its assumed that you're already familar with the following:
 ###Pattern Library Elements vs. Reference Site UI
 This repository contains both the code needed to generate pattern library elements as well as a reference site to view/learn about these elements. When and where possible, we've tried to keep the assets needed for both separate by:
 
-* prefixing any reference site UI with `pl-*` class names in our site templates and Sass/CSS;
+* prefixing any reference site UI with `pldoc-*` class names in our site templates and Sass/CSS;
 * containing any reference site UI within the ``_src/pl/`` directory.
+* the main pattern library files are contained within the ``_src/pattern-library`` and never compile on their own, but are rather used in this site's and other application's Sass compile files.
 
 - - -
 
 ## Contributors
 * Chris Rodriguez (@clrux)
 * Brian Talbot (@talbs)
+* Frances Botsford (@frrrances)

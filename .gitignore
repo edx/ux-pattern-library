@@ -30,6 +30,7 @@ nbproject
 .idea
 
 #Ignore: Front End/Local Development
-_site
 .sass-cache
+_site
+_src/components/
 node_modules

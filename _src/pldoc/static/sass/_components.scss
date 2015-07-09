@@ -1,0 +1,560 @@
+// ------------------------------
+// edX Pattern Library Site: Components
+
+// About: styling for specific UI components ranging from global to modular.
+
+// ------------------------------
+// #HEADINGS
+// ------------------------------
+
+// ------------------------------
+// #CONTROLS
+// ------------------------------
+
+// tab panels and examples
+.example-set {
+    @extend %clear-last-child;
+    padding-bottom: spacing-vertical(base);
+    border-bottom: rem(2) solid palette(grayscale-cool, x-light);
+    margin-bottom: spacing-vertical(base);
+
+    .button-overlay-demo {
+        padding: spacing-vertical(mid-large) spacing-horizontal(mid-large);
+        background: palette(primary, accent) url(../images/bg-overlay-example.png) 0 50% no-repeat;
+        background-size: cover;
+    }
+}
+
+// copyable elements
+.is-copyable {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: $font-family-monospace;
+}
+
+// ------------------------------
+// #HEADER
+// ------------------------------
+.pldoc-header-site-title {
+    display: inline-block;
+    vertical-align: middle;
+
+    @include susy-breakpoint($bp-large, $susy) {
+        margin: 0;
+    }
+
+    .title-name, .title-description {
+        display: block;
+    }
+
+    .title-name {
+        margin-bottom: spacing-vertical(x-small);
+        color: palette(grayscale, white);
+        font-size: font-size(base);
+        font-weight: font-weight(bold);
+        text-transform: uppercase;
+        letter-spacing: rem(1);
+
+        // STATE: hover, active, focus
+        &:hover,
+        &:active,
+        &:focus {
+            color: palette(primary, accent);
+        }
+    }
+
+    .title-description {
+        color: palette(grayscale, base);
+        font-weight: font-weight(normal);
+    }
+
+    .pldoc-link {
+        border: none;
+    }
+}
+
+// ------------------------------
+// #NAVIGATION
+// ------------------------------
+// navigation - sidebar-based
+.pldoc-nav {
+    margin-bottom: spacing-vertical(mid-large);
+
+    // CASE: last element
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-list {
+        @extend %reset-lists;
+        margin: 0;
+    }
+
+
+    .pldoc-link {
+        @include transition(background 0.25s ease-in-out);
+        display: block;
+        border-bottom: 1px solid palette(grayscale, black);
+        padding: spacing-vertical(x-small) spacing-horizontal(mid-large);
+        color: palette(grayscale, x-light);
+        text-decoration: none;
+        font-size: font-size(small);
+        font-weight: font-weight(semi-bold);
+
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
+            color: palette(primary, light);
+            background: palette(grayscale, black);
+        }
+    }
+
+    // CASE: last element
+    .nav-list-item:last-child {
+
+       .pldoc-link {
+            border-bottom: 0;
+       }
+    }
+
+    // CASE: item is current
+    .nav-list-item.is-current {
+
+        .pldoc-link:before {
+            display: inline-block;
+        }
+    }
+}
+
+// internal site navigation
+.pldoc-nav-internal {
+
+    .pldoc-link {
+        position: relative;
+
+        // is-current indicator
+        &:before {
+            @include transition(opacity 0.25s ease-in-out);
+            @include size(rem(5));
+            position: absolute;
+            top: rem(18);
+            @include left(spacing-horizontal(mid-small));
+            content: '';
+            border-radius: 100%;
+            opacity: 0;
+            background: palette(primary, accent);
+        }
+
+        // STATE: is current navigation item
+        &.is-current {
+            color: palette(primary, light);
+            background: palette(grayscale, black);
+
+            &:before {
+                opacity: 1.0;
+            }
+        }
+    }
+}
+
+// external site navigation
+.pldoc-nav-external {
+
+    .pldoc-link {
+
+        .pldoc-icon {
+            @include transition(opacity 0.25s ease-in-out);
+            display: inline-block;
+            vertical-align: baseline;
+            @include margin-right(spacing-horizontal(xx-small));
+            font-size: font-size(x-large);
+            line-height: line-height(none);
+            opacity: 0.25;
+        }
+
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
+
+            .pldoc-icon {
+                opacity: 1.0;
+            }
+        }
+    }
+}
+
+.pldoc-nav-title {
+    margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small) spacing-horizontal(mid-large);
+    color: palette(grayscale, base);
+    font-size: font-size(small);
+    font-weight: font-weight(semi-bold);
+    text-transform: uppercase;
+    letter-spacing: rem(1);
+}
+
+.pldoc-tab {
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.pldoc-tab-content {
+    @include transition(box-shadow 0.50s ease-in-out);
+    border: rem(1) solid palette(grayscale, x-light);
+    padding: spacing-vertical(base) spacing-horizontal(base);
+    background: palette(grayscale, white-t);
+    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
+
+    // STATE: hover, active, focus
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+    }
+
+    @include susy-breakpoint($bp-medium, $susy) {
+       padding: spacing-vertical(base) spacing-horizontal(mid-large);
+    }
+}
+
+.pldoc-settings {
+    background: palette(grayscale, xx-light);
+    margin-bottom: spacing-vertical(large);
+    padding: spacing-vertical(small) spacing-horizontal(small);
+}
+
+.pldoc-setting {
+    display: inline-block;
+    vertical-align: middle;
+    @include margin-right(spacing-horizontal(small));
+
+    &:last-child {
+         @include margin-right(0);
+    }
+}
+
+// ------------------------------
+// #SIDEBAR
+// ------------------------------
+.pldoc-wrapper-content-supplemental {
+    background: palette(grayscale-cool, x-dark);
+    color: palette(grayscale, x-light);
+}
+
+// ------------------------------
+// #MAIN CONTENT
+// ------------------------------
+.pldoc-wrapper-content-main {
+    background: palette(grayscale, xx-light);
+}
+
+// ------------------------------
+// #FOOTER
+// ------------------------------
+.pldoc-footer-site {
+    margin: spacing-vertical(base) spacing-horizontal(base);
+}
+
+.pldoc-footer-site-copyright {
+
+    .pldoc-copy {
+        font-size: font-size(small);
+        color: palette(grayscale, mid-light);
+    }
+}
+
+// ------------------------------
+// #ELEMENTS
+// ------------------------------
+.pldoc-element {
+    @include transition(all 0.25s ease-in-out);
+    padding: spacing-vertical(mid-large) spacing-horizontal(large);
+    border-bottom: rem(2) solid palette(grayscale, mid-dark);
+    box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
+
+    .pldoc-wrapper-element:first-child & {
+        padding-top: spacing-vertical(mid-large);
+    }
+
+    // CASE: last element
+    .pldoc-wrapper-element:last-child & {
+        border-bottom: 0;
+    }
+
+    .example-set-hd {
+        margin-bottom: spacing-vertical(small);
+    }
+}
+
+.pldoc-element-header {
+    margin-bottom: spacing-vertical(base);
+    border-bottom: 1px solid palette(grayscale, dark);
+    padding-bottom: spacing-vertical(small);
+
+    .pldoc-element-meta {
+        @extend %reset-lists;
+    }
+}
+
+
+// element info tabs
+.pldoc-tab-labels {
+    @include clearfix();
+    @extend %reset-lists;
+    border-bottom: $pldoc-tab-label-height solid palette(grayscale, x-light);
+}
+
+.pldoc-tab-heading {
+    @extend %a11y-hide;
+}
+
+.pldoc-tab-label {
+    // display: inline-block;
+    float: left;
+    position: relative;
+    bottom: -(spacing-vertical(xx-small));
+
+    .pldoc-link {
+        display: block;
+        margin: 0;
+        border-width: 0 0 $pldoc-tab-label-height 0;
+        border-color: $transparent;
+        border-style: solid;
+        background: $transparent;
+        padding: spacing-vertical(x-small) spacing-horizontal(mid-small);
+        font-weight: font-weight(semi-bold);
+        color: palette(grayscale, dark);
+
+        &:hover,
+        &:focus {
+            border-bottom-color: palette(primary, accent);
+            color: palette(primary, accent);
+        }
+
+        &.is-active {
+            border-bottom-color: palette(grayscale, x-dark);
+            color: palette(grayscale, x-dark);
+        }
+    }
+}
+
+// markup section of element
+.pldoc-element-markup {
+
+    code {
+        font-family: $font-family-monospace;
+    }
+}
+
+
+// ------------------------------
+// #SPECIFIC ELEMENTS
+// ------------------------------
+
+// color swatches
+.pldoc-element-colors {
+
+    .example-color {
+        @include transition(all timing(x-fast) ease-in-out);
+        @include container();
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        padding: spacing-vertical(small) spacing-horizontal(base);
+        box-shadow: none;
+        color: palette(grayscale, white);
+
+        &.fail-a11y-color {
+            border-left: rem($baseline/4) solid palette(warning, base);
+        }
+
+        // STATE: hover, focus, and active
+        &:hover,
+        &:focus,
+        &:active {
+            @include transform(scale(1.02));
+            z-index: z-index(mid-front);
+        }
+
+        // CASE: dark text on light bg
+        &.dol {
+
+            .color-class,
+            .color-reference,
+            .color-meta {
+                color: palette(grayscale, black);
+            }
+        }
+
+        // CASE: light text on dark bg
+        &.lod {
+
+            .color-class,
+            .color-reference,
+            .color-meta {
+                color: palette(grayscale, white);
+            }
+        }
+
+        // color info
+        .color-info {
+            @include span(12);
+            margin-bottom: spacing-vertical(small);
+
+            @include susy-breakpoint($bp-medium, $susy) {
+                @include span(6 first);
+                margin-bottom: 0;
+            }
+        }
+
+        // color name/class
+        .color-class {
+            display: block;
+            width: 100%;
+            margin-bottom: spacing-vertical(x-small);
+            font-size: font-size(small);
+            font-weight: font-weight(semi-bold);
+            text-transform: lowercase;
+        }
+
+        // CASE: base color
+        &.base {
+            padding-top: spacing-vertical(base);
+            padding-bottom: spacing-vertical(base);
+
+            .color-class {
+                font-size: font-size(base);
+                font-weight: font-weight(bold);
+            }
+        }
+
+        // color reference
+        .color-reference {
+            display: block;
+            font-size: font-size(x-small);
+        }
+
+        // color metadata
+        .color-meta {
+            @include span(12);
+            font-size: font-size(x-small);
+            color: palette(grayscale, white);
+
+            @include susy-breakpoint($bp-medium, $susy) {
+                @include span(6 last);
+                @include text-align(right);
+            }
+
+            .color-rgb,
+            .color-hex {
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .color-rgb {
+                @include ellipsis();
+                @include margin-right(spacing-horizontal(small));
+            }
+
+            .color-hex {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// buttons
+.pldoc-element-buttons {
+
+    .example-set {
+        @include container();
+    }
+
+    .btn {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: spacing-horizontal(x-small);
+        margin-bottom: spacing-vertical(x-small);
+
+        // CASE: last button in set
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// icons
+.pldoc-element-icons {
+    @extend %element-hide-styling;
+
+    .example-set {
+        @include container();
+    }
+
+    .example-icon {
+        @include transition(all timing(x-fast) ease-in-out);
+        display: inline-block;
+        width: spacing-vertical(x-large);
+        margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
+        border: 1px solid palette(grayscale, x-light);
+        border-radius: spacing-horizontal(xx-small);
+        padding: spacing-vertical(x-small) spacing-horizontal(small);
+        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
+        background: palette(grayscale, white);
+        color: palette(grayscale, white);
+
+        .icon-display {
+            width: 24px;
+            margin: auto;
+
+            svg {
+                @include transition(fill 0.25s ease-in-out);
+                width: 100%;
+                fill: palette(primary, base);
+            }
+        }
+
+        .icon-classname {
+            @include text-align(center);
+            font-size: font-size(small);
+            color: palette(grayscale, base);
+        }
+
+        @include susy-breakpoint($bp-medium, $susy) {
+            @include gallery(3 of 12);
+        }
+
+        // STATE: hover, focus, and active
+        &:hover,
+        &:focus,
+        &:active {
+            @include transform(scale(1.05));
+            box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
+
+            .icon-display {
+
+                svg {
+                    fill: palette(primary, accent); // demonstrating color change simplicity
+                }
+            }
+        }
+    }
+}
+
+
+// ------------------------------
+// #SYSTEM FEEDBACK
+// ------------------------------
+%message {
+    font-weight: font-weight(semi-bold);
+}
+
+%message-warning {
+    @extend %message;
+    background-color: palette(warning, light);
+    color: palette(grayscale, black-t);
+}

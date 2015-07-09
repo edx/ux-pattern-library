@@ -1,0 +1,105 @@
+// ------------------------------
+// edX Pattern Library Site: Layouts
+
+// About: styling for generic layouts and responsive support.
+
+// ------------------------------
+// #DOC SITE LAYOUT
+// ------------------------------
+// main content
+.pldoc-wrapper-content-main {
+
+    @include susy-breakpoint($bp-large, $susy) {
+        width: calc(100% - $pldoc-content-supplemental-width);
+        margin-left: $pldoc-content-supplemental-width;
+    }
+}
+
+.pldoc-wrapper-element {
+    @include container();
+}
+
+// sidebar
+.pldoc-wrapper-content-supplemental {
+
+    @include susy-breakpoint($bp-large, $susy) {
+        @include size($pldoc-content-supplemental-width 100%);
+        display: block;
+        position: fixed;
+        top: 0;
+        @include left(0);
+        overflow-y: scroll;
+    }
+
+    .pldoc-header-site {
+        padding: spacing-vertical(mid-small) spacing-horizontal(mid-large);
+
+        @include susy-breakpoint($bp-large, $susy) {
+            margin: spacing-vertical(base) spacing-horizontal(mid-large);
+            padding: 0;
+        }
+    }
+
+
+    .pldoc-nav {
+        display: none;
+
+        @include susy-breakpoint($bp-large, $susy) {
+            display: block;
+        }
+    }
+
+    .pldoc-footer-site {
+        display: none;
+
+        @include susy-breakpoint($bp-large, $susy) {
+            display: block;
+        }
+    }
+}
+
+// element
+.pldoc-element-header {
+    @include container();
+}
+
+.pldoc-element-title {
+    margin-bottom: spacing-vertical(x-small);
+
+    @include susy-breakpoint($bp-medium, $susy) {
+        @include span(6 first);
+        margin-bottom: 0;
+    }
+}
+
+
+
+.pldoc-element-meta {
+
+    @include susy-breakpoint($bp-medium, $susy) {
+        @include span(6 last);
+        @include text-align(right);
+    }
+
+    .meta {
+        display: block;
+
+        @include susy-breakpoint($bp-medium, $susy) {
+            display: inline-block;
+            vertical-align: middle;
+            @include margin-right(spacing-horizontal(small));
+        }
+    }
+
+    .meta-updated {
+        margin-bottom: spacing-vertical(x-small);
+
+        @include susy-breakpoint($bp-medium, $susy) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// ------------------------------
+// #GENERAL CANVAS LAYOUT
+// ------------------------------

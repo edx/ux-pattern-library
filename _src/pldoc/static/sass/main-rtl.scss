@@ -1,0 +1,24 @@
+// ------------------------------
+// edX Pattern Library Site: Main Style Compile
+
+// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
+
+// NOTE: This is the left to right (RTL) configured style compile. It should mirror main-rtl w/ the exception of bi-app references.
+
+// ------------------------------
+// #VENDOR
+// ------------------------------
+@import '../../../components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../../components/susy/sass/susy';
+@import '../../../components/breakpoint-sass/stylesheets/breakpoint';
+@import '../../../components/bi-app-sass/bi-app/bi-app-rtl';            // RTL support
+
+// ------------------------------
+// #UTILITIES
+// ------------------------------
+@import '../../../pattern-library/sass/utilities/variables-rtl';
+
+// ------------------------------
+// #BUILD
+// ------------------------------
+@import 'build';                                                        // shared compile/build order for both LTR and RTL UI

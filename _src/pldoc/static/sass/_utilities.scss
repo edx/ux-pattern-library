@@ -1,0 +1,33 @@
+// ------------------------------
+// edX Pattern Library Site: Utilities
+
+// About: configuration, functions, variables, mixins, and general helpers for rendering.
+
+// ------------------------------
+// #VARIABLES
+// ------------------------------
+// pl UI
+$pldoc-content-supplemental-width: rem(330); // width of supplemental content sidebar
+$pldoc-tab-label-height:           rem(4);  // height of tab labels
+
+// ------------------------------
+// #HELPERS
+// ------------------------------
+
+// element: hide styling tab
+%element-hide-styling {
+
+    .pldoc-tab-label .pldoc-link-styling,
+    .pldoc-element-styling {
+        display: none;
+    }
+}
+
+// element: hide markup tab
+%element-hide-markup {
+
+    .pldoc-tab-label .pldoc-link-markup,
+    .pldoc-element-markup {
+        display: none;
+    }
+}

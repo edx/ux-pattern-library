@@ -1,0 +1,100 @@
+// ------------------------------
+// edX Pattern Library: Components - Headings
+
+// About: Contains base styling for headings (leading type for sections of content and UI).
+
+// #GLOBAL
+// #INDIVIDUAL HEADINGS
+
+// ----------------------------
+// #GLOBAL
+// ----------------------------
+.hd-1,
+.hd-2,
+.hd-3,
+.hd-4,
+.hd-5,
+.hd-6 {
+    @extend %reset-headings;
+
+    &.emphasized {
+        color: $headings-emphasized-color;
+        font-weight: $headings-font-weight-bold;
+    }
+
+    &.de-emphasized {
+        color: $headings-de-emphasized-color;
+    }
+}
+
+.hd-6,
+.hd-7 {
+    font-weight: $headings-font-weight-bold;
+    text-transform: uppercase;
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
+}
+
+
+// ----------------------------
+// #INDIVIDUAL HEADINGS
+// ----------------------------
+// Level one heading
+.hd-1 {
+    margin-bottom: spacing-vertical(small);
+    font-size: font-size(xxxx-large);
+    line-height: line-height(xxx-large);
+}
+
+
+// Level two heading
+.hd-2 {
+    margin-bottom: spacing-vertical(small);
+    font-size: font-size(xxx-large);
+    line-height: line-height(xx-large);
+}
+
+
+// Level three heading
+.hd-3 {
+    margin-bottom: spacing-vertical(x-small);
+    font-size: font-size(xx-large);
+    line-height: line-height(x-large);
+}
+
+
+// Level four heading
+.hd-4 {
+    margin-bottom: spacing-vertical(x-small);
+    font-weight: font-weight(bold);
+    font-size: font-size(x-large);
+    line-height: line-height(small);
+}
+
+
+// Level five heading
+.hd-5 {
+    margin-bottom: spacing-vertical(x-small);
+    font-weight: font-weight(bold);
+    font-size: font-size(large);
+    line-height: line-height(large);
+}
+
+
+// Level six heading
+.hd-6 {
+    margin-bottom: spacing-vertical(x-small);
+    font-size: font-size(small);
+    line-height: line-height(small);
+    letter-spacing: letter-spacing(x-loose);
+}
+
+// Level seven heading
+.hd-7 {
+    margin-bottom: spacing-vertical(x-small);
+    font-size: font-size(x-small);
+    line-height: line-height(x-small);
+    letter-spacing: letter-spacing(x-loose);
+}

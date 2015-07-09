@@ -1,13 +1,13 @@
 // gulp pattern library + site configuration
 
 // pattern library
-var dest = './public';
-var src = './_src/edx-pl';
-var local = './_site';
+var dest = './public',
+    src = './_src/pattern-library',
+    local = './_site',
 
 // documentation site
-var pl_src = './_src/pl';
-var pl_dest = './public/pl';
+    pldoc_src = './_src/pldoc',
+    pldoc_dest = './public/pldoc';
 
 module.exports = {
     browserSync: {
@@ -26,25 +26,24 @@ module.exports = {
         local: local + '/public/css',
 
         // documentation site
-        pl_src: pl_src + '/static/sass',
-        pl_src_files: pl_src + '/static/sass/**/*.scss',
-        pl_src_static: src + '/css',
-        pl_src_static_files: src + '/css/**/*.css',
-        pl_dest: pl_dest + '/css',
-        pl_local: local + '/public/pl/css'
+        pldoc_src: pldoc_src + '/static/sass',
+        pldoc_src_files: pldoc_src + '/static/sass/**/*.scss',
+        pldoc_src_static: src + '/css',
+        pldoc_dest: pldoc_dest + '/css',
+        pldoc_local: local + '/public/pldoc/css'
     },
     images: {
         // pattern library
         src: src + '/images',
-        src_files: src + '/images/**',
+        src_files: src + 'images/**',
         dest: dest + '/images',
         local: local + '/public/images',
 
         // documentation site
-        pl_src: pl_src + '/static/images',
-        pl_src_files: pl_src + '/static/images/**',
-        pl_dest: pl_dest + '/images',
-        pl_local: local + '/public/pl/images'
+        pldoc_src: pldoc_src + '/static/images',
+        pldoc_src_files: pldoc_src + '/static/images/**',
+        pldoc_dest: pldoc_dest,
+        pldoc_local: local + '/public/pldoc/images'
     },
     scripts: {
         // pattern library
@@ -53,10 +52,10 @@ module.exports = {
         local: local + '/public/js',
 
         // documentation site
-        pl_src: pl_src + '/static/js',
-        pl_src_files: pl_src + '/static/js/**/*.js',
-        pl_dest: pl_dest + '/js',
-        pl_local: local + '/public/pl/js'
+        pldoc_src: pldoc_src + '/static/js',
+        pldoc_src_files: pldoc_src + '/static/js/**/*.js',
+        pldoc_dest: pldoc_dest + '/js',
+        pldoc_local: local + '/public/pldoc/js'
     },
     vendor: {
         // pattern library
@@ -65,14 +64,16 @@ module.exports = {
         local: local + '/public/vendor',
 
         // documentation site
-        pl_src: pl_src + '/vendor/**',
-        pl_dest: pl_dest + '/vendor',
-        pl_local: local + '/public/pl/vendor'
+        pldoc_src: pldoc_src + '/vendor/**',
+        pldoc_dest: pldoc_dest + '/vendor',
+        pldoc_local: local + '/public/pldoc/vendor'
     },
     jekyll: {
         home: 'index.html',
         posts: '_posts/*',
-        layouts: '_layouts/*.html'
+        includes: '_includes/*',
+        examples: 'examples/*',
+        layouts: '_layouts/*'
     }
 };
 

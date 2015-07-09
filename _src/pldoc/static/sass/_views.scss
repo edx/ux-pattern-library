@@ -1,0 +1,28 @@
+// ------------------------------
+// edX Pattern Library Site: Views
+
+// About: styling for specific views.
+
+// ------------------------------
+// #INDEX
+// ------------------------------
+.pldoc.view-index {
+
+    // link back to top
+    .pldoc-wrapper-link-top {
+        @include container();
+        padding: 0 spacing-horizontal(large) spacing-vertical(small) spacing-horizontal(large);
+    }
+
+    .pldoc-link-top {
+        @include span (12 of 12);
+        text-align: center;
+    }
+}
+
+// ------------------------------
+// #DETAIL
+// ------------------------------
+.pldoc.view-element {
+
+}

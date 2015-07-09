@@ -1,0 +1,27 @@
+// ------------------------------
+// edX Pattern Library Site: Base
+
+// About: Base resets and definitons (using shared resources from elements when appropriate).
+
+// ------------------------------
+// #RESET
+// ------------------------------
+
+// ------------------------------
+// #BASE
+// ------------------------------
+// basic
+html, body {
+    height: 100%;
+    color: palette(grayscale, x-dark);
+}
+
+.pldoc {
+    @include font-smoothing(on);
+    background: palette("grayscale-cool", "x-light");
+    font-size: font-size("base");
+}
+
+.pldoc-wrapper-view {
+    background: palette("grayscale-cool", "x-light");
+}
