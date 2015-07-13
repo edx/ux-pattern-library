@@ -168,6 +168,7 @@ $susy-debug: layout($susy-default show);
             @include susy-breakpoint($bp-screen-sm, $susy-manual) {
                 @include pre($i);
             }
+
         }
     }
 
