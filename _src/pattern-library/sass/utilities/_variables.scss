@@ -22,32 +22,27 @@ $em-base: 16; // deliberately sets bourbon-based em-base (http://bourbon.io/docs
 // #GRID
 // ----------------------------
 // grid - baseline
-$baseline:               20 !default;
-$baseline-vertical:      ($baseline*2) !default;
-$baseline-horizontal:    $baseline !default;
+$baseline:                   20 !default;
+$baseline-vertical:          ($baseline*2) !default;
+$baseline-horizontal:        $baseline !default;
 
-$susy: (
-    columns: 12,
-    container: rem(1170),
-    global-box-sizing: border-box,
-    gutters: .5,
-    math: fluid,
-    output: float,
-    use-custom: (
-        breakpoint: true,
-        background-image: true,
-        background-options: true,
-        box-sizing: false,
-        clearfix: true,
-        rem: true,
-    )
-);
+// grid - dimensions
+$grid-max-width:             rem(1170) !default;
+$grid-column-count:          12 !default;
+$grid-gutter-width:          (1/3) !default;  // set to fraction to be proportional to fluid column widths (see - http://susydocs.oddbird.net/en/latest/settings/#gutters)
+$grid-container-position:    center !default;
+$grid-gutter-position:       after !default;
+$grid-manual-gutter-position: inside !default;
+$grid-column-width:          false !default;  // set to false for fluid columns by default (see - http://susydocs.oddbird.net/en/latest/settings/#column-width)
+$grid-debug-color:           rgba(203, 89, 141, 0.33) !default;
+$grid-debug-color-alt:       rgba(0, 121, 188, 0.33) !default;
 
 // grid - breakpoints
-$bp-small:  320px !default;
-$bp-medium: 768px !default;
-$bp-large:  1024px !default;
-$bp-huge:   1280px !default;
+$bp-screen-sm:                320px !default;
+$bp-screen-md:                768px !default;
+$bp-screen-lg:                1024px !default;
+$bp-screen-xl:               1280px !default;
+
 
 // ----------------------------
 // #COLORS
@@ -120,23 +115,33 @@ $palettes: (
     success: (
         base:       $success,
         light:      tint($success, 33%),
-        dark:       shade($success, 33%)
+        dark:       shade($success, 33%),
+        trans:      transparentize($success, 0.50),
+        x-trans:    transparentize($success, 0.75),
+        xx-trans:   transparentize($success, 0.95)
     ),
     error: (
         base:       $error,
         light:      tint($error, 33%),
-        dark:       shade($error, 33%)
+        dark:       shade($error, 33%),
+        trans:      transparentize($error, 0.50),
+        x-trans:    transparentize($error, 0.75),
+        xx-trans:   transparentize($error, 0.95)
     ),
     warning: (
         base:       $warning,
         light:      tint($warning, 33%),
-        dark:       shade($warning, 33%)
+        dark:       shade($warning, 33%),
+        trans:      transparentize($warning, 0.50),
+        x-trans:    transparentize($warning, 0.75),
+        xx-trans:   transparentize($warning, 0.95)
     ),
 );
 
 // shadows
 // using black-t because using a gray looks weird when it appears over black
 $shadow: transparentize(palette(grayscale, black-t), .5);
+
 
 // ----------------------------
 // #TYPOGRAPHY
@@ -245,26 +250,6 @@ $letter-spacing: (
     xx-loose:       2
 );
 
-// ----------------------------
-// #FORMS
-// ----------------------------
-
-// form inputs: heights
-// values are "rows" which maps to line-height
-// primarily used in textareas
-$input-height: (
-    short:          5,
-    base:           10,
-    tall:           15
-);
-
-// form inputs: widths
-$input-width: (
-    short:          150,
-    base:           300,
-    wide:           450,
-    block:          null // value here is irrelevant but required. Null is easy to understand.
-);
 
 // ----------------------------
 // #DEPTH
@@ -312,6 +297,48 @@ $timing: (
     fast:       0.5s,
     x-fast:     0.25s,
     xx-fast:    0.125s
+);
+
+
+// ----------------------------
+// #FORMS
+// ----------------------------
+// form inputs: heights
+// values are "rows" which maps to line-height
+// primarily used in textareas
+$input-height: (
+    short:          5,
+    base:           10,
+    tall:           15
+);
+
+// form inputs: widths
+$input-width: (
+    short:          150,
+    base:           300,
+    wide:           450,
+    block:          null // value here is irrelevant but required. Null is easy to understand.
+);
+
+
+// ----------------------------
+// #FORMS
+// ----------------------------
+// form inputs: heights
+// values are "rows" which maps to line-height
+// primarily used in textareas
+$input-height: (
+    short:          5,
+    base:           10,
+    tall:           15
+);
+
+// form inputs: widths
+$input-width: (
+    short:          150,
+    base:           300,
+    wide:           450,
+    block:          null // value here is irrelevant but required. Null is easy to understand.
 );
 
 // ----------------------------

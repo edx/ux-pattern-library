@@ -14,6 +14,7 @@
 // tab panels and examples
 .example-set {
     @extend %clear-last-child;
+    @include clearfix();
     padding-bottom: spacing-vertical(base);
     border-bottom: rem(2) solid palette(grayscale-cool, x-light);
     margin-bottom: spacing-vertical(base);
@@ -39,7 +40,7 @@
     display: inline-block;
     vertical-align: middle;
 
-    @include susy-breakpoint($bp-large, $susy) {
+    @include susy-breakpoint($bp-screen-lg, $susy-default) {
         margin: 0;
     }
 
@@ -215,7 +216,7 @@
         box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
     }
 
-    @include susy-breakpoint($bp-medium, $susy) {
+    @include susy-breakpoint($bp-screen-md, $susy-default) {
        padding: spacing-vertical(base) spacing-horizontal(mid-large);
     }
 }
@@ -270,19 +271,6 @@
 // #ELEMENTS
 // ------------------------------
 .pldoc-element {
-    @include transition(all 0.25s ease-in-out);
-    padding: spacing-vertical(mid-large) spacing-horizontal(large);
-    border-bottom: rem(2) solid palette(grayscale, mid-dark);
-    box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
-
-    .pldoc-wrapper-element:first-child & {
-        padding-top: spacing-vertical(mid-large);
-    }
-
-    // CASE: last element
-    .pldoc-wrapper-element:last-child & {
-        border-bottom: 0;
-    }
 
     .example-set-hd {
         margin-bottom: spacing-vertical(small);
@@ -359,11 +347,10 @@
 
     .example-color {
         @include transition(all timing(x-fast) ease-in-out);
-        @include container();
+        @include span(12 of 12);
         position: relative;
         border: 0;
         border-radius: 0;
-        margin-bottom: 0;
         padding: spacing-vertical(small) spacing-horizontal(base);
         box-shadow: none;
         color: palette(grayscale, white);
@@ -405,7 +392,7 @@
             @include span(12);
             margin-bottom: spacing-vertical(small);
 
-            @include susy-breakpoint($bp-medium, $susy) {
+            @include susy-breakpoint($bp-screen-md, $susy-default) {
                 @include span(6 first);
                 margin-bottom: 0;
             }
@@ -444,7 +431,7 @@
             font-size: font-size(x-small);
             color: palette(grayscale, white);
 
-            @include susy-breakpoint($bp-medium, $susy) {
+            @include susy-breakpoint($bp-screen-md, $susy-default) {
                 @include span(6 last);
                 @include text-align(right);
             }
@@ -470,10 +457,6 @@
 // buttons
 .pldoc-element-buttons {
 
-    .example-set {
-        @include container();
-    }
-
     .btn {
         display: inline-block;
         vertical-align: middle;
@@ -490,10 +473,6 @@
 // icons
 .pldoc-element-icons {
     @extend %element-hide-styling;
-
-    .example-set {
-        @include container();
-    }
 
     .example-icon {
         @include transition(all timing(x-fast) ease-in-out);
@@ -524,7 +503,7 @@
             color: palette(grayscale, base);
         }
 
-        @include susy-breakpoint($bp-medium, $susy) {
+        @include susy-breakpoint($bp-screen-md, $susy-default) {
             @include gallery(3 of 12);
         }
 
@@ -542,6 +521,350 @@
                 }
             }
         }
+    }
+}
+
+
+// ------------------------------
+// #GRID
+// ------------------------------
+%demo-grid-column {
+    background: $grid-debug-color;
+    border: 1px solid saturate($grid-debug-color, 100%);
+
+    @include susy-breakpoint($bp-screen-md, $susy-default) {
+        background: saturate($grid-debug-color, 33%);
+    }
+
+    @include susy-breakpoint($bp-screen-lg, $susy-default) {
+        background: saturate($grid-debug-color, 66%);
+    }
+
+    @include susy-breakpoint($bp-screen-xl, $susy-default) {
+        background: saturate($grid-debug-color, 100%);
+    }
+
+    .example-label {
+        @extend %copy-micro;
+        display: block;
+    }
+}
+
+%demo-grid-row {
+    background: $grid-debug-color;
+}
+
+// post
+.pldoc-element-grid {
+
+    .col,
+    .gallery-item {
+        @include text-align(center);
+        @extend %demo-grid-column;
+        padding: spacing-vertical(small) spacing-horizontal(small);
+    }
+
+    .row {
+        margin-bottom: spacing-vertical(mid-small);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .example-grid {
+
+        .example-label {
+            @extend %copy-micro;
+            display: block;
+        }
+
+        .example-label-container {
+            @include full();
+            margin-bottom: spacing-vertical(x-small);
+        }
+    }
+
+    // basic example
+    .example-grid-basic {
+
+        .col {
+            @include span(1);
+
+            // mark every 12th col as last
+            &:nth-child(12n+12) {
+                @include omega();
+            }
+        }
+    }
+
+    // semantic shift example
+    .example-grid-shifts {
+
+        // shifts - before col
+        .shifts-pre {
+
+            .col-A {
+                @include span(11);
+                @include pre(1);
+            }
+
+            .col-B {
+                @include span(10);
+                @include pre(2);
+            }
+
+            .col-C {
+                @include span(9);
+                @include pre(3);
+            }
+
+            .col-D {
+                @include span(8);
+                @include pre(4);
+            }
+
+            .col-E {
+                @include span(7);
+                @include pre(5);
+            }
+
+            .col-F {
+                @include span(6);
+                @include pre(6);
+            }
+
+            .col-G {
+                @include span(5);
+                @include pre(7);
+            }
+
+            .col-H {
+                @include span(4);
+                @include pre(8);
+            }
+
+            .col-I {
+                @include span(3);
+                @include pre(9);
+            }
+
+            .col-J {
+                @include span(2);
+                @include pre(10);
+            }
+
+            .col-K {
+                @include span(1);
+                @include pre(11);
+            }
+        }
+
+        // shifts - after col
+        .shifts-post {
+
+            .col-A {
+                @include span(11);
+                @include post(1);
+            }
+
+            .col-B {
+                @include span(10);
+                @include post(2);
+            }
+
+            .col-C {
+                @include span(9);
+                @include post(3);
+            }
+
+            .col-D {
+                @include span(8);
+                @include post(4);
+            }
+
+            .col-E {
+                @include span(7);
+                @include post(5);
+            }
+
+            .col-F {
+                @include span(6);
+                @include post(6);
+            }
+
+            .col-G {
+                @include span(5);
+                @include post(7);
+            }
+
+            .col-H {
+                @include span(4);
+                @include post(8);
+            }
+
+            .col-I {
+                @include span(3);
+                @include post(9);
+            }
+
+            .col-J {
+                @include span(2);
+                @include post(10);
+            }
+
+            .col-K {
+                @include span(1);
+                @include post(11);
+            }
+        }
+
+        section {
+            @include clearfix();
+            margin-bottom: spacing-vertical(mid-small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+    // semantic example
+    .example-grid-semantic {
+
+        .wrapper-content {
+            @include container();
+        }
+
+        .content-main {
+            @include span(8 of 12 first);
+            @extend %demo-grid-column;
+        }
+
+        .story {
+            @extend %demo-grid-column;
+            margin-bottom: spacing-vertical(small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .story-main {
+            @include break();
+        }
+
+        .story-secondary {
+            @include span(4 of 8);
+            @extend %demo-grid-column;
+
+            &:nth-child(2n+1) {
+                @include omega();
+            }
+        }
+
+        .content-secondary {
+            @include span(4 of 12 last);
+            @extend %demo-grid-column;
+        }
+
+        .list-related {
+            @extend %reset-lists;
+        }
+    }
+
+    // semantic gallery example
+    .example-grid-gallery-semantic {
+
+        .photo-gallery {
+            @include clearfix();
+            margin-bottom: spacing-vertical(base);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .photo {
+                @include gallery(4);
+                @extend %demo-grid-column;
+                margin-bottom: gutter(12);
+            }
+
+            .photo-source {
+                display: block;
+                width: 100%;
+                margin-bottom: spacing-vertical(x-small);
+            }
+
+            .photo-caption {
+
+            }
+        }
+
+        .photo-gallery-large {
+
+            .photo {
+                @include gallery(6);
+            }
+        }
+    }
+
+    // manual (+ responsive) gallery example
+    .example-grid-gallery-classes,
+    .example-grid-gallery-responsive {
+
+        .gallery {
+            margin-bottom: spacing-vertical(mid-small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .gallery-item {
+            margin-bottom: spacing-vertical(small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// ------------------------------
+// #LAYOUTS
+// ------------------------------
+%demo-layout-column {
+    background: $grid-debug-color;
+
+    @include susy-breakpoint($bp-screen-md, $susy-default) {
+        background: saturate($grid-debug-color, 33%);
+    }
+
+    @include susy-breakpoint($bp-screen-lg, $susy-default) {
+        background: saturate($grid-debug-color, 66%);
+    }
+
+    @include susy-breakpoint($bp-screen-xl, $susy-default) {
+        background: saturate($grid-debug-color, 100%);
+    }
+}
+
+
+
+.example-layout {
+
+    .layout-col,
+    .layout-view-col
+     {
+       @extend %demo-layout-column;
+       padding: spacing-vertical(small) spacing-horizontal(small);
+    }
+
+    .example-label {
+        @extend %copy-micro;
+        display: block;
     }
 }
 

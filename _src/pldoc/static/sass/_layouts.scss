@@ -9,20 +9,16 @@
 // main content
 .pldoc-wrapper-content-main {
 
-    @include susy-breakpoint($bp-large, $susy) {
+    @include susy-breakpoint($bp-screen-lg, $susy-default) {
         width: calc(100% - $pldoc-content-supplemental-width);
         margin-left: $pldoc-content-supplemental-width;
     }
 }
 
-.pldoc-wrapper-element {
-    @include container();
-}
-
 // sidebar
 .pldoc-wrapper-content-supplemental {
 
-    @include susy-breakpoint($bp-large, $susy) {
+    @include susy-breakpoint($bp-screen-lg, $susy-default) {
         @include size($pldoc-content-supplemental-width 100%);
         display: block;
         position: fixed;
@@ -34,7 +30,7 @@
     .pldoc-header-site {
         padding: spacing-vertical(mid-small) spacing-horizontal(mid-large);
 
-        @include susy-breakpoint($bp-large, $susy) {
+        @include susy-breakpoint($bp-screen-lg, $susy-default) {
             margin: spacing-vertical(base) spacing-horizontal(mid-large);
             padding: 0;
         }
@@ -44,7 +40,7 @@
     .pldoc-nav {
         display: none;
 
-        @include susy-breakpoint($bp-large, $susy) {
+        @include susy-breakpoint($bp-screen-lg, $susy-default) {
             display: block;
         }
     }
@@ -52,21 +48,35 @@
     .pldoc-footer-site {
         display: none;
 
-        @include susy-breakpoint($bp-large, $susy) {
+        @include susy-breakpoint($bp-screen-lg, $susy-default) {
             display: block;
         }
     }
 }
 
 // element
-.pldoc-element-header {
+.pldoc-wrapper-element {
+    padding: spacing-vertical(mid-large) spacing-horizontal(large);
+    border-bottom: rem(2) solid palette(grayscale, mid-dark);
+    box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.pldoc-element {
     @include container();
+}
+
+.pldoc-element-header {
+    @include clearfix();
 }
 
 .pldoc-element-title {
     margin-bottom: spacing-vertical(x-small);
 
-    @include susy-breakpoint($bp-medium, $susy) {
+    @include susy-breakpoint($bp-screen-md, $susy-default) {
         @include span(6 first);
         margin-bottom: 0;
     }
@@ -75,8 +85,7 @@
 
 
 .pldoc-element-meta {
-
-    @include susy-breakpoint($bp-medium, $susy) {
+    @include susy-breakpoint($bp-screen-md, $susy-default) {
         @include span(6 last);
         @include text-align(right);
     }
@@ -84,7 +93,7 @@
     .meta {
         display: block;
 
-        @include susy-breakpoint($bp-medium, $susy) {
+        @include susy-breakpoint($bp-screen-md, $susy-default) {
             display: inline-block;
             vertical-align: middle;
             @include margin-right(spacing-horizontal(small));
@@ -94,7 +103,7 @@
     .meta-updated {
         margin-bottom: spacing-vertical(x-small);
 
-        @include susy-breakpoint($bp-medium, $susy) {
+        @include susy-breakpoint($bp-screen-md, $susy-default) {
             margin-bottom: 0;
         }
     }
@@ -103,3 +112,24 @@
 // ------------------------------
 // #GENERAL CANVAS LAYOUT
 // ------------------------------
+.pldoc-view-example {
+    background: palette("grayscale-cool", "xx-light");
+
+    .pldoc-wrapper-view-header {
+        margin-bottom: spacing-vertical(base);
+        padding: spacing-vertical(mid-small) gutter();
+        background: palette("grayscale-cool", "x-light");
+    }
+
+    .pldoc-view-header {
+        @include container();
+    }
+
+    .example {
+        margin-bottom: spacing-vertical(base);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
