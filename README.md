@@ -146,3 +146,4 @@ This repository contains both the code needed to generate pattern library elemen
 * Brian Talbot (@talbs)
 * Frances Botsford (@frrrances)
 * Marco Morales (@marcotuts)
+* Tyler Nickerson (@nickersoft)
