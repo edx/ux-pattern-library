@@ -35,41 +35,45 @@
 // ------------------------------
 // #HEADER
 // ------------------------------
-.pldoc-header-site-title {
-    display: inline-block;
-    vertical-align: middle;
+.pldoc-header-site {
 
-    @include susy-breakpoint($bp-large, $susy) {
-        margin: 0;
-    }
+    .pldoc-header-site-title {
+        display: inline-block;
+        vertical-align: middle;
 
-    .title-name, .title-description {
-        display: block;
-    }
+        @include susy-breakpoint($bp-large, $susy) {
+            margin: 0;
+        }
 
-    .title-name {
-        margin-bottom: spacing-vertical(x-small);
-        color: palette(grayscale, white);
-        font-size: font-size(base);
-        font-weight: font-weight(bold);
-        text-transform: uppercase;
-        letter-spacing: rem(1);
+        .title-name {
+            display: block;
+        }
 
-        // STATE: hover, active, focus
-        &:hover,
-        &:active,
-        &:focus {
-            color: palette(primary, accent);
+        .title-name {
+            margin-bottom: spacing-vertical(x-small);
+            color: palette(grayscale, white);
+            font-size: font-size(base);
+            font-weight: font-weight(bold);
+            text-transform: uppercase;
+            letter-spacing: rem(1);
+
+            // STATE: hover, active, focus
+            &:hover,
+            &:active,
+            &:focus {
+                color: palette(primary, accent);
+            }
+        }
+
+        .pldoc-link {
+            border: none;
         }
     }
 
-    .title-description {
+    .pldoc-title-description {
+        display: block;
         color: palette(grayscale, base);
         font-weight: font-weight(normal);
-    }
-
-    .pldoc-link {
-        border: none;
     }
 }
 
@@ -262,7 +266,7 @@
 
     .pldoc-copy {
         font-size: font-size(small);
-        color: palette(grayscale, mid-light);
+        color: palette(grayscale, base);
     }
 }
 
@@ -521,7 +525,7 @@
         .icon-classname {
             @include text-align(center);
             font-size: font-size(small);
-            color: palette(grayscale, base);
+            color: palette(grayscale, dark);
         }
 
         @include susy-breakpoint($bp-medium, $susy) {
