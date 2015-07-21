@@ -104,12 +104,10 @@ pre {
 // ----------------------------
 .sr-only {
     @extend %a11y-hide;
-    background: black !important; // providing contrast
-    color: white !important; // providing contrast
+    @extend %a11y-ensure-contrast;
 
     * {
-        background: black !important; // providing contrast
-        color: white !important; // providing contrast
+        @extend %a11y-ensure-contrast;
     }
 }
 

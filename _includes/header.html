@@ -1,17 +1,16 @@
-<header class="pldoc-header-site" role="banner" aria-labelledby="pldoc_header_site_title">
+<header class="pldoc-header-site" role="banner" aria-labelledby="pldoc-header-site-title">
     {% if page.title == "Home" %}
-    <h1 class="pldoc-header-site-title" id="pldoc_header_site_title">
+    <h1 class="pldoc-header-site-title" id="pldoc-header-site-title">
         <a class="pldoc-link title-name" href="{{ site.baseurl }}">
             {{ site.title }}
         </a>
     </h1>
-    <span class="title-description copy copy-base">{{ site.tagline }}</span>
     {% else %}
     <h2 class="pldoc-header-site-title">
         <a class="pldoc-link title-name" href="{{ site.baseurl }}">
             {{ site.title }}
         </a>
     </h2>
-    <span class="title-description copy copy-base">{{ site.tagline }}</span>
     {% endif %}
+    <span class="pldoc-title-description copy copy-base">{{ site.tagline }}</span>
 </header>
