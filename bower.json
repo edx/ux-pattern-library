@@ -19,7 +19,8 @@
     "bi-app-sass": "*",
     "breakpoint-sass": "~2.6.1",
     "svg4everybody": "~1.0.0",
-    "requirejs-plugins": "~1.0.3"
+    "requirejs-plugins": "~1.0.3",
+    "animate.css": "~3.3.0"
   },
   "resolutions": {
     "jquery": "~2.1.3"
