@@ -81,6 +81,10 @@
         background: palette(grayscale, x-light);
     }
 
+    &.xx-light {
+        background: palette(grayscale, xx-light);
+    }
+
     &.white {
         background: palette(grayscale, white);
     }
@@ -131,6 +135,10 @@
 
     &.x-light {
         background: palette(grayscale-cool, x-light);
+    }
+
+    &.xx-light {
+        background: palette(grayscale-cool, xx-light);
     }
 
     &.dark {
