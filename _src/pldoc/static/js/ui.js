@@ -1,6 +1,5 @@
 define([
     'jquery',
-    '/public/pldoc/js/jquery.smooth-scroll.js',
     '/public/pldoc/js/tabs.js',
     '/public/pldoc/js/size-slider.js',
     '/public/pldoc/js/color-contrast.js',
@@ -36,15 +35,20 @@ define([
         // smoothscroll to target links
         smoothScrollLink: function(event) {
             $('a[href^="#"]').not('.pldoc-tab-wrapper .pldoc-link').on('click', function(event) {
-                $.smoothScroll({
-                    offset: -200,
-                    easing: 'swing',
-                    preventDefault: false,
-                    speed: 1000,
-                    scrollElement: null,
-                    scrollTarget: $(event.currentTarget).attr('href')
+                event.preventDefault();
+
+                var target = $(event.target).attr('href');
+
+                $('html, body').stop().animate({
+                    scrollTop: $(target).offset().top
+                }, 1000, 'swing', function() {
+                    Ui.sendFocus(target);
                 });
             });
+        },
+
+        sendFocus: function(target) {
+            $(target).find('.pldoc-element-title').attr('tabindex', '-1').focus();
         },
 
         openNewWindow: function() {
