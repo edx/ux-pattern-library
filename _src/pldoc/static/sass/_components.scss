@@ -843,6 +843,7 @@
 // ------------------------------
 %demo-layout-column {
     background: $grid-debug-color;
+    border: 1px solid saturate($grid-debug-color, 100%);
 
     @include susy-breakpoint($bp-screen-md, $susy-default) {
         background: saturate($grid-debug-color, 33%);
