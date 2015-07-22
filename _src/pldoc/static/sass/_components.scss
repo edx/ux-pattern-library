@@ -41,7 +41,7 @@
         display: inline-block;
         vertical-align: middle;
 
-        @include susy-breakpoint($bp-large, $susy) {
+        @include susy-breakpoint($bp-screen-lg, $susy-default) {
             margin: 0;
         }
 
@@ -219,7 +219,7 @@
         box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
     }
 
-    @include susy-breakpoint($bp-medium, $susy) {
+    @include susy-breakpoint($bp-screen-md, $susy-default) {
        padding: spacing-vertical(base) spacing-horizontal(mid-large);
     }
 }
@@ -409,7 +409,7 @@
             @include span(12);
             margin-bottom: spacing-vertical(small);
 
-            @include susy-breakpoint($bp-medium, $susy) {
+            @include susy-breakpoint($bp-screen-md, $susy-default) {
                 @include span(6 first);
                 margin-bottom: 0;
             }
@@ -448,7 +448,7 @@
             font-size: font-size(x-small);
             color: palette(grayscale, white);
 
-            @include susy-breakpoint($bp-medium, $susy) {
+            @include susy-breakpoint($bp-screen-md, $susy-default) {
                 @include span(6 last);
                 @include text-align(right);
             }
@@ -528,7 +528,7 @@
             color: palette(grayscale, dark);
         }
 
-        @include susy-breakpoint($bp-medium, $susy) {
+        @include susy-breakpoint($bp-screen-md, $susy-default) {
             @include gallery(3 of 12);
         }
 
