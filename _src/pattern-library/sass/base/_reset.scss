@@ -35,9 +35,9 @@ video {
 }
 
 body {
+    @extend %depth-0;
     @include font-smoothing(on);
     color: $text-base-color;
-    background: $view-bg;
     font-size: font-size(base);
     font-family: $font-family-sans-serif;
 }
