@@ -17,7 +17,5 @@ html, body {
 }
 
 .pldoc {
-    @include font-smoothing(on);
-    background: palette("grayscale-cool", "x-light");
-    font-size: font-size("base");
+    @extend %depth-0;
 }
