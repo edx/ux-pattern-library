@@ -854,8 +854,6 @@
     }
 }
 
-
-
 .example-layout {
 
     .layout-col,
@@ -871,6 +869,50 @@
     }
 }
 
+
+// ------------------------------
+// #UI DEPTH
+// ------------------------------
+
+// post
+.pldoc-element-depth {
+
+    // padding for demo purposes
+    .depth {
+        padding: spacing-vertical(small) spacing-horizontal(base);
+    }
+
+    // light text on darker backgrounds for demo purposes
+    .depth--2,
+    .depth--3 {
+
+        .hd {
+            color: palette(grayscale, white);
+        }
+
+        .copy {
+            color: palette(grayscale, x-light);
+        }
+    }
+
+    // spacing for demo purposes
+    .slat,
+    .card {
+        margin-bottom: spacing-vertical(x-small);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .zebra-stripe {
+        @extend %reset-lists;
+
+        .slat {
+            margin-bottom: 0;
+        }
+    }
+}
 
 // ------------------------------
 // #SYSTEM FEEDBACK
