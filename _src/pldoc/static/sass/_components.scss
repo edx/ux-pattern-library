@@ -203,18 +203,10 @@
 }
 
 .pldoc-tab-content {
+    @extend %depth-2;
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
     padding: spacing-vertical(base) spacing-horizontal(base);
-    background: palette(grayscale, white-t);
-    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
-
-    // STATE: hover, active, focus
-    &:hover,
-    &:active,
-    &:focus {
-        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
-    }
 
     @include susy-breakpoint($bp-screen-md, $susy-default) {
        padding: spacing-vertical(base) spacing-horizontal(mid-large);
@@ -241,7 +233,7 @@
 // #SIDEBAR
 // ------------------------------
 .pldoc-wrapper-content-supplemental {
-    background: palette(grayscale-cool, x-dark);
+    @extend %depth--3;
     color: palette(grayscale, x-light);
 }
 
@@ -249,7 +241,7 @@
 // #MAIN CONTENT
 // ------------------------------
 .pldoc-wrapper-content-main {
-    background: palette(grayscale, xx-light);
+    @extend %depth-0;
 }
 
 // ------------------------------
@@ -476,14 +468,11 @@
 
     .example-icon {
         @include transition(all timing(x-fast) ease-in-out);
+        @extend %card;
         display: inline-block;
         width: spacing-vertical(x-large);
         margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
-        border: 1px solid palette(grayscale, x-light);
         border-radius: spacing-horizontal(xx-small);
-        padding: spacing-vertical(x-small) spacing-horizontal(small);
-        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
-        background: palette(grayscale, white);
         color: palette(grayscale, white);
 
         .icon-display {
