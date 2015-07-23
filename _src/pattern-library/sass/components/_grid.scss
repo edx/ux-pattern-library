@@ -361,15 +361,3 @@ $susy-debug: layout($susy-default show);
         }
     }
 }
-
-
-// ----------------------------
-// #DEBUG
-// ----------------------------
-%grid-debug {
-    @include show-grid();
-}
-
-.grid-debug {
-    @extend %grid-debug;
-}
