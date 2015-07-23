@@ -105,6 +105,11 @@ pre {
 // ----------------------------
 .sr-only {
     @extend %a11y-hide;
+    @extend %a11y-ensure-contrast;
+
+    * {
+        @extend %a11y-ensure-contrast;
+    }
 }
 
 .bg-replace {
