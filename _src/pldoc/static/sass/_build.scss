@@ -9,15 +9,6 @@
 @import 'utilities';
 
 // ------------------------------
-// #BASE
-// ------------------------------
-@import '../../../pattern-library/sass/base/normalize';
-@import '../../../pattern-library/sass/base/reset';
-@import '../../../pattern-library/sass/base/typography';
-
-@import 'base';
-
-// ------------------------------
 // #COMPONENTS
 // ------------------------------
 @import '../../../pattern-library/sass/components/colors';
@@ -30,6 +21,15 @@
 @import '../../../pattern-library/sass/components/depth';
 
 @import 'components';
+
+// ------------------------------
+// #BASE
+// ------------------------------
+@import '../../../pattern-library/sass/base/normalize';
+@import '../../../pattern-library/sass/base/reset';
+@import '../../../pattern-library/sass/base/typography';
+
+@import 'base';
 
 // ------------------------------
 // #LAYOUTS
