@@ -113,12 +113,12 @@
 // #GENERAL CANVAS LAYOUT
 // ------------------------------
 .pldoc-view-example {
-    background: palette("grayscale-cool", "xx-light");
+    // @extend %depth-0;
 
     .pldoc-wrapper-view-header {
         margin-bottom: spacing-vertical(base);
         padding: spacing-vertical(mid-small) gutter();
-        background: palette("grayscale-cool", "x-light");
+        @extend %depth-1;
     }
 
     .pldoc-view-header {

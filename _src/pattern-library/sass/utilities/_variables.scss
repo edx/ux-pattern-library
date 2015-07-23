@@ -92,6 +92,7 @@ $palettes: (
         base:       $gray,
         light:      tint($gray, 50%),
         x-light:    tint($gray, 75%),
+        xx-light:   tint($gray, 85%),
         white:      tint($gray, 97%),
         white-t:    tint($gray, 100%),
         dark:       shade($gray, 40%),
@@ -106,6 +107,7 @@ $palettes: (
         base:       $gray-cool,
         light:      tint($gray-cool, 50%),
         x-light:    tint($gray-cool, 75%),
+        xx-light:   tint($gray-cool, 85%),
         dark:       shade($gray-cool, 50%),
         x-dark:     shade($gray-cool, 75%),
         trans:      transparentize($gray-cool, 0.50),
@@ -327,9 +329,6 @@ $input-width: (
 // ----------------------------
 // #APPLICATIONS
 // ----------------------------
-// scaffolding
-$view-bg: palette(grayscale, xx-light) !default;
-
 // base component settings
 $component-focus-color: inherit !default;
 $component-focus-bg: palette(primary, x-light) !default;
