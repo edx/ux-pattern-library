@@ -12,7 +12,7 @@
 // ----------------------------
 // #CONFIG
 // ----------------------------
-$headings-count: 7;
+$headings-count: 8;
 
 // ----------------------------
 // #GLOBAL
@@ -37,8 +37,7 @@ $headings-count: 7;
 
 .hd-6,
 .hd-7 {
-    font-weight: $headings-font-weight-bold;
-    text-transform: uppercase;
+
 
     &.emphasized {
         font-weight: $headings-font-weight-x-bold;
@@ -76,16 +75,14 @@ $headings-count: 7;
 // Level four heading
 %hd-4 {
     margin-bottom: spacing-vertical(x-small);
-    font-weight: font-weight(bold);
     font-size: font-size(x-large);
-    line-height: line-height(small);
+    line-height: line-height(large);
 }
 
 
 // Level five heading
 %hd-5 {
     margin-bottom: spacing-vertical(x-small);
-    font-weight: font-weight(bold);
     font-size: font-size(large);
     line-height: line-height(large);
 }
@@ -93,18 +90,42 @@ $headings-count: 7;
 
 // Level six heading
 %hd-6 {
-    margin-bottom: spacing-vertical(x-small);
-    font-size: font-size(small);
-    line-height: line-height(small);
-    letter-spacing: letter-spacing(x-loose);
+    margin-bottom: spacing-vertical(xx-small);
+    font-size: font-size(base);
+    font-weight: $headings-font-weight-bold;
+    line-height: line-height(large);
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
 }
 
 // Level seven heading
 %hd-7 {
     margin-bottom: spacing-vertical(x-small);
-    font-size: font-size(x-small);
-    line-height: line-height(x-small);
+    font-size: font-size(small);
+    font-weight: $headings-font-weight-bold;
+    text-transform: uppercase;
+    line-height: line-height(small);
     letter-spacing: letter-spacing(x-loose);
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
+}
+
+// Level eight heading
+%hd-8 {
+    margin-bottom: spacing-vertical(xx-small);
+    font-size: font-size(x-small);
+    font-weight: $headings-font-weight-bold;
+    text-transform: uppercase;
+    line-height: line-height(x-small);
+    letter-spacing: letter-spacing(loose);
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
 }
 
 
