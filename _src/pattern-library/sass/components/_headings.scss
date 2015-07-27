@@ -3,8 +3,16 @@
 
 // About: Contains base styling for headings (leading type for sections of content and UI).
 
+// CONFIG
 // #GLOBAL
 // #INDIVIDUAL HEADINGS
+// #CANNED
+
+
+// ----------------------------
+// #CONFIG
+// ----------------------------
+$headings-count: 7;
 
 // ----------------------------
 // #GLOBAL
@@ -42,7 +50,7 @@
 // #INDIVIDUAL HEADINGS
 // ----------------------------
 // Level one heading
-.hd-1 {
+%hd-1 {
     margin-bottom: spacing-vertical(small);
     font-size: font-size(xxxx-large);
     line-height: line-height(xxx-large);
@@ -50,7 +58,7 @@
 
 
 // Level two heading
-.hd-2 {
+%hd-2 {
     margin-bottom: spacing-vertical(small);
     font-size: font-size(xxx-large);
     line-height: line-height(xx-large);
@@ -58,7 +66,7 @@
 
 
 // Level three heading
-.hd-3 {
+%hd-3 {
     margin-bottom: spacing-vertical(x-small);
     font-size: font-size(xx-large);
     line-height: line-height(x-large);
@@ -66,7 +74,7 @@
 
 
 // Level four heading
-.hd-4 {
+%hd-4 {
     margin-bottom: spacing-vertical(x-small);
     font-weight: font-weight(bold);
     font-size: font-size(x-large);
@@ -75,7 +83,7 @@
 
 
 // Level five heading
-.hd-5 {
+%hd-5 {
     margin-bottom: spacing-vertical(x-small);
     font-weight: font-weight(bold);
     font-size: font-size(large);
@@ -84,7 +92,7 @@
 
 
 // Level six heading
-.hd-6 {
+%hd-6 {
     margin-bottom: spacing-vertical(x-small);
     font-size: font-size(small);
     line-height: line-height(small);
@@ -92,9 +100,20 @@
 }
 
 // Level seven heading
-.hd-7 {
+%hd-7 {
     margin-bottom: spacing-vertical(x-small);
     font-size: font-size(x-small);
     line-height: line-height(x-small);
     letter-spacing: letter-spacing(x-loose);
+}
+
+
+// ----------------------------
+// #CANNED
+// ----------------------------
+// canned heading classes
+@for $i from 1 through $headings-count {
+    .hd-#{$i} {
+        @extend %hd-#{$i};
+    }
 }
