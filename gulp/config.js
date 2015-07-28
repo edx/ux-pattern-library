@@ -70,10 +70,10 @@ module.exports = {
     },
     jekyll: {
         home: 'index.html',
-        posts: '_posts/*',
-        includes: '_includes/*',
-        examples: 'examples/*',
-        layouts: '_layouts/*'
+        posts: '_posts/**/*',
+        includes: '_includes/**/*',
+        examples: 'examples/**/*',
+        layouts: '_layouts/**/*'
     }
 };
 
