@@ -225,6 +225,7 @@ $font-sizes: (
 
 // typography: line-height
 $line-heights: (
+    xxxx-large:     1.40,
     xxx-large:      1.40,
     xx-large:       1.40,
     x-large:        1.50,
@@ -232,6 +233,8 @@ $line-heights: (
     base:           1.5,
     small:          1.60,
     x-small:        1.5,
+    xx-small:       1.5,
+    xxx-small:      1.5,
     none:           0
 );
 
