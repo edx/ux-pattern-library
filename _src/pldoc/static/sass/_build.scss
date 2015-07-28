@@ -5,17 +5,11 @@
 @import '../../../pattern-library/sass/utilities/variables';
 @import '../../../pattern-library/sass/utilities/mixins';
 @import '../../../pattern-library/sass/utilities/helpers';
+@import '../../../pattern-library/sass/utilities/normalize';
+@import '../../../pattern-library/sass/utilities/reset';
+@import '../../../pattern-library/sass/utilities/typography';
 
 @import 'utilities';
-
-// ------------------------------
-// #BASE
-// ------------------------------
-@import '../../../pattern-library/sass/base/normalize';
-@import '../../../pattern-library/sass/base/reset';
-@import '../../../pattern-library/sass/base/typography';
-
-@import 'base';
 
 // ------------------------------
 // #COMPONENTS

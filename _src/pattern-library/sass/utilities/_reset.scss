@@ -35,7 +35,6 @@ video {
 }
 
 body {
-    @extend %depth-0;
     @include font-smoothing(on);
     @extend %depth-0;
     color: $text-base-color;
