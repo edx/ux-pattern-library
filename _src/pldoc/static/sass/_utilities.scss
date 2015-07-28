@@ -31,3 +31,16 @@ $pldoc-tab-label-height:           rem(4);  // height of tab labels
         display: none;
     }
 }
+
+// ------------------------------
+// #BASE RESET
+// ------------------------------
+// basic
+html, body {
+    height: 100%;
+    color: palette(grayscale, x-dark);
+}
+
+.pldoc {
+    @extend %depth-0;
+}
