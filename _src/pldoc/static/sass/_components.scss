@@ -36,41 +36,49 @@
 // ------------------------------
 // #HEADER
 // ------------------------------
-.pldoc-header-site-title {
-    display: inline-block;
-    vertical-align: middle;
+.pldoc-header-site {
 
     @include susy-breakpoint($bp-screen-lg, $susy-default) {
         margin: 0;
     }
+    
+    .pldoc-header-site-title {
+        display: inline-block;
+        vertical-align: middle;
 
-    .title-name, .title-description {
-        display: block;
-    }
+        @include susy-breakpoint($bp-screen-lg, $susy-default) {
+            margin: 0;
+        }
 
-    .title-name {
-        margin-bottom: spacing-vertical(x-small);
-        color: palette(grayscale, white);
-        font-size: font-size(base);
-        font-weight: font-weight(bold);
-        text-transform: uppercase;
-        letter-spacing: rem(1);
+        .title-name {
+            display: block;
+        }
 
-        // STATE: hover, active, focus
-        &:hover,
-        &:active,
-        &:focus {
-            color: palette(primary, accent);
+        .title-name {
+            margin-bottom: spacing-vertical(x-small);
+            color: palette(grayscale, white);
+            font-size: font-size(base);
+            font-weight: font-weight(bold);
+            text-transform: uppercase;
+            letter-spacing: rem(1);
+
+            // STATE: hover, active, focus
+            &:hover,
+            &:active,
+            &:focus {
+                color: palette(primary, accent);
+            }
+        }
+
+        .pldoc-link {
+            border: none;
         }
     }
 
-    .title-description {
+    .pldoc-title-description {
+        display: block;
         color: palette(grayscale, base);
         font-weight: font-weight(normal);
-    }
-
-    .pldoc-link {
-        border: none;
     }
 }
 
@@ -203,18 +211,10 @@
 }
 
 .pldoc-tab-content {
+    @extend %depth-2;
     @include transition(box-shadow 0.50s ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
     padding: spacing-vertical(base) spacing-horizontal(base);
-    background: palette(grayscale, white-t);
-    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
-
-    // STATE: hover, active, focus
-    &:hover,
-    &:active,
-    &:focus {
-        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
-    }
 
     @include susy-breakpoint($bp-screen-md, $susy-default) {
        padding: spacing-vertical(base) spacing-horizontal(mid-large);
@@ -241,7 +241,7 @@
 // #SIDEBAR
 // ------------------------------
 .pldoc-wrapper-content-supplemental {
-    background: palette(grayscale-cool, x-dark);
+    @extend %depth--3;
     color: palette(grayscale, x-light);
 }
 
@@ -249,7 +249,7 @@
 // #MAIN CONTENT
 // ------------------------------
 .pldoc-wrapper-content-main {
-    background: palette(grayscale, xx-light);
+    @extend %depth-0;
 }
 
 // ------------------------------
@@ -263,7 +263,7 @@
 
     .pldoc-copy {
         font-size: font-size(small);
-        color: palette(grayscale, mid-light);
+        color: palette(grayscale, base);
     }
 }
 
@@ -476,14 +476,11 @@
 
     .example-icon {
         @include transition(all timing(x-fast) ease-in-out);
+        @extend %card;
         display: inline-block;
         width: spacing-vertical(x-large);
         margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
-        border: 1px solid palette(grayscale, x-light);
         border-radius: spacing-horizontal(xx-small);
-        padding: spacing-vertical(x-small) spacing-horizontal(small);
-        box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, xx-trans);
-        background: palette(grayscale, white);
         color: palette(grayscale, white);
 
         .icon-display {
@@ -500,7 +497,7 @@
         .icon-classname {
             @include text-align(center);
             font-size: font-size(small);
-            color: palette(grayscale, base);
+            color: palette(grayscale, dark);
         }
 
         @include susy-breakpoint($bp-screen-md, $susy-default) {
@@ -549,6 +546,7 @@
     .example-label {
         @extend %copy-micro;
         display: block;
+        color: palette(grayscale, black-t);
     }
 }
 
@@ -854,8 +852,6 @@
     }
 }
 
-
-
 .example-layout {
 
     .layout-col,
@@ -868,9 +864,54 @@
     .example-label {
         @extend %copy-micro;
         display: block;
+        color: palette(grayscale, black-t);
     }
 }
 
+
+// ------------------------------
+// #UI DEPTH
+// ------------------------------
+
+// post
+.pldoc-element-depth {
+
+    // padding for demo purposes
+    .depth {
+        padding: spacing-vertical(small) spacing-horizontal(base);
+    }
+
+    // light text on darker backgrounds for demo purposes
+    .depth--2,
+    .depth--3 {
+
+        .hd {
+            color: palette(grayscale, white);
+        }
+
+        .copy {
+            color: palette(grayscale, x-light);
+        }
+    }
+
+    // spacing for demo purposes
+    .slat,
+    .card {
+        margin-bottom: spacing-vertical(x-small);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .zebra-stripe {
+        @extend %reset-lists;
+
+        .slat {
+            margin-bottom: 0;
+        }
+    }
+}
 
 // ------------------------------
 // #SYSTEM FEEDBACK

@@ -36,8 +36,8 @@ video {
 
 body {
     @include font-smoothing(on);
+    @extend %depth-0;
     color: $text-base-color;
-    background: $view-bg;
     font-size: font-size(base);
     font-family: $font-family-sans-serif;
 }
@@ -104,6 +104,11 @@ pre {
 // ----------------------------
 .sr-only {
     @extend %a11y-hide;
+    @extend %a11y-ensure-contrast;
+
+    * {
+        @extend %a11y-ensure-contrast;
+    }
 }
 
 .bg-replace {
