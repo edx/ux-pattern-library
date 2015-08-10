@@ -37,7 +37,7 @@ define([
             $('a[href^="#"]').not('.pldoc-tab-wrapper .pldoc-link').on('click', function(event) {
                 event.preventDefault();
 
-                var target = $(event.target).attr('href');
+                var target = $(event.currentTarget).attr('href');
 
                 $('html, body').stop().animate({
                     scrollTop: $(target).offset().top
@@ -48,7 +48,7 @@ define([
         },
 
         sendFocus: function(target) {
-            $(target).find('.pldoc-element-title').attr('tabindex', '-1').focus();
+            $(target).find('.pldoc-element-title:first').attr('tabindex', '-1').focus();
         },
 
         openNewWindow: function() {
