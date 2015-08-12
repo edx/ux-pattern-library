@@ -23,42 +23,42 @@ $em-base: 16; // deliberately sets bourbon-based em-base (http://bourbon.io/docs
 // #GRID
 // ----------------------------
 // grid - dimensions
-$grid-max-width:             rem(1170) !default;
-$grid-column-count:          12 !default;
-$grid-gutter-width:          (1/3) !default;  // set to fraction to be proportional to fluid column widths (see - http://susydocs.oddbird.net/en/latest/settings/#gutters)
-$grid-container-position:    center !default;
-$grid-gutter-position:       after !default;
-$grid-manual-gutter-position: inside !default;
-$grid-column-width:          false !default;  // set to false for fluid columns by default (see - http://susydocs.oddbird.net/en/latest/settings/#column-width)
-$grid-debug-color:           rgba(203, 89, 141, 0.33) !default;
-$grid-debug-color-alt:       rgba(0, 121, 188, 0.33) !default;
+$grid-max-width:                rem(1170) !default;
+$grid-column-count:             12 !default;
+$grid-gutter-width:             (1/3) !default;  // set to fraction to be proportional to fluid column widths (see - http://susydocs.oddbird.net/en/latest/settings/#gutters)
+$grid-container-position:       center !default;
+$grid-gutter-position:          after !default;
+$grid-manual-gutter-position:   inside !default;
+$grid-column-width:             false !default;  // set to false for fluid columns by default (see - http://susydocs.oddbird.net/en/latest/settings/#column-width)
+$grid-debug-color:              rgba(203, 89, 141, 0.33) !default;
+$grid-debug-color-alt:          rgba(0, 121, 188, 0.33) !default;
 
 // grid - breakpoints
-$bp-screen-sm:                320px !default;
-$bp-screen-md:                768px !default;
-$bp-screen-lg:                1024px !default;
-$bp-screen-xl:               1280px !default;
+$bp-screen-sm:                  320px !default;
+$bp-screen-md:                  768px !default;
+$bp-screen-lg:                  1024px !default;
+$bp-screen-xl:                  1280px !default;
 
 
 // ----------------------------
 // #COLORS
 // ----------------------------
 // color: config
-$transparent:               rgba(0, 0, 0, 0);
+$transparent:                   rgba(0, 0, 0, 0);
 
-$gray:                      rgb(167, 164, 164);
-$gray-cool:                 rgb(158, 177, 185);
-$red:                       rgb(178, 6, 16);
-$yellow:                    rgb(253, 188, 86);
-$green:                     rgb(37, 184, 90);
-$blue:                      rgb(0, 121, 188);
-$pink:                      rgb(203, 89, 141);
+$gray:                          rgb(167, 164, 164);
+$gray-cool:                     rgb(158, 177, 185);
+$red:                           rgb(178, 6, 16);
+$yellow:                        rgb(253, 188, 86);
+$green:                         rgb(37, 184, 90);
+$blue:                          rgb(0, 121, 188);
+$pink:                          rgb(203, 89, 141);
 
-// colors: brand
-$brand-primary:             $blue !default;
-$brand-primary-accent:      rgb(14, 166, 236) !default;
-$brand-secondary:           $pink !default;
-$brand-secondary-accent:    rgb(242, 108, 170) !default;
+// colors:                      brand
+$brand-primary:                 $blue !default;
+$brand-primary-accent:          rgb(14, 166, 236) !default;
+$brand-secondary:               $pink !default;
+$brand-secondary-accent:        rgb(242, 108, 170) !default;
 
 // colors: utilities
 $success: $green !default;
@@ -137,7 +137,6 @@ $palettes: (
 );
 
 // shadows
-// using black-t because using a gray looks weird when it appears over black
 $shadow: transparentize(palette(grayscale, black-t), .5);
 
 
@@ -202,8 +201,8 @@ $font-path: '../fonts' !default;
 );
 
 // typography: config - stacks
-$font-family-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
+$font-family-sans-serif:    'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-monospace:     'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
 
 // typography: sizes
 $font-sizes: (
@@ -342,98 +341,98 @@ $input-width: (
 // #APPLICATIONS
 // ----------------------------
 // base component settings
-$component-focus-color: inherit !default;
-$component-focus-bg: palette(primary, x-light) !default;
-$component-active-color: palette(grayscale, white) !default;
-$component-active-bg: palette(primary, base) !default;
+$component-focus-color:                 inherit !default;
+$component-focus-bg:                    palette(primary, x-light) !default;
+$component-active-color:                palette(grayscale, white) !default;
+$component-active-bg:                   palette(primary, base) !default;
 
 // base text settings
-$text-base-font-family: $font-family-sans-serif !default;
-$text-base-color: palette(grayscale, x-dark) !default;
-$text-base-font-weight: font-weight(normal) !default;
-$text-base-focus-color: palette(grayscale, black-t) !default;
+$text-base-font-family:                 $font-family-sans-serif !default;
+$text-base-color:                       palette(grayscale, x-dark) !default;
+$text-base-font-weight:                 font-weight(normal) !default;
+$text-base-focus-color:                 palette(grayscale, black-t) !default;
 
-$text-emphasized-color: palette(grayscale, black-t) !default;
-$text-emphasized-font-weight: font-weight(normal) !default;
+$text-emphasized-color:                 palette(grayscale, black-t) !default;
+$text-emphasized-font-weight:           font-weight(normal) !default;
 
-$text-de-emphasized-color: palette(grayscale, dark) !default;
-$text-de-emphasized-font-weight: font-weight(normal) !default;
+$text-de-emphasized-color:              palette(grayscale, dark) !default;
+$text-de-emphasized-font-weight:        font-weight(normal) !default;
 
 // links
-$link-color: palette(primary, dark) !default;
-$link-focus-color: palette(primary, base) !default;
-$link-visited-color: palette(primary, dark) !default;
+$link-color:                            palette(primary, dark) !default;
+$link-focus-color:                      palette(primary, base) !default;
+$link-visited-color:                    palette(primary, dark) !default;
 
 // headings
-$headings-font-weight-normal: font-weight(normal) !default;
-$headings-font-weight-bold: font-weight(semi-bold) !default;
-$headings-font-weight-x-bold: font-weight(bold) !default;
+$headings-font-weight-normal:           font-weight(normal) !default;
+$headings-font-weight-bold:             font-weight(semi-bold) !default;
+$headings-font-weight-x-bold:           font-weight(bold) !default;
 
-$headings-base-font-family: $font-family-sans-serif !default;
-$headings-base-font-weight: $headings-font-weight-normal !default;
-$headings-base-color: palette(grayscale, x-dark) !default;
+$headings-base-font-family:             $font-family-sans-serif !default;
+$headings-base-font-weight:             $headings-font-weight-normal !default;
+$headings-base-color:                   palette(grayscale, x-dark) !default;
 
-$headings-emphasized-font-family: $font-family-sans-serif !default;
-$headings-emphasized-color: palette(grayscale, black-t) !default;
+$headings-emphasized-font-family:       $font-family-sans-serif !default;
+$headings-emphasized-color:             palette(grayscale, black-t) !default;
 
-$headings-de-emphasized-font-family: $font-family-sans-serif !default;
-$headings-de-emphasized-color: palette(grayscale, dark) !default;
+$headings-de-emphasized-font-family:    $font-family-sans-serif !default;
+$headings-de-emphasized-color:          palette(grayscale, dark) !default;
 
 // buttons
-$buttons-border-style: solid !default;
-$buttons-border-size: 1px !default;
-$buttons-elevated-shadow: 3px !default;
-$buttons-border-radius: 3px !default;
-$buttons-font-weight: font-weight(semi-bold) !default;
+$buttons-border-style:                  solid !default;
+$buttons-border-size:                   1px !default;
+$buttons-elevated-shadow:               3px !default;
+$buttons-border-radius:                 3px !default;
+$buttons-font-weight:                   font-weight(semi-bold) !default;
 
 // forms
-$label-color: $text-base-color !default;
-$label-color-active: palette(grayscale, x-dark) !default;
+$label-color:                           $text-base-color !default;
+$label-color-active:                    palette(grayscale, x-dark) !default;
 
-$input-placeholder-text: palette(grayscale-cool, light) !default;
+$input-placeholder-text:                palette(grayscale-cool, light) !default;
 
-$input-background-default: palette(grayscale, white) !default;
-$input-background-default-focus: $input-background-default !default;
-$input-check-radio-background-default: palette(grayscale-cool, x-light) !default;
-$input-check-radio-background-checked: palette(primary, base) !default;
-$input-border-default: palette(grayscale, x-light) !default;
-$input-border-default-focus: palette(primary, accent) !default;
-$input-control-color: palette(primary, base) !default;
-$input-text-default: palette(grayscale-cool, x-dark) !default;
-$input-text-default-hover: palette(grayscale-cool, x-dark) !default;
+$input-background-default:              palette(grayscale, white) !default;
+$input-background-default-focus:        $input-background-default !default;
+$input-check-radio-background-default:  palette(grayscale-cool, x-light) !default;
+$input-check-radio-background-checked:  palette(primary, base) !default;
+$input-border-default:                  palette(grayscale, x-light) !default;
+$input-border-default-focus:            palette(primary, accent) !default;
+$input-control-color:                   palette(primary, base) !default;
+$input-text-default:                    palette(grayscale-cool, x-dark) !default;
+$input-text-default-hover:              palette(grayscale-cool, x-dark) !default;
 
-$input-background-disabled: palette(grayscale-cool, x-light) !default;
-$input-border-disabled: palette(grayscale-cool, light) !default;
-$input-text-disabled: palette(grayscale-cool, light) !default;
+$input-background-disabled:             palette(grayscale-cool, x-light) !default;
+$input-border-disabled:                 palette(grayscale-cool, light) !default;
+$input-text-disabled:                   palette(grayscale-cool, light) !default;
 
-$input-alt-background: $transparent !default;
-$input-alt-border-focus: palette(grayscale, x-dark) !default;
+$input-alt-background:                  $transparent !default;
+$input-alt-border-focus:                palette(grayscale, x-dark) !default;
 
-$input-slider-track-default: palette(grayscale, x-light) !default;
-$input-slider-border-default: $input-slider-track-default !default;
-$input-slider-border-default-radius: $buttons-border-radius !default;
-$input-slider-handle-default: palette(primary, light) !default;
-$input-slider-handle-default-hover: palette(primary, base) !default;
-$input-slider-default-focus: palette(primary, accent) !default;
-$input-slider-default-hover: palette(primary, x-accent) !default;
-$input-slider-track-disabled: palette(grayscale, x-light) !default;
-$input-slider-disabled-border: $input-slider-track-disabled !default;
-$input-slider-handle-disabled: palette(grayscale, base) !default;
-$input-slider-disabled-focus: palette(grayscale, light) !default;
+$input-slider-track-default:            palette(grayscale, x-light) !default;
+$input-slider-border-default:           $input-slider-track-default !default;
+$input-slider-border-default-radius:    $buttons-border-radius !default;
+$input-slider-handle-default:           palette(primary, light) !default;
+$input-slider-handle-default-hover:     palette(primary, base) !default;
+$input-slider-default-focus:            palette(primary, accent) !default;
+$input-slider-default-hover:            palette(primary, x-accent) !default;
+$input-slider-track-disabled:           palette(grayscale, x-light) !default;
+$input-slider-disabled-border:          $input-slider-track-disabled !default;
+$input-slider-handle-disabled:          palette(grayscale, base) !default;
+$input-slider-disabled-focus:           palette(grayscale, light) !default;
 
-$input-progress-track: palette(grayscale, x-light) !default;
-$input-progress-border: $input-progress-track !default;
-$input-progress-border-radius: $buttons-border-radius !default;
-$input-progress-track-done: palette(primary, accent) !default;
+$input-progress-track:                  palette(grayscale, x-light) !default;
+$input-progress-border:                 $input-progress-track !default;
+$input-progress-border-radius:          $buttons-border-radius !default;
+$input-progress-track-done:             palette(primary, accent) !default;
 
-$field-tip-color: palette(grayscale-cool, dark) !default;
-$field-required-indicator-color: $label-color !default;
+$field-tip-color:                       palette(grayscale-cool, dark) !default;
+$field-required-indicator-color:        $label-color !default;
 
 // tables
-$table-cell-padding: spacing-vertical(small) spacing-horizontal(small) !default;
-$table-condensed-cell-padding: spacing-vertical(x-small) spacing-horizontal(x-small) !default;
-$table-bg: palette(grayscale, white) !default;
-$table-accent-bg: palette(primary, accent) !default;
-$table-focus-bg: $component-focus-bg !default;
-$table-active-bg: $component-active-bg !default;
-$table-border-color: palette(grayscale, x-light) !default;
+$table-cell-padding:                    spacing-vertical(small) spacing-horizontal(small) !default;
+$table-condensed-cell-padding:          spacing-vertical(x-small) spacing-horizontal(x-small) !default;
+$table-bg:                              palette(grayscale, white) !default;
+$table-accent-bg:                       palette(primary, accent) !default;
+$table-focus-bg:                        $component-focus-bg !default;
+$table-active-bg:                       $component-active-bg !default;
+$table-border-color:                    palette(grayscale, x-light) !default;
