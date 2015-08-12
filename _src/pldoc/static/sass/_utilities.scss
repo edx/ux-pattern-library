@@ -38,7 +38,7 @@ $pldoc-tab-label-height:           rem(4);  // height of tab labels
 // basic
 html, body {
     height: 100%;
-    color: palette(grayscale, x-dark);
+    color: $text-base-color;
 }
 
 .pldoc {
