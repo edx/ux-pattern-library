@@ -6,7 +6,6 @@ var gulp            = require('gulp'),
 gulp.task('pldoc_scripts', ['pldoc_scripts-lint'], function() {
     return gulp.src([
             // setup script sequence
-            './_src/pldoc/vendor/jquery-smoothScroll/jquery.smooth-scroll.js',
             config.pldoc_src + '/pattern-library.js',
             config.pldoc_src + '/ui.js',
             config.pldoc_src + '/tabs.js',
