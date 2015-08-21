@@ -3,7 +3,7 @@ var gulp            = require('gulp'),
 
 gulp.task( 'default', function() {
     runSequence(
-        ['styles', 'scripts', 'images'],
+        ['images'],
         ['pldoc_styles', 'pldoc_scripts', 'pldoc_images'],
         'watch'
     );
