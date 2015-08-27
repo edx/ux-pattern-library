@@ -14,6 +14,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "edx-pattern-library": "edx/ux-pattern-library#cfeb99e0d4539f904e2844113d5f7338040b11a9"
+    "edx-pattern-library": "edx/ux-pattern-library#758ebc838cb9a04d4a5fe7ceccf545e4ec434e45"
   }
 }
