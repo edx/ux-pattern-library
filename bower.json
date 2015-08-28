@@ -1,13 +1,24 @@
 {
-  "name": "edx-ux-pattern-library",
-  "version": "0.0.1",
+  "name": "edx-pattern-library",
+  "version": "0.2.0",
   "authors": [
     "edX UX Team <ux@edx.org>"
   ],
-  "description": "Vendor components and packages used in the edX Pattern Library",
-  "main": "index.html",
-  "license": "GNU AFFERO GENERAL PUBLIC LICENSE",
-  "private": true,
+  "description": "The (working) Visual, UI, and Front End Styleguide for edX Apps",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edx/ux-pattern-library.git"
+  },
+  "keywords": [
+    "edx",
+    "patterns",
+    "atomic design",
+    "pattern library",
+    "UI starter"
+  ],
+  "main": "_variables.scss",
+  "license": "Apache 2.0",
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,8 +32,5 @@
     "svg4everybody": "~1.0.0",
     "requirejs-plugins": "~1.0.3",
     "animate.css": "~3.3.0"
-  },
-  "resolutions": {
-    "jquery": "~2.1.3"
   }
 }
