@@ -1,27 +1,27 @@
 // ------------------------------
 // #UTILITIES
 // ------------------------------
-@import '../../../pattern-library/sass/utilities/functions';
-@import '../../../pattern-library/sass/utilities/variables';
-@import '../../../pattern-library/sass/utilities/mixins';
-@import '../../../pattern-library/sass/utilities/helpers';
-@import '../../../pattern-library/sass/utilities/normalize';
-@import '../../../pattern-library/sass/utilities/reset';
-@import '../../../pattern-library/sass/utilities/typography';
+@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/functions';
+@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/variables';
+@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/mixins';
+@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/helpers';
+@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/normalize';
+@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/reset';
+@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/typography';
 
 @import 'utilities';
 
 // ------------------------------
 // #COMPONENTS
 // ------------------------------
-@import '../../../pattern-library/sass/components/colors';
-@import '../../../pattern-library/sass/components/buttons';
-@import '../../../pattern-library/sass/components/headings';
-@import '../../../pattern-library/sass/components/copy';
-@import '../../../pattern-library/sass/components/forms';
-@import '../../../pattern-library/sass/components/grid';
-@import '../../../pattern-library/sass/components/layouts';
-@import '../../../pattern-library/sass/components/depth';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/colors';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/buttons';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/headings';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/copy';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/forms';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/grid';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/layouts';
+@import '../../../../bower_components/edx-pattern-library/src/sass/components/depth';
 
 @import 'components';
 
