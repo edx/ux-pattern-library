@@ -8,11 +8,10 @@
 // ------------------------------
 // #VENDOR
 // ------------------------------
-@import '../../../components/bourbon/app/assets/stylesheets/bourbon';
-@import '../../../components/susy/sass/susy';
-@import '../../../components/breakpoint-sass/stylesheets/breakpoint';
-@import '../../../components/animate.css/animate';
-@import '../../../components/bi-app-sass/bi-app/bi-app-ltr';            // LTR support
+@import '../../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../../../bower_components/susy/sass/susy';
+@import '../../../../bower_components/breakpoint-sass/stylesheets/breakpoint';
+@import '../../../../bower_components/bi-app-sass/bi-app/bi-app-ltr';            // LTR support
 
 // ------------------------------
 // #UTILITIES
