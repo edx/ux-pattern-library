@@ -1,41 +1,23 @@
 // ------------------------------
-// #UTILITIES
-// ------------------------------
-@import '../../../pattern-library/sass/utilities/functions';
-@import '../../../pattern-library/sass/utilities/variables';
-@import '../../../pattern-library/sass/utilities/mixins';
-@import '../../../pattern-library/sass/utilities/helpers';
-@import '../../../pattern-library/sass/utilities/normalize';
-@import '../../../pattern-library/sass/utilities/reset';
-@import '../../../pattern-library/sass/utilities/typography';
+// edX Pattern Library Site: Build Partial
 
+// About: Shared sass compilation between LTR/RTL produced stylesheets
+
+// ------------------------------
+// #CONFIG
+// ------------------------------
+@import 'config';
+
+// ------------------------------
+// #LIB - PATTERN-LIBRARY
+// ------------------------------
+@import '../../../pattern-library/sass/edx-pattern-library';
+
+// ------------------------------
+// #EXTENSIONS
+// ------------------------------
 @import 'utilities';
-
-// ------------------------------
-// #COMPONENTS
-// ------------------------------
-@import '../../../pattern-library/sass/components/colors';
-@import '../../../pattern-library/sass/components/buttons';
-@import '../../../pattern-library/sass/components/headings';
-@import '../../../pattern-library/sass/components/copy';
-@import '../../../pattern-library/sass/components/forms';
-@import '../../../pattern-library/sass/components/grid';
-@import '../../../pattern-library/sass/components/layouts';
-@import '../../../pattern-library/sass/components/depth';
-
 @import 'components';
-
-// ------------------------------
-// #LAYOUTS
-// ------------------------------
 @import 'layouts';
-
-// ------------------------------
-// #VIEWS
-// ------------------------------
 @import 'views';
-
-// ------------------------------
-// #SHAME
-// ------------------------------
 @import 'overrides';
