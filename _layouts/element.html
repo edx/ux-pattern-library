@@ -16,7 +16,12 @@ viewclass:  element
                 </li>
                 {% if page.example %}
                 <li class="meta meta-examplelink">
-                    <a class="pldoc-link" href="{{ site.exampleurl }}{{page.example}}"><span class="sr-only">View</span>Detailed Example</a>
+                    <a class="pldoc-link" href="{{ site.exampleurl }}{{ page.example }}"><span class="sr-only">View </span>Detailed Example</a>
+                </li>
+                {% endif %}
+                {% if page.doc %}
+                <li class="meta meta-doclink">
+                    <a class="pldoc-link" href="{{ site.github.docurl }}{{ page.doc }}"><span class="sr-only">View </span>Documentation</a>
                 </li>
                 {% endif %}
             </ul>
