@@ -8,11 +8,12 @@ The (working) UI library and Front End Styleguide for edX/Open edX applications 
 
 1. [Overview](#overview)
 2. [License](#license)
-3. [Documentation](#documentation)
-4. [Development - Documentation Site](#development---documentation-site)
-5. [Development - UX Pattern Library Package](#development---ux-pattern-library-package)
-6. [Use and Deployment](#use-and-deployment)
-7. [Contributions](#contributions)
+3. [Dependencies](#dependencies)
+4. [Documentation](#documentation)
+5. [Development - Documentation Site](#development---documentation-site)
+6. [Development - UX Pattern Library Package](#development---ux-pattern-library-package)
+7. [Use and Deployment](#use-and-deployment)
+8. [Contributions](#contributions)
 
 - - -
 
@@ -29,6 +30,29 @@ This library contains the following:
 The code in this repository is licensed the Apache 2.0 license unless otherwise
 noted. Please see the [LICENSE file](https://github.com/edx/ux-pattern-
 library/blob/master/LICENSE.txt) for details.
+
+## Dependencies
+
+Using the edX Pattern Library source code in a project current requires:
+
+* the use and compilation of Sass into CSS using perferrably [LibSass](http://sass-lang.com/libsass) (the edX Pattern Library currently does not provide pre-compiled CSS files).
+* locally installing [Bower](http://bower.io/) - [see below](#development---ux-pattern-library-package) for more installation details.
+* manually calling the ``edx-pattern-library`` Sass partial in the project's main Sass compile file.
+* Use of modern web browsers - see [Open edX/edX browser support](http://docstrings.readthedocs.org/en/latest/front_matter/browsers.html)
+
+
+### Third Party Dependencies
+
+Also, the Pattern Library currently relies on the following thrd party libraries:
+
+| Library  | Version | Purpose | 
+| ------------- | ------------- | ------------- |
+| [Bourbon](https://github.com/thoughtbot/bourbon)  | 4.2.3  | basic sass/CSS utilities |
+| [Animate.css](https://github.com/daneden/animate.css)  | 3.3.0 | 4.2.3  | pre-set CSS animations
+| [bi-app-sass](https://github.com/anasnakawa/bi-app-sass)  | latest | right-to-left/left-to-right directional support for layouts |
+| [breakpoint-sass](https://github.com/at-import/breakpoint)  | 2.6.1 | CSS breakpoint/media-query management |
+| [susy](https://github.com/ericam/susy)  | 2.2.5 | Grid configuration and utilities | 
+| [svg4everybody](https://github.com/jonathantneal/svg4everybody)  | 1.0.0 | SVG support across browsers |
 
 ## Documentation
 
@@ -117,8 +141,8 @@ npm install
 This runs through all dependencies listed in package.json and downloads them to
 a node_modules folder in your project directory.
 
-**NOTE: You may need to run this more than just once (if encountering errors
-**when running the gulp command) as new dependencies may have been added.
+**NOTE:** You may need to run this more than just once (if encountering errors
+when running the gulp command) as new dependencies may have been added.
 
 To run the version of gulp installed local to the project, in the root of your
 this project, run:
@@ -190,6 +214,8 @@ bower dependency and install it all at once.
 bower install edx-pattern-library --save
 ```
 
+**NOTE:** Bower recommends initializing your project as a bower project in order to manage third party dependencies such as the 'edx-pattern-library' bower package. [Bower explains how to do that well with bower.json``](http://bower.io/docs/creating-packages/#bowerjson).
+
 - - -
 
 ### Step 3: Reference UX Pattern Library Partials in your Sass Compile
@@ -259,12 +285,12 @@ settings in ``src/sass/utilities/_variables.scss`` and can override/customize
 those in your application's ``utilities.scss`` partial (they'll be used
 throughout the rest of the compile).
 
-**NOTE: The code and design contained in the library has not been tested for use
-**alongside other UI Frameworks such as Bootstrap or Foundation.
+**NOTE:** The code and design contained in the library has not been tested for use
+alongside other UI Frameworks such as Bootstrap or Foundation.
 
-**NOTE: The source code of the Pattern Library does not include any local or
-**production-focused Sass/Front End tooling. It's expected that your app/site
-**has its own Sass compiler (preferrably LibSass).
+**NOTE:** The source code of the Pattern Library does not include any local or
+production-focused Sass/Front End tooling. It's expected that your app/site
+has its own Sass compiler (preferrably LibSass).
 
 ## Contributions
 
