@@ -17,6 +17,17 @@ $headings-count: 8;
 // ----------------------------
 // #GLOBAL
 // ----------------------------
+
+// broad stroke extend for emphasized/de-emphasized headings
+%headings-emphasized {
+    color: $headings-emphasized-color;
+    font-weight: $headings-font-weight-bold;
+}
+
+%headings-de-emphasized {
+    color: $headings-de-emphasized-color;
+}
+
 .hd-1,
 .hd-2,
 .hd-3,
@@ -26,12 +37,11 @@ $headings-count: 8;
     @extend %reset-headings;
 
     &.emphasized {
-        color: $headings-emphasized-color;
-        font-weight: $headings-font-weight-bold;
+        @extend %headings-emphasized;
     }
 
     &.de-emphasized {
-        color: $headings-de-emphasized-color;
+        @extend %headings-de-emphasized;
     }
 }
 
