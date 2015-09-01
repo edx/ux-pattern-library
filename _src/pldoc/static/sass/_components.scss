@@ -21,7 +21,7 @@
 
     .button-overlay-demo {
         padding: spacing-vertical(mid-large) spacing-horizontal(mid-large);
-        background: palette(primary, accent) url(../images/bg-overlay-example.png) 0 50% no-repeat;
+        background: palette(primary, accent) url('#{$image-path}/bg-overlay-example.png') 0 50% no-repeat;
         background-size: cover;
     }
 }
@@ -41,7 +41,7 @@
     @include susy-breakpoint($bp-screen-lg, $susy-default) {
         margin: 0;
     }
-    
+
     .pldoc-header-site-title {
         display: inline-block;
         vertical-align: middle;
