@@ -3,6 +3,7 @@
 
 // About: Sass partial for defining variables used throughout the applications.
 
+// #PATHS:          paths for particular assets
 // #UNITS:          Basic units of measurement
 // #GRID:           Grid and layout variables
 // #COLORS:         Base, palette and theme color definitions + application
@@ -11,6 +12,13 @@
 // #SPACING:        General UI spacing variables and scale
 // #TIMING:         Event timing variables
 // #APPLICATIONS:   Applying configuration
+
+
+// ----------------------------
+// #PATHS
+// ----------------------------
+$font-path: '../fonts' !default;
+$image-path: '../images' !default;
 
 
 // ----------------------------
@@ -143,9 +151,6 @@ $shadow: transparentize(palette(grayscale, black-t), .5);
 // ----------------------------
 // #TYPOGRAPHY
 // ----------------------------
-
-$font-path: '../fonts' !default;
-
 // typography: config
 @include font-face(
     'Open Sans',
