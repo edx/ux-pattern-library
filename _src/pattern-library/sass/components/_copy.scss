@@ -108,4 +108,13 @@
     @extend %copy-micro;
 }
 
+// broad stroke extend for emphasized/de-emphasized copy
+%copy-emphasized {
+    color: $text-emphasized-color;
+    font-weight: $text-emphasized-font-weight;
+}
 
+%copy-de-emphasized {
+    color: $text-de-emphasized-color;
+    font-weight: $text-de-emphasized-font-weight;
+}

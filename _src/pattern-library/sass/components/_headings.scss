@@ -138,3 +138,9 @@ $headings-count: 8;
         @extend %hd-#{$i};
     }
 }
+
+// broad stroke extend for emphasized heading
+%headings-emphasized {
+    color: $headings-emphasized-color;
+    font-weight: $headings-font-weight-bold;
+}
