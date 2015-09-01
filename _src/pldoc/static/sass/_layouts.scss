@@ -76,7 +76,7 @@
 .pldoc-element-title {
     margin-bottom: spacing-vertical(x-small);
 
-    @include susy-breakpoint($bp-screen-md, $susy-default) {
+    @include susy-breakpoint($bp-screen-xl, $susy-default) {
         @include span(6 first);
         margin-bottom: 0;
     }
@@ -85,7 +85,7 @@
 
 
 .pldoc-element-meta {
-    @include susy-breakpoint($bp-screen-md, $susy-default) {
+    @include susy-breakpoint($bp-screen-xl, $susy-default) {
         @include span(6 last);
         @include text-align(right);
     }

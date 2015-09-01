@@ -20,6 +20,8 @@ exclude:                    ["node_modules", "gulp", "gulpfile.js", "package.jso
 github:
     repo:                   https://github.com/edx/ux-pattern-library
     path_scss:              /ux-pattern-library/blob/master/_src/static/sass/
+    docurl:                 https://github.com/edx/ux-pattern-library/wiki/
+
 
 
 # Plugins
