@@ -221,59 +221,43 @@ bower install edx-pattern-library --save
 ### Step 3: Reference UX Pattern Library Partials in your Sass Compile
 
 You can now use edX UX Pattern Library Sass/styling in your project. To do so,
-just import all utilities and what components you want. See an example from the
-documentation site below:
+just import all utilities and what components you want. 
+
+#### Default Reference/Import
+All components and utilities can be imported by default by importing the ``_edx-pattern-library.scss`` partial. See the example below taken from [``main-ltr.scss``]() +  the [``_build.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_build.scss) compilation of the edX Pattern Library's Documentation Site:
 
 ```scss
 // ------------------------------
-// edX Pattern Library Site: Shared Partials Build File
+// edX Pattern Library Site: Main Style Compile
 
-// About: The shared compile order/list that is imported into our RTL/LTR main Sass files.
+// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
 
 // ------------------------------
-// #UTILITIES
+// #CONFIG
 // ------------------------------
-@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/functions';
-@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/variables';
-@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/mixins';
-@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/helpers';
-@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/normalize';
-@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/reset';
-@import '../../../../bower_components/edx-pattern-library/src/sass/utilities/typography';
+$layout-direction: ltr;
+@import 'config';
 
+// ------------------------------
+// #LIB - PATTERN-LIBRARY
+// ------------------------------
+@import '{path to edx-pattern-library Bower package}/pattern-library/sass/edx-pattern-library';
+
+// ------------------------------
+// #EXTENSIONS
+// ------------------------------
 @import 'utilities';
-
-// ------------------------------
-// #COMPONENTS
-// ------------------------------
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/colors';
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/buttons';
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/headings';
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/copy';
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/forms';
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/grid';
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/layouts';
-@import '../../../../bower_components/edx-pattern-library/src/sass/components/depth';
-
 @import 'components';
-
-// ------------------------------
-// #LAYOUTS
-// ------------------------------
 @import 'layouts';
-
-// ------------------------------
-// #VIEWS
-// ------------------------------
 @import 'views';
-
-// ------------------------------
-// #SHAME
-// ------------------------------
+@import 'print';
 @import 'overrides';
 ```
 
-See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples/background.
+See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples, details on how to use partials, and general background.
+
+#### Custom Reference/Import
+If you'd like to customize what to import, you can manually import specific elements from the bower package.
 
 - - -
 
