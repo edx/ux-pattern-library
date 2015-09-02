@@ -232,16 +232,24 @@ All components and utilities can be imported by default by importing the ``_edx-
 
 // About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
 
+// #CONFIG:         app-centric configuration/overrides
+// #LIB:            third party libraries and dependencies
+// #EXTENSIONS:     add-ons and further customizations
+
+
 // ------------------------------
 // #CONFIG
 // ------------------------------
 $layout-direction: ltr;
 @import 'config';
 
+
 // ------------------------------
-// #LIB - PATTERN-LIBRARY
+// #LIB
 // ------------------------------
+@import 'lib';
 @import '{path to edx-pattern-library Bower package}/pattern-library/sass/edx-pattern-library';
+
 
 // ------------------------------
 // #EXTENSIONS
@@ -253,6 +261,8 @@ $layout-direction: ltr;
 @import 'print';
 @import 'overrides';
 ```
+
+**NOTE**: Since both libSass and RubySass lack a way to pass in variables/configuration into their ``@import {file}`` method, each app is responsible for 1) storing any bower-based dependencies, including the edx-pattern-library, in the best directory structure for that app's set up and 2) creating a ``_lib.scss`` partial to import all third party library dependencies from that structure for the Pattern Library to use (see above example).
 
 See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples, details on how to use partials, and general background.
 
