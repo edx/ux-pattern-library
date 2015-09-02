@@ -14,7 +14,7 @@ relative_permalinks:        true
 exampleurl:                 examples/
 
 # Local
-exclude:                    ["node_modules", "gulp", "gulpfile.js", "package.json", "bower.json"]
+exclude:                    ["node_modules", "gulp", "gulpfile.js", "package.json", "bower.json", "pldoc", "pattern-library", "bower_components"]
 
 # Custom vars
 github:
