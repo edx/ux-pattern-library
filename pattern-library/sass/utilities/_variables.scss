@@ -151,55 +151,58 @@ $shadow: transparentize(palette(grayscale, black-t), .5);
 // ----------------------------
 // #TYPOGRAPHY
 // ----------------------------
-// typography: config
+// typography: Open Sans
+
+$open-sans-font-path: '#{$font-path}/OpenSans/' !default;
+
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-Light-webfont',
+    '#{$open-sans-font-path}/OpenSans-Light-webfont',
     300,
     $file-formats: woff woff2 ttf
 );
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-LightItalic-webfont',
+    '#{$open-sans-font-path}/OpenSans-LightItalic-webfont',
     300,
     italic,
     $file-formats: woff woff2 ttf
 );
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-Regular-webfont',
+    '#{$open-sans-font-path}/OpenSans-Regular-webfont',
     400,
     $file-formats: woff woff2 ttf
 );
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-Italic-webfont',
+    '#{$open-sans-font-path}/OpenSans-Italic-webfont',
     400,
     italic,
     $file-formats: woff woff2 ttf
 );
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-Semibold-webfont',
+    '#{$open-sans-font-path}/OpenSans-Semibold-webfont',
     600,
     $file-formats: woff woff2 ttf
 );
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-SemiboldItalic-webfont',
+    '#{$open-sans-font-path}/OpenSans-SemiboldItalic-webfont',
     600,
     italic,
     $file-formats: woff woff2 ttf
 );
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-Bold-webfont',
+    '#{$open-sans-font-path}/OpenSans-Bold-webfont',
     700,
     $file-formats: woff woff2 ttf
 );
 @include font-face(
     'Open Sans',
-    '#{$font-path}/OpenSans/OpenSans-BoldItalic-webfont',
+    '#{$open-sans-font-path}/OpenSans-BoldItalic-webfont',
     700,
     italic,
     $file-formats: woff woff2 ttf

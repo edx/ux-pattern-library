@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.2.5 (2015-09-02)
+* Abstracted specific font-face paths for customization
+
+- - -
+
 ## 0.2.4 (2015-09-02)
 * Adjusted small breakpoint, and adjust margin on doc site for small screens
 * Simplified edx-pattern-library sass compilation syntax
