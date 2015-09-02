@@ -2,11 +2,11 @@
 
 // pattern library
 var dest = './public',
-    src = './_src/pattern-library',
+    src = './pattern-library',
     local = './_site',
 
 // documentation site
-    pldoc_src = './_src/pldoc',
+    pldoc_src = './pldoc',
     pldoc_dest = './public/pldoc';
 
 module.exports = {
