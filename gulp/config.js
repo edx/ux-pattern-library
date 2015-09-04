@@ -56,7 +56,7 @@ module.exports                  = {
 
         pldoc_src:              './pldoc/static/images',
         pldoc_src_files:        './pldoc/static/images/**',
-        pldoc_dest:             './public/pldoc',
+        pldoc_dest:             './public/pldoc/images',
         pldoc_local:            './_site/public/pldoc/images'
     },
     scripts:                    {
