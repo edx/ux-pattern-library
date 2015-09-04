@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.2.6 (2015-09-04)
+* Moved SVG-based icons to icons directory rather than images
+
+- - -
+
 ## 0.2.5 (2015-09-02)
 * Abstracted specific font-face paths for customization
 

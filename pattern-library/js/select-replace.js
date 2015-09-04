@@ -6,7 +6,7 @@ define([
      * Select menu replacement
      * Handles functionality for the replacement select menus, which
      * allows us to style them to our liking. Accessibility is main-
-     * tained via use of the default select control. The replacement 
+     * tained via use of the default select control. The replacement
      * control is not visible to screen readers.
      *
      * Choosing an option in the replacement menu also updates the
@@ -62,7 +62,7 @@ define([
                             '<span class="' + variables.customClass + ' ' + statuses.join(' ') + '" aria-hidden="true">',
                                 '<span class="' + variables.valueClass + '">' + CustomSelectReplacement.setInitialText($el) + '</span>',
                                 '<svg class="icon ' + variables.iconClass + '" title="Down arrow">',
-                                    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/public/images/edx-svg/svgdefs.svg#' + variables.iconClass + '"></use>',
+                                    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/public/icons/edx-svg/svgdefs.svg#' + variables.iconClass + '"></use>',
                                 '</svg>',
                             '</span>',
                         '</div>'

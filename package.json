@@ -24,6 +24,7 @@
     "gulp-sourcemaps": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
+    "imagemin-pngquant": "^4.2.0",
     "lodash": "latest",
     "require-dir": "latest",
     "run-sequence": "latest"
