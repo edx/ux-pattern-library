@@ -6,15 +6,16 @@ var gulp            = require('gulp'),
     autoprefixer    = require('gulp-autoprefixer'),
     minifyCSS       = require('gulp-minify-css'),
     size            = require('gulp-filesize');
+    sourcemaps      = require('gulp-sourcemaps');
 
 gulp.task('pldoc_styles', function () {
     return gulp.src(config.pldoc_src_files)
-        .pipe(sass())
+        .pipe(sourcemaps.init())
+        .pipe(sass(config.settings))
         .on('error', handleErrors)
         .pipe(autoprefixer({ browsers: ['last 2 version'] }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.pldoc_local)) // move just for browersync + uncompressed local
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(minifyCSS()) // minify and move for production
         .pipe(gulp.dest(config.pldoc_dest))
-        .pipe(size());
+        .pipe(browserSync.reload({stream:true}));
 });
