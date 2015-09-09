@@ -5,12 +5,15 @@ var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
     autoprefixer    = require('gulp-autoprefixer'),
     minifyCSS       = require('gulp-minify-css'),
-    size            = require('gulp-filesize');
+    size            = require('gulp-filesize'),
+    sourcemaps      = require('gulp-sourcemaps');
 
 gulp.task('styles', function () {
     return gulp.src(config.src_files)
         .pipe(sass())
+        .pipe(sourcemaps.init())
         .on('error', handleErrors)
+        .pipe(sourcemaps.write())
         .pipe(autoprefixer({ browsers: ['last 2 version'] }))
         .pipe(gulp.dest(config.local)) // move just for browersync + uncompressed local
         .pipe(browserSync.reload({stream:true}))
