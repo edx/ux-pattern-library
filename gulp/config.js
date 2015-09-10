@@ -24,12 +24,7 @@ module.exports                  = {
         },
 
         // pattern library
-        src:                    src + '/sass',
         src_files:              src + '/sass/**/*.scss',
-        src_static:             src + '/css',
-        src_static_files:       src + '/css/**/*.css',
-        dest:                   dest + '/css',
-        local:                  local + '/public/css',
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/sass',
