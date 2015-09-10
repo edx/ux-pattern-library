@@ -10,7 +10,7 @@ var gulp            = require('gulp'),
 
 gulp.task('styles', function () {
     return gulp.src(config.src_files)
-        .pipe(sass())
+        .pipe(sass(config.settings))
         .pipe(sourcemaps.init())
         .on('error', handleErrors)
         .pipe(sourcemaps.write())

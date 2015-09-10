@@ -17,6 +17,12 @@ module.exports                  = {
         }
     },
     styles:                     {
+
+        // settings
+        settings: {
+            outputStyle: 'expanded' // set to expanded for local troubleshooting
+        },
+
         // pattern library
         src:                    src + '/sass',
         src_files:              src + '/sass/**/*.scss',
