@@ -292,6 +292,7 @@
 
     &:disabled,
     &.is-disabled {
+        @extend %state-disabled;
 
         .icon {
             fill: $input-border-disabled;
