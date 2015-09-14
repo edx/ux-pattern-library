@@ -61,7 +61,7 @@ module.exports                  = {
     },
     scripts:                    {
         // pattern library
-        src:                    src + '/js/**/*.js',
+        src:                    src + '/js/*.js',
         dest:                   dest + '/js',
         local:                  local + '/public/js',
 
