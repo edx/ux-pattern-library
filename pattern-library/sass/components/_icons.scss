@@ -8,7 +8,9 @@
 // #GLOBALS
 // ----------------------------
 .icon {
+    position: relative;
     display: inline-block;
-    font-size: 1em;
+    vertical-align: middle;
     fill: currentColor;
+    color: currentColor;
 }

@@ -30,6 +30,7 @@
     );
 
     // Display: inline, side-by-side
+    position: relative;
     display: inline-block;
     border-style: $buttons-border-style;
     border-radius: $buttons-border-radius;
@@ -55,6 +56,15 @@
 .btn-base {
     padding: spacing-vertical(x-small) spacing-horizontal(base);
     font-size: font-size(base);
+
+    // Icon: has an icon
+    &.has-icon {
+
+        .icon {
+            height: font-size(base);
+            width: font-size(base);
+        }
+    }
 }
 
 
@@ -64,6 +74,15 @@
 .btn-large {
     padding: spacing-vertical(small) spacing-horizontal(mid-large);
     font-size: font-size(large);
+
+    // Icon: has an icon
+    &.has-icon {
+
+        .icon {
+            height: font-size(large);
+            width: font-size(large);
+        }
+    }
 }
 
 
@@ -73,6 +92,15 @@
 .btn-small {
     padding: spacing-vertical(x-small) spacing-horizontal(small);
     font-size: font-size(small);
+
+    // Icon: has an icon
+    &.has-icon {
+
+        .icon {
+            height: font-size(small);
+            width: font-size(small);
+        }
+    }
 }
 
 
@@ -310,7 +338,6 @@
     &.is-focused {
         background: palette(grayscale, white);
         color: palette(primary, base);
-
     }
 
     // STATE: is pressed or active
@@ -318,6 +345,7 @@
     &.is-pressed,
     &.is-active {
         color: palette(primary, dark);
+
     }
 
     // STATE: is disabled
