@@ -30,6 +30,7 @@
     );
 
     // Display: inline, side-by-side
+    position: relative;
     display: inline-block;
     border-style: $buttons-border-style;
     border-radius: $buttons-border-radius;
@@ -60,9 +61,7 @@
     &.has-icon {
 
         .icon {
-            fill: inherit;
             height: font-size(base);
-            width: font-size(base);
         }
     }
 }
@@ -79,9 +78,7 @@
     &.has-icon {
 
         .icon {
-            fill: inherit;
             height: font-size(large);
-            width: font-size(large);
         }
     }
 }
@@ -98,9 +95,7 @@
     &.has-icon {
 
         .icon {
-            fill: inherit;
             height: font-size(small);
-            width: font-size(small);
         }
     }
 }
@@ -114,14 +109,6 @@
     background: palette(grayscale, white);
     color: palette(primary, base);
 
-    // Icon: has an icon
-    &.has-icon {
-
-        .icon {
-            fill: palette(primary, base);
-        }
-    }
-
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
@@ -129,14 +116,6 @@
     &.is-focused {
         background: palette(primary, base);
         color: palette(grayscale, white);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, white);
-            }
-        }
     }
 
     // STATE: is pressed or active
@@ -145,14 +124,6 @@
     &.is-active {
         border-color: palette(primary, dark);
         background: palette(primary, dark);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(primary, dark);
-            }
-        }
     }
 
     // STATE: is disabled
@@ -161,14 +132,6 @@
         border-color: palette(grayscale, light);
         background: palette(grayscale, white);
         color: palette(grayscale, dark);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, dark);
-            }
-        }
     }
 }
 
@@ -180,14 +143,6 @@
     background: palette(primary, base);
     color: palette(grayscale, white);
 
-    // Icon: has an icon
-    &.has-icon {
-
-        .icon {
-            fill: palette(grayscale, white);
-        }
-    }
-
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
@@ -195,14 +150,6 @@
     &.is-focused {
         border-color: palette(primary, accent);
         background: palette(primary, accent);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(primary, accent);
-            }
-        }
     }
 
     // STATE: is pressed or active
@@ -211,14 +158,6 @@
     &.is-active {
         border-color: palette(primary, base);
         background: palette(primary, base);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(primary, base);
-            }
-        }
     }
 
     // STATE: is disabled
@@ -227,14 +166,6 @@
         border-color: palette(grayscale, light);
         background: palette(grayscale, x-light);
         color: palette(grayscale, dark);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, dark);
-            }
-        }
     }
 }
 
@@ -246,14 +177,6 @@
     border-color: $transparent;
     background: $transparent;
     color: palette(primary, base);
-
-    // Icon: has an icon
-    &.has-icon {
-
-        .icon {
-            fill: palette(primary, base);
-        }
-    }
 
     // STATE: hover and focus
     &:hover,
@@ -269,14 +192,6 @@
     &.is-active {
         border-color: palette(primary, base);
         color: palette(primary, base);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(primary, base);
-            }
-        }
     }
 
     // STATE: is disabled
@@ -284,14 +199,6 @@
     &.is-disabled {
         border-color: palette(grayscale, light);
         color: palette(grayscale, dark);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, dark);
-            }
-        }
     }
 }
 
@@ -325,14 +232,6 @@
     background: palette(primary, base);
     color: palette(grayscale, white);
 
-    // Icon: has an icon
-    &.has-icon {
-
-        .icon {
-            fill: palette(grayscale, white);
-        }
-    }
-
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
@@ -357,14 +256,6 @@
         box-shadow: inset 0 -1px 0 palette(grayscale, light);
         background: palette(grayscale, x-light);
         color: palette(grayscale, dark);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, dark);
-            }
-        }
     }
 }
 
@@ -378,14 +269,6 @@
     background: $transparent;
     color: palette(primary, base);
 
-    // Icon: has an icon
-    &.has-icon {
-
-        .icon {
-            fill: palette(primary, base);
-        }
-    }
-
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
@@ -395,14 +278,6 @@
         box-shadow: inset 0 0 -$buttons-elevated-shadow 0 0 palette(primary, base);
         background: palette(primary, accent);
         color: palette(grayscale, white);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, white);
-            }
-        }
     }
 
     // STATE: is pressed or active
@@ -420,14 +295,6 @@
         box-shadow: inset 0 -1px 0 palette(grayscale, light);
         background: palette(grayscale, x-light);
         color: palette(grayscale, dark);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, dark);
-            }
-        }
     }
 }
 
@@ -461,14 +328,6 @@
     color: palette(grayscale, white);
     font-weight: font-weight(semi-bold);
 
-    // Icon: has an icon
-    &.has-icon {
-
-        .icon {
-            fill: palette(grayscale, white);
-        }
-    }
-
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
@@ -476,14 +335,6 @@
     &.is-focused {
         background: palette(grayscale, white);
         color: palette(primary, base);
-
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(primary, base);
-            }
-        }
     }
 
     // STATE: is pressed or active
@@ -492,13 +343,6 @@
     &.is-active {
         color: palette(primary, dark);
 
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, dark);
-            }
-        }
     }
 
     // STATE: is disabled
@@ -507,26 +351,10 @@
         border-color: palette(grayscale, trans);
         color: palette(grayscale, white);
 
-        // Icon: has an icon
-        &.has-icon {
-
-            .icon {
-                fill: palette(grayscale, white);
-            }
-        }
-
         &:hover {
             border-color: palette(grayscale, trans);
             background: $transparent;
             color: palette(grayscale, white);
-
-            // Icon: has an icon
-            &.has-icon {
-
-                .icon {
-                    fill: palette(grayscale, white);
-                }
-            }
         }
     }
 }
