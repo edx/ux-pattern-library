@@ -40,7 +40,8 @@ define([
                 variables.replaced.each(function(index, el) {
                     var $el = $(el),
                         replaced = $el.clone(),
-                        statuses = [];
+                        statuses = [],
+                        disabled;
 
                     if ($el.hasClass('has-success')) {
                         statuses.push('has-success');
@@ -52,13 +53,14 @@ define([
 
                     if ($el.is(':disabled')) {
                         statuses.push('is-disabled');
+                        disabled = 'disabled';
                     }
 
                     $el.addClass(variables.replacedClass);
 
                     $el.replaceWith([
                         '<div class="' + variables.wrapperClass + '">',
-                            '<select class="' + replaced[0].className + ' is-replaced" id="' + replaced[0].id + '" name="' + replaced[0].name + '" ' + replaced[0].attributes[0].name + '>' + replaced[0].innerHTML + '</select>',
+                            '<select class="' + replaced[0].className + ' is-replaced" id="' + replaced[0].id + '" name="' + replaced[0].name + '" ' + disabled + '>' + replaced[0].innerHTML + '</select>',
                             '<span class="' + variables.customClass + ' ' + statuses.join(' ') + '" aria-hidden="true">',
                                 '<span class="' + variables.valueClass + '">' + CustomSelectReplacement.setInitialText($el) + '</span>',
                                 '<svg class="icon ' + variables.iconClass + '" title="Down arrow">',
