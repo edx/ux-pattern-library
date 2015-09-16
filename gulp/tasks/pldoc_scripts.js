@@ -17,3 +17,14 @@ gulp.task('pldoc_scripts', ['pldoc_scripts-lint'], function() {
         .pipe(gulp.dest(config.pldoc_dest))
         .pipe(browserSync.reload({stream:true}))
 });
+
+gulp.task('pldoc_scripts', ['pldoc_scripts-lint'], function() {
+    return gulp.src([
+        // setup sequence for files that are loaded later with RequireJS
+        config.src // pattern-library/js/*
+    ])
+    .pipe(uglify())
+    .pipe(gulp.dest(config.pldoc_local)) // move for just browsercync + local preview
+    .pipe(gulp.dest(config.pldoc_dest))
+    .pipe(browserSync.reload({ stream: true }))
+});
