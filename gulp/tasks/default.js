@@ -4,9 +4,9 @@ var gulp            = require('gulp'),
 gulp.task( 'default', function() {
     runSequence(
         'clean',
-        ['images', 'pldoc_images'],
-        ['scripts', 'pldoc_scripts'],
-        'pldoc_styles',
+        ['images'],
+        ['scripts-move', 'scripts', 'pldoc_scripts'],
+        'styles',
         'watch'
     )
 });
