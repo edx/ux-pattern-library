@@ -3,7 +3,7 @@ var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
     uglify          = require('gulp-uglify');
 
-gulp.task('pldoc_scripts', ['pldoc_scripts-lint'], function() {
+gulp.task('pldoc_scripts', ['scripts-lint'], function() {
     return gulp.src([
             // setup script sequence
             config.pldoc_src + '/pattern-library.js',
