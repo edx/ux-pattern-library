@@ -13,15 +13,7 @@ gulp.task('pldoc_scripts', ['scripts-lint'], function() {
             config.pldoc_src + '/color-contrast.js'
         ])
         .pipe(uglify())
-        .pipe(gulp.dest(config.pldoc_local)) // move just for browersync + local preview
+        .pipe(gulp.dest(config.local)) // move just for browersync + local preview
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest(config.pldoc_dest))
-
-    return gulp.src([
-        // setup sequence for files that are loaded later with RequireJS
-        config.src_files
-    ])
-    .pipe(gulp.dest(config.pldoc_local)) // move for just browsercync + local preview
-    .pipe(browserSync.reload({ stream: true }))
-    .pipe(gulp.dest(config.pldoc_dest))
+        .pipe(gulp.dest(config.dest))
 });

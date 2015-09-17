@@ -4,7 +4,7 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify');
 
 gulp.task('scripts-uglify', ['pldoc_scripts'], function() {
-  return gulp.src(config.pldoc_dest)
+  return gulp.src(config.dest)
     .pipe(uglify())
     .pipe(size());
 });

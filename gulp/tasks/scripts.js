@@ -3,11 +3,11 @@ var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
     uglify          = require('gulp-uglify');
 
-gulp.task('scripts', ['scripts-lint'], function() {
+gulp.task('scripts', ['scripts-lint', 'scripts-move'], function() {
     return gulp.src([
-        config.src
+        config.src_files
     ])
-    .pipe(gulp.dest(config.pldoc_local)) // move for just browsercync + local preview
+    .pipe(gulp.dest(config.local)) // move for just browsercync + local preview
     .pipe(browserSync.reload({ stream: true }))
-    .pipe(gulp.dest(config.pldoc_dest))
+    .pipe(gulp.dest(config.dest))
 });

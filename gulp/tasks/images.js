@@ -18,6 +18,6 @@ gulp.task('images', function() {
             use: [pngquant()]
          }))
         .pipe(gulp.dest(config.local)) // move just for browersync + uncompressed local
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest(config.dest))
 });
