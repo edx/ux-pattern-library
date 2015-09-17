@@ -8,7 +8,7 @@ var gulp            = require('gulp'),
     size            = require('gulp-filesize');
     sourcemaps      = require('gulp-sourcemaps');
 
-gulp.task('pldoc_styles', function () {
+gulp.task('styles', function () {
     return gulp.src(config.pldoc_src_files)
         .pipe(sourcemaps.init())
         .pipe(sass(config.settings))

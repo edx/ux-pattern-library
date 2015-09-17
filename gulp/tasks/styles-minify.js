@@ -3,8 +3,8 @@ var gulp            = require('gulp'),
     minifyCSS       = require('gulp-minify-css'),
     size            = require('gulp-filesize');
 
-gulp.task('styles-minify', ['pldoc_styles'], function() {
-    return gulp.src(config.pldoc_dest_files)
+gulp.task('styles-minify', ['styles'], function() {
+    return gulp.src(config.dest_files)
     .pipe(minifyCSS())
     .pipe(size());
 });
