@@ -3,9 +3,8 @@ var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
     uglify          = require('gulp-uglify');
 
-gulp.task('scripts', ['pldoc_scripts-lint'], function() {
+gulp.task('scripts', ['scripts-lint'], function() {
     return gulp.src([
-        // setup sequence for files that are loaded later with RequireJS
         config.src
     ])
     .pipe(gulp.dest(config.pldoc_local)) // move for just browsercync + local preview

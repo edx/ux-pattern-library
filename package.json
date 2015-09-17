@@ -27,6 +27,7 @@
     "gulp-util": "*",
     "imagemin-pngquant": "*",
     "lodash": "*",
+    "merge-stream": "*",
     "require-dir": "*",
     "run-sequence": "*"
   }
