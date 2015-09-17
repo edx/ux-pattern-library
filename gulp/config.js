@@ -31,6 +31,7 @@ module.exports                  = {
         pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss',
         pldoc_src_static:       src + '/css',
         pldoc_dest:             pldoc_dest + '/css',
+        pldoc_dest_files:       pldoc_dest + '/css/**/*.css',
         pldoc_local:            local + '/public/pldoc/css'
     },
     images:                     {
@@ -62,7 +63,8 @@ module.exports                  = {
     },
     scripts:                    {
         // pattern library
-        src:                    src + '/js/*.js',
+        src:                    src + '/js',
+        src_files:              src + '/js/*.js',
         dest:                   dest + '/js',
         local:                  local + '/public/js',
 

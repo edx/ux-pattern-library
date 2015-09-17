@@ -16,6 +16,6 @@ gulp.task('pldoc_styles', function () {
         .pipe(autoprefixer({ browsers: ['last 2 version'] }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.pldoc_local)) // move just for browersync + uncompressed local
-        .pipe(gulp.dest(config.pldoc_dest))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest(config.pldoc_dest));
 });
