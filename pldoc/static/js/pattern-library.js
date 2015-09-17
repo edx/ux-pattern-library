@@ -1,8 +1,8 @@
 require.config({
-    baseUrl: '/public/pldoc/js',
+    baseUrl: '/public/js',
     paths: {
-        jquery: "../../js/jquery.min",
-        svg4everybody: "../../js/svg4everybody.min",
+        jquery: "/public/js/jquery.min",
+        svg4everybody: "/public/js/svg4everybody.min",
     },
     shim: {
         'jquery': {
@@ -13,8 +13,8 @@ require.config({
 
 require([
     'jquery',
-    '/public/pldoc/js/ui.js',
-    '../../js/svg4everybody.min'
+    '/public/js/ui.js',
+    '/public/js/svg4everybody.min.js'
     ],
     function($, Ui) {}
 );
