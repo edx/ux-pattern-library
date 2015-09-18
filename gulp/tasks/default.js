@@ -5,7 +5,7 @@ gulp.task( 'default', function() {
     runSequence(
         'clean',
         ['images'],
-        ['scripts-move', 'scripts', 'pldoc_scripts'],
+        ['scripts','pldoc_scripts'],
         'styles',
         'watch'
     )
