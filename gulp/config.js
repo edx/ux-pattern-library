@@ -17,9 +17,14 @@ module.exports = {
     },
     styles:                     {
 
-        // settings
-        settings: {
-            outputStyle: 'expanded' // set to expanded for local troubleshooting
+        settings_development: {
+            outputStyle: 'expanded',
+            sourcemapsLocation: '.'
+        },
+
+        settings_production: {
+            outputStyle: 'compressed',
+            autoprefixer: { browsers: ['last 2 version'] }
         },
 
         // pattern library

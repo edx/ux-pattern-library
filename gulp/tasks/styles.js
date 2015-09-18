@@ -10,10 +10,11 @@ var gulp            = require('gulp'),
 gulp.task('styles', function () {
     return gulp.src(config.pldoc_src_files)
         .pipe(sourcemaps.init())
-        .pipe(sass(config.settings))
+        .pipe(sass(config.settings_develepment))
         .on('error', handleErrors)
-        .pipe(autoprefixer({ browsers: ['last 2 version'] }))
-        .pipe(sourcemaps.write('.'))
+        .pipe(autoprefixer())
+        .pipe(minifyCSS())
+        .pipe(sourcemaps.write(config.settings_development.sourcemapsLocation))
         .pipe(gulp.dest(config.local)) // move just for browersync + uncompressed local
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest(config.dest));
