@@ -74,7 +74,7 @@ define([
         },
 
         setInitialText: function(el) {
-            return el.find('option:first').text()
+            return el.find('option:first').text();
         },
 
         listenForSelectClick: function() {
