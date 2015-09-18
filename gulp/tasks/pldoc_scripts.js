@@ -1,6 +1,6 @@
 var gulp            = require('gulp'),
-    config          = require('../config').scripts,
     browserSync     = require('browser-sync'),
+    config          = require('../config').scripts,
     uglify          = require('gulp-uglify');
 
 gulp.task('pldoc_scripts', ['scripts-lint'], function() {

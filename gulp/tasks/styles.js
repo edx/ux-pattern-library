@@ -1,10 +1,10 @@
 var gulp            = require('gulp'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    browserSync     = require('browser-sync'),
     config          = require('../config').styles,
     handleErrors    = require('../util/handleErrors'),
-    browserSync     = require('browser-sync'),
-    sass            = require('gulp-sass'),
-    autoprefixer    = require('gulp-autoprefixer'),
     minifyCSS       = require('gulp-minify-css'),
+    sass            = require('gulp-sass'),
     size            = require('gulp-filesize');
     sourcemaps      = require('gulp-sourcemaps');
 
