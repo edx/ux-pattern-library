@@ -153,7 +153,7 @@ $shadow: transparentize(palette(grayscale, black-t), .5);
 // ----------------------------
 // typography: Open Sans
 
-$open-sans-font-path: '#{$font-path}/OpenSans/' !default;
+$open-sans-font-path: '#{$font-path}/OpenSans' !default;
 
 @include font-face(
     'Open Sans',
