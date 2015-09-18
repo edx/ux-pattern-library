@@ -3,7 +3,7 @@ var gulp         = require('gulp'),
     size         = require('gulp-filesize'),
     uglify       = require('gulp-uglify');
 
-gulp.task('scripts-uglify', ['pldoc_scripts'], function() {
+gulp.task('scripts-uglify', ['pldoc_scripts', 'scripts'], function() {
   return gulp.src(config.dest)
     .pipe(uglify())
     .pipe(size());

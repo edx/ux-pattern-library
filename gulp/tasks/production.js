@@ -6,7 +6,7 @@ gulp.task( 'production', function() {
     runSequence(
         'clean',
         'images',
-        ['scripts-uglify', 'scripts-move'],
+        'scripts-uglify',
         'styles-minify'
     )
 });
