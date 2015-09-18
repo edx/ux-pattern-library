@@ -5,7 +5,6 @@ var gulp            = require('gulp'),
     handleErrors    = require('../util/handleErrors'),
     minifyCSS       = require('gulp-minify-css'),
     sass            = require('gulp-sass'),
-    size            = require('gulp-filesize');
     sourcemaps      = require('gulp-sourcemaps');
 
 gulp.task('styles', function () {
@@ -14,7 +13,7 @@ gulp.task('styles', function () {
         .pipe(sass(config.settings))
         .on('error', handleErrors)
         .pipe(autoprefixer({ browsers: ['last 2 version'] }))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.local)) // move just for browersync + uncompressed local
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest(config.dest));
