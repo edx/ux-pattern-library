@@ -1,10 +1,10 @@
 var gulp            = require('gulp'),
-    config          = require('../config').images,
+    browserSync     = require('browser-sync'),
     changed         = require('gulp-changed'),
+    config          = require('../config').images,
     imagemin        = require('gulp-imagemin'),
-    pngquant        = require('imagemin-pngquant'),
-    browserSync     = require('browser-sync');
-    merge           = require('merge-stream');
+    merge           = require('merge-stream'),
+    pngquant        = require('imagemin-pngquant');
 
 gulp.task('images', function() {
 

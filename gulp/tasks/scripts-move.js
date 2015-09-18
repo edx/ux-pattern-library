@@ -1,7 +1,7 @@
 var gulp            = require('gulp'),
+    browserSync     = require('browser-sync'),
     config          = require('../config'),
     handleErrors    = require('../util/handleErrors'),
-    browserSync     = require('browser-sync'),
     merge           = require('merge-stream');
 
 gulp.task('scripts-move', function(){

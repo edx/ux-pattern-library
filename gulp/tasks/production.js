@@ -1,4 +1,4 @@
-var gulp            = require('gulp');
+var gulp            = require('gulp'),
     runSequence    = require('run-sequence');
 
 // run this to compress all the things!

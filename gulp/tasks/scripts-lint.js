@@ -1,7 +1,7 @@
 var gulp            = require('gulp'),
     config          = require('../config').scripts,
     handleErrors    = require('../util/handleErrors'),
-    jshint          = require('gulp-jshint');
+    jshint          = require('gulp-jshint'),
     merge           = require('merge-stream');
 
 gulp.task('scripts-lint', function(){
