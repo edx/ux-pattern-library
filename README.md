@@ -177,6 +177,15 @@ be viewable at http://localhost:3000. There are additional views:
 * http://localhost:3000/examples/**/* - where full page examples and demos are kept
 * http://localhost:3000/elements/**/* - permalinks for individually documented pattern library elements
 
+- - -
+
+### Committing Code to PLDOC
+
+When developing changes or new work within the PLDOC, please make sure to:
+
+1. leave the Pattern Library Source Code (contained in ``pattern-ibrary``) unedited (or edit in a separate branch/commit)
+2. run the production preparation-focused gulp task ``gulp production``, which will optimize any checked in production assets (styles, images, and scripts), if you've added or heavily edited new PLDOC assets.
+
 ## Development - UX Pattern Library Bower Package
 
 If you add or edit any patterns in this repo (found in ``_src/pattern-library/``) or change any bower-centric settings (e.g. ``bower.json``), please do the following:
