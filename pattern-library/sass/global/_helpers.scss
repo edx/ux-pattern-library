@@ -115,11 +115,6 @@
     color: $text-base-color;
 }
 
-// links: reset
-%reset-link {
-
-}
-
 // links: base
 %link {
     @include transition(
@@ -167,7 +162,6 @@
         box-shadow: 0 1px 0 0 palette(primary, accent);
     }
 }
-
 
 // align text
 %text-left {

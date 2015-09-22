@@ -20,7 +20,7 @@ define([
 
         setupHtml: function() {
             $('html').removeClass('no-js');
-            $('#pldoc-nav-patterns .nav-list-item .pldoc-link').each(function (index, element) {
+            $('.pldoc-nav-patterns .pldoc-link').each(function (index, element) {
                 var $el = $( element );
                 if ( $el.attr('href') === window.location.pathname ) {
                   $el.addClass('is-current');

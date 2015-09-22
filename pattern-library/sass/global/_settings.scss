@@ -301,18 +301,18 @@ $z-depths: (
     very-front:     1000
 );
 
+
 // ----------------------------
-// #DEPTH
+// #SPACING
 // ----------------------------
 // spacing - baseline
 $baseline:                  20 !default;
-
 
 // vertical spacing
 $baseline-vertical:         ($baseline*2) !default;
 
 $spacing-vertical:          (
-    base:                   ($baseline-vertical*1),
+    base:                   $baseline-vertical,
     mid-small:              ($baseline-vertical*0.75),
     small:                  ($baseline-vertical/2),
     x-small:                ($baseline-vertical/4),
@@ -327,7 +327,7 @@ $spacing-vertical:          (
 $baseline-horizontal:       $baseline !default;
 
 $spacing-horizontal:        (
-    base:                   ($baseline-horizontal*1),
+    base:                   $baseline-horizontal,
     mid-small:              ($baseline-horizontal*0.75),
     small:                  ($baseline-horizontal/2),
     x-small:                ($baseline-horizontal/4),
@@ -356,7 +356,7 @@ $timing: (
 // ----------------------------
 // base component settings
 $component-focus-color:                     inherit !default;
-$component-focus-bg:                        palette(primary, x-light) !default;
+$component-focus-bg:                        palette(primary, xx-trans) !default;
 $component-active-color:                    palette(grayscale, white) !default;
 $component-active-bg:                       palette(primary, base) !default;
 $component-border-radius:                   3px !default;
