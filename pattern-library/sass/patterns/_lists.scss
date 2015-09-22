@@ -10,31 +10,34 @@
 // #ALIGNMENT
 // #DIVIDED
 // #BULLETED
+// #ORDERED
 // #INLINE
 // #LINK LIST
 // #COMPLEX
 // #GROUPED
-// #SIZES
+// #APPLICATION
 
 
 // ----------------------------
 // #CONFIG
 // ----------------------------
-$list-spacing-sm: spacing-vertical(xxx-small);
-$list-spacing-base: spacing-vertical(xx-small);
-$list-spacing-lg: spacing-vertical(x-small);
-$list-spacing-xl: spacing-vertical(small);
+$list-spacing-small: spacing-vertical(xxx-small) !default;
+$list-spacing-base: spacing-vertical(xx-small) !default;
+$list-spacing-large: spacing-vertical(x-small) !default;
+$list-spacing-x-large: spacing-vertical(small) !default;
 
-$list-decoration-margin: spacing-horizontal(base);
+$list-position: outside;
 
-$list-disc-ornament: disc;
-$list-circle-ornament: circle;
-$list-default-ornament: $list-disc-ornament;
+$list-disc-ornament: disc !default;
+$list-circle-ornament: circle !default;
+$list-bulleted-ornament: $list-disc-ornament !default;
+$list-bulleted-indent: spacing-horizontal(large) !default;
 
-$list-ordered-style: decimal;
+$list-ordered-style: decimal !default;
+$list-ordered-indent: spacing-horizontal(large) !default;
 
-$list-divided-divider-color: palette(grayscale-cool, x-light);
-$list-divided-padding: spacing-vertical(x-small);
+$list-divided-divider-color: palette(grayscale-cool, x-light) !default;
+$list-divided-spacing: spacing-vertical(x-small) !default;
 
 $list-inline-spacing: spacing-vertical(x-small) !default;
 
@@ -48,32 +51,48 @@ $list-grouped-focus-bg: palette(grayscale-cool, xx-trans) !default;
 // ----------------------------
 // #UTILITY
 // ----------------------------
+%list-item {
+    @extend %clear-last-child;
+    display: list-item;
+    margin-bottom: $list-spacing-base;
+
+    // CASE: nested
+    & > .list,
+    & > ol,
+    & > ul {
+       margin-top: $list-spacing-base;
+       margin-bottom: $list-spacing-base;
+    }
+}
+
 %list {
     @extend %list-unstyled;
     @extend %clear-last-child;
     margin-bottom: spacing-vertical(mid-small);
 
     .item {
-        @extend %clear-last-child;
-        display: list-item;
-        margin-bottom: $list-spacing-base;
+        @extend %list-item;
     }
-}
 
+    // CASE: complex list
+    .item-complex {
+        @extend %clear-last-child;
+        margin-bottom: $list-spacing-x-large;
+    }
 
-// ----------------------------
-// #BASE
-// ----------------------------
-.list {
-    @extend %list;
-}
+    .item-hd, .item-copy {
+        display: block;
+    }
 
+    .item-hd {
+        margin-bottom: spacing-vertical(xx-small);
+    }
 
-// ----------------------------
-// #ALIGNMENT
-// ----------------------------
-.list .item {
+    .item-copy {
+        margin: 0;
+    }
 
+    // alignment
     &.align-right {
         @extend %text-right;
     }
@@ -91,45 +110,28 @@ $list-grouped-focus-bg: palette(grayscale-cool, xx-trans) !default;
 // ----------------------------
 // #DIVIDED
 // ----------------------------
-.list-divided {
+%list-divided {
+
+    @extend %list;
 
     .item {
-        padding-bottom: $list-divided-padding;
-        @include padding-left(spacing-horizontal(x-small));
+        padding-bottom: $list-divided-spacing;
         border-bottom: rem(1) solid $list-divided-divider-color;
-        margin-bottom: $list-divided-padding;
-    }
-}
-
-// CASE: manual dividers
-.list .item {
-
-    &.has-divider-top {
-        padding-top: $list-divided-padding;
-        border-top: rem(1) solid $list-divided-divider-color;
-        margin-top: $list-divided-padding;
+        margin-bottom: $list-divided-spacing;
     }
 
-    &.has-divider-bottom {
-        padding-bottom: $list-divided-padding;
-        border-bottom: rem(1) solid $list-divided-divider-color;
-        margin-bottom: $list-divided-padding;
-    }
 }
 
 
 // ----------------------------
 // #BULLETED
 // ----------------------------
-.list-bulleted {
+%list-bulleted {
     @extend %list;
-    @include margin-left($list-decoration-margin);
-    list-style-position: outside;
-    list-style-type: $list-default-ornament;
 
-    .item {
-
-    }
+    @include margin-left($list-bulleted-indent);
+    list-style-position: $list-position;
+    list-style-type: $list-bulleted-ornament;
 
     // CASE: disc
     &.list-disc {
@@ -140,33 +142,80 @@ $list-grouped-focus-bg: palette(grayscale-cool, xx-trans) !default;
     &.list-circle {
         list-style-type: $list-circle-ornament;
     }
+
+    &.no-indent {
+        @include margin-left(1.25rem);
+    }
 }
 
 
 // ----------------------------
 // #ORDERED
 // ----------------------------
-.list-ordered {
+%list-ordered {
     @extend %list;
-    @include margin-left($list-decoration-margin);
-    list-style-position: outside;
+    @include margin-left($list-ordered-indent);
+    list-style-position: $list-position;
     list-style: $list-ordered-style;
+    counter-reset: ol-counter;
 
-    .item {
-
+    &.no-indent {
+        @include margin-left(1.25rem);
     }
+
+    // CASE: not semantic ordered list
+    &:not(ol) {
+
+        list-style-type: none;
+        list-style-position: $list-position;
+        counter-reset: ol-counter;
+
+        .item {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                @include left(-(rem(25))); // magic number: needed to match current spacing for indented ordered lists
+                content: counters(ol-counter,".") ".";
+                counter-increment: ol-counter;
+                @include text-align(right);
+            }
+        }
+    }
+}
+
+
+// ----------------------------
+// #DEFINITION
+// ----------------------------
+%list-definition {
+    margin-bottom: spacing-vertical(mid-small);
+}
+
+%list-definition-term {
+    margin-bottom: $list-spacing-base;
+
+    &:not(:first-of-type) {
+        margin-top: $list-spacing-x-large;
+    }
+}
+
+%list-definition-description {
+    margin: 0 0 $list-spacing-small 0;
 }
 
 
 // ----------------------------
 // #INLINE
 // ----------------------------
-.list-inline {
+%list-inline {
     @extend %list;
 
     .item {
         display: inline-block;
-        @include margin-right(spacing-vertical(x-small));
+        @include margin-right($list-inline-spacing);
+        margin-bottom: 0;
 
         &:last-child {
             @include margin-right(0);
@@ -178,17 +227,9 @@ $list-grouped-focus-bg: palette(grayscale-cool, xx-trans) !default;
 // ----------------------------
 // #LINK LIST
 // ----------------------------
-.list-links {
-    @extend %list;
+.item {
 
-    .item {
-
-    }
-}
-
-// CASE: block-level links
-.list .item {
-
+    // CASE: block-level links
     &.has-block-link {
 
         a {
@@ -199,33 +240,9 @@ $list-grouped-focus-bg: palette(grayscale-cool, xx-trans) !default;
 
 
 // ----------------------------
-// #COMPLEX
-// ----------------------------
-.list {
-
-    .item-complex {
-        @extend %clear-last-child;
-        margin-bottom: $list-spacing-xl;
-    }
-
-    .item-hd, .item-copy {
-        display: block;
-    }
-
-    .item-hd {
-        margin-bottom: spacing-vertical(xx-small);
-    }
-
-    .item-copy {
-        margin: 0;
-    }
-}
-
-
-// ----------------------------
 // #GROUPED
 // ----------------------------
-.list-grouped {
+%list-grouped {
     @extend %list;
     border: rem(1) solid $list-grouped-border-color;
     border-radius: $component-border-radius;
@@ -270,93 +287,73 @@ $list-grouped-focus-bg: palette(grayscale-cool, xx-trans) !default;
 
 
 // ----------------------------
-// #SIZES
+// #APPLICATION
 // ----------------------------
-// x-small
-.list-xs {
+.list {
+    @extend %list;
 
-    .icon {
+     li {
+        @extend %list-item;
+     }
+}
 
-    }
+ol {
+    @extend %list-ordered;
 
-    .img {
-
-    }
-
-    .item {
-        font-size: font-size(x-small);
-        line-height: line-height(x-small);
+    li {
+       @extend %list-item;
     }
 }
 
-// sm
-.list-sm {
+ul {
+    @extend %list-bulleted;
 
-    .icon {
-
-    }
-
-    .img {
-
-    }
-
-    .item {
-        font-size: font-size(small);
-        line-height: line-height(large);
+    li {
+       @extend %list-item;
     }
 }
 
-// md (base)
-.list-md {
-
-    .icon {
-
-    }
-
-    .img {
-
-    }
-
-
-    .item {
-        font-size: font-size(base);
-        line-height: line-height(large);
-        margin-bottom: $list-spacing-base;
-    }
+dl,
+.list-definition {
+    @extend %list-definition;
 }
 
-// lg
-.list-lg {
-
-    .icon {
-
-    }
-
-    .img {
-
-    }
-
-    .item {
-        font-size: font-size(large);
-        line-height: line-height(large);
-        margin-bottom: $list-spacing-lg;
-    }
+dt,
+.list-definition-term {
+    @extend %list-definition-term;
 }
 
-// xl
-.list-xl {
-
-    .icon {
-
-    }
-
-    .img {
-
-    }
-
-    .item {
-        font-size: font-size(x-large);
-        line-height: line-height(x-large);
-        margin-bottom: $list-spacing-lg;
-    }
+dd,
+.list-definition-description {
+   @extend %list-definition-description;
 }
+
+
+.list-divided {
+    @extend %list-divided;
+}
+
+.list-unstyled {
+    @extend %list-unstyled;
+}
+
+.list-bulleted {
+    @extend %list-bulleted;
+}
+
+.list-ordered {
+    @extend %list-ordered;
+}
+
+.list-inline {
+    @extend %list-inline;
+}
+
+.list-links {
+    @extend %list-links;
+}
+
+.list-grouped {
+    @extend %list-grouped;
+}
+
