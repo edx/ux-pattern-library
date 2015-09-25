@@ -216,7 +216,7 @@ $iconfnt-font-path: '#{$font-path}/iconfnt/' !default;
     '#{$iconfnt-font-path}/iconfnt',
     300,
     normal,
-    $file-formats: woff ttf svg
+    $file-formats: svg woff ttf
 );
 
 // typography: config - stacks
