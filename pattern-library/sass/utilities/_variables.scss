@@ -208,10 +208,22 @@ $open-sans-font-path: '#{$font-path}/OpenSans/' !default;
     $file-formats: woff woff2 ttf
 );
 
+// typography: Iconfnt
+$iconfnt-font-path: '#{$font-path}/iconfnt/' !default;
+
+@include font-face(
+    'iconfnt',
+    '#{$iconfnt-font-path}/iconfnt',
+    300,
+    normal,
+    $file-formats: svg woff ttf
+);
+
 // typography: config - stacks
 $font-family-sans-serif:    'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $font-family-serif:         'Georgia', Cambria, 'Times New Roman', Times, serif !default;
 $font-family-monospace:     'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
+$icon-font:                 'iconfnt', Times !default;
 
 // typography: sizes
 $font-sizes: (

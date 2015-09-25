@@ -9,6 +9,11 @@
 // ----------------------------
 .icon {
     display: inline-block;
-    font-size: 1em;
+    font-size: 1rem;
     fill: currentColor;
+}
+
+.icon-replace {
+    @extend %a11y-icon;
+    color: palette(primary, base);
 }
