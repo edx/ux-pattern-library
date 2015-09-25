@@ -19,7 +19,7 @@ exclude:                    ["node_modules", "gulp", "gulpfile.js", "package.jso
 # Custom vars
 github:
     repo:                   https://github.com/edx/ux-pattern-library
-    path_scss:              /ux-pattern-library/blob/master/_src/static/sass/
+    path_scss:              /blob/master/pattern-library/sass/
     docurl:                 https://github.com/edx/ux-pattern-library/wiki/
 
 
