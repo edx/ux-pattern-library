@@ -152,3 +152,10 @@
         color: palette(primary, dark);
     }
 }
+
+// a11y icon fonts
+%a11y-icon {
+    font-family: $icon-font;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+}
