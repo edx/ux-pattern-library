@@ -1,15 +1,14 @@
 // gulp pattern library + site configuration
 
-// pattern library
+    // pattern library
 var dest                        = './public',
     src                         = './pattern-library',
     local                       = './_site',
 
-// documentation site
-    pldoc_src                   = './pldoc',
-    pldoc_dest                  = './public/pldoc';
+    // documentation site
+    pldoc_src                   = './pldoc';
 
-module.exports                  = {
+module.exports = {
     browserSync:                {
         server:                 {
             // Serve up our build folder
@@ -17,70 +16,52 @@ module.exports                  = {
         }
     },
     styles:                     {
+
+        settings_development: {
+            outputStyle: 'expanded',
+            sourcemapsLocation: '.'
+        },
+
+        settings_production: {
+            outputStyle: 'compressed',
+            autoprefixer: { browsers: ['last 2 version'] }
+        },
+
         // pattern library
-        src:                    src + '/sass',
         src_files:              src + '/sass/**/*.scss',
-        src_static:             src + '/css',
-        src_static_files:       src + '/css/**/*.css',
         dest:                   dest + '/css',
-        local:                  local + '/public/css',
+        dest_files:             dest + '/css/**/*.css',
+        local:                  local + '/public/pldoc/css',
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/sass',
-        pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss',
-        pldoc_src_static:       src + '/css',
-        pldoc_dest:             pldoc_dest + '/css',
-        pldoc_local:            local + '/public/pldoc/css'
+        pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss'
     },
     images:                     {
         // pattern library
-
-        // TODO: resolve this string/concat issue to make abstracted out paths work
-        // src:                    src + '/images',
-        // src_files:              src + 'images/**',
-        // dest:                   dest + '/images',
-        // local:                  local + '/public/images',
-
         src:                    './pattern-library/images',
         src_files:              './pattern-library/images/**',
         dest:                   './public/images',
         local:                  './_site/public/images',
 
         // documentation site
-
-        // TODO: resolve this string/concat issue to make abstracted out paths work
-        // pldoc_src:              pldoc_src + '/static/images',
-        // pldoc_src_files:        pldoc_src + '/static/images/**',
-        // pldoc_dest:             pldoc_dest,
-        // pldoc_local:            local + '/public/pldoc/images'
-
         pldoc_src:              './pldoc/static/images',
-        pldoc_src_files:        './pldoc/static/images/**',
-        pldoc_dest:             './public/pldoc/images',
-        pldoc_local:            './_site/public/pldoc/images'
+        pldoc_src_files:        './pldoc/static/images/**'
     },
     scripts:                    {
         // pattern library
-        src:                    src + '/js/*.js',
+        src:                    src + '/js',
+        src_files:              src + '/js/*.js',
         dest:                   dest + '/js',
         local:                  local + '/public/js',
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/js',
-        pldoc_src_files:        pldoc_src + '/static/js/**/*.js',
-        pldoc_dest:             pldoc_dest + '/js',
-        pldoc_local:            local + '/public/pldoc/js'
+        pldoc_src_files:        pldoc_src + '/static/js/**/*.js'
     },
-    vendor:                     {
-        // pattern library
-        src:                    src + '/vendor/**',
-        dest:                   dest + '/vendor',
-        local:                  local + '/public/vendor',
-
-        // documentation site
-        pldoc_src:              pldoc_src + '/vendor/**',
-        pldoc_dest:             pldoc_dest + '/vendor',
-        pldoc_local:            local + '/public/pldoc/vendor'
+    lib:                    {
+        // third party libraries
+        src:                    './bower_components'
     },
     jekyll:                     {
         home:                   'index.html',

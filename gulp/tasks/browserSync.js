@@ -1,6 +1,6 @@
 var gulp            = require('gulp'),
-    config          = require('../config').browserSync,
-    browserSync     = require('browser-sync');
+    browserSync     = require('browser-sync'),
+    config          = require('../config').browserSync;
 
 gulp.task('browserSync', ['jekyll-build'], function() {
     browserSync(config);
