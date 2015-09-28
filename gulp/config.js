@@ -37,6 +37,17 @@ module.exports = {
         pldoc_src:              pldoc_src + '/static/sass',
         pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss'
     },
+    fonts:                     {
+        // pattern library
+        src:                    src + '/fonts',
+        src_files:              src + '/fonts/**/*',
+        dest:                   dest + '/fonts',
+        local:                  local + '/public/fonts',
+
+        // documentation site
+        pldoc_src:              pldoc_src + '/static/fonts',
+        pldoc_src_files:        pldoc_src + '/static/fonts/**/*'
+    },
     images:                     {
         // pattern library
         src:                    './pattern-library/images',
