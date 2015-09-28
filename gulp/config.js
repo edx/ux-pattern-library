@@ -48,6 +48,17 @@ module.exports = {
         pldoc_src:              './pldoc/static/images',
         pldoc_src_files:        './pldoc/static/images/**'
     },
+    icons:                     {
+        // pattern library
+        src:                    src + '/icons',
+        src_files:              src + '/icons/**/*',
+        dest:                   dest + '/icons',
+        local:                  local + '/public/icons',
+
+        // documentation site
+        pldoc_src:              pldoc_src + '/static/icons',
+        pldoc_src_files:        pldoc_src + '/static/icons/**/*'
+    },
     scripts:                    {
         // pattern library
         src:                    src + '/js',
