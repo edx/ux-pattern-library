@@ -37,16 +37,38 @@ module.exports = {
         pldoc_src:              pldoc_src + '/static/sass',
         pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss'
     },
+    fonts:                     {
+        // pattern library
+        src:                    src + '/fonts',
+        src_files:              src + '/fonts/**/*',
+        dest:                   dest + '/fonts',
+        local:                  local + '/public/fonts',
+
+        // documentation site
+        pldoc_src:              pldoc_src + '/static/fonts',
+        pldoc_src_files:        pldoc_src + '/static/fonts/**/*'
+    },
     images:                     {
         // pattern library
         src:                    './pattern-library/images',
-        src_files:              './pattern-library/images/**',
+        src_files:              './pattern-library/images/**/*',
         dest:                   './public/images',
         local:                  './_site/public/images',
 
         // documentation site
         pldoc_src:              './pldoc/static/images',
-        pldoc_src_files:        './pldoc/static/images/**'
+        pldoc_src_files:        './pldoc/static/images/**/*'
+    },
+    icons:                     {
+        // pattern library
+        src:                    src + '/icons',
+        src_files:              src + '/icons/**/*',
+        dest:                   dest + '/icons',
+        local:                  local + '/public/icons',
+
+        // documentation site
+        pldoc_src:              pldoc_src + '/static/icons',
+        pldoc_src_files:        pldoc_src + '/static/icons/**/*'
     },
     scripts:                    {
         // pattern library
