@@ -51,13 +51,13 @@ module.exports = {
     images:                     {
         // pattern library
         src:                    './pattern-library/images',
-        src_files:              './pattern-library/images/**',
+        src_files:              './pattern-library/images/**/*',
         dest:                   './public/images',
         local:                  './_site/public/images',
 
         // documentation site
         pldoc_src:              './pldoc/static/images',
-        pldoc_src_files:        './pldoc/static/images/**'
+        pldoc_src_files:        './pldoc/static/images/**/*'
     },
     icons:                     {
         // pattern library
