@@ -475,18 +475,14 @@
     @extend %element-hide-styling;
 
     .example-icon {
-        @include transition(all timing(x-fast) ease-in-out);
-        @extend %card;
+        @include text-align(center);
         display: inline-block;
         width: spacing-vertical(x-large);
         margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
-        border-radius: spacing-horizontal(xx-small);
-        color: palette(grayscale, dark);
 
         .icon-display {
             width: 100%;
-            margin: auto;
-            text-align: center;
+            margin: 0 auto spacing-vertical(x-small) auto;
 
             .icon {
                 color: palette(primary, base);
@@ -494,28 +490,12 @@
         }
 
         .icon-classname {
-            @include text-align(center);
             font-size: font-size(small);
             color: palette(grayscale, dark);
         }
 
         @include susy-breakpoint($bp-screen-md, $susy-default) {
             @include gallery(3 of 12);
-        }
-
-        // STATE: hover, focus, and active
-        &:hover,
-        &:focus,
-        &:active {
-            @include transform(scale(1.05));
-            box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
-
-            .icon-display {
-
-                .icon {
-                    color: palette(primary, accent); // demonstrating color change simplicity
-                }
-            }
         }
     }
 }
