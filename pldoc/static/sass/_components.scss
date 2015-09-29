@@ -484,11 +484,12 @@
         color: palette(grayscale, dark);
 
         .icon-display {
-            width: 24px;
+            width: 100%;
             margin: auto;
+            text-align: center;
 
             .icon {
-                color: currentColor;
+                color: palette(primary, base);
             }
         }
 
@@ -511,8 +512,8 @@
 
             .icon-display {
 
-                svg {
-                    fill: palette(primary, accent); // demonstrating color change simplicity
+                .icon {
+                    color: palette(primary, accent); // demonstrating color change simplicity
                 }
             }
         }
