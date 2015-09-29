@@ -1,5 +1,0 @@
-@charset "UTF-8";/*! afontgarde - v0.1.6 - 2015-03-13
- * https://github.com/filamentgroup/a-font-garde
- * Copyright (c) 2015 Filament Group c/o Zach Leatherman
- * MIT License */.icon-fallback-text .icon{display:none}.icon-fallback-glyph .text,.icon-fallback-img .text{clip:rect(0 0 0 0);overflow:hidden;position:absolute;height:1px;width:1px}.supports-no-generatedcontent .icon-fallback-glyph .text{clip:auto;overflow:visible;position:static;height:auto;width:auto}.icon-fallback-img .icon{display:inline-block}.icon-fallback-img .icon:before{content:""}.a11y .icon-fallback-img .icon{background-image:none}
-/*# sourceMappingURL=afontgarde.css.map */
