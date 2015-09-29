@@ -171,14 +171,11 @@
 .pldoc-nav-external {
 
     .pldoc-link {
+        @include clearfix();
 
-        .pldoc-icon {
-            @include transition(opacity 0.25s ease-in-out);
-            display: inline-block;
-            vertical-align: baseline;
-            @include margin-right(spacing-horizontal(xx-small));
-            font-size: font-size(x-large);
-            line-height: line-height(none);
+        .icon {
+            @include margin-left(spacing-horizontal(xx-small));
+            @include float(right);
             opacity: 0.25;
         }
 
@@ -187,7 +184,7 @@
         &:active,
         &:focus {
 
-            .pldoc-icon {
+            .icon {
                 opacity: 1.0;
             }
         }
@@ -472,51 +469,31 @@
 
 // icons
 .pldoc-element-icons {
-    @extend %element-hide-styling;
 
     .example-icon {
-        @include transition(all timing(x-fast) ease-in-out);
-        @extend %card;
+        @include text-align(center);
         display: inline-block;
         width: spacing-vertical(x-large);
         margin: 0 spacing-horizontal(mid-small) spacing-vertical(mid-small) 0;
-        border-radius: spacing-horizontal(xx-small);
-        color: palette(grayscale, white);
 
         .icon-display {
-            width: 24px;
-            margin: auto;
+            width: 100%;
+            margin: 0 auto spacing-vertical(x-small) auto;
 
-            svg {
-                @include transition(fill 0.25s ease-in-out);
-                width: 100%;
-                fill: palette(primary, base);
+            .icon {
+                font-size: rem(48); // Initial setting to match slider
+                color: palette(primary, base);
             }
         }
 
-        .icon-classname {
-            @include text-align(center);
+        .icon-classname,
+        .use-description {
             font-size: font-size(small);
             color: palette(grayscale, dark);
         }
 
         @include susy-breakpoint($bp-screen-md, $susy-default) {
             @include gallery(3 of 12);
-        }
-
-        // STATE: hover, focus, and active
-        &:hover,
-        &:focus,
-        &:active {
-            @include transform(scale(1.05));
-            box-shadow: 0 rem(2) rem(2) 0 palette(grayscale, x-trans);
-
-            .icon-display {
-
-                svg {
-                    fill: palette(primary, accent); // demonstrating color change simplicity
-                }
-            }
         }
     }
 }
