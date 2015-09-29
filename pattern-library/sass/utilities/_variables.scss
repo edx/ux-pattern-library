@@ -154,7 +154,7 @@ $shadow: transparentize(palette(grayscale, black-t), .5);
 // typography: Open Sans
 
 $open-sans-font-path: '#{$font-path}/OpenSans' !default;
-$edx-icons-font-path: '#{$font-path}/edx-icons';
+$edx-icons-font-path: '#{$font-path}/edx-icons' !default;
 
 @include font-face(
     'Open Sans',
@@ -220,7 +220,7 @@ $edx-icons-font-path: '#{$font-path}/edx-icons';
 $font-family-sans-serif:    'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $font-family-serif:         'Georgia', Cambria, 'Times New Roman', Times, serif !default;
 $font-family-monospace:     'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
-$icon-font:                 'edx-icons', 'Open Sans', sans-serif;
+$icon-font:                 'edx-icons', 'Open Sans', sans-serif !default;
 
 // typography: sizes
 $font-sizes: (
