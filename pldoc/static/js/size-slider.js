@@ -14,7 +14,8 @@ define([
         vars: {
             wrapper: $('#icons-preview'),
             heading: $('.pldoc-tab-heading'),
-            example: $('.example-icon .icon-display'),
+            example: $('.example-icon .icon-display .icon'),
+            exampleContainer: $('.example-icon .icon-display'),
             sliderControl: $('#iconFontSlider'),
             sliderValue: $('#iconFontSliderValue')
         },
@@ -41,7 +42,8 @@ define([
         },
 
         updateIconSize: function(size) {
-            IconFontSliderControl.vars.example.css({ width: size + 'px' });
+            IconFontSliderControl.vars.example.css({ fontSize: size + 'px' });
+            IconFontSliderControl.vars.exampleContainer.css({ width: size + 'px' });
         },
 
         updateInputText: function(size) {

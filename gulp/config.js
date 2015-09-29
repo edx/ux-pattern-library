@@ -35,7 +35,7 @@ module.exports = {
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/sass',
-        pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss'
+        pldoc_src_files:        pldoc_src + '/static/sass/**/*'
     },
     fonts:                     {
         // pattern library
@@ -59,27 +59,16 @@ module.exports = {
         pldoc_src:              './pldoc/static/images',
         pldoc_src_files:        './pldoc/static/images/**/*'
     },
-    icons:                     {
-        // pattern library
-        src:                    src + '/icons',
-        src_files:              src + '/icons/**/*',
-        dest:                   dest + '/icons',
-        local:                  local + '/public/icons',
-
-        // documentation site
-        pldoc_src:              pldoc_src + '/static/icons',
-        pldoc_src_files:        pldoc_src + '/static/icons/**/*'
-    },
     scripts:                    {
         // pattern library
         src:                    src + '/js',
-        src_files:              src + '/js/*.js',
+        src_files:              src + '/js/**/*',
         dest:                   dest + '/js',
         local:                  local + '/public/js',
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/js',
-        pldoc_src_files:        pldoc_src + '/static/js/**/*.js'
+        pldoc_src_files:        pldoc_src + '/static/js/**/*'
     },
     lib:                    {
         // third party libraries

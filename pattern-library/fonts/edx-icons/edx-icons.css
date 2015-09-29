@@ -1,371 +1,355 @@
-// ------------------------------
-// edX Pattern Library: Components - Icons
-
-// About: Contains base styling for demonstration and utility for icons, which are currently based on SVGs managed through ico-moon and a polyfill for browser support - https://github.com/jonathantneal/svg4everybody.
-// ----------------------------
-
-// ----------------------------
-// #GLOBALS
-// ----------------------------
-.icon {
-    display: inline-block;
-    font-size: 1em;
-    color: currentColor;
+@font-face {
+	font-family: 'edx-icons';
+	src:url('fonts/edx-icons.eot?-voynoz');
+	src:url('fonts/edx-icons.eot?#iefix-voynoz') format('embedded-opentype'),
+		url('fonts/edx-icons.ttf?-voynoz') format('truetype'),
+		url('fonts/edx-icons.woff?-voynoz') format('woff'),
+		url('fonts/edx-icons.svg?-voynoz#edx-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-// ----------------------------
-// #ICONS
-// ----------------------------
 .edx-icons .icon {
-    font-family: $icon-font;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	font-family: 'edx-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .edx-icons .icon-linkedin-square:before {
-    content: "\e600";
+	content: "\e600";
 }
 .edx-icons .icon-caret-down:before {
-    content: "\e601";
+	content: "\e601";
 }
 .edx-icons .icon-caret-up:before {
-    content: "\e602";
+	content: "\e602";
 }
 .edx-icons .icon-caret-left:before {
-    content: "\e603";
+	content: "\e603";
 }
 .edx-icons .icon-caret-right:before {
-    content: "\e604";
+	content: "\e604";
 }
 .edx-icons .icon-dot-circle-o:before {
-    content: "\e605";
+	content: "\e605";
 }
 .edx-icons .icon-square-o:before {
-    content: "\e606";
+	content: "\e606";
 }
 .edx-icons .icon-square:before {
-    content: "\e607";
+	content: "\e607";
 }
 .edx-icons .icon-circle:before {
-    content: "\e608";
+	content: "\e608";
 }
 .edx-icons .icon-circle-thin:before {
-    content: "\e609";
+	content: "\e609";
 }
 .edx-icons .icon-genderless:before {
-    content: "\e609";
+	content: "\e609";
 }
 .edx-icons .icon-search:before {
-    content: "\e60a";
+	content: "\e60a";
 }
 .edx-icons .icon-envelope-o:before {
-    content: "\e60b";
+	content: "\e60b";
 }
 .edx-icons .icon-star:before {
-    content: "\e60c";
+	content: "\e60c";
 }
 .edx-icons .icon-user:before {
-    content: "\e60d";
+	content: "\e60d";
 }
 .edx-icons .icon-check:before {
-    content: "\e60e";
+	content: "\e60e";
 }
 .edx-icons .icon-close:before {
-    content: "\e60f";
+	content: "\e60f";
 }
 .edx-icons .icon-remove:before {
-    content: "\e60f";
+	content: "\e60f";
 }
 .edx-icons .icon-times:before {
-    content: "\e60f";
+	content: "\e60f";
 }
 .edx-icons .icon-search-plus:before {
-    content: "\e610";
+	content: "\e610";
 }
 .edx-icons .icon-search-minus:before {
-    content: "\e611";
+	content: "\e611";
 }
 .edx-icons .icon-cog:before {
-    content: "\e612";
+	content: "\e612";
 }
 .edx-icons .icon-gear:before {
-    content: "\e612";
+	content: "\e612";
 }
 .edx-icons .icon-trash-o:before {
-    content: "\e613";
+	content: "\e613";
 }
 .edx-icons .icon-home:before {
-    content: "\e614";
+	content: "\e614";
 }
 .edx-icons .icon-file-o:before {
-    content: "\e615";
+	content: "\e615";
 }
 .edx-icons .icon-clock-o:before {
-    content: "\e616";
+	content: "\e616";
 }
 .edx-icons .icon-refresh:before {
-    content: "\e617";
+	content: "\e617";
 }
 .edx-icons .icon-list-alt:before {
-    content: "\e618";
+	content: "\e618";
 }
 .edx-icons .icon-lock:before {
-    content: "\e619";
+	content: "\e619";
 }
 .edx-icons .icon-flag:before {
-    content: "\e61a";
+	content: "\e61a";
 }
 .edx-icons .icon-volume-off:before {
-    content: "\e61b";
+	content: "\e61b";
 }
 .edx-icons .icon-volume-down:before {
-    content: "\e61c";
+	content: "\e61c";
 }
 .edx-icons .icon-volume-up:before {
-    content: "\e61d";
+	content: "\e61d";
 }
 .edx-icons .icon-book:before {
-    content: "\e61e";
+	content: "\e61e";
 }
 .edx-icons .icon-print:before {
-    content: "\e61f";
+	content: "\e61f";
 }
 .edx-icons .icon-camera:before {
-    content: "\e620";
+	content: "\e620";
 }
 .edx-icons .icon-video-camera:before {
-    content: "\e621";
+	content: "\e621";
 }
 .edx-icons .icon-pencil:before {
-    content: "\e622";
+	content: "\e622";
 }
 .edx-icons .icon-edit:before {
-    content: "\e623";
+	content: "\e623";
 }
 .edx-icons .icon-pencil-square-o:before {
-    content: "\e623";
+	content: "\e623";
 }
 .edx-icons .icon-share-square-o:before {
-    content: "\e624";
+	content: "\e624";
 }
 .edx-icons .icon-check-square-o:before {
-    content: "\e625";
+	content: "\e625";
 }
 .edx-icons .icon-fast-backward:before {
-    content: "\e626";
+	content: "\e626";
 }
 .edx-icons .icon-play:before {
-    content: "\e627";
+	content: "\e627";
 }
 .edx-icons .icon-pause:before {
-    content: "\e628";
+	content: "\e628";
 }
 .edx-icons .icon-stop:before {
-    content: "\e629";
+	content: "\e629";
 }
 .edx-icons .icon-fast-forward:before {
-    content: "\e62a";
+	content: "\e62a";
 }
 .edx-icons .icon-chevron-left:before {
-    content: "\e62b";
+	content: "\e62b";
 }
 .edx-icons .icon-chevron-right:before {
-    content: "\e62c";
+	content: "\e62c";
 }
 .edx-icons .icon-times-circle:before {
-    content: "\e62d";
+	content: "\e62d";
 }
 .edx-icons .icon-question-circle:before {
-    content: "\e62e";
+	content: "\e62e";
 }
 .edx-icons .icon-info-circle:before {
-    content: "\e62f";
+	content: "\e62f";
 }
 .edx-icons .icon-times-circle-o:before {
-    content: "\e630";
+	content: "\e630";
 }
 .edx-icons .icon-arrow-up:before {
-    content: "\e631";
+	content: "\e631";
 }
 .edx-icons .icon-arrow-down:before {
-    content: "\e632";
+	content: "\e632";
 }
 .edx-icons .icon-compress:before {
-    content: "\e633";
+	content: "\e633";
 }
 .edx-icons .icon-plus:before {
-    content: "\e634";
+	content: "\e634";
 }
 .edx-icons .icon-minus:before {
-    content: "\e635";
+	content: "\e635";
 }
 .edx-icons .icon-exclamation-circle:before {
-    content: "\e636";
+	content: "\e636";
 }
 .edx-icons .icon-eye:before {
-    content: "\e637";
+	content: "\e637";
 }
 .edx-icons .icon-eye-slash:before {
-    content: "\e638";
+	content: "\e638";
 }
 .edx-icons .icon-exclamation-triangle:before {
-    content: "\e639";
+	content: "\e639";
 }
 .edx-icons .icon-warning:before {
-    content: "\e639";
+	content: "\e639";
 }
 .edx-icons .icon-calendar:before {
-    content: "\e63a";
+	content: "\e63a";
 }
 .edx-icons .icon-comment:before {
-    content: "\e63b";
+	content: "\e63b";
 }
 .edx-icons .icon-shopping-cart:before {
-    content: "\e63c";
+	content: "\e63c";
 }
 .edx-icons .icon-twitter-square:before {
-    content: "\e63d";
+	content: "\e63d";
 }
 .edx-icons .icon-facebook-square:before {
-    content: "\e63e";
+	content: "\e63e";
 }
 .edx-icons .icon-comments:before {
-    content: "\e63f";
+	content: "\e63f";
 }
 .edx-icons .icon-thumb-tack:before {
-    content: "\e640";
+	content: "\e640";
 }
 .edx-icons .icon-external-link:before {
-    content: "\e641";
+	content: "\e641";
 }
 .edx-icons .icon-upload:before {
-    content: "\e642";
+	content: "\e642";
 }
 .edx-icons .icon-square-o2:before {
-    content: "\e643";
+	content: "\e643";
 }
 .edx-icons .icon-bullhorn:before {
-    content: "\e644";
+	content: "\e644";
 }
 .edx-icons .icon-arrow-circle-down:before {
-    content: "\e645";
+	content: "\e645";
 }
 .edx-icons .icon-filter:before {
-    content: "\e646";
+	content: "\e646";
 }
 .edx-icons .icon-arrows-alt:before {
-    content: "\e647";
+	content: "\e647";
 }
 .edx-icons .icon-chain:before {
-    content: "\e648";
+	content: "\e648";
 }
 .edx-icons .icon-link:before {
-    content: "\e648";
+	content: "\e648";
 }
 .edx-icons .icon-copy:before {
-    content: "\e649";
+	content: "\e649";
 }
 .edx-icons .icon-files-o:before {
-    content: "\e649";
+	content: "\e649";
 }
 .edx-icons .icon-bars:before {
-    content: "\e64a";
+	content: "\e64a";
 }
 .edx-icons .icon-navicon:before {
-    content: "\e64a";
+	content: "\e64a";
 }
 .edx-icons .icon-reorder:before {
-    content: "\e64a";
+	content: "\e64a";
 }
 .edx-icons .icon-list-ul:before {
-    content: "\e64b";
+	content: "\e64b";
 }
 .edx-icons .icon-table:before {
-    content: "\e64c";
+	content: "\e64c";
 }
 .edx-icons .icon-money:before {
-    content: "\e64d";
+	content: "\e64d";
 }
 .edx-icons .icon-sort:before {
-    content: "\e64e";
+	content: "\e64e";
 }
 .edx-icons .icon-unsorted:before {
-    content: "\e64e";
+	content: "\e64e";
 }
 .edx-icons .icon-envelope:before {
-    content: "\e64f";
+	content: "\e64f";
 }
 .edx-icons .icon-rotate-left:before {
-    content: "\e650";
+	content: "\e650";
 }
 .edx-icons .icon-undo:before {
-    content: "\e650";
+	content: "\e650";
 }
 .edx-icons .icon-sitemap:before {
-    content: "\e651";
+	content: "\e651";
 }
 .edx-icons .icon-angle-left:before {
-    content: "\e652";
+	content: "\e652";
 }
 .edx-icons .icon-angle-right:before {
-    content: "\e653";
+	content: "\e653";
 }
 .edx-icons .icon-angle-up:before {
-    content: "\e654";
+	content: "\e654";
 }
 .edx-icons .icon-angle-down:before {
-    content: "\e655";
+	content: "\e655";
 }
 .edx-icons .icon-circle-o:before {
-    content: "\e656";
+	content: "\e656";
 }
 .edx-icons .icon-quote-left:before {
-    content: "\e657";
+	content: "\e657";
 }
 .edx-icons .icon-spinner:before {
-    content: "\e658";
+	content: "\e658";
 }
 .edx-icons .icon-mail-reply:before {
-    content: "\e659";
+	content: "\e659";
 }
 .edx-icons .icon-reply:before {
-    content: "\e659";
+	content: "\e659";
 }
 .edx-icons .icon-chain-broken:before {
-    content: "\e65a";
+	content: "\e65a";
 }
 .edx-icons .icon-unlink:before {
-    content: "\e65a";
+	content: "\e65a";
 }
 .edx-icons .icon-unlock-alt:before {
-    content: "\e65b";
+	content: "\e65b";
 }
 .edx-icons .icon-ellipsis-h:before {
-    content: "\e65c";
+	content: "\e65c";
 }
 .edx-icons .icon-check-square:before {
-    content: "\e65d";
+	content: "\e65d";
 }
 .edx-icons .icon-file:before {
-    content: "\e65e";
+	content: "\e65e";
 }
 .edx-icons .icon-cc:before {
-    content: "\e65f";
+	content: "\e65f";
 }
-
-// ----------------------------
-// #FALLBACKS
-// ----------------------------
-
-// If you'd like to use a fallback image or glyph for icons above,
-// in case the font doesn't load, or @font-face isn't available...
-
-// .icon-linkedin-square {
-//     background: url('path-to-image') no-repeat;
-// }
