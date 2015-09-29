@@ -40,9 +40,11 @@ viewclass:  element
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-markup" data-href="#{{page.slug}}-markup">Markup</button>
                 </li>
+                {% if page.scssurl %}
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-styling" data-href="#{{page.slug}}-styling">Styling</button>
                 </li>
+                {% endif %}
             </ul>
             {% endif %}
 

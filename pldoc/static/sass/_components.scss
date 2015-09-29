@@ -472,7 +472,6 @@
 
 // icons
 .pldoc-element-icons {
-    @extend %element-hide-styling;
 
     .example-icon {
         @include text-align(center);

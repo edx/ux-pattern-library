@@ -47,9 +47,11 @@ viewclass:  index
                     <li class="pldoc-tab-label">
                         <button class="pldoc-link pldoc-link-markup" data-href="#{{post.slug}}-markup">Markup</button>
                     </li>
+                    {% if post.scssurl %}
                     <li class="pldoc-tab-label">
                         <button class="pldoc-link pldoc-link-styling" data-href="#{{post.slug}}-styling">Styling</button>
                     </li>
+                    {% endif %}
                 </ul>
                 {% endif %}
 
