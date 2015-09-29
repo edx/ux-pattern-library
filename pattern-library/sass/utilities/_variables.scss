@@ -213,7 +213,7 @@ $edx-icons-font-path: '#{$font-path}/edx-icons' !default;
     'edx-icons',
     '#{$edx-icons-font-path}/edx-icons',
     300,
-    $file-formats: woff woff2 ttf
+    $file-formats: woff ttf // NOTE: woff2 format currently not supported by IcoMoon font output
 );
 
 // typography: config - stacks
