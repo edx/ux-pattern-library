@@ -287,7 +287,12 @@
         position: absolute;
         @include right(rem(($baseline/4)));
         margin-top: rem(-($baseline/10)); // vertically centers the down caret icon
-        fill: $input-control-color;
+        color: $input-control-color;
+        vertical-align: middle;
+    }
+
+    .icon-fallback-glyph .icon:before {
+        content: "\25BE"; // system glyph down arrow
     }
 
     &:disabled,

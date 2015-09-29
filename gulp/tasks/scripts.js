@@ -10,7 +10,10 @@ gulp.task('scripts', ['scripts-lint'], function() {
             config.lib.src + '/requirejs/require.js',
             config.lib.src + '/jquery/dist/jquery.min.js',
             config.lib.src + '/svg4everybody/svg4everybody.min.js',
+            config.scripts.src + '/modernizr-custom.js',
+            config.scripts.src + '/afontgarde.js',
             config.scripts.src + '/select-replace.js',
+            config.scripts.src + '/edx-icons.js',
             config.scripts.src + '/testing.js'
         ])
         .pipe(uglify())
