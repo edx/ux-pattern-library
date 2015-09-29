@@ -1,1 +1,1 @@
-AFontGarde("edx-icons",{glyphs:"",success:function(){console.log("Successfully loaded icon fonts!")},error:function(){console.log("Could not load icon fonts. Falling back to glyphs or images.")},timeout:1e4});
+define([],function(){AFontGarde("edx-icons",{glyphs:"",success:function(){console.log("Successfully loaded icon fonts!")},error:function(){console.log("Could not load icon fonts. Falling back to glyphs or images.")},timeout:1e4})});
