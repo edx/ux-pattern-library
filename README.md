@@ -53,6 +53,7 @@ Also, the Pattern Library currently relies on the following thrd party libraries
 | [breakpoint-sass](https://github.com/at-import/breakpoint)  | 2.6.1 | CSS breakpoint/media-query management |
 | [susy](https://github.com/ericam/susy)  | 2.2.5 | Grid configuration and utilities | 
 | [svg4everybody](https://github.com/jonathantneal/svg4everybody)  | 1.0.0 | SVG support across browsers |
+| [A Font Garde](https://github.com/filamentgroup/a-font-garde)  | 0.1.6 | A set of reliable (nay, bulletproof) patterns for icon fonts. |
 
 ## Documentation
 
