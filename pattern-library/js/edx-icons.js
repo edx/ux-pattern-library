@@ -1,8 +1,9 @@
-define([], function() {
+define([
+    '/public/js/afontgarde.js' // require this for this script to work
+    ], function() {
 
     AFontGarde('edx-icons', {
-        // Add all of the individual icons you want to check for.
-        glyphs: '\uE621\uE622\uE623',
-        timeout: 10000
+        // Check a few random icons to see if our font loads
+        glyphs: '\uE621\uE622\uE623'
     });
 });

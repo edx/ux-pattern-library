@@ -1,1 +1,1 @@
-define([],function(){AFontGarde("edx-icons",{glyphs:"",timeout:1e4})});
+define(["/public/js/afontgarde.js"],function(){AFontGarde("edx-icons",{glyphs:""})});
