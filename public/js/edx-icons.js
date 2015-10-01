@@ -1,0 +1,1 @@
+define(["/public/js/afontgarde.js"],function(){AFontGarde("edx-icons",{glyphs:""})});
