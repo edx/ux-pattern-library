@@ -92,8 +92,8 @@
 
 .field-message {
     font-size: font-size(small);
-    border-bottom-left-radius: $buttons-border-radius;
-    border-bottom-right-radius: $buttons-border-radius;
+    border-bottom-left-radius: $component-border-radius;
+    border-bottom-right-radius: $component-border-radius;
 
     &.has-error {
         padding: spacing-vertical(x-small);
@@ -116,7 +116,7 @@
             @include margin-left(spacing-horizontal(x-small));
             content: "*";
             font-size: font-size(small);
-            color: $field-required-indicator-color;
+            color: $field-required-color;
         }
     }
 
@@ -128,7 +128,7 @@
             @include margin-left(spacing-horizontal(x-small));
             content: "*";
             font-size: font-size(small);
-            color: $field-required-indicator-color;
+            color: $field-required-color;
         }
     }
 }
@@ -151,25 +151,25 @@
     @include transition(all timing(xx-fast) ease-in-out 0s);
     display: inline-block;
     padding: rem($baseline/2);
-    border: 1px solid $input-border-default;
-    background: $input-background-default;
-    font-family: $font-family-sans-serif;
+    border: 1px solid $input-default-border-color;
+    background: $input-default-background;
+    font-family: $text-base-font-family;
     font-size: font-size(base);
-    color: $input-text-default;
+    color: $input-default-color;
 
     // STATE: is active or has focus
     &:focus,
     &.is-active {
-        border-color: $input-border-default-focus;
-        color: $input-text-default-hover;
+        border-color: $input-default-focus-border-color;
+        color: $input-default-focus-color;
         outline: none;
     }
 
     // STATE: disabled
     &:disabled,
     &.is-disabled {
-        border-color: $input-border-disabled;
-        background: $input-background-disabled;
+        border-color: $input-disabled-border-color;
+        background: $input-disabled-background;
         cursor: not-allowed;
     }
 
@@ -230,7 +230,7 @@
         // STATE: is active or has focus
         &:focus,
         &.is-active {
-            border-color: $input-alt-border-focus;
+            border-color: $input-alt-focus-border-color;
             background: $input-alt-background;
         }
 
@@ -300,7 +300,7 @@
         @extend %state-disabled;
 
         .icon {
-            fill: $input-border-disabled;
+            fill: $input-disabled-border-color;
         }
     }
 }

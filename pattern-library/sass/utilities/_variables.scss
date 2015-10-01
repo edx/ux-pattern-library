@@ -359,98 +359,202 @@ $input-width: (
 // #APPLICATIONS
 // ----------------------------
 // base component settings
-$component-focus-color:                 inherit !default;
-$component-focus-bg:                    palette(primary, x-light) !default;
-$component-active-color:                palette(grayscale, white) !default;
-$component-active-bg:                   palette(primary, base) !default;
+$component-focus-color:                     inherit !default;
+$component-focus-bg:                        palette(primary, x-light) !default;
+$component-active-color:                    palette(grayscale, white) !default;
+$component-active-bg:                       palette(primary, base) !default;
+$component-border-radius:                   3px !default;
 
 // base text settings
-$text-base-font-family:                 $font-family-sans-serif !default;
-$text-base-color:                       palette(grayscale, x-dark) !default;
-$text-base-font-weight:                 font-weight(normal) !default;
-$text-base-focus-color:                 palette(grayscale, black-t) !default;
+$text-base-font-family:                     $font-family-sans-serif !default;
+$text-base-color:                           palette(grayscale, x-dark) !default;
+$text-base-font-weight:                     font-weight(normal) !default;
+$text-base-focus-color:                     palette(grayscale, black-t) !default;
 
-$text-emphasized-color:                 palette(grayscale, black-t) !default;
-$text-emphasized-font-weight:           font-weight(normal) !default;
+$text-emphasized-color:                     palette(grayscale, black-t) !default;
+$text-emphasized-font-weight:               font-weight(normal) !default;
 
-$text-de-emphasized-color:              palette(grayscale, dark) !default;
-$text-de-emphasized-font-weight:        font-weight(normal) !default;
+$text-de-emphasized-color:                  palette(grayscale, dark) !default;
+$text-de-emphasized-font-weight:            font-weight(normal) !default;
+
 
 // links
-$link-color:                            palette(primary, dark) !default;
-$link-focus-color:                      palette(primary, base) !default;
-$link-visited-color:                    palette(primary, dark) !default;
+$link-color:                                palette(primary, dark) !default;
+$link-focus-color:                          palette(primary, base) !default;
+$link-visited-color:                        palette(primary, dark) !default;
+
 
 // headings
-$headings-font-weight-normal:           font-weight(normal) !default;
-$headings-font-weight-bold:             font-weight(semi-bold) !default;
-$headings-font-weight-x-bold:           font-weight(bold) !default;
+$headings-font-weight-normal:               font-weight(normal) !default;
+$headings-font-weight-bold:                 font-weight(semi-bold) !default;
+$headings-font-weight-x-bold:               font-weight(bold) !default;
 
-$headings-base-font-family:             $font-family-sans-serif !default;
-$headings-base-font-weight:             $headings-font-weight-normal !default;
-$headings-base-color:                   palette(grayscale, x-dark) !default;
+$headings-base-font-family:                 $font-family-sans-serif !default;
+$headings-base-font-weight:                 $headings-font-weight-normal !default;
+$headings-base-color:                       palette(grayscale, x-dark) !default;
 
-$headings-emphasized-font-family:       $font-family-sans-serif !default;
-$headings-emphasized-color:             palette(grayscale, black-t) !default;
+$headings-emphasized-font-family:           $font-family-sans-serif !default;
+$headings-emphasized-color:                 palette(grayscale, black-t) !default;
 
-$headings-de-emphasized-font-family:    $font-family-sans-serif !default;
-$headings-de-emphasized-color:          palette(grayscale, dark) !default;
+$headings-de-emphasized-font-family:        $font-family-sans-serif !default;
+$headings-de-emphasized-color:              palette(grayscale, dark) !default;
+
 
 // buttons
-$buttons-border-style:                  solid !default;
-$buttons-border-size:                   1px !default;
-$buttons-elevated-shadow:               3px !default;
-$buttons-border-radius:                 3px !default;
-$buttons-font-weight:                   font-weight(semi-bold) !default;
+$btn-border-style:                          solid !default;
+$btn-border-size:                           1px !default;
+$btn-shadow:                                3px !default;
+$btn-font-weight:                           font-weight(semi-bold) !default;
+$btn-border-radius:                         $component-border-radius !default;
+
+// default button
+$btn-default-border-color:                  palette(primary, base) !default;
+$btn-default-background:                    palette(grayscale, white) !default;
+$btn-default-color:                         palette(primary, base) !default;
+// $btn-default-shadow:                     ;
+$btn-default-focus-background:              palette(primary, base) !default;
+$btn-default-focus-color:                   palette(grayscale, white) !default;
+// $btn-default-focus-color:                ;
+// $btn-default-focus-shadow:               ;
+$btn-default-active-border-color:           palette(primary, dark) !default;
+$btn-default-active-background:             palette(primary, dark) !default;
+// $btn-default-active-color:               ;
+// $btn-default-active-shadow:              ;
+
+// disabled button
+$btn-disabled-border-color:                 palette(grayscale, light) !default;
+$btn-disabled-background:                   palette(grayscale, white) !default;
+$btn-disabled-color:                        palette(grayscale, dark) !default;
+
+// primary button
+$btn-primary-border-color:                  palette(primary, base) !default;
+$btn-primary-background:                    palette(primary, base) !default;
+$btn-primary-color:                         palette(grayscale, white) !default;
+// $btn-primary-shadow:                     ;
+$btn-primary-focus-border-color:            palette(primary, accent) !default;
+$btn-primary-focus-background:              palette(primary, accent) !default;
+// $btn-primary-focus-color:                ;
+// $btn-primary-focus-shadow:               ;
+$btn-primary-active-border-color:           palette(primary, base) !default;
+$btn-primary-active-background:             palette(primary, base) !default;
+// $btn-primary-active-color:               ;
+// $btn-primary-active-shadow:              ;
+$btn-primary-disabled-background:           palette(grayscale, x-light) !default;
+$btn-primary-disabled-color:                palette(grayscale, dark) !default;
+
+// secondary button
+$btn-secondary-border-color:                $transparent !default;
+$btn-secondary-background:                  $transparent !default;
+$btn-secondary-color:                       palette(primary, base) !default;
+// $btn-secondary-shadow:                   ;
+$btn-secondary-focus-border-color:          palette(grayscale-cool, light) !default;
+// $btn-secondary-focus-background:         ;
+// $btn-secondary-focus-color:              ;
+// $btn-secondary-focus-shadow:             ;
+$btn-secondary-active-border-color:         palette(primary, base) !default;
+// $btn-secondary-active-background:        ;
+$btn-secondary-active-color:                palette(primary, base) !default;
+// $btn-secondary-active-shadow:            ;
+
+// elevated
+$btn-elevated-border-color:                 palette(primary, base) !default;
+$btn-elevated-background:                   palette(primary, base) !default;
+$btn-elevated-color:                        palette(grayscale, white) !default;
+$btn-elevated-shadow:                       inset 0 0 -$btn-shadow 0 0 palette(primary, dark) !default;
+// $btn-elevated-focus-border-color:        ;
+$btn-elevated-focus-background:             palette(primary, accent) !default;
+// $btn-elevated-focus-color:               ;
+$btn-elevated-focus-shadow:                 inset 0 0 -$btn-shadow 0 0 palette(primary, dark) !default;
+// $btn-elevated-active-border-color:       ;
+$btn-elevated-active-background:            palette(primary, dark) !default;
+// $btn-elevated-active-color:              ;
+$btn-elevated-active-shadow:                inset 0 $btn-shadow 0 0 palette(primary, x-dark) !default;
+$btn-elevated-disabled-border-color:        palette(grayscale, x-light) !default;
+$btn-elevated-disabled-background:          palette(grayscale, x-light) !default;
+$btn-elevated-disabled-shadow:              inset 0 -1px 0 palette(grayscale, light);
+
+// elevated-alt
+$btn-elevated-alt-border-color:             palette(grayscale-cool, light);
+$btn-elevated-alt-background:               $transparent !default;
+$btn-elevated-alt-color:                    palette(primary, base);
+$btn-elevated-alt-shadow:                   inset 0 0 -$btn-elevated-shadow 0 0 palette(grayscale-cool, light) !default;
+$btn-elevated-alt-focus-border-color:       palette(primary, base) !default;
+$btn-elevated-alt-focus-background:         palette(primary, accent) !default;
+$btn-elevated-alt-focus-color:              palette(grayscale, white) !default;
+$btn-elevated-alt-focus-shadow:             inset 0 0 -$btn-elevated-shadow 0 0 palette(primary, base) !default;
+// $btn-elevated-alt-active-border-color:   ;
+$btn-elevated-alt-active-background:        palette(primary, dark) !default;
+// $btn-elevated-alt-active-color:          ;
+$btn-elevated-alt-active-shadow:            inset 0 $btn-elevated-shadow 0 0 palette(primary, x-dark) !default;
+$btn-elevated-alt-disabled-border-color:    palette(grayscale, x-light) !default;
+$btn-elevated-alt-disabled-background:      palette(grayscale, x-light) !default;
+$btn-elevated-alt-disabled-shadow:          inset 0 -1px 0 palette(grayscale, light) !default;
+
+// overlay
+$btn-overlay-border-color:                  palette(grayscale, white) !default;
+$btn-overlay-background:                    $transparent !default;
+$btn-overlay-color:                         palette(grayscale, white) !default;
+// $btn-overlay-focus-border-color:         ;
+$btn-overlay-focus-background:              palette(grayscale, white) !default;
+$btn-overlay-focus-color:                   palette(primary, base) !default;
+// $btn-overlay-active-border-color:        ;
+// $btn-overlay-active-background:          ;
+$btn-overlay-active-color:                  palette(primary, dark) !default;
+$btn-overlay-disabled-border-color:         palette(grayscale, trans) !default;
+// $btn-overlay-disabled-background:        ;
+$btn-overlay-disabled-color:                palette(grayscale, white) !default;
+$btn-overlay-disabled-focus-color:          palette(grayscale, white) !default;
+$btn-overlay-disabled-focus-border-color:   palette(grayscale, trans) !default;
+$btn-overlay-disabled-focus-background:     $transparent !default;
 
 // forms
-$label-color:                           $text-base-color !default;
-$label-color-active:                    palette(grayscale, x-dark) !default;
+$label-color:                               $text-base-color !default;
+$label-color-active:                        palette(grayscale, x-dark) !default;
 
-$input-placeholder-text:                palette(grayscale-cool, light) !default;
+$input-placeholder-text:                    palette(grayscale-cool, light) !default;
 
-$input-background-default:              palette(grayscale, white) !default;
-$input-background-default-focus:        $input-background-default !default;
-$input-check-radio-background-default:  palette(grayscale-cool, x-light) !default;
-$input-check-radio-background-checked:  palette(primary, base) !default;
-$input-border-default:                  palette(grayscale, x-light) !default;
-$input-border-default-focus:            palette(primary, accent) !default;
-$input-control-color:                   palette(primary, base) !default;
-$input-text-default:                    palette(grayscale-cool, x-dark) !default;
-$input-text-default-hover:              palette(grayscale-cool, x-dark) !default;
+$input-default-background:                  palette(grayscale, white) !default;
+$input-default-background-focus:            $input-default-background !default;
+$input-check-radio-background:              palette(grayscale-cool, x-light) !default;
+$input-check-radio-checked-background:      palette(primary, base) !default;
+$input-default-border-color:                palette(grayscale, x-light) !default;
+$input-default-focus-border-color:          palette(primary, accent) !default;
+$input-default-color:                       palette(grayscale-cool, x-dark) !default;
+$input-default-focus-color:                 palette(grayscale-cool, x-dark) !default;
+$input-control-color:                       palette(primary, base) !default;
 
-$input-background-disabled:             palette(grayscale-cool, x-light) !default;
-$input-border-disabled:                 palette(grayscale-cool, light) !default;
-$input-text-disabled:                   palette(grayscale-cool, light) !default;
+$input-disabled-background:                 palette(grayscale-cool, x-light) !default;
+$input-disabled-border-color:               palette(grayscale-cool, light) !default;
+$input-disabled-text:                       palette(grayscale-cool, light) !default;
 
-$input-alt-background:                  $transparent !default;
-$input-alt-border-focus:                palette(grayscale, x-dark) !default;
+$input-alt-background:                      $transparent !default;
+$input-alt-focus-border-color:              palette(grayscale, x-dark) !default;
 
-$input-slider-track-default:            palette(grayscale, x-light) !default;
-$input-slider-border-default:           $input-slider-track-default !default;
-$input-slider-border-default-radius:    $buttons-border-radius !default;
-$input-slider-handle-default:           palette(primary, light) !default;
-$input-slider-handle-default-hover:     palette(primary, base) !default;
-$input-slider-default-focus:            palette(primary, accent) !default;
-$input-slider-default-hover:            palette(primary, x-accent) !default;
-$input-slider-track-disabled:           palette(grayscale, x-light) !default;
-$input-slider-disabled-border:          $input-slider-track-disabled !default;
-$input-slider-handle-disabled:          palette(grayscale, base) !default;
-$input-slider-disabled-focus:           palette(grayscale, light) !default;
+$input-slider-track:                        palette(grayscale, x-light) !default;
+$input-slider-border:                       $input-slider-track !default;
+$input-slider-border-radius:                $component-border-radius !default;
+$input-slider-handle:                       palette(primary, light) !default;
+$input-slider-handle-focus:                 palette(primary, base) !default;
+$input-slider-focus:                        palette(primary, accent) !default;
+$input-slider-hover:                        palette(primary, x-accent) !default;
+$input-slider-disabled-track:               palette(grayscale, x-light) !default;
+$input-slider-disabled-border:              $input-slider-disabled-track !default;
+$input-slider-disabled-handle:              palette(grayscale, base) !default;
+$input-slider-disabled-focus:               palette(grayscale, light) !default;
 
-$input-progress-track:                  palette(grayscale, x-light) !default;
-$input-progress-border:                 $input-progress-track !default;
-$input-progress-border-radius:          $buttons-border-radius !default;
-$input-progress-track-done:             palette(primary, accent) !default;
+$input-progress-track:                      palette(grayscale, x-light) !default;
+$input-progress-border:                     $input-progress-track !default;
+$input-progress-border-radius:              $component-border-radius !default;
+$input-progress-completed-track:            palette(primary, accent) !default;
 
-$field-tip-color:                       palette(grayscale-cool, dark) !default;
-$field-required-indicator-color:        $label-color !default;
+$field-tip-color:                           palette(grayscale-cool, dark) !default;
+$field-required-color:                      $label-color !default;
 
 // tables
-$table-cell-padding:                    spacing-vertical(small) spacing-horizontal(small) !default;
-$table-condensed-cell-padding:          spacing-vertical(x-small) spacing-horizontal(x-small) !default;
-$table-bg:                              palette(grayscale, white) !default;
-$table-accent-bg:                       palette(primary, accent) !default;
-$table-focus-bg:                        $component-focus-bg !default;
-$table-active-bg:                       $component-active-bg !default;
-$table-border-color:                    palette(grayscale, x-light) !default;
+$table-cell-padding:                        spacing-vertical(small) spacing-horizontal(small) !default;
+$table-condensed-cell-padding:              spacing-vertical(x-small) spacing-horizontal(x-small) !default;
+$table-bg:                                  palette(grayscale, white) !default;
+$table-accent-bg:                           palette(primary, accent) !default;
+$table-focus-bg:                            $component-focus-bg !default;
+$table-active-bg:                           $component-active-bg !default;
+$table-border-color:                        palette(grayscale, x-light) !default;

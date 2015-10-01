@@ -39,7 +39,7 @@ body {
     @extend %depth-0;
     color: $text-base-color;
     font-size: font-size(base);
-    font-family: $font-family-sans-serif;
+    font-family: $text-base-font-family;
 }
 
 p,
