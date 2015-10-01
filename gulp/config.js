@@ -22,11 +22,6 @@ module.exports = {
             sourcemapsLocation: '.'
         },
 
-        settings_production: {
-            outputStyle: 'compressed',
-            autoprefixer: { browsers: ['last 2 version'] }
-        },
-
         // pattern library
         src_files:              src + '/sass/**/*.scss',
         dest:                   dest + '/css',
