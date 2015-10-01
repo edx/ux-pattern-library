@@ -484,6 +484,7 @@
             margin: 0 auto spacing-vertical(x-small) auto;
 
             .icon {
+                font-size: rem(48); // Initial setting to match slider
                 color: palette(primary, base);
             }
         }
