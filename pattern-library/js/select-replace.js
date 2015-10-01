@@ -63,9 +63,10 @@ define([
                             '<select class="' + replaced[0].className + ' is-replaced" id="' + replaced[0].id + '" name="' + replaced[0].name + '" ' + disabled + '>' + replaced[0].innerHTML + '</select>',
                             '<span class="' + variables.customClass + ' ' + statuses.join(' ') + '" aria-hidden="true">',
                                 '<span class="' + variables.valueClass + '">' + CustomSelectReplacement.setInitialText($el) + '</span>',
-                                '<svg class="icon ' + variables.iconClass + '" title="Down arrow">',
-                                    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/public/icons/edx-svg/svgdefs.svg#' + variables.iconClass + '"></use>',
-                                '</svg>',
+                                '<span class="icon-fallback-glyph">',
+                                    '<span class="icon ' + variables.iconClass + '" aria-hidden="true"></span>',
+                                    '<span class="text">Down arrow</span>',
+                                '</span>',
                             '</span>',
                         '</div>'
                         ].join(''));
