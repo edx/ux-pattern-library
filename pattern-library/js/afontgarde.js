@@ -207,8 +207,8 @@
 
 	var doc = w.document,
 		ref,
-		css = ['.FONT_NAME.supports-generatedcontent .icon-fallback-text .icon { display: inline-block; }',
-			'.FONT_NAME.supports-generatedcontent .icon-fallback-text .text { clip: rect(0 0 0 0); overflow: hidden; position: absolute; height: 1px; width: 1px; }',
+		css = ['.FONT_NAME.generatedcontent .icon-fallback-text .icon { display: inline-block; }',
+			'.FONT_NAME.generatedcontent .icon-fallback-text .text { clip: rect(0 0 0 0); overflow: hidden; position: absolute; height: 1px; width: 1px; }',
 			'.FONT_NAME .icon-fallback-glyph .icon:before { font-size: 1em; font-size: inherit; line-height: 1; line-height: inherit; }'];
 
 	function addEvent( type, callback ) {

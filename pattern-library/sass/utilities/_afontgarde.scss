@@ -29,7 +29,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 }
 
 /* Careful, don’t use adjoining classes here (IE7) */
-.supports-no-generatedcontent .icon-fallback-glyph .text {
+.no-generatedcontent .icon-fallback-glyph .text {
 	clip: auto;
 	overflow: visible;
 	position: static;
@@ -52,6 +52,6 @@ ADDED BY afontgarde.js:
 	content: "";
 }
 /* The img fallback version is not as reliable since it does not check to make sure the fontloaded font has loaded. If we did add the .fontloaded class, it would unnecessarily request the fallback image. */
-.supports-fontface.supports-generatedcontent .icon-fallback-img .icon {
+.fontface.generatedcontent .icon-fallback-img .icon {
 	background-image: none;
 }

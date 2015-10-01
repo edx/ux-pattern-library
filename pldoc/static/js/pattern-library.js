@@ -3,7 +3,7 @@ require.config({
     paths: {
         jquery: "/public/js/jquery.min",
         svg4everybody: "/public/js/svg4everybody.min",
-        modernizr: "/public/js/modernizr.fontface-generatedcontent.js",
+        modernizr: "/public/js/modernizr-custom.js",
         afontgarde: "/public/js/afontgarde.js",
         edxicons: "/public/js/edx-icons.js"
     },
@@ -18,7 +18,7 @@ require([
     'jquery',
     '/public/js/ui.js',
     '/public/js/svg4everybody.min.js',
-    '/public/js/modernizr.fontface-generatedcontent.js',
+    '/public/js/modernizr-custom.js',
     '/public/js/afontgarde.js',
     '/public/js/edx-icons.js'
     ],
