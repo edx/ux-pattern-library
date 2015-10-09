@@ -1,0 +1,17 @@
+// ------------------------------
+// edX Pattern Library Site: Third Party Libraries
+
+// About: third party libraries and dependencies import
+
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../../bower_components/susy/sass/susy';
+@import '../../../bower_components/breakpoint-sass/stylesheets/breakpoint';
+
+// reference RTL/LTR specific libs
+@if $layout-direction == rtl {
+    @import '../../../bower_components/bi-app-sass/bi-app/bi-app-rtl';
+} @else {
+    @import '../../../bower_components/bi-app-sass/bi-app/bi-app-ltr';
+}
+
+@import 'syntax';

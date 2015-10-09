@@ -1,18 +1,23 @@
 var gulp            = require('gulp'),
-    config          = require('../config').scripts,
     browserSync     = require('browser-sync'),
+    config          = require('../config'),
     uglify          = require('gulp-uglify');
 
-gulp.task('scripts', ['pldoc_scripts-lint'], function() {
+gulp.task('scripts', ['scripts-lint'], function() {
+
     return gulp.src([
             // setup script sequence
-            './_src/components/jquery/dist/jquery.min.js',
-            './_src/components/requirejs-plugins/lib/require.js',
-            './_src/pattern-library/js/select-replace.js',
-            './_src/components/svg4everybody/svg4everybody.min.js' // polyfill for SVGs in IE9-11
+            config.lib.src + '/requirejs/require.js',
+            config.lib.src + '/jquery/dist/jquery.min.js',
+            config.lib.src + '/svg4everybody/svg4everybody.min.js',
+            config.scripts.src + '/modernizr-custom.js',
+            config.scripts.src + '/afontgarde.js',
+            config.scripts.src + '/select-replace.js',
+            config.scripts.src + '/edx-icons.js',
+            config.scripts.src + '/testing.js'
         ])
         .pipe(uglify())
-        .pipe(gulp.dest(config.local)) // move just for browersync + local preview
-        .pipe(gulp.dest(config.dest))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest(config.scripts.local)) // move for just browsercync + local preview
+        .pipe(browserSync.reload({ stream: true }))
+        .pipe(gulp.dest(config.scripts.dest))
 });

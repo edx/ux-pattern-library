@@ -16,7 +16,12 @@ viewclass:  element
                 </li>
                 {% if page.example %}
                 <li class="meta meta-examplelink">
-                    <a class="pldoc-link" href="{{ site.baseurl }}{{ site.exampleurl }}{{page.example}}"><span class="sr-only">View</span>Detailed Example</a>
+                    <a class="pldoc-link" href="{{ site.exampleurl }}{{ page.example }}"><span class="sr-only">View </span>Detailed Example</a>
+                </li>
+                {% endif %}
+                {% if page.doc %}
+                <li class="meta meta-doclink">
+                    <a class="pldoc-link" href="{{ site.github.docurl }}{{ page.doc }}"><span class="sr-only">View </span>Documentation</a>
                 </li>
                 {% endif %}
             </ul>
@@ -35,9 +40,11 @@ viewclass:  element
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-markup" data-href="#{{page.slug}}-markup">Markup</button>
                 </li>
+                {% if page.scssurl %}
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-styling" data-href="#{{page.slug}}-styling">Styling</button>
                 </li>
+                {% endif %}
             </ul>
             {% endif %}
 
@@ -50,9 +57,9 @@ viewclass:  element
                         <div class="pldoc-settings">
                             <div class="pldoc-setting pldoc-setting-sizer">
                                 <label for="iconFontSlider" class="sr-only">Drag to resize icons</label>
-                                <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-valuemin="12" aria-valuemax="144" aria-valuenow="24">
+                                <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="48" role="slider" aria-valuemin="12" aria-valuemax="144" aria-valuenow="48">
                                 <label for="iconFontSliderValue" class="sr-only">Icon size in pixels</label>
-                                <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">px
+                                <input type="text" id="iconFontSliderValue" size="3" value="48" readonly="true">px
                             </div>
                         </div>
                         {% endif %}
@@ -76,7 +83,7 @@ viewclass:  element
                     <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-style-title">{{page.title}} Style</h2>
 
                     <div class="pldoc-tab-content">
-                        <p class="copy copy-base">You can find <a class="pldoc-link" href="{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                        <p class="copy copy-base">You can find <a class="pldoc-link" href="{{site.github.repo}}{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                     </div>
                 </div>
             </div>
