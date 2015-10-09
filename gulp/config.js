@@ -31,7 +31,7 @@ module.exports = {
         src_files:              src + '/sass/**/*.scss',
         dest:                   dest + '/css',
         dest_files:             dest + '/css/**/*.css',
-        local:                  local + '/public/pldoc/css',
+        local:                  local + '/public/css',
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/sass',
