@@ -47,9 +47,11 @@ viewclass:  index
                     <li class="pldoc-tab-label">
                         <button class="pldoc-link pldoc-link-markup" data-href="#{{post.slug}}-markup">Markup</button>
                     </li>
+                    {% if post.scssurl %}
                     <li class="pldoc-tab-label">
                         <button class="pldoc-link pldoc-link-styling" data-href="#{{post.slug}}-styling">Styling</button>
                     </li>
+                    {% endif %}
                 </ul>
                 {% endif %}
 
@@ -62,9 +64,9 @@ viewclass:  index
                             <div class="pldoc-settings">
                                 <div class="pldoc-setting pldoc-setting-sizer">
                                     <label for="iconFontSlider" class="sr-only">Drag to resize icons</label>
-                                    <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="24" role="slider" aria-valuemin="12" aria-valuemax="144" aria-valuenow="24">
+                                    <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="48" role="slider" aria-valuemin="12" aria-valuemax="144" aria-valuenow="48">
                                     <label for="iconFontSliderValue" class="sr-only">Icon size in pixels</label>
-                                    <input type="text" id="iconFontSliderValue" size="3" value="24" readonly="true">px
+                                    <input type="text" id="iconFontSliderValue" size="3" value="48" readonly="true">px
                                 </div>
                             </div>
                             {% endif %}
@@ -102,8 +104,10 @@ viewclass:  index
 
 <div class="pldoc-wrapper-link-top">
     <a class="btn btn-secondary btn-large pldoc-link-top" href="#content-top">
-        <svg class="icon icon-arrow-up"><use xlink:href="/public/icons/edx-svg/svgdefs.svg#icon-arrow-up"></use></svg>
-        <span class="icon-text sr-only">Return to the top of this page</span>
+    <span class="icon-fallback icon-fallback-text">
+            <span class="icon icon-arrow-up" aria-hidden="true"></span>
+            <span class="text">Return to the top of this page</span>
+        </span>
     </a>
 </div>
 
