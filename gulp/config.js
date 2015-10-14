@@ -65,6 +65,7 @@ module.exports = {
         src:                    src + '/js',
         src_files:              src + '/js/**/*.js',
         dest:                   dest + '/js',
+        lib_dest:               [dest, 'js', lib_dir].join('/'),
         local:                  local + '/public/js',
 
         // documentation site
