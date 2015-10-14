@@ -9,7 +9,7 @@ gulp.task('pldoc_scripts', ['scripts-lint'], function() {
 
     // TODO: it would be better to move to the gulp pipeline below, but the uglify step throws an error
     gulp.src([config.lib.src_files])
-        .pipe(gulp.dest(scriptsConfig.lib_dest))
+        .pipe(gulp.dest(scriptsConfig.local))
         .pipe(gulp.dest(scriptsConfig.dest));
 
     return gulp.src([
