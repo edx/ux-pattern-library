@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "authors": [
     "edX UX Team <ux@edx.org>"
   ],
@@ -27,7 +27,7 @@
     "_layouts",
     "_posts",
     "_site",
-    "_src/pldoc",
+    "pldoc",
     "about.md",
     "bower_components",
     "CNAME",
