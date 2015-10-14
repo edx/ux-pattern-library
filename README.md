@@ -10,8 +10,8 @@ The (working) UI library and Front End Styleguide for edX/Open edX applications 
 2. [License](#license)
 3. [Dependencies](#dependencies)
 4. [Documentation](#documentation)
-5. [Development - Documentation Site](#development---documentation-site)
-6. [Development - UX Pattern Library Package](#development---ux-pattern-library-package)
+5. [Development - Documentation Site](#development---documentation-site-pldoc)
+6. [Development - UX Pattern Library Package](#development---ux-pattern-library-bower-package)
 7. [Use and Deployment](#use-and-deployment)
 8. [Contributions](#contributions)
 
