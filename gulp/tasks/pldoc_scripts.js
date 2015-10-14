@@ -1,20 +1,28 @@
 var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
-    config          = require('../config').scripts,
+    config          = require('../config'),
     uglify          = require('gulp-uglify');
 
 gulp.task('pldoc_scripts', ['scripts-lint'], function() {
+    'use strict';
+    var scriptsConfig = config.scripts;
+
+    // TODO: it would be better to move to the gulp pipeline below, but the uglify step throws an error
+    gulp.src([config.lib.src_files])
+        .pipe(gulp.dest(scriptsConfig.lib_dest))
+        .pipe(gulp.dest(scriptsConfig.dest));
+
     return gulp.src([
             // setup script sequence
-            config.pldoc_src + '/pattern-library.js',
-            config.pldoc_src + '/ui.js',
-            config.pldoc_src + '/tabs.js',
-            config.pldoc_src + '/size-slider.js',
-            config.pldoc_src + '/color-contrast.js',
-            config.pldoc_src + '/start-collapsible.js'
+            scriptsConfig.pldoc_src + '/pattern-library.js',
+            scriptsConfig.pldoc_src + '/ui.js',
+            scriptsConfig.pldoc_src + '/tabs.js',
+            scriptsConfig.pldoc_src + '/size-slider.js',
+            scriptsConfig.pldoc_src + '/color-contrast.js',
+            scriptsConfig.pldoc_src + '/start-collapsible.js'
         ])
         .pipe(uglify())
-        .pipe(gulp.dest(config.local)) // move just for browersync + local preview
+        .pipe(gulp.dest(scriptsConfig.local)) // move just for browersync + local preview
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest(config.dest));
+        .pipe(gulp.dest(scriptsConfig.dest));
 });

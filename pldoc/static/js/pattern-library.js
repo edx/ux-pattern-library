@@ -4,46 +4,35 @@
 require.config({
     baseUrl: '/public/js',
     paths: {
-        jquery: '/public/js/jquery.min',
-        underscore: '/public/js/bower_components/underscore/underscore',
-        backbone: '/public/js/bower_components/backbone/backbone',
-        modernizr: '/public/js/modernizr-custom',
         afontgarde: '/public/js/afontgarde',
+        backbone: '/public/js/backbone/backbone',
         edxicons: '/public/js/edx-icons',
-        'edx-ui-toolkit': '/public/js/bower_components/edx-ui-toolkit/components'
+        'edx-ui-toolkit': '/public/js/edx-ui-toolkit/components',
+        jquery: '/public/js/jquery.min',
+        modernizr: '/public/js/modernizr-custom',
+        underscore: '/public/js/underscore/underscore'
     },
     shim: {
-        jquery: {
-            exports: 'jquery'
-        },
         afontgarde: {
             exports: 'AFontGarde'
         },
+        backbone: {
+            deps: ['jquery', 'underscore'],
+            exports: 'Backbone'
+        },
+        jquery: {
+            exports: 'jquery'
+        },
         underscore: {
             exports: '_'
-        },
-        backbone: {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone',
-            init: function (_, $) {
-                'use strict';
-                Backbone.$ = $;
-                return Backbone;
-            }
         }
     }
 });
 
 require([
     'jquery',
-<<<<<<< HEAD
-    '/public/js/ui.js',
-    '/public/js/modernizr-custom.js',
-=======
     'ui',
-    'svg4everybody.min',
     'modernizr-custom',
->>>>>>> added start-collapsible main
     'afontgarde',
     'edx-icons',
     'start-collapsible'
