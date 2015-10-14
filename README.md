@@ -82,7 +82,8 @@ system](http://jekyllrb.com/docs/installation/).
 
 **Mac Users**:
 ```
-$ gem install jekyll
+$ gem install bundler
+$ bundle install
 ```
 
 Windows users: Windows users have a bit more work to do, but luckily
