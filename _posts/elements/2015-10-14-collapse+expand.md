@@ -26,12 +26,14 @@ info: Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas f
     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
 </div>
 
-<div class="example-set">
+<div id="collapsible-example" data-collapse-text="Expand Toggle" data-expand-text="Collapse Toggle">
 
-    <button type="button" class="btn btn-link btn-base ce-placeholder-toggle">Collapse/Expand Toggle</button>
+    <button type="button" aria-controls="collapsible-target" class="btn btn-link btn-base js-collapsible-toggle">
+        Collapse Toggle
+    </button>
 
-    <div class="ce-placeholder-target">
-        
+    <div id="collapsible-target" class="js-collapsible-target">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
     </div>
 
 </div>
