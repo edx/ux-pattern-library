@@ -4,27 +4,32 @@
 require.config({
     baseUrl: '/public/js',
     paths: {
-        afontgarde: '/public/js/afontgarde',
-        backbone: '/public/js/backbone/backbone',
-        edxicons: '/public/js/edx-icons',
-        'edx-ui-toolkit': '/public/js/edx-ui-toolkit/components',
         jquery: '/public/js/jquery.min',
+        underscore: '/public/js/bower_components/underscore/underscore',
+        backbone: '/public/js/bower_components/backbone/backbone',
         modernizr: '/public/js/modernizr-custom',
-        underscore: '/public/js/underscore/underscore'
+        afontgarde: '/public/js/afontgarde',
+        edxicons: '/public/js/edx-icons',
+        'edx-ui-toolkit': '/public/js/bower_components/edx-ui-toolkit/components'
     },
     shim: {
-        afontgarde: {
-            exports: 'AFontGarde'
-        },
-        backbone: {
-            deps: ['jquery', 'underscore'],
-            exports: 'Backbone'
-        },
         jquery: {
             exports: 'jquery'
         },
+        afontgarde: {
+            exports: 'AFontGarde'
+        },
         underscore: {
             exports: '_'
+        },
+        backbone: {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone',
+            init: function (_, $) {
+                'use strict';
+                Backbone.$ = $;
+                return Backbone;
+            }
         }
     }
 });
