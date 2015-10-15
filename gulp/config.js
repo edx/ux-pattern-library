@@ -76,7 +76,7 @@ module.exports = {
     lib:                    {
         // third party libraries
         src:                    './' + lib_dir,
-        src_files:              './' + lib_dir + '/**/*.js'
+        src_files:              './' + lib_dir + '/**/*'
     },
     jekyll:                     {
         home:                   'index.html',

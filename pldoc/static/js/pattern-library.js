@@ -11,8 +11,8 @@ require.config({
         jquery: '/public/js/jquery.min',
         modernizr: '/public/js/modernizr-custom',
         svg4everybody: '/public/js/svg4everybody.min',
+        text: '/public/js/text/text',
         underscore: '/public/js/underscore/underscore'
-        text: '/public/js/bower_components/text/text'
     },
     shim: {
         afontgarde: {
