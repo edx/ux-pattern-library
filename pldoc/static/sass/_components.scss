@@ -784,6 +784,49 @@
     }
 }
 
+// collapsible
+.example-collapsible-1 {
+
+    .collapsible-toggle {
+        margin-bottom: spacing-vertical(small);
+    }
+}
+
+.example-collapsible-2 {
+
+    .collapsible-toggle {
+        margin-bottom: spacing-vertical(small);
+    }
+}
+
+.example-collapsible-3 {
+
+    .collapsible-toggle {
+        margin-top: spacing-vertical(small);
+    }
+
+    .collapsible-target {
+        border-top: rem(1) solid palette(grayscale, x-light);
+        padding-top: spacing-vertical(small);
+    }
+}
+
+.example-collapsible-4 {
+
+    .collapsible-toggle {
+        margin-bottom: spacing-vertical(small);
+        @include text-align(right);
+    }
+
+    .card {
+        margin-bottom: spacing-vertical(small);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 
 // ------------------------------
 // #EXAMPLE - GRID

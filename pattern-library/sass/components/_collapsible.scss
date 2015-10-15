@@ -1,0 +1,57 @@
+// ------------------------------
+// edX Pattern Library: Components - Collapsible Content
+
+// About: Contains base styling for collapse/expand UI contained in the collapsible pattern (powered by the UI Toolkit's collapsible Component - https://github.com/edx/edx-ui-toolkit).
+
+// #GLOBALS
+// #OPTIONS
+// ----------------------------
+
+// ----------------------------
+// #GLOBALS
+// ----------------------------
+.collapsible-container {
+
+    // STATE: is collapsed
+    &.is-collapsed {
+
+        .collapsible-toggle {
+
+        }
+
+        .collapsible-target {
+
+        }
+    }
+}
+
+.collapsible-toggle {
+
+}
+
+.collapsible-target {
+
+}
+
+
+// ----------------------------
+// #OPTIONS
+// ----------------------------
+// toggle with icons
+.collapsible-container {
+
+    .collapsible-toggle .icon-arrow-up {
+        @include transition(
+            transform timing(x-fast) ease-in-out 0s
+        );
+    }
+
+    // STATE: is collapsed
+    &.is-collapsed {
+
+        .collapsible-toggle .icon-arrow-up {
+            @include transform(rotate(-180deg));
+            @include transform-origin(50% 50%);
+        }
+    }
+}
