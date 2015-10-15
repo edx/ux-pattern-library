@@ -11,6 +11,7 @@ require.config({
         jquery: '/public/js/jquery.min',
         modernizr: '/public/js/modernizr-custom',
         svg4everybody: '/public/js/svg4everybody.min',
+        text: '/public/js/text/text',
         underscore: '/public/js/underscore/underscore'
     },
     shim: {
@@ -37,7 +38,8 @@ require([
     'modernizr-custom',
     'afontgarde',
     'edx-icons',
-    'start-collapsible'
+    'start-collapsible',
+    'dropdown-menu'
     ],
     function($, Ui) {}
 );

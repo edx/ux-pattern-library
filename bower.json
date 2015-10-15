@@ -49,9 +49,10 @@
     "bi-app-sass": "*",
     "bourbon": "~4.2.3",
     "breakpoint-sass": "~2.6.1",
-    "edx-ui-toolkit": "edx/edx-ui-toolkit#a719fdfef4e9830d679d36ea0782a43f716b58fd",
+    "edx-ui-toolkit": "edx/edx-ui-toolkit#98312429df2f22b1712e1cea5903ab17a1e3b2fc",
     "requirejs": "~2.1.15",
     "susy": "~2.2.5",
-    "svg4everybody": "~1.0.0"
+    "svg4everybody": "~1.0.0",
+    "text": "~2.0.14"
   }
 }

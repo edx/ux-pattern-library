@@ -19,7 +19,8 @@ gulp.task('pldoc_scripts', ['scripts-lint'], function() {
             scriptsConfig.pldoc_src + '/tabs.js',
             scriptsConfig.pldoc_src + '/size-slider.js',
             scriptsConfig.pldoc_src + '/color-contrast.js',
-            scriptsConfig.pldoc_src + '/start-collapsible.js'
+            scriptsConfig.pldoc_src + '/start-collapsible.js',
+            scriptsConfig.pldoc_src + '/dropdown-menu.js'
         ])
         .pipe(uglify())
         .pipe(gulp.dest(scriptsConfig.local)) // move just for browersync + local preview
