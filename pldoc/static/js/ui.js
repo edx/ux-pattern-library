@@ -20,6 +20,12 @@ define([
 
         setupHtml: function() {
             $('html').removeClass('no-js');
+            $("#pldoc-nav-elements ul li a").each(function (index, element) {
+                if ( $( element ).attr( "href" ) === window.location.pathname ) {
+                  $( element ).addClass("is-current");
+                  return false;
+                }
+            });
         },
 
         setupPalettes: function() {
