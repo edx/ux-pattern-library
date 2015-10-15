@@ -50,7 +50,7 @@
     "bi-app-sass": "*",
     "bourbon": "~4.2.3",
     "breakpoint-sass": "~2.6.1",
-    "edx-ui-toolkit": "edx/edx-ui-toolkit#a719fdfef4e9830d679d36ea0782a43f716b58fd",
+    "edx-ui-toolkit": "edx/edx-ui-toolkit#62f44b57de95392e45e0c7d5d68f39180d3c0fa3",
     "requirejs": "~2.1.15",
     "susy": "~2.2.5"
   }
