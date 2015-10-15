@@ -4,7 +4,7 @@
 define(['edx-ui-toolkit/views/collapsible-view'], function(CollapsibleView) {
     'use strict';
     new CollapsibleView({
-        el: '#collapsible-example',
+        el: '.collapsible-container',
         toggleTextSelector: '.js-collapsible-toggle',
         collapsibleSelector: '.js-collapsible-target'
     });
