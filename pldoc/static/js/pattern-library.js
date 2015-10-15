@@ -1,29 +1,50 @@
+/**
+ * Defines libraries used on PL Doc site.
+ */
 require.config({
     baseUrl: '/public/js',
     paths: {
-        jquery: "/public/js/jquery.min",
-        svg4everybody: "/public/js/svg4everybody.min",
-        modernizr: "/public/js/modernizr-custom",
-        afontgarde: "/public/js/afontgarde",
-        edxicons: "/public/js/edx-icons"
+        jquery: '/public/js/jquery.min',
+        underscore: '/public/js/bower_components/underscore/underscore',
+        backbone: '/public/js/bower_components/backbone/backbone',
+        svg4everybody: '/public/js/svg4everybody.min',
+        modernizr: '/public/js/modernizr-custom',
+        afontgarde: '/public/js/afontgarde',
+        edxicons: '/public/js/edx-icons',
+        'edx-ui-toolkit': '/public/js/bower_components/edx-ui-toolkit/components',
+        text: '/public/js/bower_components/text/text'
     },
     shim: {
-        'jquery': {
+        jquery: {
             exports: 'jquery'
         },
-        'afontgarde': {
+        afontgarde: {
             exports: 'AFontGarde'
+        },
+        underscore: {
+            exports: '_'
+        },
+        backbone: {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone',
+            init: function (_, $) {
+                'use strict';
+                Backbone.$ = $;
+                return Backbone;
+            }
         }
     }
 });
 
 require([
     'jquery',
-    '/public/js/ui.js',
-    '/public/js/svg4everybody.min.js',
-    '/public/js/modernizr-custom.js',
+    'ui',
+    'svg4everybody.min',
+    'modernizr-custom',
     'afontgarde',
-    '/public/js/edx-icons.js'
+    'edx-icons',
+    'start-collapsible',
+    'dropdown-menu'
     ],
     function($, Ui) {}
 );
