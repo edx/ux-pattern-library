@@ -11,7 +11,8 @@ require.config({
         modernizr: '/public/js/modernizr-custom',
         afontgarde: '/public/js/afontgarde',
         edxicons: '/public/js/edx-icons',
-        'edx-ui-toolkit': '/public/js/bower_components/edx-ui-toolkit/components'
+        'edx-ui-toolkit': '/public/js/bower_components/edx-ui-toolkit/components',
+        text: '/public/js/bower_components/text/text'
     },
     shim: {
         jquery: {
@@ -42,7 +43,8 @@ require([
     'modernizr-custom',
     'afontgarde',
     'edx-icons',
-    'start-collapsible'
+    'start-collapsible',
+    'dropdown-menu'
     ],
     function($, Ui) {}
 );
