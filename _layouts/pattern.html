@@ -1,18 +1,18 @@
 ---
 layout: default
-category: elements
-viewclass:  element
+category: patterns
+viewclass:  pattern
 ---
 
-<section class="pldoc-wrapper-element">
-    <article class="pldoc-element pldoc-element-{{ page.slug }}" tabindex="-1" aria-label="{{ page.slug }}">
-        <header class="pldoc-element-header">
-            <h1 class="pldoc-heading pldoc-element-title hd-4">{{ page.title }}</h1>
+<section class="pldoc-wrapper-pattern">
+    <article class="pldoc-pattern pldoc-pattern-{{ page.slug }}" tabindex="-1" aria-label="{{ page.slug }}">
+        <header class="pldoc-pattern-header">
+            <h1 class="pldoc-heading pldoc-pattern-title hd-4">{{ page.title }}</h1>
 
-            <ul class="pldoc-list pldoc-element-meta copy copy-micro de-emphasized">
+            <ul class="pldoc-list pldoc-pattern-meta copy copy-micro de-emphasized">
                 <li class="meta meta-updated">
-                    <span class="pldoc-element-meta-updated-label">Last updated on </span>
-                    <time class="pldoc-element-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
+                    <span class="pldoc-pattern-meta-updated-label">Last updated on </span>
+                    <time class="pldoc-pattern-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
                 </li>
                 {% if page.example %}
                 <li class="meta meta-examplelink">
@@ -27,13 +27,13 @@ viewclass:  element
             </ul>
         </header>
 
-        <div class="pldoc-element-info">
+        <div class="pldoc-pattern-info">
             <p class="copy copy-base">{{page.info}}</p>
         </div>
 
         <div class="pldoc-tab-wrapper">
             {% if page.tags contains "pattern" %}
-            <ul class="pldoc-tab-labels pldoc-list pldoc-element-navigation">
+            <ul class="pldoc-tab-labels pldoc-list pldoc-pattern-navigation">
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-preview is-active" data-href="#{{page.slug}}-preview">Preview</button>
                 </li>
@@ -49,8 +49,8 @@ viewclass:  element
             {% endif %}
 
             <div class="pldoc-tabs">
-                <div class="pldoc-tab pldoc-element-preview is-active" id="{{page.slug}}-preview" tabindex="-1">
-                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-preview-title">{{page.title}} Preview</h2>
+                <div class="pldoc-tab pldoc-pattern-preview is-active" id="{{page.slug}}-preview" tabindex="-1">
+                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-preview-title">{{page.title}} Preview</h2>
 
                     <div class="pldoc-tab-content">
                         {% if page.tags contains "icons" %}
@@ -69,8 +69,8 @@ viewclass:  element
                 </div>
 
                 {% if page.tags contains "pattern" %}
-                <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{page.slug}}-markup" tabindex="-1">
-                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-markup-title">{{page.title}} Markup</h2>
+                <div class="pldoc-tab pldoc-pattern-markup is-hidden" id="{{page.slug}}-markup" tabindex="-1">
+                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-markup-title">{{page.title}} Markup</h2>
 
                     <div class="pldoc-tab-content">
                         {% highlight html %}
@@ -79,8 +79,8 @@ viewclass:  element
                     </div>
                 </div>
 
-                <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{page.slug}}-styling" tabindex="-1">
-                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-style-title">{{page.title}} Style</h2>
+                <div class="pldoc-tab pldoc-pattern-styling is-hidden" id="{{page.slug}}-styling" tabindex="-1">
+                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-style-title">{{page.title}} Style</h2>
 
                     <div class="pldoc-tab-content">
                         <p class="copy copy-base">You can find <a class="pldoc-link" href="{{site.github.repo}}{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>

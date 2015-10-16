@@ -14,20 +14,20 @@ $pldoc-tab-label-height:           rem(4);  // height of tab labels
 // #HELPERS
 // ------------------------------
 
-// element: hide styling tab
-%element-hide-styling {
+// pattern: hide styling tab
+%pattern-hide-styling {
 
     .pldoc-tab-label .pldoc-link-styling,
-    .pldoc-element-styling {
+    .pldoc-pattern-styling {
         display: none;
     }
 }
 
-// element: hide markup tab
-%element-hide-markup {
+// pattern: hide markup tab
+%pattern-hide-markup {
 
     .pldoc-tab-label .pldoc-link-markup,
-    .pldoc-element-markup {
+    .pldoc-pattern-markup {
         display: none;
     }
 }
