@@ -31,6 +31,7 @@ nbproject
 
 #Ignore: Front End/Local Development
 .sass-cache
+.map
 _site
 bower_components
 node_modules
