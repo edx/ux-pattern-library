@@ -54,8 +54,8 @@
     }
 }
 
-// element
-.pldoc-wrapper-element {
+// pattern
+.pldoc-wrapper-pattern {
     padding: spacing-vertical(small) spacing-horizontal(base);
     border-bottom: rem(2) solid palette(grayscale, mid-dark);
     box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
@@ -69,15 +69,15 @@
     }
 }
 
-.pldoc-element {
+.pldoc-pattern {
     @include container();
 }
 
-.pldoc-element-header {
+.pldoc-pattern-header {
     @include clearfix();
 }
 
-.pldoc-element-title {
+.pldoc-pattern-title {
     margin-bottom: spacing-vertical(x-small);
 
     @include susy-breakpoint($bp-screen-xl, $susy-default) {
@@ -88,7 +88,7 @@
 
 
 
-.pldoc-element-meta {
+.pldoc-pattern-meta {
     @include susy-breakpoint($bp-screen-xl, $susy-default) {
         @include span(6 last);
         @include text-align(right);

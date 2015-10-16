@@ -26,7 +26,7 @@
     }
 }
 
-// copyable elements
+// copyable patterns
 .is-copyable {
     display: inline-block;
     white-space: nowrap;
@@ -265,27 +265,27 @@
 }
 
 // ------------------------------
-// #ELEMENTS
+// #PATTERNS
 // ------------------------------
-.pldoc-element {
+.pldoc-pattern {
 
     .example-set-hd {
         margin-bottom: spacing-vertical(small);
     }
 }
 
-.pldoc-element-header {
+.pldoc-pattern-header {
     margin-bottom: spacing-vertical(base);
     border-bottom: 1px solid palette(grayscale, dark);
     padding-bottom: spacing-vertical(small);
 
-    .pldoc-element-meta {
+    .pldoc-pattern-meta {
         @extend %reset-lists;
     }
 }
 
 
-// element info tabs
+// pattern info tabs
 .pldoc-tab-labels {
     @include clearfix();
     @extend %reset-lists;
@@ -326,8 +326,8 @@
     }
 }
 
-// markup section of element
-.pldoc-element-markup {
+// markup section of pattern
+.pldoc-pattern-markup {
 
     code {
         font-family: $font-family-monospace;
@@ -336,11 +336,11 @@
 
 
 // ------------------------------
-// #SPECIFIC ELEMENTS
+// #SPECIFIC PATTERNS
 // ------------------------------
 
 // color swatches
-.pldoc-element-colors {
+.pldoc-pattern-colors {
 
     .example-color {
         @include transition(all timing(x-fast) ease-in-out);
@@ -452,7 +452,7 @@
 }
 
 // buttons
-.pldoc-element-buttons {
+.pldoc-pattern-buttons {
 
     .btn {
         display: inline-block;
@@ -468,7 +468,7 @@
 }
 
 // icons
-.pldoc-element-icons {
+.pldoc-pattern-icons {
 
     .example-icon {
         @include text-align(center);
@@ -532,7 +532,7 @@
 }
 
 // post
-.pldoc-element-grid {
+.pldoc-pattern-grid {
 
     .col,
     .gallery-item {
@@ -851,7 +851,7 @@
 // ------------------------------
 
 // post
-.pldoc-element-depth {
+.pldoc-pattern-depth {
 
     // padding for demo purposes
     .depth {

@@ -1,9 +1,9 @@
-<nav class="pldoc-nav pldoc-nav-elements pldoc-nav-internal" id="pldoc-nav-elements" role="navigation" aria-label="Patterns and elements">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="pldoc-heading-elements">Elements</h2>
+<nav class="pldoc-nav pldoc-nav-patterns pldoc-nav-internal" id="pldoc-nav-patterns" role="navigation" aria-label="Patterns">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="pldoc-heading-patterns">patterns</h2>
 
-    <ul class="nav-list list-elements" aria-labelledby="pldoc-heading-elements">
-        {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
-        {% for post in sorted_elements_posts %}
+    <ul class="nav-list list-patterns" aria-labelledby="pldoc-heading-patterns">
+        {% assign sorted_patterns_posts = site.categories.patterns | sort: 'title' %}
+        {% for post in sorted_patterns_posts %}
         <li class="nav-list-item">
             {% if page.title == "Home" %}
             <a class="pldoc-link" href="#{{post.slug}}">{{post.title}}</a>

@@ -4,6 +4,11 @@
 Nothing yet
 
 
+## 0.3.2 (2015-10-16)
+* switched to using the term 'pattern' rather than 'element' for clarity throughout docs and UI 
+
+- - -
+
 ## 0.3.1 (2015-10-16)
 * Removed not used svg4everybody bower component (see 0.3.0)
 

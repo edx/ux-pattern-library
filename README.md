@@ -187,7 +187,7 @@ After running the default task, your local instance of the Pattern Library can
 be viewable at http://localhost:3000. There are additional views:
 
 * http://localhost:3000/examples/**/* - where full page examples and demos are kept
-* http://localhost:3000/elements/**/* - permalinks for individually documented pattern library elements
+* http://localhost:3000/patterns/**/* - permalinks for individually documented pattern library patterns
 
 - - -
 
@@ -251,7 +251,7 @@ All components and utilities can be imported by default by importing the ``_edx-
 // ------------------------------
 // edX Pattern Library Site: Main Style Compile
 
-// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
+// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the pattern stylings.
 
 // #CONFIG:         app-centric configuration/overrides
 // #LIB:            third party libraries and dependencies
@@ -288,7 +288,7 @@ $layout-direction: ltr;
 See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples, details on how to use partials, and general background.
 
 #### Custom Reference/Import
-If you'd like to customize what to import, you can manually import specific elements from the bower package.
+If you'd like to customize what to import, you can manually import specific patterns from the bower package.
 
 - - -
 
