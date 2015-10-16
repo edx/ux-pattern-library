@@ -3,20 +3,20 @@ layout: default
 title: Home
 viewclass:  index
 ---
-<div class="pldoc-list-elements">
+<div class="pldoc-list-patterns">
 
-    {% assign sorted_elements_posts = site.categories.elements | sort: 'title' %}
-    {% for post in sorted_elements_posts %}
-    <section class="pldoc-wrapper-element">
-        <article class="pldoc-element pldoc-element-{{ post.slug }}" id="{{ post.slug }}" tabindex="-1" aria-label="{{ post.slug }}">
+    {% assign sorted_patterns_posts = site.categories.patterns | sort: 'title' %}
+    {% for post in sorted_patterns_posts %}
+    <section class="pldoc-wrapper-pattern">
+        <article class="pldoc-pattern pldoc-pattern-{{ post.slug }}" id="{{ post.slug }}" tabindex="-1" aria-label="{{ post.slug }}">
 
-            <header class="pldoc-element-header">
-                <h1 class="pldoc-heading pldoc-element-title hd-4">{{ post.title }}</h1>
+            <header class="pldoc-pattern-header">
+                <h1 class="pldoc-heading pldoc-pattern-title hd-4">{{ post.title }}</h1>
 
-                <ul class="pldoc-list pldoc-element-meta copy copy-micro de-emphasized">
+                <ul class="pldoc-list pldoc-pattern-meta copy copy-micro de-emphasized">
                     <li class="meta meta-updated">
-                        <span class="pldoc-element-meta-updated-label">Last updated on </span>
-                        <time class="pldoc-element-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
+                        <span class="pldoc-pattern-meta-updated-label">Last updated on </span>
+                        <time class="pldoc-pattern-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
                     </li>
                     <li class="meta meta-permalink">
                         <a class="pldoc-link" href="{{post.url}}">Permalink <span class="sr-only">to {{ post.slug }}</span></a>
@@ -34,13 +34,13 @@ viewclass:  index
                 </ul>
             </header>
 
-            <div class="pldoc-element-info">
+            <div class="pldoc-pattern-info">
                 <p class="copy copy-base">{{post.info}}</p>
             </div>
 
             <div class="pldoc-tab-wrapper">
                 {% if post.tags contains "pattern" %}
-                <ul class="pldoc-tab-labels pldoc-list pldoc-element-navigation">
+                <ul class="pldoc-tab-labels pldoc-list pldoc-pattern-navigation">
                     <li class="pldoc-tab-label">
                         <button class="pldoc-link pldoc-link-preview is-active" data-href="#{{post.slug}}-preview">Preview</button>
                     </li>
@@ -56,8 +56,8 @@ viewclass:  index
                 {% endif %}
 
                 <div class="pldoc-tabs">
-                    <div class="pldoc-tab pldoc-element-preview is-active" id="{{post.slug}}-preview" tabindex="-1">
-                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-preview-title">{{post.title}} Preview</h2>
+                    <div class="pldoc-tab pldoc-pattern-preview is-active" id="{{post.slug}}-preview" tabindex="-1">
+                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-preview-title">{{post.title}} Preview</h2>
 
                         <div class="pldoc-tab-content">
                             {% if post.tags contains "icons" %}
@@ -76,8 +76,8 @@ viewclass:  index
                     </div>
 
                     {% if post.tags contains "pattern" %}
-                    <div class="pldoc-tab pldoc-element-markup is-hidden" id="{{post.slug}}-markup" tabindex="-1">
-                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-markup-title">{{post.title}} Markup</h2>
+                    <div class="pldoc-tab pldoc-pattern-markup is-hidden" id="{{post.slug}}-markup" tabindex="-1">
+                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-markup-title">{{post.title}} Markup</h2>
 
                         <div class="pldoc-tab-content">
                             {% highlight html %}
@@ -86,8 +86,8 @@ viewclass:  index
                         </div>
                     </div>
 
-                    <div class="pldoc-tab pldoc-element-styling is-hidden" id="{{post.slug}}-styling" tabindex="-1">
-                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-element-styling-title">{{post.title}} Style</h2>
+                    <div class="pldoc-tab pldoc-pattern-styling is-hidden" id="{{post.slug}}-styling" tabindex="-1">
+                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-styling-title">{{post.title}} Style</h2>
 
                         <div class="pldoc-tab-content">
                             <p class="copy copy-base">View <a class="pldoc-link" href="{{site.github.repo}}{{site.github.path_scss}}{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
