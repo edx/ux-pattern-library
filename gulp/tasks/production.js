@@ -5,7 +5,8 @@ var gulp            = require('gulp'),
 gulp.task( 'production', function() {
     runSequence(
         'clean',
-        'images',
+        ['fonts'],
+        ['images'],
         'scripts-uglify',
         'styles-minify'
     )
