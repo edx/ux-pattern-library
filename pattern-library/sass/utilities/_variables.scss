@@ -72,6 +72,7 @@ $brand-secondary-accent:        rgb(242, 108, 170) !default;
 $success: $green !default;
 $warning: $yellow !default;
 $error: $red !default;
+$information: $brand-primary !default;
 
 // colors: palettes
 $palettes: (
@@ -141,6 +142,14 @@ $palettes: (
         trans:      transparentize($warning, 0.50),
         x-trans:    transparentize($warning, 0.75),
         xx-trans:   transparentize($warning, 0.95)
+    ),
+    information: (
+        base:       $information,
+        light:      tint($information, 33%),
+        dark:       shade($information, 33%),
+        trans:      transparentize($information, 0.50),
+        x-trans:    transparentize($information, 0.75),
+        xx-trans:   transparentize($information, 0.95)
     ),
 );
 
@@ -301,6 +310,7 @@ $spacing-vertical:          (
     small:                  ($baseline),
     x-small:                ($baseline/2),
     xx-small:               ($baseline/4),
+    xxx-small:              ($baseline/10),
     mid-large:              ($baseline*3),
     large:                  ($baseline*4),
     x-large:                ($baseline*8)
