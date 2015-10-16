@@ -389,7 +389,7 @@
   display: table;
 }
 
-.example-set:last-child {
+.example-set:last-child, .alert-copy > :last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
@@ -1461,7 +1461,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 .hd-3.emphasized,
 .hd-4.emphasized,
 .hd-5.emphasized,
-.hd-6.emphasized {
+.hd-6.emphasized, .alert-title {
   color: black;
   font-weight: 600;
 }
@@ -1510,14 +1510,14 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.6;
 }
 
-.hd-6 {
+.hd-6, .alert-title {
   margin-bottom: 0.3125rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
 }
 
-.emphasized.hd-6 {
+.emphasized.hd-6, .emphasized.alert-title {
   font-weight: 700;
 }
 
@@ -1597,15 +1597,18 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   margin-bottom: 1.25rem;
 }
 
-.copy-meta {
+.copy-meta, .alert-copy {
   font-size: 0.875rem;
   line-height: 1.6;
 }
 
 .copy-meta p,
+.alert-copy p,
 .copy-meta ol,
+.alert-copy ol,
 .copy-meta ul,
-.copy-meta dl {
+.alert-copy ul,
+.copy-meta dl, .alert-copy dl {
   margin-bottom: 1.25rem;
 }
 
@@ -6154,6 +6157,25 @@ html, body {
   display: inline-block;
 }
 
+.pldoc-nav .list-patterns .pattern::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.pldoc-nav .list-patterns .pattern .pattern-title,
+.pldoc-nav .list-patterns .pattern .badge {
+  display: inline-block;
+}
+
+.pldoc-nav .list-patterns .pattern .pattern-title {
+  width: 80%;
+}
+
+.pldoc-nav .list-patterns .pattern .badge {
+  float: right ;
+}
+
 .pldoc-nav-internal .pldoc-link {
   position: relative;
 }
@@ -6925,6 +6947,57 @@ html, body {
 
 .pldoc-pattern-depth .zebra-stripe .slat {
   margin-bottom: 0;
+}
+
+.wrapper-alert {
+  margin-bottom: 0.625rem;
+}
+
+.alert {
+  border-left: 0.25rem solid #cfd8dc;
+  border-radius: 0.1875rem;
+  padding: 1.25rem 1.25rem;
+  background-color: #e9e8e8;
+}
+
+.alert-information {
+  border-color: #0079bc;
+}
+
+.alert-warning {
+  border-color: #fdbc56;
+}
+
+.alert-error {
+  border-color: #b20610;
+}
+
+.alert-success {
+  border-color: #25b85a;
+}
+
+.alert-ui-toolkit {
+  border-color: #ffde20;
+}
+
+.badge {
+  text-align: center;
+  border-radius: 0.9375rem;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 0.03125rem;
+}
+
+.badge .badge-abbreviation {
+  border-bottom: none;
+}
+
+.badge-ui-toolkit {
+  background-color: #ffde20;
+  color: #282c2e;
 }
 
 @media (min-width: 1024px) {
