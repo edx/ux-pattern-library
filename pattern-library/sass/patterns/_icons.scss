@@ -6,6 +6,120 @@
 // NOTE: Read more at https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Icons
 
 // ----------------------------
+// #CONFIG
+// ----------------------------
+$edx-icons:
+linkedin-square
+caret-down
+caret-up
+caret-left
+caret-right
+dot-circle-o
+square-o
+square
+circle
+circle-thin
+genderless
+search
+envelope-o
+star
+user
+check
+close
+remove
+times
+search-plus
+search-minus
+cog
+gear
+trash-o
+home
+file-o
+clock-o
+refresh
+list-alt
+lock
+flag
+volume-off
+volume-down
+volume-up
+book
+print
+camera
+video-camera
+pencil
+edit
+pencil-square-o
+share-square-o
+check-square-o
+fast-backward
+play
+pause
+stop
+fast-forward
+chevron-left
+chevron-right
+times-circle
+question-circle
+info-circle
+times-circle-o
+arrow-up
+arrow-down
+compress
+plus
+minus
+exclamation-circle
+eye
+eye-slash
+exclamation-triangle
+warning
+calendar
+comment
+shopping-cart
+twitter-square
+facebook-square
+comments
+thumb-tack
+external-link
+upload
+square-o2
+bullhorn
+arrow-circle-down
+filter
+arrows-alt
+chain
+link
+copy
+files-o
+bars
+navicon
+reorder
+list-ul
+table
+money
+sort
+unsorted
+envelope
+rotate-left
+undo
+sitemap
+angle-left
+angle-right
+angle-up
+angle-down
+circle-o
+quote-left
+spinner
+mail-reply
+reply
+chain-broken
+unlink
+unlock-alt
+ellipsis-h
+check-square
+file
+cc;
+
 
 // ----------------------------
 // #GLOBALS
@@ -14,6 +128,7 @@
     display: inline-block;
     color: currentColor;
 }
+
 
 // ----------------------------
 // #ICONS
@@ -363,14 +478,14 @@
     content: "\e65f";
 }
 
+
 // ----------------------------
 // #FALLBACKS
 // ----------------------------
+// If you'd like to use a fallback image or glyph for icons above, in case the font doesn't load, or @font-face isn't available
 
-// If you'd like to use a fallback image or glyph for icons above,
-// in case the font doesn't load, or @font-face isn't available...
-
-// Images
-.icon-exclamation-triangle {
-    background: url('../images/icons/exclamation-triangle.svg') center center no-repeat;
+@each $edx-icon in $edx-icons {
+    .icon-fallback-img .icon-#{$edx-icon} {
+    background: url('../fonts/edx-icons/fallback-img/#{$edx-icon}.svg') center center no-repeat;
+  }
 }
