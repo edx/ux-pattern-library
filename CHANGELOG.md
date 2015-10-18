@@ -5,6 +5,13 @@ Nothing yet
 
 - - -
 
+## 0.4.1 (2015-10-23)
+* Re-organized edx-icons SVG image fallbacks to be part of pattern-library package
+* Optimized edx-icons SVG image files
+* Automated fallback rules for edx-icons
+
+- - -
+
 ## 0.4.0 (2015-10-20)
 
 * syncs up variable naming standards with several already set variables (buttons and forms primarily)
