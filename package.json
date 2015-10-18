@@ -20,6 +20,7 @@
     "gulp-jshint": "*",
     "gulp-minify-css": "*",
     "gulp-notify": "*",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
