@@ -7,6 +7,6 @@ gulp.task( 'build-development', function(cb) {
         'fonts',
         'images',
         ['scripts','pldoc_scripts'],
-        'styles',
+        ['styles','pldoc_styles'],
     cb);
 });

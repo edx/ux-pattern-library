@@ -5,6 +5,6 @@ gulp.task( 'build-production', function(cb) {
     runSequence(
         'build-development',
         'scripts-uglify',
-        'styles-minify',
+        ['styles-minify', 'pldoc_styles-minify'],
     cb);
 });

@@ -8,6 +8,7 @@ gulp.task( 'production', function() {
         ['fonts'],
         ['images'],
         'scripts-uglify',
-        'styles-minify'
+        'styles-minify',
+        'pldoc_styles-minify'
     )
 });
