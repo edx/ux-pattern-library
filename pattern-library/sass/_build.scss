@@ -1,0 +1,38 @@
+// ------------------------------
+// edX Pattern Library : Build Partial
+
+// About: Shared sass compilation between LTR/RTL produced stylesheets. Includes all dependencies and current pattern styling of the edX Pattern Library
+
+// ------------------------------
+// #CONFIG + UTILITIES
+// ------------------------------
+@import 'utilities/functions';
+
+// set RTL/LTR specific variables
+@if $layout-direction == rtl {
+    @import 'utilities/variables-rtl';
+} @else {
+    @import 'utilities/variables-ltr';
+}
+
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/helpers';
+@import 'utilities/normalize';
+@import 'utilities/reset';
+@import 'utilities/typography';
+@import 'utilities/afontgarde';
+
+
+// ------------------------------
+// #COMPONENTS
+// ------------------------------
+@import 'patterns/colors';
+@import 'patterns/buttons';
+@import 'patterns/headings';
+@import 'patterns/copy';
+@import 'patterns/forms';
+@import 'patterns/grid';
+@import 'patterns/layouts';
+@import 'patterns/depth';
+@import 'patterns/icons';

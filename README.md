@@ -35,10 +35,9 @@ library/blob/master/LICENSE.txt) for details.
 
 Using the edX Pattern Library source code in a project current requires:
 
-* the use and compilation of Sass into CSS using perferrably [LibSass](http://sass-lang.com/libsass) (the edX Pattern Library currently does not provide pre-compiled CSS files).
 * locally installing [Bower](http://bower.io/) - [see below](#development---ux-pattern-library-package) for more installation details.
-* manually calling the ``edx-pattern-library`` Sass partial in the project's main Sass compile file.
 * Use of modern web browsers - see [Open edX/edX browser support](http://docstrings.readthedocs.org/en/latest/front_matter/browsers.html)
+* the use and compilation of Sass into CSS using perferrably [LibSass](http://sass-lang.com/libsass) (if using the Sass method for including the pattern library).
 
 
 ### Third Party Dependencies
@@ -231,12 +230,27 @@ bower install edx-pattern-library --save
 
 - - -
 
-### Step 3: Reference UX Pattern Library Partials in your Sass Compile
+### Step 2: Use the UX Pattern Library in your project's Styling
 
-You can now use edX UX Pattern Library Sass/styling in your project. To do so,
-just import all utilities and what components you want.
+#### Use the pre-compiled UX Pattern Library CSS files (BETA)
+You can use the edX UX Pattern Library as a static CSS base alongside other CSS files. To do so add a reference in the ``<head>`` of your app's HTML
 
-#### Default Reference/Import
+```html
+<link rel="stylesheet" href="[path to your bower or manually managed assets]/edx-pattern-library-ltr.min.css" />
+```
+
+**NOTE**: The Bower package comes with several variations of compiled CSS, including:
+
+* RTL and LTR support - noted by either a ``*-ltr`` or ``*-rtl`` suffix)
+* Minified and expanded CSS output formats - for production and development/debugging purposes respectively.
+
+**NOTE:** This way of using the edX UX Pattern Library is currently in beta is not as widely tested as the Sass method (described below). If you find bugs/issues, please [log them](#bugs-and-issues).
+.
+#### Reference UX Pattern Library Partials in your Sass Compile
+You can also use the edX UX Pattern Library as part of your CSS's Sass compilation (**our preferred method**). To do so,
+just import all utilities (see the ``utilities`` directory) and what components  (see the ``components`` directory)  you want. 
+
+##### Default Reference/Import
 All components and utilities can be imported by default by importing the ``_edx-pattern-library.scss`` partial. See the example below taken from [``main-ltr.scss``]() +  the [``_build.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_build.scss) compilation of the edX Pattern Library's Documentation Site:
 
 ```scss
@@ -279,12 +293,10 @@ $layout-direction: ltr;
 
 See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples, details on how to use partials, and general background.
 
-#### Custom Reference/Import
-If you'd like to customize what to import, you can manually import specific patterns from the bower package.
+##### Custom Reference/Import
+If you'd like to customize what to import, you can manually import specific elements from the bower package.
 
-- - -
-
-### Step 4: Configure Settings
+##### Configure Settings
 
 There are a few places you can start to explore configuring aspects of the UX
 Pattern Library for your purposes. You can find many configurations and base

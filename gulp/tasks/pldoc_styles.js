@@ -6,13 +6,14 @@ var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
     sourcemaps      = require('gulp-sourcemaps');
 
-gulp.task('styles', function () {
-    return gulp.src(config.src_files)
+gulp.task('pldoc_styles', function () {
+    return gulp.src(config.pldoc_src_files)
         .pipe(sourcemaps.init())
-        .pipe(sass(config.settings_develepment))
+        .pipe(sass(config.settings_development))
         .on('error', handleErrors)
         .pipe(autoprefixer())
         .pipe(sourcemaps.write(config.settings_development.sourcemapsLocation))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.pldoc_local)) // move just for browersync + uncompressed local
+        .pipe(gulp.dest(config.pldoc_dest))
         .pipe(browserSync.reload({stream:true}));
 });
