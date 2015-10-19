@@ -251,8 +251,9 @@
 }
 
 .input-select {
-    height: rem($baseline*2);
+    height: rem($baseline*2.2);
     line-height: spacing-vertical(small);
+    box-sizing: padding-box;
 
     & + .field-message {
         margin-top: -(spacing-vertical(xx-small));

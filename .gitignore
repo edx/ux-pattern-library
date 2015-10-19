@@ -35,3 +35,7 @@ nbproject
 _site
 bower_components
 node_modules
+
+public/css/main-rtl.css
+public/css/main-ltr.css
+
