@@ -23,6 +23,7 @@
     "**/.*",
     "404.html",
     "_config.yml",
+    "_data",
     "_includes",
     "_layouts",
     "_posts",

@@ -1,16 +1,20 @@
 # edX Pattern Library Documentation Site: Overall Config
+
 title:                  edX Pattern Library
 tagline:                The Visual, UI, and Front End styleguide for edX's applications
-url:                    http://ux.edx.org
+
 author:
     name:               edX UX Design Team
     url:                http://www.edx.org
     email:              ux@edx.org
 
+url:                    http://ux.edx.org
+url_example:            examples/
+url_dummy:              http://ux.edx.org
+
 baseurl:                /
 permalink:              /:categories/:title/
 relative_permalinks:    true
-exampleurl:             examples/
 
 exclude:                [
                             "node_modules",
