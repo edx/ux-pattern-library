@@ -70,7 +70,7 @@ recent versions of the following things installed on your local machine.
 | Library                                                              | Version         | Purpose                                                            |  
 | -------------                                                        | -------------   | -------------                                                      |  
 | [Bundler](http://bundler.io/)                                        | 1.10            | Used to install [jekyll](http://jekyllrb.com) and its dependencies |  
-| [NodeJS](http://nodejs.org/)                                         | 0.12.x or 4.0.x | Support for the asset pipeline                                     |  
+| [Node.js](http://nodejs.org/)                                         | 0.12.x or 4.0.x | Support for the asset pipeline                                     |  
 | [Bower](http://bower.io/)                                            | 1.5.0           | fetch and compile javascript assets                                |  
 | [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages | 3.9.0           | Task runner for build process                                      |  
 
@@ -107,7 +107,7 @@ docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
 - - -
 
-### Step 2: Install NodeJS
+### Step 2: Install Node.js
 
 If you've never used Node or npm before, you'll need to install Node. If you use
 homebrew, do:
@@ -122,7 +122,7 @@ Otherwise, you can download and install from [here](http://nodejs.org/download/)
 
 ### Step 3: Install Bower
 
-After instaling NodeJS, you can install [Bower](http://bower.io/), a package
+After instaling Node.js, you can install [Bower](http://bower.io/), a package
 manager we use to download and maintain many of our vendor and external library
 refereces.
 
@@ -215,7 +215,7 @@ edX/Open edX app, please follow these steps:
 
 ### Step 0: Install and Configure Bower
 
-After instaling NodeJS, you can install [Bower](http://bower.io/), a package
+After instaling Node.js, you can install [Bower](http://bower.io/), a package
 manager we use to download and maintain many of our vendor and external library
 refereces.
 
