@@ -1,0 +1,12 @@
+# edX Pattern Library Documentation Site: UI Toolkit Config
+
+name:               edX UI Toolkit
+
+description:
+
+url_github:         https://github.com/edx/edx-ui-toolkit
+
+url_site:
+url_documentation:  https://github.com/edx/edx-ui-toolkit/blob/master/README.md
+
+path_components:    /blob/master/components/views/

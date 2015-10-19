@@ -1,0 +1,13 @@
+# edX Pattern Library Documentation Site: UXPL Config
+
+name:               UX Pattern Library
+
+description:        The (working) Visual, UI, and Front End Styleguide for edX
+
+url_github:         https://github.com/edx/ux-pattern-library
+
+url_site:           http://ux.edx.org
+url_documentation:  https://github.com/edx/ux-pattern-library/wiki/
+
+path_styles:        /blob/master/pattern-library/sass/
+
