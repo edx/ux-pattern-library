@@ -3,21 +3,47 @@
 
 // About: Contains base styling for headings (leading type for sections of content and UI).
 
-// CONFIG
+// SETTINGS
+// HELPERS
 // #GLOBAL
-// #INDIVIDUAL HEADINGS
+// #INDIVIDUAL CASES
 // #CANNED
 
 
 // ----------------------------
-// #CONFIG
+// #SETTINGS
 // ----------------------------
 $headings-count: 8;
+
+$headings-font-weight-normal:               font-weight(normal) !default;
+$headings-font-weight-bold:                 font-weight(semi-bold) !default;
+$headings-font-weight-x-bold:               font-weight(bold) !default;
+
+$headings-base-font-family:                 inherit !default;
+$headings-base-font-weight:                 $headings-font-weight-normal !default;
+$headings-base-color:                       palette(grayscale, x-dark) !default;
+
+$headings-emphasized-font-family:           $font-family-sans-serif !default;
+$headings-emphasized-color:                 palette(grayscale, black-t) !default;
+
+$headings-de-emphasized-font-family:        $font-family-sans-serif !default;
+$headings-de-emphasized-color:              palette(grayscale, dark) !default;
+
+
+// ----------------------------
+// #HELPERS
+// ----------------------------
+%reset-headings {
+    margin: 0 0 spacing-horizontal(base) 0;
+    font-weight: $headings-base-font-weight;
+    font-size: font-size(base);
+    line-height: line-height(base);
+    color: $headings-base-color;
+}
 
 // ----------------------------
 // #GLOBAL
 // ----------------------------
-
 // broad stroke extend for emphasized/de-emphasized headings
 %headings-emphasized {
     color: $headings-emphasized-color;
@@ -48,6 +74,7 @@ $headings-count: 8;
 .hd-6,
 .hd-7 {
 
+
     &.emphasized {
         font-weight: $headings-font-weight-x-bold;
     }
@@ -55,7 +82,7 @@ $headings-count: 8;
 
 
 // ----------------------------
-// #INDIVIDUAL HEADINGS
+// #INDIVIDUAL CASES
 // ----------------------------
 // Level one heading
 %hd-1 {

@@ -3,8 +3,16 @@
 
 // About: Contains base styling for copy (general text and type used in content and functionaly).
 
+// #SETTINGS
 // #GLOBAL
-// #INDIVIDUAL COPY CASES
+// #INDIVIDUAL CASES
+// #CANNED
+
+
+// ----------------------------
+// #SETTINGS
+// ----------------------------
+
 
 // ----------------------------
 // #GLOBAL
@@ -32,6 +40,7 @@
         @extend %copy-de-emphasized;
     }
 }
+
 
 // ----------------------------
 // #INDIVIDUAL COPY CASES
@@ -97,7 +106,9 @@
     }
 }
 
-// application of archetypes
+// ----------------------------
+// #CANNED
+// ----------------------------
 .copy-lead {
     @extend %copy-lead;
 }
@@ -117,4 +128,3 @@
 .copy-micro {
     @extend %copy-micro;
 }
-

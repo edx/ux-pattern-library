@@ -2,34 +2,34 @@
 // edX Pattern Library: Components - Layouts
 
 // About: Contains base settings and options for the preset default Pattern Library UI Layouts.
-// ----------------------------
 
-// #CONFIG
-// #GLOBALS
+// #SETTINGS
+// #GLOBAL
 // #UTILITY
 // #CANNED - IN VIEW
 // #CANNED - VIEW
 
-// ----------------------------
 
 // ----------------------------
-// #CONFIG
+// #SETTINGS
 // ----------------------------
+@import 'grid';
+
 $susy-flush:            layout($susy-default inside); // set susy to make columns flush
 $susy-reversed:         layout($susy-default $grid-direction-reversed); // set susy to make columns display in reverse order
 $susy-view:             layout($susy-default auto); // set susy to make columns view display in reverse order
 $susy-view-flush:       layout($susy-default auto inside); // set susy to make view columns display in reverse order
 $susy-view-reversed:    layout($susy-default auto $grid-direction-reversed); // set susy to make view columns display in reverse order
 
+
 // ----------------------------
-// #GLOBALS
+// #GLOBAL
 // ----------------------------
 
 
 // ----------------------------
 // #UTILITY
 // ----------------------------
-
 // CASE: Layout with gutter-separated columns
 %layout-default {
     @include container($susy-default);
@@ -60,11 +60,11 @@ $susy-view-reversed:    layout($susy-default auto $grid-direction-reversed); // 
     @include container($susy-view-reversed);
 }
 
-
 // basic layout column
 %layout-column {
     @include span(full); // plan for mobile first
 }
+
 
 // ----------------------------
 // #CANNED - IN VIEW

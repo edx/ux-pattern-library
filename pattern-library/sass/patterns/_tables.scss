@@ -1,0 +1,25 @@
+// ------------------------------
+// edX Pattern Library: Components - Tables
+
+// About: Contains base styling for tabular data
+
+// #SETTINGS
+// #GLOBAL
+
+
+// ----------------------------
+// #SETTINGS
+// ----------------------------
+// tables
+$table-cell-padding:                        spacing-vertical(small) spacing-horizontal(small) !default;
+$table-condensed-cell-padding:              spacing-vertical(x-small) spacing-horizontal(x-small) !default;
+$table-bg:                                  palette(grayscale, white) !default;
+$table-accent-bg:                           palette(primary, accent) !default;
+$table-focus-bg:                            $component-focus-bg !default;
+$table-active-bg:                           $component-active-bg !default;
+$table-border-color:                        palette(grayscale, x-light) !default;
+
+
+// ----------------------------
+// #GLOBAL
+// ----------------------------
