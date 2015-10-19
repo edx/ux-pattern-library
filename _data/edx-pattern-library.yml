@@ -8,6 +8,8 @@ url_github:         https://github.com/edx/ux-pattern-library
 
 url_site:           http://ux.edx.org
 url_documentation:  https://github.com/edx/ux-pattern-library/wiki/
+url_project:        https://openedx.atlassian.net/projects/UXPL/issues
 
 path_styles:        /blob/master/pattern-library/sass/
+path_patterns:      /blob/master/_posts/elements/
 

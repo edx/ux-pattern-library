@@ -14,14 +14,14 @@ viewclass:  pattern
                     <span class="pldoc-pattern-meta-updated-label">Last updated on </span>
                     <time class="pldoc-pattern-meta-updated-value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-m/%-d/%Y" }}</time>
                 </li>
-                {% if page.example %}
+                {% if page.url_example %}
                 <li class="meta meta-examplelink">
-                    <a class="pldoc-link" href="{{ site.exampleurl }}{{ page.example }}"><span class="sr-only">View </span>Detailed Example</a>
+                    <a class="pldoc-link" href="{{ site.url_example }}{{ page.url_example }}"><span class="sr-only">View </span>Detailed Example</a>
                 </li>
                 {% endif %}
-                {% if page.doc %}
+                {% if page.url_documentation %}
                 <li class="meta meta-doclink">
-                    <a class="pldoc-link" href="{{ site.github.docurl }}{{ page.doc }}"><span class="sr-only">View </span>Documentation</a>
+                    <a class="pldoc-link" href="{{ site.data.edx-pattern-library.url_documentation }}{{ page.url_documentation }}"><span class="sr-only">View </span>Documentation</a>
                 </li>
                 {% endif %}
             </ul>
@@ -40,7 +40,7 @@ viewclass:  pattern
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-markup" data-href="#{{page.slug}}-markup">Markup</button>
                 </li>
-                {% if page.scssurl %}
+                {% if page.url_styles %}
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-styling" data-href="#{{page.slug}}-styling">Styling</button>
                 </li>
@@ -83,7 +83,7 @@ viewclass:  pattern
                     <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-style-title">{{page.title}} Style</h2>
 
                     <div class="pldoc-tab-content">
-                        <p class="copy copy-base">You can find <a class="pldoc-link" href="{{site.github.repo}}{{site.github.path_scss}}{{page.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                        <p class="copy copy-base">You can find <a class="pldoc-link" href="{{site.data.edx-pattern-library.url_github}}{{site.data.edx-pattern-library.path_styles}}{{page.url_styles}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                     </div>
                 </div>
             </div>

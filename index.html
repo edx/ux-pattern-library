@@ -21,14 +21,14 @@ viewclass:  index
                     <li class="meta meta-permalink">
                         <a class="pldoc-link" href="{{post.url}}">Permalink <span class="sr-only">to {{ post.slug }}</span></a>
                     </li>
-                    {% if post.example %}
+                    {% if post.url_example %}
                     <li class="meta meta-examplelink">
-                        <a class="pldoc-link" href="{{ site.exampleurl }}{{ post.example }}"><span class="sr-only">View </span>Detailed Example</a>
+                        <a class="pldoc-link" href="{{ site.url_example }}{{ post.url_example }}"><span class="sr-only">View </span>Detailed Example</a>
                     </li>
                     {% endif %}
-                    {% if post.doc %}
+                    {% if post.url_documentation %}
                     <li class="meta meta-doclink">
-                        <a class="pldoc-link" href="{{ site.github.docurl }}{{ post.doc }}"><span class="sr-only">View </span>Documentation</a>
+                        <a class="pldoc-link" href="{{ site.data.edx-pattern-library.url_documentation }}{{ post.url_documentation }}"><span class="sr-only">View </span>Documentation</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -47,7 +47,7 @@ viewclass:  index
                     <li class="pldoc-tab-label">
                         <button class="pldoc-link pldoc-link-markup" data-href="#{{post.slug}}-markup">Markup</button>
                     </li>
-                    {% if post.scssurl %}
+                    {% if post.url_styles %}
                     <li class="pldoc-tab-label">
                         <button class="pldoc-link pldoc-link-styling" data-href="#{{post.slug}}-styling">Styling</button>
                     </li>
@@ -90,7 +90,7 @@ viewclass:  index
                         <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-styling-title">{{post.title}} Style</h2>
 
                         <div class="pldoc-tab-content">
-                            <p class="copy copy-base">View <a class="pldoc-link" href="{{site.github.repo}}{{site.github.path_scss}}{{post.scssurl}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                            <p class="copy copy-base">View <a class="pldoc-link" href="{{site.data.edx-pattern-library.url_github}}{{site.data.edx-pattern-library.path_styles}}{{post.url_styles}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
                         </div>
                     </div>
                     {% endif %}
