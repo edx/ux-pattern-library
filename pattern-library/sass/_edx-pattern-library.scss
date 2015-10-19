@@ -4,6 +4,19 @@
 // About: Import all dependencies and current pattern styling of the edX Pattern Library
 
 // ------------------------------
-// #BUILD
+// #CORE
 // ------------------------------
-@import 'build';    // shared compile/build order for all patterns
+@import 'global/core';
+
+
+// ------------------------------
+// #PATTERNS
+// ------------------------------
+@import 'patterns/buttons';
+@import 'patterns/headings';
+@import 'patterns/copy';
+@import 'patterns/forms';
+@import 'patterns/grid';
+@import 'patterns/layouts';
+@import 'patterns/depth';
+@import 'patterns/icons';

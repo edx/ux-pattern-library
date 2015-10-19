@@ -107,15 +107,6 @@
     }
 }
 
-// reset of typography
-%reset-headings {
-    margin: 0 0 spacing-horizontal(base) 0;
-    font-weight: $headings-base-font-weight;
-    font-size: font-size(base);
-    line-height: line-height(base);
-    color: $headings-base-color;
-}
-
 // reset of code
 %reset-code {
     font-family: $font-family-monospace;

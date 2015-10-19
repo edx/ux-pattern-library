@@ -3,10 +3,12 @@
 
 // About: Shared sass compilation between LTR/RTL produced stylesheets
 
+
 // ------------------------------
 // #CONFIG
 // ------------------------------
 @import 'config';
+
 
 // ------------------------------
 // #LIB
@@ -14,6 +16,7 @@
 @import 'lib';
 @import 'syntax';
 @import '../../../pattern-library/sass/edx-pattern-library';
+
 
 // ------------------------------
 // #EXTENSIONS
