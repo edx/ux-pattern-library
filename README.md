@@ -254,13 +254,9 @@ All components and utilities can be imported by default by importing the ``_edx-
 
 ```scss
 // ------------------------------
-// edX Pattern Library Site: Main Style Compile
+// edX Pattern Library Site: Main Style Compile - LTR
 
-// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the pattern stylings.
-
-// #CONFIG:         app-centric configuration/overrides
-// #LIB:            third party libraries and dependencies
-// #EXTENSIONS:     add-ons and further customizations
+// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
 
 
 // ------------------------------
@@ -284,8 +280,8 @@ $layout-direction: ltr;
 @import 'components';
 @import 'layouts';
 @import 'views';
-@import 'print';
 @import 'overrides';
+
 ```
 
 **NOTE**: Since both libSass and RubySass lack a way to pass in variables/configuration into their ``@import {file}`` method, each app is responsible for 1) storing any bower-based dependencies, including the edx-pattern-library, in the best directory structure for that app's set up and 2) creating a ``_lib.scss`` partial to import all third party library dependencies from that structure for the Pattern Library to use (see above example).
@@ -293,10 +289,48 @@ $layout-direction: ltr;
 See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples, details on how to use partials, and general background.
 
 ##### Custom Reference/Import
-If you'd like to customize what to import, you can manually import specific elements from the bower package.
+If you'd like to customize what to import, you can manually import specific elements from the bower package. Here's an example of customizing the default import demo above:
+
+```scss
+// ------------------------------
+// edX Pattern Library Site: Main Style Compile - LTR
+
+// About: **Customized** Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
+
+
+// ------------------------------
+// #CONFIG
+// ------------------------------
+$layout-direction: ltr;
+@import 'config';
+
+
+// ------------------------------
+// #LIB
+// ------------------------------
+@import 'lib';
+@import '{path to edx-pattern-library Bower package}/pattern-library/sass/global/core';
+
+// use UXPL's buttons, headings, copy, grid, and layouts
+@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/buttons';
+@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/headings';
+@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/copy';
+@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/grid';
+@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/layouts';
+
+
+// ------------------------------
+// #EXTENSIONS
+// ------------------------------
+@import 'utilities';
+@import 'components';
+@import 'layouts';
+@import 'views';
+@import 'overrides';
+
+```
 
 ##### Configure Settings
-
 There are a few places you can start to explore configuring aspects of the UX
 Pattern Library for your purposes. You can find many configurations and base
 settings in ``src/sass/utilities/_variables.scss`` and can override/customize
@@ -311,7 +345,6 @@ production-focused Sass/Front End tooling. It's expected that your app/site
 has its own Sass compiler (preferrably LibSass).
 
 ## Contributions
-
 Contributions are very welcome. The easiest way is to fork this repo, and then
 make a pull request from your fork. The first time you make a pull request, you
 may be asked to sign a Contributor Agreement.
@@ -321,11 +354,9 @@ platform/blob/master/CONTRIBUTING.rst) in the main edx-platform repo for
 important additional information.
 
 ### Contributing and the UX Pattern Library
-
 There are a few additional details alongside our general guidelines to keep in mind contributing to the UX Pattern Library:
 
 #### Pattern Library Features, Ideas, and Improvements
-
 If you're looking to suggest an idea or you're thinking about developing a
 feature, start a discussion [by visiting the Open edX JIRA
 site](https://openedx.atlassian.net/secure/Dashboard.jspa) and  create a new
@@ -335,7 +366,6 @@ project "UX Pattern Library" and the issue type "New Feature" or "Improvement"
 account](https://openedx.atlassian.net/admin/users/sign-up)).
 
 #### Bugs and Issues
-
 If you notice an issue or a bug with the Pattern Library, we would love ot hear
 about it! Follow the above instructions on logging a new UX Pattern Library JIRA
 issue and then assign the issue type of "Bug" to your issue. An edX UX Team
@@ -349,24 +379,20 @@ the ticket to indicate that you are working on it. Don't hesitate to ask
 clarifying questions on the ticket as needed, too, if anything is unclear.
 
 #### Submitting Code
-
 For code contributions, please open up a pull request! PRs will get OSPR tickets
 assigned to them, as mentioned in the above contributing guidelines.
 
 #### Approval by UX and Front End Team Members
-
 An edX UX Team member will be working with you on any pull requests you make.
 They be evaulating your pull request from a design point of view as well as from
 a Front End Development perspective. Other team members as well as UI/Front End
 Developers may also lend a hand.
 
 #### Tests
-
 The Pattern library source code doesn't currently leverage the Open edX test
 suite nor are there any automated tests configured for this codebase currently.
 
 #### Front End Development Standards
-
 In addition to the general contributor documentation, any contributions should
 meet specific Front End Development requirements, including the guidelines and
 principles listed in:
