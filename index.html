@@ -4,101 +4,12 @@ title: Home
 viewclass:  index
 ---
 <div class="pldoc-list-patterns">
-
     {% assign sorted_patterns_posts = site.categories.patterns | sort: 'title' %}
     {% for post in sorted_patterns_posts %}
-    <section class="pldoc-wrapper-pattern">
-        <article class="pldoc-pattern pldoc-pattern-{{ post.slug }}" id="{{ post.slug }}" tabindex="-1" aria-label="{{ post.slug }}">
 
-            <header class="pldoc-pattern-header">
-                <h1 class="pldoc-heading pldoc-pattern-title hd-4">{{ post.title }}</h1>
+    {% assign body = post.content %}
+    {% include pattern.html %}
 
-                <ul class="pldoc-list pldoc-pattern-meta copy copy-micro de-emphasized">
-                    <li class="meta meta-updated">
-                        <span class="pldoc-pattern-meta-updated-label">Last updated on </span>
-                        <time class="pldoc-pattern-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
-                    </li>
-                    <li class="meta meta-permalink">
-                        <a class="pldoc-link" href="{{post.url}}">Permalink <span class="sr-only">to {{ post.slug }}</span></a>
-                    </li>
-                    {% if post.url_example %}
-                    <li class="meta meta-examplelink">
-                        <a class="pldoc-link" href="{{ site.url_example }}{{ post.url_example }}"><span class="sr-only">View </span>Detailed Example</a>
-                    </li>
-                    {% endif %}
-                    {% if post.url_documentation %}
-                    <li class="meta meta-doclink">
-                        <a class="pldoc-link" href="{{ site.data.edx-pattern-library.url_documentation }}{{ post.url_documentation }}"><span class="sr-only">View </span>Documentation</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </header>
-
-            <div class="pldoc-pattern-info">
-                <p class="copy copy-base">{{post.info}}</p>
-            </div>
-
-            <div class="pldoc-tab-wrapper">
-                {% if post.tags contains "pattern" %}
-                <ul class="pldoc-tab-labels pldoc-list pldoc-pattern-navigation">
-                    <li class="pldoc-tab-label">
-                        <button class="pldoc-link pldoc-link-preview is-active" data-href="#{{post.slug}}-preview">Preview</button>
-                    </li>
-                    <li class="pldoc-tab-label">
-                        <button class="pldoc-link pldoc-link-markup" data-href="#{{post.slug}}-markup">Markup</button>
-                    </li>
-                    {% if post.url_styles %}
-                    <li class="pldoc-tab-label">
-                        <button class="pldoc-link pldoc-link-styling" data-href="#{{post.slug}}-styling">Styling</button>
-                    </li>
-                    {% endif %}
-                </ul>
-                {% endif %}
-
-                <div class="pldoc-tabs">
-                    <div class="pldoc-tab pldoc-pattern-preview is-active" id="{{post.slug}}-preview" tabindex="-1">
-                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-preview-title">{{post.title}} Preview</h2>
-
-                        <div class="pldoc-tab-content">
-                            {% if post.tags contains "icons" %}
-                            <div class="pldoc-settings">
-                                <div class="pldoc-setting pldoc-setting-sizer">
-                                    <label for="iconFontSlider" class="sr-only">Drag to resize icons</label>
-                                    <input id="iconFontSlider" type="range" min="12" max="144" step="12" value="48" role="slider" aria-valuemin="12" aria-valuemax="144" aria-valuenow="48">
-                                    <label for="iconFontSliderValue" class="sr-only">Icon size in pixels</label>
-                                    <input type="text" id="iconFontSliderValue" size="3" value="48" readonly="true">px
-                                </div>
-                            </div>
-                            {% endif %}
-
-                            {{post.content}}
-                        </div>
-                    </div>
-
-                    {% if post.tags contains "pattern" %}
-                    <div class="pldoc-tab pldoc-pattern-markup is-hidden" id="{{post.slug}}-markup" tabindex="-1">
-                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-markup-title">{{post.title}} Markup</h2>
-
-                        <div class="pldoc-tab-content">
-                            {% highlight html %}
-                            {{post.content}}
-                            {% endhighlight %}
-                        </div>
-                    </div>
-
-                    <div class="pldoc-tab pldoc-pattern-styling is-hidden" id="{{post.slug}}-styling" tabindex="-1">
-                        <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-styling-title">{{post.title}} Style</h2>
-
-                        <div class="pldoc-tab-content">
-                            <p class="copy copy-base">View <a class="pldoc-link" href="{{site.data.edx-pattern-library.url_github}}{{site.data.edx-pattern-library.path_styles}}{{post.url_styles}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
-                        </div>
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-
-        </article>
-    </section>
     {% endfor %}
 </div>
 
