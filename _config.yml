@@ -1,9 +1,9 @@
-# Meta
+# edX Pattern Library Documentation Site: Overall Config
 title:                      edX Pattern Library
 tagline:                    The Visual, UI, and Front End styleguide for edX's applications
-url:                        http://code.edx.org/ux-pattern-library
+url:                        http://ux.edx.org
 author:
-    name:                   edX UX
+    name:                   edX UX Design Team
     url:                    http://www.edx.org
     email:                  ux@edx.org
 
