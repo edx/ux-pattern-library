@@ -1,29 +1,27 @@
 # edX Pattern Library Documentation Site: Overall Config
-title:                      edX Pattern Library
-tagline:                    The Visual, UI, and Front End styleguide for edX's applications
-url:                        http://ux.edx.org
+title:                  edX Pattern Library
+tagline:                The Visual, UI, and Front End styleguide for edX's applications
+url:                    http://ux.edx.org
 author:
-    name:                   edX UX Design Team
-    url:                    http://www.edx.org
-    email:                  ux@edx.org
+    name:               edX UX Design Team
+    url:                http://www.edx.org
+    email:              ux@edx.org
 
-# Site
-baseurl:                    /
-permalink:                  /:categories/:title/
-relative_permalinks:        true
-exampleurl:                 examples/
+baseurl:                /
+permalink:              /:categories/:title/
+relative_permalinks:    true
+exampleurl:             examples/
 
-# Local
-exclude:                    ["node_modules", "gulp", "gulpfile.js", "package.json", "bower.json", "pldoc", "pattern-library", "bower_components"]
+exclude:                [
+                            "node_modules",
+                            "gulp",
+                            "gulpfile.js",
+                            "package.json",
+                            "bower.json",
+                            "pldoc",
+                            "pattern-library",
+                            "bower_components"
+                        ]
 
-# Custom vars
-github:
-    repo:                   https://github.com/edx/ux-pattern-library
-    path_scss:              /blob/master/pattern-library/sass/
-    docurl:                 https://github.com/edx/ux-pattern-library/wiki/
-
-
-
-# Plugins
-highlighter:                pygments
+highlighter:            pygments
 
