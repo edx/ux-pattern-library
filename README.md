@@ -45,15 +45,15 @@ Using the edX Pattern Library source code in a project current requires:
 
 Also, the Pattern Library currently relies on the following thrd party libraries:
 
-| Library  | Version | Purpose | 
-| ------------- | ------------- | ------------- |
-| [Bourbon](https://github.com/thoughtbot/bourbon)  | 4.2.3  | basic sass/CSS utilities |
-| [Animate.css](https://github.com/daneden/animate.css)  | 3.3.0 | 4.2.3  | pre-set CSS animations
-| [bi-app-sass](https://github.com/anasnakawa/bi-app-sass)  | latest | right-to-left/left-to-right directional support for layouts |
-| [breakpoint-sass](https://github.com/at-import/breakpoint)  | 2.6.1 | CSS breakpoint/media-query management |
-| [susy](https://github.com/ericam/susy)  | 2.2.5 | Grid configuration and utilities | 
-| [svg4everybody](https://github.com/jonathantneal/svg4everybody)  | 1.0.0 | SVG support across browsers |
-| [A Font Garde](https://github.com/filamentgroup/a-font-garde)  | 0.1.6 | A set of reliable (nay, bulletproof) patterns for icon fonts. |
+| Library                                                         | Version       | Purpose                                                       |  
+| -------------                                                   | ------------- | -------------                                                 |  
+| [Bourbon](https://github.com/thoughtbot/bourbon)                | 4.2.3         | basic sass/CSS utilities                                      |  
+| [Animate.css](https://github.com/daneden/animate.css)           | 3.3.0         | pre-set CSS animations                                        |  
+| [bi-app-sass](https://github.com/anasnakawa/bi-app-sass)        | latest        | right-to-left/left-to-right directional support for layouts   |  
+| [breakpoint-sass](https://github.com/at-import/breakpoint)      | 2.6.1         | CSS breakpoint/media-query management                         |  
+| [susy](https://github.com/ericam/susy)                          | 2.2.5         | Grid configuration and utilities                              |  
+| [svg4everybody](https://github.com/jonathantneal/svg4everybody) | 1.0.0         | SVG support across browsers                                   |  
+| [A Font Garde](https://github.com/filamentgroup/a-font-garde)   | 0.1.6         | A set of reliable (nay, bulletproof) patterns for icon fonts. |  
 
 ## Documentation
 
@@ -65,27 +65,38 @@ repository.
 ## Development - Documentation Site (PLDOC)
 
 To work on the code of the documentation site portion of this repo, you'll need
-the following things installed on your local machine.
+recent versions of the following things installed on your local machine.
 
-1. [Jekyll](http://jekyllrb.com/)
-2. [NodeJS](http://nodejs.org/)
-3. [Bower](http://bower.io/)
-4. [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages
+| Library                                                              | Version         | Purpose                                                            |  
+| -------------                                                        | -------------   | -------------                                                      |  
+| [Bundler](http://bundler.io/)                                        | 1.10            | Used to install [jekyll](http://jekyllrb.com) and its dependencies |  
+| [NodeJS](http://nodejs.org/)                                         | 0.12.x or 4.0.x | Support for the asset pipeline                                     |  
+| [Bower](http://bower.io/)                                            | 1.5.0           | fetch and compile javascript assets                                |  
+| [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages | 3.9.0           | Task runner for build process                                      |  
+
 
 - - -
 
 ### Step 1: Install Jekyll
 
-The Pattern Library is managed through Jekyll, so you'll need to install that
-initially. [Jekyll requires Ruby, Rubygems and a Linux, Unix or Mac OSX
-system](http://jekyllrb.com/docs/installation/).
+The Pattern Library is managed through Jekyll, a static website generator, so you'll need to install that.
 
-**Mac Users**:
+**Mac Users**
+
+We use a Ruby gem called Bundler to install Jekyll, as that allows us to track the version of Jekyll running on github pages easily.
+
+We assume you have ruby 2.0.0 or later installed. If you don't, an easy way to do that is to use [RVM](http://rvm.io).
+
+With that out of the way, next step is to install bundler, and then to use that to install Jekyll:
+
 ```
-$ gem install jekyll
+$ gem install bundler
+$ bundle install
 ```
 
-Windows users: Windows users have a bit more work to do, but luckily
+**Windows users**
+
+Windows users have a bit more work to do, but luckily
 [@juthilo](https://github.com/juthilo) has provided some instructions with his
 [Run Jekyll on Windows guide](https://github.com/juthilo/run-jekyll-on-windows).
 
@@ -231,7 +242,7 @@ bower install edx-pattern-library --save
 ### Step 3: Reference UX Pattern Library Partials in your Sass Compile
 
 You can now use edX UX Pattern Library Sass/styling in your project. To do so,
-just import all utilities and what components you want. 
+just import all utilities and what components you want.
 
 #### Default Reference/Import
 All components and utilities can be imported by default by importing the ``_edx-pattern-library.scss`` partial. See the example below taken from [``main-ltr.scss``]() +  the [``_build.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_build.scss) compilation of the edX Pattern Library's Documentation Site:
