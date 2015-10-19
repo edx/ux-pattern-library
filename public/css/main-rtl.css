@@ -389,7 +389,7 @@
   display: table;
 }
 
-.example-set:last-child, .alert-copy > :last-child {
+.example-set:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
@@ -420,7 +420,7 @@
   color: white !important;
 }
 
-.grid-manual .gallery, .pldoc-nav .nav-list, .pldoc-pattern-header .pldoc-pattern-meta, .pldoc-tab-labels, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-pattern-depth .zebra-stripe, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
+.grid-manual .gallery, .pldoc-nav .nav-list, .pldoc-pattern-header .pldoc-pattern-meta, .pldoc-tab-labels, .pldoc-element-depth .zebra-stripe, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1016,206 +1016,6 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   background-image: none;
 }
 
-.brand-primary.base {
-  background: #0079bc;
-}
-
-.brand-primary.light {
-  background: #4da1d0;
-}
-
-.brand-primary.x-light {
-  background: #b3d7eb;
-}
-
-.brand-primary.dark {
-  background: #005584;
-}
-
-.brand-primary.x-dark {
-  background: #003655;
-}
-
-.brand-primary.accent {
-  background: #0ea6ec;
-}
-
-.brand-primary.x-accent {
-  background: #00abfa;
-}
-
-.brand-secondary {
-  background: #cb598d;
-}
-
-.brand-secondary.base {
-  background: #cb598d;
-}
-
-.brand-secondary.light {
-  background: #db8baf;
-}
-
-.brand-secondary.x-light {
-  background: #efcddd;
-}
-
-.brand-secondary.dark {
-  background: #8e3e63;
-}
-
-.brand-secondary.x-dark {
-  background: #5b283f;
-}
-
-.brand-secondary.accent {
-  background: #f26caa;
-}
-
-.grayscale {
-  background: #a7a4a4;
-}
-
-.grayscale.base {
-  background: #a7a4a4;
-}
-
-.grayscale.light {
-  background: #d3d2d2;
-}
-
-.grayscale.x-light {
-  background: #e9e8e8;
-}
-
-.grayscale.xx-light {
-  background: #f2f1f1;
-}
-
-.grayscale.white {
-  background: #fcfcfc;
-}
-
-.grayscale.white-t {
-  background: white;
-}
-
-.grayscale.dark {
-  background: #646262;
-}
-
-.grayscale.x-dark {
-  background: #434242;
-}
-
-.grayscale.black {
-  background: #111010;
-}
-
-.grayscale.black-t {
-  background: black;
-}
-
-.grayscale.trans {
-  background: rgba(167, 164, 164, 0.5);
-}
-
-.grayscale.x-trans {
-  background: rgba(167, 164, 164, 0.25);
-}
-
-.grayscale.xx-trans {
-  background: rgba(167, 164, 164, 0.05);
-}
-
-.grayscale-cool {
-  background: #9eb1b9;
-}
-
-.grayscale-cool.base {
-  background: #9eb1b9;
-}
-
-.grayscale-cool.light {
-  background: #cfd8dc;
-}
-
-.grayscale-cool.x-light {
-  background: #e7ecee;
-}
-
-.grayscale-cool.xx-light {
-  background: #f0f3f5;
-}
-
-.grayscale-cool.dark {
-  background: #4f595d;
-}
-
-.grayscale-cool.x-dark {
-  background: #282c2e;
-}
-
-.grayscale-cool.trans {
-  background: rgba(158, 177, 185, 0.5);
-}
-
-.grayscale-cool.x-trans {
-  background: rgba(158, 177, 185, 0.25);
-}
-
-.grayscale-cool.xx-trans {
-  background: rgba(158, 177, 185, 0.05);
-}
-
-.success {
-  background: #25b85a;
-}
-
-.success.base {
-  background: #25b85a;
-}
-
-.success.light {
-  background: #6dcf90;
-}
-
-.success.dark {
-  background: #197b3c;
-}
-
-.warning {
-  background: #fdbc56;
-}
-
-.warning.base {
-  background: #fdbc56;
-}
-
-.warning.light {
-  background: #fed28e;
-}
-
-.warning.dark {
-  background: #aa7e3a;
-}
-
-.error {
-  background: #b20610;
-}
-
-.error.base {
-  background: #b20610;
-}
-
-.error.light {
-  background: #cb585f;
-}
-
-.error.dark {
-  background: #77040b;
-}
-
 .btn-default, .btn-primary, .btn-secondary, .btn-link, .btn-elevated, .btn-elevated-alt, .btn-combo, .btn-overlay {
   -webkit-transition: color 0.125s ease-in-out 0s, border-color 0.125s ease-in-out 0s, background 0.125s ease-in-out 0s, box-shadow 0.125s ease-in-out 0s;
   transition: color 0.125s ease-in-out 0s, border-color 0.125s ease-in-out 0s, background 0.125s ease-in-out 0s, box-shadow 0.125s ease-in-out 0s;
@@ -1461,7 +1261,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 .hd-3.emphasized,
 .hd-4.emphasized,
 .hd-5.emphasized,
-.hd-6.emphasized, .alert-title {
+.hd-6.emphasized {
   color: black;
   font-weight: 600;
 }
@@ -1510,14 +1310,14 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.6;
 }
 
-.hd-6, .alert-title {
+.hd-6 {
   margin-bottom: 0.3125rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
 }
 
-.emphasized.hd-6, .emphasized.alert-title {
+.emphasized.hd-6 {
   font-weight: 700;
 }
 
@@ -1597,18 +1397,15 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   margin-bottom: 1.25rem;
 }
 
-.copy-meta, .alert-copy {
+.copy-meta {
   font-size: 0.875rem;
   line-height: 1.6;
 }
 
 .copy-meta p,
-.alert-copy p,
 .copy-meta ol,
-.alert-copy ol,
 .copy-meta ul,
-.alert-copy ul,
-.copy-meta dl, .alert-copy dl {
+.copy-meta dl {
   margin-bottom: 1.25rem;
 }
 
@@ -6765,6 +6562,206 @@ html, body {
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
 }
 
+.pldoc-pattern-colors .brand-primary.base {
+  background: #0079bc;
+}
+
+.pldoc-pattern-colors .brand-primary.light {
+  background: #4da1d0;
+}
+
+.pldoc-pattern-colors .brand-primary.x-light {
+  background: #b3d7eb;
+}
+
+.pldoc-pattern-colors .brand-primary.dark {
+  background: #005584;
+}
+
+.pldoc-pattern-colors .brand-primary.x-dark {
+  background: #003655;
+}
+
+.pldoc-pattern-colors .brand-primary.accent {
+  background: #0ea6ec;
+}
+
+.pldoc-pattern-colors .brand-primary.x-accent {
+  background: #00abfa;
+}
+
+.pldoc-pattern-colors .brand-secondary {
+  background: #cb598d;
+}
+
+.pldoc-pattern-colors .brand-secondary.base {
+  background: #cb598d;
+}
+
+.pldoc-pattern-colors .brand-secondary.light {
+  background: #db8baf;
+}
+
+.pldoc-pattern-colors .brand-secondary.x-light {
+  background: #efcddd;
+}
+
+.pldoc-pattern-colors .brand-secondary.dark {
+  background: #8e3e63;
+}
+
+.pldoc-pattern-colors .brand-secondary.x-dark {
+  background: #5b283f;
+}
+
+.pldoc-pattern-colors .brand-secondary.accent {
+  background: #f26caa;
+}
+
+.pldoc-pattern-colors .grayscale {
+  background: #a7a4a4;
+}
+
+.pldoc-pattern-colors .grayscale.base {
+  background: #a7a4a4;
+}
+
+.pldoc-pattern-colors .grayscale.light {
+  background: #d3d2d2;
+}
+
+.pldoc-pattern-colors .grayscale.x-light {
+  background: #e9e8e8;
+}
+
+.pldoc-pattern-colors .grayscale.xx-light {
+  background: #f2f1f1;
+}
+
+.pldoc-pattern-colors .grayscale.white {
+  background: #fcfcfc;
+}
+
+.pldoc-pattern-colors .grayscale.white-t {
+  background: white;
+}
+
+.pldoc-pattern-colors .grayscale.dark {
+  background: #646262;
+}
+
+.pldoc-pattern-colors .grayscale.x-dark {
+  background: #434242;
+}
+
+.pldoc-pattern-colors .grayscale.black {
+  background: #111010;
+}
+
+.pldoc-pattern-colors .grayscale.black-t {
+  background: black;
+}
+
+.pldoc-pattern-colors .grayscale.trans {
+  background: rgba(167, 164, 164, 0.5);
+}
+
+.pldoc-pattern-colors .grayscale.x-trans {
+  background: rgba(167, 164, 164, 0.25);
+}
+
+.pldoc-pattern-colors .grayscale.xx-trans {
+  background: rgba(167, 164, 164, 0.05);
+}
+
+.pldoc-pattern-colors .grayscale-cool {
+  background: #9eb1b9;
+}
+
+.pldoc-pattern-colors .grayscale-cool.base {
+  background: #9eb1b9;
+}
+
+.pldoc-pattern-colors .grayscale-cool.light {
+  background: #cfd8dc;
+}
+
+.pldoc-pattern-colors .grayscale-cool.x-light {
+  background: #e7ecee;
+}
+
+.pldoc-pattern-colors .grayscale-cool.xx-light {
+  background: #f0f3f5;
+}
+
+.pldoc-pattern-colors .grayscale-cool.dark {
+  background: #4f595d;
+}
+
+.pldoc-pattern-colors .grayscale-cool.x-dark {
+  background: #282c2e;
+}
+
+.pldoc-pattern-colors .grayscale-cool.trans {
+  background: rgba(158, 177, 185, 0.5);
+}
+
+.pldoc-pattern-colors .grayscale-cool.x-trans {
+  background: rgba(158, 177, 185, 0.25);
+}
+
+.pldoc-pattern-colors .grayscale-cool.xx-trans {
+  background: rgba(158, 177, 185, 0.05);
+}
+
+.pldoc-pattern-colors .success {
+  background: #25b85a;
+}
+
+.pldoc-pattern-colors .success.base {
+  background: #25b85a;
+}
+
+.pldoc-pattern-colors .success.light {
+  background: #6dcf90;
+}
+
+.pldoc-pattern-colors .success.dark {
+  background: #197b3c;
+}
+
+.pldoc-pattern-colors .warning {
+  background: #fdbc56;
+}
+
+.pldoc-pattern-colors .warning.base {
+  background: #fdbc56;
+}
+
+.pldoc-pattern-colors .warning.light {
+  background: #fed28e;
+}
+
+.pldoc-pattern-colors .warning.dark {
+  background: #aa7e3a;
+}
+
+.pldoc-pattern-colors .error {
+  background: #b20610;
+}
+
+.pldoc-pattern-colors .error.base {
+  background: #b20610;
+}
+
+.pldoc-pattern-colors .error.light {
+  background: #cb585f;
+}
+
+.pldoc-pattern-colors .error.dark {
+  background: #77040b;
+}
+
 .pldoc-pattern-colors .example-color {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -6944,6 +6941,34 @@ html, body {
     margin-left: -100%;
     clear: none;
   }
+}
+
+.pldoc-element-depth .depth {
+  padding: 1.25rem 1.25rem;
+}
+
+.pldoc-element-depth .depth--2 .hd,
+.pldoc-element-depth .depth--3 .hd {
+  color: #fcfcfc;
+}
+
+.pldoc-element-depth .depth--2 .copy,
+.pldoc-element-depth .depth--3 .copy {
+  color: #e9e8e8;
+}
+
+.pldoc-element-depth .slat,
+.pldoc-element-depth .card {
+  margin-bottom: 0.625rem;
+}
+
+.pldoc-element-depth .slat:last-child,
+.pldoc-element-depth .card:last-child {
+  margin-bottom: 0;
+}
+
+.pldoc-element-depth .zebra-stripe .slat {
+  margin-bottom: 0;
 }
 
 .pldoc-pattern-grid .col,
@@ -7355,85 +7380,6 @@ html, body {
 .example-layout .example-label {
   display: block;
   color: black;
-}
-
-.pldoc-pattern-depth .depth {
-  padding: 1.25rem 1.25rem;
-}
-
-.pldoc-pattern-depth .depth--2 .hd,
-.pldoc-pattern-depth .depth--3 .hd {
-  color: #fcfcfc;
-}
-
-.pldoc-pattern-depth .depth--2 .copy,
-.pldoc-pattern-depth .depth--3 .copy {
-  color: #e9e8e8;
-}
-
-.pldoc-pattern-depth .slat,
-.pldoc-pattern-depth .card {
-  margin-bottom: 0.625rem;
-}
-
-.pldoc-pattern-depth .slat:last-child,
-.pldoc-pattern-depth .card:last-child {
-  margin-bottom: 0;
-}
-
-.pldoc-pattern-depth .zebra-stripe .slat {
-  margin-bottom: 0;
-}
-
-.wrapper-alert {
-  margin-bottom: 0.625rem;
-}
-
-.alert {
-  border-right: 0.25rem solid #cfd8dc;
-  border-radius: 0.1875rem;
-  padding: 1.25rem 1.25rem;
-  background-color: #e9e8e8;
-}
-
-.alert-information {
-  border-color: #0079bc;
-}
-
-.alert-warning {
-  border-color: #fdbc56;
-}
-
-.alert-error {
-  border-color: #b20610;
-}
-
-.alert-success {
-  border-color: #25b85a;
-}
-
-.alert-ui-toolkit {
-  border-color: #ffde20;
-}
-
-.badge {
-  text-align: center;
-  border-radius: 0.9375rem;
-  padding: 0.125rem 0.625rem;
-  font-size: 0.625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  white-space: nowrap;
-  letter-spacing: 0.03125rem;
-}
-
-.badge .badge-abbreviation {
-  border-bottom: none;
-}
-
-.badge-ui-toolkit {
-  background-color: #ffde20;
-  color: #282c2e;
 }
 
 @media (min-width: 1024px) {
