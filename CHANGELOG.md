@@ -14,6 +14,16 @@ Nothing yet
 
 - - -
 
+## 0.3.1 (2015-10-14)
+* updating bower package prefs to ignore moved pldoc assets
+
+- - -
+
+## 0.3.0 (2015-10-09)
+* Converted icon rendering to be font-based with A Font Garde-supported fallbacks
+
+- - -
+
 ## 0.2.6 (2015-09-04)
 * Moved SVG-based icons to icons directory rather than images
 
