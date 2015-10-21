@@ -174,21 +174,13 @@ content/assets), run the `default` gulp task with:
 gulp
 ```
 
-This will run the `default` gulp task defined in `gulpfile.js`, which has the
-following task dependencies: `pldoc_styles`, `pldoc_images`, `pldoc_scripts`,
-`images`, `watch`.
-
-* The `pldoc_styles` task compiles your local PLDOC Sass files into css files.
-* `images` copies images from a source folder, performs optimizations, the outputs them into the build folder
-* `watch` will start watching source files and will re-run the appropriate tasks when those files change. This will also kick off the next two tasks of building/rebuilding the Jekyll site.
-* `jekyll-build` and `jekyll-rebuild` run the local jekyll server/preview and re-process any layouts, posts, or templates changed.
+This will run the `default` gulp task defined in `gulpfile.js`, which includes the general local development set-up task (``build-development``) and file/asset watching (``watch``).
 
 After running the default task, your local instance of the Pattern Library can
 be viewable at http://localhost:3000. There are additional views:
 
 * http://localhost:3000/examples/**/* - where full page examples and demos are kept
 * http://localhost:3000/patterns/**/* - permalinks for individually documented pattern library patterns
-
 - - -
 
 ### Committing Code to PLDOC
@@ -196,7 +188,7 @@ be viewable at http://localhost:3000. There are additional views:
 When developing changes or new work within the PLDOC, please make sure to:
 
 1. leave the Pattern Library Source Code (contained in ``pattern-ibrary``) unedited (or edit in a separate branch/commit)
-2. run the production preparation-focused gulp task ``gulp production``, which will optimize any checked in production assets (styles, images, and scripts), if you've added or heavily edited new PLDOC assets.
+2. run the production preparation-focused gulp task ``gulp build-production``, which will optimize any checked in production assets (styles, images, and scripts), if you've added or heavily edited new PLDOC assets.
 
 ## Development - UX Pattern Library Bower Package
 
