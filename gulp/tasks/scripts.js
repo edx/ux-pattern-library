@@ -9,7 +9,6 @@ gulp.task('scripts', ['scripts-lint'], function() {
             // setup script sequence
             config.lib.src + '/requirejs/require.js',
             config.lib.src + '/jquery/dist/jquery.min.js',
-            config.lib.src + '/svg4everybody/svg4everybody.min.js',
             config.scripts.src + '/modernizr-custom.js',
             config.scripts.src + '/afontgarde.js',
             config.scripts.src + '/select-replace.js',
