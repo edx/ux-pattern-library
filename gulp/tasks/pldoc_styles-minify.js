@@ -4,7 +4,7 @@ var gulp            = require('gulp'),
     rename          = require('gulp-rename'),
     size            = require('gulp-filesize');
 
-gulp.task('pldoc_styles-minify', ['pldoc_styles'], function() {
+gulp.task('pldoc_styles-minify', function() {
     return gulp.src(config.pldoc_dest_files)
     .pipe(minifyCSS())
     .pipe(rename({suffix: '.min'}))
