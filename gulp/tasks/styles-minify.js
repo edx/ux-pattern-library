@@ -4,7 +4,7 @@ var gulp            = require('gulp'),
     rename          = require('gulp-rename'),
     size            = require('gulp-filesize');
 
-gulp.task('styles-minify', ['styles'], function() {
+gulp.task('styles-minify', function() {
     return gulp.src(config.dest_files)
     .pipe(minifyCSS())
     .pipe(rename({suffix: '.min'}))
