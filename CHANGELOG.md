@@ -5,6 +5,15 @@ Nothing yet
 
 - - -
 
+## 0.4.0 (2015-10-20)
+
+* syncs up variable naming standards with several already set variables (buttons and forms primarily)
+* plumbs through variables to be used consistently in future theming where they weren't set (base resets and buttons)
+* abstracts out a few variables that were being used in unconventional or out of scope ways
+* simplifies button-based rules for easier maintenance and for Sass extension
+
+- - -
+
 ## 0.3.3 (2015-10-18)
 * creating pre-compiled static CSS versions of pattern-library base styling for use within external apps
 
@@ -32,6 +41,11 @@ Nothing yet
 
 ## 0.3.0 (2015-10-09)
 * Converted icon rendering to be font-based with A Font Garde-supported fallbacks
+
+- - -
+
+## 0.3.0 (2015-10-01)
+* Cleaned up variables: abstraction, scope, and simplification
 
 - - -
 
