@@ -1,0 +1,1 @@
+define(["edx-ui-toolkit/views/collapsible-view"],function(e){"use strict";new e({el:".collapsible-container",toggleTextSelector:".js-collapsible-toggle",collapsibleSelector:".js-collapsible-target"})});
