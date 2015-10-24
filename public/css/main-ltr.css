@@ -389,7 +389,7 @@
   display: table;
 }
 
-.example-set:last-child {
+.example-set:last-child, .alert-copy > :last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
@@ -1031,6 +1031,18 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   width: 100%;
 }
 
+.btn-default .icon-inline, .btn-primary .icon-inline, .btn-secondary .icon-inline, .btn-link .icon-inline, .btn-elevated .icon-inline, .btn-elevated-alt .icon-inline, .btn-combo .icon-inline, .btn-overlay .icon-inline {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 0.3125rem;
+}
+
+.btn-default .icon-block, .btn-primary .icon-block, .btn-secondary .icon-block, .btn-link .icon-block, .btn-elevated .icon-block, .btn-elevated-alt .icon-block, .btn-combo .icon-block, .btn-overlay .icon-block {
+  display: block;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
 .btn-large {
   padding: 1.25rem 1.875rem;
   font-size: 1.125rem;
@@ -1261,7 +1273,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 .hd-3.emphasized,
 .hd-4.emphasized,
 .hd-5.emphasized,
-.hd-6.emphasized {
+.hd-6.emphasized, .alert-title {
   color: black;
   font-weight: 600;
 }
@@ -1310,14 +1322,14 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.6;
 }
 
-.hd-6 {
+.hd-6, .alert-title {
   margin-bottom: 0.3125rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
 }
 
-.emphasized.hd-6 {
+.emphasized.hd-6, .emphasized.alert-title {
   font-weight: 700;
 }
 
@@ -1397,15 +1409,18 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   margin-bottom: 1.25rem;
 }
 
-.copy-meta {
+.copy-meta, .alert-copy {
   font-size: 0.875rem;
   line-height: 1.6;
 }
 
 .copy-meta p,
+.alert-copy p,
 .copy-meta ol,
+.alert-copy ol,
 .copy-meta ul,
-.copy-meta dl {
+.alert-copy ul,
+.copy-meta dl, .alert-copy dl {
   margin-bottom: 1.25rem;
 }
 
@@ -6276,6 +6291,20 @@ body, .zebra-stripe > *:nth-child(odd), .depth-0, .pldoc, .pldoc-wrapper-content
   background: url("../fonts/edx-icons/fallback-img/cc.svg") center center no-repeat;
 }
 
+.collapsible-container .collapsible-toggle .icon-arrow-up {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out 0s;
+  transition: transform 0.25s ease-in-out 0s;
+}
+
+.collapsible-container.is-collapsed .collapsible-toggle .icon-arrow-up {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
 html, body {
   height: 100%;
   color: #434242;
@@ -6303,6 +6332,57 @@ html, body {
   display: inline-block;
   white-space: nowrap;
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+}
+
+.wrapper-alert {
+  margin-bottom: 0.625rem;
+}
+
+.alert {
+  border-left: 0.25rem solid #cfd8dc;
+  border-radius: 0.1875rem;
+  padding: 1.25rem 1.25rem;
+  background-color: #e9e8e8;
+}
+
+.alert-information {
+  border-color: #0079bc;
+}
+
+.alert-warning {
+  border-color: #fdbc56;
+}
+
+.alert-error {
+  border-color: #b20610;
+}
+
+.alert-success {
+  border-color: #25b85a;
+}
+
+.alert-ui-toolkit {
+  border-color: #ffde20;
+}
+
+.badge {
+  text-align: center;
+  border-radius: 0.9375rem;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 0.03125rem;
+}
+
+.badge .badge-abbreviation {
+  border-bottom: none;
+}
+
+.badge-ui-toolkit {
+  background-color: #ffde20;
+  color: #282c2e;
 }
 
 @media (min-width: 1024px) {
@@ -6968,6 +7048,36 @@ html, body {
 }
 
 .pldoc-element-depth .zebra-stripe .slat {
+  margin-bottom: 0;
+}
+
+.example-collapsible-1 .collapsible-toggle {
+  margin-bottom: 1.25rem;
+}
+
+.example-collapsible-2 .collapsible-toggle {
+  margin-bottom: 1.25rem;
+}
+
+.example-collapsible-3 .collapsible-toggle {
+  margin-top: 1.25rem;
+}
+
+.example-collapsible-3 .collapsible-target {
+  border-top: 0.0625rem solid #e9e8e8;
+  padding-top: 1.25rem;
+}
+
+.example-collapsible-4 .collapsible-toggle {
+  margin-bottom: 1.25rem;
+  text-align: right;
+}
+
+.example-collapsible-4 .card {
+  margin-bottom: 1.25rem;
+}
+
+.example-collapsible-4 .card:last-child {
   margin-bottom: 0;
 }
 

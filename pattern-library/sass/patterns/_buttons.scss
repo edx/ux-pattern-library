@@ -2,7 +2,6 @@
 // edX Pattern Library: Components - Buttons
 
 // About: Contains base styling for demonstration and utility for buttons.
-// ----------------------------
 
 // #GLOBALS
 // #SIZES
@@ -45,6 +44,19 @@
     &:disabled,
     &.is-disabled {
         @extend %state-disabled;
+    }
+
+    // CASE: icon is inline displayed
+    .icon-inline {
+        display: inline-block;
+        vertical-align: baseline;
+        @include margin-right(spacing-horizontal(x-small));
+    }
+
+    .icon-block {
+        display: block;
+        margin-bottom: spacing-vertical(small);
+        @include text-align(center);
     }
 }
 
