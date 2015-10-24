@@ -620,6 +620,14 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   .block.btn-default, .block.btn-primary, .block.btn-secondary, .block.btn-link, .block.btn-elevated, .block.btn-elevated-alt, .block.btn-combo, .block.btn-overlay {
     display: block;
     width: 100%; }
+  .btn-default .icon-inline, .btn-primary .icon-inline, .btn-secondary .icon-inline, .btn-link .icon-inline, .btn-elevated .icon-inline, .btn-elevated-alt .icon-inline, .btn-combo .icon-inline, .btn-overlay .icon-inline {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.3125rem; }
+  .btn-default .icon-block, .btn-primary .icon-block, .btn-secondary .icon-block, .btn-link .icon-block, .btn-elevated .icon-block, .btn-elevated-alt .icon-block, .btn-combo .icon-block, .btn-overlay .icon-block {
+    display: block;
+    margin-bottom: 1.25rem;
+    text-align: center; }
 
 .btn-large {
   padding: 1.25rem 1.875rem;
@@ -4582,5 +4590,17 @@ body, .zebra-stripe > *:nth-child(odd), .depth-0 {
 
 .icon-fallback-img .icon-cc {
   background: url("../fonts/edx-icons/fallback-img/cc.svg") center center no-repeat; }
+
+.collapsible-container .collapsible-toggle .icon-arrow-up {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out 0s;
+  transition: transform 0.25s ease-in-out 0s; }
+
+.collapsible-container.is-collapsed .collapsible-toggle .icon-arrow-up {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
 
 /*# sourceMappingURL=edx-pattern-library-ltr.css.map */

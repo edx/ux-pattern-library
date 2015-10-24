@@ -1,21 +1,22 @@
 ---
-layout:         pattern
-title:          Collapse + Expand
-date:           2015-10-14 00:00:00
+layout:                 pattern
+title:                  Collapse + Expand
+date:                   2015-10-14 00:00:00
 
-categories:     patterns
-tags:           
+categories:             patterns
+tags:                   
 - atomic
 - pattern
 - collapse
 - expand
 
-slug:           collapse-expand
-scssurl:        "components/_collapse-expand.scss"
+slug:                   collapse-expand
+scssurl:                "components/_collapse-expand.scss"
+ui-toolkit-component:   collapsible
 
-description:    Collapse and expand elements in a view.
+description:            Collapse and expand elements in a view.
 
-info:           Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.
+info:                   Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.
 ---
 
 <h3 class="hd-6 example-set-hd">Basic Example</h3>
