@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.4.3 (2015-10-28)
+* Added text truncation and wrapped Sass placeholders
+
+- - -
+
 ## 0.4.2 (2015-10-23)
 * Removed _colors.scss as a main pattern (since it was only providing supportive styling for the documentation site) and placed its rules within the documentation site's Sass.
 
