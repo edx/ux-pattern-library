@@ -10,8 +10,8 @@
 // #SIDEBAR
 // #MAIN CONTENT
 // #FOOTER
-// #ELEMENTS
-// #SPECIFIC ELEMENTS
+// #PATTERNS
+// #SPECIFIC PATTERNS
 // #EXAMPLE - GRID
 // #EXAMPLE - LAYOUTS
 
@@ -53,6 +53,79 @@
     @extend %message;
     background-color: palette(warning, light);
     color: palette(grayscale, black-t);
+}
+
+// alerts
+.wrapper-alert {
+    margin-bottom: spacing-vertical(x-small);
+}
+
+.alert {
+    @include border-left(rem(4) solid palette(grayscale-cool, light));
+    border-radius: rem(3);
+    padding: spacing-vertical(small) spacing-horizontal(base);
+    background-color: palette(grayscale, x-light);
+}
+
+
+.alert-title {
+    @extend %hd-6;
+    @extend %headings-emphasized;
+}
+
+.alert-copy {
+    @extend %copy-meta;
+
+    > * {
+        @extend %clear-last-child;
+    }
+}
+
+// TODO: use a Sass loop for these rules  make them an official pattern
+
+// CASE: information-based alert
+.alert-information {
+    border-color: palette(information, base);
+}
+
+// CASE: warning-based alert
+.alert-warning {
+    border-color: palette(warning, base);
+}
+
+// CASE: error-based alert
+.alert-error {
+    border-color: palette(error, base);
+}
+
+// CASE: success-based alert
+.alert-success {
+    border-color: palette(success, base);
+}
+
+// CASE: ui-toolkit reference
+.alert-ui-toolkit {
+    border-color: $pldoc-ui-toolkit-color;
+}
+
+.badge {
+    @include text-align(center);
+    border-radius: rem(15);
+    padding: spacing-vertical(xxx-small) spacing-horizontal(small);
+    font-size: font-size(xxx-small);
+    font-weight: font-weight(bold);
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: letter-spacing(loose);
+
+    .badge-abbreviation {
+        border-bottom: none;
+    }
+}
+
+.badge-ui-toolkit {
+    background-color: $pldoc-ui-toolkit-color;
+    color: palette(grayscale-cool, x-dark);
 }
 
 // ------------------------------
@@ -111,7 +184,7 @@
 .pldoc-nav {
     margin-bottom: spacing-vertical(mid-large);
 
-    // CASE: last element
+    // CASE: last pattern
     &:last-child {
         margin-bottom: 0;
     }
@@ -141,7 +214,7 @@
         }
     }
 
-    // CASE: last element
+    // CASE: last pattern
     .nav-list-item:last-child {
 
        .pldoc-link {
@@ -381,7 +454,6 @@
 // ------------------------------
 // #SPECIFIC PATTERNS
 // ------------------------------
-
 // color swatches
 .pldoc-pattern-colors {
 
@@ -745,7 +817,7 @@
 }
 
 // ui depth
-.pldoc-element-depth {
+.pldoc-pattern-depth {
 
     // padding for demo purposes
     .depth {
