@@ -372,8 +372,7 @@
   src: url("../fonts/edx-icons/edx-icons.woff") format("woff"), url("../fonts/edx-icons/edx-icons.ttf") format("truetype");
 }
 
-.btn-default:disabled, .btn-primary:disabled, .btn-secondary:disabled, .btn-link:disabled, .btn-elevated:disabled, .btn-elevated-alt:disabled, .btn-combo:disabled, .btn-overlay:disabled, .is-disabled.btn-default, .is-disabled.btn-primary, .is-disabled.btn-secondary, .is-disabled.btn-link, .is-disabled.btn-elevated, .is-disabled.btn-elevated-alt, .is-disabled.btn-combo, .is-disabled.btn-overlay, .wrapper-custom-select:disabled,
-.wrapper-custom-select.is-disabled {
+.btn-default:disabled, .btn-primary:disabled, .btn-secondary:disabled, .btn-link:disabled, .btn-elevated:disabled, .btn-elevated-alt:disabled, .btn-combo:disabled, .btn-overlay:disabled, .is-disabled.btn-default, .is-disabled.btn-primary, .is-disabled.btn-secondary, .is-disabled.btn-link, .is-disabled.btn-elevated, .is-disabled.btn-elevated-alt, .is-disabled.btn-combo, .is-disabled.btn-overlay, .wrapper-custom-select:disabled, .wrapper-custom-select.is-disabled {
   pointer-events: none;
   outline: none;
   cursor: not-allowed;
@@ -389,14 +388,13 @@
   display: table;
 }
 
-.example-set:last-child {
+.example-set:last-child, .alert-copy > :last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
 }
 
-.sr-only, .input-radio.replace-checkbox,
-.input-radio.replace-radio,
+.sr-only, .input-radio.replace-checkbox, .input-radio.replace-radio,
 .input-checkbox.replace-checkbox,
 .input-checkbox.replace-radio, .pldoc-tab-heading {
   border: 0;
@@ -420,7 +418,7 @@
   color: white !important;
 }
 
-.grid-manual .gallery, .pldoc-nav .nav-list, .pldoc-pattern-header .pldoc-pattern-meta, .pldoc-tab-labels, .pldoc-element-depth .zebra-stripe, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
+.grid-manual .gallery, .pldoc-nav .nav-list, .pldoc-pattern-header .pldoc-pattern-meta, .pldoc-tab-labels, .pldoc-pattern-depth .zebra-stripe, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -456,33 +454,23 @@ a,
 }
 
 a:hover,
-.link:hover,
-.btn-link:hover,
-a:active,
-.link:active,
-.btn-link:active,
-a:focus,
+.link:hover, .btn-link:hover, a:active,
+.link:active, .btn-link:active, a:focus,
 .link:focus, .btn-link:focus {
   border-bottom-color: #0ea6ec;
   color: #0ea6ec;
 }
 
 a:disabled,
-.link:disabled,
-.btn-link:disabled,
-a.is-disabled,
+.link:disabled, .btn-link:disabled, a.is-disabled,
 .is-disabled.link, .is-disabled.btn-link {
   display: none;
   color: #d3d2d2;
 }
 
 a:active,
-.link:active,
-.btn-link:active,
-a.is-pressed,
-.is-pressed.link,
-.is-pressed.btn-link,
-a.is-active,
+.link:active, .btn-link:active, a.is-pressed,
+.is-pressed.link, .is-pressed.btn-link, a.is-active,
 .is-active.link, .is-active.btn-link {
   color: #005584;
 }
@@ -751,7 +739,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1052,23 +1041,17 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   color: #0079bc;
 }
 
-.btn-default:hover,
-.btn-default.is-hovered,
-.btn-default:focus,
-.btn-default.is-focused {
+.btn-default:hover, .btn-default.is-hovered, .btn-default:focus, .btn-default.is-focused {
   background: #0079bc;
   color: #fcfcfc;
 }
 
-.btn-default:active,
-.btn-default.is-pressed,
-.btn-default.is-active {
+.btn-default:active, .btn-default.is-pressed, .btn-default.is-active {
   border-color: #005584;
   background: #005584;
 }
 
-.btn-default:disabled,
-.btn-default.is-disabled {
+.btn-default:disabled, .btn-default.is-disabled {
   border-color: #d3d2d2;
   background: #fcfcfc;
   color: #646262;
@@ -1080,23 +1063,17 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   color: #fcfcfc;
 }
 
-.btn-primary:hover,
-.btn-primary.is-hovered,
-.btn-primary:focus,
-.btn-primary.is-focused {
+.btn-primary:hover, .btn-primary.is-hovered, .btn-primary:focus, .btn-primary.is-focused {
   border-color: #0ea6ec;
   background: #0ea6ec;
 }
 
-.btn-primary:active,
-.btn-primary.is-pressed,
-.btn-primary.is-active {
+.btn-primary:active, .btn-primary.is-pressed, .btn-primary.is-active {
   border-color: #0079bc;
   background: #0079bc;
 }
 
-.btn-primary:disabled,
-.btn-primary.is-disabled {
+.btn-primary:disabled, .btn-primary.is-disabled {
   border-color: #d3d2d2;
   background: #e9e8e8;
   color: #646262;
@@ -1108,22 +1085,16 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   color: #0079bc;
 }
 
-.btn-secondary:hover,
-.btn-secondary.is-hovered,
-.btn-secondary:focus,
-.btn-secondary.is-focused {
+.btn-secondary:hover, .btn-secondary.is-hovered, .btn-secondary:focus, .btn-secondary.is-focused {
   border-color: #cfd8dc;
 }
 
-.btn-secondary:active,
-.btn-secondary.is-pressed,
-.btn-secondary.is-active {
+.btn-secondary:active, .btn-secondary.is-pressed, .btn-secondary.is-active {
   border-color: #0079bc;
   color: #0079bc;
 }
 
-.btn-secondary:disabled,
-.btn-secondary.is-disabled {
+.btn-secondary:disabled, .btn-secondary.is-disabled {
   border-color: #d3d2d2;
   color: #646262;
 }
@@ -1146,23 +1117,17 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   color: #fcfcfc;
 }
 
-.btn-elevated:hover,
-.btn-elevated.is-hovered,
-.btn-elevated:focus,
-.btn-elevated.is-focused {
+.btn-elevated:hover, .btn-elevated.is-hovered, .btn-elevated:focus, .btn-elevated.is-focused {
   box-shadow: inset 0 -3px 0 0 #005584;
   background: #0ea6ec;
 }
 
-.btn-elevated:active,
-.btn-elevated.is-pressed,
-.btn-elevated.is-active {
+.btn-elevated:active, .btn-elevated.is-pressed, .btn-elevated.is-active {
   box-shadow: inset 0 3px 0 0 #003655;
   background: #005584;
 }
 
-.btn-elevated:disabled,
-.btn-elevated.is-disabled {
+.btn-elevated:disabled, .btn-elevated.is-disabled {
   border-color: #e9e8e8;
   box-shadow: inset 0 -1px 0 #d3d2d2;
   background: #e9e8e8;
@@ -1170,31 +1135,25 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 }
 
 .btn-elevated-alt {
-  box-shadow: inset 0 0-inset 0 -3px 0 0 #005584 0 0 #cfd8dc;
+  box-shadow: inset 0 0-"inset 0 -3px 0 0 #005584" 0 0 #cfd8dc;
   border-color: #cfd8dc;
   background: transparent;
   color: #0079bc;
 }
 
-.btn-elevated-alt:hover,
-.btn-elevated-alt.is-hovered,
-.btn-elevated-alt:focus,
-.btn-elevated-alt.is-focused {
+.btn-elevated-alt:hover, .btn-elevated-alt.is-hovered, .btn-elevated-alt:focus, .btn-elevated-alt.is-focused {
   border-color: #0079bc;
-  box-shadow: inset 0 0-inset 0 -3px 0 0 #005584 0 0 #0079bc;
+  box-shadow: inset 0 0-"inset 0 -3px 0 0 #005584" 0 0 #0079bc;
   background: #0ea6ec;
   color: #fcfcfc;
 }
 
-.btn-elevated-alt:active,
-.btn-elevated-alt.is-pressed,
-.btn-elevated-alt.is-active {
+.btn-elevated-alt:active, .btn-elevated-alt.is-pressed, .btn-elevated-alt.is-active {
   box-shadow: inset 0 inset 0 -3px 0 0 #005584 0 0 #003655;
   background: #005584;
 }
 
-.btn-elevated-alt:disabled,
-.btn-elevated-alt.is-disabled {
+.btn-elevated-alt:disabled, .btn-elevated-alt.is-disabled {
   border-color: #e9e8e8;
   box-shadow: inset 0 -1px 0 #d3d2d2;
   background: #e9e8e8;
@@ -1229,28 +1188,21 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   color: #fcfcfc;
 }
 
-.btn-overlay:hover,
-.btn-overlay.is-hovered,
-.btn-overlay:focus,
-.btn-overlay.is-focused {
+.btn-overlay:hover, .btn-overlay.is-hovered, .btn-overlay:focus, .btn-overlay.is-focused {
   background: #fcfcfc;
   color: #0079bc;
 }
 
-.btn-overlay:active,
-.btn-overlay.is-pressed,
-.btn-overlay.is-active {
+.btn-overlay:active, .btn-overlay.is-pressed, .btn-overlay.is-active {
   color: #005584;
 }
 
-.btn-overlay:disabled,
-.btn-overlay.is-disabled {
+.btn-overlay:disabled, .btn-overlay.is-disabled {
   border-color: rgba(167, 164, 164, 0.5);
   color: #fcfcfc;
 }
 
-.btn-overlay:disabled:hover,
-.btn-overlay.is-disabled:hover {
+.btn-overlay:disabled:hover, .btn-overlay.is-disabled:hover {
   border-color: rgba(167, 164, 164, 0.5);
   background: transparent;
   color: #fcfcfc;
@@ -1261,7 +1213,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 .hd-3.emphasized,
 .hd-4.emphasized,
 .hd-5.emphasized,
-.hd-6.emphasized {
+.hd-6.emphasized, .alert-title {
   color: black;
   font-weight: 600;
 }
@@ -1310,14 +1262,14 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.6;
 }
 
-.hd-6 {
+.hd-6, .alert-title {
   margin-bottom: 0.3125rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
 }
 
-.emphasized.hd-6 {
+.emphasized.hd-6, .emphasized.alert-title {
   font-weight: 700;
 }
 
@@ -1366,10 +1318,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.5;
 }
 
-.copy-lead p,
-.copy-lead ol,
-.copy-lead ul,
-.copy-lead dl {
+.copy-lead p, .copy-lead ol, .copy-lead ul, .copy-lead dl {
   margin-bottom: 1.875rem;
 }
 
@@ -1378,10 +1327,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.6;
 }
 
-.copy-large p,
-.copy-large ol,
-.copy-large ul,
-.copy-large dl {
+.copy-large p, .copy-large ol, .copy-large ul, .copy-large dl {
   margin-bottom: 1.25rem;
 }
 
@@ -1390,22 +1336,16 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.6;
 }
 
-.copy-base p,
-.copy-base ol,
-.copy-base ul,
-.copy-base dl {
+.copy-base p, .copy-base ol, .copy-base ul, .copy-base dl {
   margin-bottom: 1.25rem;
 }
 
-.copy-meta {
+.copy-meta, .alert-copy {
   font-size: 0.875rem;
   line-height: 1.6;
 }
 
-.copy-meta p,
-.copy-meta ol,
-.copy-meta ul,
-.copy-meta dl {
+.copy-meta p, .alert-copy p, .copy-meta ol, .alert-copy ol, .copy-meta ul, .alert-copy ul, .copy-meta dl, .alert-copy dl {
   margin-bottom: 1.25rem;
 }
 
@@ -1415,19 +1355,10 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   line-height: 1.5;
 }
 
-.copy-micro p,
-.pldoc-pattern-grid .col .example-label p,
-.pldoc-pattern-grid .gallery-item .example-label p, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label p, .pldoc-pattern-grid .example-grid-semantic .story .example-label p, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label p, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label p, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label p, .pldoc-view-example-grid .example-grid .col .example-label p, .pldoc-view-example-grid #example-grid-1 .content-main .example-label p, .pldoc-view-example-grid #example-grid-1 .story .example-label p, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label p, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label p, .pldoc-pattern-grid .example-grid .example-label p,
-.example-layout .example-label p,
-.copy-micro ol,
-.pldoc-pattern-grid .col .example-label ol,
-.pldoc-pattern-grid .gallery-item .example-label ol, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label ol, .pldoc-pattern-grid .example-grid-semantic .story .example-label ol, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label ol, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label ol, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label ol, .pldoc-view-example-grid .example-grid .col .example-label ol, .pldoc-view-example-grid #example-grid-1 .content-main .example-label ol, .pldoc-view-example-grid #example-grid-1 .story .example-label ol, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label ol, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label ol, .pldoc-pattern-grid .example-grid .example-label ol,
-.example-layout .example-label ol,
-.copy-micro ul,
-.pldoc-pattern-grid .col .example-label ul,
-.pldoc-pattern-grid .gallery-item .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label ul, .pldoc-view-example-grid .example-grid .col .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-main .example-label ul, .pldoc-view-example-grid #example-grid-1 .story .example-label ul, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid .example-label ul,
-.example-layout .example-label ul,
-.copy-micro dl, .pldoc-pattern-grid .col .example-label dl,
+.copy-micro p, .pldoc-pattern-grid .col .example-label p,
+.pldoc-pattern-grid .gallery-item .example-label p, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label p, .pldoc-pattern-grid .example-grid-semantic .story .example-label p, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label p, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label p, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label p, .pldoc-view-example-grid .example-grid .col .example-label p, .pldoc-view-example-grid #example-grid-1 .content-main .example-label p, .pldoc-view-example-grid #example-grid-1 .story .example-label p, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label p, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label p, .pldoc-pattern-grid .example-grid .example-label p, .example-layout .example-label p, .copy-micro ol, .pldoc-pattern-grid .col .example-label ol,
+.pldoc-pattern-grid .gallery-item .example-label ol, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label ol, .pldoc-pattern-grid .example-grid-semantic .story .example-label ol, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label ol, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label ol, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label ol, .pldoc-view-example-grid .example-grid .col .example-label ol, .pldoc-view-example-grid #example-grid-1 .content-main .example-label ol, .pldoc-view-example-grid #example-grid-1 .story .example-label ol, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label ol, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label ol, .pldoc-pattern-grid .example-grid .example-label ol, .example-layout .example-label ol, .copy-micro ul, .pldoc-pattern-grid .col .example-label ul,
+.pldoc-pattern-grid .gallery-item .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label ul, .pldoc-view-example-grid .example-grid .col .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-main .example-label ul, .pldoc-view-example-grid #example-grid-1 .story .example-label ul, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid .example-label ul, .example-layout .example-label ul, .copy-micro dl, .pldoc-pattern-grid .col .example-label dl,
 .pldoc-pattern-grid .gallery-item .example-label dl, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label dl, .pldoc-pattern-grid .example-grid-semantic .story .example-label dl, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label dl, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label dl, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label dl, .pldoc-view-example-grid .example-grid .col .example-label dl, .pldoc-view-example-grid #example-grid-1 .content-main .example-label dl, .pldoc-view-example-grid #example-grid-1 .story .example-label dl, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label dl, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label dl, .pldoc-pattern-grid .example-grid .example-label dl, .example-layout .example-label dl {
   margin-bottom: 1.25rem;
 }
@@ -1498,11 +1429,8 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   margin-bottom: 0;
 }
 
-.field-label .field-input:checked + .field-input-label,
-.field-label .wrapper-custom-select:checked + .field-input-label,
-.field-label .field-radio:checked + .field-input-label,
-.field-label.is-active,
-.field-label.is-selected {
+.field-label .field-input:checked + .field-input-label, .field-label .wrapper-custom-select:checked + .field-input-label,
+.field-label .field-radio:checked + .field-input-label, .field-label.is-active, .field-label.is-selected {
   -webkit-transition: all 0.125s ease-in-out 0s;
   transition: all 0.125s ease-in-out 0s;
   color: #434242;
@@ -1543,8 +1471,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   width: 18.75rem;
 }
 
-.field-input,
-.wrapper-custom-select,
+.field-input, .wrapper-custom-select,
 .field-select,
 .field-textarea {
   -webkit-transition: all 0.125s ease-in-out 0s;
@@ -1558,38 +1485,31 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   color: #282c2e;
 }
 
-.field-input::-webkit-input-placeholder,
-.wrapper-custom-select::-webkit-input-placeholder,
+.field-input::-webkit-input-placeholder, .wrapper-custom-select::-webkit-input-placeholder,
 .field-select::-webkit-input-placeholder,
 .field-textarea::-webkit-input-placeholder {
   color: #cfd8dc;
 }
 
-.field-input::-moz-placeholder,
-.wrapper-custom-select::-moz-placeholder,
+.field-input::-moz-placeholder, .wrapper-custom-select::-moz-placeholder,
 .field-select::-moz-placeholder,
 .field-textarea::-moz-placeholder {
   color: #cfd8dc;
 }
 
-.field-input:-moz-placeholder,
-.wrapper-custom-select:-moz-placeholder,
+.field-input:-moz-placeholder, .wrapper-custom-select:-moz-placeholder,
 .field-select:-moz-placeholder,
 .field-textarea:-moz-placeholder {
   color: #cfd8dc;
 }
 
-.field-input:-ms-input-placeholder,
-.wrapper-custom-select:-ms-input-placeholder,
+.field-input:-ms-input-placeholder, .wrapper-custom-select:-ms-input-placeholder,
 .field-select:-ms-input-placeholder,
 .field-textarea:-ms-input-placeholder {
   color: #cfd8dc;
 }
 
-.field-input:focus,
-.wrapper-custom-select:focus,
-.field-input.is-active,
-.is-active.wrapper-custom-select,
+.field-input:focus, .wrapper-custom-select:focus, .field-input.is-active, .is-active.wrapper-custom-select,
 .field-select:focus,
 .field-select.is-active,
 .field-textarea:focus,
@@ -1599,10 +1519,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   outline: none;
 }
 
-.field-input:disabled,
-.wrapper-custom-select:disabled,
-.field-input.is-disabled,
-.is-disabled.wrapper-custom-select,
+.field-input:disabled, .wrapper-custom-select:disabled, .field-input.is-disabled, .is-disabled.wrapper-custom-select,
 .field-select:disabled,
 .field-select.is-disabled,
 .field-textarea:disabled,
@@ -1612,57 +1529,49 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   cursor: not-allowed;
 }
 
-.field-input.has-error,
-.has-error.wrapper-custom-select,
+.field-input.has-error, .has-error.wrapper-custom-select,
 .field-select.has-error,
 .field-textarea.has-error {
   border-color: #b20610;
 }
 
-.field-input.has-error + .field-hint,
-.has-error.wrapper-custom-select + .field-hint,
+.field-input.has-error + .field-hint, .has-error.wrapper-custom-select + .field-hint,
 .field-select.has-error + .field-hint,
 .field-textarea.has-error + .field-hint {
   color: #77040b;
 }
 
-.field-input.has-error .icon,
-.has-error.wrapper-custom-select .icon,
+.field-input.has-error .icon, .has-error.wrapper-custom-select .icon,
 .field-select.has-error .icon,
 .field-textarea.has-error .icon {
   fill: #b20610;
 }
 
-.field-input.has-warning,
-.has-warning.wrapper-custom-select,
+.field-input.has-warning, .has-warning.wrapper-custom-select,
 .field-select.has-warning,
 .field-textarea.has-warning {
   border-color: #fdbc56;
 }
 
-.field-input.has-warning + .field-hint,
-.has-warning.wrapper-custom-select + .field-hint,
+.field-input.has-warning + .field-hint, .has-warning.wrapper-custom-select + .field-hint,
 .field-select.has-warning + .field-hint,
 .field-textarea.has-warning + .field-hint {
   color: #aa7e3a;
 }
 
-.field-input.has-warning .icon,
-.has-warning.wrapper-custom-select .icon,
+.field-input.has-warning .icon, .has-warning.wrapper-custom-select .icon,
 .field-select.has-warning .icon,
 .field-textarea.has-warning .icon {
   fill: #fdbc56;
 }
 
-.field-input.has-success,
-.has-success.wrapper-custom-select,
+.field-input.has-success, .has-success.wrapper-custom-select,
 .field-select.has-success,
 .field-textarea.has-success {
   border-color: #25b85a;
 }
 
-.field-input.has-success .icon,
-.has-success.wrapper-custom-select .icon,
+.field-input.has-success .icon, .has-success.wrapper-custom-select .icon,
 .field-select.has-success .icon,
 .field-textarea.has-success .icon {
   fill: #25b85a;
@@ -1679,8 +1588,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   background: transparent;
 }
 
-.input-text.input-alt:focus,
-.input-text.input-alt.is-active {
+.input-text.input-alt:focus, .input-text.input-alt.is-active {
   border-color: #434242;
   background: transparent;
 }
@@ -1736,8 +1644,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   content: "\25BE";
 }
 
-.wrapper-custom-select:disabled .icon,
-.wrapper-custom-select.is-disabled .icon {
+.wrapper-custom-select:disabled .icon, .wrapper-custom-select.is-disabled .icon {
   fill: #cfd8dc;
 }
 
@@ -1746,8 +1653,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   margin-left: 0.625rem;
 }
 
-.input-radio.replace-checkbox + .field-input-label:before,
-.input-radio.replace-radio + .field-input-label:before,
+.input-radio.replace-checkbox + .field-input-label:before, .input-radio.replace-radio + .field-input-label:before,
 .input-checkbox.replace-checkbox + .field-input-label:before,
 .input-checkbox.replace-radio + .field-input-label:before {
   height: 1rem;
@@ -1793,29 +1699,25 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   box-shadow: inset 0 0 0 6px #0079bc;
 }
 
-.input-radio:disabled,
-.input-radio.is-disabled,
+.input-radio:disabled, .input-radio.is-disabled,
 .input-checkbox:disabled,
 .input-checkbox.is-disabled {
   cursor: not-allowed;
 }
 
-.input-radio:disabled + .field-input-label,
-.input-radio.is-disabled + .field-input-label,
+.input-radio:disabled + .field-input-label, .input-radio.is-disabled + .field-input-label,
 .input-checkbox:disabled + .field-input-label,
 .input-checkbox.is-disabled + .field-input-label {
   color: #a7a4a4;
 }
 
-.input-radio:disabled.replace-checkbox + .field-input-label,
-.input-radio.is-disabled.replace-checkbox + .field-input-label,
+.input-radio:disabled.replace-checkbox + .field-input-label, .input-radio.is-disabled.replace-checkbox + .field-input-label,
 .input-checkbox:disabled.replace-checkbox + .field-input-label,
 .input-checkbox.is-disabled.replace-checkbox + .field-input-label {
   color: #a7a4a4;
 }
 
-.input-radio:disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
-.input-radio.is-disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
+.input-radio:disabled.replace-checkbox + .field-input-label:before + .field-input-label:before, .input-radio.is-disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
 .input-checkbox:disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
 .input-checkbox.is-disabled.replace-checkbox + .field-input-label:before + .field-input-label:before {
   background: #fcfcfc;
@@ -1823,15 +1725,13 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   cursor: not-allowed;
 }
 
-.input-radio:disabled.replace-radio + .field-input-label,
-.input-radio.is-disabled.replace-radio + .field-input-label,
+.input-radio:disabled.replace-radio + .field-input-label, .input-radio.is-disabled.replace-radio + .field-input-label,
 .input-checkbox:disabled.replace-radio + .field-input-label,
 .input-checkbox.is-disabled.replace-radio + .field-input-label {
   color: #a7a4a4;
 }
 
-.input-radio:disabled.replace-radio + .field-input-label:before + .field-input-label:before,
-.input-radio.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before,
+.input-radio:disabled.replace-radio + .field-input-label:before + .field-input-label:before, .input-radio.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before,
 .input-checkbox:disabled.replace-radio + .field-input-label:before + .field-input-label:before,
 .input-checkbox.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before {
   background: #fcfcfc;
@@ -1965,67 +1865,43 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   -webkit-appearance: none;
 }
 
-.input-slider:hover::-webkit-slider-runnable-track,
-.input-slider.is-hovered::-webkit-slider-runnable-track,
-.input-slider:focus::-webkit-slider-runnable-track,
-.input-slider.is-focused::-webkit-slider-runnable-track {
+.input-slider:hover::-webkit-slider-runnable-track, .input-slider.is-hovered::-webkit-slider-runnable-track, .input-slider:focus::-webkit-slider-runnable-track, .input-slider.is-focused::-webkit-slider-runnable-track {
   background: #00abfa;
 }
 
-.input-slider:hover::-webkit-slider-thumb,
-.input-slider.is-hovered::-webkit-slider-thumb,
-.input-slider:focus::-webkit-slider-thumb,
-.input-slider.is-focused::-webkit-slider-thumb {
+.input-slider:hover::-webkit-slider-thumb, .input-slider.is-hovered::-webkit-slider-thumb, .input-slider:focus::-webkit-slider-thumb, .input-slider.is-focused::-webkit-slider-thumb {
   height: 1.25rem;
   width: 1.25rem;
   margin-top: -0.38462rem;
   background: #0079bc;
 }
 
-.input-slider:hover::-moz-range-track,
-.input-slider.is-hovered::-moz-range-track,
-.input-slider:focus::-moz-range-track,
-.input-slider.is-focused::-moz-range-track {
+.input-slider:hover::-moz-range-track, .input-slider.is-hovered::-moz-range-track, .input-slider:focus::-moz-range-track, .input-slider.is-focused::-moz-range-track {
   background: #00abfa;
 }
 
-.input-slider:hover::-moz-range-thumb,
-.input-slider.is-hovered::-moz-range-thumb,
-.input-slider:focus::-moz-range-thumb,
-.input-slider.is-focused::-moz-range-thumb {
+.input-slider:hover::-moz-range-thumb, .input-slider.is-hovered::-moz-range-thumb, .input-slider:focus::-moz-range-thumb, .input-slider.is-focused::-moz-range-thumb {
   height: 1.25rem;
   width: 1.25rem;
   margin-top: -0.38462rem;
   background: #0079bc;
 }
 
-.input-slider:hover::-ms-track,
-.input-slider.is-hovered::-ms-track,
-.input-slider:focus::-ms-track,
-.input-slider.is-focused::-ms-track {
+.input-slider:hover::-ms-track, .input-slider.is-hovered::-ms-track, .input-slider:focus::-ms-track, .input-slider.is-focused::-ms-track {
   background: #00abfa;
   background: transparent;
   border-color: transparent;
 }
 
-.input-slider:hover::-ms-fill-upper,
-.input-slider.is-hovered::-ms-fill-upper,
-.input-slider:focus::-ms-fill-upper,
-.input-slider.is-focused::-ms-fill-upper {
+.input-slider:hover::-ms-fill-upper, .input-slider.is-hovered::-ms-fill-upper, .input-slider:focus::-ms-fill-upper, .input-slider.is-focused::-ms-fill-upper {
   background: #00abfa;
 }
 
-.input-slider:hover::-ms-fill-lower,
-.input-slider.is-hovered::-ms-fill-lower,
-.input-slider:focus::-ms-fill-lower,
-.input-slider.is-focused::-ms-fill-lower {
+.input-slider:hover::-ms-fill-lower, .input-slider.is-hovered::-ms-fill-lower, .input-slider:focus::-ms-fill-lower, .input-slider.is-focused::-ms-fill-lower {
   background: #00abfa;
 }
 
-.input-slider:hover::-ms-thumb,
-.input-slider.is-hovered::-ms-thumb,
-.input-slider:focus::-ms-thumb,
-.input-slider.is-focused::-ms-thumb {
+.input-slider:hover::-ms-thumb, .input-slider.is-hovered::-ms-thumb, .input-slider:focus::-ms-thumb, .input-slider.is-focused::-ms-thumb {
   height: 1.25rem;
   width: 1.25rem;
   margin-top: -0.38462rem;
@@ -6305,6 +6181,57 @@ html, body {
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
 }
 
+.wrapper-alert {
+  margin-bottom: 0.625rem;
+}
+
+.alert {
+  border-right: 0.25rem solid #cfd8dc;
+  border-radius: 0.1875rem;
+  padding: 1.25rem 1.25rem;
+  background-color: #e9e8e8;
+}
+
+.alert-information {
+  border-color: #0079bc;
+}
+
+.alert-warning {
+  border-color: #fdbc56;
+}
+
+.alert-error {
+  border-color: #b20610;
+}
+
+.alert-success {
+  border-color: #25b85a;
+}
+
+.alert-ui-toolkit {
+  border-color: #ffde20;
+}
+
+.badge {
+  text-align: center;
+  border-radius: 0.9375rem;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 0.03125rem;
+}
+
+.badge .badge-abbreviation {
+  border-bottom: none;
+}
+
+.badge-ui-toolkit {
+  background-color: #ffde20;
+  color: #282c2e;
+}
+
 @media (min-width: 1024px) {
   .pldoc-header-site {
     margin: 0;
@@ -6335,9 +6262,7 @@ html, body {
   letter-spacing: 0.0625rem;
 }
 
-.pldoc-header-site .pldoc-header-site-title .title-name:hover,
-.pldoc-header-site .pldoc-header-site-title .title-name:active,
-.pldoc-header-site .pldoc-header-site-title .title-name:focus {
+.pldoc-header-site .pldoc-header-site-title .title-name:hover, .pldoc-header-site .pldoc-header-site-title .title-name:active, .pldoc-header-site .pldoc-header-site-title .title-name:focus {
   color: #0ea6ec;
 }
 
@@ -6375,9 +6300,7 @@ html, body {
   font-weight: 600;
 }
 
-.pldoc-nav .pldoc-link:hover,
-.pldoc-nav .pldoc-link:active,
-.pldoc-nav .pldoc-link:focus {
+.pldoc-nav .pldoc-link:hover, .pldoc-nav .pldoc-link:active, .pldoc-nav .pldoc-link:focus {
   color: #4da1d0;
   background: #111010;
 }
@@ -6448,9 +6371,7 @@ html, body {
   opacity: 0.25;
 }
 
-.pldoc-nav-external .pldoc-link:hover .icon,
-.pldoc-nav-external .pldoc-link:active .icon,
-.pldoc-nav-external .pldoc-link:focus .icon {
+.pldoc-nav-external .pldoc-link:hover .icon, .pldoc-nav-external .pldoc-link:active .icon, .pldoc-nav-external .pldoc-link:focus .icon {
   opacity: 1.0;
 }
 
@@ -6547,8 +6468,7 @@ html, body {
   color: #646262;
 }
 
-.pldoc-tab-label .pldoc-link:hover,
-.pldoc-tab-label .pldoc-link:focus {
+.pldoc-tab-label .pldoc-link:hover, .pldoc-tab-label .pldoc-link:focus {
   border-bottom-color: #0ea6ec;
   color: #0ea6ec;
 }
@@ -6781,9 +6701,7 @@ html, body {
   border-left: 0.3125rem solid #fdbc56;
 }
 
-.pldoc-pattern-colors .example-color:hover,
-.pldoc-pattern-colors .example-color:focus,
-.pldoc-pattern-colors .example-color:active {
+.pldoc-pattern-colors .example-color:hover, .pldoc-pattern-colors .example-color:focus, .pldoc-pattern-colors .example-color:active {
   -webkit-transform: scale(1.02);
   -ms-transform: scale(1.02);
   transform: scale(1.02);
@@ -6943,31 +6861,31 @@ html, body {
   }
 }
 
-.pldoc-element-depth .depth {
+.pldoc-pattern-depth .depth {
   padding: 1.25rem 1.25rem;
 }
 
-.pldoc-element-depth .depth--2 .hd,
-.pldoc-element-depth .depth--3 .hd {
+.pldoc-pattern-depth .depth--2 .hd,
+.pldoc-pattern-depth .depth--3 .hd {
   color: #fcfcfc;
 }
 
-.pldoc-element-depth .depth--2 .copy,
-.pldoc-element-depth .depth--3 .copy {
+.pldoc-pattern-depth .depth--2 .copy,
+.pldoc-pattern-depth .depth--3 .copy {
   color: #e9e8e8;
 }
 
-.pldoc-element-depth .slat,
-.pldoc-element-depth .card {
+.pldoc-pattern-depth .slat,
+.pldoc-pattern-depth .card {
   margin-bottom: 0.625rem;
 }
 
-.pldoc-element-depth .slat:last-child,
-.pldoc-element-depth .card:last-child {
+.pldoc-pattern-depth .slat:last-child,
+.pldoc-pattern-depth .card:last-child {
   margin-bottom: 0;
 }
 
-.pldoc-element-depth .zebra-stripe .slat {
+.pldoc-pattern-depth .zebra-stripe .slat {
   margin-bottom: 0;
 }
 
@@ -7341,39 +7259,34 @@ html, body {
 }
 
 .example-layout .layout-col,
-.example-layout
-.layout-view-col {
+.example-layout .layout-view-col {
   background: rgba(203, 89, 141, 0.33);
   border: 1px solid rgba(255, 37, 136, 0.33);
 }
 
 @media (min-width: 768px) {
   .example-layout .layout-col,
-  .example-layout
-.layout-view-col {
+  .example-layout .layout-view-col {
     background: rgba(239, 53, 138, 0.33);
   }
 }
 
 @media (min-width: 1024px) {
   .example-layout .layout-col,
-  .example-layout
-.layout-view-col {
+  .example-layout .layout-view-col {
     background: rgba(255, 37, 136, 0.33);
   }
 }
 
 @media (min-width: 1280px) {
   .example-layout .layout-col,
-  .example-layout
-.layout-view-col {
+  .example-layout .layout-view-col {
     background: rgba(255, 37, 136, 0.33);
   }
 }
 
 .example-layout .layout-col,
-.example-layout
-.layout-view-col {
+.example-layout .layout-view-col {
   padding: 1.25rem 0.625rem;
 }
 
