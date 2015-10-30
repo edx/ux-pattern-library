@@ -52,8 +52,7 @@
   font-weight: 300;
   src: url("../fonts/edx-icons/edx-icons.woff") format("woff"), url("../fonts/edx-icons/edx-icons.ttf") format("truetype"); }
 
-.btn-default:disabled, .btn-primary:disabled, .btn-secondary:disabled, .btn-link:disabled, .btn-elevated:disabled, .btn-elevated-alt:disabled, .btn-combo:disabled, .btn-overlay:disabled, .is-disabled.btn-default, .is-disabled.btn-primary, .is-disabled.btn-secondary, .is-disabled.btn-link, .is-disabled.btn-elevated, .is-disabled.btn-elevated-alt, .is-disabled.btn-combo, .is-disabled.btn-overlay, .wrapper-custom-select:disabled,
-.wrapper-custom-select.is-disabled {
+.btn-default:disabled, .btn-primary:disabled, .btn-secondary:disabled, .btn-link:disabled, .btn-elevated:disabled, .btn-elevated-alt:disabled, .btn-combo:disabled, .btn-overlay:disabled, .is-disabled.btn-default, .is-disabled.btn-primary, .is-disabled.btn-secondary, .is-disabled.btn-link, .is-disabled.btn-elevated, .is-disabled.btn-elevated-alt, .is-disabled.btn-combo, .is-disabled.btn-overlay, .wrapper-custom-select:disabled, .wrapper-custom-select.is-disabled {
   pointer-events: none;
   outline: none;
   cursor: not-allowed; }
@@ -65,8 +64,7 @@
     content: "";
     display: table; }
 
-.sr-only, .input-radio.replace-checkbox,
-.input-radio.replace-radio,
+.sr-only, .input-radio.replace-checkbox, .input-radio.replace-radio,
 .input-checkbox.replace-checkbox,
 .input-checkbox.replace-radio {
   border: 0;
@@ -118,29 +116,19 @@ a,
   color: #0079bc;
   text-decoration: none; }
   a:hover,
-  .link:hover,
-  .btn-link:hover,
-  a:active,
-  .link:active,
-  .btn-link:active,
-  a:focus,
+  .link:hover, .btn-link:hover, a:active,
+  .link:active, .btn-link:active, a:focus,
   .link:focus, .btn-link:focus {
     border-bottom-color: #0ea6ec;
     color: #0ea6ec; }
   a:disabled,
-  .link:disabled,
-  .btn-link:disabled,
-  a.is-disabled,
+  .link:disabled, .btn-link:disabled, a.is-disabled,
   .is-disabled.link, .is-disabled.btn-link {
     display: none;
     color: #d3d2d2; }
   a:active,
-  .link:active,
-  .btn-link:active,
-  a.is-pressed,
-  .is-pressed.link,
-  .is-pressed.btn-link,
-  a.is-active,
+  .link:active, .btn-link:active, a.is-pressed,
+  .is-pressed.link, .is-pressed.btn-link, a.is-active,
   .is-active.link, .is-active.btn-link {
     color: #005584; }
 
@@ -382,7 +370,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -637,19 +626,13 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   border-color: #0079bc;
   background: #fcfcfc;
   color: #0079bc; }
-  .btn-default:hover,
-  .btn-default.is-hovered,
-  .btn-default:focus,
-  .btn-default.is-focused {
+  .btn-default:hover, .btn-default.is-hovered, .btn-default:focus, .btn-default.is-focused {
     background: #0079bc;
     color: #fcfcfc; }
-  .btn-default:active,
-  .btn-default.is-pressed,
-  .btn-default.is-active {
+  .btn-default:active, .btn-default.is-pressed, .btn-default.is-active {
     border-color: #005584;
     background: #005584; }
-  .btn-default:disabled,
-  .btn-default.is-disabled {
+  .btn-default:disabled, .btn-default.is-disabled {
     border-color: #d3d2d2;
     background: #fcfcfc;
     color: #646262; }
@@ -658,19 +641,13 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   border-color: #0079bc;
   background: #0079bc;
   color: #fcfcfc; }
-  .btn-primary:hover,
-  .btn-primary.is-hovered,
-  .btn-primary:focus,
-  .btn-primary.is-focused {
+  .btn-primary:hover, .btn-primary.is-hovered, .btn-primary:focus, .btn-primary.is-focused {
     border-color: #0ea6ec;
     background: #0ea6ec; }
-  .btn-primary:active,
-  .btn-primary.is-pressed,
-  .btn-primary.is-active {
+  .btn-primary:active, .btn-primary.is-pressed, .btn-primary.is-active {
     border-color: #0079bc;
     background: #0079bc; }
-  .btn-primary:disabled,
-  .btn-primary.is-disabled {
+  .btn-primary:disabled, .btn-primary.is-disabled {
     border-color: #d3d2d2;
     background: #e9e8e8;
     color: #646262; }
@@ -679,18 +656,12 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   border-color: transparent;
   background: transparent;
   color: #0079bc; }
-  .btn-secondary:hover,
-  .btn-secondary.is-hovered,
-  .btn-secondary:focus,
-  .btn-secondary.is-focused {
+  .btn-secondary:hover, .btn-secondary.is-hovered, .btn-secondary:focus, .btn-secondary.is-focused {
     border-color: #cfd8dc; }
-  .btn-secondary:active,
-  .btn-secondary.is-pressed,
-  .btn-secondary.is-active {
+  .btn-secondary:active, .btn-secondary.is-pressed, .btn-secondary.is-active {
     border-color: #0079bc;
     color: #0079bc; }
-  .btn-secondary:disabled,
-  .btn-secondary.is-disabled {
+  .btn-secondary:disabled, .btn-secondary.is-disabled {
     border-color: #d3d2d2;
     color: #646262; }
 
@@ -707,44 +678,32 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   box-shadow: inset 0 -3px 0 0 #005584;
   background: #0079bc;
   color: #fcfcfc; }
-  .btn-elevated:hover,
-  .btn-elevated.is-hovered,
-  .btn-elevated:focus,
-  .btn-elevated.is-focused {
+  .btn-elevated:hover, .btn-elevated.is-hovered, .btn-elevated:focus, .btn-elevated.is-focused {
     box-shadow: inset 0 -3px 0 0 #005584;
     background: #0ea6ec; }
-  .btn-elevated:active,
-  .btn-elevated.is-pressed,
-  .btn-elevated.is-active {
+  .btn-elevated:active, .btn-elevated.is-pressed, .btn-elevated.is-active {
     box-shadow: inset 0 3px 0 0 #003655;
     background: #005584; }
-  .btn-elevated:disabled,
-  .btn-elevated.is-disabled {
+  .btn-elevated:disabled, .btn-elevated.is-disabled {
     border-color: #e9e8e8;
     box-shadow: inset 0 -1px 0 #d3d2d2;
     background: #e9e8e8;
     color: #646262; }
 
 .btn-elevated-alt {
-  box-shadow: inset 0 0-inset 0 -3px 0 0 #005584 0 0 #cfd8dc;
+  box-shadow: inset 0 0-"inset 0 -3px 0 0 #005584" 0 0 #cfd8dc;
   border-color: #cfd8dc;
   background: transparent;
   color: #0079bc; }
-  .btn-elevated-alt:hover,
-  .btn-elevated-alt.is-hovered,
-  .btn-elevated-alt:focus,
-  .btn-elevated-alt.is-focused {
+  .btn-elevated-alt:hover, .btn-elevated-alt.is-hovered, .btn-elevated-alt:focus, .btn-elevated-alt.is-focused {
     border-color: #0079bc;
-    box-shadow: inset 0 0-inset 0 -3px 0 0 #005584 0 0 #0079bc;
+    box-shadow: inset 0 0-"inset 0 -3px 0 0 #005584" 0 0 #0079bc;
     background: #0ea6ec;
     color: #fcfcfc; }
-  .btn-elevated-alt:active,
-  .btn-elevated-alt.is-pressed,
-  .btn-elevated-alt.is-active {
+  .btn-elevated-alt:active, .btn-elevated-alt.is-pressed, .btn-elevated-alt.is-active {
     box-shadow: inset 0 inset 0 -3px 0 0 #005584 0 0 #003655;
     background: #005584; }
-  .btn-elevated-alt:disabled,
-  .btn-elevated-alt.is-disabled {
+  .btn-elevated-alt:disabled, .btn-elevated-alt.is-disabled {
     border-color: #e9e8e8;
     box-shadow: inset 0 -1px 0 #d3d2d2;
     background: #e9e8e8;
@@ -771,22 +730,15 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   border-color: #fcfcfc;
   background: transparent;
   color: #fcfcfc; }
-  .btn-overlay:hover,
-  .btn-overlay.is-hovered,
-  .btn-overlay:focus,
-  .btn-overlay.is-focused {
+  .btn-overlay:hover, .btn-overlay.is-hovered, .btn-overlay:focus, .btn-overlay.is-focused {
     background: #fcfcfc;
     color: #0079bc; }
-  .btn-overlay:active,
-  .btn-overlay.is-pressed,
-  .btn-overlay.is-active {
+  .btn-overlay:active, .btn-overlay.is-pressed, .btn-overlay.is-active {
     color: #005584; }
-  .btn-overlay:disabled,
-  .btn-overlay.is-disabled {
+  .btn-overlay:disabled, .btn-overlay.is-disabled {
     border-color: rgba(167, 164, 164, 0.5);
     color: #fcfcfc; }
-    .btn-overlay:disabled:hover,
-    .btn-overlay.is-disabled:hover {
+    .btn-overlay:disabled:hover, .btn-overlay.is-disabled:hover {
       border-color: rgba(167, 164, 164, 0.5);
       background: transparent;
       color: #fcfcfc; }
@@ -879,46 +831,31 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 .copy-lead {
   font-size: 1.3125rem;
   line-height: 1.5; }
-  .copy-lead p,
-  .copy-lead ol,
-  .copy-lead ul,
-  .copy-lead dl {
+  .copy-lead p, .copy-lead ol, .copy-lead ul, .copy-lead dl {
     margin-bottom: 1.875rem; }
 
 .copy-large {
   font-size: 1.125rem;
   line-height: 1.6; }
-  .copy-large p,
-  .copy-large ol,
-  .copy-large ul,
-  .copy-large dl {
+  .copy-large p, .copy-large ol, .copy-large ul, .copy-large dl {
     margin-bottom: 1.25rem; }
 
 .copy-base {
   font-size: 1rem;
   line-height: 1.6; }
-  .copy-base p,
-  .copy-base ol,
-  .copy-base ul,
-  .copy-base dl {
+  .copy-base p, .copy-base ol, .copy-base ul, .copy-base dl {
     margin-bottom: 1.25rem; }
 
 .copy-meta {
   font-size: 0.875rem;
   line-height: 1.6; }
-  .copy-meta p,
-  .copy-meta ol,
-  .copy-meta ul,
-  .copy-meta dl {
+  .copy-meta p, .copy-meta ol, .copy-meta ul, .copy-meta dl {
     margin-bottom: 1.25rem; }
 
 .copy-micro {
   font-size: 0.75rem;
   line-height: 1.5; }
-  .copy-micro p,
-  .copy-micro ol,
-  .copy-micro ul,
-  .copy-micro dl {
+  .copy-micro p, .copy-micro ol, .copy-micro ul, .copy-micro dl {
     margin-bottom: 1.25rem; }
 
 .form-group {
@@ -963,11 +900,8 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   .field-label.label-inline {
     display: inline-block;
     margin-bottom: 0; }
-  .field-label .field-input:checked + .field-input-label,
-  .field-label .wrapper-custom-select:checked + .field-input-label,
-  .field-label .field-radio:checked + .field-input-label,
-  .field-label.is-active,
-  .field-label.is-selected {
+  .field-label .field-input:checked + .field-input-label, .field-label .wrapper-custom-select:checked + .field-input-label,
+  .field-label .field-radio:checked + .field-input-label, .field-label.is-active, .field-label.is-selected {
     -webkit-transition: all 0.125s ease-in-out 0s;
     transition: all 0.125s ease-in-out 0s;
     color: #434242; }
@@ -1001,8 +935,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 .input-progress {
   width: 18.75rem; }
 
-.field-input,
-.wrapper-custom-select,
+.field-input, .wrapper-custom-select,
 .field-select,
 .field-textarea {
   -webkit-transition: all 0.125s ease-in-out 0s;
@@ -1014,30 +947,23 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   color: #282c2e; }
-  .field-input::-webkit-input-placeholder,
-  .wrapper-custom-select::-webkit-input-placeholder,
+  .field-input::-webkit-input-placeholder, .wrapper-custom-select::-webkit-input-placeholder,
   .field-select::-webkit-input-placeholder,
   .field-textarea::-webkit-input-placeholder {
     color: #cfd8dc; }
-  .field-input::-moz-placeholder,
-  .wrapper-custom-select::-moz-placeholder,
+  .field-input::-moz-placeholder, .wrapper-custom-select::-moz-placeholder,
   .field-select::-moz-placeholder,
   .field-textarea::-moz-placeholder {
     color: #cfd8dc; }
-  .field-input:-moz-placeholder,
-  .wrapper-custom-select:-moz-placeholder,
+  .field-input:-moz-placeholder, .wrapper-custom-select:-moz-placeholder,
   .field-select:-moz-placeholder,
   .field-textarea:-moz-placeholder {
     color: #cfd8dc; }
-  .field-input:-ms-input-placeholder,
-  .wrapper-custom-select:-ms-input-placeholder,
+  .field-input:-ms-input-placeholder, .wrapper-custom-select:-ms-input-placeholder,
   .field-select:-ms-input-placeholder,
   .field-textarea:-ms-input-placeholder {
     color: #cfd8dc; }
-  .field-input:focus,
-  .wrapper-custom-select:focus,
-  .field-input.is-active,
-  .is-active.wrapper-custom-select,
+  .field-input:focus, .wrapper-custom-select:focus, .field-input.is-active, .is-active.wrapper-custom-select,
   .field-select:focus,
   .field-select.is-active,
   .field-textarea:focus,
@@ -1045,10 +971,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
     border-color: #0ea6ec;
     color: #282c2e;
     outline: none; }
-  .field-input:disabled,
-  .wrapper-custom-select:disabled,
-  .field-input.is-disabled,
-  .is-disabled.wrapper-custom-select,
+  .field-input:disabled, .wrapper-custom-select:disabled, .field-input.is-disabled, .is-disabled.wrapper-custom-select,
   .field-select:disabled,
   .field-select.is-disabled,
   .field-textarea:disabled,
@@ -1056,43 +979,35 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
     border-color: #cfd8dc;
     background: #e7ecee;
     cursor: not-allowed; }
-  .field-input.has-error,
-  .has-error.wrapper-custom-select,
+  .field-input.has-error, .has-error.wrapper-custom-select,
   .field-select.has-error,
   .field-textarea.has-error {
     border-color: #b20610; }
-    .field-input.has-error + .field-hint,
-    .has-error.wrapper-custom-select + .field-hint,
+    .field-input.has-error + .field-hint, .has-error.wrapper-custom-select + .field-hint,
     .field-select.has-error + .field-hint,
     .field-textarea.has-error + .field-hint {
       color: #77040b; }
-    .field-input.has-error .icon,
-    .has-error.wrapper-custom-select .icon,
+    .field-input.has-error .icon, .has-error.wrapper-custom-select .icon,
     .field-select.has-error .icon,
     .field-textarea.has-error .icon {
       fill: #b20610; }
-  .field-input.has-warning,
-  .has-warning.wrapper-custom-select,
+  .field-input.has-warning, .has-warning.wrapper-custom-select,
   .field-select.has-warning,
   .field-textarea.has-warning {
     border-color: #fdbc56; }
-    .field-input.has-warning + .field-hint,
-    .has-warning.wrapper-custom-select + .field-hint,
+    .field-input.has-warning + .field-hint, .has-warning.wrapper-custom-select + .field-hint,
     .field-select.has-warning + .field-hint,
     .field-textarea.has-warning + .field-hint {
       color: #aa7e3a; }
-    .field-input.has-warning .icon,
-    .has-warning.wrapper-custom-select .icon,
+    .field-input.has-warning .icon, .has-warning.wrapper-custom-select .icon,
     .field-select.has-warning .icon,
     .field-textarea.has-warning .icon {
       fill: #fdbc56; }
-  .field-input.has-success,
-  .has-success.wrapper-custom-select,
+  .field-input.has-success, .has-success.wrapper-custom-select,
   .field-select.has-success,
   .field-textarea.has-success {
     border-color: #25b85a; }
-    .field-input.has-success .icon,
-    .has-success.wrapper-custom-select .icon,
+    .field-input.has-success .icon, .has-success.wrapper-custom-select .icon,
     .field-select.has-success .icon,
     .field-textarea.has-success .icon {
       fill: #25b85a; }
@@ -1105,8 +1020,7 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   padding: spacing-verical(small) 0;
   border-width: 0 0 2px 0;
   background: transparent; }
-  .input-text.input-alt:focus,
-  .input-text.input-alt.is-active {
+  .input-text.input-alt:focus, .input-text.input-alt.is-active {
     border-color: #434242;
     background: transparent; }
   .input-text.input-alt.has-error {
@@ -1147,15 +1061,13 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
     vertical-align: middle; }
   .wrapper-custom-select .icon-fallback-glyph .icon:before {
     content: "\25BE"; }
-  .wrapper-custom-select:disabled .icon,
-  .wrapper-custom-select.is-disabled .icon {
+  .wrapper-custom-select:disabled .icon, .wrapper-custom-select.is-disabled .icon {
     fill: #cfd8dc; }
 
 .input-radio,
 .input-checkbox {
   margin-left: 0.625rem; }
-  .input-radio.replace-checkbox + .field-input-label:before,
-  .input-radio.replace-radio + .field-input-label:before,
+  .input-radio.replace-checkbox + .field-input-label:before, .input-radio.replace-radio + .field-input-label:before,
   .input-checkbox.replace-checkbox + .field-input-label:before,
   .input-checkbox.replace-radio + .field-input-label:before {
     height: 1rem;
@@ -1191,35 +1103,29 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
     border-color: transparent;
     background: #fcfcfc;
     box-shadow: inset 0 0 0 6px #0079bc; }
-  .input-radio:disabled,
-  .input-radio.is-disabled,
+  .input-radio:disabled, .input-radio.is-disabled,
   .input-checkbox:disabled,
   .input-checkbox.is-disabled {
     cursor: not-allowed; }
-    .input-radio:disabled + .field-input-label,
-    .input-radio.is-disabled + .field-input-label,
+    .input-radio:disabled + .field-input-label, .input-radio.is-disabled + .field-input-label,
     .input-checkbox:disabled + .field-input-label,
     .input-checkbox.is-disabled + .field-input-label {
       color: #a7a4a4; }
-    .input-radio:disabled.replace-checkbox + .field-input-label,
-    .input-radio.is-disabled.replace-checkbox + .field-input-label,
+    .input-radio:disabled.replace-checkbox + .field-input-label, .input-radio.is-disabled.replace-checkbox + .field-input-label,
     .input-checkbox:disabled.replace-checkbox + .field-input-label,
     .input-checkbox.is-disabled.replace-checkbox + .field-input-label {
       color: #a7a4a4; }
-      .input-radio:disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
-      .input-radio.is-disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
+      .input-radio:disabled.replace-checkbox + .field-input-label:before + .field-input-label:before, .input-radio.is-disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
       .input-checkbox:disabled.replace-checkbox + .field-input-label:before + .field-input-label:before,
       .input-checkbox.is-disabled.replace-checkbox + .field-input-label:before + .field-input-label:before {
         background: #fcfcfc;
         box-shadow: none;
         cursor: not-allowed; }
-    .input-radio:disabled.replace-radio + .field-input-label,
-    .input-radio.is-disabled.replace-radio + .field-input-label,
+    .input-radio:disabled.replace-radio + .field-input-label, .input-radio.is-disabled.replace-radio + .field-input-label,
     .input-checkbox:disabled.replace-radio + .field-input-label,
     .input-checkbox.is-disabled.replace-radio + .field-input-label {
       color: #a7a4a4; }
-      .input-radio:disabled.replace-radio + .field-input-label:before + .field-input-label:before,
-      .input-radio.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before,
+      .input-radio:disabled.replace-radio + .field-input-label:before + .field-input-label:before, .input-radio.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before,
       .input-checkbox:disabled.replace-radio + .field-input-label:before + .field-input-label:before,
       .input-checkbox.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before {
         background: #fcfcfc;
@@ -1325,53 +1231,29 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
     border-radius: 50%;
     background: #4da1d0;
     -webkit-appearance: none; }
-  .input-slider:hover::-webkit-slider-runnable-track,
-  .input-slider.is-hovered::-webkit-slider-runnable-track,
-  .input-slider:focus::-webkit-slider-runnable-track,
-  .input-slider.is-focused::-webkit-slider-runnable-track {
+  .input-slider:hover::-webkit-slider-runnable-track, .input-slider.is-hovered::-webkit-slider-runnable-track, .input-slider:focus::-webkit-slider-runnable-track, .input-slider.is-focused::-webkit-slider-runnable-track {
     background: #00abfa; }
-  .input-slider:hover::-webkit-slider-thumb,
-  .input-slider.is-hovered::-webkit-slider-thumb,
-  .input-slider:focus::-webkit-slider-thumb,
-  .input-slider.is-focused::-webkit-slider-thumb {
+  .input-slider:hover::-webkit-slider-thumb, .input-slider.is-hovered::-webkit-slider-thumb, .input-slider:focus::-webkit-slider-thumb, .input-slider.is-focused::-webkit-slider-thumb {
     height: 1.25rem;
     width: 1.25rem;
     margin-top: -0.38462rem;
     background: #0079bc; }
-  .input-slider:hover::-moz-range-track,
-  .input-slider.is-hovered::-moz-range-track,
-  .input-slider:focus::-moz-range-track,
-  .input-slider.is-focused::-moz-range-track {
+  .input-slider:hover::-moz-range-track, .input-slider.is-hovered::-moz-range-track, .input-slider:focus::-moz-range-track, .input-slider.is-focused::-moz-range-track {
     background: #00abfa; }
-  .input-slider:hover::-moz-range-thumb,
-  .input-slider.is-hovered::-moz-range-thumb,
-  .input-slider:focus::-moz-range-thumb,
-  .input-slider.is-focused::-moz-range-thumb {
+  .input-slider:hover::-moz-range-thumb, .input-slider.is-hovered::-moz-range-thumb, .input-slider:focus::-moz-range-thumb, .input-slider.is-focused::-moz-range-thumb {
     height: 1.25rem;
     width: 1.25rem;
     margin-top: -0.38462rem;
     background: #0079bc; }
-  .input-slider:hover::-ms-track,
-  .input-slider.is-hovered::-ms-track,
-  .input-slider:focus::-ms-track,
-  .input-slider.is-focused::-ms-track {
+  .input-slider:hover::-ms-track, .input-slider.is-hovered::-ms-track, .input-slider:focus::-ms-track, .input-slider.is-focused::-ms-track {
     background: #00abfa;
     background: transparent;
     border-color: transparent; }
-  .input-slider:hover::-ms-fill-upper,
-  .input-slider.is-hovered::-ms-fill-upper,
-  .input-slider:focus::-ms-fill-upper,
-  .input-slider.is-focused::-ms-fill-upper {
+  .input-slider:hover::-ms-fill-upper, .input-slider.is-hovered::-ms-fill-upper, .input-slider:focus::-ms-fill-upper, .input-slider.is-focused::-ms-fill-upper {
     background: #00abfa; }
-  .input-slider:hover::-ms-fill-lower,
-  .input-slider.is-hovered::-ms-fill-lower,
-  .input-slider:focus::-ms-fill-lower,
-  .input-slider.is-focused::-ms-fill-lower {
+  .input-slider:hover::-ms-fill-lower, .input-slider.is-hovered::-ms-fill-lower, .input-slider:focus::-ms-fill-lower, .input-slider.is-focused::-ms-fill-lower {
     background: #00abfa; }
-  .input-slider:hover::-ms-thumb,
-  .input-slider.is-hovered::-ms-thumb,
-  .input-slider:focus::-ms-thumb,
-  .input-slider.is-focused::-ms-thumb {
+  .input-slider:hover::-ms-thumb, .input-slider.is-hovered::-ms-thumb, .input-slider:focus::-ms-thumb, .input-slider.is-focused::-ms-thumb {
     height: 1.25rem;
     width: 1.25rem;
     margin-top: -0.38462rem;
