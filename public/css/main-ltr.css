@@ -432,16 +432,10 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 .hd-5,
 .hd-6 {
   margin: 0 0 1.25rem 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   color: #434242;
-}
-
-.copy,
-p, ol, ul, dl, td, th {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a,
@@ -1480,7 +1474,6 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   padding: 0.625rem;
   border: 1px solid #e9e8e8;
   background: #fcfcfc;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   color: #282c2e;
 }
