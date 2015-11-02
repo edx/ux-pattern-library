@@ -399,7 +399,7 @@ $headings-font-weight-normal:               font-weight(normal) !default;
 $headings-font-weight-bold:                 font-weight(semi-bold) !default;
 $headings-font-weight-x-bold:               font-weight(bold) !default;
 
-$headings-base-font-family:                 $font-family-sans-serif !default;
+$headings-base-font-family:                 inherit !default;
 $headings-base-font-weight:                 $headings-font-weight-normal !default;
 $headings-base-color:                       palette(grayscale, x-dark) !default;
 
