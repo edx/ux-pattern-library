@@ -5,8 +5,15 @@ Nothing yet
 
 - - -
 
+## 0.4.4 (2015-11-02)
+* Removed specific font-family declarations on headings/copy/form elements in favor of inheritance from _reset.scss's body rule (for easier customizations/overrides).
+
+- - -
+
 ## 0.4.3 (2015-10-28)
 * Added text truncation and wrapped Sass placeholders
+## 0.4.3 (2015-11-02)
+* Removed specific font-family declarations on headings/copy/form elements in favor of inheritance from _reset.scss's body rule (for easier customizations/overrides).
 
 - - -
 
