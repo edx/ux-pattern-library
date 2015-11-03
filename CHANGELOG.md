@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.4.5 (2015-11-03)
+* Locked version of bi-app-sass bower dependency to 1.1.0.
+
+- - -
+
 ## 0.4.4 (2015-11-02)
 * Removed specific font-family declarations on headings/copy/form elements in favor of inheritance from _reset.scss's body rule (for easier customizations/overrides).
 
