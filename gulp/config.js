@@ -1,12 +1,15 @@
 // gulp pattern library + site configuration
 
-    // pattern library
+// pattern library
 var dest                        = './public',
     src                         = './pattern-library',
     local                       = './_site',
 
     // documentation site
-    pldoc_src                   = './pldoc';
+    pldoc_src                   = './pldoc',
+
+    // lib directory
+    lib_dir                      = 'bower_components';
 
 module.exports = {
     browserSync:                {
@@ -70,7 +73,8 @@ module.exports = {
     },
     lib:                    {
         // third party libraries
-        src:                    './bower_components'
+        src:                    './' + lib_dir,
+        src_files:              './' + lib_dir + '/**/*.js'
     },
     jekyll:                     {
         home:                   'index.html',

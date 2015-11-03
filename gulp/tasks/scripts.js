@@ -4,7 +4,6 @@ var gulp            = require('gulp'),
     uglify          = require('gulp-uglify');
 
 gulp.task('scripts', ['scripts-lint'], function() {
-
     return gulp.src([
             // setup script sequence
             config.lib.src + '/requirejs/require.js',
@@ -16,7 +15,7 @@ gulp.task('scripts', ['scripts-lint'], function() {
             config.scripts.src + '/testing.js'
         ])
         .pipe(uglify())
-        .pipe(gulp.dest(config.scripts.local)) // move for just browsercync + local preview
+        .pipe(gulp.dest(config.scripts.local)) // move for just browsersync + local preview
         .pipe(browserSync.reload({ stream: true }))
-        .pipe(gulp.dest(config.scripts.dest))
+        .pipe(gulp.dest(config.scripts.dest));
 });

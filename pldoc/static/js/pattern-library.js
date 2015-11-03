@@ -1,27 +1,41 @@
+/**
+ * Defines libraries used on PL Doc site.
+ */
 require.config({
     baseUrl: '/public/js',
     paths: {
-        jquery: "/public/js/jquery.min",
-        modernizr: "/public/js/modernizr-custom",
-        afontgarde: "/public/js/afontgarde",
-        edxicons: "/public/js/edx-icons"
+        afontgarde: '/public/js/afontgarde',
+        backbone: '/public/js/backbone/backbone',
+        edxicons: '/public/js/edx-icons',
+        'edx-ui-toolkit': '/public/js/edx-ui-toolkit/components',
+        jquery: '/public/js/jquery.min',
+        modernizr: '/public/js/modernizr-custom',
+        underscore: '/public/js/underscore/underscore'
     },
     shim: {
-        'jquery': {
+        afontgarde: {
+            exports: 'AFontGarde'
+        },
+        backbone: {
+            deps: ['jquery', 'underscore'],
+            exports: 'Backbone'
+        },
+        jquery: {
             exports: 'jquery'
         },
-        'afontgarde': {
-            exports: 'AFontGarde'
+        underscore: {
+            exports: '_'
         }
     }
 });
 
 require([
     'jquery',
-    '/public/js/ui.js',
-    '/public/js/modernizr-custom.js',
+    'ui',
+    'modernizr-custom',
     'afontgarde',
-    '/public/js/edx-icons.js'
+    'edx-icons',
+    'start-collapsible'
     ],
     function($, Ui) {}
 );
