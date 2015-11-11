@@ -35,3 +35,6 @@ nbproject
 _site
 bower_components
 node_modules
+
+#Ignore: creative/resources
+_ux
