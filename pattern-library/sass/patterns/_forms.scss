@@ -3,6 +3,7 @@
 
 // About: Contains base styling for forms
 
+// #SETTINGS
 // #GLOBAL
 // #INPUT TEXT
 // #INPUT RADIO/CHECKBOX
@@ -11,10 +12,71 @@
 // #SLIDERS
 // #PROGRESS
 
+
+// ----------------------------
+// #SETTINGS
+// ----------------------------
+// primarily used in textareas
+$input-height: (
+    short:          5,
+    base:           10,
+    tall:           15
+);
+
+// form inputs: widths
+$input-width: (
+    short:          150,
+    base:           300,
+    wide:           450,
+    block:          null // value here is irrelevant but required. Null is easy to understand.
+);
+
+$label-color:                               $text-base-color !default;
+$label-color-active:                        palette(grayscale, x-dark) !default;
+
+$input-placeholder-text:                    palette(grayscale-cool, light) !default;
+
+$input-default-background:                  palette(grayscale, white) !default;
+$input-default-background-focus:            $input-default-background !default;
+$input-check-radio-background:              palette(grayscale-cool, x-light) !default;
+$input-check-radio-checked-background:      palette(primary, base) !default;
+$input-default-border-color:                palette(grayscale, x-light) !default;
+$input-default-focus-border-color:          palette(primary, accent) !default;
+$input-default-color:                       palette(grayscale-cool, x-dark) !default;
+$input-default-focus-color:                 palette(grayscale-cool, x-dark) !default;
+$input-control-color:                       palette(primary, base) !default;
+
+$input-disabled-background:                 palette(grayscale-cool, x-light) !default;
+$input-disabled-border-color:               palette(grayscale-cool, light) !default;
+$input-disabled-text:                       palette(grayscale-cool, light) !default;
+
+$input-alt-background:                      $transparent !default;
+$input-alt-focus-border-color:              palette(grayscale, x-dark) !default;
+
+$input-slider-track:                        palette(grayscale, x-light) !default;
+$input-slider-border:                       $input-slider-track !default;
+$input-slider-border-radius:                $component-border-radius !default;
+$input-slider-handle:                       palette(primary, light) !default;
+$input-slider-handle-focus:                 palette(primary, base) !default;
+$input-slider-focus:                        palette(primary, accent) !default;
+$input-slider-hover:                        palette(primary, x-accent) !default;
+$input-slider-disabled-track:               palette(grayscale, x-light) !default;
+$input-slider-disabled-border:              $input-slider-disabled-track !default;
+$input-slider-disabled-handle:              palette(grayscale, base) !default;
+$input-slider-disabled-focus:               palette(grayscale, light) !default;
+
+$input-progress-track:                      palette(grayscale, x-light) !default;
+$input-progress-border:                     $input-progress-track !default;
+$input-progress-border-radius:              $component-border-radius !default;
+$input-progress-completed-track:            palette(primary, accent) !default;
+
+$field-tip-color:                           palette(grayscale-cool, dark) !default;
+$field-required-color:                      $label-color !default;
+
+
 // ----------------------------
 // #GLOBAL
 // ----------------------------
-
 // sections of a form
 .form-group {
     @include clearfix();
@@ -216,6 +278,7 @@
     @include transition(all timing(xx-fast) ease-in-out 0s);
 }
 
+
 // ----------------------------
 // #INPUT TEXT
 // ----------------------------
@@ -239,6 +302,7 @@
         }
     }
 }
+
 
 // ----------------------------
 // #SELECT
@@ -303,6 +367,7 @@
         }
     }
 }
+
 
 // ----------------------------
 // #RADIO / CHECKBOX
@@ -509,6 +574,7 @@
         }
     }
 }
+
 
 // ----------------------------
 // #PROGRESS

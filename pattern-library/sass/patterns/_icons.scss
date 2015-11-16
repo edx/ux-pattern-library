@@ -5,9 +5,17 @@
 
 // NOTE: Read more at https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Icons
 
+// #SETTINGS
+// #GLOBAL
+// #ICONS
+// #FALLBACKS
+
+
 // ----------------------------
-// #CONFIG
+// #SETTINGS
 // ----------------------------
+@import 'icons-afontgarde';
+
 $edx-icons:
 linkedin-square
 caret-down
@@ -122,7 +130,7 @@ cc;
 
 
 // ----------------------------
-// #GLOBALS
+// #GLOBAL
 // ----------------------------
 .icon {
     display: inline-block;

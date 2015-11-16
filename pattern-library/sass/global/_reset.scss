@@ -9,6 +9,7 @@
 // #ACTIONS:    links, buttons, controls overrides and resets
 // #MEDIA:      images, video, mutlmedia overrides and resets
 // #UTILITIES:  layout and use case utilities
+// #TYPOGRAPHY: basic typography rules and settings
 
 
 // ----------------------------
@@ -17,6 +18,7 @@
 * {
     box-sizing: border-box;
 }
+
 
 // ----------------------------
 // #BASE
@@ -49,6 +51,7 @@ dl {
     margin: 0 0 spacing-vertical(small) 0;
 }
 
+
 // ----------------------------
 // #FORMS
 // ----------------------------
@@ -62,6 +65,7 @@ textarea {
     resize: vertical;
 }
 
+
 // ----------------------------
 // #ACTIONS
 // ----------------------------
@@ -69,6 +73,7 @@ a,
 .link {
     @extend %link;
 }
+
 
 // ----------------------------
 // #MEDIA
@@ -99,6 +104,7 @@ pre {
     margin: 0;
 }
 
+
 // ----------------------------
 // #UTILITIES
 // ----------------------------
@@ -121,4 +127,44 @@ pre {
 
 [class^='wrapper'] {
     @extend %wrapper;
+}
+
+
+// ----------------------------
+// #TYPOGRAPHY
+// ----------------------------
+// headings
+h1, h2, h3, h4, h5, h6 {
+    @extend %reset-headings;
+}
+
+h1 {
+    font-size: font-size(xxx-large);
+}
+
+h2 {
+    font-size: font-size(xx-large);
+}
+
+h3 {
+    font-size: font-size(x-large);
+}
+
+h4 {
+    font-size: font-size(large);
+}
+
+h5 {
+    font-size: font-size(base);
+}
+
+h6 {
+   font-size: font-size(small);
+}
+
+
+// copy
+.copy,
+p, ol, ul, dl, td, th {
+    @extend %reset-copy;
 }
