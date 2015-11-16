@@ -384,7 +384,7 @@ assigned to them, as mentioned in the above contributing guidelines.
 
 #### Approval by UX and Front End Team Members
 An edX UX Team member will be working with you on any pull requests you make.
-They be evaulating your pull request from a design point of view as well as from
+They will be evaulating your pull request from a design point of view as well as from
 a Front End Development perspective. Other team members as well as UI/Front End
 Developers may also lend a hand.
 
