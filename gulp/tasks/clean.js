@@ -7,6 +7,7 @@ gulp.task( 'clean', function() {
         config.scripts.dest,
         config.images.dest,
         config.fonts.dest,
-        config.styles.dest
+        config.styles.dest,
+        config.styles.pldoc_dest
     ]);
 });

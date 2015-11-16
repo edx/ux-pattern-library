@@ -1,0 +1,176 @@
+// ------------------------------
+// edX Pattern Library: Components - Headings
+
+// About: Contains base styling for headings (leading type for sections of content and UI).
+
+// SETTINGS
+// HELPERS
+// #GLOBAL
+// #INDIVIDUAL CASES
+// #CANNED
+
+
+// ----------------------------
+// #SETTINGS
+// ----------------------------
+$headings-count: 8;
+
+$headings-font-weight-normal:               font-weight(normal) !default;
+$headings-font-weight-bold:                 font-weight(semi-bold) !default;
+$headings-font-weight-x-bold:               font-weight(bold) !default;
+
+$headings-base-font-family:                 inherit !default;
+$headings-base-font-weight:                 $headings-font-weight-normal !default;
+$headings-base-color:                       palette(grayscale, x-dark) !default;
+
+$headings-emphasized-font-family:           $font-family-sans-serif !default;
+$headings-emphasized-color:                 palette(grayscale, black-t) !default;
+
+$headings-de-emphasized-font-family:        $font-family-sans-serif !default;
+$headings-de-emphasized-color:              palette(grayscale, dark) !default;
+
+
+// ----------------------------
+// #HELPERS
+// ----------------------------
+%reset-headings {
+    margin: 0 0 spacing-horizontal(base) 0;
+    font-weight: $headings-base-font-weight;
+    font-size: font-size(base);
+    line-height: line-height(base);
+    color: $headings-base-color;
+}
+
+// ----------------------------
+// #GLOBAL
+// ----------------------------
+// broad stroke extend for emphasized/de-emphasized headings
+%headings-emphasized {
+    color: $headings-emphasized-color;
+    font-weight: $headings-font-weight-bold;
+}
+
+%headings-de-emphasized {
+    color: $headings-de-emphasized-color;
+}
+
+.hd-1,
+.hd-2,
+.hd-3,
+.hd-4,
+.hd-5,
+.hd-6 {
+    @extend %reset-headings;
+
+    &.emphasized {
+        @extend %headings-emphasized;
+    }
+
+    &.de-emphasized {
+        @extend %headings-de-emphasized;
+    }
+}
+
+.hd-6,
+.hd-7 {
+
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
+}
+
+
+// ----------------------------
+// #INDIVIDUAL CASES
+// ----------------------------
+// Level one heading
+%hd-1 {
+    margin-bottom: spacing-vertical(small);
+    font-size: font-size(xxxx-large);
+    line-height: line-height(xxx-large);
+}
+
+
+// Level two heading
+%hd-2 {
+    margin-bottom: spacing-vertical(small);
+    font-size: font-size(xxx-large);
+    line-height: line-height(xx-large);
+}
+
+
+// Level three heading
+%hd-3 {
+    margin-bottom: spacing-vertical(x-small);
+    font-size: font-size(xx-large);
+    line-height: line-height(x-large);
+}
+
+
+// Level four heading
+%hd-4 {
+    margin-bottom: spacing-vertical(x-small);
+    font-size: font-size(x-large);
+    line-height: line-height(large);
+}
+
+
+// Level five heading
+%hd-5 {
+    margin-bottom: spacing-vertical(x-small);
+    font-size: font-size(large);
+    line-height: line-height(large);
+}
+
+
+// Level six heading
+%hd-6 {
+    margin-bottom: spacing-vertical(xx-small);
+    font-size: font-size(base);
+    font-weight: $headings-font-weight-bold;
+    line-height: line-height(large);
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
+}
+
+// Level seven heading
+%hd-7 {
+    margin-bottom: spacing-vertical(x-small);
+    font-size: font-size(small);
+    font-weight: $headings-font-weight-bold;
+    text-transform: uppercase;
+    line-height: line-height(small);
+    letter-spacing: letter-spacing(x-loose);
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
+}
+
+// Level eight heading
+%hd-8 {
+    margin-bottom: spacing-vertical(xx-small);
+    font-size: font-size(x-small);
+    font-weight: $headings-font-weight-bold;
+    text-transform: uppercase;
+    line-height: line-height(x-small);
+    letter-spacing: letter-spacing(loose);
+
+    &.emphasized {
+        font-weight: $headings-font-weight-x-bold;
+    }
+}
+
+
+// ----------------------------
+// #CANNED
+// ----------------------------
+// canned heading classes
+@for $i from 1 through $headings-count {
+    .hd-#{$i} {
+        @extend %hd-#{$i};
+    }
+}

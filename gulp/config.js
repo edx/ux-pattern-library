@@ -22,22 +22,20 @@ module.exports = {
             sourcemapsLocation: '.'
         },
 
-        settings_production: {
-            outputStyle: 'compressed',
-            autoprefixer: { browsers: ['last 2 version'] }
-        },
-
         // pattern library
         src_files:              src + '/sass/**/*.scss',
-        dest:                   dest + '/css',
-        dest_files:             dest + '/css/**/*.css',
-        local:                  local + '/public/pldoc/css',
+        src:                    src + '/sass',
+        dest:                   src + '/css',
+        dest_files:             src + '/css/**/*.css',
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/sass',
-        pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss'
+        pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss',
+        pldoc_dest:             dest + '/css',
+        pldoc_dest_files:       dest + '/css/**/*.css',
+        pldoc_local:            local + '/public/css',
     },
-    fonts:                     {
+    fonts:                      {
         // pattern library
         src:                    src + '/fonts',
         src_files:              src + '/fonts/**/*',
