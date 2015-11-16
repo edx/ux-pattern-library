@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "authors": [
     "edX UX Team <ux@edx.org>"
   ],
@@ -23,11 +23,12 @@
     "**/.*",
     "404.html",
     "_config.yml",
+    "_data",
     "_includes",
     "_layouts",
     "_posts",
     "_site",
-    "_src/pldoc",
+    "pldoc",
     "about.md",
     "bower_components",
     "CNAME",
@@ -46,11 +47,10 @@
   },
   "dependencies": {
     "animate.css": "~3.3.0",
-    "bi-app-sass": "*",
+    "bi-app-sass": "~1.1.0",
     "bourbon": "~4.2.3",
     "breakpoint-sass": "~2.6.1",
     "requirejs": "~2.1.15",
-    "susy": "~2.2.5",
-    "svg4everybody": "~1.0.0"
+    "susy": "~2.2.5"
   }
 }

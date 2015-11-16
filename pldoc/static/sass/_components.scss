@@ -3,9 +3,18 @@
 
 // About: styling for specific UI components ranging from global to modular.
 
-// ------------------------------
-// #HEADINGS
-// ------------------------------
+// #CONTROLS
+// #SYSTEM FEEDBACK
+// #HEADER
+// #NAVIGATION
+// #SIDEBAR
+// #MAIN CONTENT
+// #FOOTER
+// #PATTERNS
+// #SPECIFIC PATTERNS
+// #EXAMPLE - GRID
+// #EXAMPLE - LAYOUTS
+
 
 // ------------------------------
 // #CONTROLS
@@ -26,11 +35,97 @@
     }
 }
 
-// copyable elements
+// copyable patterns
 .is-copyable {
     display: inline-block;
     white-space: nowrap;
     font-family: $font-family-monospace;
+}
+
+// ------------------------------
+// #SYSTEM FEEDBACK
+// ------------------------------
+%message {
+    font-weight: font-weight(semi-bold);
+}
+
+%message-warning {
+    @extend %message;
+    background-color: palette(warning, light);
+    color: palette(grayscale, black-t);
+}
+
+// alerts
+.wrapper-alert {
+    margin-bottom: spacing-vertical(x-small);
+}
+
+.alert {
+    @include border-left(rem(4) solid palette(grayscale-cool, light));
+    border-radius: rem(3);
+    padding: spacing-vertical(small) spacing-horizontal(base);
+    background-color: palette(grayscale, x-light);
+}
+
+
+.alert-title {
+    @extend %hd-6;
+    @extend %headings-emphasized;
+}
+
+.alert-copy {
+    @extend %copy-meta;
+
+    > * {
+        @extend %clear-last-child;
+    }
+}
+
+// TODO: use a Sass loop for these rules  make them an official pattern
+
+// CASE: information-based alert
+.alert-information {
+    border-color: palette(information, base);
+}
+
+// CASE: warning-based alert
+.alert-warning {
+    border-color: palette(warning, base);
+}
+
+// CASE: error-based alert
+.alert-error {
+    border-color: palette(error, base);
+}
+
+// CASE: success-based alert
+.alert-success {
+    border-color: palette(success, base);
+}
+
+// CASE: ui-toolkit reference
+.alert-ui-toolkit {
+    border-color: $pldoc-ui-toolkit-color;
+}
+
+.badge {
+    @include text-align(center);
+    border-radius: rem(15);
+    padding: spacing-vertical(xxx-small) spacing-horizontal(small);
+    font-size: font-size(xxx-small);
+    font-weight: font-weight(bold);
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: letter-spacing(loose);
+
+    .badge-abbreviation {
+        border-bottom: none;
+    }
+}
+
+.badge-ui-toolkit {
+    background-color: $pldoc-ui-toolkit-color;
+    color: palette(grayscale-cool, x-dark);
 }
 
 // ------------------------------
@@ -89,7 +184,7 @@
 .pldoc-nav {
     margin-bottom: spacing-vertical(mid-large);
 
-    // CASE: last element
+    // CASE: last pattern
     &:last-child {
         margin-bottom: 0;
     }
@@ -119,7 +214,7 @@
         }
     }
 
-    // CASE: last element
+    // CASE: last pattern
     .nav-list-item:last-child {
 
        .pldoc-link {
@@ -132,6 +227,27 @@
 
         .pldoc-link:before {
             display: inline-block;
+        }
+    }
+
+    // CASE: pattern listing
+    .list-patterns {
+
+        .pattern {
+            @include clearfix();
+
+            .pattern-title,
+            .badge {
+                display: inline-block;
+            }
+
+            .pattern-title {
+                width: 80%;
+            }
+
+            .badge {
+                @include float(right);
+            }
         }
     }
 }
@@ -265,27 +381,27 @@
 }
 
 // ------------------------------
-// #ELEMENTS
+// #PATTERNS
 // ------------------------------
-.pldoc-element {
+.pldoc-pattern {
 
     .example-set-hd {
         margin-bottom: spacing-vertical(small);
     }
 }
 
-.pldoc-element-header {
+.pldoc-pattern-header {
     margin-bottom: spacing-vertical(base);
     border-bottom: 1px solid palette(grayscale, dark);
     padding-bottom: spacing-vertical(small);
 
-    .pldoc-element-meta {
+    .pldoc-pattern-meta {
         @extend %reset-lists;
     }
 }
 
 
-// element info tabs
+// pattern info tabs
 .pldoc-tab-labels {
     @include clearfix();
     @extend %reset-lists;
@@ -326,8 +442,8 @@
     }
 }
 
-// markup section of element
-.pldoc-element-markup {
+// markup section of pattern
+.pldoc-pattern-markup {
 
     code {
         font-family: $font-family-monospace;
@@ -336,11 +452,213 @@
 
 
 // ------------------------------
-// #SPECIFIC ELEMENTS
+// #SPECIFIC PATTERNS
 // ------------------------------
-
 // color swatches
-.pldoc-element-colors {
+.pldoc-pattern-colors {
+
+    .brand-primary {
+
+        &.base {
+            background: palette(primary, base);
+        }
+
+        &.light {
+            background: palette(primary, light);
+        }
+
+        &.x-light {
+            background: palette(primary, x-light);
+        }
+
+        &.dark {
+            background: palette(primary, dark);
+        }
+
+        &.x-dark {
+            background: palette(primary, x-dark);
+        }
+
+        &.accent {
+            background: palette(primary, accent);
+        }
+
+        &.x-accent {
+            background: palette(primary, x-accent);
+        }
+    }
+
+    .brand-secondary {
+        background: palette(secondary, base);
+
+        &.base {
+            background: palette(secondary, base);
+        }
+
+        &.light {
+            background: palette(secondary, light);
+        }
+
+        &.x-light {
+            background: palette(secondary, x-light);
+        }
+
+        &.dark {
+            background: palette(secondary, dark);
+        }
+
+        &.x-dark {
+            background: palette(secondary, x-dark);
+        }
+
+        &.accent {
+            background: palette(secondary, accent);
+        }
+    }
+
+    .grayscale {
+        background: palette(grayscale, base);
+
+        &.base {
+            background: palette(grayscale, base);
+        }
+
+        &.light {
+            background: palette(grayscale, light);
+        }
+
+        &.x-light {
+            background: palette(grayscale, x-light);
+        }
+
+        &.xx-light {
+            background: palette(grayscale, xx-light);
+        }
+
+        &.white {
+            background: palette(grayscale, white);
+        }
+
+        &.white-t {
+            background: palette(grayscale, white-t);
+        }
+
+        &.dark {
+            background: palette(grayscale, dark);
+        }
+
+        &.x-dark {
+            background: palette(grayscale, x-dark);
+        }
+
+        &.black {
+            background: palette(grayscale, black);
+        }
+
+        &.black-t {
+            background: palette(grayscale, black-t);
+        }
+
+        &.trans {
+            background: palette(grayscale, trans);
+        }
+
+        &.x-trans {
+            background: palette(grayscale, x-trans);
+        }
+
+        &.xx-trans {
+            background: palette(grayscale, xx-trans);
+        }
+    }
+
+    .grayscale-cool {
+        background: palette(grayscale-cool, base);
+
+        &.base {
+            background: palette(grayscale-cool, base);
+        }
+
+        &.light {
+            background: palette(grayscale-cool, light);
+        }
+
+        &.x-light {
+            background: palette(grayscale-cool, x-light);
+        }
+
+        &.xx-light {
+            background: palette(grayscale-cool, xx-light);
+        }
+
+        &.dark {
+            background: palette(grayscale-cool, dark);
+        }
+
+        &.x-dark {
+            background: palette(grayscale-cool, x-dark);
+        }
+
+        &.trans {
+            background: palette(grayscale-cool, trans);
+        }
+
+        &.x-trans {
+            background: palette(grayscale-cool, x-trans);
+        }
+
+        &.xx-trans {
+            background: palette(grayscale-cool, xx-trans);
+        }
+    }
+
+    .success {
+        background: palette(success, base);
+
+        &.base {
+            background: palette(success, base);
+        }
+
+        &.light {
+            background: palette(success, light);
+        }
+
+        &.dark {
+            background: palette(success, dark);
+        }
+    }
+
+    .warning {
+        background: palette(warning, base);
+
+        &.base {
+            background: palette(warning, base);
+        }
+
+        &.light {
+            background: palette(warning, light);
+        }
+
+        &.dark {
+            background: palette(warning, dark);
+        }
+    }
+
+    .error {
+        background: palette(error, base);
+
+        &.base {
+            background: palette(error, base);
+        }
+
+        &.light {
+            background: palette(error, light);
+        }
+
+        &.dark {
+            background: palette(error, dark);
+        }
+    }
 
     .example-color {
         @include transition(all timing(x-fast) ease-in-out);
@@ -452,7 +770,7 @@
 }
 
 // buttons
-.pldoc-element-buttons {
+.pldoc-pattern-buttons {
 
     .btn {
         display: inline-block;
@@ -468,7 +786,7 @@
 }
 
 // icons
-.pldoc-element-icons {
+.pldoc-pattern-icons {
 
     .example-icon {
         @include text-align(center);
@@ -498,9 +816,49 @@
     }
 }
 
+// ui depth
+.pldoc-pattern-depth {
+
+    // padding for demo purposes
+    .depth {
+        padding: spacing-vertical(small) spacing-horizontal(base);
+    }
+
+    // light text on darker backgrounds for demo purposes
+    .depth--2,
+    .depth--3 {
+
+        .hd {
+            color: palette(grayscale, white);
+        }
+
+        .copy {
+            color: palette(grayscale, x-light);
+        }
+    }
+
+    // spacing for demo purposes
+    .slat,
+    .card {
+        margin-bottom: spacing-vertical(x-small);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .zebra-stripe {
+        @extend %reset-lists;
+
+        .slat {
+            margin-bottom: 0;
+        }
+    }
+}
+
 
 // ------------------------------
-// #GRID
+// #EXAMPLE - GRID
 // ------------------------------
 %demo-grid-column {
     background: $grid-debug-color;
@@ -532,7 +890,7 @@
 }
 
 // post
-.pldoc-element-grid {
+.pldoc-pattern-grid {
 
     .col,
     .gallery-item {
@@ -809,8 +1167,9 @@
     }
 }
 
+
 // ------------------------------
-// #LAYOUTS
+// #EXAMPLE - LAYOUTS
 // ------------------------------
 %demo-layout-column {
     background: $grid-debug-color;
@@ -843,62 +1202,4 @@
         display: block;
         color: palette(grayscale, black-t);
     }
-}
-
-
-// ------------------------------
-// #UI DEPTH
-// ------------------------------
-
-// post
-.pldoc-element-depth {
-
-    // padding for demo purposes
-    .depth {
-        padding: spacing-vertical(small) spacing-horizontal(base);
-    }
-
-    // light text on darker backgrounds for demo purposes
-    .depth--2,
-    .depth--3 {
-
-        .hd {
-            color: palette(grayscale, white);
-        }
-
-        .copy {
-            color: palette(grayscale, x-light);
-        }
-    }
-
-    // spacing for demo purposes
-    .slat,
-    .card {
-        margin-bottom: spacing-vertical(x-small);
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    .zebra-stripe {
-        @extend %reset-lists;
-
-        .slat {
-            margin-bottom: 0;
-        }
-    }
-}
-
-// ------------------------------
-// #SYSTEM FEEDBACK
-// ------------------------------
-%message {
-    font-weight: font-weight(semi-bold);
-}
-
-%message-warning {
-    @extend %message;
-    background-color: palette(warning, light);
-    color: palette(grayscale, black-t);
 }

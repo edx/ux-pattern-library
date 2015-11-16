@@ -4,34 +4,19 @@
 // About: Import all dependencies and current pattern styling of the edX Pattern Library
 
 // ------------------------------
-// #CONFIG + UTILITIES
+// #CORE
 // ------------------------------
-@import 'utilities/functions';
+@import 'global/core';
 
-// set RTL/LTR specific variables
-@if $layout-direction == rtl {
-    @import 'utilities/variables-rtl';
-} @else {
-    @import 'utilities/variables-ltr';
-}
-
-@import 'utilities/variables';
-@import 'utilities/mixins';
-@import 'utilities/helpers';
-@import 'utilities/normalize';
-@import 'utilities/reset';
-@import 'utilities/typography';
-@import 'utilities/afontgarde';
 
 // ------------------------------
-// #COMPONENTS
+// #PATTERNS
 // ------------------------------
-@import 'components/colors';
-@import 'components/buttons';
-@import 'components/headings';
-@import 'components/copy';
-@import 'components/forms';
-@import 'components/grid';
-@import 'components/layouts';
-@import 'components/depth';
-@import 'components/icons';
+@import 'patterns/buttons';
+@import 'patterns/headings';
+@import 'patterns/copy';
+@import 'patterns/forms';
+@import 'patterns/grid';
+@import 'patterns/layouts';
+@import 'patterns/depth';
+@import 'patterns/icons';

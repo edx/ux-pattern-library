@@ -20,6 +20,13 @@ define([
 
         setupHtml: function() {
             $('html').removeClass('no-js');
+            $('#pldoc-nav-patterns .nav-list-item .pldoc-link').each(function (index, element) {
+                var $el = $( element );
+                if ( $el.attr('href') === window.location.pathname ) {
+                  $el.addClass('is-current');
+                  return false;
+                }
+            });
         },
 
         setupPalettes: function() {
@@ -48,7 +55,7 @@ define([
         },
 
         sendFocus: function(target) {
-            $(target).find('.pldoc-element-title:first').attr('tabindex', '-1').focus();
+            $(target).find('.pldoc-pattern-title:first').attr('tabindex', '-1').focus();
         },
 
         openNewWindow: function() {
@@ -60,8 +67,8 @@ define([
 
         // smoothscroll to target links
         navigationHighlight: function() {
-            $('.pldoc-nav-elements .pldoc-link').on('click', function(event) {
-                $('.pldoc-nav-elements .pldoc-link').removeClass('is-current');
+            $('.pldoc-nav-patterns .pldoc-link').on('click', function(event) {
+                $('.pldoc-nav-patterns .pldoc-link').removeClass('is-current');
                 $(event.currentTarget).addClass('is-current');
             });
         },

@@ -1,14 +1,13 @@
 var gulp            = require('gulp'),
     config          = require('../config').styles,
     minifyCSS       = require('gulp-minify-css'),
-    size            = require('gulp-filesize'),
-    sourcemaps      = require('gulp-sourcemaps');
+    rename          = require('gulp-rename'),
+    size            = require('gulp-filesize');
 
-gulp.task('styles-minify', ['styles'], function() {
+gulp.task('styles-minify', function() {
     return gulp.src(config.dest_files)
-    .pipe(sourcemaps.init())
     .pipe(minifyCSS())
+    .pipe(rename({suffix: '.min'}))
     .pipe(size())
-    .pipe(sourcemaps.write(config.settings_development.sourcemapsLocation))
     .pipe(gulp.dest(config.dest));
 });
