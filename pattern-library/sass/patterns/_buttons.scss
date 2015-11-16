@@ -128,6 +128,21 @@ $btn-overlay-disabled-focus-color:          palette(grayscale, white) !default;
 $btn-overlay-disabled-focus-border-color:   palette(grayscale, trans) !default;
 $btn-overlay-disabled-focus-background:     $transparent !default;
 
+$btn-types:
+default
+primary
+secondary
+link
+elevated
+elevated-alt
+combo
+overlay;
+
+$btn-sizes:
+small
+base
+large;
+
 
 // ----------------------------
 // #GLOBALS
@@ -164,7 +179,6 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #SIZES
 // ----------------------------
-
 // large
 %btn-large {
     padding: spacing-vertical(small) spacing-horizontal(mid-large);
@@ -187,7 +201,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #DEFAULT
 // ----------------------------
-.btn-default {
+%btn-default {
     @extend %btn;
     border-color: $btn-default-border-color;
     background: $btn-default-background;
@@ -223,7 +237,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #PRIMARY
 // ----------------------------
-.btn-primary {
+%btn-primary {
     @extend %btn;
     border-color: $btn-primary-border-color;
     background: $btn-primary-background;
@@ -259,7 +273,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #SECONDARY
 // ----------------------------
-.btn-secondary {
+%btn-secondary {
     @extend %btn;
     border-color: $btn-secondary-border-color;
     background: $btn-secondary-background;
@@ -293,7 +307,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #LINK
 // ----------------------------
-.btn-link {
+%btn-link {
     @extend %btn;
     @extend %link;
 
@@ -314,7 +328,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #ELEVATED
 // ----------------------------
-.btn-elevated {
+%btn-elevated {
     @extend %btn;
     border-color: $btn-elevated-border-color;
     box-shadow: $btn-elevated-shadow;
@@ -352,7 +366,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #ELEVATED-ALT
 // ----------------------------
-.btn-elevated-alt {
+%btn-elevated-alt {
     @extend %btn;
     box-shadow: inset 0 0 -$btn-elevated-shadow 0 0 palette(grayscale-cool, light);
     border-color: palette(grayscale-cool, light);
@@ -392,7 +406,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #COMBO
 // ----------------------------
-.btn-combo {
+%btn-combo {
     @extend %btn;
     border-radius: 0;
 
@@ -413,7 +427,7 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #OVERLAY
 // ----------------------------
-.btn-overlay {
+%btn-overlay {
     @extend %btn;
     border-color: $btn-overlay-border-color;
     background: $btn-overlay-background;
@@ -454,17 +468,15 @@ $btn-overlay-disabled-focus-background:     $transparent !default;
 // ----------------------------
 // #CANNED
 // ----------------------------
-// large
-.btn-large {
-    @extend %btn-large;
+@each $btn-type in $btn-types {
+    .btn-#{$btn-type} {
+        @extend %btn-#{$btn-type};
+    }
 }
 
-// base
-.btn-base {
-    @extend %btn-base;
+@each $btn-size in $btn-sizes {
+    .btn-#{$btn-size} {
+        @extend %btn-#{$btn-size};
+    }
 }
 
-// small
-.btn-small {
-    @extend %btn-small;
-}

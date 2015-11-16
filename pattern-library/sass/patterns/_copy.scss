@@ -15,9 +15,19 @@
 
 
 // ----------------------------
+// #CONFIG
+// ----------------------------
+$copy-sizes:
+lead
+large
+base
+meta
+micro;
+
+
+// ----------------------------
 // #GLOBAL
 // ----------------------------
-
 // broad stroke extend for emphasized/de-emphasized copy
 %copy-emphasized {
     color: $text-emphasized-color;
@@ -106,25 +116,12 @@
     }
 }
 
+
 // ----------------------------
 // #CANNED
 // ----------------------------
-.copy-lead {
-    @extend %copy-lead;
-}
-
-.copy-large {
-   @extend %copy-large;
-}
-
-.copy-base {
-    @extend %copy-base;
-}
-
-.copy-meta {
-    @extend %copy-meta;
-}
-
-.copy-micro {
-    @extend %copy-micro;
+@each $copy-size in $copy-sizes {
+    .copy-#{$copy-size} {
+        @extend %copy-#{$copy-size};
+    }
 }

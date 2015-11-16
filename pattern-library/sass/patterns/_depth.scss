@@ -11,6 +11,14 @@
 // ----------------------------
 // #SETTINGS
 // ----------------------------
+$depth-levels:
+-3
+-2
+-1
+0
+1
+2;
+
 $depth--3-bg:   palette(grayscale-cool, x-dark)   !default;  // -3 depth level
 $depth--2-bg:   palette(grayscale-cool, dark)   !default;  // -2 depth level
 $depth--1-bg:   palette(grayscale, x-light)   !default;  // -1 depth level
@@ -83,30 +91,10 @@ $depth-2-bg:    palette(grayscale, white)   !default;  // +2 depth level
 // ----------------------------
 // #CANNED
 // ----------------------------
-
-// class-based
-.depth--3 {
-    @extend %depth--3;
-}
-
-.depth--2 {
-    @extend %depth--2;
-}
-
-.depth--1 {
-    @extend %depth--1;
-}
-
-.depth-0 {
-    @extend %depth-0;
-}
-
-.depth-1 {
-    @extend %depth-1;
-}
-
-.depth-2 {
-    @extend %depth-2;
+@each $depth-level in $depth-levels {
+    .depth-#{$depth-level} {
+        @extend %depth-#{$depth-level};
+    }
 }
 
 // UI specifics

@@ -567,13 +567,13 @@ h6 {
   border-color: #0079bc;
   background: #fcfcfc;
   color: #0079bc; }
-  .btn-default:hover, .btn-default.is-hovered, .btn-default:focus, .btn-default.is-focused {
+  .btn-default:hover, .is-hovered.btn-default, .btn-default:focus, .is-focused.btn-default {
     background: #0079bc;
     color: #fcfcfc; }
-  .btn-default:active, .btn-default.is-pressed, .btn-default.is-active {
+  .btn-default:active, .is-pressed.btn-default, .is-active.btn-default {
     border-color: #005584;
     background: #005584; }
-  .btn-default:disabled, .btn-default.is-disabled {
+  .btn-default:disabled, .is-disabled.btn-default {
     border-color: #d3d2d2;
     background: #fcfcfc;
     color: #646262; }
@@ -582,13 +582,13 @@ h6 {
   border-color: #0079bc;
   background: #0079bc;
   color: #fcfcfc; }
-  .btn-primary:hover, .btn-primary.is-hovered, .btn-primary:focus, .btn-primary.is-focused {
+  .btn-primary:hover, .is-hovered.btn-primary, .btn-primary:focus, .is-focused.btn-primary {
     border-color: #0ea6ec;
     background: #0ea6ec; }
-  .btn-primary:active, .btn-primary.is-pressed, .btn-primary.is-active {
+  .btn-primary:active, .is-pressed.btn-primary, .is-active.btn-primary {
     border-color: #0079bc;
     background: #0079bc; }
-  .btn-primary:disabled, .btn-primary.is-disabled {
+  .btn-primary:disabled, .is-disabled.btn-primary {
     border-color: #d3d2d2;
     background: #e9e8e8;
     color: #646262; }
@@ -597,12 +597,12 @@ h6 {
   border-color: transparent;
   background: transparent;
   color: #0079bc; }
-  .btn-secondary:hover, .btn-secondary.is-hovered, .btn-secondary:focus, .btn-secondary.is-focused {
+  .btn-secondary:hover, .is-hovered.btn-secondary, .btn-secondary:focus, .is-focused.btn-secondary {
     border-color: #cfd8dc; }
-  .btn-secondary:active, .btn-secondary.is-pressed, .btn-secondary.is-active {
+  .btn-secondary:active, .is-pressed.btn-secondary, .is-active.btn-secondary {
     border-color: #0079bc;
     color: #0079bc; }
-  .btn-secondary:disabled, .btn-secondary.is-disabled {
+  .btn-secondary:disabled, .is-disabled.btn-secondary {
     border-color: #d3d2d2;
     color: #646262; }
 
@@ -619,13 +619,13 @@ h6 {
   box-shadow: inset 0 -3px 0 0 #005584;
   background: #0079bc;
   color: #fcfcfc; }
-  .btn-elevated:hover, .btn-elevated.is-hovered, .btn-elevated:focus, .btn-elevated.is-focused {
+  .btn-elevated:hover, .is-hovered.btn-elevated, .btn-elevated:focus, .is-focused.btn-elevated {
     box-shadow: inset 0 -3px 0 0 #005584;
     background: #0ea6ec; }
-  .btn-elevated:active, .btn-elevated.is-pressed, .btn-elevated.is-active {
+  .btn-elevated:active, .is-pressed.btn-elevated, .is-active.btn-elevated {
     box-shadow: inset 0 3px 0 0 #003655;
     background: #005584; }
-  .btn-elevated:disabled, .btn-elevated.is-disabled {
+  .btn-elevated:disabled, .is-disabled.btn-elevated {
     border-color: #e9e8e8;
     box-shadow: inset 0 -1px 0 #d3d2d2;
     background: #e9e8e8;
@@ -636,15 +636,15 @@ h6 {
   border-color: #cfd8dc;
   background: transparent;
   color: #0079bc; }
-  .btn-elevated-alt:hover, .btn-elevated-alt.is-hovered, .btn-elevated-alt:focus, .btn-elevated-alt.is-focused {
+  .btn-elevated-alt:hover, .is-hovered.btn-elevated-alt, .btn-elevated-alt:focus, .is-focused.btn-elevated-alt {
     border-color: #0079bc;
     box-shadow: inset 0 0-"inset 0 -3px 0 0 #005584" 0 0 #0079bc;
     background: #0ea6ec;
     color: #fcfcfc; }
-  .btn-elevated-alt:active, .btn-elevated-alt.is-pressed, .btn-elevated-alt.is-active {
+  .btn-elevated-alt:active, .is-pressed.btn-elevated-alt, .is-active.btn-elevated-alt {
     box-shadow: inset 0 inset 0 -3px 0 0 #005584 0 0 #003655;
     background: #005584; }
-  .btn-elevated-alt:disabled, .btn-elevated-alt.is-disabled {
+  .btn-elevated-alt:disabled, .is-disabled.btn-elevated-alt {
     border-color: #e9e8e8;
     box-shadow: inset 0 -1px 0 #d3d2d2;
     background: #e9e8e8;
@@ -671,15 +671,15 @@ h6 {
   border-color: #fcfcfc;
   background: transparent;
   color: #fcfcfc; }
-  .btn-overlay:hover, .btn-overlay.is-hovered, .btn-overlay:focus, .btn-overlay.is-focused {
+  .btn-overlay:hover, .is-hovered.btn-overlay, .btn-overlay:focus, .is-focused.btn-overlay {
     background: #fcfcfc;
     color: #0079bc; }
-  .btn-overlay:active, .btn-overlay.is-pressed, .btn-overlay.is-active {
+  .btn-overlay:active, .is-pressed.btn-overlay, .is-active.btn-overlay {
     color: #005584; }
-  .btn-overlay:disabled, .btn-overlay.is-disabled {
+  .btn-overlay:disabled, .is-disabled.btn-overlay {
     border-color: rgba(167, 164, 164, 0.5);
     color: #fcfcfc; }
-    .btn-overlay:disabled:hover, .btn-overlay.is-disabled:hover {
+    .btn-overlay:disabled:hover, .is-disabled.btn-overlay:hover {
       border-color: rgba(167, 164, 164, 0.5);
       background: transparent;
       color: #fcfcfc; }
