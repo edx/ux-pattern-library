@@ -4,6 +4,10 @@
 Nothing yet
 
 - - -
+## 0.6.0 (2015-11-24)
+* Revising color patterns to use Sass mix() method
+
+- - -
 
 ## 0.5.0 (2015-11-06)
 * Reconfigured preset Sass organization and compilation to make customization of patterns easier. Core utilities and set up are now called in one Sass partial. Patterns now define scoped settings they need.
