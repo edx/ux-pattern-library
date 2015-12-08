@@ -62,14 +62,14 @@ module.exports = {
     },
     images:                     {
         // pattern library
-        src:                    './pattern-library/images',
-        src_files:              './pattern-library/images/**/*',
-        dest:                   './public/images',
-        local:                  './_site/public/images',
+        src:                    src + '/images',
+        src_files:              src + '/images/**/*',
+        dest:                   dest + '/images',
+        local:                  local + '/public/images',
 
         // documentation site
-        pldoc_src:              './pldoc/static/images',
-        pldoc_src_files:        './pldoc/static/images/**/*',
+        pldoc_src:              pldoc_src + '/static/images',
+        pldoc_src_files:        pldoc_src + '/static/images/**/*',
 
         // example demo
         demo_src:               demo_src + '/static/images',
