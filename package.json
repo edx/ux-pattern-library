@@ -17,7 +17,6 @@
     "gulp-filesize": "*",
     "gulp-filter": "*",
     "gulp-imagemin": "*",
-    "gulp-jshint": "*",
     "gulp-minify-css": "*",
     "gulp-notify": "*",
     "gulp-rename": "^1.2.2",
