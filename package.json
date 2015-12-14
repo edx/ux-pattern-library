@@ -1,11 +1,32 @@
 {
-  "name": "edx-ux-pattern-library",
-  "version": "0.2.0",
+  "name": "edx-pattern-library",
+  "version": "0.7.0",
+  "author": "edX UX Team <ux@edx.org>",
   "license": "Apache-2.0",
-  "description": "Gulp and Jekyll front end workflow with common tasks for edX's UX Pattern Library site",
+  "description": "The (working) Visual, UI, and Front End Styleguide for edX Apps",
+  "keywords": [
+    "atomic design",
+    "edx",
+    "open edx",
+    "patterns",
+    "pattern library",
+    "UI starter"
+  ],
+  "homepage": "http://ux.edx.org",
+  "main": "_settings.scss",
   "repository": {
     "type": "git",
     "url": "git://github.com/edx/ux-pattern-library.git"
+  },
+  "dependencies": {
+    "animate.css": "^3.4.0",
+    "bi-app-sass": "^1.1.0",
+    "bourbon": "^4.2.6",
+    "breakpoint-sass": "^2.6.1",
+    "jquery": "^1.11.1",
+    "requirejs": "^2.1.22",
+    "requirejs-plugins": "^1.0.2",
+    "susy": "^2.2.9"
   },
   "devDependencies": {
     "browser-sync": "*",
@@ -19,7 +40,7 @@
     "gulp-imagemin": "*",
     "gulp-minify-css": "*",
     "gulp-notify": "*",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
@@ -28,6 +49,12 @@
     "lodash": "*",
     "merge-stream": "*",
     "require-dir": "*",
-    "run-sequence": "*"
+    "run-sequence": "*",
+    "susy": "^2.2.9"
+  },
+  "scripts": {
+    "production": "gulp build-production",
+    "gulp": "gulp",
+    "development": "gulp build-development"
   }
 }
