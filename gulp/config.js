@@ -70,7 +70,7 @@ module.exports = {
     },
     lib:                    {
         // third party libraries
-        src:                    './bower_components'
+        src:                    './node_modules'
     },
     jekyll:                     {
         home:                   'index.html',

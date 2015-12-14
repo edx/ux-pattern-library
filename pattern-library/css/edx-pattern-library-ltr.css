@@ -1107,7 +1107,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
     -webkit-transition: all 0.125s ease-in-out 0s;
     transition: all 0.125s ease-in-out 0s;
     -webkit-transform-origin: center center;
-    -ms-transform-origin: center center;
     transform-origin: center center;
     width: 100%;
     height: 0.625rem;
@@ -1128,7 +1127,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
     -webkit-transition: all 0.125s ease-in-out 0s;
     transition: all 0.125s ease-in-out 0s;
     -webkit-transform-origin: center center;
-    -ms-transform-origin: center center;
     transform-origin: center center;
     width: 100%;
     height: 0.625rem;
@@ -1149,7 +1147,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
     -webkit-transition: all 0.125s ease-in-out 0s;
     transition: all 0.125s ease-in-out 0s;
     -webkit-transform-origin: center center;
-    -ms-transform-origin: center center;
     transform-origin: center center;
     width: 100%;
     height: 0.625rem;
@@ -1161,7 +1158,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
     -webkit-transition: all 0.125s ease-in-out 0s;
     transition: all 0.125s ease-in-out 0s;
     -webkit-transform-origin: center center;
-    -ms-transform-origin: center center;
     transform-origin: center center;
     width: 100%;
     height: 0.625rem;
@@ -1224,7 +1220,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
       -webkit-transition: all 0.125s ease-in-out 0s;
       transition: all 0.125s ease-in-out 0s;
       -webkit-transform-origin: center center;
-      -ms-transform-origin: center center;
       transform-origin: center center;
       width: 100%;
       height: 0.625rem;
@@ -1246,7 +1241,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
       -webkit-transition: all 0.125s ease-in-out 0s;
       transition: all 0.125s ease-in-out 0s;
       -webkit-transform-origin: center center;
-      -ms-transform-origin: center center;
       transform-origin: center center;
       width: 100%;
       height: 0.625rem;
