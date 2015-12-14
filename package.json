@@ -1,7 +1,7 @@
 {
   "name": "edx-ux-pattern-library",
   "version": "0.2.0",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "description": "Gulp and Jekyll front end workflow with common tasks for edX's UX Pattern Library site",
   "repository": {
     "type": "git",
