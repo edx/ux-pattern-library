@@ -35,7 +35,7 @@ library/blob/master/LICENSE.txt) for details.
 
 Using the edX Pattern Library source code in a project current requires:
 
-* locally installing [Bower](http://bower.io/) - [see below](#development---ux-pattern-library-package) for more installation details.
+* locally installing [Node Package Manager](https://www.npmjs.com/) - [see below](#development---ux-pattern-library-package) for more installation details.
 * Use of modern web browsers - see [Open edX/edX browser support](http://docstrings.readthedocs.org/en/latest/front_matter/browsers.html)
 * the use and compilation of Sass into CSS using perferrably [LibSass](http://sass-lang.com/libsass) (if using the Sass method for including the pattern library).
 
@@ -46,11 +46,11 @@ Also, the Pattern Library currently relies on the following thrd party libraries
 
 | Library                                                         | Version       | Purpose                                                       |  
 | -------------                                                   | ------------- | -------------                                                 |  
-| [Bourbon](https://github.com/thoughtbot/bourbon)                | 4.2.3         | basic sass/CSS utilities                                      |  
-| [Animate.css](https://github.com/daneden/animate.css)           | 3.3.0         | pre-set CSS animations                                        |  
+| [Bourbon](https://github.com/thoughtbot/bourbon)                | 4.2.6         | basic sass/CSS utilities                                      |  
+| [Animate.css](https://github.com/daneden/animate.css)           | 3.4.0         | pre-set CSS animations                                        |  
 | [bi-app-sass](https://github.com/anasnakawa/bi-app-sass)        | latest        | right-to-left/left-to-right directional support for layouts   |  
 | [breakpoint-sass](https://github.com/at-import/breakpoint)      | 2.6.1         | CSS breakpoint/media-query management                         |  
-| [susy](https://github.com/ericam/susy)                          | 2.2.5         | Grid configuration and utilities                              |  
+| [susy](https://github.com/ericam/susy)                          | 2.2.9         | Grid configuration and utilities                              |  
 | [A Font Garde](https://github.com/filamentgroup/a-font-garde)   | 0.1.6         | A set of reliable (nay, bulletproof) patterns for icon fonts. |  
 
 ## Documentation
@@ -68,8 +68,8 @@ recent versions of the following things installed on your local machine.
 | Library                                                              | Version         | Purpose                                                            |  
 | -------------                                                        | -------------   | -------------                                                      |  
 | [Bundler](http://bundler.io/)                                        | 1.10            | Used to install [jekyll](http://jekyllrb.com) and its dependencies |  
-| [Node.js](http://nodejs.org/)                                         | 0.12.x or 4.0.x | Support for the asset pipeline                                     |  
-| [Bower](http://bower.io/)                                            | 1.5.0           | fetch and compile javascript assets                                |  
+| [Node.js](http://nodejs.org/)                                         | 0.12.x or 4.0.x | Third-party dependency package management                                     |  
+assets                                |  
 | [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages | 3.9.0           | Task runner for build process                                      |  
 
 
@@ -107,40 +107,11 @@ docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
 ### Step 2: Install Node.js
 
-If you've never used Node or npm before, you'll need to install Node. If you use
-homebrew, do:
-
-```
-brew install node
-```
-
-Otherwise, you can download and install from [here](http://nodejs.org/download/).
+If you've never used Node.js or npm before or don't have it installed globally on your machine, you'll need to install Node. To get started, [download Node.js](https://nodejs.org/en/download/).
 
 - - -
 
-### Step 3: Install Bower
-
-After instaling Node.js, you can install [Bower](http://bower.io/), a package
-manager we use to download and maintain many of our vendor and external library
-refereces.
-
-To install Bower globally:
-```
-npm install -g bower
-```
-
-After Bower is installed, you can install all of the edX UX Pattern Library
-dependecies with:
-
-```
-bower install
-```
-
-**NOTE**: Bower files should not be edited or removed outside of the Bower workflow.
-
-- - -
-
-### Step 4: Install/Update Gulp + Project Dependencies
+### Step 3: Install Project Dependencies & Gulp Task Flow
 
 From the directory you've checked out this repo into locally, run:
 
@@ -163,7 +134,7 @@ this project, run:
 
 - - -
 
-### Step 5: Run Locally (w/ Gulp Workflow)
+### Step 4: Run Locally (w/ Gulp Workflow)
 
 To view the Pattern Library locally (and to watch for any local changes to
 content/assets), run the `default` gulp task with:
@@ -188,12 +159,12 @@ When developing changes or new work within the PLDOC, please make sure to:
 1. leave the Pattern Library Source Code (contained in ``pattern-ibrary``) unedited (or edit in a separate branch/commit)
 2. run the production preparation-focused gulp task ``gulp build-production``, which will optimize any checked in production assets (styles, images, and scripts), if you've added or heavily edited new PLDOC assets.
 
-## Development - UX Pattern Library Bower Package
+## Development - UX Pattern Library Node.js Package
 
-If you add or edit any patterns in this repo (found in ``_src/pattern-library/``) or change any bower-centric settings (e.g. ``bower.json``), please do the following:
+If you add or edit any patterns in this repo (found in ``_src/pattern-library/``) or change any package-centric settings (e.g. ``package.json``), please do the following:
 
-1. test that the change you've made will not negatively affect the bower package other apps and codebases are relying on
-2. talk to the UX Team about any bumps (based on [semantic versioning](http://semver.org/)) in the bower package's version number that are needed.
+1. test that the change you've made will not negatively affect the node package manager (npm) package other apps and codebases are relying on
+2. talk to the UX Team about any bumps (based on [semantic versioning](http://semver.org/)) in the npm package's version number that are needed.
 
 - - -
 
@@ -203,29 +174,28 @@ The UX Pattern Library is meant to be a starting UI Framework to support edX
 and Open edX applications and sites. To start using the UX Pattern Library in an
 edX/Open edX app, please follow these steps:
 
-### Step 0: Install and Configure Bower
+### Step 0: Install and Configure Node.js/node package manager (npm)
+The npm command-line tool is bundled with [Node.js](https://nodejs.org). If you have it installed, then you already have npm too. If not, go [download Node.js](https://nodejs.org/en/download/).
 
-After instaling Node.js, you can install [Bower](http://bower.io/), a package
-manager we use to download and maintain many of our vendor and external library
-refereces.
+Next you'll need to create a ``package.json`` file that will manage locally installed npm packages. To create a package.json run:
 
-To install Bower globally:
 ```
-npm install -g bower
+$ npm init
 ```
+
+You'll be walked through some basic settings for your project's package. See also [npm's documentation on setting up a package](https://docs.npmjs.com/getting-started/using-a-package.json).
 
 - - -
 
 ### Step 1: Install/List the UX Pattern Library Package as a Dependency
 
-Next, you'll want to add the ``edx-pattern-library`` registered package as a
-bower dependency and install it all at once.
+Next, you'll want to add the ``edx-pattern-library`` registered package as a dependency for your project and install it all at once.
 
 ```
-bower install edx-pattern-library --save
+$ npm install edx-pattern-library --save
 ```
 
-**NOTE:** Bower recommends initializing your project as a bower project in order to manage third party dependencies such as the 'edx-pattern-library' bower package. [Bower explains how to do that well with bower.json``](http://bower.io/docs/creating-packages/#bowerjson).
+See also, [npm's documentation on installing/saving dependencies](https://docs.npmjs.com/getting-started/using-a-package.json#the-save-and-save-dev-install-flags).
 
 - - -
 
@@ -235,10 +205,10 @@ bower install edx-pattern-library --save
 You can use the edX UX Pattern Library as a static CSS base alongside other CSS files. To do so add a reference in the ``<head>`` of your app's HTML
 
 ```html
-<link rel="stylesheet" href="[path to your bower or manually managed assets]/edx-pattern-library-ltr.min.css" />
+<link rel="stylesheet" href="[path to your node package manager (npm) or manually managed assets]/edx-pattern-library-ltr.min.css" />
 ```
 
-**NOTE**: The Bower package comes with several variations of compiled CSS, including:
+**NOTE**: The node package manager (npm) package comes with several variations of compiled CSS, including:
 
 * RTL and LTR support - noted by either a ``*-ltr`` or ``*-rtl`` suffix)
 * Minified and expanded CSS output formats - for production and development/debugging purposes respectively.
@@ -270,7 +240,7 @@ $layout-direction: ltr;
 // #LIB
 // ------------------------------
 @import 'lib';
-@import '{path to edx-pattern-library Bower package}/pattern-library/sass/edx-pattern-library';
+@import '{path to edx-pattern-library npm package}/pattern-library/sass/edx-pattern-library';
 
 
 // ------------------------------
@@ -284,12 +254,12 @@ $layout-direction: ltr;
 
 ```
 
-**NOTE**: Since both libSass and RubySass lack a way to pass in variables/configuration into their ``@import {file}`` method, each app is responsible for 1) storing any bower-based dependencies, including the edx-pattern-library, in the best directory structure for that app's set up and 2) creating a ``_lib.scss`` partial to import all third party library dependencies from that structure for the Pattern Library to use (see above example).
+**NOTE**: Since both libSass and RubySass lack a way to pass in variables/configuration into their ``@import {file}`` method, each app is responsible for 1) storing any npm-based dependencies, including the edx-pattern-library, in the best directory structure for that app's set up and 2) creating a ``_lib.scss`` partial to import all third party library dependencies from that structure for the Pattern Library to use (see above example).
 
 See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples, details on how to use partials, and general background.
 
 ##### Custom Reference/Import
-If you'd like to customize what to import, you can manually import specific elements from the bower package. Here's an example of customizing the default import demo above:
+If you'd like to customize what to import, you can manually import specific elements from the edx-pattern-library package. Here's an example of customizing the default import demo above:
 
 ```scss
 // ------------------------------
@@ -309,14 +279,14 @@ $layout-direction: ltr;
 // #LIB
 // ------------------------------
 @import 'lib';
-@import '{path to edx-pattern-library Bower package}/pattern-library/sass/global/core';
+@import '{path to edx-pattern-library npm package}/pattern-library/sass/global/core';
 
 // use UXPL's buttons, headings, copy, grid, and layouts
-@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/buttons';
-@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/headings';
-@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/copy';
-@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/grid';
-@import '{path to edx-pattern-library Bower package}/pattern-library/sass/patterns/layouts';
+@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/buttons';
+@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/headings';
+@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/copy';
+@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/grid';
+@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/layouts';
 
 
 // ------------------------------
