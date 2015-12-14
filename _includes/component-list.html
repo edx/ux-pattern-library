@@ -1,0 +1,15 @@
+<nav class="pldoc-nav pldoc-nav-internal" role="navigation" aria-label="{{ include.title }}">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6">{{ include.title }}</h2>
+    <ul class="list-unstyled list-patterns">
+    {% for post in include.posts %}
+        <li class="item no-indent {% if page.url == post.url %}is-current{% endif %}">
+            {% unless page.url == post.url %}<a class="pattern-title pattern pldoc-link" href="{{post.url}}">{% endunless %}
+            {{post.title}}
+            {% unless page.url == post.url %}</a>{% endunless %}
+            {% if post.ui-toolkit-component %}
+                {% include badge-ui-toolkit.html %}
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+</nav>

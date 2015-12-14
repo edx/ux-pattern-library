@@ -1,16 +1,18 @@
-<header class="pldoc-header-site" role="banner" aria-labelledby="pldoc-header-site-title">
-    {% if page.title == "Home" %}
-    <h1 class="pldoc-header-site-title" id="pldoc-header-site-title">
-        <a class="pldoc-link title-name" href="{{ site.baseurl }}">
-            {{ site.title }}
-        </a>
-    </h1>
-    {% else %}
-    <h2 class="pldoc-header-site-title" id="pldoc-header-site-title">
-        <a class="pldoc-link title-name" href="{{ site.baseurl }}">
-            {{ site.title }}
-        </a>
-    </h2>
-    {% endif %}
-    <span class="pldoc-title-description copy-base">{{ site.tagline }}</span>
-</header>
+<div class="pldoc-wrapper-header-site">
+    <header class="pldoc-header-site" role="banner" aria-labelledby="pldoc-header-site-title">
+        {% if page.title == "Home" %}
+            {% assign header_start = "<h1 " %}
+            {% assign header_close = "</h1>" %}
+        {% else %}
+            {% assign header_start = "<h2 " %}
+            {% assign header_close = "</h2>" %}
+        {% endif %}
+
+        {{ header_start }} class="pldoc-header-site-title" id="pldoc-header-site-title">
+            <a class="pldoc-link title-name" href="{{ site.baseurl }}">
+                <img src="{{ site.url }}/public/images/logo-edx.svg" alt="edX logo"/>
+                {{ site.title }}
+            </a>
+        {{ header_close }}
+    </header>
+</div>

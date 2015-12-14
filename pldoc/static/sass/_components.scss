@@ -67,81 +67,39 @@
 // ------------------------------
 // #HEADER
 // ------------------------------
+.pldoc-wrapper-header-site {
+    background: palette(grayscale, white);
+}
+
+
 .pldoc-header-site {
 
-    @include susy-breakpoint($bp-screen-lg, $susy-default) {
-        margin: 0;
-    }
-
-    .pldoc-header-site-title {
-        display: inline-block;
-        vertical-align: middle;
-
-        @include susy-breakpoint($bp-screen-lg, $susy-default) {
-            margin: 0;
-        }
-
-        .title-name {
-            display: block;
-        }
-
-        .title-name {
-            margin-bottom: spacing-vertical(x-small);
-            color: palette(grayscale, white);
-            font-size: font-size(base);
-            font-weight: font-weight(bold);
-            text-transform: uppercase;
-            letter-spacing: rem(1);
-
-            // STATE: hover, active, focus
-            &:hover,
-            &:active,
-            &:focus {
-                color: palette(primary, accent);
-            }
-        }
-
-        .pldoc-link {
-            border: none;
-        }
-    }
-
-    .pldoc-title-description {
-        display: block;
-        color: palette(grayscale, base);
-        font-weight: font-weight(normal);
-    }
 }
 
 // ------------------------------
 // #NAVIGATION
 // ------------------------------
 // navigation - sidebar-based
-.pldoc-nav {
-    margin-bottom: spacing-vertical(mid-large);
 
-    // CASE: last pattern
-    &:last-child {
-        margin-bottom: 0;
+%spaced-nav {
+    @include padding-left(spacing-horizontal(small));
+    @include padding-right(spacing-horizontal(small));
+}
+
+.pldoc-nav {
+
+    padding-bottom: spacing-horizontal(base);
+    @include susy-media($bp-screen-md) {
+        padding-bottom: spacing-horizontal(large);
     }
 
-    .item {
-        border-bottom-color: palette(grayscale, black);
+    .pldoc-link {
 
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
 
-        a {
-            padding-right: spacing-horizontal(mid-large);
-            padding-left: spacing-horizontal(mid-large);
-            font-size: font-size(small);
-            font-weight: font-weight(semi-bold);
-            color: palette(grayscale, x-light);
-
-            // STATE: hover, active, and focus
-            &:hover,
-            &:active,
-            &:focus {
-                color: palette(primary, light);
-            }
         }
 
         // CASE: item is current
@@ -173,70 +131,40 @@
             }
         }
     }
+
+    .pldoc-nav-title {
+        @extend %spaced-nav;
+        text-transform: uppercase;
+        color: palette(grayscale, base);
+        font-size: font-size(small);
+    }
+
+    .item {
+        @extend %spaced-nav;
+        display: inline-block;
+
+        @include susy-media($bp-screen-md) {
+            display: block;
+            padding-top: spacing-vertical(x-small);
+            padding-bottom: spacing-vertical(x-small);
+        }
+
+    }
+
+    .is-current {
+        background-color: palette(grayscale-cool, x-trans);
+    }
+
 }
 
 // internal site navigation
 .pldoc-nav-internal {
 
-    .item a {
-        position: relative;
-
-        // is-current indicator
-        &:before {
-            @include transition(opacity timing(xx-fast) ease-in-out);
-            @include size(rem(5));
-            position: absolute;
-            top: rem(8); // TODO: needed for vertical spacing, but could be done better
-            @include left(spacing-horizontal(mid-small));
-            content: '';
-            border-radius: 100%;
-            opacity: 0;
-            background: palette(primary, x-accent);
-        }
-
-        // STATE: is current navigation item
-        &.is-current {
-            color: palette(primary, x-accent);
-
-            &:before {
-                opacity: 1.0;
-            }
-        }
-    }
 }
 
 // external site navigation
 .pldoc-nav-external {
 
-    .item a {
-        @include clearfix();
-
-        .icon {
-            @include transition(opacity timing(xx-fast) ease-in-out);
-            @include margin-left(spacing-horizontal(xx-small));
-            @include float(right);
-            opacity: 0.25;
-        }
-
-        // STATE: hover, active, and focus
-        &:hover,
-        &:active,
-        &:focus {
-
-            .icon {
-                opacity: 1.0;
-            }
-        }
-    }
-}
-
-.pldoc-nav-title {
-    margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small);
-    color: palette(grayscale, base);
-    font-size: font-size(small);
-    font-weight: font-weight(semi-bold);
-    text-transform: uppercase;
-    letter-spacing: rem(1);
 }
 
 .pldoc-tab {
@@ -277,29 +205,27 @@
 // #SIDEBAR
 // ------------------------------
 .pldoc-wrapper-content-supplemental {
-    @extend %depth--3;
-    color: palette(grayscale, x-light);
+
 }
 
 // ------------------------------
 // #MAIN CONTENT
 // ------------------------------
 .pldoc-wrapper-content-main {
-    @extend %depth-0;
+
 }
 
 // ------------------------------
 // #FOOTER
 // ------------------------------
 .pldoc-footer-site {
-    margin: spacing-vertical(base) spacing-horizontal(base);
+
 }
 
 .pldoc-footer-site-copyright {
 
     .pldoc-copy {
         font-size: font-size(small);
-        color: palette(grayscale, base);
     }
 }
 
@@ -314,8 +240,7 @@
 }
 
 .pldoc-pattern-header {
-    margin-bottom: spacing-vertical(base);
-    border-bottom: 1px solid palette(grayscale, dark);
+    margin-bottom: spacing-vertical(small);
     padding-bottom: spacing-vertical(small);
 }
 

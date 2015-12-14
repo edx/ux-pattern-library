@@ -11,17 +11,22 @@
     <hr class="pldoc-divider sr-only">
 
     <div class="pldoc-wrapper-view">
+        {% include header.html %}
+
         <div class="pldoc-wrapper-content" id="content-top" tabindex="-1">
-            <div class="pldoc-wrapper-content-supplemental">
-                {% include sidebar.html %}
-            </div>
+            <div class="pldoc-content">
+                <div class="pldoc-wrapper-content-supplemental">
+                    {% include navigation.html %}
+                    {% include footer-site.html %}
+                </div>
 
-            <hr class="pldoc-divider sr-only">
+                <hr class="pldoc-divider sr-only">
 
-            <div class="pldoc-wrapper-content-main">
-                <main class="pldoc-content pldoc-content-main" id="content-main" aria-label="Content">
-                    {{ content }}
-                </main>
+                <div class="pldoc-wrapper-content-main">
+                    <main class="pldoc-content-main" id="content-main" aria-label="Content">
+                        {{ content }}
+                    </main>
+                </div>
             </div>
         </div>
     </div>

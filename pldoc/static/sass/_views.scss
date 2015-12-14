@@ -27,6 +27,13 @@
 
 }
 
+.meta {
+    font-size: font-size(large);
+
+    a {
+        color: $pldoc-link-color;
+    }
+}
 
 // ------------------------------
 // #EXAMPLE - UI DEPTH

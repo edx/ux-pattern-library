@@ -5,21 +5,29 @@
             <h1 class="pldoc-heading pldoc-pattern-title hd-4">{{ post.title }}</h1>
 
             <ul class="list-inline pldoc-pattern-meta copy-micro de-emphasized">
-                <li class="item meta meta-updated">
-                    <span class="pldoc-pattern-meta-updated-label">Last updated on </span>
-                    <time class="pldoc-pattern-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
-                </li>
                 <li class="item meta meta-permalink">
-                    <a class="pldoc-link" href="{{post.url}}">Permalink <span class="sr-only">to {{ post.slug }}</span></a>
+                    <a class="pldoc-link" href="{{post.url}}">
+                        <span class="icon-fallback icon-fallback-text">
+                            <span class="icon icon-link" aria-hidden="true"></span>
+                            <span class="text">Permalink to {{ post.title }}</span>
+                        </span>
+                    </a>
                 </li>
                 {% if post.url_example %}
+                <!--TODO: this needs an icon-->
                 <li class="item meta meta-examplelink">
                     <a class="pldoc-link" href="{{ site.url_example }}{{ post.url_example }}"><span class="sr-only">View </span>Detailed Example</a>
                 </li>
                 {% endif %}
                 {% if post.url_documentation %}
+
                 <li class="item meta meta-doclink">
-                    <a class="pldoc-link" href="{{ site.data.edx-pattern-library.url_documentation }}{{ post.url_documentation }}"><span class="sr-only">View </span>Documentation</a>
+                    <a class="pldoc-link" href="{{ site.data.edx-pattern-library.url_documentation }}{{ post.url_documentation }}">
+                        <span class="icon-fallback icon-fallback-text">
+                            <span class="icon icon-file" aria-hidden="true"></span>
+                            <span class="text">View Documentation></span>
+                        </span>
+                    </a>
                 </li>
                 {% endif %}
             </ul>
