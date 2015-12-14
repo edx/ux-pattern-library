@@ -1,0 +1,20 @@
+<nav class="pldoc-nav pldoc-nav-utilities pldoc-nav-internal" id="pldoc-nav-patterns" role="navigation" aria-label="Patterns">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6">Utilities</h2>
+
+    {% assign sorted_patterns_posts = site.categories.patterns | sort: 'title' %}
+    {% for post in sorted_patterns_posts %}
+        {% if page.title == "Home" %}
+        <a class="utility pldoc-link" href="#{{post.slug}}">
+        {% else %}
+        <a class="utility pldoc-link" href="{{post.url}}">
+        {% endif %}
+            <span class="pattern-title">
+                {{post.title}}
+            </span>
+
+            {% if post.ui-toolkit-component %}
+            {% include badge-ui-toolkit.html %}
+            {% endif %}
+        </a>
+    {% endfor %}
+</nav>
