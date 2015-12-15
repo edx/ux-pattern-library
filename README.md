@@ -1,4 +1,4 @@
-# edX Pattern Library
+# edX UX Pattern Library (UXPL)
 
 The (working) UI library and Front End Styleguide for edX/Open edX applications and sites.
 
@@ -11,7 +11,7 @@ The (working) UI library and Front End Styleguide for edX/Open edX applications 
 3. [Dependencies](#dependencies)
 4. [Documentation](#documentation)
 5. [Development - Documentation Site](#development---documentation-site-pldoc)
-6. [Development - UX Pattern Library Package](#development---ux-pattern-library-bower-package)
+6. [Development - UX Pattern Library Package](#development---ux-pattern-library-nodejs-package)
 7. [Use and Deployment](#use-and-deployment)
 8. [Contributions](#contributions)
 
@@ -35,7 +35,7 @@ library/blob/master/LICENSE.txt) for details.
 
 Using the edX Pattern Library source code in a project current requires:
 
-* locally installing [Node Package Manager](https://www.npmjs.com/) - [see below](#development---ux-pattern-library-package) for more installation details.
+* locally installing a package manager [a package manager (either [Node/npm](https://nodejs.org) or [Bower)](http://bower.io/).
 * Use of modern web browsers - see [Open edX/edX browser support](http://docstrings.readthedocs.org/en/latest/front_matter/browsers.html)
 * the use and compilation of Sass into CSS using perferrably [LibSass](http://sass-lang.com/libsass) (if using the Sass method for including the pattern library).
 
@@ -68,8 +68,7 @@ recent versions of the following things installed on your local machine.
 | Library                                                              | Version         | Purpose                                                            |  
 | -------------                                                        | -------------   | -------------                                                      |  
 | [Bundler](http://bundler.io/)                                        | 1.10            | Used to install [jekyll](http://jekyllrb.com) and its dependencies |  
-| [Node.js](http://nodejs.org/)                                         | 0.12.x or 4.0.x | Third-party dependency package management                                     |  
-assets                                |  
+| [Node.js](http://nodejs.org/)                                         | 0.12.x or 4.0.x | Third-party dependency package management
 | [GulpJS](https://github.com/gulpjs/gulp) + other gulp-based packages | 3.9.0           | Task runner for build process                                      |  
 
 
@@ -105,9 +104,9 @@ docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
 - - -
 
-### Step 2: Install Node.js
+### Step 2: Install Node.js and Node Package Manager (npm)
 
-If you've never used Node.js or npm before or don't have it installed globally on your machine, you'll need to install Node. To get started, [download Node.js](https://nodejs.org/en/download/).
+The npm command-line tool is bundled with [Node.js](https://nodejs.org). If you have it installed, then you already have npm too. If not, go [download Node.js](https://nodejs.org/en/download/).
 
 - - -
 
@@ -120,7 +119,7 @@ npm install
 ```
 
 This runs through all dependencies listed in package.json and downloads them to
-a node_modules folder in your project directory.
+a `node_modules` folder in your project directory.
 
 **NOTE:** You may need to run this more than just once (if encountering errors
 when running the gulp command) as new dependencies may have been added.
@@ -148,20 +147,20 @@ This will run the `default` gulp task defined in `gulpfile.js`, which includes t
 After running the default task, your local instance of the Pattern Library can
 be viewable at http://localhost:3000. There are additional views:
 
-* http://localhost:3000/examples/**/* - where full page examples and demos are kept
-* http://localhost:3000/patterns/**/* - permalinks for individually documented pattern library patterns
+* ``http://localhost:3000/examples/**/*`` - where full page examples and demos are kept
+* ``http://localhost:3000/patterns/**/*`` - permalinks for individually documented pattern library patterns
 - - -
 
 ### Committing Code to PLDOC
 
 When developing changes or new work within the PLDOC, please make sure to:
 
-1. leave the Pattern Library Source Code (contained in ``pattern-ibrary``) unedited (or edit in a separate branch/commit)
+1. leave the Pattern Library Source Code (contained in ``pattern-library``) unedited (or edit in a separate branch/commit)
 2. run the production preparation-focused gulp task ``gulp build-production``, which will optimize any checked in production assets (styles, images, and scripts), if you've added or heavily edited new PLDOC assets.
 
-## Development - UX Pattern Library Node.js Package
+## Development - UX Pattern Library Package
 
-If you add or edit any patterns in this repo (found in ``_src/pattern-library/``) or change any package-centric settings (e.g. ``package.json``), please do the following:
+If you add or edit any patterns in this repo (found in ``_src/pattern-library/``) or change any package-centric settings (e.g. ``package.json`` or ``bower.json``), please do the following:
 
 1. test that the change you've made will not negatively affect the node package manager (npm) package other apps and codebases are relying on
 2. talk to the UX Team about any bumps (based on [semantic versioning](http://semver.org/)) in the npm package's version number that are needed.
@@ -174,10 +173,14 @@ The UX Pattern Library is meant to be a starting UI Framework to support edX
 and Open edX applications and sites. To start using the UX Pattern Library in an
 edX/Open edX app, please follow these steps:
 
-### Step 0: Install and Configure Node.js/node package manager (npm)
-The npm command-line tool is bundled with [Node.js](https://nodejs.org). If you have it installed, then you already have npm too. If not, go [download Node.js](https://nodejs.org/en/download/).
+### Step 0: Install Node
+You'll need to [download Node.js](https://nodejs.org/en/download/) in order to use either of the UXPL packages.
 
-Next you'll need to create a ``package.json`` file that will manage locally installed npm packages. To create a package.json run:
+### Step 1: Install and Configure UXPL Packages
+Next, you'll want to add the edx-pattern-library registered package as a dependency for your project and install it all at once. You have a few options for what package manager to do that through:
+
+#### Using Node
+In your project's main directory, you'll need to create a ``package.json`` file that will manage locally installed npm packages. To create a package.json run:
 
 ```
 $ npm init
@@ -185,9 +188,6 @@ $ npm init
 
 You'll be walked through some basic settings for your project's package. See also [npm's documentation on setting up a package](https://docs.npmjs.com/getting-started/using-a-package.json).
 
-- - -
-
-### Step 1: Install/List the UX Pattern Library Package as a Dependency
 
 Next, you'll want to add the ``edx-pattern-library`` registered package as a dependency for your project and install it all at once.
 
@@ -197,6 +197,25 @@ $ npm install edx-pattern-library --save
 
 See also, [npm's documentation on installing/saving dependencies](https://docs.npmjs.com/getting-started/using-a-package.json#the-save-and-save-dev-install-flags).
 
+
+#### Using Bower
+After instaling Node.js, you can install [Bower](http://bower.io/), a package manager we use to download and maintain many of our vendor and external library refereces.
+
+To install Bower globally:
+
+```
+npm install -g bower
+```
+
+Next, you'll want to add the ``edx-pattern-library`` registered package as a
+bower dependency and install it all at once.
+
+```
+bower install edx-pattern-library --save
+```
+
+**NOTE:** Bower recommends initializing your project as a bower project in order to manage third party dependencies such as the `edx-pattern-library` bower package. [Bower explains how to do that well with bower.json](http://bower.io/docs/creating-packages/#bowerjson).
+
 - - -
 
 ### Step 2: Use the UX Pattern Library in your project's Styling
@@ -205,7 +224,7 @@ See also, [npm's documentation on installing/saving dependencies](https://docs.n
 You can use the edX UX Pattern Library as a static CSS base alongside other CSS files. To do so add a reference in the ``<head>`` of your app's HTML
 
 ```html
-<link rel="stylesheet" href="[path to your node package manager (npm) or manually managed assets]/edx-pattern-library-ltr.min.css" />
+<link rel="stylesheet" href="[path to your package manager (npm or bower) or manually managed assets]/edx-pattern-library-ltr.min.css" />
 ```
 
 **NOTE**: The node package manager (npm) package comes with several variations of compiled CSS, including:
@@ -240,7 +259,7 @@ $layout-direction: ltr;
 // #LIB
 // ------------------------------
 @import 'lib';
-@import '{path to edx-pattern-library npm package}/pattern-library/sass/edx-pattern-library';
+@import '{path to edx-pattern-library package}/pattern-library/sass/edx-pattern-library';
 
 
 // ------------------------------
@@ -279,14 +298,14 @@ $layout-direction: ltr;
 // #LIB
 // ------------------------------
 @import 'lib';
-@import '{path to edx-pattern-library npm package}/pattern-library/sass/global/core';
+@import '{path to edx-pattern-library package}/pattern-library/sass/global/core';
 
 // use UXPL's buttons, headings, copy, grid, and layouts
-@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/buttons';
-@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/headings';
-@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/copy';
-@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/grid';
-@import '{path to edx-pattern-library npm package}/pattern-library/sass/patterns/layouts';
+@import '{path to edx-pattern-library package}/pattern-library/sass/patterns/buttons';
+@import '{path to edx-pattern-library package}/pattern-library/sass/patterns/headings';
+@import '{path to edx-pattern-library package}/pattern-library/sass/patterns/copy';
+@import '{path to edx-pattern-library package}/pattern-library/sass/patterns/grid';
+@import '{path to edx-pattern-library package}/pattern-library/sass/patterns/layouts';
 
 
 // ------------------------------
