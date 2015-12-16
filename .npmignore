@@ -19,3 +19,8 @@ index.html
 node_modules
 package.json
 public
+bower.json
+.bowerrc
+Gemfile
+Gemfile.lock
+
