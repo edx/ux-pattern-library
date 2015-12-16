@@ -4,6 +4,11 @@
 Nothing yet
 
 - - -
+
+## 0.7.0 (2015-12-14)
+* Moving from Bower-based to NPM-based package management
+
+- - -
 ## 0.6.0 (2015-11-24)
 * Revising color patterns to use Sass mix() method
 
