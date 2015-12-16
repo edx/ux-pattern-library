@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.7.1 (2015-12-16)
+* ignoring files in npm package 
+
+- - -
+
 ## 0.7.0 (2015-12-14)
 * Moving from Bower-based to NPM-based package management
 
