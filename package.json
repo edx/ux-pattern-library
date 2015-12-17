@@ -49,8 +49,7 @@
     "lodash": "*",
     "merge-stream": "*",
     "require-dir": "*",
-    "run-sequence": "*",
-    "susy": "^2.2.9"
+    "run-sequence": "*"
   },
   "scripts": {
     "production": "gulp build-production",
