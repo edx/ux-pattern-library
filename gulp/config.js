@@ -6,7 +6,10 @@ var dest                        = './public',
     local                       = './_site',
 
     // documentation site
-    pldoc_src                   = './pldoc';
+    pldoc_src                   = './pldoc',
+
+    // example demo
+    demo_src                    = './demo';
 
 module.exports = {
     browserSync:                {
@@ -34,6 +37,13 @@ module.exports = {
         pldoc_dest:             dest + '/css',
         pldoc_dest_files:       dest + '/css/**/*.css',
         pldoc_local:            local + '/public/css',
+
+        // example demo
+        demo_src:               demo_src + '/static/sass',
+        demo_src_files:         demo_src + '/static/sass/**/*.scss',
+        demo_dest:              dest + '/css',
+        demo_dest_files:        dest + '/css/**/*.css',
+        demo_local:             local + '/public/css',
     },
     fonts:                      {
         // pattern library
@@ -44,18 +54,26 @@ module.exports = {
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/fonts',
-        pldoc_src_files:        pldoc_src + '/static/fonts/**/*'
+        pldoc_src_files:        pldoc_src + '/static/fonts/**/*',
+
+        // example demo
+        demo_src:               demo_src + '/static/fonts',
+        demo_src_files:         demo_src + '/static/fonts/**/*'
     },
     images:                     {
         // pattern library
-        src:                    './pattern-library/images',
-        src_files:              './pattern-library/images/**/*',
-        dest:                   './public/images',
-        local:                  './_site/public/images',
+        src:                    src + '/images',
+        src_files:              src + '/images/**/*',
+        dest:                   dest + '/images',
+        local:                  local + '/public/images',
 
         // documentation site
-        pldoc_src:              './pldoc/static/images',
-        pldoc_src_files:        './pldoc/static/images/**/*'
+        pldoc_src:              pldoc_src + '/static/images',
+        pldoc_src_files:        pldoc_src + '/static/images/**/*',
+
+        // example demo
+        demo_src:               demo_src + '/static/images',
+        demo_src_files:         demo_src + '/static/images/**/*'
     },
     scripts:                    {
         // pattern library
@@ -66,7 +84,11 @@ module.exports = {
 
         // documentation site
         pldoc_src:              pldoc_src + '/static/js',
-        pldoc_src_files:        pldoc_src + '/static/js/**/*.js'
+        pldoc_src_files:        pldoc_src + '/static/js/**/*.js',
+
+        // example demo
+        demo_src:               demo_src + '/static/js',
+        demo_src_files:         demo_src + '/static/js/**/*.js'
     },
     lib:                    {
         // third party libraries
@@ -77,6 +99,7 @@ module.exports = {
         posts:                  '_posts/**/*',
         includes:               '_includes/**/*',
         examples:               'examples/**/*',
+        demo:                   'demo/**/*.html',
         layouts:                '_layouts/**/*'
     }
 };
