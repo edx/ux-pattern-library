@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.7.2 (2015-12-17)
+* correcting doc/depedency small errors with npm package 
+
+- - -
+
 ## 0.7.1 (2015-12-16)
 * ignoring files in npm package 
 

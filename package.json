@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "author": "edX UX Team <ux@edx.org>",
   "license": "Apache-2.0",
   "description": "The (working) Visual, UI, and Front End Styleguide for edX Apps",
@@ -49,8 +49,7 @@
     "lodash": "*",
     "merge-stream": "*",
     "require-dir": "*",
-    "run-sequence": "*",
-    "susy": "^2.2.9"
+    "run-sequence": "*"
   },
   "scripts": {
     "production": "gulp build-production",

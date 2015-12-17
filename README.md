@@ -162,8 +162,8 @@ When developing changes or new work within the PLDOC, please make sure to:
 
 If you add or edit any patterns in this repo (found in ``_src/pattern-library/``) or change any package-centric settings (e.g. ``package.json`` or ``bower.json``), please do the following:
 
-1. test that the change you've made will not negatively affect the node package manager (npm) package other apps and codebases are relying on
-2. talk to the UX Team about any bumps (based on [semantic versioning](http://semver.org/)) in the npm package's version number that are needed.
+1. test that the change you've made will not negatively affect the node package manager (npm) or Bower packages other apps and codebases are relying on
+2. talk to the UX Team about any bumps (based on [semantic versioning](http://semver.org/)) in the npm or Bower packages' version number that are needed.
 
 - - -
 
