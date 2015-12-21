@@ -8846,7 +8846,7 @@ html, body {
 .badge {
   text-align: center;
   border-radius: 0.9375rem;
-  padding: 0.125rem 0.625rem;
+  padding: 0.25rem 0.625rem;
   font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
