@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.8.2 (2015-01-06)
+* adding tables pattern - for use in content and sortable table listings
+
+- - -
+
 ## 0.8.1 (2016-01-04)
 * adding system utility-based information color (and range) - to be used on educational, informational, and note-based UI elements
 
