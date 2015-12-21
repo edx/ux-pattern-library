@@ -3,6 +3,11 @@
 ## unreleased
 Nothing yet
 
+## 0.8.4 (2016-01-13)
+* bulletproofing text/base link styling
+
+- - -
+
 ## 0.8.3 (2016-01-13)
 * updating spacing maps to use vert/horiz vars
 
