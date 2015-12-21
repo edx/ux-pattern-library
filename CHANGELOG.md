@@ -5,13 +5,18 @@ Nothing yet
 
 - - -
 
+## 0.7.3 (2015-12-22)
+* adding transparent options to base and utility color palettes and remove unused colors partial
+
+- - -
+
 ## 0.7.2 (2015-12-17)
-* correcting doc/depedency small errors with npm package 
+* correcting doc/depedency small errors with npm package
 
 - - -
 
 ## 0.7.1 (2015-12-16)
-* ignoring files in npm package 
+* ignoring files in npm package
 
 - - -
 

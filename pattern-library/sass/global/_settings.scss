@@ -87,7 +87,10 @@ $palettes: (
         dark:       mix($black, $brand-primary, 33%),
         x-dark:     mix($black, $brand-primary, 66%),
         accent:     $brand-primary-accent,
-        x-accent:   saturate($brand-primary-accent, 25%)
+        x-accent:   saturate($brand-primary-accent, 25%),
+        trans:      transparentize($brand-primary, 0.50),
+        x-trans:    transparentize($brand-primary, 0.75),
+        xx-trans:   transparentize($brand-primary, 0.95)
     ),
     secondary: (
         base:       $brand-secondary,
