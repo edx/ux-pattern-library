@@ -3,6 +3,9 @@
 ## unreleased
 Nothing yet
 
+## 0.8.3 (2016-01-13)
+* updating spacing maps to use vert/horiz vars
+
 - - -
 
 ## 0.8.2 (2016-01-08)
