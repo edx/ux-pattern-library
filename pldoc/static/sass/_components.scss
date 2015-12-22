@@ -486,6 +486,18 @@
         &.x-accent {
             background: palette(primary, x-accent);
         }
+
+        &.trans {
+            background: palette(primary, trans);
+        }
+
+        &.x-trans {
+            background: palette(primary, x-trans);
+        }
+
+        &.xx-trans {
+            background: palette(primary, xx-trans);
+        }
     }
 
     .brand-secondary {
@@ -626,6 +638,18 @@
         &.dark {
             background: palette(success, dark);
         }
+
+        &.trans {
+            background: palette(success, trans);
+        }
+
+        &.x-trans {
+            background: palette(success, x-trans);
+        }
+
+        &.xx-trans {
+            background: palette(success, xx-trans);
+        }
     }
 
     .warning {
@@ -642,6 +666,18 @@
         &.dark {
             background: palette(warning, dark);
         }
+
+        &.trans {
+            background: palette(warning, trans);
+        }
+
+        &.x-trans {
+            background: palette(warning, x-trans);
+        }
+
+        &.xx-trans {
+            background: palette(warning, xx-trans);
+        }
     }
 
     .error {
@@ -657,6 +693,18 @@
 
         &.dark {
             background: palette(error, dark);
+        }
+
+        &.trans {
+            background: palette(error, trans);
+        }
+
+        &.x-trans {
+            background: palette(error, x-trans);
+        }
+
+        &.xx-trans {
+            background: palette(error, xx-trans);
         }
     }
 
