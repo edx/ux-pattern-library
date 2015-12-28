@@ -29,9 +29,18 @@
     margin-bottom: spacing-vertical(base);
 
     .button-overlay-demo {
+        @include linear-gradient(50deg, palette(primary, accent) 0%, palette(primary, base) 100%);
         padding: spacing-vertical(mid-large) spacing-horizontal(mid-large);
-        background: palette(primary, accent) url('#{$image-path}/bg-overlay-example.png') 0 50% no-repeat;
-        background-size: cover;
+    }
+
+    .btn-group {
+        @extend %clear-last-child;
+        margin-bottom: spacing-vertical(base);
+
+        .btn {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
     }
 }
 
