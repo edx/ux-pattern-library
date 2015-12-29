@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.7.4 (2015-12-29)
+* correcting styling for disabled enhanced radio button
+
+- - -
+
 ## 0.7.3 (2015-12-22)
 * adding transparent options to base and utility color palettes and remove unused colors partial
 
