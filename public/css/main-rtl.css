@@ -1245,17 +1245,20 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   font-weight: 700;
 }
 
-.copy.emphasized {
+.emphasized.copy-lead, .emphasized.copy-large, .emphasized.copy-base, .emphasized.copy-meta, .emphasized.alert-copy, .emphasized.copy-micro, .pldoc-pattern-grid .col .emphasized.example-label,
+.pldoc-pattern-grid .gallery-item .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .emphasized.example-label, .pldoc-view-example-grid .example-grid .col .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-main .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid .emphasized.example-label, .example-layout .emphasized.example-label {
   color: black;
   font-weight: 400;
 }
 
-.copy.de-emphasized {
+.de-emphasized.copy-lead, .de-emphasized.copy-large, .de-emphasized.copy-base, .de-emphasized.copy-meta, .de-emphasized.alert-copy, .de-emphasized.copy-micro, .pldoc-pattern-grid .col .de-emphasized.example-label,
+.pldoc-pattern-grid .gallery-item .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .de-emphasized.example-label, .pldoc-view-example-grid .example-grid .col .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-main .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid .de-emphasized.example-label, .example-layout .de-emphasized.example-label {
   color: #6b6969;
   font-weight: 400;
 }
 
-.copy {
+.copy-lead, .copy-large, .copy-base, .copy-meta, .alert-copy, .copy-micro, .pldoc-pattern-grid .col .example-label,
+.pldoc-pattern-grid .gallery-item .example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label, .pldoc-pattern-grid .example-grid-semantic .story .example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label, .pldoc-view-example-grid .example-grid .col .example-label, .pldoc-view-example-grid #example-grid-1 .content-main .example-label, .pldoc-view-example-grid #example-grid-1 .story .example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label, .pldoc-pattern-grid .example-grid .example-label, .example-layout .example-label {
   color: #4d4b4b;
 }
 
