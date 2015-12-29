@@ -928,17 +928,17 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   font-weight: 700;
 }
 
-.copy.emphasized {
+.emphasized.copy-lead, .emphasized.copy-large, .emphasized.copy-base, .emphasized.copy-meta, .emphasized.copy-micro {
   color: black;
   font-weight: 400;
 }
 
-.copy.de-emphasized {
+.de-emphasized.copy-lead, .de-emphasized.copy-large, .de-emphasized.copy-base, .de-emphasized.copy-meta, .de-emphasized.copy-micro {
   color: #6b6969;
   font-weight: 400;
 }
 
-.copy {
+.copy-lead, .copy-large, .copy-base, .copy-meta, .copy-micro {
   color: #4d4b4b;
 }
 

@@ -29,7 +29,7 @@
     font-weight: $text-de-emphasized-font-weight;
 }
 
-.copy {
+%copy {
     color: $text-base-color;
 
     &.emphasized {
@@ -47,6 +47,7 @@
 // ----------------------------
 // archetypes
 %copy-lead {
+    @extend %copy;
     font-size: font-size(x-large);
     line-height: line-height(x-large);
 
@@ -59,6 +60,7 @@
 }
 
 %copy-large {
+    @extend %copy;
     font-size: font-size(large);
     line-height: line-height(large);
 
@@ -71,6 +73,7 @@
 }
 
 %copy-base {
+    @extend %copy;
     font-size: font-size(base);
     line-height: line-height(large);
 
@@ -83,6 +86,7 @@
 }
 
 %copy-meta {
+    @extend %copy;
     font-size: font-size(small);
     line-height: line-height(large);
 
@@ -95,6 +99,7 @@
 }
 
 %copy-micro {
+    @extend %copy;
     font-size: font-size(x-small);
     line-height: line-height(x-small);
 
