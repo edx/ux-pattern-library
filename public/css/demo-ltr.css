@@ -1354,9 +1354,9 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   color: #a7a4a4;
 }
 
-.input-radio:disabled.replace-radio + .field-input-label:before + .field-input-label:before, .input-radio.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before,
-.input-checkbox:disabled.replace-radio + .field-input-label:before + .field-input-label:before,
-.input-checkbox.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before {
+.input-radio:disabled.replace-radio + .field-input-label:before, .input-radio.is-disabled.replace-radio + .field-input-label:before,
+.input-checkbox:disabled.replace-radio + .field-input-label:before,
+.input-checkbox.is-disabled.replace-radio + .field-input-label:before {
   background: #fcfcfc;
   box-shadow: none;
   cursor: not-allowed;
