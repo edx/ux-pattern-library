@@ -427,10 +427,10 @@ $field-required-color:                      $label-color !default;
         &.replace-checkbox {
 
             & + .field-input-label {
+                // disabled state of replaced checkboxes
                 color: palette(grayscale, base);
 
                 &:before {
-                    // disabled state of replaced checkboxes
                     & + .field-input-label:before {
                         @include input-radio-checkbox-disabled();
                     }
@@ -445,10 +445,7 @@ $field-required-color:                      $label-color !default;
                 color: palette(grayscale, base);
 
                 &:before {
-                    // disabled state of replaced checkboxes
-                    & + .field-input-label:before {
-                        @include input-radio-checkbox-disabled();
-                    }
+                    @include input-radio-checkbox-disabled();
                 }
             }
         }
