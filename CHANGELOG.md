@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.7.5 (2015-12-29)
+* simplifying and standardizing copy element syntax
+
+- - -
+
 ## 0.7.4 (2015-12-29)
 * correcting styling for disabled enhanced radio button
 
