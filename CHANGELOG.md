@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.8.1 (2016-01-04)
+* adding system utility-based information color (and range) - to be used on educational, informational, and note-based UI elements
+
+- - -
+
 ## 0.8.0 (2016-01-02)
 * renaming button types to suggest more visual styling in nature
 * simplifying classes needed to reference buttons
