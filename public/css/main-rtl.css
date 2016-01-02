@@ -8824,7 +8824,7 @@ html, body {
 }
 
 .alert-information {
-  border-color: #0079bc;
+  border-color: #6fa0ba;
 }
 
 .alert-warning {
@@ -9359,6 +9359,34 @@ html, body {
 
 .pldoc-pattern-colors .error.xx-trans {
   background: rgba(178, 6, 16, 0.05);
+}
+
+.pldoc-pattern-colors .information {
+  background: #6fa0ba;
+}
+
+.pldoc-pattern-colors .information.base {
+  background: #6fa0ba;
+}
+
+.pldoc-pattern-colors .information.light {
+  background: #9ebed0;
+}
+
+.pldoc-pattern-colors .information.dark {
+  background: #507082;
+}
+
+.pldoc-pattern-colors .information.trans {
+  background: rgba(111, 160, 186, 0.5);
+}
+
+.pldoc-pattern-colors .information.x-trans {
+  background: rgba(111, 160, 186, 0.25);
+}
+
+.pldoc-pattern-colors .information.xx-trans {
+  background: rgba(111, 160, 186, 0.05);
 }
 
 .pldoc-pattern-colors .example-color {
