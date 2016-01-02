@@ -5,6 +5,15 @@ Nothing yet
 
 - - -
 
+## 0.8.0 (2016-01-02)
+* renaming button types to suggest more visual styling in nature
+* simplifying classes needed to reference buttons
+* removing extraneous visual button styles (elevated alt)
+* revising combo/button group styling and architecture
+* abstracting out buttons into Sass placeholders to extend (matching how we have architected other patterns)
+
+- - -
+
 ## 0.7.5 (2015-12-29)
 * simplifying and standardizing copy element syntax
 
