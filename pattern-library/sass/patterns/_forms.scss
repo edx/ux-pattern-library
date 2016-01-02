@@ -314,8 +314,7 @@ $field-required-color:                      $label-color !default;
 }
 
 .input-select {
-    height: rem($baseline*2);
-    line-height: spacing-vertical(small);
+    line-height: line-height(small);
 
     & + .field-message {
         margin-top: -(spacing-vertical(xx-small));
@@ -346,10 +345,10 @@ $field-required-color:                      $label-color !default;
 
     // the color and position of the select menu icon
     .icon {
-        @include size(rem($baseline));
         position: absolute;
-        @include right(rem(($baseline/4)));
-        margin-top: rem(-($baseline/10)); // vertically centers the down caret icon
+        @include size(rem($baseline));
+        @include right(spacing-horizontal(small));
+        margin-top: rem(-(spacing-vertical(xxx-small))); // vertically centers the down caret icon
         color: $input-control-color;
         vertical-align: middle;
     }

@@ -1557,8 +1557,7 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 }
 
 .input-select {
-  height: 2.5rem;
-  line-height: 1.25rem;
+  line-height: 1.6;
 }
 
 .input-select + .field-message {
@@ -1584,11 +1583,11 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 }
 
 .wrapper-custom-select .icon {
+  position: absolute;
   height: 1.25rem;
   width: 1.25rem;
-  position: absolute;
-  left: 0.3125rem;
-  margin-top: -0.125rem;
+  left: 0.625rem;
+  margin-top: -0.00781rem;
   color: #0079bc;
   vertical-align: middle;
 }
