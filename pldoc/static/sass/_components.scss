@@ -717,6 +717,34 @@
         }
     }
 
+    .information {
+        background: palette(information, base);
+
+        &.base {
+            background: palette(information, base);
+        }
+
+        &.light {
+            background: palette(information, light);
+        }
+
+        &.dark {
+            background: palette(information, dark);
+        }
+
+        &.trans {
+            background: palette(information, trans);
+        }
+
+        &.x-trans {
+            background: palette(information, x-trans);
+        }
+
+        &.xx-trans {
+            background: palette(information, xx-trans);
+        }
+    }
+
     .example-color {
         @include transition(all timing(x-fast) ease-in-out);
         @include span(12 of 12);

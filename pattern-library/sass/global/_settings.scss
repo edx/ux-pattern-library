@@ -76,7 +76,7 @@ $brand-secondary-accent:        rgb(242, 108, 170) !default;
 $success: $green !default;
 $warning: $yellow !default;
 $error: $red !default;
-$information: $brand-primary !default;
+$information: mix($gray-cool, $brand-primary, 70%) !default;
 
 // colors: palettes
 $palettes: (
