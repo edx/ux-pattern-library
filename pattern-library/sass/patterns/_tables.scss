@@ -11,11 +11,12 @@
 // #SETTINGS
 // ----------------------------
 // tables
-$table-cell-padding:                        spacing-vertical(small) spacing-horizontal(small) !default;
-$table-condensed-cell-padding:              spacing-vertical(x-small) spacing-horizontal(x-small) !default;
+$table-cell-padding:                        spacing-vertical(x-small) spacing-horizontal(small) !default;
+$table-condensed-cell-padding:              spacing-vertical(xx-small) spacing-horizontal(x-small) !default;
+$table-extra-cell-padding:              spacing-vertical(small) spacing-horizontal(base) !default;
 $table-bg:                                  palette(grayscale, white) !default;
 $table-accent-bg:                           palette(primary, accent) !default;
-$table-focus-bg:                            $component-focus-bg !default;
+$table-focus-bg:                            palette(grayscale, xx-trans) !default;
 $table-active-bg:                           $component-active-bg !default;
 $table-border-color:                        palette(grayscale, x-light) !default;
 
@@ -23,3 +24,148 @@ $table-border-color:                        palette(grayscale, x-light) !default
 // ----------------------------
 // #GLOBAL
 // ----------------------------
+
+
+%highlight {
+  background-color: palette(warning, x-trans);
+}
+
+%edx-table-base {
+
+  caption {
+    @extend %copy-meta;
+    @extend %copy-de-emphasized;
+    @include text-align(left);
+    margin-bottom: spacing-vertical(x-small);
+  }
+
+  tr:hover {
+    background-color: $table-focus-bg;
+  }
+
+  th {
+    @include text-align(left);
+    font-weight: font-weight(semi-bold);
+  }
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    border: 1px solid $table-border-color;
+  }
+
+  tfoot {
+
+    tr {
+      border-top: 2px solid palette(grayscale, light);
+      font-weight: font-weight(semi-bold);
+    }
+  }
+
+  // can be used on cols, rows, or cells
+  .is-highlighted {
+    @extend %highlight;
+  }
+
+  // can be used on rows or cells only
+  .align-left {
+    @include text-align(left);
+  }
+
+  .align-center {
+    @include text-align(center);
+  }
+
+  .align-right {
+    @include text-align(right);
+  }
+
+
+}
+
+.table {
+  @extend %edx-table-base;
+}
+
+// less lines
+.table-simplified {
+  @extend %edx-table-base;
+
+  th,
+  td {
+    border: none;
+    border-bottom: 1px solid $table-border-color;
+  }
+}
+
+// extra tight
+.table-cozy {
+
+  th,
+  td {
+    padding: $table-condensed-cell-padding;
+  }
+}
+
+// extra roomy
+.table-comfortable {
+
+  th,
+  td {
+    padding: $table-extra-cell-padding;
+  }
+}
+
+// wrapping div allows horizontally large tables to scroll on small screens
+.wrapper-table-scrollable {
+  width: 100%;
+  overflow-y: auto;
+}
+
+// responsive table enables `supplemental` columns to hide on small screens
+.table-responsive {
+
+  th.supplemental,
+  td.supplemental {
+    display: none;
+  }
+
+  @include susy-breakpoint($bp-screen-md, $susy-default) {
+
+    th.supplemental,
+    td.supplemental {
+      display: table-cell;
+    }
+  }
+}
+
+// sortable table includes button to sort by column - needs JS to actually sort
+.table-sortable {
+
+  // sortable header
+  .sortable {
+    position: relative;
+    @include margin-left(spacing-horizontal(x-small));
+
+    // sorting button
+    .action-sort {
+      @extend .btn-secondary;
+      position: absolute;
+      @include right(0);
+      border: 0;
+      color: palette(grayscale, light);
+
+      &:hover {
+        color: palette(primary, base);
+      }
+    }
+
+    &.sort-current {
+
+      .action-sort {
+        color: palette(primary, base);
+      }
+    }
+  }
+}
+

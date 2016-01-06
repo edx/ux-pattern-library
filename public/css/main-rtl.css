@@ -1250,19 +1250,19 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   font-weight: 700;
 }
 
-.emphasized.copy-lead, .emphasized.copy-large, .emphasized.copy-base, .emphasized.copy-meta, .emphasized.alert-copy, .emphasized.copy-micro, .pldoc-pattern-grid .col .emphasized.example-label,
+.emphasized.copy-lead, .emphasized.copy-large, .emphasized.copy-base, .emphasized.copy-meta, .table caption.emphasized, .table-simplified caption.emphasized, .emphasized.alert-copy, .emphasized.copy-micro, .pldoc-pattern-grid .col .emphasized.example-label,
 .pldoc-pattern-grid .gallery-item .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .emphasized.example-label, .pldoc-view-example-grid .example-grid .col .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-main .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid .emphasized.example-label, .example-layout .emphasized.example-label {
   color: black;
   font-weight: 400;
 }
 
 .de-emphasized.copy-lead, .de-emphasized.copy-large, .de-emphasized.copy-base, .de-emphasized.copy-meta, .de-emphasized.alert-copy, .de-emphasized.copy-micro, .pldoc-pattern-grid .col .de-emphasized.example-label,
-.pldoc-pattern-grid .gallery-item .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .de-emphasized.example-label, .pldoc-view-example-grid .example-grid .col .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-main .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid .de-emphasized.example-label, .example-layout .de-emphasized.example-label {
+.pldoc-pattern-grid .gallery-item .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .de-emphasized.example-label, .pldoc-view-example-grid .example-grid .col .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-main .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid .de-emphasized.example-label, .example-layout .de-emphasized.example-label, .table caption, .table-simplified caption {
   color: #6b6969;
   font-weight: 400;
 }
 
-.copy-lead, .copy-large, .copy-base, .copy-meta, .alert-copy, .copy-micro, .pldoc-pattern-grid .col .example-label,
+.copy-lead, .copy-large, .copy-base, .copy-meta, .table caption, .table-simplified caption, .alert-copy, .copy-micro, .pldoc-pattern-grid .col .example-label,
 .pldoc-pattern-grid .gallery-item .example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label, .pldoc-pattern-grid .example-grid-semantic .story .example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label, .pldoc-view-example-grid .example-grid .col .example-label, .pldoc-view-example-grid #example-grid-1 .content-main .example-label, .pldoc-view-example-grid #example-grid-1 .story .example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label, .pldoc-pattern-grid .example-grid .example-label, .example-layout .example-label {
   color: #4d4b4b;
 }
@@ -1294,12 +1294,12 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   margin-bottom: 1.25rem;
 }
 
-.copy-meta, .alert-copy {
+.copy-meta, .table caption, .table-simplified caption, .alert-copy {
   font-size: 0.875rem;
   line-height: 1.6;
 }
 
-.copy-meta p, .alert-copy p, .copy-meta ol, .alert-copy ol, .copy-meta ul, .alert-copy ul, .copy-meta dl, .alert-copy dl {
+.copy-meta p, .table caption p, .table-simplified caption p, .alert-copy p, .copy-meta ol, .table caption ol, .table-simplified caption ol, .alert-copy ol, .copy-meta ul, .table caption ul, .table-simplified caption ul, .alert-copy ul, .copy-meta dl, .table caption dl, .table-simplified caption dl, .alert-copy dl {
   margin-bottom: 1.25rem;
 }
 
@@ -8770,6 +8770,99 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 
 .icon-fallback-img .icon-cc {
   background: url("../fonts/edx-icons/fallback-img/cc.svg") center center no-repeat;
+}
+
+.table .is-highlighted, .table-simplified .is-highlighted {
+  background-color: rgba(253, 188, 86, 0.25);
+}
+
+.table caption, .table-simplified caption {
+  text-align: right;
+  margin-bottom: 0.625rem;
+}
+
+.table tr:hover, .table-simplified tr:hover {
+  background-color: rgba(167, 164, 164, 0.05);
+}
+
+.table th, .table-simplified th {
+  text-align: right;
+  font-weight: 600;
+}
+
+.table th, .table-simplified th, .table td, .table-simplified td {
+  padding: 0.625rem 0.625rem;
+  border: 1px solid #e7e6e6;
+}
+
+.table tfoot tr, .table-simplified tfoot tr {
+  border-top: 2px solid #d2d0d0;
+  font-weight: 600;
+}
+
+.table .align-left, .table-simplified .align-left {
+  text-align: right;
+}
+
+.table .align-center, .table-simplified .align-center {
+  text-align: center;
+}
+
+.table .align-right, .table-simplified .align-right {
+  text-align: left;
+}
+
+.table-simplified th,
+.table-simplified td {
+  border: none;
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.table-cozy th,
+.table-cozy td {
+  padding: 0.3125rem 0.3125rem;
+}
+
+.table-comfortable th,
+.table-comfortable td {
+  padding: 1.25rem 1.25rem;
+}
+
+.wrapper-table-scrollable {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.table-responsive th.supplemental,
+.table-responsive td.supplemental {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .table-responsive th.supplemental,
+  .table-responsive td.supplemental {
+    display: table-cell;
+  }
+}
+
+.table-sortable .sortable {
+  position: relative;
+  margin-right: 0.3125rem;
+}
+
+.table-sortable .sortable .action-sort {
+  position: absolute;
+  left: 0;
+  border: 0;
+  color: #d2d0d0;
+}
+
+.table-sortable .sortable .action-sort:hover {
+  color: #0079bc;
+}
+
+.table-sortable .sortable.sort-current .action-sort {
+  color: #0079bc;
 }
 
 html, body {
