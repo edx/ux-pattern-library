@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.8.2 (2016-01-08)
+* removing unused animate.css package from dependencies (for optimization/simplification's sake)
+
+- - -
+
 ## 0.8.1 (2016-01-04)
 * adding system utility-based information color (and range) - to be used on educational, informational, and note-based UI elements
 
