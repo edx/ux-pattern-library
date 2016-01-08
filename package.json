@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "author": "edX UX Team <ux@edx.org>",
   "license": "Apache-2.0",
   "description": "The (working) Visual, UI, and Front End Styleguide for edX Apps",
@@ -19,7 +19,6 @@
     "url": "git://github.com/edx/ux-pattern-library.git"
   },
   "dependencies": {
-    "animate.css": "^3.4.0",
     "bi-app-sass": "^1.1.0",
     "bourbon": "^4.2.6",
     "breakpoint-sass": "^2.6.1",
