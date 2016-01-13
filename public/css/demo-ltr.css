@@ -77,6 +77,12 @@
   display: table;
 }
 
+.list-divided .item:last-child, ul .item:last-child, .list-bulleted .item:last-child, ol .item:last-child, .list-ordered .item:last-child, .list-inline .item:last-child, .list-grouped .item:last-child, .list .item:last-child, .list li:last-child, ol li:last-child, ul li:last-child, .list-divided:last-child, ul:last-child, .list-bulleted:last-child, ol:last-child, .list-ordered:last-child, .list-inline:last-child, .list-grouped:last-child, .list:last-child, .list-divided .item-complex:last-child, ul .item-complex:last-child, .list-bulleted .item-complex:last-child, ol .item-complex:last-child, .list-ordered .item-complex:last-child, .list-inline .item-complex:last-child, .list-grouped .item-complex:last-child, .list .item-complex:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
 .sr-only, .input-radio.replace-checkbox, .input-radio.replace-radio,
 .input-checkbox.replace-checkbox,
 .input-checkbox.replace-radio {
@@ -101,11 +107,20 @@
   color: white !important;
 }
 
-.grid-manual .gallery {
+.list-inline, .list-divided, ul, .list-bulleted, ol, .list-ordered, .list-grouped, .list, .list-unstyled, .grid-manual .gallery {
   margin: 0;
   padding: 0;
   list-style: none;
   text-indent: 0;
+}
+
+.list-inline li, .list-divided li, ul li, .list-bulleted li, ol li, .list-ordered li, .list-grouped li, .list li, .list-unstyled li, .list-inline dt, .list-divided dt, ul dt, .list-bulleted dt, ol dt, .list-ordered dt, .list-grouped dt, .list dt, .list-unstyled dt, .list-inline dd, .list-divided dd, ul dd, .list-bulleted dd, ol dd, .list-ordered dd, .list-grouped dd, .list dd, .list-unstyled dd {
+  margin: 0;
+  padding: 0;
+}
+
+.list-inline li, .list-inline dt, .list-inline dd {
+  display: inline-block;
 }
 
 .copy-lead a, .copy-large a, .copy-base a, .copy-meta a, .copy-micro a, a,
@@ -145,6 +160,18 @@ a:active,
 
 .copy-lead a:hover, .copy-large a:hover, .copy-base a:hover, .copy-meta a:hover, .copy-micro a:hover, .copy-lead a:active, .copy-large a:active, .copy-base a:active, .copy-meta a:active, .copy-micro a:active, .copy-lead a:focus, .copy-large a:focus, .copy-base a:focus, .copy-meta a:focus, .copy-micro a:focus {
   box-shadow: 0 1px 0 0 #0ea6ec;
+}
+
+.align-left.list-divided, ul.align-left, .align-left.list-bulleted, ol.align-left, .align-left.list-ordered, .align-left.list-inline, .align-left.list-grouped, .align-left.list {
+  text-align: left;
+}
+
+.align-center.list-divided, ul.align-center, .align-center.list-bulleted, ol.align-center, .align-center.list-ordered, .align-center.list-inline, .align-center.list-grouped, .align-center.list {
+  text-align: center;
+}
+
+.align-right.list-divided, ul.align-right, .align-right.list-bulleted, ol.align-right, .align-right.list-ordered, .align-right.list-inline, .align-right.list-grouped, .align-right.list {
+  text-align: right;
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -998,6 +1025,154 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 
 .copy-micro p, .copy-micro ol, .copy-micro ul, .copy-micro dl {
   margin-bottom: 1.25rem;
+}
+
+.list-divided .item, ul .item, .list-bulleted .item, ol .item, .list-ordered .item, .list-inline .item, .list-grouped .item, .list .item, .list li, ol li, ul li {
+  display: list-item;
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided .item > .list, ul .item > .list, .list-bulleted .item > .list, ol .item > .list, .list-ordered .item > .list, .list-inline .item > .list, .list-grouped .item > .list, .list .item > .list, .list li > .list, ol li > .list, ul li > .list, .list-divided .item > ol, ul .item > ol, .list-bulleted .item > ol, ol .item > ol, .list-ordered .item > ol, .list-inline .item > ol, .list-grouped .item > ol, .list .item > ol, .list li > ol, ol li > ol, ul li > ol, .list-divided .item > ul, ul .item > ul, .list-bulleted .item > ul, ol .item > ul, .list-ordered .item > ul, .list-inline .item > ul, .list-grouped .item > ul, .list .item > ul, .list li > ul, ol li > ul, ul li > ul {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided, ul, .list-bulleted, ol, .list-ordered, .list-inline, .list-grouped, .list {
+  margin-bottom: 1.875rem;
+}
+
+.list-divided .item-complex, ul .item-complex, .list-bulleted .item-complex, ol .item-complex, .list-ordered .item-complex, .list-inline .item-complex, .list-grouped .item-complex, .list .item-complex {
+  margin-bottom: 1.25rem;
+}
+
+.list-divided .item-hd, ul .item-hd, .list-bulleted .item-hd, ol .item-hd, .list-ordered .item-hd, .list-inline .item-hd, .list-grouped .item-hd, .list .item-hd, .list-divided .item-copy, ul .item-copy, .list-bulleted .item-copy, ol .item-copy, .list-ordered .item-copy, .list-inline .item-copy, .list-grouped .item-copy, .list .item-copy {
+  display: block;
+}
+
+.list-divided .item-hd, ul .item-hd, .list-bulleted .item-hd, ol .item-hd, .list-ordered .item-hd, .list-inline .item-hd, .list-grouped .item-hd, .list .item-hd {
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided .item-copy, ul .item-copy, .list-bulleted .item-copy, ol .item-copy, .list-ordered .item-copy, .list-inline .item-copy, .list-grouped .item-copy, .list .item-copy {
+  margin: 0;
+}
+
+.list-divided .item {
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid #e5e9eb;
+  margin-bottom: 0.625rem;
+}
+
+ul, .list-bulleted {
+  margin-left: 2.5rem;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+ul.list-disc, .list-disc.list-bulleted {
+  list-style-type: disc;
+}
+
+ul.list-circle, .list-circle.list-bulleted {
+  list-style-type: circle;
+}
+
+ul.no-indent, .no-indent.list-bulleted {
+  margin-left: 1.25rem;
+}
+
+ol, .list-ordered {
+  margin-left: 2.5rem;
+  list-style-position: outside;
+  list-style: decimal;
+  counter-reset: ol-counter;
+}
+
+ol.no-indent, .no-indent.list-ordered {
+  margin-left: 1.25rem;
+}
+
+ol:not(ol), .list-ordered:not(ol) {
+  list-style-type: none;
+  list-style-position: outside;
+  counter-reset: ol-counter;
+}
+
+ol:not(ol) .item, .list-ordered:not(ol) .item {
+  position: relative;
+}
+
+ol:not(ol) .item:before, .list-ordered:not(ol) .item:before {
+  position: absolute;
+  top: 0;
+  left: -1.5625rem;
+  content: counters(ol-counter, ".") ".";
+  counter-increment: ol-counter;
+  text-align: right;
+}
+
+dl,
+.list-definition {
+  margin-bottom: 1.875rem;
+}
+
+dt,
+.list-definition-term {
+  margin-bottom: 0.3125rem;
+}
+
+dt:not(:first-of-type),
+.list-definition-term:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
+
+dd,
+.list-definition-description {
+  margin: 0 0 0.25rem 0;
+}
+
+.list-inline .item {
+  display: inline-block;
+  margin-right: 0.625rem;
+  margin-bottom: 0;
+}
+
+.list-inline .item:last-child {
+  margin-right: 0;
+}
+
+.item.has-block-link a {
+  display: block;
+}
+
+.list-grouped {
+  border: 0.0625rem solid #e5e9eb;
+  border-radius: 3px;
+}
+
+.list-grouped:last-child {
+  border: 0.0625rem solid #e5e9eb;
+}
+
+.list-grouped .item {
+  -webkit-transition: background 0.125s ease-in-out 0s;
+  transition: background 0.125s ease-in-out 0s;
+  margin-bottom: 0;
+  border-bottom: 0.0625rem solid #e5e9eb;
+  padding: 0.625rem 1.25rem;
+  background: inherit;
+}
+
+.list-grouped .item:last-child {
+  padding: 0.625rem 1.25rem;
+}
+
+.list-grouped .item:hover, .list-grouped .item:active, .list-grouped .item:focus {
+  background: rgba(158, 177, 185, 0.05);
+}
+
+.list-grouped .item.has-block-link:hover, .list-grouped .item.has-block-link:active, .list-grouped .item.has-block-link:focus {
+  background: rgba(0, 121, 188, 0.05);
 }
 
 .form-group {
@@ -7479,11 +7654,11 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 }
 
 .well, .depth--1 {
-  background: #e7e6e6;
+  background: #e5e9eb;
 }
 
 body, .zebra-stripe > *:nth-child(odd), .depth-0 {
-  background: #efefef;
+  background: #eef1f2;
 }
 
 .slat, .zebra-stripe > *:nth-child(even), .depth-1 {

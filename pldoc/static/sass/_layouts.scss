@@ -94,16 +94,6 @@
         @include text-align(right);
     }
 
-    .meta {
-        display: block;
-
-        @include susy-breakpoint($bp-screen-md, $susy-default) {
-            display: inline-block;
-            vertical-align: middle;
-            @include margin-right(spacing-horizontal(small));
-        }
-    }
-
     .meta-updated {
         margin-bottom: spacing-vertical(x-small);
 

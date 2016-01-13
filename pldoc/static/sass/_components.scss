@@ -31,16 +31,8 @@
     .button-overlay-demo {
         @include linear-gradient(50deg, palette(primary, accent) 0%, palette(primary, base) 100%);
         padding: spacing-vertical(mid-large) spacing-horizontal(mid-large);
-    }
-
-    .btn-group {
-        @extend %clear-last-child;
-        margin-bottom: spacing-vertical(base);
-
-        .btn {
-            margin-right: 0;
-            margin-bottom: 0;
-        }
+        background: palette(primary, accent) url('#{$image-path}/placeholder-bg-overlay-example.png') 0 50% no-repeat;
+        background-size: cover;
     }
 }
 
@@ -198,44 +190,31 @@
         margin-bottom: 0;
     }
 
-    .nav-list {
-        @extend %reset-lists;
-        margin: 0;
-    }
+    .item {
+        border-bottom-color: palette(grayscale, black);
 
 
-    .pldoc-link {
-        @include transition(background 0.25s ease-in-out);
-        display: block;
-        border-bottom: 1px solid palette(grayscale, black);
-        padding: spacing-vertical(x-small) spacing-horizontal(mid-large);
-        color: palette(grayscale, x-light);
-        text-decoration: none;
-        font-size: font-size(small);
-        font-weight: font-weight(semi-bold);
+        a {
+            padding-right: spacing-horizontal(mid-large);
+            padding-left: spacing-horizontal(mid-large);
+            font-size: font-size(small);
+            font-weight: font-weight(semi-bold);
+            color: palette(grayscale, x-light);
 
-        // STATE: hover, active, and focus
-        &:hover,
-        &:active,
-        &:focus {
-            color: palette(primary, light);
-            background: palette(grayscale, black);
+            // STATE: hover, active, and focus
+            &:hover,
+            &:active,
+            &:focus {
+                color: palette(primary, light);
+            }
         }
-    }
 
-    // CASE: last pattern
-    .nav-list-item:last-child {
+        // CASE: item is current
+        &.is-current {
 
-       .pldoc-link {
-            border-bottom: 0;
-       }
-    }
-
-    // CASE: item is current
-    .nav-list-item.is-current {
-
-        .pldoc-link:before {
-            display: inline-block;
+            .pldoc-link:before {
+                display: inline-block;
+            }
         }
     }
 
@@ -264,15 +243,15 @@
 // internal site navigation
 .pldoc-nav-internal {
 
-    .pldoc-link {
+    .item a {
         position: relative;
 
         // is-current indicator
         &:before {
-            @include transition(opacity 0.25s ease-in-out);
+            @include transition(opacity timing(xx-fast) ease-in-out);
             @include size(rem(5));
             position: absolute;
-            top: rem(18);
+            top: rem(8); // TODO: needed for vertical spacing, but could be done better
             @include left(spacing-horizontal(mid-small));
             content: '';
             border-radius: 100%;
@@ -283,7 +262,6 @@
         // STATE: is current navigation item
         &.is-current {
             color: palette(primary, light);
-            background: palette(grayscale, black);
 
             &:before {
                 opacity: 1.0;
@@ -295,10 +273,11 @@
 // external site navigation
 .pldoc-nav-external {
 
-    .pldoc-link {
+    .item a {
         @include clearfix();
 
         .icon {
+            @include transition(opacity timing(xx-fast) ease-in-out);
             @include margin-left(spacing-horizontal(xx-small));
             @include float(right);
             opacity: 0.25;
@@ -317,7 +296,7 @@
 }
 
 .pldoc-nav-title {
-    margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small) spacing-horizontal(mid-large);
+    margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small);
     color: palette(grayscale, base);
     font-size: font-size(small);
     font-weight: font-weight(semi-bold);
@@ -334,7 +313,7 @@
 
 .pldoc-tab-content {
     @extend %depth-2;
-    @include transition(box-shadow 0.50s ease-in-out);
+    @include transition(box-shadow timing(fast) ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
     padding: spacing-vertical(base) spacing-horizontal(base);
 
@@ -403,10 +382,6 @@
     margin-bottom: spacing-vertical(base);
     border-bottom: 1px solid palette(grayscale, dark);
     padding-bottom: spacing-vertical(small);
-
-    .pldoc-pattern-meta {
-        @extend %reset-lists;
-    }
 }
 
 
@@ -422,10 +397,10 @@
 }
 
 .pldoc-tab-label {
-    // display: inline-block;
-    float: left;
+    @include float(left);
     position: relative;
     bottom: -(spacing-vertical(xx-small));
+    margin-bottom: 0;
 
     .pldoc-link {
         display: block;

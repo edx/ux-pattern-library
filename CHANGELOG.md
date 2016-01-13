@@ -3,6 +3,11 @@
 ## unreleased
 Nothing yet
 
+## 0.8.5 (2016-01-13)
+* Added a new element, Lists - for use in content and simple navigation
+
+- - -
+
 ## 0.8.4 (2016-01-13)
 * bulletproofing text/base link styling
 
