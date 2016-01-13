@@ -39,6 +39,10 @@
     &.de-emphasized {
         @extend %copy-de-emphasized;
     }
+
+    a {
+        @extend %link-text;
+    }
 }
 
 
