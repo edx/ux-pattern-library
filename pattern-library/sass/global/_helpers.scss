@@ -115,14 +115,12 @@
     color: $text-base-color;
 }
 
-// reset of links
+// links: base
 %link {
     @include transition(
-        color timing(xx-fast) ease-in-out 0s,
-        border-color timing(xx-fast) ease-in-out 0s
+        color timing(xx-fast) ease-in-out 0s
     );
 
-    border-bottom: 1px solid $transparent;
     color: palette(primary, base);
     text-decoration: none;
 
@@ -130,7 +128,6 @@
     &:hover,
     &:active,
     &:focus {
-        border-bottom-color: palette(primary, accent);
         color: palette(primary, accent);
     }
 
@@ -147,4 +144,34 @@
     &.is-active {
         color: palette(primary, dark);
     }
+}
+
+// links: text-based
+%link-text {
+    @extend %link;
+    @include transition(
+        box-shadow timing(xx-fast) ease-in-out 0s
+    );
+
+    box-shadow: 0 1px 0 0 $transparent;
+
+    // STATE: hover, active, focus
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 1px 0 0 palette(primary, accent);
+    }
+}
+
+// align text
+%text-left {
+    @include text-align(left);
+}
+
+%text-center {
+    @include text-align(center);
+}
+
+%text-right {
+    @include text-align(right);
 }

@@ -3,6 +3,68 @@
 ## unreleased
 Nothing yet
 
+## 0.8.5 (2016-01-13)
+* Added a new element, Lists - for use in content and simple navigation
+
+- - -
+
+## 0.8.4 (2016-01-13)
+* bulletproofing text/base link styling
+
+- - -
+
+## 0.8.3 (2016-01-13)
+* updating spacing maps to use vert/horiz vars
+
+- - -
+
+## 0.8.2 (2016-01-08)
+* removing unused animate.css package from dependencies (for optimization/simplification's sake)
+
+- - -
+
+## 0.8.1 (2016-01-04)
+* adding system utility-based information color (and range) - to be used on educational, informational, and note-based UI elements
+
+- - -
+
+## 0.8.0 (2016-01-02)
+* renaming button types to suggest more visual styling in nature
+* simplifying classes needed to reference buttons
+* removing extraneous visual button styles (elevated alt)
+* revising combo/button group styling and architecture
+* abstracting out buttons into Sass placeholders to extend (matching how we have architected other patterns)
+
+- - -
+
+## 0.7.5 (2015-12-29)
+* simplifying and standardizing copy element syntax
+
+- - -
+
+## 0.7.4 (2015-12-29)
+* correcting styling for disabled enhanced radio button
+
+- - -
+
+## 0.7.3 (2015-12-22)
+* adding transparent options to base and utility color palettes and remove unused colors partial
+
+- - -
+
+## 0.7.2 (2015-12-17)
+* correcting doc/depedency small errors with npm package
+
+- - -
+
+## 0.7.1 (2015-12-16)
+* ignoring files in npm package
+
+- - -
+
+## 0.7.0 (2015-12-14)
+* Moving from Bower-based to NPM-based package management
+
 - - -
 ## 0.6.0 (2015-11-24)
 * Revising color patterns to use Sass mix() method

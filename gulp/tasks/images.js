@@ -10,8 +10,9 @@ gulp.task('images', function() {
 
     var images = gulp.src(config.src_files);
     var pldoc_images = gulp.src(config.pldoc_src_files);
+    var demo_images = gulp.src(config.demo_src_files);
 
-    return merge(images, pldoc_images)
+    return merge(images, pldoc_images, demo_images)
         .pipe(changed(config.dest)) // ignore unchanged files
         .pipe(imagemin({            // optimize
             progressive: true,

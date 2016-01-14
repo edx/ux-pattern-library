@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.6.0",
+  "version": "0.8.5",
   "authors": [
     "edX UX Team <ux@edx.org>"
   ],
@@ -46,7 +46,6 @@
     "requirejs-plugins": "~1.0.3"
   },
   "dependencies": {
-    "animate.css": "~3.3.0",
     "bi-app-sass": "~1.1.0",
     "bourbon": "~4.2.3",
     "breakpoint-sass": "~2.6.1",

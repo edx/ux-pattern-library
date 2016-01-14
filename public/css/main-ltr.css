@@ -372,7 +372,7 @@
   src: url("../fonts/edx-icons/edx-icons.woff") format("woff"), url("../fonts/edx-icons/edx-icons.ttf") format("truetype");
 }
 
-.btn-default:disabled, .btn-primary:disabled, .btn-secondary:disabled, .btn-link:disabled, .btn-elevated:disabled, .btn-elevated-alt:disabled, .btn-combo:disabled, .btn-overlay:disabled, .is-disabled.btn-default, .is-disabled.btn-primary, .is-disabled.btn-secondary, .is-disabled.btn-link, .is-disabled.btn-elevated, .is-disabled.btn-elevated-alt, .is-disabled.btn-combo, .is-disabled.btn-overlay, .wrapper-custom-select:disabled, .wrapper-custom-select.is-disabled {
+.btn:disabled, .btn-neutral:disabled, .btn-brand:disabled, .btn-link:disabled, .btn-elevated:disabled, .btn-inverse:disabled, .is-disabled.btn, .is-disabled.btn-neutral, .is-disabled.btn-brand, .is-disabled.btn-link, .is-disabled.btn-elevated, .is-disabled.btn-inverse, .wrapper-custom-select:disabled, .wrapper-custom-select.is-disabled {
   pointer-events: none;
   outline: none;
   cursor: not-allowed;
@@ -388,7 +388,7 @@
   display: table;
 }
 
-.example-set:last-child, .alert-copy > :last-child {
+.list-divided .item:last-child, ul .item:last-child, .list-bulleted .item:last-child, ol .item:last-child, .list-ordered .item:last-child, .list-inline .item:last-child, .list-grouped .item:last-child, .list .item:last-child, .list li:last-child, ol li:last-child, ul li:last-child, .list-divided:last-child, ul:last-child, .list-bulleted:last-child, ol:last-child, .list-ordered:last-child, .list-inline:last-child, .list-grouped:last-child, .list:last-child, .list-divided .item-complex:last-child, ul .item-complex:last-child, .list-bulleted .item-complex:last-child, ol .item-complex:last-child, .list-ordered .item-complex:last-child, .list-inline .item-complex:last-child, .list-grouped .item-complex:last-child, .list .item-complex:last-child, .example-set:last-child, .alert-copy > :last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
@@ -418,42 +418,84 @@
   color: white !important;
 }
 
-.grid-manual .gallery, .pldoc-nav .nav-list, .pldoc-pattern-header .pldoc-pattern-meta, .pldoc-tab-labels, .pldoc-pattern-depth .zebra-stripe, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
+.list-inline, .list-divided, ul, .list-bulleted, ol, .list-ordered, .list-grouped, .list, .list-unstyled, .grid-manual .gallery, .pldoc-tab-labels, .pldoc-pattern-depth .zebra-stripe, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
   margin: 0;
   padding: 0;
   list-style: none;
   text-indent: 0;
 }
 
-a,
+.list-inline li, .list-divided li, ul li, .list-bulleted li, ol li, .list-ordered li, .list-grouped li, .list li, .list-unstyled li, .list-inline dt, .list-divided dt, ul dt, .list-bulleted dt, ol dt, .list-ordered dt, .list-grouped dt, .list dt, .list-unstyled dt, .list-inline dd, .list-divided dd, ul dd, .list-bulleted dd, ol dd, .list-ordered dd, .list-grouped dd, .list dd, .list-unstyled dd {
+  margin: 0;
+  padding: 0;
+}
+
+.list-inline li, .list-inline dt, .list-inline dd {
+  display: inline-block;
+}
+
+.copy-lead a, .copy-large a, .copy-base a, .copy-meta a, .alert-copy a, .copy-micro a, .pldoc-pattern-grid .col .example-label a,
+.pldoc-pattern-grid .gallery-item .example-label a, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a, .pldoc-pattern-grid .example-grid-semantic .story .example-label a, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a, .pldoc-view-example-grid .example-grid .col .example-label a, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a, .pldoc-view-example-grid #example-grid-1 .story .example-label a, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a, .pldoc-pattern-grid .example-grid .example-label a, .example-layout .example-label a, a,
 .link, .btn-link {
-  -webkit-transition: color 0.125s ease-in-out 0s, border-color 0.125s ease-in-out 0s;
-  transition: color 0.125s ease-in-out 0s, border-color 0.125s ease-in-out 0s;
-  border-bottom: 1px solid transparent;
+  -webkit-transition: color 0.125s ease-in-out 0s;
+  transition: color 0.125s ease-in-out 0s;
   color: #0079bc;
   text-decoration: none;
 }
 
-a:hover,
-.link:hover, .btn-link:hover, a:active,
-.link:active, .btn-link:active, a:focus,
+.pldoc-pattern-grid .col .example-label a:hover,
+.pldoc-pattern-grid .gallery-item .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:hover, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:hover, .pldoc-view-example-grid .example-grid .col .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .story .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:hover, .pldoc-pattern-grid .example-grid .example-label a:hover, .example-layout .example-label a:hover, a:hover,
+.link:hover, .btn-link:hover, .pldoc-pattern-grid .col .example-label a:active,
+.pldoc-pattern-grid .gallery-item .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:active, .pldoc-view-example-grid .example-grid .col .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid .example-label a:active, .example-layout .example-label a:active, a:active,
+.link:active, .btn-link:active, .pldoc-pattern-grid .col .example-label a:focus,
+.pldoc-pattern-grid .gallery-item .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:focus, .pldoc-view-example-grid .example-grid .col .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .story .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid .example-label a:focus, .example-layout .example-label a:focus, a:focus,
 .link:focus, .btn-link:focus {
-  border-bottom-color: #0ea6ec;
   color: #0ea6ec;
 }
 
-a:disabled,
-.link:disabled, .btn-link:disabled, a.is-disabled,
+.pldoc-pattern-grid .col .example-label a:disabled,
+.pldoc-pattern-grid .gallery-item .example-label a:disabled, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:disabled, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:disabled, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:disabled, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:disabled, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:disabled, .pldoc-view-example-grid .example-grid .col .example-label a:disabled, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:disabled, .pldoc-view-example-grid #example-grid-1 .story .example-label a:disabled, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:disabled, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:disabled, .pldoc-pattern-grid .example-grid .example-label a:disabled, .example-layout .example-label a:disabled, a:disabled,
+.link:disabled, .btn-link:disabled, .pldoc-pattern-grid .col .example-label a.is-disabled,
+.pldoc-pattern-grid .gallery-item .example-label a.is-disabled, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a.is-disabled, .pldoc-pattern-grid .example-grid-semantic .story .example-label a.is-disabled, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a.is-disabled, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a.is-disabled, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a.is-disabled, .pldoc-view-example-grid .example-grid .col .example-label a.is-disabled, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a.is-disabled, .pldoc-view-example-grid #example-grid-1 .story .example-label a.is-disabled, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a.is-disabled, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a.is-disabled, .pldoc-pattern-grid .example-grid .example-label a.is-disabled, .example-layout .example-label a.is-disabled, a.is-disabled,
 .is-disabled.link, .is-disabled.btn-link {
   display: none;
   color: #d2d0d0;
 }
 
-a:active,
-.link:active, .btn-link:active, a.is-pressed,
-.is-pressed.link, .is-pressed.btn-link, a.is-active,
+.pldoc-pattern-grid .col .example-label a:active,
+.pldoc-pattern-grid .gallery-item .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:active, .pldoc-view-example-grid .example-grid .col .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid .example-label a:active, .example-layout .example-label a:active, a:active,
+.link:active, .btn-link:active, .pldoc-pattern-grid .col .example-label a.is-pressed,
+.pldoc-pattern-grid .gallery-item .example-label a.is-pressed, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a.is-pressed, .pldoc-pattern-grid .example-grid-semantic .story .example-label a.is-pressed, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a.is-pressed, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a.is-pressed, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a.is-pressed, .pldoc-view-example-grid .example-grid .col .example-label a.is-pressed, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a.is-pressed, .pldoc-view-example-grid #example-grid-1 .story .example-label a.is-pressed, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a.is-pressed, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a.is-pressed, .pldoc-pattern-grid .example-grid .example-label a.is-pressed, .example-layout .example-label a.is-pressed, a.is-pressed,
+.is-pressed.link, .is-pressed.btn-link, .pldoc-pattern-grid .col .example-label a.is-active,
+.pldoc-pattern-grid .gallery-item .example-label a.is-active, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a.is-active, .pldoc-pattern-grid .example-grid-semantic .story .example-label a.is-active, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a.is-active, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a.is-active, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a.is-active, .pldoc-view-example-grid .example-grid .col .example-label a.is-active, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a.is-active, .pldoc-view-example-grid #example-grid-1 .story .example-label a.is-active, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a.is-active, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a.is-active, .pldoc-pattern-grid .example-grid .example-label a.is-active, .example-layout .example-label a.is-active, a.is-active,
 .is-active.link, .is-active.btn-link {
   color: #065683;
+}
+
+.copy-lead a, .copy-large a, .copy-base a, .copy-meta a, .alert-copy a, .copy-micro a, .pldoc-pattern-grid .col .example-label a,
+.pldoc-pattern-grid .gallery-item .example-label a, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a, .pldoc-pattern-grid .example-grid-semantic .story .example-label a, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a, .pldoc-view-example-grid .example-grid .col .example-label a, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a, .pldoc-view-example-grid #example-grid-1 .story .example-label a, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a, .pldoc-pattern-grid .example-grid .example-label a, .example-layout .example-label a {
+  -webkit-transition: box-shadow 0.125s ease-in-out 0s;
+  transition: box-shadow 0.125s ease-in-out 0s;
+  box-shadow: 0 1px 0 0 transparent;
+}
+
+.copy-lead a:hover, .copy-large a:hover, .copy-base a:hover, .copy-meta a:hover, .alert-copy a:hover, .copy-micro a:hover, .pldoc-pattern-grid .col .example-label a:hover,
+.pldoc-pattern-grid .gallery-item .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:hover, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:hover, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:hover, .pldoc-view-example-grid .example-grid .col .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .story .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:hover, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:hover, .pldoc-pattern-grid .example-grid .example-label a:hover, .example-layout .example-label a:hover, .copy-lead a:active, .copy-large a:active, .copy-base a:active, .copy-meta a:active, .alert-copy a:active, .copy-micro a:active, .pldoc-pattern-grid .col .example-label a:active,
+.pldoc-pattern-grid .gallery-item .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:active, .pldoc-view-example-grid .example-grid .col .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid .example-label a:active, .example-layout .example-label a:active, .copy-lead a:focus, .copy-large a:focus, .copy-base a:focus, .copy-meta a:focus, .alert-copy a:focus, .copy-micro a:focus, .pldoc-pattern-grid .col .example-label a:focus,
+.pldoc-pattern-grid .gallery-item .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:focus, .pldoc-view-example-grid .example-grid .col .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .story .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid .example-label a:focus, .example-layout .example-label a:focus {
+  box-shadow: 0 1px 0 0 #0ea6ec;
+}
+
+.align-left.list-divided, ul.align-left, .align-left.list-bulleted, ol.align-left, .align-left.list-ordered, .align-left.list-inline, .align-left.list-grouped, .align-left.list {
+  text-align: left;
+}
+
+.align-center.list-divided, ul.align-center, .align-center.list-bulleted, ol.align-center, .align-center.list-ordered, .align-center.list-inline, .align-center.list-grouped, .align-center.list {
+  text-align: center;
+}
+
+.align-right.list-divided, ul.align-right, .align-right.list-bulleted, ol.align-right, .align-right.list-ordered, .align-right.list-inline, .align-right.list-grouped, .align-right.list {
+  text-align: right;
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -938,19 +980,38 @@ h6 {
   font-size: 0.875rem;
 }
 
-.btn-default, .btn-primary, .btn-secondary, .btn-link, .btn-elevated, .btn-elevated-alt, .btn-combo, .btn-overlay {
+.btn, .btn-neutral, .btn-group .btn, .btn-brand, .btn-link, .btn-elevated, .btn-inverse {
   -webkit-transition: color 0.125s ease-in-out 0s, border-color 0.125s ease-in-out 0s, background 0.125s ease-in-out 0s, box-shadow 0.125s ease-in-out 0s;
   transition: color 0.125s ease-in-out 0s, border-color 0.125s ease-in-out 0s, background 0.125s ease-in-out 0s, box-shadow 0.125s ease-in-out 0s;
   display: inline-block;
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
-.block.btn-default, .block.btn-primary, .block.btn-secondary, .block.btn-link, .block.btn-elevated, .block.btn-elevated-alt, .block.btn-combo, .block.btn-overlay {
+.block.btn, .block.btn-neutral, .block.btn-brand, .block.btn-link, .block.btn-elevated, .block.btn-inverse {
   display: block;
   width: 100%;
+}
+
+.btn .icon, .btn-neutral .icon, .btn-brand .icon, .btn-link .icon, .btn-elevated .icon, .btn-inverse .icon {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 0.3125rem;
+}
+
+.btn .icon:only-child, .btn-neutral .icon:only-child, .btn-brand .icon:only-child, .btn-link .icon:only-child, .btn-elevated .icon:only-child, .btn-inverse .icon:only-child,
+.sr-only + .btn .icon,
+.sr-only + .btn-neutral .icon, .btn-group
+.sr-only + .btn .icon,
+.sr-only + .btn-brand .icon,
+.sr-only + .btn-link .icon,
+.sr-only + .btn-elevated .icon,
+.sr-only + .btn-inverse .icon {
+  margin-right: 0;
 }
 
 .btn-large {
@@ -958,77 +1019,74 @@ h6 {
   font-size: 1.125rem;
 }
 
-.btn-base {
-  padding: 0.625rem 1.25rem;
-  font-size: 1rem;
-}
-
 .btn-small {
   padding: 0.625rem 0.625rem;
   font-size: 0.875rem;
 }
 
-.btn-default {
-  border-color: #0079bc;
-  background: #fcfcfc;
-  color: #0079bc;
-}
-
-.btn-default:hover, .btn-default.is-hovered, .btn-default:focus, .btn-default.is-focused {
-  background: #0079bc;
-  color: #fcfcfc;
-}
-
-.btn-default:active, .btn-default.is-pressed, .btn-default.is-active {
-  border-color: #065683;
-  background: #065683;
-}
-
-.btn-default:disabled, .btn-default.is-disabled {
-  border-color: #d2d0d0;
-  background: #fcfcfc;
-  color: #6b6969;
-}
-
-.btn-primary {
-  border-color: #0079bc;
-  background: #0079bc;
-  color: #fcfcfc;
-}
-
-.btn-primary:hover, .btn-primary.is-hovered, .btn-primary:focus, .btn-primary.is-focused {
-  border-color: #0ea6ec;
-  background: #0ea6ec;
-}
-
-.btn-primary:active, .btn-primary.is-pressed, .btn-primary.is-active {
-  border-color: #0079bc;
-  background: #0079bc;
-}
-
-.btn-primary:disabled, .btn-primary.is-disabled {
-  border-color: #d2d0d0;
-  background: #e7e6e6;
-  color: #6b6969;
-}
-
-.btn-secondary {
+.btn {
   border-color: transparent;
   background: transparent;
   color: #0079bc;
 }
 
-.btn-secondary:hover, .btn-secondary.is-hovered, .btn-secondary:focus, .btn-secondary.is-focused {
-  border-color: #cdd7db;
-}
-
-.btn-secondary:active, .btn-secondary.is-pressed, .btn-secondary.is-active {
+.btn:hover, .is-hovered.btn, .btn:focus, .is-focused.btn {
   border-color: #0079bc;
   color: #0079bc;
 }
 
-.btn-secondary:disabled, .btn-secondary.is-disabled {
+.btn:active, .is-pressed.btn, .is-active.btn {
+  border-color: #0079bc;
+  color: #0079bc;
+}
+
+.btn:disabled, .is-disabled.btn {
   border-color: #d2d0d0;
+  color: #6b6969;
+}
+
+.btn-neutral, .btn-group .btn {
+  border-color: #0079bc;
+  background: #fcfcfc;
+  color: #0079bc;
+}
+
+.btn-neutral:hover, .btn-group .btn:hover, .is-hovered.btn-neutral, .btn-group .is-hovered.btn, .btn-neutral:focus, .btn-group .btn:focus, .is-focused.btn-neutral, .btn-group .is-focused.btn {
+  background: #0079bc;
+  color: #fcfcfc;
+}
+
+.btn-neutral:active, .btn-group .btn:active, .is-pressed.btn-neutral, .btn-group .is-pressed.btn, .is-active.btn-neutral, .btn-group .is-active.btn {
+  border-color: #065683;
+  background: #065683;
+}
+
+.btn-neutral:disabled, .btn-group .btn:disabled, .is-disabled.btn-neutral, .btn-group .is-disabled.btn {
+  border-color: #d2d0d0;
+  background: #fcfcfc;
+  color: #6b6969;
+}
+
+.btn-brand {
+  border-color: #0079bc;
+  background: #0079bc;
+  color: #fcfcfc;
+}
+
+.btn-brand:hover, .is-hovered.btn-brand, .btn-brand:focus, .is-focused.btn-brand {
+  border-color: #0ea6ec;
+  background: #0ea6ec;
+  color: #fcfcfc;
+}
+
+.btn-brand:active, .is-pressed.btn-brand, .is-active.btn-brand {
+  border-color: #0079bc;
+  background: #0079bc;
+}
+
+.btn-brand:disabled, .is-disabled.btn-brand {
+  border-color: #d2d0d0;
+  background: #e7e6e6;
   color: #6b6969;
 }
 
@@ -1050,63 +1108,47 @@ h6 {
   color: #fcfcfc;
 }
 
-.btn-elevated:hover, .btn-elevated.is-hovered, .btn-elevated:focus, .btn-elevated.is-focused {
+.btn-elevated:hover, .is-hovered.btn-elevated, .btn-elevated:focus, .is-focused.btn-elevated {
   box-shadow: inset 0 -3px 0 0 #065683;
-  background: #0ea6ec;
-}
-
-.btn-elevated:active, .btn-elevated.is-pressed, .btn-elevated.is-active {
-  box-shadow: inset 0 3px 0 0 #0b344a;
-  background: #065683;
-}
-
-.btn-elevated:disabled, .btn-elevated.is-disabled {
-  border-color: #e7e6e6;
-  box-shadow: inset 0 -1px 0 #d2d0d0;
-  background: #e7e6e6;
-  color: #6b6969;
-}
-
-.btn-elevated-alt {
-  box-shadow: inset 0 0-"inset 0 -3px 0 0 #065683" 0 0 #cdd7db;
-  border-color: #cdd7db;
-  background: transparent;
-  color: #0079bc;
-}
-
-.btn-elevated-alt:hover, .btn-elevated-alt.is-hovered, .btn-elevated-alt:focus, .btn-elevated-alt.is-focused {
-  border-color: #0079bc;
-  box-shadow: inset 0 0-"inset 0 -3px 0 0 #065683" 0 0 #0079bc;
   background: #0ea6ec;
   color: #fcfcfc;
 }
 
-.btn-elevated-alt:active, .btn-elevated-alt.is-pressed, .btn-elevated-alt.is-active {
-  box-shadow: inset 0 inset 0 -3px 0 0 #065683 0 0 #0b344a;
+.btn-elevated:active, .is-pressed.btn-elevated, .is-active.btn-elevated {
+  box-shadow: inset 0 3px 0 0 #0b344a;
   background: #065683;
 }
 
-.btn-elevated-alt:disabled, .btn-elevated-alt.is-disabled {
+.btn-elevated:disabled, .is-disabled.btn-elevated {
   border-color: #e7e6e6;
   box-shadow: inset 0 -1px 0 #d2d0d0;
   background: #e7e6e6;
   color: #6b6969;
 }
 
-.btn-combo {
+.btn-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-group .btn {
+  margin-left: -1px;
   border-radius: 0;
 }
 
-.btn-combo:first-of-type {
+.btn-group .btn:first-child {
   -webkit-border-top-left-radius: 3px;
   -moz-border-topleft-radius: 3px;
   border-top-left-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
   -moz-border-bottomleft-radius: 3px;
   border-bottom-left-radius: 3px;
+  margin-left: 0;
 }
 
-.btn-combo:last-of-type {
+.btn-group .btn:last-child {
   -webkit-border-top-right-radius: 3px;
   -moz-border-topright-radius: 3px;
   border-top-right-radius: 3px;
@@ -1115,27 +1157,32 @@ h6 {
   border-bottom-right-radius: 3px;
 }
 
-.btn-overlay {
+.btn-group .btn:only-child {
+  margin-left: 0;
+  border-radius: 3px;
+}
+
+.btn-inverse {
   border-color: #fcfcfc;
   background: transparent;
   color: #fcfcfc;
 }
 
-.btn-overlay:hover, .btn-overlay.is-hovered, .btn-overlay:focus, .btn-overlay.is-focused {
+.btn-inverse:hover, .is-hovered.btn-inverse, .btn-inverse:focus, .is-focused.btn-inverse {
   background: #fcfcfc;
   color: #0079bc;
 }
 
-.btn-overlay:active, .btn-overlay.is-pressed, .btn-overlay.is-active {
+.btn-inverse:active, .is-pressed.btn-inverse, .is-active.btn-inverse {
   color: #065683;
 }
 
-.btn-overlay:disabled, .btn-overlay.is-disabled {
+.btn-inverse:disabled, .is-disabled.btn-inverse {
   border-color: rgba(167, 164, 164, 0.5);
   color: #fcfcfc;
 }
 
-.btn-overlay:disabled:hover, .btn-overlay.is-disabled:hover {
+.btn-inverse:disabled:hover, .is-disabled.btn-inverse:hover {
   border-color: rgba(167, 164, 164, 0.5);
   background: transparent;
   color: #fcfcfc;
@@ -1245,17 +1292,20 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   font-weight: 700;
 }
 
-.copy.emphasized {
+.emphasized.copy-lead, .emphasized.copy-large, .emphasized.copy-base, .emphasized.copy-meta, .emphasized.alert-copy, .emphasized.copy-micro, .pldoc-pattern-grid .col .emphasized.example-label,
+.pldoc-pattern-grid .gallery-item .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .emphasized.example-label, .pldoc-view-example-grid .example-grid .col .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-main .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .emphasized.example-label, .pldoc-pattern-grid .example-grid .emphasized.example-label, .example-layout .emphasized.example-label {
   color: black;
   font-weight: 400;
 }
 
-.copy.de-emphasized {
+.de-emphasized.copy-lead, .de-emphasized.copy-large, .de-emphasized.copy-base, .de-emphasized.copy-meta, .de-emphasized.alert-copy, .de-emphasized.copy-micro, .pldoc-pattern-grid .col .de-emphasized.example-label,
+.pldoc-pattern-grid .gallery-item .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .de-emphasized.example-label, .pldoc-view-example-grid .example-grid .col .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-main .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .de-emphasized.example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .de-emphasized.example-label, .pldoc-pattern-grid .example-grid .de-emphasized.example-label, .example-layout .de-emphasized.example-label {
   color: #6b6969;
   font-weight: 400;
 }
 
-.copy {
+.copy-lead, .copy-large, .copy-base, .copy-meta, .alert-copy, .copy-micro, .pldoc-pattern-grid .col .example-label,
+.pldoc-pattern-grid .gallery-item .example-label, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label, .pldoc-pattern-grid .example-grid-semantic .story .example-label, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label, .pldoc-view-example-grid .example-grid .col .example-label, .pldoc-view-example-grid #example-grid-1 .content-main .example-label, .pldoc-view-example-grid #example-grid-1 .story .example-label, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label, .pldoc-pattern-grid .example-grid .example-label, .example-layout .example-label {
   color: #4d4b4b;
 }
 
@@ -1307,6 +1357,154 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 .pldoc-pattern-grid .gallery-item .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label ul, .pldoc-view-example-grid .example-grid .col .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-main .example-label ul, .pldoc-view-example-grid #example-grid-1 .story .example-label ul, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid .example-label ul, .example-layout .example-label ul, .copy-micro dl, .pldoc-pattern-grid .col .example-label dl,
 .pldoc-pattern-grid .gallery-item .example-label dl, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label dl, .pldoc-pattern-grid .example-grid-semantic .story .example-label dl, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label dl, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label dl, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label dl, .pldoc-view-example-grid .example-grid .col .example-label dl, .pldoc-view-example-grid #example-grid-1 .content-main .example-label dl, .pldoc-view-example-grid #example-grid-1 .story .example-label dl, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label dl, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label dl, .pldoc-pattern-grid .example-grid .example-label dl, .example-layout .example-label dl {
   margin-bottom: 1.25rem;
+}
+
+.list-divided .item, ul .item, .list-bulleted .item, ol .item, .list-ordered .item, .list-inline .item, .list-grouped .item, .list .item, .list li, ol li, ul li {
+  display: list-item;
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided .item > .list, ul .item > .list, .list-bulleted .item > .list, ol .item > .list, .list-ordered .item > .list, .list-inline .item > .list, .list-grouped .item > .list, .list .item > .list, .list li > .list, ol li > .list, ul li > .list, .list-divided .item > ol, ul .item > ol, .list-bulleted .item > ol, ol .item > ol, .list-ordered .item > ol, .list-inline .item > ol, .list-grouped .item > ol, .list .item > ol, .list li > ol, ol li > ol, ul li > ol, .list-divided .item > ul, ul .item > ul, .list-bulleted .item > ul, ol .item > ul, .list-ordered .item > ul, .list-inline .item > ul, .list-grouped .item > ul, .list .item > ul, .list li > ul, ol li > ul, ul li > ul {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided, ul, .list-bulleted, ol, .list-ordered, .list-inline, .list-grouped, .list {
+  margin-bottom: 1.875rem;
+}
+
+.list-divided .item-complex, ul .item-complex, .list-bulleted .item-complex, ol .item-complex, .list-ordered .item-complex, .list-inline .item-complex, .list-grouped .item-complex, .list .item-complex {
+  margin-bottom: 1.25rem;
+}
+
+.list-divided .item-hd, ul .item-hd, .list-bulleted .item-hd, ol .item-hd, .list-ordered .item-hd, .list-inline .item-hd, .list-grouped .item-hd, .list .item-hd, .list-divided .item-copy, ul .item-copy, .list-bulleted .item-copy, ol .item-copy, .list-ordered .item-copy, .list-inline .item-copy, .list-grouped .item-copy, .list .item-copy {
+  display: block;
+}
+
+.list-divided .item-hd, ul .item-hd, .list-bulleted .item-hd, ol .item-hd, .list-ordered .item-hd, .list-inline .item-hd, .list-grouped .item-hd, .list .item-hd {
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided .item-copy, ul .item-copy, .list-bulleted .item-copy, ol .item-copy, .list-ordered .item-copy, .list-inline .item-copy, .list-grouped .item-copy, .list .item-copy {
+  margin: 0;
+}
+
+.list-divided .item {
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid #e5e9eb;
+  margin-bottom: 0.625rem;
+}
+
+ul, .list-bulleted {
+  margin-left: 2.5rem;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+ul.list-disc, .list-disc.list-bulleted {
+  list-style-type: disc;
+}
+
+ul.list-circle, .list-circle.list-bulleted {
+  list-style-type: circle;
+}
+
+ul.no-indent, .no-indent.list-bulleted {
+  margin-left: 1.25rem;
+}
+
+ol, .list-ordered {
+  margin-left: 2.5rem;
+  list-style-position: outside;
+  list-style: decimal;
+  counter-reset: ol-counter;
+}
+
+ol.no-indent, .no-indent.list-ordered {
+  margin-left: 1.25rem;
+}
+
+ol:not(ol), .list-ordered:not(ol) {
+  list-style-type: none;
+  list-style-position: outside;
+  counter-reset: ol-counter;
+}
+
+ol:not(ol) .item, .list-ordered:not(ol) .item {
+  position: relative;
+}
+
+ol:not(ol) .item:before, .list-ordered:not(ol) .item:before {
+  position: absolute;
+  top: 0;
+  left: -1.5625rem;
+  content: counters(ol-counter, ".") ".";
+  counter-increment: ol-counter;
+  text-align: right;
+}
+
+dl,
+.list-definition {
+  margin-bottom: 1.875rem;
+}
+
+dt,
+.list-definition-term {
+  margin-bottom: 0.3125rem;
+}
+
+dt:not(:first-of-type),
+.list-definition-term:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
+
+dd,
+.list-definition-description {
+  margin: 0 0 0.25rem 0;
+}
+
+.list-inline .item {
+  display: inline-block;
+  margin-right: 0.625rem;
+  margin-bottom: 0;
+}
+
+.list-inline .item:last-child {
+  margin-right: 0;
+}
+
+.item.has-block-link a {
+  display: block;
+}
+
+.list-grouped {
+  border: 0.0625rem solid #e5e9eb;
+  border-radius: 3px;
+}
+
+.list-grouped:last-child {
+  border: 0.0625rem solid #e5e9eb;
+}
+
+.list-grouped .item {
+  -webkit-transition: background 0.125s ease-in-out 0s;
+  transition: background 0.125s ease-in-out 0s;
+  margin-bottom: 0;
+  border-bottom: 0.0625rem solid #e5e9eb;
+  padding: 0.625rem 1.25rem;
+  background: inherit;
+}
+
+.list-grouped .item:last-child {
+  padding: 0.625rem 1.25rem;
+}
+
+.list-grouped .item:hover, .list-grouped .item:active, .list-grouped .item:focus {
+  background: rgba(158, 177, 185, 0.05);
+}
+
+.list-grouped .item.has-block-link:hover, .list-grouped .item.has-block-link:active, .list-grouped .item.has-block-link:focus {
+  background: rgba(0, 121, 188, 0.05);
 }
 
 .form-group {
@@ -1676,9 +1874,9 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   color: #a7a4a4;
 }
 
-.input-radio:disabled.replace-radio + .field-input-label:before + .field-input-label:before, .input-radio.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before,
-.input-checkbox:disabled.replace-radio + .field-input-label:before + .field-input-label:before,
-.input-checkbox.is-disabled.replace-radio + .field-input-label:before + .field-input-label:before {
+.input-radio:disabled.replace-radio + .field-input-label:before, .input-radio.is-disabled.replace-radio + .field-input-label:before,
+.input-checkbox:disabled.replace-radio + .field-input-label:before,
+.input-checkbox.is-disabled.replace-radio + .field-input-label:before {
   background: #fcfcfc;
   box-shadow: none;
   cursor: not-allowed;
@@ -1718,7 +1916,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   -webkit-transition: all 0.125s ease-in-out 0s;
   transition: all 0.125s ease-in-out 0s;
   -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
   transform-origin: center center;
   width: 100%;
   height: 0.625rem;
@@ -1743,7 +1940,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   -webkit-transition: all 0.125s ease-in-out 0s;
   transition: all 0.125s ease-in-out 0s;
   -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
   transform-origin: center center;
   width: 100%;
   height: 0.625rem;
@@ -1768,7 +1964,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   -webkit-transition: all 0.125s ease-in-out 0s;
   transition: all 0.125s ease-in-out 0s;
   -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
   transform-origin: center center;
   width: 100%;
   height: 0.625rem;
@@ -1782,7 +1977,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   -webkit-transition: all 0.125s ease-in-out 0s;
   transition: all 0.125s ease-in-out 0s;
   -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
   transform-origin: center center;
   width: 100%;
   height: 0.625rem;
@@ -1870,7 +2064,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   -webkit-transition: all 0.125s ease-in-out 0s;
   transition: all 0.125s ease-in-out 0s;
   -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
   transform-origin: center center;
   width: 100%;
   height: 0.625rem;
@@ -1898,7 +2091,6 @@ h1, h2, h3, h4, h5, h6, .hd-1,
   -webkit-transition: all 0.125s ease-in-out 0s;
   transition: all 0.125s ease-in-out 0s;
   -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
   transform-origin: center center;
   width: 100%;
   height: 0.625rem;
@@ -7794,11 +7986,11 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 }
 
 .well, .depth--1 {
-  background: #e7e6e6;
+  background: #e5e9eb;
 }
 
 body, .zebra-stripe > *:nth-child(odd), .depth-0, .pldoc, .pldoc-wrapper-content-main {
-  background: #efefef;
+  background: #eef1f2;
 }
 
 .slat, .zebra-stripe > *:nth-child(even), .depth-1, .pldoc-view-example .pldoc-wrapper-view-header {
@@ -8788,9 +8980,11 @@ html, body {
 }
 
 .example-set .button-overlay-demo {
+  background-color: #0ea6ec;
+  background-image: -webkit-linear-gradient(-320deg, #0ea6ec 0%, #0079bc 100%);
+  background-image: -webkit-linear-gradient(40deg,#0ea6ec 0%, #0079bc 100%);
+  background-image: linear-gradient(50deg,#0ea6ec 0%, #0079bc 100%);
   padding: 3.75rem 1.875rem;
-  background: #0ea6ec url("../images/bg-overlay-example.png") 0 50% no-repeat;
-  background-size: cover;
 }
 
 .is-copyable {
@@ -8811,7 +9005,7 @@ html, body {
 }
 
 .alert-information {
-  border-color: #0079bc;
+  border-color: #6fa0ba;
 }
 
 .alert-warning {
@@ -8833,7 +9027,7 @@ html, body {
 .badge {
   text-align: center;
   border-radius: 0.9375rem;
-  padding: 0.125rem 0.625rem;
+  padding: 0.25rem 0.625rem;
   font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -8902,32 +9096,23 @@ html, body {
   margin-bottom: 0;
 }
 
-.pldoc-nav .nav-list {
-  margin: 0;
+.pldoc-nav .item {
+  border-bottom-color: #111010;
 }
 
-.pldoc-nav .pldoc-link {
-  -webkit-transition: background 0.25s ease-in-out;
-  transition: background 0.25s ease-in-out;
-  display: block;
-  border-bottom: 1px solid #111010;
-  padding: 0.625rem 1.875rem;
-  color: #e7e6e6;
-  text-decoration: none;
+.pldoc-nav .item a {
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
   font-size: 0.875rem;
   font-weight: 600;
+  color: #e7e6e6;
 }
 
-.pldoc-nav .pldoc-link:hover, .pldoc-nav .pldoc-link:active, .pldoc-nav .pldoc-link:focus {
+.pldoc-nav .item a:hover, .pldoc-nav .item a:active, .pldoc-nav .item a:focus {
   color: #53a4d1;
-  background: #111010;
 }
 
-.pldoc-nav .nav-list-item:last-child .pldoc-link {
-  border-bottom: 0;
-}
-
-.pldoc-nav .nav-list-item.is-current .pldoc-link:before {
+.pldoc-nav .item.is-current .pldoc-link:before {
   display: inline-block;
 }
 
@@ -8950,17 +9135,17 @@ html, body {
   float: right ;
 }
 
-.pldoc-nav-internal .pldoc-link {
+.pldoc-nav-internal .item a {
   position: relative;
 }
 
-.pldoc-nav-internal .pldoc-link:before {
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
+.pldoc-nav-internal .item a:before {
+  -webkit-transition: opacity 0.125s ease-in-out;
+  transition: opacity 0.125s ease-in-out;
   height: 0.3125rem;
   width: 0.3125rem;
   position: absolute;
-  top: 1.125rem;
+  top: 0.5rem;
   left: 0.9375rem;
   content: '';
   border-radius: 100%;
@@ -8968,33 +9153,34 @@ html, body {
   background: #0ea6ec;
 }
 
-.pldoc-nav-internal .pldoc-link.is-current {
+.pldoc-nav-internal .item a.is-current {
   color: #53a4d1;
-  background: #111010;
 }
 
-.pldoc-nav-internal .pldoc-link.is-current:before {
+.pldoc-nav-internal .item a.is-current:before {
   opacity: 1.0;
 }
 
-.pldoc-nav-external .pldoc-link::after {
+.pldoc-nav-external .item a::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.pldoc-nav-external .pldoc-link .icon {
+.pldoc-nav-external .item a .icon {
+  -webkit-transition: opacity 0.125s ease-in-out;
+  transition: opacity 0.125s ease-in-out;
   margin-left: 0.15625rem;
   float: right ;
   opacity: 0.25;
 }
 
-.pldoc-nav-external .pldoc-link:hover .icon, .pldoc-nav-external .pldoc-link:active .icon, .pldoc-nav-external .pldoc-link:focus .icon {
+.pldoc-nav-external .item a:hover .icon, .pldoc-nav-external .item a:active .icon, .pldoc-nav-external .item a:focus .icon {
   opacity: 1.0;
 }
 
 .pldoc-nav-title {
-  margin: 0 1.875rem 0.625rem 1.875rem;
+  margin: 0 1.875rem 0.625rem;
   color: #a7a4a4;
   font-size: 0.875rem;
   font-weight: 600;
@@ -9069,9 +9255,10 @@ html, body {
 }
 
 .pldoc-tab-label {
-  float: left;
+  float: left ;
   position: relative;
   bottom: -0.3125rem;
+  margin-bottom: 0;
 }
 
 .pldoc-tab-label .pldoc-link {
@@ -9126,6 +9313,18 @@ html, body {
 
 .pldoc-pattern-colors .brand-primary.x-accent {
   background: #00abfa;
+}
+
+.pldoc-pattern-colors .brand-primary.trans {
+  background: rgba(0, 121, 188, 0.5);
+}
+
+.pldoc-pattern-colors .brand-primary.x-trans {
+  background: rgba(0, 121, 188, 0.25);
+}
+
+.pldoc-pattern-colors .brand-primary.xx-trans {
+  background: rgba(0, 121, 188, 0.05);
 }
 
 .pldoc-pattern-colors .brand-secondary {
@@ -9268,6 +9467,18 @@ html, body {
   background: #1e8142;
 }
 
+.pldoc-pattern-colors .success.trans {
+  background: rgba(37, 184, 90, 0.5);
+}
+
+.pldoc-pattern-colors .success.x-trans {
+  background: rgba(37, 184, 90, 0.25);
+}
+
+.pldoc-pattern-colors .success.xx-trans {
+  background: rgba(37, 184, 90, 0.05);
+}
+
 .pldoc-pattern-colors .warning {
   background: #fdbc56;
 }
@@ -9284,6 +9495,18 @@ html, body {
   background: #af833f;
 }
 
+.pldoc-pattern-colors .warning.trans {
+  background: rgba(253, 188, 86, 0.5);
+}
+
+.pldoc-pattern-colors .warning.x-trans {
+  background: rgba(253, 188, 86, 0.25);
+}
+
+.pldoc-pattern-colors .warning.xx-trans {
+  background: rgba(253, 188, 86, 0.05);
+}
+
 .pldoc-pattern-colors .error {
   background: #b20610;
 }
@@ -9298,6 +9521,46 @@ html, body {
 
 .pldoc-pattern-colors .error.dark {
   background: #7d0910;
+}
+
+.pldoc-pattern-colors .error.trans {
+  background: rgba(178, 6, 16, 0.5);
+}
+
+.pldoc-pattern-colors .error.x-trans {
+  background: rgba(178, 6, 16, 0.25);
+}
+
+.pldoc-pattern-colors .error.xx-trans {
+  background: rgba(178, 6, 16, 0.05);
+}
+
+.pldoc-pattern-colors .information {
+  background: #6fa0ba;
+}
+
+.pldoc-pattern-colors .information.base {
+  background: #6fa0ba;
+}
+
+.pldoc-pattern-colors .information.light {
+  background: #9ebed0;
+}
+
+.pldoc-pattern-colors .information.dark {
+  background: #507082;
+}
+
+.pldoc-pattern-colors .information.trans {
+  background: rgba(111, 160, 186, 0.5);
+}
+
+.pldoc-pattern-colors .information.x-trans {
+  background: rgba(111, 160, 186, 0.25);
+}
+
+.pldoc-pattern-colors .information.xx-trans {
+  background: rgba(111, 160, 186, 0.05);
 }
 
 .pldoc-pattern-colors .example-color {
@@ -9321,7 +9584,6 @@ html, body {
 
 .pldoc-pattern-colors .example-color:hover, .pldoc-pattern-colors .example-color:focus, .pldoc-pattern-colors .example-color:active {
   -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
   transform: scale(1.02);
   z-index: 10;
 }
@@ -9426,6 +9688,14 @@ html, body {
 
 .pldoc-pattern-buttons .btn:last-child {
   margin-right: 0;
+}
+
+.pldoc-pattern-buttons .btn-group {
+  margin-bottom: 1.875rem;
+}
+
+.pldoc-pattern-buttons .btn-group .btn {
+  margin: 0;
 }
 
 .pldoc-pattern-icons .example-icon {
@@ -10016,18 +10286,6 @@ html, body {
     float: right;
     margin-right: 0;
     text-align: right;
-  }
-}
-
-.pldoc-pattern-meta .meta {
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .pldoc-pattern-meta .meta {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 0.625rem;
   }
 }
 

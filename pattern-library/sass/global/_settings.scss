@@ -76,7 +76,7 @@ $brand-secondary-accent:        rgb(242, 108, 170) !default;
 $success: $green !default;
 $warning: $yellow !default;
 $error: $red !default;
-$information: $brand-primary !default;
+$information: mix($gray-cool, $brand-primary, 70%) !default;
 
 // colors: palettes
 $palettes: (
@@ -87,7 +87,10 @@ $palettes: (
         dark:       mix($black, $brand-primary, 33%),
         x-dark:     mix($black, $brand-primary, 66%),
         accent:     $brand-primary-accent,
-        x-accent:   saturate($brand-primary-accent, 25%)
+        x-accent:   saturate($brand-primary-accent, 25%),
+        trans:      transparentize($brand-primary, 0.50),
+        x-trans:    transparentize($brand-primary, 0.75),
+        xx-trans:   transparentize($brand-primary, 0.95)
     ),
     secondary: (
         base:       $brand-secondary,
@@ -298,40 +301,40 @@ $z-depths: (
     very-front:     1000
 );
 
+
 // ----------------------------
-// #DEPTH
+// #SPACING
 // ----------------------------
 // spacing - baseline
 $baseline:                  20 !default;
-
 
 // vertical spacing
 $baseline-vertical:         ($baseline*2) !default;
 
 $spacing-vertical:          (
-    base:                   ($baseline*2),
-    mid-small:              ($baseline*1.5),
-    small:                  ($baseline),
-    x-small:                ($baseline/2),
-    xx-small:               ($baseline/4),
-    xxx-small:              ($baseline/10),
-    mid-large:              ($baseline*3),
-    large:                  ($baseline*4),
-    x-large:                ($baseline*8)
+    base:                   $baseline-vertical,
+    mid-small:              ($baseline-vertical*0.75),
+    small:                  ($baseline-vertical/2),
+    x-small:                ($baseline-vertical/4),
+    xx-small:               ($baseline-vertical/8),
+    xxx-small:              ($baseline-vertical/10),
+    mid-large:              ($baseline-vertical*1.5),
+    large:                  ($baseline-vertical*2),
+    x-large:                ($baseline-vertical*4)
 );
 
 // horizontal spacing
 $baseline-horizontal:       $baseline !default;
 
 $spacing-horizontal:        (
-    base:                   $baseline,
-    mid-small:              ($baseline*0.75),
-    small:                  ($baseline/2),
-    x-small:                ($baseline/4),
-    xx-small:               ($baseline/8),
-    mid-large:              ($baseline*1.5),
-    large:                  ($baseline*2),
-    x-large:                ($baseline*4)
+    base:                   $baseline-horizontal,
+    mid-small:              ($baseline-horizontal*0.75),
+    small:                  ($baseline-horizontal/2),
+    x-small:                ($baseline-horizontal/4),
+    xx-small:               ($baseline-horizontal/8),
+    mid-large:              ($baseline-horizontal*1.5),
+    large:                  ($baseline-horizontal*2),
+    x-large:                ($baseline-horizontal*4)
 );
 
 
@@ -353,7 +356,7 @@ $timing: (
 // ----------------------------
 // base component settings
 $component-focus-color:                     inherit !default;
-$component-focus-bg:                        palette(primary, x-light) !default;
+$component-focus-bg:                        palette(primary, xx-trans) !default;
 $component-active-color:                    palette(grayscale, white) !default;
 $component-active-bg:                       palette(primary, base) !default;
 $component-border-radius:                   3px !default;
