@@ -1,10 +1,10 @@
 <nav class="pldoc-nav pldoc-nav-patterns pldoc-nav-internal" id="pldoc-nav-patterns" role="navigation" aria-label="Patterns">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="pldoc-heading-patterns">patterns</h2>
+    <h2 class="pldoc-nav-title hd-6" id="pldoc-heading-patterns">patterns</h2>
 
-    <ul class="nav-list list-patterns" aria-labelledby="pldoc-heading-patterns">
+    <ul class="nav-list list-patterns list-divided" aria-labelledby="pldoc-heading-patterns">
         {% assign sorted_patterns_posts = site.categories.patterns | sort: 'title' %}
         {% for post in sorted_patterns_posts %}
-        <li class="nav-list-item">
+        <li class="nav-list-item item has-block-link">
             {% if page.title == "Home" %}
             <a class="pattern pldoc-link" href="#{{post.slug}}">
             {% else %}
@@ -24,30 +24,30 @@
 </nav>
 
 <nav class="pldoc-nav pldoc-nav-documentation pldoc-nav-external" id="pldoc-nav-documentation" role="navigation" aria-label="Documentation">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="heading-documentation">Documentation</h2>
-    <ul class="pldoc-list nav-list list-styleguides" aria-labelledby="heading-documentation">
-        <li class="nav-list-item">
+    <h2 class="pldoc-nav-title hd-6" id="heading-documentation">Documentation</h2>
+    <ul class="pldoc-list nav-list list-styleguides list-divided" aria-labelledby="heading-documentation">
+        <li class="nav-list-item item has-block-link">
             <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}/Styleguide:-General">
                 General Styleguide
                 <span class="icon icon-external-link" aria-hidden="true"></span>
                 <span class="sr-only">(Opens in a new window)</span>
             </a>
         </li>
-        <li class="nav-list-item">
+        <li class="nav-list-item item has-block-link">
             <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}Styleguide:-HTML">
                 HTMLS Styleguide
                 <span class="icon icon-external-link" aria-hidden="true"></span>
                 <span class="sr-only">(Opens in a new window)</span>
             </a>
         </li>
-        <li class="nav-list-item">
+        <li class="nav-list-item item has-block-link">
             <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}Styleguide:-Sass-&-CSS">
                 Sass &amp; CSS Styleguide
                 <span class="icon icon-external-link" aria-hidden="true"></span>
                 <span class="sr-only">(Opens in a new window)</span>
             </a>
         </li>
-        <li class="nav-list-item">
+        <li class="nav-list-item item has-block-link">
             <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}Styleguide:-Accessibility">
                 Accessibility Styleguide
                 <span class="icon icon-external-link" aria-hidden="true"></span>
@@ -58,17 +58,17 @@
 </nav>
 
 <nav class="pldoc-nav pldoc-nav-project pldoc-nav-external" id="pldoc-nav-project" role="navigation" aria-label="About">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6" id="pldoc-heading-about">About This Project</h2>
+    <h2 class="pldoc-nav-title hd-6" id="pldoc-heading-about">About This Project</h2>
 
-    <ul class="nav-list list-project" aria-labelledby="pldoc-heading-about">
-        <li class="nav-list-item">
+    <ul class="nav-list list-project list-divided" aria-labelledby="pldoc-heading-about">
+        <li class="nav-list-item item has-block-link">
             <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_github }}">
                 View on Github
                 <span class="icon icon-external-link" aria-hidden="true"></span>
                 <span class="sr-only">(Opens in a new window)</span>
             </a>
         </li>
-        <li class="nav-list-item">
+        <li class="nav-list-item item has-block-link">
             <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_project }}">
                 Project Planning
                 <span class="icon icon-external-link" aria-hidden="true"></span>

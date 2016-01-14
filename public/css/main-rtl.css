@@ -388,7 +388,7 @@
   display: table;
 }
 
-.example-set:last-child, .example-set .btn-group:last-child, .alert-copy > :last-child {
+.list-divided .item:last-child, ul .item:last-child, .list-bulleted .item:last-child, ol .item:last-child, .list-ordered .item:last-child, .list-inline .item:last-child, .list-grouped .item:last-child, .list .item:last-child, .list li:last-child, ol li:last-child, ul li:last-child, .list-divided:last-child, ul:last-child, .list-bulleted:last-child, ol:last-child, .list-ordered:last-child, .list-inline:last-child, .list-grouped:last-child, .list:last-child, .list-divided .item-complex:last-child, ul .item-complex:last-child, .list-bulleted .item-complex:last-child, ol .item-complex:last-child, .list-ordered .item-complex:last-child, .list-inline .item-complex:last-child, .list-grouped .item-complex:last-child, .list .item-complex:last-child, .example-set:last-child, .alert-copy > :last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
@@ -418,11 +418,20 @@
   color: white !important;
 }
 
-.grid-manual .gallery, .pldoc-nav .nav-list, .pldoc-pattern-header .pldoc-pattern-meta, .pldoc-tab-labels, .pldoc-pattern-depth .zebra-stripe, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
+.list-inline, .list-divided, ul, .list-bulleted, ol, .list-ordered, .list-grouped, .list, .list-unstyled, .grid-manual .gallery, .pldoc-tab-labels, .pldoc-pattern-depth .zebra-stripe, .pldoc-pattern-grid .example-grid-semantic .list-related, .pldoc-view-example-depth .zebra-stripe, .pldoc-view-example-grid #example-grid-1 .list-related {
   margin: 0;
   padding: 0;
   list-style: none;
   text-indent: 0;
+}
+
+.list-inline li, .list-divided li, ul li, .list-bulleted li, ol li, .list-ordered li, .list-grouped li, .list li, .list-unstyled li, .list-inline dt, .list-divided dt, ul dt, .list-bulleted dt, ol dt, .list-ordered dt, .list-grouped dt, .list dt, .list-unstyled dt, .list-inline dd, .list-divided dd, ul dd, .list-bulleted dd, ol dd, .list-ordered dd, .list-grouped dd, .list dd, .list-unstyled dd {
+  margin: 0;
+  padding: 0;
+}
+
+.list-inline li, .list-inline dt, .list-inline dd {
+  display: inline-block;
 }
 
 .copy-lead a, .copy-large a, .copy-base a, .copy-meta a, .alert-copy a, .copy-micro a, .pldoc-pattern-grid .col .example-label a,
@@ -475,6 +484,18 @@
 .pldoc-pattern-grid .gallery-item .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:active, .pldoc-view-example-grid .example-grid .col .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story .example-label a:active, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:active, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:active, .pldoc-pattern-grid .example-grid .example-label a:active, .example-layout .example-label a:active, .copy-lead a:focus, .copy-large a:focus, .copy-base a:focus, .copy-meta a:focus, .alert-copy a:focus, .copy-micro a:focus, .pldoc-pattern-grid .col .example-label a:focus,
 .pldoc-pattern-grid .gallery-item .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .story .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label a:focus, .pldoc-view-example-grid .example-grid .col .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .content-main .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .story .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label a:focus, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label a:focus, .pldoc-pattern-grid .example-grid .example-label a:focus, .example-layout .example-label a:focus {
   box-shadow: 0 1px 0 0 #0ea6ec;
+}
+
+.align-left.list-divided, ul.align-left, .align-left.list-bulleted, ol.align-left, .align-left.list-ordered, .align-left.list-inline, .align-left.list-grouped, .align-left.list {
+  text-align: right;
+}
+
+.align-center.list-divided, ul.align-center, .align-center.list-bulleted, ol.align-center, .align-center.list-ordered, .align-center.list-inline, .align-center.list-grouped, .align-center.list {
+  text-align: center;
+}
+
+.align-right.list-divided, ul.align-right, .align-right.list-bulleted, ol.align-right, .align-right.list-ordered, .align-right.list-inline, .align-right.list-grouped, .align-right.list {
+  text-align: left;
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -1336,6 +1357,154 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 .pldoc-pattern-grid .gallery-item .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story .example-label ul, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label ul, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label ul, .pldoc-view-example-grid .example-grid .col .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-main .example-label ul, .pldoc-view-example-grid #example-grid-1 .story .example-label ul, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label ul, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label ul, .pldoc-pattern-grid .example-grid .example-label ul, .example-layout .example-label ul, .copy-micro dl, .pldoc-pattern-grid .col .example-label dl,
 .pldoc-pattern-grid .gallery-item .example-label dl, .pldoc-pattern-grid .example-grid-semantic .content-main .example-label dl, .pldoc-pattern-grid .example-grid-semantic .story .example-label dl, .pldoc-pattern-grid .example-grid-semantic .story-secondary .example-label dl, .pldoc-pattern-grid .example-grid-semantic .content-secondary .example-label dl, .pldoc-pattern-grid .example-grid-gallery-semantic .photo-gallery .photo .example-label dl, .pldoc-view-example-grid .example-grid .col .example-label dl, .pldoc-view-example-grid #example-grid-1 .content-main .example-label dl, .pldoc-view-example-grid #example-grid-1 .story .example-label dl, .pldoc-view-example-grid #example-grid-1 .story-secondary .example-label dl, .pldoc-view-example-grid #example-grid-1 .content-secondary .example-label dl, .pldoc-pattern-grid .example-grid .example-label dl, .example-layout .example-label dl {
   margin-bottom: 1.25rem;
+}
+
+.list-divided .item, ul .item, .list-bulleted .item, ol .item, .list-ordered .item, .list-inline .item, .list-grouped .item, .list .item, .list li, ol li, ul li {
+  display: list-item;
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided .item > .list, ul .item > .list, .list-bulleted .item > .list, ol .item > .list, .list-ordered .item > .list, .list-inline .item > .list, .list-grouped .item > .list, .list .item > .list, .list li > .list, ol li > .list, ul li > .list, .list-divided .item > ol, ul .item > ol, .list-bulleted .item > ol, ol .item > ol, .list-ordered .item > ol, .list-inline .item > ol, .list-grouped .item > ol, .list .item > ol, .list li > ol, ol li > ol, ul li > ol, .list-divided .item > ul, ul .item > ul, .list-bulleted .item > ul, ol .item > ul, .list-ordered .item > ul, .list-inline .item > ul, .list-grouped .item > ul, .list .item > ul, .list li > ul, ol li > ul, ul li > ul {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided, ul, .list-bulleted, ol, .list-ordered, .list-inline, .list-grouped, .list {
+  margin-bottom: 1.875rem;
+}
+
+.list-divided .item-complex, ul .item-complex, .list-bulleted .item-complex, ol .item-complex, .list-ordered .item-complex, .list-inline .item-complex, .list-grouped .item-complex, .list .item-complex {
+  margin-bottom: 1.25rem;
+}
+
+.list-divided .item-hd, ul .item-hd, .list-bulleted .item-hd, ol .item-hd, .list-ordered .item-hd, .list-inline .item-hd, .list-grouped .item-hd, .list .item-hd, .list-divided .item-copy, ul .item-copy, .list-bulleted .item-copy, ol .item-copy, .list-ordered .item-copy, .list-inline .item-copy, .list-grouped .item-copy, .list .item-copy {
+  display: block;
+}
+
+.list-divided .item-hd, ul .item-hd, .list-bulleted .item-hd, ol .item-hd, .list-ordered .item-hd, .list-inline .item-hd, .list-grouped .item-hd, .list .item-hd {
+  margin-bottom: 0.3125rem;
+}
+
+.list-divided .item-copy, ul .item-copy, .list-bulleted .item-copy, ol .item-copy, .list-ordered .item-copy, .list-inline .item-copy, .list-grouped .item-copy, .list .item-copy {
+  margin: 0;
+}
+
+.list-divided .item {
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid #e5e9eb;
+  margin-bottom: 0.625rem;
+}
+
+ul, .list-bulleted {
+  margin-right: 2.5rem;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+ul.list-disc, .list-disc.list-bulleted {
+  list-style-type: disc;
+}
+
+ul.list-circle, .list-circle.list-bulleted {
+  list-style-type: circle;
+}
+
+ul.no-indent, .no-indent.list-bulleted {
+  margin-right: 1.25rem;
+}
+
+ol, .list-ordered {
+  margin-right: 2.5rem;
+  list-style-position: outside;
+  list-style: decimal;
+  counter-reset: ol-counter;
+}
+
+ol.no-indent, .no-indent.list-ordered {
+  margin-right: 1.25rem;
+}
+
+ol:not(ol), .list-ordered:not(ol) {
+  list-style-type: none;
+  list-style-position: outside;
+  counter-reset: ol-counter;
+}
+
+ol:not(ol) .item, .list-ordered:not(ol) .item {
+  position: relative;
+}
+
+ol:not(ol) .item:before, .list-ordered:not(ol) .item:before {
+  position: absolute;
+  top: 0;
+  right: -1.5625rem;
+  content: counters(ol-counter, ".") ".";
+  counter-increment: ol-counter;
+  text-align: left;
+}
+
+dl,
+.list-definition {
+  margin-bottom: 1.875rem;
+}
+
+dt,
+.list-definition-term {
+  margin-bottom: 0.3125rem;
+}
+
+dt:not(:first-of-type),
+.list-definition-term:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
+
+dd,
+.list-definition-description {
+  margin: 0 0 0.25rem 0;
+}
+
+.list-inline .item {
+  display: inline-block;
+  margin-left: 0.625rem;
+  margin-bottom: 0;
+}
+
+.list-inline .item:last-child {
+  margin-left: 0;
+}
+
+.item.has-block-link a {
+  display: block;
+}
+
+.list-grouped {
+  border: 0.0625rem solid #e5e9eb;
+  border-radius: 3px;
+}
+
+.list-grouped:last-child {
+  border: 0.0625rem solid #e5e9eb;
+}
+
+.list-grouped .item {
+  -webkit-transition: background 0.125s ease-in-out 0s;
+  transition: background 0.125s ease-in-out 0s;
+  margin-bottom: 0;
+  border-bottom: 0.0625rem solid #e5e9eb;
+  padding: 0.625rem 1.25rem;
+  background: inherit;
+}
+
+.list-grouped .item:last-child {
+  padding: 0.625rem 1.25rem;
+}
+
+.list-grouped .item:hover, .list-grouped .item:active, .list-grouped .item:focus {
+  background: rgba(158, 177, 185, 0.05);
+}
+
+.list-grouped .item.has-block-link:hover, .list-grouped .item.has-block-link:active, .list-grouped .item.has-block-link:focus {
+  background: rgba(0, 121, 188, 0.05);
 }
 
 .form-group {
@@ -7817,11 +7986,11 @@ h1, h2, h3, h4, h5, h6, .hd-1,
 }
 
 .well, .depth--1 {
-  background: #e7e6e6;
+  background: #e5e9eb;
 }
 
 body, .zebra-stripe > *:nth-child(odd), .depth-0, .pldoc, .pldoc-wrapper-content-main {
-  background: #efefef;
+  background: #eef1f2;
 }
 
 .slat, .zebra-stripe > *:nth-child(even), .depth-1, .pldoc-view-example .pldoc-wrapper-view-header {
@@ -8818,15 +8987,6 @@ html, body {
   padding: 3.75rem 1.875rem;
 }
 
-.example-set .btn-group {
-  margin-bottom: 2.5rem;
-}
-
-.example-set .btn-group .btn {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
 .is-copyable {
   display: inline-block;
   white-space: nowrap;
@@ -8936,32 +9096,23 @@ html, body {
   margin-bottom: 0;
 }
 
-.pldoc-nav .nav-list {
-  margin: 0;
+.pldoc-nav .item {
+  border-bottom-color: #111010;
 }
 
-.pldoc-nav .pldoc-link {
-  -webkit-transition: background 0.25s ease-in-out;
-  transition: background 0.25s ease-in-out;
-  display: block;
-  border-bottom: 1px solid #111010;
-  padding: 0.625rem 1.875rem;
-  color: #e7e6e6;
-  text-decoration: none;
+.pldoc-nav .item a {
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
   font-size: 0.875rem;
   font-weight: 600;
+  color: #e7e6e6;
 }
 
-.pldoc-nav .pldoc-link:hover, .pldoc-nav .pldoc-link:active, .pldoc-nav .pldoc-link:focus {
+.pldoc-nav .item a:hover, .pldoc-nav .item a:active, .pldoc-nav .item a:focus {
   color: #53a4d1;
-  background: #111010;
 }
 
-.pldoc-nav .nav-list-item:last-child .pldoc-link {
-  border-bottom: 0;
-}
-
-.pldoc-nav .nav-list-item.is-current .pldoc-link:before {
+.pldoc-nav .item.is-current .pldoc-link:before {
   display: inline-block;
 }
 
@@ -8984,17 +9135,17 @@ html, body {
   float: left ;
 }
 
-.pldoc-nav-internal .pldoc-link {
+.pldoc-nav-internal .item a {
   position: relative;
 }
 
-.pldoc-nav-internal .pldoc-link:before {
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
+.pldoc-nav-internal .item a:before {
+  -webkit-transition: opacity 0.125s ease-in-out;
+  transition: opacity 0.125s ease-in-out;
   height: 0.3125rem;
   width: 0.3125rem;
   position: absolute;
-  top: 1.125rem;
+  top: 0.5rem;
   right: 0.9375rem;
   content: '';
   border-radius: 100%;
@@ -9002,33 +9153,34 @@ html, body {
   background: #0ea6ec;
 }
 
-.pldoc-nav-internal .pldoc-link.is-current {
+.pldoc-nav-internal .item a.is-current {
   color: #53a4d1;
-  background: #111010;
 }
 
-.pldoc-nav-internal .pldoc-link.is-current:before {
+.pldoc-nav-internal .item a.is-current:before {
   opacity: 1.0;
 }
 
-.pldoc-nav-external .pldoc-link::after {
+.pldoc-nav-external .item a::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.pldoc-nav-external .pldoc-link .icon {
+.pldoc-nav-external .item a .icon {
+  -webkit-transition: opacity 0.125s ease-in-out;
+  transition: opacity 0.125s ease-in-out;
   margin-right: 0.15625rem;
   float: left ;
   opacity: 0.25;
 }
 
-.pldoc-nav-external .pldoc-link:hover .icon, .pldoc-nav-external .pldoc-link:active .icon, .pldoc-nav-external .pldoc-link:focus .icon {
+.pldoc-nav-external .item a:hover .icon, .pldoc-nav-external .item a:active .icon, .pldoc-nav-external .item a:focus .icon {
   opacity: 1.0;
 }
 
 .pldoc-nav-title {
-  margin: 0 1.875rem 0.625rem 1.875rem;
+  margin: 0 1.875rem 0.625rem;
   color: #a7a4a4;
   font-size: 0.875rem;
   font-weight: 600;
@@ -9103,9 +9255,10 @@ html, body {
 }
 
 .pldoc-tab-label {
-  float: left;
+  float: right ;
   position: relative;
   bottom: -0.3125rem;
+  margin-bottom: 0;
 }
 
 .pldoc-tab-label .pldoc-link {
@@ -9535,6 +9688,14 @@ html, body {
 
 .pldoc-pattern-buttons .btn:last-child {
   margin-right: 0;
+}
+
+.pldoc-pattern-buttons .btn-group {
+  margin-bottom: 1.875rem;
+}
+
+.pldoc-pattern-buttons .btn-group .btn {
+  margin: 0;
 }
 
 .pldoc-pattern-icons .example-icon {
@@ -10125,18 +10286,6 @@ html, body {
     float: left;
     margin-left: 0;
     text-align: left;
-  }
-}
-
-.pldoc-pattern-meta .meta {
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .pldoc-pattern-meta .meta {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 0.625rem;
   }
 }
 
