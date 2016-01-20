@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!--
+edX Pattern Library: Boilerplate HTML Template: Header + Footer
+
+NOTES:
+
+* base template with the addition of how to handle an app-centric header/footer semantically.
+* base template with the addition of how to handle different types of navigation (user vs. app-centric).
+* base template with addition of how to start organizing main vs. supplementary/aside content
+* this assumes that the main and aside content are next to each other in the document's flow.
+  This does not necessarily have to be the case, but the same markup could be used in more complex cases.
+-->
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <base href="{base path}">
+
+        <!-- place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="{favicon path}">
+        <!-- place touch icon in the root directory -->
+        <link rel="apple-touch-icon" href="{icon path}">
+
+        <!-- view/page metadata -->
+        <title>{page/view's title}</title>
+        <meta name="description" content="">
+
+        <!-- place primary assets (needed for or to support base view/page rendering) here -->
+        <link rel="stylesheet" href="{main css path}">
+        <script src="{main js path}"></script>
+    </head>
+
+    <body class="{app/site-section-name} {view-name} {stateful-class}">
+        <!-- CASE: if needed, provide a message for older versions of IE -->
+        <!--[if lt IE 9]>
+            <p class="alert alert-browserupgrade">You are using an <strong>outdated</strong> browser.
+            Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- wrapper for all UI rendered within the page/view -->
+        <div class="wrapper-view">
+
+            <!--
+              NOTE: wrapper elements are only needed when they need to manage the grid or
+              larger view/page layout aspects (e.g. spanning the whole viewport)
+            -->
+            <div class="wrapper-header-app">
+                <header class="header-app" aria-label="Page">
+                    <!-- example: app logo/title -->
+                    <h1 class="header-app-title">
+                        <a class="logo" href="{app or company home url}">
+                            <img class="logo-img" src="{path/to/logo-img.svg}" alt="{app/site name} Home Page" />
+                            <!-- example: alternate app/site name (if not a graphical logo) -->
+                            <!-- {app/site name} -->
+                        </a>
+                    </h1>
+                    <!-- insert header content here -->
+
+                    <!--
+                      NOTE: simplified user account navigation example. This would be more complex
+                      in reality (with dropdowns, etc.)
+                    -->
+                    <div class="wrapper-navigation">
+                        <nav class="nav-account" id="nav-account" aria-label="User">
+                            <a href="{url}">
+                                {username}
+                                <span class="sr-only">'s settings/profile</span>
+                            </a>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+
+            <!--
+              NOTE: simplified course navigation example.
+            -->
+            <div class="wrapper-navigation">
+                <nav class="nav-app" id="nav-app" aria-label="Course">
+                    <a href="{url}">Course Home</a>
+                    <a href="{url}">Course Content</a>
+                    <a href="{url}">Discussions</a>
+                    <a href="{url}">Assignments</a>
+                    <a href="{url}">Assets &amp; Utilities</a>
+                    <a href="{url}">My Progress</a>
+                </nav>
+            </div>
+
+            <!--
+              NOTE: wrapper elements are only needed when they need to manage the grid or
+              larger view/page layout aspects (e.g. spanning the whole viewport)
+            -->
+            <div class="wrapper-content">
+                <main class="content-main" id="content-main" aria-label="Content">
+                    <!-- insert main content here -->
+                </main>
+
+                <aside class="content-aside" id="content-aside" aria-label="{aside content/purpose}">
+                    <!-- insert aside/supplemental content here -->
+                </aside>
+            </div>
+
+            <!--
+              NOTE: wrapper elements are only needed when they need to manage the grid or
+              larger view/page layout aspects (e.g. spanning the whole viewport)
+            -->
+            <div class="wrapper-footer-app">
+                <footer class="footer-app" aria-label="Page">
+                    <!-- insert footer content here -->
+                </footer>
+            </div>
+        </div>
+
+        <!-- if needed, wrapper for all off-canvas DOM elements -->
+        <div class="wrapper-off-view" id="wrapper-off-view">
+            <!-- off-canvas navigation and elements -->
+            <!-- injected view-centric alerts are placed here -->
+            <!-- injected modals/dialogues are placed here -->
+        </div>
+    </body>
+</html>
