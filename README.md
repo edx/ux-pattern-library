@@ -24,22 +24,21 @@ The (working) UI library and Front End Styleguide for edX/Open edX applications 
 This library contains the following:
 
 * [A working preview and documentation system for edX application UI](http://ux.edx.org) - known as "PLDOC".
-* Styleguides and standards for [general Front End](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General), [HTML](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML), [Sass/CSS](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS), and [Accessibility-minded](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility) development
-* Portable Sass/CSS utilities and modules for use within edX applications
+* Styleguides and standards for [general Front End](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-General), [HTML](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML), [Sass/CSS](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS), and [Accessibility-minded](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Accessibility) development.
+* Portable Sass/CSS utilities and modules for use within edX applications.
 
 ## License
 
 The code in this repository is licensed the Apache 2.0 license unless otherwise
-noted. Please see the [LICENSE file](https://github.com/edx/ux-pattern-
-library/blob/master/LICENSE.txt) for details.
+noted. Please see the [LICENSE file](https://github.com/edx/ux-pattern-library/blob/master/LICENSE) for details.
 
 ## Dependencies
 
 Using the edX Pattern Library source code in a project current requires:
 
-* locally installing a package manager [a package manager (either [Node/npm](https://nodejs.org) or [Bower)](http://bower.io/).
+* Locally installing a package manager (either [Node/npm](https://nodejs.org) or [Bower)](http://bower.io/).
 * Use of modern web browsers - see [Open edX/edX browser support](http://docstrings.readthedocs.org/en/latest/front_matter/browsers.html)
-* the use and compilation of Sass into CSS using perferrably [LibSass](http://sass-lang.com/libsass) (if using the Sass method for including the pattern library).
+* The use and compilation of Sass into CSS using perferrably [LibSass](http://sass-lang.com/libsass) (if using the Sass method for including the pattern library).
 
 
 ### Third Party Dependencies
@@ -150,6 +149,7 @@ be viewable at http://localhost:3000. There are additional views:
 
 * ``http://localhost:3000/examples/**/*`` - where full page examples and demos are kept
 * ``http://localhost:3000/patterns/**/*`` - permalinks for individually documented pattern library patterns
+
 - - -
 
 ### Committing Code to PLDOC
@@ -230,17 +230,17 @@ You can use the edX UX Pattern Library as a static CSS base alongside other CSS 
 
 **NOTE**: The node package manager (npm) package comes with several variations of compiled CSS, including:
 
-* RTL and LTR support - noted by either a ``*-ltr`` or ``*-rtl`` suffix)
+* RTL and LTR support - noted by either a ``*-ltr`` or ``*-rtl`` suffix.
 * Minified and expanded CSS output formats - for production and development/debugging purposes respectively.
 
 **NOTE:** This way of using the edX UX Pattern Library is currently in beta is not as widely tested as the Sass method (described below). If you find bugs/issues, please [log them](#bugs-and-issues).
-.
+
 #### Reference UX Pattern Library Partials in your Sass Compile
 You can also use the edX UX Pattern Library as part of your CSS's Sass compilation (**our preferred method**). To do so,
 just import all utilities (see the ``utilities`` directory) and what components  (see the ``components`` directory)  you want. 
 
 ##### Default Reference/Import
-All components and utilities can be imported by default by importing the ``_edx-pattern-library.scss`` partial. See the example below taken from [``main-ltr.scss``]() +  the [``_build.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_build.scss) compilation of the edX Pattern Library's Documentation Site:
+All components and utilities can be imported by default by importing the ``_edx-pattern-library.scss`` partial. See the example below taken from [``main-ltr.scss``]() and the [``_build.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_build.scss) compilation of the edX Pattern Library's Documentation Site:
 
 ```scss
 // ------------------------------
