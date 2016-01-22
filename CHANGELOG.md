@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.10.0 (2016-02-02)
+* Added alerts pattern
+
+- - -
+
 ## 0.9.2 (2016-02-01)
 * modernizing '%a11y-hide' and 'sr-only' utilities
 
