@@ -7,8 +7,7 @@
 // ------------------------------
 // #CONFIG - layout direction
 // ------------------------------
-$layout-direction: ltr;
-
+@import 'ltr';                        // LTR-specifc settings and utilities
 
 // ------------------------------
 // #BUILD

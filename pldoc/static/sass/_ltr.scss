@@ -1,0 +1,19 @@
+// ------------------------------
+// edX Pattern Library Site: LTR directional settings & support
+
+// About: Sass partial for defining settings and utilities for LTR-centric layouts.
+
+// #SETTINGS
+// #LIB
+
+
+// ----------------------------
+// #SETTINGS
+// ----------------------------
+$layout-direction: ltr;
+
+
+// ----------------------------
+// #LIB
+// ----------------------------
+@import '../../../node_modules/bi-app-sass/bi-app/bi-app-ltr';
