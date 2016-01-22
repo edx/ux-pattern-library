@@ -24,7 +24,7 @@
 // these should really be extends, but for some reason they weren't working.
 // there's some sort of limition on sass compilation when re-using extends with nested psueos
 // https://github.com/sass/libsass/issues/146 has more information
-@mixin input-track {
+@mixin input-track($is-interactive: true) {
     @include transition(all timing(xx-fast) ease-in-out 0s);
     @include transform-origin(center center);
     width: 100%;
@@ -32,7 +32,9 @@
     border: 0;
     border-radius: $input-slider-border-radius;
     background: $input-slider-track;
-    cursor: pointer;
+    @if $is-interactive == true {
+        cursor: pointer;
+    }
 }
 
 @mixin input-track-hover {
