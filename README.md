@@ -240,27 +240,32 @@ You can also use the edX UX Pattern Library as part of your CSS's Sass compilati
 just import all utilities (see the ``utilities`` directory) and what components  (see the ``components`` directory)  you want. 
 
 ##### Default Reference/Import
-All components and utilities can be imported by default by importing the ``_edx-pattern-library.scss`` partial. See the example below taken from [``main-ltr.scss``]() and the [``_build.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_build.scss) compilation of the edX Pattern Library's Documentation Site:
+All components and utilities can be imported by default by importing the ``_edx-pattern-library.scss`` partial. See the expanded/simplified example below taken from [``main-ltr.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_main-ltr.scss) and the [``_build.scss``](https://github.com/edx/ux-pattern-library/blob/master/_src/pldoc/static/sass/_build.scss) compilation of the edX Pattern Library's Documentation Site:
 
 ```scss
 // ------------------------------
 // edX Pattern Library Site: Main Style Compile - LTR
 
-// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
+// About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding).
+
+
+// ------------------------------
+// #CONFIG - layout direction
+// ------------------------------
+@import 'ltr';                                                       // LTR-specifc settings and utilities
 
 
 // ------------------------------
 // #CONFIG
 // ------------------------------
-$layout-direction: ltr;
 @import 'config';
 
 
 // ------------------------------
 // #LIB
 // ------------------------------
-@import 'lib';
-@import '{path to edx-pattern-library package}/pattern-library/sass/edx-pattern-library';
+@import 'lib';                                                      // third party libraries
+@import '../../../pattern-library/sass/edx-pattern-library';        // UXPL
 
 
 // ------------------------------
@@ -271,10 +276,11 @@ $layout-direction: ltr;
 @import 'layouts';
 @import 'views';
 @import 'overrides';
-
 ```
 
 **NOTE**: Since both libSass and RubySass lack a way to pass in variables/configuration into their ``@import {file}`` method, each app is responsible for 1) storing any npm-based dependencies, including the edx-pattern-library, in the best directory structure for that app's set up and 2) creating a ``_lib.scss`` partial to import all third party library dependencies from that structure for the Pattern Library to use (see above example).
+
+**NOTE**: We support right-to-left and left-to-right-based layouts. View more details on what [configuration and utilities are needed alongside the UXPL](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#right-to-left-rtl-support)
 
 See [the UX Pattern Library Files + Application Files guidelines](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#ux-pattern-library-files--application-files) and [example style compile](https://github.com/edx/ux-pattern-library/wiki/Styleguide:-Sass-&-CSS#main-style-compile) for more examples, details on how to use partials, and general background.
 
@@ -289,17 +295,21 @@ If you'd like to customize what to import, you can manually import specific elem
 
 
 // ------------------------------
+// #CONFIG - layout direction
+// ------------------------------
+@import 'ltr';                                                       // LTR-specifc settings and utilities
+
+
+// ------------------------------
 // #CONFIG
 // ------------------------------
-$layout-direction: ltr;
 @import 'config';
 
 
 // ------------------------------
 // #LIB
 // ------------------------------
-@import 'lib';
-@import '{path to edx-pattern-library package}/pattern-library/sass/global/core';
+@import 'lib';                                                      // third party libraries
 
 // use UXPL's buttons, headings, copy, grid, and layouts
 @import '{path to edx-pattern-library package}/pattern-library/sass/patterns/buttons';
