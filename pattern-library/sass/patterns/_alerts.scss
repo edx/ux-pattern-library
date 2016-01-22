@@ -1,0 +1,150 @@
+// ------------------------------
+// edX Pattern Library: Utilities - Alerts
+//
+// About: Contains base styling for alerts.
+// ----------------------------
+
+// #CONFIG
+// #UTILITIES
+// #GENERAL
+// #INDIVIDUAL CASES
+
+
+// ----------------------------
+// #CONFIG
+// ----------------------------
+$alert-background-color: palette(grayscale, white) !default;
+$alert-icon-color: palette(grayscale, white) !default;
+$alert-border-radius: spacing-vertical(xx-small) !default;
+// border around the sides and bottom
+$alert-border: rem(1) solid palette(grayscale-cool, light) !default;
+
+// alert colors
+$alert-information-color: palette(information, base) !default;
+$alert-warning-color: palette(warning, base) !default;
+$alert-error-color: palette(error, base) !default;
+$alert-success-color: palette(success, base) !default;
+
+// ----------------------------
+// #UTILITIES
+// ----------------------------
+@mixin alert($alert-color) {
+    border-top:  rem(2) solid $alert-color;
+
+    .alert-icon {
+        color: $alert-icon-color;
+        background-color: $alert-color;
+    }
+}
+
+@mixin alert-message($width) {
+
+    @include susy-media($bp-screen-md) {
+        @include float(left);
+        width: $width;
+        padding: spacing-vertical(small);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    :last-child {
+        // keeps the message compact
+        margin-bottom: 0;
+    }
+}
+
+// ----------------------------
+// #GENERAL
+// ----------------------------
+.alert {
+    background-color: $alert-background-color;
+    border: $alert-border;
+    border-radius: $alert-border-radius;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: spacing-vertical(small) spacing-horizontal(base);
+    overflow: auto;
+    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale-cool, xx-light);
+}
+
+.alert-icon {
+    // hide icons on small screens
+    display: none;
+
+    @include susy-media($bp-screen-md) {
+        @include float(left);
+        display: block;
+
+        // create a circle around the icon
+        border-radius: 50%;
+
+        // create room around the icon for the circle
+        padding: spacing-vertical(x-small);
+    }
+}
+
+.alert-message-with-action {
+    // provide room for the action to be displayed next to the alert message
+    @include alert-message(70%);
+}
+
+.alert-message {
+    @include alert-message(90%);
+}
+
+.alert-title {
+    @extend %hd-5;
+    @extend %headings-emphasized;
+
+    @include susy-media($bp-screen-md) {
+         // shift the section up to make the alert more compact
+         margin-top: - spacing-vertical(x-small);
+    }
+
+}
+
+.alert-copy {
+    @extend %copy-base;
+
+    @include susy-media($bp-screen-md) {
+         // shift the message down to be in line with the icon
+         margin-top: spacing-vertical(xx-small);
+    }
+}
+
+.alert-copy-with-title {
+    @extend %copy-base;
+}
+
+.alert-action {
+    width: 100%;
+
+    @include susy-media($bp-screen-md) {
+        @include float(right);
+        width: inherit;
+    }
+}
+
+// ----------------------------
+// #INDIVIDUAL CASES
+// ----------------------------
+
+// information-based alert
+.alert-information {
+    @include alert($alert-information-color);
+}
+
+// warning-based alert
+.alert-warning {
+    @include alert($alert-warning-color);
+}
+
+// error-based alert
+.alert-error {
+    @include alert($alert-error-color);
+}
+
+// success-based alert
+.alert-success {
+    @include alert($alert-success-color);
+}
