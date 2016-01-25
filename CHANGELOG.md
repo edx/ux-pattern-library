@@ -3,6 +3,13 @@
 ## unreleased
 Nothing yet
 
+- - -
+
+## 0.8.6 (2016-01-22)
+* Revised ltr/rtl config and settings to not rely on Sass @import + @if
+
+- - -
+
 ## 0.8.5 (2016-01-13)
 * Added a new element, Lists - for use in content and simple navigation
 

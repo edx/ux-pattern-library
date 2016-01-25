@@ -1,0 +1,19 @@
+// ------------------------------
+// edX Pattern Library Site: RTL directional settings & support
+
+// About: Sass partial for defining settings and utilities for RTL-centric layouts.
+
+// #SETTINGS
+// #LIB
+
+
+// ----------------------------
+// #SETTINGS
+// ----------------------------
+$layout-direction: rtl;
+
+
+// ----------------------------
+// #LIB
+// ----------------------------
+@import '../../../node_modules/bi-app-sass/bi-app/bi-app-rtl';
