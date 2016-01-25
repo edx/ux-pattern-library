@@ -161,10 +161,3 @@ h5 {
 h6 {
    font-size: font-size(small);
 }
-
-
-// copy
-.copy,
-p, ol, ul, dl, td, th {
-    @extend %reset-copy;
-}
