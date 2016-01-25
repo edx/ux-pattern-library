@@ -1355,8 +1355,7 @@ dd,
       height: 0.625rem;
       border: 0;
       border-radius: 3px;
-      background: #e7e6e6;
-      cursor: pointer; }
+      background: #e7e6e6; }
     .input-progress[value]::-webkit-progress-value {
       -webkit-transition: all 0.125s ease-in-out 0s;
       transition: all 0.125s ease-in-out 0s;
@@ -1376,8 +1375,7 @@ dd,
       height: 0.625rem;
       border: 0;
       border-radius: 3px;
-      background: #e7e6e6;
-      cursor: pointer; }
+      background: #e7e6e6; }
     .input-progress[value]::-ms-progress-value {
       -webkit-transition: all 0.125s ease-in-out 0s;
       transition: all 0.125s ease-in-out 0s;
