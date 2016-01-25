@@ -3,6 +3,13 @@
 ## unreleased
 Nothing yet
 
+- - -
+
+## 0.8.10 (2016-01-26)
+* Remove unused .list-links/%list-links rules.
+
+- - -
+
 ## 0.8.9 (2016-01-26)
 * removing reference to deleted %reset-copy utility
 
