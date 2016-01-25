@@ -3,10 +3,12 @@
 
 // About: Sass compile for the edX Pattern Library Site. This does not contain styles for other edX products/experiences (e.g. account/onboarding). Any styles defined in the partials contained here should be prefixed with ".pldoc-" to avoid cascade/run-off into the element stylings.
 
+
 // ------------------------------
 // #CONFIG - layout direction
 // ------------------------------
-$layout-direction: rtl;
+@import 'rtl';                        // RTL-specifc settings and utilities
+
 
 // ------------------------------
 // #BUILD

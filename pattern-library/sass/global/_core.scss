@@ -3,17 +3,8 @@
 
 // About: Collection of global settings and utilities.
 
-
 @import 'functions';
 @import 'settings';
-
-// set RTL/LTR specific variables
-@if $layout-direction == rtl {
-    @import 'settings-rtl';
-} @else {
-    @import 'settings-ltr';
-}
-
 @import 'mixins';
 @import 'helpers';
 @import '../normalize';

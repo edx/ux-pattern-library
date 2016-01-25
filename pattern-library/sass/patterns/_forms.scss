@@ -587,8 +587,7 @@ $field-required-color:                      $label-color !default;
         appearance: none;
 
         &::-webkit-progress-bar {
-            @include input-track();
-            // @extend input-track;
+            @include input-track(false);
         }
 
         &::-webkit-progress-value {
@@ -600,7 +599,7 @@ $field-required-color:                      $label-color !default;
         }
 
         &::-ms-progress-bar {
-            @include input-track();
+            @include input-track(false);
         }
 
         &::-ms-progress-value {

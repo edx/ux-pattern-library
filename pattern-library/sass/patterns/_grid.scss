@@ -18,6 +18,17 @@
 // ----------------------------
 // #SETTINGS
 // ----------------------------
+// grid - configuration (susy-based)
+
+// set RTL/LTR specific variables
+@if $layout-direction == rtl {
+    $grid-direction-default: rtl;
+    $grid-direction-reversed: ltr;
+} @else {
+    $grid-direction-default: ltr;
+    $grid-direction-reversed: rtl;
+}
+
 // susy-based configuration (see http://susydocs.oddbird.net/en/latest/settings/)
 $susy: (
     use-custom: (

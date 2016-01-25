@@ -3,20 +3,16 @@
 
 // About: Sass compile for the edX Pattern Library's static CSS, for use in left-to-right styling.
 
-
-// ------------------------------
-// #CONFIG - layout direction
-// ------------------------------
-$layout-direction: ltr;
-
-
 // ------------------------------
 // #LIB
 // ------------------------------
-@import '../../pldoc/static/sass/lib';
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import '../../node_modules/susy/sass/susy';
+@import '../../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 
 // ------------------------------
 // #BUILD
 // ------------------------------
-@import 'edx-pattern-library';                   // shared compile/build order for both LTR and RTL UI
+@import 'global/ltr';                                      // LTR-specifc settings and utilities
+@import 'edx-pattern-library';                      // shared compile/build order for both LTR and RTL UI
