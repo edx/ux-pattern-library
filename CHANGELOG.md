@@ -3,6 +3,9 @@
 ## unreleased
 Nothing yet
 
+## 0.8.9 (2016-01-26)
+* removing reference to deleted %reset-copy utility
+
 - - -
 
 ## 0.8.8 (2016-01-26)
