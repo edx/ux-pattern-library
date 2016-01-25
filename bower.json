@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.8.7",
+  "version": "0.8.8",
   "authors": [
     "edX UX Team <ux@edx.org>"
   ],
@@ -32,6 +32,7 @@
     "about.md",
     "bower_components",
     "CNAME",
+    "demo",
     "examples",
     "favicon.ico",
     "gulp",

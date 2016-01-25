@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.8.8 (2016-01-26)
+* Remove demo directory from the public packages.
+
+- - -
+
 ## 0.8.7 (2016-01-25)
 * Removed pointer from progress bar hover
 
