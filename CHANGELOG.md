@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.8.12 (2016-01-26)
+* FIX- Removed unused %btn-base extend from buttons
+
+- - -
+
 ## 0.8.11 (2016-01-26)
 * Removed unused %btn-base extend from buttons
 

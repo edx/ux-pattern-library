@@ -167,7 +167,6 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
 // ----------------------------
 %btn-default {
     @extend %btn;
-    @extend %btn-base;
     border-color: $btn-default-border-color;
     background: $btn-default-background;
     color: $btn-default-color;
