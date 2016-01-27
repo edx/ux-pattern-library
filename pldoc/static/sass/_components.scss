@@ -130,50 +130,13 @@
 // ------------------------------
 // #HEADER
 // ------------------------------
+.pldoc-wrapper-header-site {
+    background: palette(grayscale, white);
+}
+
+
 .pldoc-header-site {
 
-    @include susy-breakpoint($bp-screen-lg, $susy-default) {
-        margin: 0;
-    }
-
-    .pldoc-header-site-title {
-        display: inline-block;
-        vertical-align: middle;
-
-        @include susy-breakpoint($bp-screen-lg, $susy-default) {
-            margin: 0;
-        }
-
-        .title-name {
-            display: block;
-        }
-
-        .title-name {
-            margin-bottom: spacing-vertical(x-small);
-            color: palette(grayscale, white);
-            font-size: font-size(base);
-            font-weight: font-weight(bold);
-            text-transform: uppercase;
-            letter-spacing: rem(1);
-
-            // STATE: hover, active, focus
-            &:hover,
-            &:active,
-            &:focus {
-                color: palette(primary, accent);
-            }
-        }
-
-        .pldoc-link {
-            border: none;
-        }
-    }
-
-    .pldoc-title-description {
-        display: block;
-        color: palette(grayscale, base);
-        font-weight: font-weight(normal);
-    }
 }
 
 // ------------------------------
@@ -181,30 +144,14 @@
 // ------------------------------
 // navigation - sidebar-based
 .pldoc-nav {
-    margin-bottom: spacing-vertical(mid-large);
 
-    // CASE: last pattern
-    &:last-child {
-        margin-bottom: 0;
-    }
+    .pldoc-link {
 
-    .item {
-        border-bottom-color: palette(grayscale, black);
+        // STATE: hover, active, and focus
+        &:hover,
+        &:active,
+        &:focus {
 
-
-        a {
-            padding-right: spacing-horizontal(mid-large);
-            padding-left: spacing-horizontal(mid-large);
-            font-size: font-size(small);
-            font-weight: font-weight(semi-bold);
-            color: palette(grayscale, x-light);
-
-            // STATE: hover, active, and focus
-            &:hover,
-            &:active,
-            &:focus {
-                color: palette(primary, light);
-            }
         }
 
         // CASE: item is current
@@ -271,35 +218,6 @@
 // external site navigation
 .pldoc-nav-external {
 
-    .item a {
-        @include clearfix();
-
-        .icon {
-            @include transition(opacity timing(xx-fast) ease-in-out);
-            @include margin-left(spacing-horizontal(xx-small));
-            @include float(right);
-            opacity: 0.25;
-        }
-
-        // STATE: hover, active, and focus
-        &:hover,
-        &:active,
-        &:focus {
-
-            .icon {
-                opacity: 1.0;
-            }
-        }
-    }
-}
-
-.pldoc-nav-title {
-    margin: 0 spacing-horizontal(mid-large) spacing-vertical(x-small);
-    color: palette(grayscale, base);
-    font-size: font-size(small);
-    font-weight: font-weight(semi-bold);
-    text-transform: uppercase;
-    letter-spacing: rem(1);
 }
 
 .pldoc-tab {
@@ -340,29 +258,27 @@
 // #SIDEBAR
 // ------------------------------
 .pldoc-wrapper-content-supplemental {
-    @extend %depth--3;
-    color: palette(grayscale, x-light);
+
 }
 
 // ------------------------------
 // #MAIN CONTENT
 // ------------------------------
 .pldoc-wrapper-content-main {
-    @extend %depth-0;
+
 }
 
 // ------------------------------
 // #FOOTER
 // ------------------------------
 .pldoc-footer-site {
-    margin: spacing-vertical(base) spacing-horizontal(base);
+
 }
 
 .pldoc-footer-site-copyright {
 
     .pldoc-copy {
         font-size: font-size(small);
-        color: palette(grayscale, base);
     }
 }
 

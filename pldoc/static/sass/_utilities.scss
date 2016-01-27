@@ -34,6 +34,10 @@ $pldoc-ui-toolkit-color:            rgb(255, 222, 32);
     }
 }
 
+%grid-wrapper {
+    padding-right: spacing-horizontal(base);
+    padding-left: spacing-horizontal(base);
+}
 
 // ------------------------------
 // #BASE RESET
