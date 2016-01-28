@@ -254,12 +254,12 @@
             content: '';
             border-radius: 100%;
             opacity: 0;
-            background: palette(primary, accent);
+            background: palette(primary, x-accent);
         }
 
         // STATE: is current navigation item
         &.is-current {
-            color: palette(primary, light);
+            color: palette(primary, x-accent);
 
             &:before {
                 opacity: 1.0;
