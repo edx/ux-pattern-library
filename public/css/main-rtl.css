@@ -9148,11 +9148,11 @@ html, body {
   content: '';
   border-radius: 100%;
   opacity: 0;
-  background: #0ea6ec;
+  background: #00abfa;
 }
 
 .pldoc-nav-internal .item a.is-current {
-  color: #53a4d1;
+  color: #00abfa;
 }
 
 .pldoc-nav-internal .item a.is-current:before {
