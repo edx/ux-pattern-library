@@ -121,14 +121,14 @@
         color timing(xx-fast) ease-in-out 0s
     );
 
-    color: palette(primary, base);
+    color: $link-color;
     text-decoration: none;
 
     // STATE: hover, active, focus
     &:hover,
     &:active,
     &:focus {
-        color: palette(primary, accent);
+        color: $link-focus-color;
     }
 
     // STATE: is disabled
@@ -142,7 +142,7 @@
     &:active,
     &.is-pressed,
     &.is-active {
-        color: palette(primary, dark);
+        color: $link-focus-color;
     }
 }
 
@@ -159,7 +159,7 @@
     &:hover,
     &:active,
     &:focus {
-        box-shadow: 0 1px 0 0 palette(primary, accent);
+        box-shadow: 0 1px 0 0 $link-focus-color;
     }
 }
 
