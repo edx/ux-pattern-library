@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.9.2 (2016-02-01)
+* modernizing '%a11y-hide' and 'sr-only' utilities
+
+- - -
+
 ## 0.9.1 (2016-02-01)
 * introduce $pattern-library-path variable
 * FIX - always refer to edx-icons via $edx-icons-font-path
