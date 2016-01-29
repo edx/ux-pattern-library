@@ -12,7 +12,7 @@ The (working) UI library and Front End Styleguide for edX/Open edX applications 
 2. [License](#license)
 3. [Dependencies](#dependencies)
 4. [Documentation](#documentation)
-5. [How to Develop & Use]()
+5. [Getting Started](#getting-started)
 6. [Contributions](#contributions)
 
 - - -
