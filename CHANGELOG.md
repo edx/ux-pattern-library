@@ -5,6 +5,12 @@ Nothing yet
 
 - - -
 
+## 0.8.14 (2016-01-29)
+* simplifying and re-roganizing README
+* changing official project references in docs to "edX Pattern Library"
+
+- - -
+
 ## 0.8.13 (2016-01-29)
 * improving color contrast of text-based links for a11y
 * plumbed through theming configuration for text-based links
