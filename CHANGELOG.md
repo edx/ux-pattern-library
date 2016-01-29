@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.8.15 (2016-01-29)
+* FIX - correcting README anchor link/text
+
+- - -
+
 ## 0.8.14 (2016-01-29)
 * simplifying and re-roganizing README
 * changing official project references in docs to "edX Pattern Library"
