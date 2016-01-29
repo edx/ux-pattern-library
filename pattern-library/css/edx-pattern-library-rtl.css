@@ -107,13 +107,13 @@
 .link, .btn-link {
   -webkit-transition: color 0.125s ease-in-out 0s;
   transition: color 0.125s ease-in-out 0s;
-  color: #0079bc;
+  color: #065683;
   text-decoration: none; }
   a:hover,
   .link:hover, .btn-link:hover, a:active,
   .link:active, .btn-link:active, a:focus,
   .link:focus, .btn-link:focus {
-    color: #0ea6ec; }
+    color: #0079bc; }
   a:disabled,
   .link:disabled, .btn-link:disabled, a.is-disabled,
   .is-disabled.link, .is-disabled.btn-link {
@@ -123,14 +123,14 @@
   .link:active, .btn-link:active, a.is-pressed,
   .is-pressed.link, .is-pressed.btn-link, a.is-active,
   .is-active.link, .is-active.btn-link {
-    color: #065683; }
+    color: #0079bc; }
 
 .copy-lead a, .copy-large a, .copy-base a, .copy-meta a, .copy-micro a {
   -webkit-transition: box-shadow 0.125s ease-in-out 0s;
   transition: box-shadow 0.125s ease-in-out 0s;
   box-shadow: 0 1px 0 0 transparent; }
   .copy-lead a:hover, .copy-large a:hover, .copy-base a:hover, .copy-meta a:hover, .copy-micro a:hover, .copy-lead a:active, .copy-large a:active, .copy-base a:active, .copy-meta a:active, .copy-micro a:active, .copy-lead a:focus, .copy-large a:focus, .copy-base a:focus, .copy-meta a:focus, .copy-micro a:focus {
-    box-shadow: 0 1px 0 0 #0ea6ec; }
+    box-shadow: 0 1px 0 0 #0079bc; }
 
 .align-left.list-divided, ul.align-left, .align-left.list-bulleted, ol.align-left, .align-left.list-ordered, .align-left.list-inline, .align-left.list-grouped, .align-left.list {
   text-align: right; }
