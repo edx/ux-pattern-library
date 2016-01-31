@@ -5,6 +5,12 @@ Nothing yet
 
 - - -
 
+## 0.9.1 (2016-02-01)
+* introduce $pattern-library-path variable
+* FIX - always refer to edx-icons via $edx-icons-font-path
+
+- - -
+
 ## 0.9 (2016-02-01)
 * adding tables pattern - for use in content and sortable table listings
 

@@ -494,6 +494,6 @@ cc;
 
 @each $edx-icon in $edx-icons {
     .icon-fallback-img .icon-#{$edx-icon} {
-    background: url('../fonts/edx-icons/fallback-img/#{$edx-icon}.svg') center center no-repeat;
+    background: url('#{$edx-icons-font-path}/fallback-img/#{$edx-icon}.svg') center center no-repeat;
   }
 }
