@@ -4,9 +4,9 @@ title:                  edX Pattern Library
 tagline:                The Visual, UI, and Front End styleguide for edX's applications
 
 author:
-    name:               edX UX Design Team
+    name:               edX Pattern Library Team
     url:                http://www.edx.org
-    email:              ux@edx.org
+    email:              pattern-library@edx.org
 
 url:                    http://ux.edx.org
 url_example:            examples/
