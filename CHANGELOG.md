@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.9 (2016-02-01)
+* adding tables pattern - for use in content and sortable table listings
+
+- - -
+
 ## 0.8.15 (2016-01-29)
 * FIX - correcting README anchor link/text
 
