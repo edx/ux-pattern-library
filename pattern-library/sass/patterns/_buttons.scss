@@ -113,7 +113,6 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
         background timing(xx-fast) ease-in-out 0s,
         box-shadow timing(xx-fast) ease-in-out 0s
     );
-    @extend %btn-base;
     display: inline-block;
     border-style: $btn-border-style;
     border-radius: $btn-border-radius;
@@ -168,7 +167,6 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
 // ----------------------------
 %btn-default {
     @extend %btn;
-    @extend %btn-base;
     border-color: $btn-default-border-color;
     background: $btn-default-background;
     color: $btn-default-color;

@@ -5,6 +5,69 @@ Nothing yet
 
 - - -
 
+## 0.10.0 (2016-02-02)
+* Added alerts pattern
+
+- - -
+
+## 0.9.2 (2016-02-01)
+* modernizing '%a11y-hide' and 'sr-only' utilities
+
+- - -
+
+## 0.9.1 (2016-02-01)
+* introduce $pattern-library-path variable
+* FIX - always refer to edx-icons via $edx-icons-font-path
+
+- - -
+
+## 0.9 (2016-02-01)
+* adding tables pattern - for use in content and sortable table listings
+
+- - -
+
+## 0.8.15 (2016-01-29)
+* FIX - correcting README anchor link/text
+
+- - -
+
+## 0.8.14 (2016-01-29)
+* simplifying and re-roganizing README
+* changing official project references in docs to "edX Pattern Library"
+
+- - -
+
+## 0.8.13 (2016-01-29)
+* improving color contrast of text-based links for a11y
+* plumbed through theming configuration for text-based links
+
+- - -
+
+## 0.8.12 (2016-01-26)
+* FIX- Removed unused %btn-base extend from buttons
+
+- - -
+
+## 0.8.11 (2016-01-26)
+* Removed unused %btn-base extend from buttons
+
+- - -
+
+## 0.8.10 (2016-01-26)
+* Remove unused .list-links/%list-links rules.
+
+- - -
+
+## 0.8.9 (2016-01-26)
+* removing reference to deleted %reset-copy utility
+
+- - -
+
+## 0.8.8 (2016-01-26)
+* Remove demo directory from the public packages.
+
+- - -
+
 ## 0.8.7 (2016-01-25)
 * Removed pointer from progress bar hover
 

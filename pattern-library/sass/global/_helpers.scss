@@ -54,14 +54,18 @@
 
 // accessibility
 %a11y-hide {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+    // clip has been deprecated but is still supported
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
+    margin: -1px;
+    height: 1px;
     width: 1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    // ensure there are spaces in sr text
+    word-wrap: normal;
 }
 
 %a11y-hide-image-text {
@@ -121,14 +125,14 @@
         color timing(xx-fast) ease-in-out 0s
     );
 
-    color: palette(primary, base);
+    color: $link-color;
     text-decoration: none;
 
     // STATE: hover, active, focus
     &:hover,
     &:active,
     &:focus {
-        color: palette(primary, accent);
+        color: $link-focus-color;
     }
 
     // STATE: is disabled
@@ -142,7 +146,7 @@
     &:active,
     &.is-pressed,
     &.is-active {
-        color: palette(primary, dark);
+        color: $link-focus-color;
     }
 }
 
@@ -159,7 +163,7 @@
     &:hover,
     &:active,
     &:focus {
-        box-shadow: 0 1px 0 0 palette(primary, accent);
+        box-shadow: 0 1px 0 0 $link-focus-color;
     }
 }
 

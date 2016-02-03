@@ -17,9 +17,9 @@
 // ----------------------------
 // #PATHS
 // ----------------------------
-$font-path: '../fonts' !default;
-$image-path: '../images' !default;
-
+$pattern-library-path: '..' !default;
+$font-path: '#{$pattern-library-path}/fonts' !default;
+$image-path: '#{$pattern-library-path}/images' !default;
 
 // ----------------------------
 // #UNITS
