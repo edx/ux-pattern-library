@@ -17,117 +17,118 @@
 @import 'icons-afontgarde';
 
 $edx-icons:
-linkedin-square
-caret-down
-caret-up
-caret-left
-caret-right
-dot-circle-o
-square-o
-square
-circle
-circle-thin
-genderless
-search
-envelope-o
-star
-user
-check
-close
-remove
-times
-search-plus
-search-minus
-cog
-gear
-trash-o
-home
-file-o
-clock-o
-refresh
-list-alt
-lock
-flag
-volume-off
-volume-down
-volume-up
-book
-print
-camera
-video-camera
-pencil
-edit
-pencil-square-o
-share-square-o
-check-square-o
-fast-backward
-play
-pause
-stop
-fast-forward
-chevron-left
-chevron-right
-times-circle
-question-circle
-info-circle
-times-circle-o
-arrow-up
-arrow-down
-compress
-plus
-minus
-exclamation-circle
-eye
-eye-slash
-exclamation-triangle
-warning
-calendar
-comment
-shopping-cart
-twitter-square
-facebook-square
-comments
-thumb-tack
-external-link
-upload
-square-o2
-bullhorn
-arrow-circle-down
-filter
-arrows-alt
-chain
-link
-copy
-files-o
-bars
-navicon
-reorder
-list-ul
-table
-money
-sort
-unsorted
-envelope
-rotate-left
-undo
-sitemap
+angle-down
 angle-left
 angle-right
 angle-up
-angle-down
-circle-o
-quote-left
-spinner
-mail-reply
-reply
-chain-broken
-unlink
-unlock-alt
-ellipsis-h
-check-square
+arrow-circle-down
+arrow-down
+arrow-up
+arrows
+book
+bullhorn
+calendar
+camera
+caret-down
+caret-left
+caret-right
+caret-up
+check
+checkbox-checked
+checkbox-checked-dark
+checkbox-unchecked
+chevron-left
+chevron-right
+circle
+circle-light
+clock
+close
+close-circle
+close-circle-light
+closed-captions
+cog
+comment
+comments
+compress
+copy
+edit
+ellipsis
+email
+email-light
+error
+exit-fullscreen
+external-link
+facebook-square
+fast-backward
+fast-forward
 file
-cc;
+file-light
+filter
+fullscreen
+flag
+help
+hide
+home
+information
+link
+linkedin-square
+list
+list-alt
+lock
+menu
+minus
+money
+pause
+pencil
+play
+plus
+print
+quote-left
+radio-checked
+radio-unchecked
+refresh
+reply
+search
+search-minus
+search-plus
+share
+shopping-cart
+show
+sitemap
+sort
+spinner
+square
+square-light
+star
+stop
+table
+thumb-tack
+trash
+twitter-square
+undo
+unlink
+unlock
+upload
+user
+video-camera
+volume-down
+volume-off
+volume-up,
+warning;
 
+// Useful synonyms
+$edx-icon-synonyms: (
+    bars: menu,
+    delete: trash,
+    gear: cog,
+    hidden: hide,
+    reorder: menu,
+    remove: close,
+    settings: cog,
+    undo: rotate-left,
+    unsorted: sort,
+    visible: show
+);
 
 // ----------------------------
 // #GLOBAL
@@ -155,9 +156,6 @@ cc;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.edx-icons .icon-linkedin-square:before {
-    content: "\e600";
-}
 .edx-icons .icon-caret-down:before {
     content: "\e601";
 }
@@ -170,10 +168,10 @@ cc;
 .edx-icons .icon-caret-right:before {
     content: "\e604";
 }
-.edx-icons .icon-dot-circle-o:before {
+.edx-icons .icon-radio-checked:before {
     content: "\e605";
 }
-.edx-icons .icon-square-o:before {
+.edx-icons .icon-checkbox-unchecked:before {
     content: "\e606";
 }
 .edx-icons .icon-square:before {
@@ -182,16 +180,13 @@ cc;
 .edx-icons .icon-circle:before {
     content: "\e608";
 }
-.edx-icons .icon-circle-thin:before {
-    content: "\e609";
-}
-.edx-icons .icon-genderless:before {
+.edx-icons .icon-circle-light:before {
     content: "\e609";
 }
 .edx-icons .icon-search:before {
     content: "\e60a";
 }
-.edx-icons .icon-envelope-o:before {
+.edx-icons .icon-email-light:before {
     content: "\e60b";
 }
 .edx-icons .icon-star:before {
@@ -209,9 +204,6 @@ cc;
 .edx-icons .icon-remove:before {
     content: "\e60f";
 }
-.edx-icons .icon-times:before {
-    content: "\e60f";
-}
 .edx-icons .icon-search-plus:before {
     content: "\e610";
 }
@@ -224,16 +216,22 @@ cc;
 .edx-icons .icon-gear:before {
     content: "\e612";
 }
-.edx-icons .icon-trash-o:before {
+.edx-icons .icon-settings:before {
+    content: "\e612";
+}
+.edx-icons .icon-delete:before {
+    content: "\e613";
+}
+.edx-icons .icon-trash:before {
     content: "\e613";
 }
 .edx-icons .icon-home:before {
     content: "\e614";
 }
-.edx-icons .icon-file-o:before {
+.edx-icons .icon-file-light:before {
     content: "\e615";
 }
-.edx-icons .icon-clock-o:before {
+.edx-icons .icon-clock:before {
     content: "\e616";
 }
 .edx-icons .icon-refresh:before {
@@ -275,13 +273,10 @@ cc;
 .edx-icons .icon-edit:before {
     content: "\e623";
 }
-.edx-icons .icon-pencil-square-o:before {
-    content: "\e623";
-}
-.edx-icons .icon-share-square-o:before {
+.edx-icons .icon-share:before {
     content: "\e624";
 }
-.edx-icons .icon-check-square-o:before {
+.edx-icons .icon-checkbox-checked:before {
     content: "\e625";
 }
 .edx-icons .icon-fast-backward:before {
@@ -305,17 +300,17 @@ cc;
 .edx-icons .icon-chevron-right:before {
     content: "\e62c";
 }
-.edx-icons .icon-times-circle:before {
+.edx-icons .icon-close-circle:before {
     content: "\e62d";
 }
-.edx-icons .icon-question-circle:before {
+.edx-icons .icon-close-circle-light:before {
+    content: "\e630";
+}
+.edx-icons .icon-help:before {
     content: "\e62e";
 }
-.edx-icons .icon-info-circle:before {
+.edx-icons .icon-information:before {
     content: "\e62f";
-}
-.edx-icons .icon-times-circle-o:before {
-    content: "\e630";
 }
 .edx-icons .icon-arrow-up:before {
     content: "\e631";
@@ -323,7 +318,10 @@ cc;
 .edx-icons .icon-arrow-down:before {
     content: "\e632";
 }
-.edx-icons .icon-compress:before {
+.edx-icons .icon-fullscreen:before {
+    content: "\e647";
+}
+.edx-icons .icon-exit-fullscreen:before {
     content: "\e633";
 }
 .edx-icons .icon-plus:before {
@@ -332,17 +330,20 @@ cc;
 .edx-icons .icon-minus:before {
     content: "\e635";
 }
-.edx-icons .icon-exclamation-circle:before {
+.edx-icons .icon-error:before {
     content: "\e636";
 }
-.edx-icons .icon-eye:before {
+.edx-icons .icon-show:before {
     content: "\e637";
 }
-.edx-icons .icon-eye-slash:before {
+.edx-icons .icon-visible:before {
+    content: "\e637";
+}
+.edx-icons .icon-hide:before {
     content: "\e638";
 }
-.edx-icons .icon-exclamation-triangle:before {
-    content: "\e639";
+.edx-icons .icon-hidden:before {
+    content: "\e638";
 }
 .edx-icons .icon-warning:before {
     content: "\e639";
@@ -362,6 +363,9 @@ cc;
 .edx-icons .icon-facebook-square:before {
     content: "\e63e";
 }
+.edx-icons .icon-linkedin-square:before {
+    content: "\e600";
+}
 .edx-icons .icon-comments:before {
     content: "\e63f";
 }
@@ -374,9 +378,6 @@ cc;
 .edx-icons .icon-upload:before {
     content: "\e642";
 }
-.edx-icons .icon-square-o2:before {
-    content: "\e643";
-}
 .edx-icons .icon-bullhorn:before {
     content: "\e644";
 }
@@ -386,31 +387,22 @@ cc;
 .edx-icons .icon-filter:before {
     content: "\e646";
 }
-.edx-icons .icon-arrows-alt:before {
-    content: "\e647";
-}
-.edx-icons .icon-chain:before {
-    content: "\e648";
-}
 .edx-icons .icon-link:before {
     content: "\e648";
 }
 .edx-icons .icon-copy:before {
     content: "\e649";
 }
-.edx-icons .icon-files-o:before {
-    content: "\e649";
-}
-.edx-icons .icon-bars:before {
+.edx-icons .icon-menu:before {
     content: "\e64a";
 }
-.edx-icons .icon-navicon:before {
+.edx-icons .icon-bars:before {
     content: "\e64a";
 }
 .edx-icons .icon-reorder:before {
     content: "\e64a";
 }
-.edx-icons .icon-list-ul:before {
+.edx-icons .icon-list:before {
     content: "\e64b";
 }
 .edx-icons .icon-table:before {
@@ -425,7 +417,7 @@ cc;
 .edx-icons .icon-unsorted:before {
     content: "\e64e";
 }
-.edx-icons .icon-envelope:before {
+.edx-icons .icon-email:before {
     content: "\e64f";
 }
 .edx-icons .icon-rotate-left:before {
@@ -449,7 +441,7 @@ cc;
 .edx-icons .icon-angle-down:before {
     content: "\e655";
 }
-.edx-icons .icon-circle-o:before {
+.edx-icons .icon-radio-unchecked:before {
     content: "\e656";
 }
 .edx-icons .icon-quote-left:before {
@@ -458,34 +450,27 @@ cc;
 .edx-icons .icon-spinner:before {
     content: "\e658";
 }
-.edx-icons .icon-mail-reply:before {
-    content: "\e659";
-}
 .edx-icons .icon-reply:before {
     content: "\e659";
-}
-.edx-icons .icon-chain-broken:before {
-    content: "\e65a";
 }
 .edx-icons .icon-unlink:before {
     content: "\e65a";
 }
-.edx-icons .icon-unlock-alt:before {
+.edx-icons .icon-unlock:before {
     content: "\e65b";
 }
-.edx-icons .icon-ellipsis-h:before {
+.edx-icons .icon-ellipsis:before {
     content: "\e65c";
 }
-.edx-icons .icon-check-square:before {
+.edx-icons .icon-checkbox-checked-dark:before {
     content: "\e65d";
 }
 .edx-icons .icon-file:before {
     content: "\e65e";
 }
-.edx-icons .icon-cc:before {
+.edx-icons .icon-closed-captions:before {
     content: "\e65f";
 }
-
 
 // ----------------------------
 // #FALLBACKS
@@ -494,6 +479,12 @@ cc;
 
 @each $edx-icon in $edx-icons {
     .icon-fallback-img .icon-#{$edx-icon} {
+    background: url('#{$edx-icons-font-path}/fallback-img/#{$edx-icon}.svg') center center no-repeat;
+  }
+}
+
+@each $synonym, $edx-icon in $edx-icon-synonyms {
+    .icon-fallback-img .icon-#{$synonym} {
     background: url('#{$edx-icons-font-path}/fallback-img/#{$edx-icon}.svg') center center no-repeat;
   }
 }
