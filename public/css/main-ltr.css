@@ -8566,10 +8566,6 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   content: "\e64f";
 }
 
-.edx-icons .icon-rotate-left:before {
-  content: "\e650";
-}
-
 .edx-icons .icon-undo:before {
   content: "\e650";
 }
@@ -8660,10 +8656,6 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 
 .icon-fallback-img .icon-arrow-up {
   background: url("../fonts/edx-icons/fallback-img/arrow-up.svg") center center no-repeat;
-}
-
-.icon-fallback-img .icon-arrows {
-  background: url("../fonts/edx-icons/fallback-img/arrows.svg") center center no-repeat;
 }
 
 .icon-fallback-img .icon-book {
@@ -8760,10 +8752,6 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 
 .icon-fallback-img .icon-comments {
   background: url("../fonts/edx-icons/fallback-img/comments.svg") center center no-repeat;
-}
-
-.icon-fallback-img .icon-compress {
-  background: url("../fonts/edx-icons/fallback-img/compress.svg") center center no-repeat;
 }
 
 .icon-fallback-img .icon-copy {
@@ -9054,8 +9042,8 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   background: url("../fonts/edx-icons/fallback-img/cog.svg") center center no-repeat;
 }
 
-.icon-fallback-img .icon-undo {
-  background: url("../fonts/edx-icons/fallback-img/rotate-left.svg") center center no-repeat;
+.icon-fallback-img .icon-rotate-left {
+  background: url("../fonts/edx-icons/fallback-img/undo.svg") center center no-repeat;
 }
 
 .icon-fallback-img .icon-unsorted {
