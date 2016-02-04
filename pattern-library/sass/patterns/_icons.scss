@@ -24,7 +24,6 @@ angle-up
 arrow-circle-down
 arrow-down
 arrow-up
-arrows
 book
 bullhorn
 calendar
@@ -49,7 +48,6 @@ closed-captions
 cog
 comment
 comments
-compress
 copy
 edit
 ellipsis
@@ -125,7 +123,7 @@ $edx-icon-synonyms: (
     reorder: menu,
     remove: close,
     settings: cog,
-    undo: rotate-left,
+    rotate-left: undo,
     unsorted: sort,
     visible: show
 );
@@ -419,9 +417,6 @@ $edx-icon-synonyms: (
 }
 .edx-icons .icon-email:before {
     content: "\e64f";
-}
-.edx-icons .icon-rotate-left:before {
-    content: "\e650";
 }
 .edx-icons .icon-undo:before {
     content: "\e650";
