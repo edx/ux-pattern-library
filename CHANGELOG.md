@@ -5,7 +5,7 @@ Nothing yet
 
 - - -
 
-## 0.10.3.1 (2016-02-04)
+## 0.10.4 (2016-02-04)
 * FIX - republish to get around an npm publish failure
 
 - - -
