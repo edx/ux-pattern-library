@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.10.1 (2016-02-04)
+* Rationalize the icon fonts
+
+- - -
+
 ## 0.10.0 (2016-02-02)
 * Added alerts pattern
 
