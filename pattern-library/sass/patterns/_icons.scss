@@ -113,7 +113,7 @@ user
 video-camera
 volume-down
 volume-off
-volume-up,
+volume-up
 warning;
 
 // Useful synonyms
@@ -475,7 +475,8 @@ $edx-icon-synonyms: (
 // ----------------------------
 // #FALLBACKS
 // ----------------------------
-// If you'd like to use a fallback image or glyph for icons above, in case the font doesn't load, or @font-face isn't available
+// If you'd like to use a fallback image or glyph for icons above,
+// in case the font doesn't load, or @font-face isn't available.
 
 @each $edx-icon in $edx-icons {
     .icon-fallback-img .icon-#{$edx-icon} {

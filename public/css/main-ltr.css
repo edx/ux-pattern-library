@@ -8634,8 +8634,392 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
   content: "\e65f";
 }
 
-.icon-fallback-img .icon-angle-down angle-left angle-right angle-up arrow-circle-down arrow-down arrow-up arrows book bullhorn calendar camera caret-down caret-left caret-right caret-up check checkbox-checked checkbox-checked-dark checkbox-unchecked chevron-left chevron-right circle circle-light clock close close-circle close-circle-light closed-captions cog comment comments compress copy edit ellipsis email email-light error exit-fullscreen external-link facebook-square fast-backward fast-forward file file-light filter fullscreen flag help hide home information link linkedin-square list list-alt lock menu minus money pause pencil play plus print quote-left radio-checked radio-unchecked refresh reply search search-minus search-plus share shopping-cart show sitemap sort spinner square square-light star stop table thumb-tack trash twitter-square undo unlink unlock upload user video-camera volume-down volume-off volume-up {
-  background: url("../fonts/edx-icons/fallback-img/angle-down angle-left angle-right angle-up arrow-circle-down arrow-down arrow-up arrows book bullhorn calendar camera caret-down caret-left caret-right caret-up check checkbox-checked checkbox-checked-dark checkbox-unchecked chevron-left chevron-right circle circle-light clock close close-circle close-circle-light closed-captions cog comment comments compress copy edit ellipsis email email-light error exit-fullscreen external-link facebook-square fast-backward fast-forward file file-light filter fullscreen flag help hide home information link linkedin-square list list-alt lock menu minus money pause pencil play plus print quote-left radio-checked radio-unchecked refresh reply search search-minus search-plus share shopping-cart show sitemap sort spinner square square-light star stop table thumb-tack trash twitter-square undo unlink unlock upload user video-camera volume-down volume-off volume-up.svg") center center no-repeat;
+.icon-fallback-img .icon-angle-down {
+  background: url("../fonts/edx-icons/fallback-img/angle-down.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-angle-left {
+  background: url("../fonts/edx-icons/fallback-img/angle-left.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-angle-right {
+  background: url("../fonts/edx-icons/fallback-img/angle-right.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-angle-up {
+  background: url("../fonts/edx-icons/fallback-img/angle-up.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-arrow-circle-down {
+  background: url("../fonts/edx-icons/fallback-img/arrow-circle-down.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-arrow-down {
+  background: url("../fonts/edx-icons/fallback-img/arrow-down.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-arrow-up {
+  background: url("../fonts/edx-icons/fallback-img/arrow-up.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-arrows {
+  background: url("../fonts/edx-icons/fallback-img/arrows.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-book {
+  background: url("../fonts/edx-icons/fallback-img/book.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-bullhorn {
+  background: url("../fonts/edx-icons/fallback-img/bullhorn.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-calendar {
+  background: url("../fonts/edx-icons/fallback-img/calendar.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-camera {
+  background: url("../fonts/edx-icons/fallback-img/camera.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-caret-down {
+  background: url("../fonts/edx-icons/fallback-img/caret-down.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-caret-left {
+  background: url("../fonts/edx-icons/fallback-img/caret-left.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-caret-right {
+  background: url("../fonts/edx-icons/fallback-img/caret-right.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-caret-up {
+  background: url("../fonts/edx-icons/fallback-img/caret-up.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-check {
+  background: url("../fonts/edx-icons/fallback-img/check.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-checkbox-checked {
+  background: url("../fonts/edx-icons/fallback-img/checkbox-checked.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-checkbox-checked-dark {
+  background: url("../fonts/edx-icons/fallback-img/checkbox-checked-dark.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-checkbox-unchecked {
+  background: url("../fonts/edx-icons/fallback-img/checkbox-unchecked.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-chevron-left {
+  background: url("../fonts/edx-icons/fallback-img/chevron-left.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-chevron-right {
+  background: url("../fonts/edx-icons/fallback-img/chevron-right.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-circle {
+  background: url("../fonts/edx-icons/fallback-img/circle.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-circle-light {
+  background: url("../fonts/edx-icons/fallback-img/circle-light.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-clock {
+  background: url("../fonts/edx-icons/fallback-img/clock.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-close {
+  background: url("../fonts/edx-icons/fallback-img/close.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-close-circle {
+  background: url("../fonts/edx-icons/fallback-img/close-circle.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-close-circle-light {
+  background: url("../fonts/edx-icons/fallback-img/close-circle-light.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-closed-captions {
+  background: url("../fonts/edx-icons/fallback-img/closed-captions.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-cog {
+  background: url("../fonts/edx-icons/fallback-img/cog.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-comment {
+  background: url("../fonts/edx-icons/fallback-img/comment.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-comments {
+  background: url("../fonts/edx-icons/fallback-img/comments.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-compress {
+  background: url("../fonts/edx-icons/fallback-img/compress.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-copy {
+  background: url("../fonts/edx-icons/fallback-img/copy.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-edit {
+  background: url("../fonts/edx-icons/fallback-img/edit.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-ellipsis {
+  background: url("../fonts/edx-icons/fallback-img/ellipsis.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-email {
+  background: url("../fonts/edx-icons/fallback-img/email.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-email-light {
+  background: url("../fonts/edx-icons/fallback-img/email-light.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-error {
+  background: url("../fonts/edx-icons/fallback-img/error.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-exit-fullscreen {
+  background: url("../fonts/edx-icons/fallback-img/exit-fullscreen.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-external-link {
+  background: url("../fonts/edx-icons/fallback-img/external-link.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-facebook-square {
+  background: url("../fonts/edx-icons/fallback-img/facebook-square.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-fast-backward {
+  background: url("../fonts/edx-icons/fallback-img/fast-backward.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-fast-forward {
+  background: url("../fonts/edx-icons/fallback-img/fast-forward.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-file {
+  background: url("../fonts/edx-icons/fallback-img/file.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-file-light {
+  background: url("../fonts/edx-icons/fallback-img/file-light.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-filter {
+  background: url("../fonts/edx-icons/fallback-img/filter.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-fullscreen {
+  background: url("../fonts/edx-icons/fallback-img/fullscreen.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-flag {
+  background: url("../fonts/edx-icons/fallback-img/flag.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-help {
+  background: url("../fonts/edx-icons/fallback-img/help.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-hide {
+  background: url("../fonts/edx-icons/fallback-img/hide.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-home {
+  background: url("../fonts/edx-icons/fallback-img/home.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-information {
+  background: url("../fonts/edx-icons/fallback-img/information.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-link {
+  background: url("../fonts/edx-icons/fallback-img/link.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-linkedin-square {
+  background: url("../fonts/edx-icons/fallback-img/linkedin-square.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-list {
+  background: url("../fonts/edx-icons/fallback-img/list.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-list-alt {
+  background: url("../fonts/edx-icons/fallback-img/list-alt.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-lock {
+  background: url("../fonts/edx-icons/fallback-img/lock.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-menu {
+  background: url("../fonts/edx-icons/fallback-img/menu.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-minus {
+  background: url("../fonts/edx-icons/fallback-img/minus.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-money {
+  background: url("../fonts/edx-icons/fallback-img/money.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-pause {
+  background: url("../fonts/edx-icons/fallback-img/pause.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-pencil {
+  background: url("../fonts/edx-icons/fallback-img/pencil.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-play {
+  background: url("../fonts/edx-icons/fallback-img/play.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-plus {
+  background: url("../fonts/edx-icons/fallback-img/plus.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-print {
+  background: url("../fonts/edx-icons/fallback-img/print.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-quote-left {
+  background: url("../fonts/edx-icons/fallback-img/quote-left.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-radio-checked {
+  background: url("../fonts/edx-icons/fallback-img/radio-checked.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-radio-unchecked {
+  background: url("../fonts/edx-icons/fallback-img/radio-unchecked.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-refresh {
+  background: url("../fonts/edx-icons/fallback-img/refresh.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-reply {
+  background: url("../fonts/edx-icons/fallback-img/reply.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-search {
+  background: url("../fonts/edx-icons/fallback-img/search.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-search-minus {
+  background: url("../fonts/edx-icons/fallback-img/search-minus.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-search-plus {
+  background: url("../fonts/edx-icons/fallback-img/search-plus.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-share {
+  background: url("../fonts/edx-icons/fallback-img/share.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-shopping-cart {
+  background: url("../fonts/edx-icons/fallback-img/shopping-cart.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-show {
+  background: url("../fonts/edx-icons/fallback-img/show.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-sitemap {
+  background: url("../fonts/edx-icons/fallback-img/sitemap.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-sort {
+  background: url("../fonts/edx-icons/fallback-img/sort.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-spinner {
+  background: url("../fonts/edx-icons/fallback-img/spinner.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-square {
+  background: url("../fonts/edx-icons/fallback-img/square.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-square-light {
+  background: url("../fonts/edx-icons/fallback-img/square-light.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-star {
+  background: url("../fonts/edx-icons/fallback-img/star.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-stop {
+  background: url("../fonts/edx-icons/fallback-img/stop.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-table {
+  background: url("../fonts/edx-icons/fallback-img/table.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-thumb-tack {
+  background: url("../fonts/edx-icons/fallback-img/thumb-tack.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-trash {
+  background: url("../fonts/edx-icons/fallback-img/trash.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-twitter-square {
+  background: url("../fonts/edx-icons/fallback-img/twitter-square.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-undo {
+  background: url("../fonts/edx-icons/fallback-img/undo.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-unlink {
+  background: url("../fonts/edx-icons/fallback-img/unlink.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-unlock {
+  background: url("../fonts/edx-icons/fallback-img/unlock.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-upload {
+  background: url("../fonts/edx-icons/fallback-img/upload.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-user {
+  background: url("../fonts/edx-icons/fallback-img/user.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-video-camera {
+  background: url("../fonts/edx-icons/fallback-img/video-camera.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-volume-down {
+  background: url("../fonts/edx-icons/fallback-img/volume-down.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-volume-off {
+  background: url("../fonts/edx-icons/fallback-img/volume-off.svg") center center no-repeat;
+}
+
+.icon-fallback-img .icon-volume-up {
+  background: url("../fonts/edx-icons/fallback-img/volume-up.svg") center center no-repeat;
 }
 
 .icon-fallback-img .icon-warning {
