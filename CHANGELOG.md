@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.10.3.1 (2016-02-04)
+* FIX - republish to get around an npm publish failure
+
+- - -
+
 ## 0.10.3 (2016-02-04)
 * FIX - remove obsolete icon fonts from SASS file
 
