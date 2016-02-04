@@ -5,6 +5,11 @@ Nothing yet
 
 - - -
 
+## 0.10.3 (2016-02-04)
+* FIX - remove obsolete icon fonts from SASS file
+
+- - -
+
 ## 0.10.2 (2016-02-04)
 * FIX - removed a one character typo that broke the SASS compilation
 
