@@ -14,7 +14,6 @@ url_dummy:              http://ux.edx.org
 
 baseurl:                /
 permalink:              /:categories/:title/
-relative_permalinks:    true
 
 exclude:                [
                             "node_modules",
