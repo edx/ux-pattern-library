@@ -1,0 +1,57 @@
+server {
+  listen 80;
+  listen 443 ssl;
+
+  server_name pattern-library.*;
+  root /etc/nginx/pattern-library;
+  index index.html;
+
+  # error pages
+  error_page 504 /server/server-error.html;
+  error_page 502 /server/server-error.html;
+  error_page 500 /server/server-error.html;
+
+  ssl_certificate /etc/ssl/certs/wildcard.sandbox.edx.org.pem;
+  ssl_certificate_key /etc/ssl/private/wildcard.sandbox.edx.org.key;
+  # request the browser to use SSL for all connections
+  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+
+  # Nginx does not support nested condition or or conditions so
+  # there is an unfortunate mix of conditonals here.
+         # Redirect http to https over single instance
+  if ($scheme != "https")
+  {
+   set $do_redirect_to_https "true";
+  }
+
+  # Execute the actual redirect
+  if ($do_redirect_to_https = "true")
+  {
+  rewrite ^ https://$host$request_uri? permanent;
+  }
+
+  access_log /edx/var/log/nginx/access.log p_combined;
+  error_log /edx/var/log/nginx/error.log error;
+
+  location / {
+         satisfy any;
+
+     allow 127.0.0.1;
+     allow 192.168.0.0/16;
+     allow 172.16.0.0/12;
+
+     allow 10.3.110.0/24;
+     allow 10.3.120.0/24;
+     allow 10.8.110.0/24;
+     allow 10.8.120.0/24;
+
+     deny all;
+
+     auth_basic            "Restricted";
+     auth_basic_user_file  /edx/app/nginx/nginx.htpasswd;
+
+     index index.html
+     proxy_set_header X-Forwarded-Proto https;
+    try_files $uri @proxy_to_cms_app;
+  }
+}
