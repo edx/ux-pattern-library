@@ -9,7 +9,7 @@
             'clean',
             'build-development',
             'scripts-uglify',
-            ['styles-minify', 'pldoc_styles-minify', 'demo_styles-minify'],
+            ['styles-minify', 'pldoc-styles-minify', 'demo_styles-minify'],
             'webpack',
             callback);
     });

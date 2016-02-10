@@ -7,46 +7,69 @@
 // #DOC SITE LAYOUT
 // ------------------------------
 // header
-.pldoc-wrapper-header-site {
+.pldoc-wrapper-header-site, .pldoc-wrapper-footer-site {
     @extend %grid-wrapper;
-    margin-bottom: spacing-vertical(mid-large);
 }
 
 .pldoc-header-site {
     @extend %grid-container;
     padding-top: spacing-vertical(x-small);
-    padding-bottom: spacing-vertical(x-small);
+
+    .pldoc-header-links {
+        @include float(right);
+    }
 }
 
 .pldoc-header-site-title {
     margin-bottom: 0;
     font-weight: font-weight(bold);
+
+    .pldoc-header-logo {
+        @include float(left);
+        height: 40px;
+        margin-right: spacing-horizontal(small);
+    }
 }
 
 // content
+%grid-wrapper {
+    @include padding-left(spacing-horizontal(base));
+    @include padding-right(spacing-horizontal(base));
+}
+
 .pldoc-wrapper-content {
     @extend %grid-wrapper;
 }
 
 .pldoc-content {
     @extend %grid-container;
+    margin-top: spacing-vertical(x-small);
 }
 
 // main content
 .pldoc-wrapper-content-main {
+    padding-top: spacing-vertical(small);
 
     @include susy-breakpoint($bp-screen-md, $susy-default) {
         @include span(9 last);
     }
 
-}
+    h1 {
+        @extend %hd-3;
+        line-height: 1;
+        color: palette(primary, x-dark);
+    }
 
-.pldoc-content-main {
-
+    h2 {
+        @extend %hd-4;
+        color: palette(primary, x-dark);
+    }
 }
 
 // sidebar
 .pldoc-wrapper-content-supplemental {
+    background-color: palette(grayscale-cool, xx-light);
+    padding: spacing-vertical(small);
 
     @include susy-breakpoint($bp-screen-md, $susy-default) {
         @include span(3 first);
@@ -74,6 +97,7 @@
 .pldoc-pattern-title {
     margin-bottom: spacing-vertical(x-small);
     font-size: font-size(xx-large);
+    line-height: 1;
 
     @include susy-breakpoint($bp-screen-xl, $susy-default) {
         @include span(6 first);

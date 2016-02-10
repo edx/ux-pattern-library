@@ -3,7 +3,7 @@ layout:         pattern
 title:          Copy
 date:           2015-07-09 00:00:00
 
-categories:     patterns
+categories:     design_element
 tags:           
 - atomic
 - pattern

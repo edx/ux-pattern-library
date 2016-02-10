@@ -2,7 +2,11 @@
 
 The (working) UI library and Front End Styleguide for edX/Open edX applications and sites.
 
-[![GitHub version](https://badge.fury.io/gh/edx%2Fux-pattern-library.svg)](https://badge.fury.io/gh/edx%2Fux-pattern-library)  [![npm version](https://badge.fury.io/js/edx-pattern-library.svg)](https://badge.fury.io/js/edx-pattern-library)  [![Bower version](https://badge.fury.io/bo/edx-pattern-library.svg)](https://badge.fury.io/bo/edx-pattern-library)
+[![GitHub version](https://badge.fury.io/gh/edx%2Fux-pattern-library.svg)](https://badge.fury.io/gh/edx%2Fux-pattern-library)
+[![npm version](https://badge.fury.io/js/edx-pattern-library.svg)](https://badge.fury.io/js/edx-pattern-library)
+[![Bower version](https://badge.fury.io/bo/edx-pattern-library.svg)](https://badge.fury.io/bo/edx-pattern-library)
+
+<a href="https://nodei.co/npm/edx-pattern-library/"><img src="https://nodei.co/npm/edx-pattern-library.png?downloads=true&downloadRank=true&stars=true"></a>
 
 - - -
 

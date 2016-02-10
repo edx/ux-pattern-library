@@ -1,6 +1,8 @@
 # edX Pattern Library Documentation Site: Overall Config
 
-title:                  Pattern Library
+title:                  edX Pattern Library
+short_title:            Pattern Library
+
 tagline:                The Visual, UI, and Front End styleguide for edX's applications
 
 author:
@@ -17,6 +19,8 @@ source:                 ./pldoc
 baseurl:                /
 permalink:              /:categories/:title/
 
+source:                 ./pldoc
+
 exclude:                [
                             "node_modules",
                             "gulp",
@@ -25,7 +29,13 @@ exclude:                [
                             "bower.json",
                             "pldoc",
                             "pattern-library",
-                            "bower_components"
+                            "static"
                         ]
+
+collections:
+    components:
+        output: true
+    design_elements:
+        output: true
 
 highlighter:            rouge

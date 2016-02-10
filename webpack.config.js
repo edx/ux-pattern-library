@@ -7,6 +7,8 @@
         siteRoot = process.env.SITE_ROOT !== undefined ? process.env.SITE_ROOT : '/',
         publicJavaScriptRoot = 'public/';
 
+    console.log('Site root = ' + siteRoot);
+
     module.exports = {
         entry: path.resolve(__dirname, 'pldoc/static/js/pattern-library.js'),
         output: {

@@ -1,17 +1,18 @@
 define([
     'jquery'
-    ], function($) {
+], function($) {
+    'use strict';
 
     var Tabs = {
 
         vars: {
-            tabContainer:   $('.pldoc-tab-wrapper'),
-            tabs:           $('.pldoc-tab-labels'),
-            tab:            $('.pldoc-tab-label'),
-            panels:         $('.pldoc-tabs'),
-            panel:          $('.pldoc-tab'),
-            activeClass:    'is-active',
-            hiddenClass:    'is-hidden',
+            $tabContainer:   $('.pldoc-tab-wrapper'),
+            $tabs:           $('.pldoc-tab-labels'),
+            $tab:            $('.pldoc-tab-label'),
+            $panels:         $('.pldoc-tabs'),
+            $panel:          $('.pldoc-tab'),
+            activeClass:     'is-active',
+            hiddenClass:     'is-hidden'
         },
 
         init: function() {
@@ -23,9 +24,9 @@ define([
                 $(target).removeClass(Tabs.vars.activeClass);
             });
 
-            wrapper.find(Tabs.vars.panel).each(function(i, target) {
+            wrapper.find(Tabs.vars.$panel).each(function(i, target) {
                 $(target).removeClass(Tabs.vars.activeClass)
-                       .addClass(Tabs.vars.hiddenClass);
+                    .addClass(Tabs.vars.hiddenClass);
             });
         },
 
@@ -38,24 +39,25 @@ define([
         },
 
         handleTabClick: function() {
-            Tabs.vars.tab.find('.pldoc-link').on('click', function(event) {
-                var el, content;
+            Tabs.vars.$tab.find('.pldoc-link').on('click', function(event) {
+                var $el,
+                    content;
 
-                event.preventDefault();
-
-                el = $(event.currentTarget);
-                content = el.data('href');
-
-                Tabs.resetInterface(el.closest(Tabs.vars.tabContainer));
-                Tabs.makeActive(el, content);
-                Tabs.smoothScroll(content);
+                $el = $(event.currentTarget);
+                content = $el.data('href');
+                if (content) {
+                    event.preventDefault();
+                    Tabs.resetInterface($el.closest(Tabs.vars.$tabContainer));
+                    Tabs.makeActive($el, content);
+                    Tabs.smoothScroll(content);
+                }
             });
         },
 
         makeActive: function(tab, content) {
             tab.addClass(Tabs.vars.activeClass);
             $(content).addClass(Tabs.vars.activeClass)
-                      .removeClass(Tabs.vars.hiddenClass);
+                .removeClass(Tabs.vars.hiddenClass);
         }
     };
 

@@ -1,18 +1,30 @@
----
-layout:     default
-viewclass:  page
----
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
-<div class="pldoc-wrapper-page">
-    <article class="pldoc-page pldoc-page-{{ page.slug }}">
-        <h1 class="pldoc-heading pldoc-page-title">{{ page.title }}</h1>
+{% include head.html %}
 
-        <div class="pldoc-page-copy">
-            {{ content }}
+<body class="pldoc view-{{ page.viewclass }}">
+    <div class="pldoc-nav-skip sr-only">
+        <a class="pldoc-action-skip" href="#content-main">Skip to the main content</a>
+    </div>
+
+    <hr class="pldoc-divider sr-only">
+
+    <div class="pldoc-wrapper-view">
+        {% include header.html %}
+
+        <div class="pldoc-wrapper-content" id="content-top" tabindex="-1">
+            <div class="pldoc-content">
+                <div class="pldoc-wrapper-content-main">
+                    <main class="pldoc-content-main" id="content-main" aria-label="Content">
+                        {{ content }}
+                    </main>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="pldoc-page-meta">
+    {% include assets-secondary.html %}
+</body>
+</html>
 
-        </div>
-    </article>
-</div>

@@ -59,11 +59,6 @@
     }
 }
 
-.badge-ui-toolkit {
-    background-color: $pldoc-ui-toolkit-color;
-    color: palette(grayscale-cool, x-dark);
-}
-
 // ------------------------------
 // #HEADER
 // ------------------------------
@@ -88,9 +83,10 @@
 
 .pldoc-nav {
 
-    padding-bottom: spacing-horizontal(base);
-    @include susy-media($bp-screen-md) {
-        padding-bottom: spacing-horizontal(large);
+    padding-bottom: spacing-vertical(small);
+
+    &:last-child {
+        padding-bottom: 0;
     }
 
     .pldoc-link {
@@ -135,7 +131,7 @@
     .pldoc-nav-title {
         @extend %spaced-nav;
         text-transform: uppercase;
-        color: palette(grayscale, base);
+        color: palette(primary, x-dark);
         font-size: font-size(small);
     }
 
@@ -145,10 +141,12 @@
 
         @include susy-media($bp-screen-md) {
             display: block;
-            padding-top: spacing-vertical(x-small);
-            padding-bottom: spacing-vertical(x-small);
         }
 
+        .pldoc-link {
+            display: block;
+            width: 100%;
+        }
     }
 
     .is-current {
@@ -178,11 +176,7 @@
     @extend %depth-2;
     @include transition(box-shadow timing(fast) ease-in-out);
     border: rem(1) solid palette(grayscale, x-light);
-    padding: spacing-vertical(base) spacing-horizontal(base);
-
-    @include susy-breakpoint($bp-screen-md, $susy-default) {
-       padding: spacing-vertical(base) spacing-horizontal(mid-large);
-    }
+    padding: spacing-horizontal(base);
 }
 
 .pldoc-settings {
@@ -219,13 +213,16 @@
 // #FOOTER
 // ------------------------------
 .pldoc-footer-site {
+    @extend %grid-container;
 
+    padding-top: spacing-horizontal(small);
 }
 
 .pldoc-footer-site-copyright {
 
     .pldoc-copy {
         font-size: font-size(small);
+        margin: 0;
     }
 }
 
@@ -241,7 +238,6 @@
 
 .pldoc-pattern-header {
     margin-bottom: spacing-vertical(small);
-    padding-bottom: spacing-vertical(small);
 }
 
 

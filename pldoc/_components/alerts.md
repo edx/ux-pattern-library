@@ -3,7 +3,7 @@ layout:         pattern
 title:          Alerts
 date:           2016-01-28 00:00:00
 
-categories:     patterns
+categories:     component
 tags:
 - atomic
 - pattern
@@ -20,7 +20,8 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 
 <h3 class="hd-6 example-set-hd">Error Alert with Message and Button</h3>
 <div class="example-set">
-    <div class="alert alert-error" role="alert" aria-labelledby="alert-title-error" tabindex="-1">
+    <div class="alert alert-error" role="alert" aria-labelledby="alert-title-error"
+         tabindex="-1">
         <span class="icon alert-icon icon-warning" aria-hidden="true"></span>
 
         <div class="alert-message-with-action">
@@ -33,13 +34,16 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
             </p>
         </div>
 
-        <button type="button" class="alert-action btn-neutral btn">Read More <span class="sr-only">about charts</span></button>
+        <button type="button" class="alert-action btn-neutral btn">
+            Read More <span class="sr-only">about charts</span>
+        </button>
     </div>
 </div>
 
 <h3 class="hd-6 example-set-hd">Success Alert with Title and Message</h3>
 <div class="example-set">
-    <div class="alert alert-success" role="alert" aria-labelledby="alert-title-success" tabindex="-1">
+    <div class="alert alert-success" role="alert" aria-labelledby="alert-title-success"
+         tabindex="-1">
         <span class="icon alert-icon icon-check" aria-hidden="true"></span>
 
         <div class="alert-message">
@@ -48,8 +52,9 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
             </h3>
 
             <p class="alert-copy-with-title">
-                Hang tight while the rest of the class catches up.  We'll let you know when your peers have
-                graded your essay and when you can help grade theirs as well.  In the meantime,
+                Hang tight while the rest of the class catches up.  We'll let you know
+                when your peers have graded your essay and when you can help grade theirs
+                as well.  In the meantime,
                 <a href="http://example.com">check out what's next in the course</a>.
             </p>
         </div>
@@ -58,7 +63,8 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 
 <h3 class="hd-6 example-set-hd">Warning Alert with Title, Message, and Button</h3>
 <div class="example-set">
-    <div class="alert alert-warning" role="alert" aria-labelledby="alert-title-warning" tabindex="-1">
+    <div class="alert alert-warning" role="alert" aria-labelledby="alert-title-warning"
+         tabindex="-1">
         <span class="icon alert-icon icon-warning" aria-hidden="true"></span>
 
         <div class="alert-message-with-action">
@@ -74,14 +80,17 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
             </p>
         </div>
 
-        <button type="button" class="alert-action btn-neutral btn">Reload <span class="sr-only">peer responses</span></button>
+        <button type="button" class="alert-action btn-neutral btn">
+            Reload <span class="sr-only">peer responses</span>
+        </button>
     </div>
 </div>
 
 
 <h3 class="hd-6 example-set-hd">Warning Alert with Message Only</h3>
 <div class="example-set">
-    <div class="alert alert-warning" role="alert" aria-labelledby="alert-warning-publish-title" tabindex="-1">
+    <div class="alert alert-warning" role="alert" aria-labelledby="alert-warning-publish-title"
+         tabindex="-1">
         <span class="icon alert-icon icon-warning" aria-hidden="true"></span>
 
         <div class="alert-message">
@@ -100,7 +109,8 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 
 <h3 class="hd-6 example-set-hd">Information Alert with Title and Message</h3>
 <div class="example-set">
-    <div class="alert alert-information" role="alert" aria-labelledby="alert-title-information" tabindex="-1">
+    <div class="alert alert-information" role="alert" aria-labelledby="alert-title-information"
+         tabindex="-1">
         <span class="icon alert-icon icon-bullhorn" aria-hidden="true"></span>
 
         <div class="alert-message">
@@ -113,6 +123,5 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
                 have ever registered for this course.
             </p>
         </div>
-
     </div>
 </div>

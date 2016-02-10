@@ -1,13 +1,19 @@
 ---
 layout: default
-title: "404: Page not found"
+title: "Page not found"
 permalink: 404.html
 ---
 
 <div class="message message-404">
-    <h1 class="message-title">{{ page.title }}</h1>
+    <div class="alert alert-error" role="alert" aria-labelledby="alert-title-error" tabindex="-1">
+        <span class="icon alert-icon icon-warning" aria-hidden="true"></span>
 
-    <div class="message-copy">
-        <p>Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ site.baseurl }}">Head back home</a> to try finding it again.</p>
+        <div class="alert-message-with-action">
+            <h3 class="alert-title" id="alert-title-error">Page not found</h3>
+
+            <p class="alert-copy">
+                The page you are looking for was not found at this location.
+            </p>
+        </div>
     </div>
 </div>

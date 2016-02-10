@@ -1,45 +1,12 @@
-{% assign sorted_posts = site.categories.utilities | sort: 'title' %}
-{% include component-list.html title="Utilities" posts=sorted_posts%}
-
-{% assign sorted_posts = site.categories.patterns | sort: 'title' %}
-{% include component-list.html title="Patterns" posts=sorted_posts%}
-
-<nav class="pldoc-nav pldoc-nav-documentation pldoc-nav-external" id="pldoc-nav-documentation" role="navigation" aria-label="Documentation">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6">Documentation</h2>
-
-    <ul class="list-unstyled">
-        <li class="item no-indent">
-            <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}/Styleguide:-General">
-                General Styleguide
-            </a>
-        </li>
-        <li class="item no-indent">
-            <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}Styleguide:-HTML">
-                HTMLS Styleguide
-            </a>
-        </li>
-        <li class="item no-indent">
-            <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}Styleguide:-Sass-&-CSS">
-                Sass &amp; CSS Styleguide
-            </a>
-        </li>
-        <li class="item no-indent">
-            <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_documentation }}Styleguide:-Accessibility">
-                Accessibility Styleguide
-            </a>
-        </li>
+<nav class="pldoc-nav pldoc-nav-internal" role="navigation" aria-label="{{ site.title }}">
+    <h2 class="pldoc-heading pldoc-nav-title hd-6">{{ site.title }}</h2>
+    <ul class="list-unstyled list-patterns">
+        {% include navigation-item.html title="Introduction" url="/" %}
     </ul>
 </nav>
 
-<nav class="pldoc-nav pldoc-nav-project pldoc-nav-external" id="pldoc-nav-project" role="navigation" aria-label="About">
-    <h2 class="pldoc-heading pldoc-nav-title hd-6">About This Project</h2>
+{% assign sorted_pages = site.design_elements | sort: 'title' %}
+{% include collection-page-list.html title="Design Elements" pages=sorted_pages %}
 
-    <ul class="list-unstyled">
-        <li class="item no-indent">
-            <a class="pldoc-link" rel="external" href="{{ site.data.edx-pattern-library.url_github }}">
-                View on Github
-            </a>
-        </li>
-    </ul>
-
-</nav>
+{% assign sorted_pages = site.components | sort: 'title' %}
+{% include collection-page-list.html title="Components" pages=sorted_pages %}
