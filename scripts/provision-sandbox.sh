@@ -14,5 +14,5 @@ bundle install
 # Install JavaScript dependencies
 npm install
 
-# Start the Pattern Library Jekyll server
-jekyll serve --port 3000
+# Update nginx
+./update-nginx.sh
