@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<!--
+edX Pattern Library: Boilerplate HTML Template: Header + Footer
+
+NOTES:
+* base template with the additon of how to handle an app-centric header and footer semantically.
+* this assumes that the header and footer need to have their own visual band/are full width
+  against the viewport. If that's not needed, the ``wrapper-*`` elements around them can be
+  removed in favor of the ``wrapper-view`` grid/layout/visual control.
+-->
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <base href="{base path}">
+
+        <!-- place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="{favicon path}">
+        <!-- place touch icon in the root directory -->
+        <link rel="apple-touch-icon" href="{icon path}">
+
+        <!-- view/page metadata -->
+        <title>{page/view's title}</title>
+        <meta name="description" content="">
+
+        <!-- place primary assets (needed for or to support base view/page rendering) here -->
+        <link rel="stylesheet" href="{main css path}">
+        <script src="{main js path}"></script>
+    </head>
+
+    <body class="{app/site-section-name} {view-name} {stateful-class}">
+        <!-- CASE: if needed, provide a message for older versions of IE -->
+        <!--[if lt IE 9]>
+            <p class="alert alert-browserupgrade">You are using an <strong>outdated</strong> browser.
+            Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- wrapper for all UI rendered within the page/view -->
+        <div class="wrapper-view">
+
+            <!--
+              NOTE: wrapper elements are only needed when they need to manage the grid or
+              larger view/page layout aspects (e.g. spanning the whole viewport)
+            -->
+            <div class="wrapper-header-app">
+                <header class="header-app" aria-label="Page">
+                    <!-- example: app logo/title -->
+                    <h1 class="header-app-title">
+                        <a class="logo" href="{app or company home url}">
+                            <img class="logo-img" src="{path/to/logo-img.svg}" alt="{app/site name} Home Page" />
+                            <!-- example: alternate app/site name (if not a graphical logo) -->
+                            <!-- {app/site name} -->
+                        </a>
+                    </h1>
+                    <!-- insert header content here -->
+                </header>
+            </div>
+
+            <div class="wrapper-nav">
+                <nav class="nav-app">
+                    <a href="{url}">Home</a>
+                    <a href="{url}">Patterns</a>
+                    <a href="{url}">Styleguides</a>
+                    <a href="{url}">Help &amp; Support</a>
+                </nav>
+            </div>
+
+            <!--
+              NOTE: wrapper elements are only needed when they need to manage the grid or
+              larger view/page layout aspects (e.g. spanning the whole viewport)
+            -->
+            <div class="wrapper-content">
+                <!-- insert content here -->
+            </div>
+
+            <!--
+              NOTE: wrapper elements are only needed when they need to manage the grid or
+              larger view/page layout aspects (e.g. spanning the whole viewport)
+            -->
+            <div class="wrapper-footer-app">
+                <footer class="footer-app" aria-label="Page">
+                    <!-- insert footer content here -->
+                </footer>
+            </div>
+        </div>
+
+        <!-- if needed, wrapper for all off-canvas DOM elements -->
+        <div class="wrapper-off-view" id="wrapper-off-view">
+            <!-- off-canvas navigation and elements -->
+            <!-- injected view-centric alerts are placed here -->
+            <!-- injected modals/dialogues are placed here -->
+        </div>
+    </body>
+</html>

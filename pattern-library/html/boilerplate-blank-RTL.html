@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--
+edX Pattern Library: Boilerplate HTML Template: Header + Footer (RTL layout direction!)
+
+NOTES:
+* base template with details on how to handle primary/secondary assets,
+  metadata, and basic view-level UI (on canvas vs. conditional and off-canvas elements)
+* right-to-left (RTL) layout configuration have been added
+* see https://github.com/edx/ux-pattern-library/wiki/Styleguide:-HTML#right-to-left-rtl-support
+  for more information
+-->
+<html class="no-js" lang="en" dir="rtl">
+    <head dir="rtl">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <base href="{base path}">
+
+        <!-- place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="{favicon path}">
+        <!-- place touch icon in the root directory -->
+        <link rel="apple-touch-icon" href="{icon path}">
+
+        <!-- view/page metadata -->
+        <title>{page/view's title}</title>
+        <meta name="description" content="">
+
+        <!-- place primary assets (needed for or to support base view/page rendering) here -->
+        <link rel="stylesheet" href="{main css path}">
+        <script src="{main js path}"></script>
+    </head>
+
+    <body class="{app/site-section-name} {view-name} {stateful-class}">
+        <!-- if needed, provide a message for older versions of IE -->
+        <!--[if lt IE 9]>
+            <p class="alert alert-browserupgrade">You are using an <strong>outdated</strong> browser.
+            Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- wrapper for all UI rendered within the page/view -->
+        <div class="wrapper-view" dir="rtl">
+            <!-- page/view content is placed here -->
+        </div>
+
+        <!-- if needed, wrapper for all off-canvas DOM elements -->
+        <div class="wrapper-off-view" id="wrapper-off-view" dir="rtl">
+            <!-- off-canvas navigation and elements -->
+            <!-- injected view-centric alerts are placed here -->
+            <!-- injected modals/dialogues are placed here -->
+        </div>
+    </body>
+</html>
+
