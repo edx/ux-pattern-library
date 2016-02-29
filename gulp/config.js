@@ -43,7 +43,7 @@ module.exports = {
         demo_src_files:         demo_src + '/static/sass/**/*.scss',
         demo_dest:              dest + '/css',
         demo_dest_files:        dest + '/css/**/*.css',
-        demo_local:             local + '/public/css',
+        demo_local:             local + '/public/css'
     },
     fonts:                      {
         // pattern library
