@@ -11,6 +11,7 @@ _includes
 _layouts
 _posts
 _site
+_tmp_preview_config.yml
 about.md
 bower.json
 bower_components
