@@ -197,7 +197,7 @@
 
 	// intentional global
 	win.FontFaceOnload = FontFaceOnload;
-})( this, this.document );
+})( window, window.document );
 
 /*
  * A Font Garde
@@ -284,4 +284,4 @@
 		}
 	};
 
-})( this );
+})( window );
