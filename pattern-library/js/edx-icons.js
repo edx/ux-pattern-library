@@ -1,9 +1,9 @@
-define([
-    'afontgarde' // require this for this script to work
-    ], function() {
+define(['afontgarde'],
+    function() {
+        'use strict';
 
-    AFontGarde('edx-icons', {
-        // Check a few random icons to see if our font loads
-        glyphs: '\uE621\uE622\uE623'
+        window.AFontGarde('edx-icons', {
+            // Check a few random icons to see if our font loads
+            glyphs: '\uE621\uE622\uE623'
+        });
     });
-});

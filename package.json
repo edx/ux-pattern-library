@@ -25,11 +25,13 @@
     "jquery": "^1.11.1",
     "requirejs": "^2.1.22",
     "requirejs-plugins": "^1.0.2",
+    "sizzle": "^2.3.0",
     "susy": "^2.2.9"
   },
   "devDependencies": {
     "browser-sync": "*",
     "del": "*",
+    "edx-ui-toolkit": "~0.3.0",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-changed": "*",
@@ -44,11 +46,13 @@
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
+    "gulp-webpack": "*",
     "imagemin-pngquant": "*",
     "lodash": "*",
     "merge-stream": "*",
     "require-dir": "*",
-    "run-sequence": "*"
+    "run-sequence": "*",
+    "webpack": "*"
   },
   "scripts": {
     "production": "gulp build-production",
