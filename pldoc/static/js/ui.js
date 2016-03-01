@@ -4,9 +4,9 @@ define(
         './tabs.js',
         './size-slider.js',
         './color-contrast.js',
-        'edx-pattern-library/js/select-replace.js',
-        'edx-ui-toolkit/js/disclosure/disclosure-view.js'
-    ], function($, smoothScroll, Tabs, IconSlider, ColorContrast, DisclosureView) {
+        './disclosure-example.js',
+        'edx-pattern-library/js/select-replace.js'
+    ], function($, smoothScroll, Tabs, IconSlider, ColorContrast) {
         'use strict';
 
         var Ui = {
