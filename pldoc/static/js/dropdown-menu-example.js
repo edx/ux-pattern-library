@@ -7,7 +7,7 @@ define([
     ],
     function( Backbone, DropdownMenuView ) {
         'use strict';
-console.log('load me now');
+
         var dropdownModel = new Backbone.Model();
 
         dropdownModel.set({
