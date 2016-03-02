@@ -1,0 +1,153 @@
+// ------------------------------
+// edX Pattern Library: Utilities - Dropdown Menu
+//
+// About: Contains base styling for alerts.
+// ----------------------------
+
+// #CONFIG
+// #UTILITIES
+// #GENERAL
+// #INDIVIDUAL CASES
+
+
+// ----------------------------
+// #CONFIG
+// ----------------------------
+$link-hover-color: palette(primary, light) !default;
+$focus-border-color: palette(primary, light) !default;
+
+
+// ----------------------------
+// #UTILITIES
+// ----------------------------
+
+
+// ----------------------------
+// #GENERAL
+// ----------------------------
+
+.dropdown-menu-container {
+  height: 40px;
+  position: relative;
+  display: inline;
+}
+
+.dropdown-menu {
+    list-style-type: none;
+}
+
+.menu-title {
+  font: {
+    family: $font-family-sans-serif;
+    size: 0.875em;
+    weight: font-weight(bold);
+  }
+  color: $black;
+  margin: {
+    left: 15px;
+    right: 2px;
+  }
+  line-height: 40px;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+.menu-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 6px;
+}
+
+.button {
+  background: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin-top: 6px;
+  border: none;
+  text-align: right;
+  vertical-align: top;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: $black;
+    border-top-width: 6px;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    &:after {
+      border-top-color: $focus-border-color;
+    }
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: $white;
+  z-index: 1001;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.3);
+  border: 1px solid $gray;
+  margin-top: 0;
+  padding: 5px 10px;
+  width: 170px;
+
+  &:before {
+    @include transform( rotate(-45deg) );
+    background: $white;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $gray;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 7px;
+    top: -7px;
+  }
+
+
+  .dropdown-item {
+    display: block;
+    float: none;
+    padding: 5px 0;
+    border-bottom: 1px dotted $gray-cool;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+      color: palette(grayscale, x-dark);
+    }
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+// ----------------------------
+// #INDIVIDUAL CASES
+// ----------------------------
+
+

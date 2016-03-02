@@ -6669,4 +6669,92 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
     color: #fcfcfc;
     background-color: #25b85a; }
 
+.dropdown-menu-container {
+  height: 40px;
+  position: relative;
+  display: inline; }
+
+.dropdown-menu {
+  list-style-type: none; }
+
+.menu-title {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: #111010;
+  margin-left: 15px;
+  margin-right: 2px;
+  line-height: 40px; }
+  .menu-title:active, .menu-title:hover, .menu-title:focus {
+    color: #53a4d1; }
+
+.menu-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 6px; }
+
+.button {
+  background: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin-top: 6px;
+  border: none;
+  text-align: right;
+  vertical-align: top;
+  position: relative; }
+  .button:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #111010;
+    border-top-width: 6px;
+    position: absolute;
+    top: 11px;
+    right: 10px; }
+  .button:active:after, .button:hover:after, .button:focus:after {
+    border-top-color: #53a4d1; }
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: #fcfcfc;
+  z-index: 1001;
+  background: #fcfcfc;
+  border-radius: 4px;
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid #a7a4a4;
+  margin-top: 0;
+  padding: 5px 10px;
+  width: 170px; }
+  .dropdown-menu:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background: #fcfcfc;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #a7a4a4;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 7px;
+    top: -7px; }
+  .dropdown-menu .dropdown-item {
+    display: block;
+    float: none;
+    padding: 5px 0;
+    border-bottom: 1px dotted #9eb1b9; }
+    .dropdown-menu .dropdown-item:last-of-type {
+      border-bottom: none; }
+    .dropdown-menu .dropdown-item a:hover,
+    .dropdown-menu .dropdown-item a:active,
+    .dropdown-menu .dropdown-item a:focus {
+      color: #4d4b4b; }
+  .dropdown-menu.is-hidden {
+    display: none; }
+
 /*# sourceMappingURL=edx-pattern-library-ltr.css.map */
