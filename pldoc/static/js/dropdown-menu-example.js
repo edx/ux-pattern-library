@@ -3,11 +3,11 @@
  */
 define([
     'backbone',
-    'edx-ui-toolkit/dropdown-menu/dropdown-menu-view'
+    'edx-ui-toolkit/js/dropdown-menu/dropdown-menu-view.js'
     ],
     function( Backbone, DropdownMenuView ) {
         'use strict';
-console.log('load me');
+console.log('load me now');
         var dropdownModel = new Backbone.Model();
 
         dropdownModel.set({
