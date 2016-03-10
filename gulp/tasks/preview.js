@@ -42,6 +42,9 @@
             'jekyll build --config _config.yml,' + previewConfigFile + ' --destination ' + previewSiteDir
         );
 
+        // Remove the configuration file since it is no longer needed
+        childProcess.execSync('rm ' + previewConfigFile);
+
         // Invoke WebPack to rebuild the JavaScript in the preview site with the correct base URL
         childProcess.execSync(
             'OUTPUT_ROOT=' + previewSiteDir + '/ SITE_ROOT=' + previewBaseUrl + ' ./node_modules/.bin/webpack'
