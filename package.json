@@ -50,6 +50,7 @@
     "imagemin-pngquant": "*",
     "lodash": "*",
     "merge-stream": "*",
+    "minimist": "*",
     "require-dir": "*",
     "run-sequence": "*",
     "webpack": "*"
