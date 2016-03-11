@@ -35,7 +35,12 @@
                 <h2 class="alert-title">{{ post.title }} requires the edX UI Toolkit</h2>
 
                 <div class="alert-copy">
-                    <p>This Pattern has a companion JavaScript component, <a href="{{ site.data.edx-ui-toolkit.url_github }}{{ site.data.edx-ui-toolkit.path_components }}{{ post.ui-toolkit-component }}-view.js">{{ post.ui-toolkit-component }}</a>, found in the <a href="{{ site.data.edx-ui-toolkit.url_github }}">{{ site.data.edx-ui-toolkit.name }}</a>.</p>
+                    <p>This Pattern has a companion JavaScript component, 
+                        <a href="{{ site.data.edx-ui-toolkit.url_github }}{{ site.data.edx-ui-toolkit.path_components }}/{{ post.ui-toolkit-component }}">
+                        {{ post.ui-toolkit-component }}
+                        </a>, 
+                        found in the <a href="{{ site.data.edx-ui-toolkit.url_github }}">{{ site.data.edx-ui-toolkit.name }}</a>.
+                    </p>
                 </div>
             </div>
         </div>
@@ -50,6 +55,11 @@
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-markup" data-href="#{{post.slug}}-markup">Markup</button>
                 </li>
+                {% if post.tags contains "js" %}
+                <li class="pldoc-tab-label">
+                    <button class="pldoc-link pldoc-link-js" data-href="#{{post.slug}}-js">JavaScript</button>
+                </li>
+                {% endif %}
                 {% if post.url_styles %}
                 <li class="pldoc-tab-label">
                     <button class="pldoc-link pldoc-link-styling" data-href="#{{post.slug}}-styling">Styling</button>
@@ -83,9 +93,7 @@
                     <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-markup-title">{{post.title}} Markup</h2>
 
                     <div class="pldoc-tab-content">
-                        {% highlight html %}
-                        {{ body }}
-                        {% endhighlight %}
+                        {% highlight html %}{{ body }}{% endhighlight %}
                     </div>
                 </div>
 
@@ -94,6 +102,15 @@
 
                     <div class="pldoc-tab-content">
                         <p class="copy-base">View <a class="pldoc-link" href="{{site.data.edx-pattern-library.url_github}}{{site.data.edx-pattern-library.path_styles}}{{post.url_styles}}">the original source of the CSS as SCSS</a> in this project's repo.</p>
+                    </div>
+                </div>
+                {% endif %}
+                {% if post.tags contains "js" %}
+                <div class="pldoc-tab pldoc-pattern-js is-hidden" id="{{post.slug}}-js" tabindex="-1">
+                    <h2 class="pldoc-heading pldoc-tab-heading pldoc-pattern-js-title">{{post.title}} JavaScript</h2>
+
+                    <div class="pldoc-tab-content">
+                        {% highlight js %}{% include {{post.js}} %}{% endhighlight %}
                     </div>
                 </div>
                 {% endif %}
