@@ -2,13 +2,16 @@
     'use strict';
 
     var path = require('path'),
-        webpack = require('webpack');
+        webpack = require('webpack'),
+        outputRoot = process.env.OUTPUT_ROOT !== undefined ? process.env.OUTPUT_ROOT : 'public',
+        siteRoot = process.env.SITE_ROOT !== undefined ? process.env.SITE_ROOT : '/',
+        publicJavaScriptRoot = 'public/pldoc/js/';
 
     module.exports = {
         entry: path.resolve(__dirname, 'pldoc/static/js/pattern-library.js'),
         output: {
-            path: path.resolve(__dirname, 'public'),
-            publicPath: '/public/pldoc/js/',
+            path: path.resolve(__dirname, outputRoot + publicJavaScriptRoot),
+            publicPath: siteRoot + publicJavaScriptRoot,
             filename: 'pattern-library.js'
         },
         modulesDirectories: ['node_modules'],

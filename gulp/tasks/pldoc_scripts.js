@@ -14,6 +14,6 @@ gulp.task('pldoc_scripts', ['scripts-lint'], function() {
         ])
         .pipe(uglify())
         .pipe(gulp.dest(config.local)) // move just for browersync + local preview
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest(config.dest))
+        .pipe(browserSync.reload({stream: true}))
+        .pipe(gulp.dest(config.dest));
 });
