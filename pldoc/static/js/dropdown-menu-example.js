@@ -8,49 +8,68 @@ define([
     function( Backbone, DropdownMenuView ) {
         'use strict';
 
-        var dropdownModel1 = new Backbone.Model(),
-            dropdownModel2 = new Backbone.Model(),
-            config = {
-                main: {
-                    text: 'dashboard',
-                    url: 'dashboard'
-                },
-                button_label: 'User options dropdown',
-                items: [
-                    {
-                        text: 'Dashboard',
-                        url: 'dashboard'
-                    }, {
-                        text: 'Account',
-                        url: 'account_settings'
-                    }, {
-                        text: 'Profile',
-                        url: 'learner_profile'
-                    }, {
-                        text: 'Sign Out',
-                        url: 'logout'
-                    }
-                ]
-            };
+        var userModel = new Backbone.Model(),
+            bearModel = new Backbone.Model();
 
         // The Basic Example
-        dropdownModel1.set(config);
+        userModel.set({
+            main: {
+                text: 'username',
+                url: '/'
+            },
+            button_label: 'User options dropdown',
+            items: [
+                {
+                    text: 'Dashboard',
+                    url: '/'
+                }, {
+                    text: 'Account',
+                    url: '/'
+                }, {
+                    text: 'Profile',
+                    url: '/'
+                }, {
+                    text: 'Sign Out',
+                    url: '/'
+                }
+            ]
+        });
 
         new DropdownMenuView({
             className: 'wrapper-more-actions dropdown-menu-container logged-in',
-            model: dropdownModel1,
+            model: userModel,
             parent: '.js-user-cta'
         });
 
         // The Full Options Example
-        config.main.screenreader_label = 'Dashboard for:';
-        config.main.image = 'https://placebear.com/50/50';
-        config.main.text = 'username';
-        dropdownModel2.set(config);
+        bearModel.set({
+            main: {
+                image:'https://placebear.com/50/50',
+                screenreader_label: 'Homepage for:',
+                text: 'bears',
+                url: '/'
+            },
+            button_label: 'Bear type dropdown',
+            items: [
+                {
+                    text: 'Grizzly',
+                    url: '/'
+                }, {
+                    text: 'Kodiak',
+                    url: '/'
+                }, {
+                    text: 'Polar',
+                    url: '/'
+                }, {
+                    text: 'Sun',
+                    url: '/'
+                }
+            ]
+        });
 
         new DropdownMenuView({
             className: 'wrapper-more-actions dropdown-menu-container logged-in',
-            model: dropdownModel2,
+            model: bearModel,
             parent: '.js-user-cta-img'
         });
     }

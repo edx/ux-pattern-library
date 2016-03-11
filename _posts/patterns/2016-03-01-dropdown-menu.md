@@ -23,10 +23,10 @@ js:                     "/examples/dropdown-menu-js.html"
 ---
 <h4 class="hd-6 example-set-hd">Basic Dropdown</h4>
 <div class="example-set">
-	<div class="js-user-cta">Hook for dropdown menu</div>
+	<div class="js-user-cta"></div>
 </div>
 
 <h4 class="hd-6 example-set-hd">Dropdown with Image</h4>
 <div class="example-set">
-	<div class="js-user-cta-img">Hook for dropdown menu</div>
+	<div class="js-user-cta-img"></div>
 </div>
