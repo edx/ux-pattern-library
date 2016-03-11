@@ -29,9 +29,10 @@
     "susy": "^2.2.9"
   },
   "devDependencies": {
+    "backbone": "*",
     "browser-sync": "*",
     "del": "*",
-    "edx-ui-toolkit": "~0.3.0",
+    "edx-ui-toolkit": "~0.7.0",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-changed": "*",
@@ -53,6 +54,7 @@
     "minimist": "*",
     "require-dir": "*",
     "run-sequence": "*",
+    "text-loader": "*",
     "webpack": "*"
   },
   "scripts": {

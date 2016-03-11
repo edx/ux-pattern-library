@@ -1,0 +1,165 @@
+// ------------------------------
+// edX Pattern Library: Utilities - Dropdown Menu
+//
+// About: Contains base styling for alerts.
+// ----------------------------
+
+// #CONFIG
+// #UTILITIES
+// #GENERAL
+// #INDIVIDUAL CASES
+
+
+// ----------------------------
+// #CONFIG
+// ----------------------------
+$dropdown-menu-title-height: 40px !default;
+$dropdown-menu-button-height: calc(#{$dropdown-menu-title-height} * 0.75) !default;
+$dropdown-menu-button-top-offset: 6px !default;
+$dropdown-menu-image-title-spacer: 6px !default;
+$dropdown-menu-list-spacing-base: spacing-vertical(x-small) !default;
+$dropdown-menu-button-font-size: font-size(small) !default;
+$dropdown-menu-list-font-size: font-size(base) !default;
+$dropdown-menu-z-index: z-index(very-front) !default;
+$dropdown-menu-list-text-align: left !default;
+$dropdown-menu-width: 170px !default;
+
+$dropdown-menu-focus-border-color: palette(primary, light) !default;
+$dropdown-link-hover-color: palette(primary, light) !default;
+$dropdown-menu-font-color: $black !default;
+$dropdown-menu-list-font-color: $black !default;
+$dropdown-menu-list-hover-color: palette(primary, base) !default;
+$dropdown-menu-background-color: $white !default;
+$dropdown-menu-border-color: $gray !default;
+$dropdown-menu-list-border-color: $gray-cool !default;
+$dropdown-menu-list-border-bottom: 1px dotted $dropdown-menu-list-border-color !default;
+
+// ----------------------------
+// #UTILITIES
+// ----------------------------
+
+
+// ----------------------------
+// #GENERAL
+// ----------------------------
+
+.dropdown-menu-container {
+  height: $dropdown-menu-title-height;
+  position: relative;
+  display: inline;
+
+  .dropdown-menu {
+      list-style-type: none;
+  }
+
+  .menu-title {
+    font: {
+      family: $font-family-sans-serif;
+      size: $dropdown-menu-button-font-size;
+      weight: font-weight(bold);
+    }
+    color: $dropdown-menu-font-color;
+    line-height: $dropdown-menu-title-height;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $dropdown-link-hover-color;
+    }
+  }
+
+  .menu-image {
+    @include margin-right($dropdown-menu-image-title-spacer);
+    width: $dropdown-menu-title-height;
+    height: $dropdown-menu-title-height;
+  }
+
+  .menu-button {
+    @extend %text-center;
+    background: none;
+    width: $dropdown-menu-button-height;
+    height: $dropdown-menu-button-height;
+    padding: 0;
+    margin-top: $dropdown-menu-button-top-offset;
+    border: none;
+    vertical-align: top;
+    position: relative;
+
+    &:active,
+    &:hover,
+    &:focus {
+      &:after {
+        border-top-color: $dropdown-menu-focus-border-color;
+      }
+    }
+
+    // The down caret \/
+    &.default-icon:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-top-color: $dropdown-menu-font-color;
+      border-top-width: 6px;
+      position: absolute;
+      top: 11px;
+      right: 10px;
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: $dropdown-menu-button-height;
+    right: 0;
+    background: $dropdown-menu-background-color;
+    z-index: $dropdown-menu-z-index;
+    border-radius: 4px;
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.3);
+    border: 1px solid $dropdown-menu-border-color;
+    margin-top: 0;
+    padding: $dropdown-menu-list-spacing-base;
+    width: $dropdown-menu-width;
+
+    // The background triangle /\ that looks like a speech bubble
+    &:before {
+      @include transform( rotate(-45deg) );
+      background: $dropdown-menu-background-color;
+      width: 12px;
+      height: 12px;
+      border: 1px solid $dropdown-menu-border-color;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      content: '';
+      display: block;
+      position: absolute;
+      right: 7px;
+      top: -7px;
+    }
+
+
+    .dropdown-item {
+      @include text-align($dropdown-menu-list-text-align);
+      padding-bottom: $dropdown-menu-list-spacing-base;
+      margin-bottom: $dropdown-menu-list-spacing-base;
+      position: relative;
+
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      a {
+        color: $dropdown-menu-list-font-color;
+        font-size: $dropdown-menu-list-font-size;
+        
+        &:hover,
+        &:active,
+        &:focus {
+          color: $dropdown-menu-list-hover-color;
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+}
