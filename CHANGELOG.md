@@ -5,6 +5,17 @@ Nothing yet
 
 - - -
 
+## 0.11.0 (2016-03-22)
+* Added a PR cover letter to the repo
+* Updated Jekyll dependencies
+* Added example HTML boilerplates
+* Bundling assets with WebPack
+* Automated publishing preview version of doc site with S3
+* Added Dropdown Menu component styles and examples
+* Added JS tab to document site at component level
+
+- - -
+
 ## 0.10.4 (2016-02-04)
 * FIX - republish to get around an npm publish failure
 
