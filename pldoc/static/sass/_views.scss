@@ -158,3 +158,12 @@
         @extend %grid-container;
     }
 }
+
+// ------------------------------
+// #EXAMPLE - DROPDOWN MENU
+// ------------------------------
+.prerendered-dropdown {
+    .dropdown-menu {
+        width: 190px;
+    }
+}
