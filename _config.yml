@@ -26,5 +26,4 @@ exclude:                [
                             "bower_components"
                         ]
 
-highlighter:            pygments
-
+highlighter:            rouge
