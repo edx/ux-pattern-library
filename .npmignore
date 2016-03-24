@@ -1,17 +1,22 @@
 
+.bowerrc
 .gitignore
 404.html
+CNAME
+Gemfile
+Gemfile.lock
 _config.yml
 _data
 _includes
 _layouts
 _posts
 _site
-pldoc
+_tmp_preview_config.yml
 about.md
+bower.json
 bower_components
-CNAME
 demo
+edx-ui-toolkit
 examples
 favicon.ico
 gulp
@@ -19,9 +24,6 @@ gulpfile.js
 index.html
 node_modules
 package.json
+pldoc
 public
-bower.json
-.bowerrc
-Gemfile
-Gemfile.lock
 

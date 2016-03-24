@@ -9,4 +9,4 @@ url_github:         https://github.com/edx/edx-ui-toolkit
 url_site:
 url_documentation:  https://github.com/edx/edx-ui-toolkit/blob/master/README.md
 
-path_components:    /blob/master/components/views/
+path_components:    /blob/master/src/js/

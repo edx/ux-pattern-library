@@ -168,7 +168,7 @@ a:active,
   text-align: right;
 }
 
-.align-center.list-divided, ul.align-center, .align-center.list-bulleted, ol.align-center, .align-center.list-ordered, .align-center.list-inline, .align-center.list-grouped, .align-center.list {
+.align-center.list-divided, ul.align-center, .align-center.list-bulleted, ol.align-center, .align-center.list-ordered, .align-center.list-inline, .align-center.list-grouped, .align-center.list, .dropdown-menu-container .menu-button {
   text-align: center;
 }
 
@@ -8793,6 +8793,113 @@ Note: sure .FONT_NAME comes first for adjoining classes bug in IE7.
 .alert-success .alert-icon {
   color: #fcfcfc;
   background-color: #25b85a;
+}
+
+.dropdown-menu-container {
+  height: 40px;
+  position: relative;
+  display: inline;
+}
+
+.dropdown-menu-container .dropdown-menu {
+  list-style-type: none;
+}
+
+.dropdown-menu-container .menu-title {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111010;
+  line-height: 40px;
+}
+
+.dropdown-menu-container .menu-title:active, .dropdown-menu-container .menu-title:hover, .dropdown-menu-container .menu-title:focus {
+  color: #53a4d1;
+}
+
+.dropdown-menu-container .menu-image {
+  margin-left: 6px;
+  width: 40px;
+  height: 40px;
+}
+
+.dropdown-menu-container .menu-button {
+  background: none;
+  width: calc(40px * 0.75);
+  height: calc(40px * 0.75);
+  padding: 0;
+  margin-top: 6px;
+  border: none;
+  vertical-align: top;
+  position: relative;
+}
+
+.dropdown-menu-container .menu-button:active:after, .dropdown-menu-container .menu-button:hover:after, .dropdown-menu-container .menu-button:focus:after {
+  border-top-color: #53a4d1;
+}
+
+.dropdown-menu-container .menu-button.default-icon:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #111010;
+  border-top-width: 6px;
+  position: absolute;
+  top: 11px;
+  right: 10px;
+}
+
+.dropdown-menu-container .dropdown-menu {
+  position: absolute;
+  top: calc(40px * 0.75);
+  right: 0;
+  background: #fcfcfc;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid #a7a4a4;
+  margin-top: 0;
+  padding: 0.625rem;
+  width: 170px;
+}
+
+.dropdown-menu-container .dropdown-menu:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: #fcfcfc;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #a7a4a4;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  content: '';
+  display: block;
+  position: absolute;
+  right: 7px;
+  top: -7px;
+}
+
+.dropdown-menu-container .dropdown-menu .dropdown-item {
+  text-align: right;
+  padding-bottom: 0.625rem;
+  margin-bottom: 0.625rem;
+  position: relative;
+}
+
+.dropdown-menu-container .dropdown-menu .dropdown-item:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dropdown-menu-container .dropdown-menu .dropdown-item a {
+  color: #111010;
+  font-size: 1rem;
+}
+
+.dropdown-menu-container .dropdown-menu .dropdown-item a:hover, .dropdown-menu-container .dropdown-menu .dropdown-item a:active, .dropdown-menu-container .dropdown-menu .dropdown-item a:focus {
+  color: #0079bc;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=demo-rtl.css.map */

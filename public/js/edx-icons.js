@@ -1,1 +1,1 @@
-define(["afontgarde"],function(){AFontGarde("edx-icons",{glyphs:""})});
+define(["afontgarde"],function(){"use strict";window.AFontGarde("edx-icons",{glyphs:""})});

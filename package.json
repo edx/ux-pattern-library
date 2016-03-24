@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.10.4",
+  "version": "0.11.1",
   "author": "edX Pattern Library Team <pattern-library@edx.org>",
   "license": "Apache-2.0",
   "description": "The (working) Visual, UI, and Front End Styleguide for edX Apps",
@@ -25,11 +25,14 @@
     "jquery": "^1.11.1",
     "requirejs": "^2.1.22",
     "requirejs-plugins": "^1.0.2",
+    "sizzle": "^2.3.0",
     "susy": "^2.2.9"
   },
   "devDependencies": {
+    "backbone": "*",
     "browser-sync": "*",
     "del": "*",
+    "edx-ui-toolkit": "~0.7.0",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-changed": "*",
@@ -44,11 +47,15 @@
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
+    "gulp-webpack": "*",
     "imagemin-pngquant": "*",
     "lodash": "*",
     "merge-stream": "*",
+    "minimist": "*",
     "require-dir": "*",
-    "run-sequence": "*"
+    "run-sequence": "*",
+    "text-loader": "*",
+    "webpack": "*"
   },
   "scripts": {
     "production": "gulp build-production",
