@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.0 (2016-04-01)
+* Improve how dependencies are handled via import paths
+
+- - -
+
 ## 0.11.1 (2016-03-23)
 * Switch Jekyll to use rouge for syntax highlighting
 
