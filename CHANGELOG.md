@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.1 (2016-04-02)
+* Rebuild the production assets
+
+- - -
+
 ## 0.12.0 (2016-04-01)
 * Improve how dependencies are handled via import paths
 
