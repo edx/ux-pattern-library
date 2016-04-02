@@ -1,7 +1,7 @@
 # Changelog
 
-## unreleased
-Nothing yet
+## 0.12.0 (2016-04-01)
+* Improve how dependencies are handled via import paths
 
 - - -
 
