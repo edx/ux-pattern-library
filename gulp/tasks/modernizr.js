@@ -6,6 +6,14 @@ var gulp            = require('gulp'),
 
 gulp.task('modernizr', ['scripts-lint'], function() {
     gulp.src('*.js')
-        .pipe(modernizr('modernizr-custom.js'))
+        .pipe(modernizr('modernizr-custom.js', {
+            "options": [
+                "setClasses"
+            ],
+            "tests": [
+                'fontface',
+                'generatedcontent'
+            ]
+        }))
         .pipe(gulp.dest(config.scripts.src));
 });
