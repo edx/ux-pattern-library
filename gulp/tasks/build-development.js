@@ -9,6 +9,7 @@
             'clean',
             'fonts',
             'images',
+            'modernizr',
             ['scripts', 'pldoc_scripts', 'demo_scripts'],
             ['styles', 'pldoc_styles', 'demo_styles'],
             'webpack',
