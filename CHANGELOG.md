@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.12.3 (2016-04-07)
+* Fixed incorrect build settings for Modernizr
+
 ## 0.12.2 (2016-04-07)
 * Added custom Modernizr build the the Gulp workflow
 * Updated Modernizr references to use the above
