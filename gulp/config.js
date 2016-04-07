@@ -22,7 +22,10 @@ module.exports = {
 
         settings_development: {
             outputStyle: 'expanded',
-            sourcemapsLocation: '.'
+            sourcemapsLocation: '.',
+            includePaths: [
+                'node_modules'
+            ]
         },
 
         // pattern library

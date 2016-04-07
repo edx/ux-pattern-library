@@ -1,7 +1,17 @@
 # Changelog
 
-## unreleased
-Nothing yet
+## 0.12.2 (2016-04-07)
+* Added custom Modernizr build the the Gulp workflow
+* Updated Modernizr references to use the above
+* Removed unused Modernizr files
+
+## 0.12.1 (2016-04-02)
+* Rebuild the production assets
+
+- - -
+
+## 0.12.0 (2016-04-01)
+* Improve how dependencies are handled via import paths
 
 - - -
 
