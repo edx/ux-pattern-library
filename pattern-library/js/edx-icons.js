@@ -1,13 +1,18 @@
-define(['afontgarde'], function() {
+;(function(define) {
     'use strict';
-
-    // Old icon fonts, currently used in the platform.
-    window.AFontGarde('FontAwesome', {
-        glyphs: '&#61515;'
+    define(['afontgarde'], function() {
+        // support icons that aren't yet using UXPL
+        window.AFontGarde('FontAwesome', {
+            glyphs: '&#61515;'
+        });
+        // the UXPL icons
+        window.AFontGarde('edx-icons', {
+            glyphs: '\uE621\uE622\uE623'
+        });
     });
-
-    // New icon fonts for UXPL to eventually replace FontAwesome.
-    window.AFontGarde('edx-icons', {
-        glyphs: '\uE621\uE622\uE623'
-    });
-});
+}).call(
+    this,
+    typeof define === 'function' && define.amd ? define :
+        (typeof RequireJS !== 'undefined' ? RequireJS.define :
+            edx.GlobalLoader.defineAs('edxicons', 'edx-pattern-library/js/edx-icons.js'))
+);
