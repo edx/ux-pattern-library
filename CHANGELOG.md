@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.12.4 (2016-04-08)
+* Added checks to edx-icons.js to ensure it loads with or without RequireJS
+
 ## 0.12.3 (2016-04-07)
 * Fixed incorrect build settings for Modernizr
 
