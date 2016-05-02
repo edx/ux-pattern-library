@@ -29,13 +29,18 @@ nbproject
 *.sublime-workspace
 .idea
 
-#Ignore: Front End/Local Development
+# Ignore: Front End/Local Development
 .sass-cache
 *.map
-_site
 _tmp_preview_config.yml
 bower_components
 node_modules
 
-#Ignore: creative/resources
+# Ignore: creative/resources
 _ux
+
+# Documentation
+.publish
+_site
+_preview_site
+public

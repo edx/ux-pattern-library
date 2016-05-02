@@ -12,6 +12,8 @@ url:                    http://ux.edx.org
 url_example:            examples/
 url_dummy:              http://ux.edx.org
 
+source:                 ./pldoc
+
 baseurl:                /
 permalink:              /:categories/:title/
 

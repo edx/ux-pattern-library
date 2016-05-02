@@ -14,7 +14,6 @@ gulp.task('images', function() {
 
     return merge(images, pldocImages, demoImages)
         .pipe(changed(config.dest)) // ignore unchanged files
-        .pipe(gulp.dest(config.local)) // move just for browersync + uncompressed local
         .pipe(browserSync.reload({stream: true}))
         .pipe(gulp.dest(config.dest));
 });
