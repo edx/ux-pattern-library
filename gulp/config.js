@@ -1,15 +1,15 @@
 // gulp pattern library + site configuration
 
     // pattern library
-var dest                        = './public',
-    src                         = './pattern-library',
+var src                         = './pattern-library',
     local                       = './_site',
 
     // documentation site
-    pldoc_src                   = './pldoc',
+    pldocSrc                    = './pldoc',
+    pldocDest                   = pldocSrc + '/public',
 
     // example demo
-    demo_src                    = './demo';
+    demoSrc                     = './demo';
 
 module.exports = {
     browserSync:                {
@@ -35,75 +35,74 @@ module.exports = {
         dest_files:             src + '/css/**/*.css',
 
         // documentation site
-        pldoc_src:              pldoc_src + '/static/sass',
-        pldoc_src_files:        pldoc_src + '/static/sass/**/*.scss',
-        pldoc_dest:             dest + '/css',
-        pldoc_dest_files:       dest + '/css/**/*.css',
-        pldoc_local:            local + '/public/css',
+        pldoc_src:              pldocSrc + '/static/sass',
+        pldoc_src_files:        pldocSrc + '/static/sass/**/*.scss',
+        pldoc_dest:             pldocDest + '/css',
+        pldoc_dest_files:       pldocDest + '/css/**/*.css',
 
         // example demo
-        demo_src:               demo_src + '/static/sass',
-        demo_src_files:         demo_src + '/static/sass/**/*.scss',
-        demo_dest:              dest + '/css',
-        demo_dest_files:        dest + '/css/**/*.css',
-        demo_local:             local + '/public/css'
+        demo_src:               demoSrc + '/static/sass',
+        demo_src_files:         demoSrc + '/static/sass/**/*.scss',
+        demo_dest:              pldocDest + '/css',
+        demo_dest_files:        pldocDest + '/css/**/*.css'
     },
     fonts:                      {
         // pattern library
         src:                    src + '/fonts',
         src_files:              src + '/fonts/**/*',
-        dest:                   dest + '/fonts',
-        local:                  local + '/public/fonts',
+        dest:                   pldocDest + '/fonts',
 
         // documentation site
-        pldoc_src:              pldoc_src + '/static/fonts',
-        pldoc_src_files:        pldoc_src + '/static/fonts/**/*',
+        pldoc_src:              pldocSrc + '/static/fonts',
+        pldoc_src_files:        pldocSrc + '/static/fonts/**/*',
 
         // example demo
-        demo_src:               demo_src + '/static/fonts',
-        demo_src_files:         demo_src + '/static/fonts/**/*'
+        demo_src:               demoSrc + '/static/fonts',
+        demo_src_files:         demoSrc + '/static/fonts/**/*'
     },
     images:                     {
         // pattern library
         src:                    src + '/images',
         src_files:              src + '/images/**/*',
-        dest:                   dest + '/images',
-        local:                  local + '/public/images',
+        dest:                   pldocDest + '/images',
 
         // documentation site
-        pldoc_src:              pldoc_src + '/static/images',
-        pldoc_src_files:        pldoc_src + '/static/images/**/*',
+        pldoc_src:              pldocSrc + '/static/images',
+        pldoc_src_files:        pldocSrc + '/static/images/**/*',
 
         // example demo
-        demo_src:               demo_src + '/static/images',
-        demo_src_files:         demo_src + '/static/images/**/*'
+        demo_src:               demoSrc + '/static/images',
+        demo_src_files:         demoSrc + '/static/images/**/*'
     },
     scripts:                    {
         // pattern library
         src:                    src + '/js',
         src_files:              src + '/js/**/*.js',
-        dest:                   dest + '/js',
-        local:                  local + '/public/js',
+        dest:                   pldocDest + '/js',
 
         // documentation site
-        pldoc_src:              pldoc_src + '/static/js',
-        pldoc_src_files:        pldoc_src + '/static/js/**/*.js',
+        pldoc_src:              pldocSrc + '/static/js',
+        pldoc_src_files:        pldocSrc + '/static/js/**/*.js',
 
         // example demo
-        demo_src:               demo_src + '/static/js',
-        demo_src_files:         demo_src + '/static/js/**/*.js'
+        demo_src:               demoSrc + '/static/js',
+        demo_src_files:         demoSrc + '/static/js/**/*.js'
     },
     lib:                    {
         // third party libraries
         src:                    './node_modules'
     },
     jekyll:                     {
-        home:                   'index.html',
-        posts:                  '_posts/**/*',
-        includes:               '_includes/**/*',
-        examples:               'examples/**/*',
-        demo:                   'demo/**/*.html',
-        layouts:                '_layouts/**/*'
+        home:                   './pldoc/index.html',
+        posts:                  './pldoc/_posts/**/*',
+        includes:               './pldoc/_includes/**/*',
+        examples:               './pldoc/examples/**/*',
+        demo:                   './pldoc/demo/**/*.html',
+        layouts:                './pldoc/_layouts/**/*'
+    },
+    documentation: {
+        gitHubPages: {
+            files: './_site/**/*'
+        }
     }
 };
-

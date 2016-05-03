@@ -2,9 +2,10 @@
  * Gulp tasks for managing an S3-based preview of the Pattern Library documentation.
  *
  * The tasks are as follows:
- *  - build-preview: builds a preview site and uploads it to S3
+ *  - preview: builds a preview site and uploads it to S3
  *  - jekyll-build-preview: build the preview site
  *  - upload-preview: upload the preview site to S3
+ *  - show-preview: show the preview site in the default browser
  *  - remove-preview: removes the preview site from S3
  *
  * Note: please set the environment variable S3_PREVIEW_DOMAIN to the domain
@@ -17,15 +18,19 @@
         runSequence = require('run-sequence'),
         childProcess = require('child_process'),
         gitUtils = require('../util/gitUtils'),
+        webpack = require('gulp-webpack'),
         previewConfigFile = '_tmp_preview_config.yml',
         previewSiteDir = '_preview_site',
         previewDomain = process.env.S3_PREVIEW_DOMAIN;
 
-    gulp.task('build-preview', function(callback) {
+    gulp.task('preview', function(callback) {
         runSequence(
             'jekyll-build-preview',
+            'preview-webpack',
             'upload-preview',
-            callback);
+            'show-preview',
+            callback
+        );
     });
 
     gulp.task('jekyll-build-preview', function() {
@@ -44,11 +49,15 @@
 
         // Remove the configuration file since it is no longer needed
         childProcess.execSync('rm ' + previewConfigFile);
+    });
 
-        // Invoke WebPack to rebuild the JavaScript in the preview site with the correct base URL
-        childProcess.execSync(
-            'OUTPUT_ROOT=' + previewSiteDir + '/ SITE_ROOT=' + previewBaseUrl + ' ./node_modules/.bin/webpack'
-        );
+    gulp.task('preview-webpack', function() {
+        var outputPath =  previewSiteDir + '/public/',
+            branch = gitUtils.currentBranch();
+        process.env.SITE_ROOT = '/' + branch + '/';
+        return gulp.src('')
+            .pipe(webpack(require('../../webpack.config.js')))
+            .pipe(gulp.dest(outputPath));
     });
 
     gulp.task('upload-preview', function() {
@@ -63,6 +72,13 @@
                 'No preview domain specified. Please export environment variable S3_PREVIEW_DOMAIN and try again.'
             );
         }
+    });
+
+    gulp.task('show-preview', function() {
+        var branch = gitUtils.currentBranch();
+        childProcess.execSync(
+            'open http://' + previewDomain + '/' + branch
+        );
     });
 
     gulp.task('remove-preview', function() {

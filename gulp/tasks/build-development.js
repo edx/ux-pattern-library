@@ -6,7 +6,6 @@
 
     gulp.task('build-development', function(callback) {
         runSequence(
-            'clean',
             'fonts',
             'images',
             'modernizr',

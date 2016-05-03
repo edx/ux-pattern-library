@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
     config          = require('../config'),
@@ -13,7 +15,6 @@ gulp.task('scripts', ['scripts-lint'], function() {
             config.scripts.src + '/testing.js'
         ])
         .pipe(uglify())
-        .pipe(gulp.dest(config.scripts.local)) // move for just browsersync + local preview
         .pipe(browserSync.reload({stream: true}))
         .pipe(gulp.dest(config.scripts.dest));
 });

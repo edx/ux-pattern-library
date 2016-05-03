@@ -1,1 +1,0 @@
-define(["afontgarde"],function(){"use strict";window.AFontGarde("FontAwesome",{glyphs:"&#61515;"}),window.AFontGarde("edx-icons",{glyphs:""})});

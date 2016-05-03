@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp            = require('gulp'),
     autoprefixer    = require('gulp-autoprefixer'),
     browserSync     = require('browser-sync'),
@@ -13,7 +15,6 @@ gulp.task('pldoc_styles', function () {
         .on('error', handleErrors)
         .pipe(autoprefixer())
         .pipe(sourcemaps.write(config.settings_development.sourcemapsLocation))
-        .pipe(gulp.dest(config.pldoc_local)) // move just for browersync + uncompressed local
         .pipe(gulp.dest(config.pldoc_dest))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({stream: true}));
 });

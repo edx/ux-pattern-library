@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
     config          = require('../config').scripts,
@@ -13,7 +15,6 @@ gulp.task('pldoc_scripts', ['scripts-lint'], function() {
             config.pldoc_src + '/color-contrast.js'
         ])
         .pipe(uglify())
-        .pipe(gulp.dest(config.local)) // move just for browersync + local preview
         .pipe(browserSync.reload({stream: true}))
         .pipe(gulp.dest(config.dest));
 });
