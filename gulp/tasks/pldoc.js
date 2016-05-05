@@ -55,6 +55,6 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('doc-publish', ['jekyll-build'], function() {
-    return gulp.src(config.gitHubPages.files)
+    return gulp.src(config.documentation.gitHubPages.files)
         .pipe(ghPages());
 });
