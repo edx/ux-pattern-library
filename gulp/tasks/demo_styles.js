@@ -8,7 +8,7 @@ var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
     sourcemaps      = require('gulp-sourcemaps');
 
-gulp.task('demo_styles', function() {
+gulp.task('demo-styles', function() {
     return gulp.src(config.demo_src_files)
         .pipe(sourcemaps.init())
         .pipe(sass(config.settings_development))

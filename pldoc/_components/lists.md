@@ -3,7 +3,7 @@ layout:       pattern
 title:        Lists
 date:         2016-01-06 00:00:00
 
-categories:         patterns
+categories:         component
 tags:               
 - atomic
 - pattern

@@ -3,7 +3,7 @@ layout:         pattern
 title:          UI Depth
 date:           2015-07-21 00:00:00
 
-categories:     patterns
+categories:     design_element
 tags:           
 - atomic
 - pattern
@@ -12,7 +12,7 @@ tags:
 slug:           depth
 
 url_styles:     "patterns/_depth.scss"
-url_example:    depth.html
+url_example:    depth
 
 description:    Visual depth system that be used throughout a UI.
 

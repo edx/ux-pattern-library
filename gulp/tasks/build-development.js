@@ -9,8 +9,9 @@
             'fonts',
             'images',
             'modernizr',
-            ['scripts', 'pldoc_scripts', 'demo_scripts'],
-            ['styles', 'pldoc_styles', 'demo_styles'],
+            ['scripts', 'pldoc-scripts', 'demo-scripts'],
+            ['styles', 'pldoc-styles', 'demo-styles'],
+            'copy-pattern-library',
             'webpack',
             callback
         );

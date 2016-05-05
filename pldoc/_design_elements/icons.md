@@ -3,7 +3,7 @@ layout:             pattern
 title:              Icons
 date:               2016-02-02 00:00:00
 
-categories:         patterns
+categories:         design_element
 tags:               
 - atomic
 - pattern

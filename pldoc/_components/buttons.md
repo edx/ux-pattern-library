@@ -3,7 +3,7 @@ layout:         pattern
 title:          Buttons
 date:           2015-12-28 00:00:00
 
-categories:     patterns
+categories:     component
 tags:           
 - atomic
 - pattern

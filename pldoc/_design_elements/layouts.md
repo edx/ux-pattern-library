@@ -3,7 +3,7 @@ layout:         pattern
 title:          Layouts
 date:           2015-07-10 00:00:00
 
-categories:     patterns
+categories:     design_element
 tags:           
 - atomic
 - pattern
@@ -12,7 +12,7 @@ tags:
 slug:           layouts
 
 url_styles:     "patterns/_layouts.scss"
-url_example:    layouts.html
+url_example:    layouts
 
 description:    Preset view-based and section-based layouts.
 

@@ -5,13 +5,6 @@
             <h1 class="pldoc-heading pldoc-pattern-title hd-4">{{ post.title }}</h1>
 
             <ul class="list-inline pldoc-pattern-meta copy-micro de-emphasized">
-                <li class="item meta meta-updated">
-                    <span class="pldoc-pattern-meta-updated-label">Last updated on </span>
-                    <time class="pldoc-pattern-meta-updated-value" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
-                </li>
-                <li class="item meta meta-permalink">
-                    <a class="pldoc-link" href="{{post.url}}">Permalink <span class="sr-only">to {{ post.slug }}</span></a>
-                </li>
                 {% if post.url_example %}
                 <li class="item meta meta-examplelink">
                     <a class="pldoc-link" href="{{ site.url_example }}{{ post.url_example }}"><span class="sr-only">View </span>Detailed Example</a>

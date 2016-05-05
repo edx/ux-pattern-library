@@ -1,7 +1,7 @@
 // gulp pattern library + site configuration
 
     // pattern library
-var src                         = './pattern-library',
+var patternLibrarySrc           = './pattern-library',
     local                       = './_site',
 
     // documentation site
@@ -12,6 +12,11 @@ var src                         = './pattern-library',
     demoSrc                     = './demo';
 
 module.exports = {
+    patternLibrary: {
+        src_files:  patternLibrarySrc + '/**/*',
+        src: patternLibrarySrc,
+        dest: pldocDest + '/edx-pattern-library'
+    },
     browserSync:                {
         server:                 {
             // Serve up our build folder
@@ -19,7 +24,6 @@ module.exports = {
         }
     },
     styles:                     {
-
         settings_development: {
             outputStyle: 'expanded',
             sourcemapsLocation: '.',
@@ -29,10 +33,10 @@ module.exports = {
         },
 
         // pattern library
-        src_files:              src + '/sass/**/*.scss',
-        src:                    src + '/sass',
-        dest:                   src + '/css',
-        dest_files:             src + '/css/**/*.css',
+        src_files:              patternLibrarySrc + '/sass/**/*.scss',
+        src:                    patternLibrarySrc + '/sass',
+        dest:                   patternLibrarySrc + '/css',
+        dest_files:             patternLibrarySrc + '/css/**/*.css',
 
         // documentation site
         pldoc_src:              pldocSrc + '/static/sass',
@@ -48,8 +52,8 @@ module.exports = {
     },
     fonts:                      {
         // pattern library
-        src:                    src + '/fonts',
-        src_files:              src + '/fonts/**/*',
+        src:                    patternLibrarySrc + '/fonts',
+        src_files:              patternLibrarySrc + '/fonts/**/*',
         dest:                   pldocDest + '/fonts',
 
         // documentation site
@@ -62,8 +66,8 @@ module.exports = {
     },
     images:                     {
         // pattern library
-        src:                    src + '/images',
-        src_files:              src + '/images/**/*',
+        src:                    patternLibrarySrc + '/images',
+        src_files:              patternLibrarySrc + '/images/**/*',
         dest:                   pldocDest + '/images',
 
         // documentation site
@@ -76,8 +80,8 @@ module.exports = {
     },
     scripts:                    {
         // pattern library
-        src:                    src + '/js',
-        src_files:              src + '/js/**/*.js',
+        src:                    patternLibrarySrc + '/js',
+        src_files:              patternLibrarySrc + '/js/**/*.js',
         dest:                   pldocDest + '/js',
 
         // documentation site
@@ -95,6 +99,8 @@ module.exports = {
     jekyll:                     {
         home:                   './pldoc/index.html',
         posts:                  './pldoc/_posts/**/*',
+        components:             './pldoc/_components/**/*',
+        design_elements:        './pldoc/_design_elements/**/*',
         includes:               './pldoc/_includes/**/*',
         examples:               './pldoc/examples/**/*',
         demo:                   './pldoc/demo/**/*.html',

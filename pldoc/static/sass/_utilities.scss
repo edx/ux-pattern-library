@@ -10,6 +10,8 @@
 $pldoc-content-supplemental-width:  rem(330); // width of supplemental content sidebar
 $pldoc-tab-label-height:            rem(4);  // height of tab labels
 $pldoc-ui-toolkit-color:            rgb(255, 222, 32);
+$pldoc-background-color:            palette(grayscale, white);
+$pldoc-link-color:                  palette(primary, dark);
 
 
 // ------------------------------
@@ -34,7 +36,6 @@ $pldoc-ui-toolkit-color:            rgb(255, 222, 32);
     }
 }
 
-
 // ------------------------------
 // #BASE RESET
 // ------------------------------
@@ -46,4 +47,9 @@ html, body {
 
 .pldoc {
     @extend %depth-0;
+    background-color: $pldoc-background-color;
+}
+
+a {
+    color: $pldoc-link-color;
 }

@@ -15,6 +15,7 @@
     "open edx",
     "patterns",
     "pattern library",
+    "style guide",
     "UI starter"
   ],
   "main": "_variables.scss",
@@ -23,7 +24,9 @@
     "**/.*",
     "404.html",
     "_config.yml",
+    "_components",
     "_data",
+    "_design_elements",
     "_includes",
     "_layouts",
     "_posts",

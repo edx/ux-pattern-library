@@ -3,7 +3,7 @@ layout:                 pattern
 title:                  Dropdown Menu
 date:                   2016-02-29 00:00:00
 
-categories:             patterns
+categories:             component
 tags:
 - atomic
 - pattern
@@ -11,7 +11,7 @@ tags:
 - dropdown
 - menu
 
-slug:                   dropdown menu
+slug:                   dropdown-menu
 
 url_styles:             "patterns/_dropdown-menu.scss"
 

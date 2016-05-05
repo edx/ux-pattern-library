@@ -3,7 +3,7 @@ layout:         pattern
 title:          Headings
 date:           2015-10-05 00:00:00
 
-categories:     patterns
+categories:     design_element
 tags:           
 - atomic
 - pattern

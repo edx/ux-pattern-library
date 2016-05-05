@@ -3,7 +3,7 @@ layout:             pattern
 title:              Forms
 date:               2015-05-12 16:02:35
 
-categories:         patterns
+categories:         component
 tags:               
 - atomic
 - pattern

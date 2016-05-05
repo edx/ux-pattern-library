@@ -3,7 +3,7 @@ layout:             pattern
 title:              Grid System
 date:               2015-10-05 00:00:00
 
-categories:         patterns
+categories:         design_element
 tags:               
 - atomic
 - pattern
@@ -12,7 +12,7 @@ tags:
 slug:               grid
 
 url_styles:         "patterns/_grid.scss"
-url_example:        grid.html
+url_example:        grid
 url_documentation:  Styleguide:-Grid-System
 
 description:        Grid system and settings that can be used throughout layouts.

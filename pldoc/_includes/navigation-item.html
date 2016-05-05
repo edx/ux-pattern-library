@@ -1,0 +1,9 @@
+<li class="item no-indent {% if include.url == page.url %}is-current{% endif %}">
+    {% unless include.url == page.url %}
+        <a class="pattern-title pattern pldoc-link" href="{{ site.baseurl }}.{{include.url}}">
+    {% endunless %}
+    {{ include.title }}
+    {% unless include.url == page.url %}
+        </a>
+    {% endunless %}
+</li>
