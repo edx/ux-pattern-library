@@ -1,0 +1,18 @@
+language: node_js
+
+sudo: false
+
+node_js:
+    - "4"
+
+install:
+    - rvm install 2.2.2
+    - npm install
+    - bundle install
+
+script:
+    - gulp build-production
+
+branches:
+    only:
+      - master
