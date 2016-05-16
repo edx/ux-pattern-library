@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.5 (2016-05-06)
+* Revamp the Pattern Library documentation
+* Fix variable scoping bug using newer libsass versions
+
 ## 0.12.4 (2016-04-08)
 * Added checks to edx-icons.js to ensure it loads with or without RequireJS
 
