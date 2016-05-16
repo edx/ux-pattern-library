@@ -7,9 +7,7 @@ var gulp    = require('gulp'),
 gulp.task('clean', function() {
     return del([
         config.scripts.dest,
-        config.images.dest,
-        config.fonts.dest,
         config.styles.dest,
-        config.styles.pldoc_dest
+        config.documentation.pldocDest
     ]);
 });

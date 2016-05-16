@@ -2,19 +2,15 @@
     'use strict';
 
     var path = require('path'),
-        webpack = require('webpack'),
+        Webpack = require('webpack'),
         outputRoot = process.env.OUTPUT_ROOT !== undefined ? process.env.OUTPUT_ROOT : 'pldoc/public/',
         siteRoot = process.env.SITE_ROOT !== undefined ? process.env.SITE_ROOT : '/',
         publicJavaScriptRoot = 'public/';
 
-    console.log('Site root = ' + siteRoot);
-
     module.exports = {
-        entry: path.resolve(__dirname, 'pldoc/static/js/pattern-library.js'),
         output: {
             path: path.resolve(__dirname, outputRoot),
-            publicPath: siteRoot + publicJavaScriptRoot,
-            filename: 'pattern-library.js'
+            publicPath: siteRoot + publicJavaScriptRoot
         },
         modulesDirectories: ['node_modules'],
         resolve: {
@@ -26,10 +22,10 @@
             }
         },
         plugins: [
-            new webpack.ProvidePlugin({
+            new Webpack.ProvidePlugin({
                 $: 'jquery'
             }),
-            new webpack.IgnorePlugin(/^(config.js)$/)
+            new Webpack.IgnorePlugin(/^(config.js)$/)
         ],
         debug: true,
         devtool: 'inline-source-map'

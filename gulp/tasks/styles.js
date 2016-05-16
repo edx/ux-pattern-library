@@ -1,23 +1,37 @@
-(function() {
-    'use strict';
+'use strict';
 
-    var gulp            = require('gulp'),
-        autoprefixer    = require('gulp-autoprefixer'),
-        browserSync     = require('browser-sync'),
-        config          = require('../config').styles,
-        handleErrors    = require('../util/handleErrors'),
-        sass            = require('gulp-sass'),
-        sourcemaps      = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+    runSequence = require('run-sequence'),
+    browserSync = require('browser-sync'),
+    config = require('../config'),
+    webpackUtil = require('../util/webpack');
 
-    gulp.task('styles', function() {
-        return gulp.src(config.src_files)
-            .pipe(sourcemaps.init())
-            .pipe(sass(config.settings_development))
-            .on('error', handleErrors)
-            .pipe(autoprefixer())
-            .pipe(sourcemaps.write(config.settings_development.sourcemapsLocation))
-            .pipe(gulp.dest(config.dest))
-            .pipe(browserSync.reload({stream: true}));
-    });
-})();
+gulp.task('styles', function(callback) {
+    runSequence(
+        'styles-ltr',
+        'styles-rtl',
+        callback
+    );
+});
 
+gulp.task('styles-ltr', function() {
+    return webpackUtil.packageCss(
+        {
+            source: config.styles.rootLtrSassFile,
+            targetDirectory: config.styles.dest,
+            patternLibraryPath: '../../edx-pattern-library'
+        }
+    )
+        .pipe(browserSync.stream());
+});
+
+gulp.task('styles-rtl', function() {
+    return webpackUtil.packageCss(
+        {
+            source: config.styles.rootRtlSassFile,
+            targetDirectory: config.styles.dest,
+            patternLibraryPath: '../../edx-pattern-library'
+        }
+    )
+        .pipe(browserSync.stream());
+});

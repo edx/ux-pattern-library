@@ -15,10 +15,11 @@
 'use strict';
 
 var gulp = require('gulp'),
+    config = require('../config'),
     runSequence = require('run-sequence'),
     childProcess = require('child_process'),
     gitUtils = require('../util/gitUtils'),
-    webpack = require('gulp-webpack'),
+    webpackUtil = require('../util/webpack'),
     previewConfigFile = '_tmp_preview_config.yml',
     previewSiteDir = '_preview_site',
     previewDomain = process.env.S3_PREVIEW_DOMAIN;
@@ -26,7 +27,8 @@ var gulp = require('gulp'),
 gulp.task('preview', function(callback) {
     runSequence(
         'jekyll-build-preview',
-        'preview-webpack',
+        'preview-scripts',
+        'preview-styles',
         'upload-preview',
         'show-preview',
         callback
@@ -51,13 +53,27 @@ gulp.task('jekyll-build-preview', function() {
     childProcess.execSync('rm ' + previewConfigFile);
 });
 
-gulp.task('preview-webpack', function() {
-    var outputPath = previewSiteDir + '/public/',
+gulp.task('preview-scripts', function() {
+    var targetDirectory = previewSiteDir + '/public/',
         branch = gitUtils.currentBranch();
     process.env.SITE_ROOT = '/' + branch + '/';
-    return gulp.src('')
-        .pipe(webpack(require('../../webpack.config.js')))
-        .pipe(gulp.dest(outputPath));
+    return webpackUtil.packageJavaScript(
+        {
+            source: config.documentation.rootJavaScriptFile,
+            targetDirectory: targetDirectory
+        }
+    );
+});
+
+gulp.task('preview-styles', function() {
+    var branch = gitUtils.currentBranch();
+    return webpackUtil.packageCss(
+        {
+            source: config.documentation.rootDemoSassFile,
+            targetDirectory: config.documentation.pldocDest,
+            patternLibraryPath: '/' + branch + '/' + config.documentation.pldocDest + '/edx-pattern-library'
+        }
+    );
 });
 
 gulp.task('upload-preview', function() {

@@ -1,14 +1,11 @@
-(function() {
-    'use strict';
+'use strict';
 
-    var gulp            = require('gulp'),
-        runSequence     = require('run-sequence');
+var gulp            = require('gulp'),
+    runSequence     = require('run-sequence');
 
-    gulp.task('default', function(cb) {
-        runSequence(
-            'build-development',
-            'watch',
-            cb);
-    });
-})();
-
+gulp.task('default', function(cb) {
+    runSequence(
+        'build-development',
+        'watch',
+        cb);
+});

@@ -14,6 +14,8 @@ url:                    http://ux.edx.org
 url_example:            examples/
 url_dummy:              http://ux.edx.org
 
+logo:                   /public/images/edx-logo.svg
+
 source:                 ./pldoc
 
 baseurl:                /
@@ -39,3 +41,6 @@ collections:
         output: true
 
 highlighter:            rouge
+
+gems:
+  - jekyll-seo-tag
