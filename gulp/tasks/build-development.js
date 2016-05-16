@@ -12,7 +12,6 @@
             'scripts',
             'pldoc-scripts',
             'demo-scripts',
-            'styles',
             'demo-styles',
             'copy-pattern-library',
             'webpack',

@@ -9,7 +9,6 @@
             'clean',
             'build-development',
             'scripts-uglify',
-            'styles-minify',
             'webpack',
             callback);
     });
