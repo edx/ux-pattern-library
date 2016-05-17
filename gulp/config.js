@@ -24,16 +24,9 @@ module.exports = {
         }
     },
     styles:                     {
-        settings_development: {
-            outputStyle: 'expanded',
-            sourcemapsLocation: '.',
-            includePaths: [
-                'node_modules'
-            ]
-        },
-
         // pattern library
-        src_files:              patternLibrarySrc + '/sass/**/*.scss',
+        rootLtrSassFile:        patternLibrarySrc + '/sass/edx-pattern-library-ltr.scss',
+        rootRtlSassFile:        patternLibrarySrc + '/sass/edx-pattern-library-rtl.scss',
         src:                    patternLibrarySrc + '/sass',
         dest:                   patternLibrarySrc + '/css',
         dest_files:             patternLibrarySrc + '/css/**/*.css',
@@ -41,14 +34,10 @@ module.exports = {
         // documentation site
         pldoc_src:              pldocSrc + '/static/sass',
         pldoc_src_files:        pldocSrc + '/static/sass/**/*.scss',
-        pldoc_dest:             pldocDest + '/css',
-        pldoc_dest_files:       pldocDest + '/css/**/*.css',
 
         // example demo
         demo_src:               demoSrc + '/static/sass',
-        demo_src_files:         demoSrc + '/static/sass/**/*.scss',
-        demo_dest:              pldocDest + '/css',
-        demo_dest_files:        pldocDest + '/css/**/*.css'
+        demo_src_files:         demoSrc + '/static/sass/**/*.scss'
     },
     fonts:                      {
         // pattern library
@@ -107,6 +96,10 @@ module.exports = {
         layouts:                './pldoc/_layouts/**/*'
     },
     documentation: {
+        rootJavaScriptFile: './pldoc/static/js/pattern-library-doc.js',
+        rootSassFile: './pldoc/static/sass/pattern-library-doc.scss',
+        rootDemoSassFile: './pldoc/demo/static/sass/demo-ltr.scss',
+        pldocDest: pldocDest,
         gitHubPages: {
             files: './_site/**/*'
         }
