@@ -1,19 +1,35 @@
 # Changelog
 
+- - -
+
+## 0.13.0 (2016-06-01)
+* Change $baseline to specify units as px
+* Add a Travis build
+
+- - -
+
 ## 0.12.5 (2016-05-06)
 * Revamp the Pattern Library documentation
 * Fix variable scoping bug using newer libsass versions
 
+- - -
+
 ## 0.12.4 (2016-04-08)
 * Added checks to edx-icons.js to ensure it loads with or without RequireJS
 
+- - -
+
 ## 0.12.3 (2016-04-07)
 * Fixed incorrect build settings for Modernizr
+
+- - -
 
 ## 0.12.2 (2016-04-07)
 * Added custom Modernizr build the the Gulp workflow
 * Updated Modernizr references to use the above
 * Removed unused Modernizr files
+
+- - -
 
 ## 0.12.1 (2016-04-02)
 * Rebuild the production assets
