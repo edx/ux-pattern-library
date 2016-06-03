@@ -1,0 +1,69 @@
+/**
+ * Starts the breadcrumbs example component.
+ */
+define([
+    'backbone',
+    'jquery',
+    'edx-ui-toolkit/js/breadcrumbs/breadcrumbs-view.js',
+    'edx-ui-toolkit/js/breadcrumbs/breadcrumbs-model.js'
+    ],
+    function(Backbone, $, BreadcrumbsView, BreadcrumbsModel) {
+        'use strict';
+
+        var router = new Backbone.Router();
+
+        var breadcrumbsView = new BreadcrumbsView({
+            el: $('.has-breadcrumbs'),
+            model: new BreadcrumbsModel({
+                breadcrumbs: [{url: '/components/breadcrumbs/', title: 'Initial page'}],
+                label: 'Example of breadcrumbs navigation'
+            }),
+            events: {
+                'click nav.breadcrumbs a.nav-item': function (event) {
+                    event.preventDefault();
+
+                    var url = $(event.currentTarget).attr('href'),
+                        currentCrumbs = breadcrumbsView.model.get('breadcrumbs'),
+                        indexOfCrumbClick = currentCrumbs.findIndex(function(crumb){
+                            return crumb.url === url;
+                        });
+
+                    // Remove crumbs after the one that's been clicked from the stack
+                    breadcrumbsView.model.set('breadcrumbs', currentCrumbs.slice(0, indexOfCrumbClick + 1));
+
+                    router.navigate(url, {trigger: true});
+                }
+            }
+        }).render();
+
+        // This view wraps the component you will be navigating with breadcrumbs
+        new Backbone.View({
+            el: $('.breadcrumbs-basic'),
+            events: {
+                'click .add-breadcrumb': function(event) {
+                    // You may choose to direct to the href of a link here, e.g.:
+                    // var url = $(event.currentTarget).attr('href');
+
+                    // This example instead generates a new random breadcrumb
+                    var path = window.location.pathname,
+                        crumbs = ['foo', 'bar', 'fizz', 'buzz'],
+                        randString = crumbs[Math.floor(Math.random() * crumbs.length)],
+                        url = path + (path.slice(-1) === '/' ? '' : '/') + randString;
+
+                    breadcrumbsView.model.set(
+                        'breadcrumbs',
+                        breadcrumbsView.model.get('breadcrumbs').concat([{
+                            url: url,
+                            title: randString
+                        }])
+                    );
+
+                    event.preventDefault();
+                    router.navigate(url, {trigger: true});
+                }
+            }
+        }).render();
+
+        Backbone.history.start({pushState: true});
+    }
+);
