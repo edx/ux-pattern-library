@@ -8,7 +8,6 @@
         runSequence(
             'fonts',
             'images',
-            'modernizr',
             'scripts',
             'pldoc-scripts',
             'demo-scripts',

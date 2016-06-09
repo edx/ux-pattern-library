@@ -221,28 +221,22 @@ info:           Tables are used for displaying information in tabular format, wh
       <th scope="col" class="sortable sort-current sort-descending">
         First
         <button class="sort action-sort">
-          <span class="icon-fallback icon-fallback-text">
-            <span class="icon icon-sort" aria-hidden="true"></span>
-            <span class="text">Sort<span class="sr">&nbsp;Ascending</span></span>
-          </span>
+            <span class="icon fa fa-sort" aria-hidden="true"></span>
+            <span class="sr-only">Sort Ascending</span>
         </button>
       </th>
       <th scope="col" class="sortable">
         Last
         <button class="sort action-sort">
-          <span class="icon-fallback icon-fallback-text">
-            <span class="icon icon-sort" aria-hidden="true"></span>
-            <span class="text">Sort<span class="sr">&nbsp;Ascending</span></span>
-          </span>
+            <span class="icon fa fa-sort" aria-hidden="true"></span>
+            <span class="sr-only">Sort Ascending</span>
         </button>
       </th>
       <th scope="col" class="sortable">
         Lineage
         <button class="sort action-sort">
-          <span class="icon-fallback icon-fallback-text">
-            <span class="icon icon-sort" aria-hidden="true"></span>
-            <span class="text">Sort<span class="sr">&nbsp;Ascending</span></span>
-          </span>
+            <span class="icon fa fa-sort" aria-hidden="true"></span>
+            <span class="sr-only">Sort Ascending</span>
         </button>
       </th>
     </tr>
