@@ -71,7 +71,7 @@ gulp.task('preview-styles', function() {
         {
             source: config.documentation.rootDemoSassFile,
             targetDirectory: config.documentation.pldocDest,
-            patternLibraryPath: '/' + branch + '/' + config.documentation.pldocDest + '/edx-pattern-library'
+            patternLibraryPath: '/' + branch + '/public/edx-pattern-library'
         }
     );
 });
