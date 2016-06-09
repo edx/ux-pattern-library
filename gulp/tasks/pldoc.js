@@ -44,7 +44,7 @@ gulp.task('pldoc-styles', function() {
         {
             source: config.documentation.rootSassFile,
             targetDirectory: config.documentation.pldocDest,
-            patternLibraryPath: '/' + config.documentation.pldocDest + '/edx-pattern-library'
+            patternLibraryPath: '/public/edx-pattern-library'
         }
     )
         .pipe(browserSync.stream());

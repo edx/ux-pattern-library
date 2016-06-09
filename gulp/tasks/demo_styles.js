@@ -10,7 +10,7 @@ gulp.task('demo-styles', function() {
         {
             source: config.documentation.rootDemoSassFile,
             targetDirectory: config.documentation.pldocDest,
-            patternLibraryPath: '/' + config.documentation.pldocDest + '/edx-pattern-library'
+            patternLibraryPath: '/public/edx-pattern-library'
         })
         .pipe(browserSync.stream());
 });
