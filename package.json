@@ -22,12 +22,14 @@
     "bi-app-sass": "^1.1.0",
     "bourbon": "^4.2.6",
     "breakpoint-sass": "^2.6.1",
-    "font-awesome": "^4.6.3",
     "jquery": "^1.11.1",
     "requirejs": "^2.1.22",
     "requirejs-plugins": "^1.0.2",
     "sizzle": "^2.3.0",
     "susy": "^2.2.9"
+  },
+  "peerDependencies": {
+    "font-awesome": "^4.6.3"
   },
   "devDependencies": {
     "backbone": "*",
