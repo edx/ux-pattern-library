@@ -28,13 +28,18 @@
     "sizzle": "^2.3.0",
     "susy": "^2.2.9"
   },
+  "peerDependencies": {
+    "font-awesome": "^4.6.3"
+  },
   "devDependencies": {
     "backbone": "*",
-    "css-loader": "~0.23.1",
     "browser-sync": "*",
+    "css-loader": "~0.23.1",
     "del": "*",
     "edx-ui-toolkit": "~0.10.0",
     "extract-text-webpack-plugin": "~1.0.1",
+    "file-loader": "0.8.5",
+    "font-awesome-loader": "0.0.1",
     "gulp": "*",
     "gulp-changed": "*",
     "gulp-concat": "*",
@@ -43,7 +48,6 @@
     "gulp-gh-pages": "~0.5.4",
     "gulp-ignore": "2.0.1",
     "gulp-minify-css": "*",
-    "gulp-modernizr": "*",
     "gulp-notify": "*",
     "gulp-rename": "*",
     "gulp-uglify": "*",
@@ -51,7 +55,6 @@
     "lodash": "*",
     "merge-stream": "*",
     "minimist": "*",
-    "modernizr": "*",
     "node-sass": "~3.7.0",
     "require-dir": "*",
     "run-sequence": "*",
@@ -59,6 +62,7 @@
     "style-loader": "~0.13.1",
     "text-loader": "*",
     "underscore": "~1.8.3",
+    "url-loader": "^0.5.6",
     "webpack": "~1.12.14",
     "webpack-stream": "~3.2.0"
   },

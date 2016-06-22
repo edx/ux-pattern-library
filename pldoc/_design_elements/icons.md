@@ -22,13 +22,14 @@ info:               Icons are used to clearly and visually represent some inform
 <h3 class="hd-6 example-set-hd">Using Icons (Decorative and as part of controls/content)</h3>
 
 <div class="example-set-description copy-meta">
+    <p>We've organized the icon fonts that edX uses from the <a href="http://fontawesome.io/icons/">Font Awesome 4.6.3</a> library. However the full library of icons is available.</p>
     <p>Icons can be used as both visual decorators or as tangible parts of a UI's controls and content. In the latter case, a fallback method is needed to communicate the icon's purpose/content. Please see the following examples for cases: </p>
 </div>
 
 <div class="example-set">
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon icon-information" aria-hidden="true"></span>
+            <span class="icon fa fa-info-circle" aria-hidden="true"></span>
         </div>
         <div class="use-description">
             <p>Icon as a pure decoration (hidden semantically in the DOM)</p>
@@ -37,27 +38,14 @@ info:               Icons are used to clearly and visually represent some inform
 
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-error" aria-hidden="true"></span>
-                <span class="text">Error</span>
-            </span>
+            <span class="icon fa fa-exclamation-circle" aria-hidden="true"></span>
+            <span class="sr-only">Error</span>
         </div>
         <div class="use-description">
             <p>Icon with text fallback</p>
         </div>
     </div>
 
-    <div class="example example-icon">
-        <div class="icon-display">
-            <span class="icon-fallback icon-fallback-img">
-                <span class="icon icon-warning" aria-hidden="true"></span>
-                <span class="text">Warning</span>
-            </span>
-        </div>
-        <div class="use-description">
-            <p>Icon with image fallback</p>
-        </div>
-    </div>
 </div>
 
 <h3 class="hd-6 example-set-hd">Media</h3>
@@ -65,10 +53,8 @@ info:               Icons are used to clearly and visually represent some inform
 <div class="example-set">
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-video-camera" aria-hidden="true"></span>
-                <span class="text">Video</span>
-            </span>
+            <span class="icon fa fa-video-camera" aria-hidden="true"></span>
+            <span class="sr-only">Video</span>
         </div>
         <div class="icon-classname">
             video-camera
@@ -76,10 +62,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-camera" aria-hidden="true"></span>
-                <span class="text">Camera</span>
-            </span>
+            <span class="icon fa fa-camera" aria-hidden="true"></span>
+            <span class="sr-only">Camera</span>
         </div>
         <div class="icon-classname">
             camera
@@ -87,10 +71,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-closed-captions" aria-hidden="true"></span>
-                <span class="text">Closed Captions</span>
-            </span>
+            <span class="icon fa fa-cc" aria-hidden="true"></span>
+            <span class="sr-only">Closed Captions</span>
         </div>
         <div class="icon-classname">
             closed-captions
@@ -98,10 +80,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-pause" aria-hidden="true"></span>
-                <span class="text">Pause</span>
-            </span>
+            <span class="icon fa fa-pause" aria-hidden="true"></span>
+            <span class="sr-only">Pause</span>
         </div>
         <div class="icon-classname">
             pause
@@ -109,10 +89,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-play" aria-hidden="true"></span>
-                <span class="text">Play</span>
-            </span>
+            <span class="icon fa fa-play" aria-hidden="true"></span>
+            <span class="sr-only">Play</span>
         </div>
         <div class="icon-classname">
             play
@@ -120,10 +98,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-stop" aria-hidden="true"></span>
-                <span class="text">Stop</span>
-            </span>
+            <span class="icon fa fa-stop" aria-hidden="true"></span>
+            <span class="sr-only">Stop</span>
         </div>
         <div class="icon-classname">
             stop
@@ -131,10 +107,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-fullscreen" aria-hidden="true"></span>
-                <span class="text">Enter fullscreen</span>
-            </span>
+            <span class="icon fa fa-arrows-alt" aria-hidden="true"></span>
+            <span class="sr-only">Enter fullscreen</span>
         </div>
         <div class="icon-classname">
             fullscreen
@@ -142,10 +116,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-exit-fullscreen" aria-hidden="true"></span>
-                <span class="text">Exit fullscreen</span>
-            </span>
+            <span class="icon fa fa-compress" aria-hidden="true"></span>
+            <span class="sr-only">Exit fullscreen</span>
         </div>
         <div class="icon-classname">
             exit-fullscreen
@@ -153,10 +125,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-volume-off" aria-hidden="true"></span>
-                <span class="text">Muted</span>
-            </span>
+            <span class="icon fa fa-volume-off" aria-hidden="true"></span>
+            <span class="sr-only">Muted</span>
         </div>
         <div class="icon-classname">
             volume-off
@@ -164,10 +134,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-volume-down" aria-hidden="true"></span>
-                <span class="text">Low volume</span>
-            </span>
+            <span class="icon fa fa-volume-down" aria-hidden="true"></span>
+            <span class="sr-only">Low volume</span>
         </div>
         <div class="icon-classname">
             volume-down
@@ -175,10 +143,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-volume-up" aria-hidden="true"></span>
-                <span class="text">High volume</span>
-            </span>
+            <span class="icon fa fa-volume-up" aria-hidden="true"></span>
+            <span class="sr-only">High volume</span>
         </div>
         <div class="icon-classname">
             volume-up
@@ -191,10 +157,8 @@ info:               Icons are used to clearly and visually represent some inform
 <div class="example-set">
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-user" aria-hidden="true"></span>
-                <span class="text">User account</span>
-            </span>
+            <span class="icon fa fa-user" aria-hidden="true"></span>
+            <span class="sr-only">User account</span>
         </div>
         <div class="icon-classname">
             user
@@ -202,10 +166,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-calendar" aria-hidden="true"></span>
-                <span class="text">Calendar</span>
-            </span>
+            <span class="icon fa fa-calendar" aria-hidden="true"></span>
+            <span class="sr-only">Calendar</span>
         </div>
         <div class="icon-classname">
             calendar
@@ -218,10 +180,8 @@ info:               Icons are used to clearly and visually represent some inform
 <div class="example-set">
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-arrow-up" aria-hidden="true"></span>
-                <span class="text">Up arrow</span>
-            </span>
+            <span class="icon fa fa-arrow-up" aria-hidden="true"></span>
+            <span class="sr-only">Up arrow</span>
         </div>
         <div class="icon-classname">
             arrow-up
@@ -229,10 +189,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-arrow-down" aria-hidden="true"></span>
-                <span class="text">Down arrow</span>
-            </span>
+            <span class="icon fa fa-arrow-down" aria-hidden="true"></span>
+            <span class="sr-only">Down arrow</span>
         </div>
         <div class="icon-classname">
             arrow-down
@@ -240,10 +198,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-arrow-circle-down" aria-hidden="true"></span>
-                <span class="text">Down arrow</span>
-            </span>
+            <span class="icon fa fa-arrow-circle-down" aria-hidden="true"></span>
+            <span class="sr-only">Down arrow</span>
         </div>
         <div class="icon-classname">
             arrow-circle-down
@@ -251,10 +207,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-angle-left" aria-hidden="true"></span>
-                <span class="text">Left arrow</span>
-            </span>
+            <span class="icon fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Left arrow</span>
         </div>
         <div class="icon-classname">
             angle-left
@@ -262,10 +216,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-angle-right" aria-hidden="true"></span>
-                <span class="text">Right arrow</span>
-            </span>
+            <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Right arrow</span>
         </div>
         <div class="icon-classname">
             angle-right
@@ -273,10 +225,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-angle-up" aria-hidden="true"></span>
-                <span class="text">Up arrow</span>
-            </span>
+            <span class="icon fa fa-angle-up" aria-hidden="true"></span>
+            <span class="sr-only">Up arrow</span>
         </div>
         <div class="icon-classname">
             angle-up
@@ -284,10 +234,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-angle-down" aria-hidden="true"></span>
-                <span class="text">Down arrow</span>
-            </span>
+            <span class="icon fa fa-angle-down" aria-hidden="true"></span>
+            <span class="sr-only">Down arrow</span>
         </div>
         <div class="icon-classname">
             angle-down
@@ -295,10 +243,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-refresh" aria-hidden="true"></span>
-                <span class="text">Refresh</span>
-            </span>
+            <span class="icon fa fa-refresh" aria-hidden="true"></span>
+            <span class="sr-only">Refresh</span>
         </div>
         <div class="icon-classname">
             refresh
@@ -306,10 +252,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-menu" aria-hidden="true"></span>
-                <span class="text">Menu</span>
-            </span>
+            <span class="icon fa fa-navicon" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
         </div>
         <div class="icon-classname">
             menu, reorder, bars
@@ -317,10 +261,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-ellipsis" aria-hidden="true"></span>
-                <span class="text">Ellipsis</span>
-            </span>
+            <span class="icon fa fa-ellipsis-h" aria-hidden="true"></span>
+            <span class="sr-only">Ellipsis</span>
         </div>
         <div class="icon-classname">
             ellipsis
@@ -333,10 +275,8 @@ info:               Icons are used to clearly and visually represent some inform
 <div class="example-set">
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-trash" aria-hidden="true"></span>
-                <span class="text">Delete</span>
-            </span>
+            <span class="icon fa fa-trash-o" aria-hidden="true"></span>
+            <span class="sr-only">Delete</span>
         </div>
         <div class="icon-classname">
             trash, delete
@@ -344,10 +284,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-help" aria-hidden="true"></span>
-                <span class="text">Help</span>
-            </span>
+            <span class="icon fa fa-question-circle" aria-hidden="true"></span>
+            <span class="sr-only">Help</span>
         </div>
         <div class="icon-classname">
             help
@@ -355,10 +293,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-check" aria-hidden="true"></span>
-                <span class="text">Check Mark</span>
-            </span>
+            <span class="icon fa fa-check" aria-hidden="true"></span>
+            <span class="sr-only">Check Mark</span>
         </div>
         <div class="icon-classname">
             check
@@ -366,10 +302,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-close" aria-hidden="true"></span>
-                <span class="text">Close</span>
-            </span>
+            <span class="icon fa fa-close" aria-hidden="true"></span>
+            <span class="sr-only">Close</span>
         </div>
         <div class="icon-classname">
             close, remove
@@ -377,10 +311,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-close-circle" aria-hidden="true"></span>
-                <span class="text">Remove</span>
-            </span>
+            <span class="icon fa fa-times-circle" aria-hidden="true"></span>
+            <span class="sr-only">Remove</span>
         </div>
         <div class="icon-classname">
             close-circle
@@ -388,10 +320,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-close-circle-light" aria-hidden="true"></span>
-                <span class="text">Remove</span>
-            </span>
+            <span class="icon fa fa-times-circle-o" aria-hidden="true"></span>
+            <span class="sr-only">Remove</span>
         </div>
         <div class="icon-classname">
             close-circle-light
@@ -399,10 +329,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-error" aria-hidden="true"></span>
-                <span class="text">Error</span>
-            </span>
+            <span class="icon fa fa-exclamation-circle" aria-hidden="true"></span>
+            <span class="sr-only">Error</span>
         </div>
         <div class="icon-classname">
             error
@@ -410,10 +338,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-warning" aria-hidden="true"></span>
-                <span class="text">Warning</span>
-            </span>
+            <span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>
+            <span class="sr-only">Warning</span>
         </div>
         <div class="icon-classname">
             warning
@@ -421,10 +347,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-information" aria-hidden="true"></span>
-                <span class="text">Information</span>
-            </span>
+            <span class="icon fa fa-info-circle" aria-hidden="true"></span>
+            <span class="sr-only">Information</span>
         </div>
         <div class="icon-classname">
             information
@@ -437,10 +361,8 @@ info:               Icons are used to clearly and visually represent some inform
 <div class="example-set">
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-checkbox-checked" aria-hidden="true"></span>
-                <span class="text">Checked checkbox</span>
-            </span>
+            <span class="icon fa fa-check-square-o" aria-hidden="true"></span>
+            <span class="sr-only">Checked checkbox</span>
         </div>
         <div class="icon-classname">
             checkbox-checked
@@ -448,10 +370,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-checkbox-unchecked" aria-hidden="true"></span>
-                <span class="text">Unchecked checkbox</span>
-            </span>
+            <span class="icon fa fa-square-o" aria-hidden="true"></span>
+            <span class="sr-only">Unchecked checkbox</span>
         </div>
         <div class="icon-classname">
             checkbox-unchecked
@@ -459,10 +379,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-checkbox-checked-dark" aria-hidden="true"></span>
-                <span class="text">Checked checkbox</span>
-            </span>
+            <span class="icon fa fa-check-square" aria-hidden="true"></span>
+            <span class="sr-only">Checked checkbox</span>
         </div>
         <div class="icon-classname">
             checkbox-checked-dark
@@ -470,10 +388,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-radio-unchecked" aria-hidden="true"></span>
-                <span class="text">Unchecked radio</span>
-            </span>
+            <span class="icon fa fa-circle-o" aria-hidden="true"></span>
+            <span class="sr-only">Unchecked radio</span>
         </div>
         <div class="icon-classname">
             radio-unchecked
@@ -481,10 +397,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-radio-checked" aria-hidden="true"></span>
-                <span class="text">Checked radio</span>
-            </span>
+            <span class="icon fa fa-dot-circle-o" aria-hidden="true"></span>
+            <span class="sr-only">Checked radio</span>
         </div>
         <div class="icon-classname">
             radio-checked
@@ -497,10 +411,8 @@ info:               Icons are used to clearly and visually represent some inform
 <div class="example-set">
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-list" aria-hidden="true"></span>
-                <span class="text">Unordered list</span>
-            </span>
+            <span class="icon fa fa-list" aria-hidden="true"></span>
+            <span class="sr-only">Unordered list</span>
         </div>
         <div class="icon-classname">
             list
@@ -508,10 +420,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-list-alt" aria-hidden="true"></span>
-                <span class="text">List</span>
-            </span>
+            <span class="icon fa fa-list-alt" aria-hidden="true"></span>
+            <span class="sr-only">List</span>
         </div>
         <div class="icon-classname">
             list-alt
@@ -519,10 +429,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-clock" aria-hidden="true"></span>
-                <span class="text">Clock</span>
-            </span>
+            <span class="icon fa fa-clock-o" aria-hidden="true"></span>
+            <span class="sr-only">Clock</span>
         </div>
         <div class="icon-classname">
             clock
@@ -530,10 +438,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-filter" aria-hidden="true"></span>
-                <span class="text">Filter</span>
-            </span>
+            <span class="icon fa fa-filter" aria-hidden="true"></span>
+            <span class="sr-only">Filter</span>
         </div>
         <div class="icon-classname">
             filter
@@ -541,10 +447,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-sort" aria-hidden="true"></span>
-                <span class="text">Sort</span>
-            </span>
+            <span class="icon fa fa-sort" aria-hidden="true"></span>
+            <span class="sr-only">Sort</span>
         </div>
         <div class="icon-classname">
             sort, unsorted
@@ -552,10 +456,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-undo" aria-hidden="true"></span>
-                <span class="text">Undo</span>
-            </span>
+            <span class="icon fa fa-undo" aria-hidden="true"></span>
+            <span class="sr-only">Undo</span>
         </div>
         <div class="icon-classname">
             undo, rotate-left
@@ -563,10 +465,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-table" aria-hidden="true"></span>
-                <span class="text">Table</span>
-            </span>
+            <span class="icon fa fa-table" aria-hidden="true"></span>
+            <span class="sr-only">Table</span>
         </div>
         <div class="icon-classname">
             table
@@ -574,10 +474,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-book" aria-hidden="true"></span>
-                <span class="text">Bookmark</span>
-            </span>
+            <span class="icon fa fa-book" aria-hidden="true"></span>
+            <span class="sr-only">Bookmark</span>
         </div>
         <div class="icon-classname">
             book
@@ -585,10 +483,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-money" aria-hidden="true"></span>
-                <span class="text">Dollar bill</span>
-            </span>
+            <span class="icon fa fa-money" aria-hidden="true"></span>
+            <span class="sr-only">Dollar bill</span>
         </div>
         <div class="icon-classname">
             money
@@ -596,10 +492,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-file" aria-hidden="true"></span>
-                <span class="text">File</span>
-            </span>
+            <span class="icon fa fa-file" aria-hidden="true"></span>
+            <span class="sr-only">File</span>
         </div>
         <div class="icon-classname">
             file
@@ -607,10 +501,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-file-light" aria-hidden="true"></span>
-                <span class="text">File</span>
-            </span>
+            <span class="icon fa fa-file-o" aria-hidden="true"></span>
+            <span class="sr-only">File</span>
         </div>
         <div class="icon-classname">
             file-light
@@ -618,10 +510,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-home" aria-hidden="true"></span>
-                <span class="text">Home</span>
-            </span>
+            <span class="icon fa fa-home" aria-hidden="true"></span>
+            <span class="sr-only">Home</span>
         </div>
         <div class="icon-classname">
             home
@@ -629,10 +519,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-external-link" aria-hidden="true"></span>
-                <span class="text">External link</span>
-            </span>
+            <span class="icon fa fa-external-link" aria-hidden="true"></span>
+            <span class="sr-only">External link</span>
         </div>
         <div class="icon-classname">
             external-link
@@ -640,10 +528,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-sitemap" aria-hidden="true"></span>
-                <span class="text">Sitemap</span>
-            </span>
+            <span class="icon fa fa-sitemap" aria-hidden="true"></span>
+            <span class="sr-only">Sitemap</span>
         </div>
         <div class="icon-classname">
            sitemap
@@ -651,10 +537,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-lock" aria-hidden="true"></span>
-                <span class="text">Locked</span>
-            </span>
+            <span class="icon fa fa-lock" aria-hidden="true"></span>
+            <span class="sr-only">Locked</span>
         </div>
         <div class="icon-classname">
             lock
@@ -662,10 +546,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-unlock" aria-hidden="true"></span>
-                <span class="text">Unlocked</span>
-            </span>
+            <span class="icon fa fa-unlock" aria-hidden="true"></span>
+            <span class="sr-only">Unlocked</span>
         </div>
         <div class="icon-classname">
             unlock
@@ -673,10 +555,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-search" aria-hidden="true"></span>
-                <span class="text">Search</span>
-            </span>
+            <span class="icon fa fa-search" aria-hidden="true"></span>
+            <span class="sr-only">Search</span>
         </div>
         <div class="icon-classname">
             search
@@ -684,10 +564,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-search-plus" aria-hidden="true"></span>
-                <span class="text">Zoom in</span>
-            </span>
+            <span class="icon fa fa-search-plus" aria-hidden="true"></span>
+            <span class="sr-only">Zoom in</span>
         </div>
         <div class="icon-classname">
             search-plus
@@ -695,10 +573,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-search-minus" aria-hidden="true"></span>
-                <span class="text">Zoom out</span>
-            </span>
+            <span class="icon fa fa-search-minus" aria-hidden="true"></span>
+            <span class="sr-only">Zoom out</span>
         </div>
         <div class="icon-classname">
             search-minus
@@ -706,10 +582,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-settings" aria-hidden="true"></span>
-                <span class="text">Settings</span>
-            </span>
+            <span class="icon fa fa-cog" aria-hidden="true"></span>
+            <span class="sr-only">Settings</span>
         </div>
         <div class="icon-classname">
             settings, cog, gear
@@ -717,10 +591,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-shopping-cart" aria-hidden="true"></span>
-                <span class="text">Checkout</span>
-            </span>
+            <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+            <span class="sr-only">Checkout</span>
         </div>
         <div class="icon-classname">
             shopping-cart
@@ -728,10 +600,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-comments" aria-hidden="true"></span>
-                <span class="text">Comments</span>
-            </span>
+            <span class="icon fa fa-comments" aria-hidden="true"></span>
+            <span class="sr-only">Comments</span>
         </div>
         <div class="icon-classname">
             comments
@@ -739,10 +609,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-comment" aria-hidden="true"></span>
-                <span class="text">Comment</span>
-            </span>
+            <span class="icon fa fa-comment" aria-hidden="true"></span>
+            <span class="sr-only">Comment</span>
         </div>
         <div class="icon-classname">
             comment
@@ -750,10 +618,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-reply" aria-hidden="true"></span>
-                <span class="text">Reply</span>
-            </span>
+            <span class="icon fa fa-reply" aria-hidden="true"></span>
+            <span class="sr-only">Reply</span>
         </div>
         <div class="icon-classname">
             reply
@@ -761,10 +627,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-plus" aria-hidden="true"></span>
-                <span class="text">Add</span>
-            </span>
+            <span class="icon fa fa-plus" aria-hidden="true"></span>
+            <span class="sr-only">Add</span>
         </div>
         <div class="icon-classname">
             plus
@@ -772,10 +636,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-minus" aria-hidden="true"></span>
-                <span class="text">Remove</span>
-            </span>
+            <span class="icon fa fa-minus" aria-hidden="true"></span>
+            <span class="sr-only">Remove</span>
         </div>
         <div class="icon-classname">
             minus
@@ -783,10 +645,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-print" aria-hidden="true"></span>
-                <span class="text">Print</span>
-            </span>
+            <span class="icon fa fa-print" aria-hidden="true"></span>
+            <span class="sr-only">Print</span>
         </div>
         <div class="icon-classname">
             print
@@ -794,10 +654,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-pencil" aria-hidden="true"></span>
-                <span class="text">Pencil</span>
-            </span>
+            <span class="icon fa fa-pencil" aria-hidden="true"></span>
+            <span class="sr-only">Pencil</span>
         </div>
         <div class="icon-classname">
             pencil
@@ -805,10 +663,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-edit" aria-hidden="true"></span>
-                <span class="text">Edit</span>
-            </span>
+            <span class="icon fa fa-edit" aria-hidden="true"></span>
+            <span class="sr-only">Edit</span>
         </div>
         <div class="icon-classname">
             edit
@@ -816,10 +672,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-copy" aria-hidden="true"></span>
-                <span class="text">Copy</span>
-            </span>
+            <span class="icon fa fa-copy" aria-hidden="true"></span>
+            <span class="sr-only">Copy</span>
         </div>
         <div class="icon-classname">
             copy
@@ -827,10 +681,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-email" aria-hidden="true"></span>
-                <span class="text">Email</span>
-            </span>
+            <span class="icon fa fa-envelope" aria-hidden="true"></span>
+            <span class="sr-only">Email</span>
         </div>
         <div class="icon-classname">
             email
@@ -838,10 +690,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-flag" aria-hidden="true"></span>
-                <span class="text">Flag</span>
-            </span>
+            <span class="icon fa fa-flag" aria-hidden="true"></span>
+            <span class="sr-only">Flag</span>
         </div>
         <div class="icon-classname">
             flag
@@ -849,10 +699,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-thumb-tack" aria-hidden="true"></span>
-                <span class="text">Pin</span>
-            </span>
+            <span class="icon fa fa-thumb-tack" aria-hidden="true"></span>
+            <span class="sr-only">Pin</span>
         </div>
         <div class="icon-classname">
             thumb-tack
@@ -860,10 +708,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-link" aria-hidden="true"></span>
-                <span class="text">Link</span>
-            </span>
+            <span class="icon fa fa-link" aria-hidden="true"></span>
+            <span class="sr-only">Link</span>
         </div>
         <div class="icon-classname">
             link
@@ -871,10 +717,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-unlink" aria-hidden="true"></span>
-                <span class="text">Unlink</span>
-            </span>
+            <span class="icon fa fa-unlink" aria-hidden="true"></span>
+            <span class="sr-only">Unlink</span>
         </div>
         <div class="icon-classname">
             unlink
@@ -882,10 +726,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-quote-left" aria-hidden="true"></span>
-                <span class="text">Quote</span>
-            </span>
+            <span class="icon fa fa-quote-left" aria-hidden="true"></span>
+            <span class="sr-only">Quote</span>
         </div>
         <div class="icon-classname">
             quote-left
@@ -893,10 +735,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-upload" aria-hidden="true"></span>
-                <span class="text">Upload</span>
-            </span>
+            <span class="icon fa fa-upload" aria-hidden="true"></span>
+            <span class="sr-only">Upload</span>
         </div>
         <div class="icon-classname">
             upload
@@ -904,10 +744,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-show" aria-hidden="true"></span>
-                <span class="text">Show</span>
-            </span>
+            <span class="icon fa fa-eye" aria-hidden="true"></span>
+            <span class="sr-only">Show</span>
         </div>
         <div class="icon-classname">
             show, visible
@@ -915,10 +753,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-hide" aria-hidden="true"></span>
-                <span class="text">Hide</span>
-            </span>
+            <span class="icon fa fa-eye-slash" aria-hidden="true"></span>
+            <span class="sr-only">Hide</span>
         </div>
         <div class="icon-classname">
             hide, hidden
@@ -926,10 +762,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-share" aria-hidden="true"></span>
-                <span class="text">Share</span>
-            </span>
+            <span class="icon fa fa-share-square-o" aria-hidden="true"></span>
+            <span class="sr-only">Share</span>
         </div>
         <div class="icon-classname">
             share
@@ -937,10 +771,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-star" aria-hidden="true"></span>
-                <span class="text">Favorite</span>
-            </span>
+            <span class="icon fa fa-star" aria-hidden="true"></span>
+            <span class="sr-only">Favorite</span>
         </div>
         <div class="icon-classname">
             star
@@ -948,10 +780,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-bullhorn" aria-hidden="true"></span>
-                <span class="text">Notifications</span>
-            </span>
+            <span class="icon fa fa-bullhorn" aria-hidden="true"></span>
+            <span class="sr-only">Notifications</span>
         </div>
         <div class="icon-classname">
             bullhorn
@@ -959,10 +789,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-spinner" aria-hidden="true"></span>
-                <span class="text">Loading, please wait...</span>
-            </span>
+            <span class="icon fa fa-spinner" aria-hidden="true"></span>
+            <span class="sr-only">Loading, please wait...</span>
         </div>
         <div class="icon-classname">
             spinner
@@ -970,10 +798,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-twitter-square" aria-hidden="true"></span>
-                <span class="text">Twitter</span>
-            </span>
+            <span class="icon fa fa-twitter-square" aria-hidden="true"></span>
+            <span class="sr-only">Twitter</span>
         </div>
         <div class="icon-classname">
             twitter-square
@@ -981,10 +807,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-facebook-square" aria-hidden="true"></span>
-                <span class="text">Facebook</span>
-            </span>
+            <span class="icon fa fa-facebook-square" aria-hidden="true"></span>
+            <span class="sr-only">Facebook</span>
         </div>
         <div class="icon-classname">
             facebook-square
@@ -992,10 +816,8 @@ info:               Icons are used to clearly and visually represent some inform
     </div>
     <div class="example example-icon">
         <div class="icon-display">
-            <span class="icon-fallback icon-fallback-text">
-                <span class="icon icon-linkedin-square" aria-hidden="true"></span>
-                <span class="text">LinkedIn</span>
-            </span>
+            <span class="icon fa fa-linkedin-square" aria-hidden="true"></span>
+            <span class="sr-only">LinkedIn</span>
         </div>
         <div class="icon-classname">
             linkedin-square

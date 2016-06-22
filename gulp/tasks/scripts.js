@@ -8,10 +8,7 @@ var gulp            = require('gulp'),
 gulp.task('scripts', ['scripts-lint'], function() {
     return gulp.src([
             // setup script sequence
-            config.scripts.src + '/modernizr-custom.js',
-            config.scripts.src + '/afontgarde.js',
             config.scripts.src + '/select-replace.js',
-            config.scripts.src + '/edx-icons.js',
             config.scripts.src + '/testing.js'
         ])
         .pipe(uglify())

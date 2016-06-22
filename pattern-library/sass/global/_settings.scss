@@ -170,7 +170,6 @@ $shadow: transparentize(palette(grayscale, black-t), .5);
 // typography: Open Sans
 
 $open-sans-font-path: '#{$font-path}/OpenSans' !default;
-$edx-icons-font-path: '#{$font-path}/edx-icons' !default;
 
 @include font-face(
     'Open Sans',
@@ -223,13 +222,6 @@ $edx-icons-font-path: '#{$font-path}/edx-icons' !default;
     700,
     italic,
     $file-formats: woff woff2 ttf
-);
-
-@include font-face(
-    'edx-icons',
-    '#{$edx-icons-font-path}/edx-icons',
-    300,
-    $file-formats: woff ttf // NOTE: woff2 format currently not supported by IcoMoon font output
 );
 
 // typography: config - stacks
