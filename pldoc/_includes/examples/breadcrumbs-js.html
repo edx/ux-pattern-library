@@ -11,9 +11,10 @@ define([
         'use strict';
 
         var router = new Backbone.Router();
+        var $wrapper = $('.breadcrumbs-basic');
 
         var breadcrumbsView = new BreadcrumbsView({
-            el: $('.has-breadcrumbs'),
+            el: $('.has-breadcrumbs', $wrapper),
             model: new BreadcrumbsModel({
                 breadcrumbs: [{url: '/components/breadcrumbs/', title: 'Initial page'}],
                 label: 'Example of breadcrumbs navigation'
@@ -38,7 +39,7 @@ define([
 
         // This view wraps the component you will be navigating with breadcrumbs
         new Backbone.View({
-            el: $('.breadcrumbs-basic'),
+            el: $wrapper,
             events: {
                 'click .add-breadcrumb': function(event) {
                     // You may choose to direct to the href of a link here, e.g.:
