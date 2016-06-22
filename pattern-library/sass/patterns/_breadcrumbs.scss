@@ -4,12 +4,12 @@
     line-height: line-height(small);
 
     .nav-item {
-        @include margin-right($baseline/2);
+        @include margin-left($baseline/4);
         display: inline-block;
     }
 
     .fa.fa-angle-right {
-        @include margin-right($baseline/4);
+        @include margin-left($baseline/4);
         display: inline-block;
         color: palette(grayscale, light);
 
