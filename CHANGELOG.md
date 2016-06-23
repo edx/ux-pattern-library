@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.14.0 (2016-06-23)
+* Replace edx-icons with Font Awesome
+
+- - -
+
 ## 0.13.0 (2016-06-01)
 * Change $baseline to specify units as px
 * Add a Travis build
