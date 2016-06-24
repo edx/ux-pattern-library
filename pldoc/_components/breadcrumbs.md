@@ -23,14 +23,13 @@ js:                     "/examples/breadcrumbs-js.html"
 ---
 <div class="breadcrumbs-basic example-set">
   <h2>Basic breadcrumbs</h2>
-  <header class="has-breadcrumbs hd-3"></header>
+  <div class="has-breadcrumbs hd-3"></div>
   <a class="add-breadcrumb" href="">Add breadcrumb</a>
 </div>
 
 <div class="breadcrumbs-prerendered example-set">
   <h2>Pre-rendered breadcrumbs</h2>
-  <header class="has-breadcrumbs hd-3">
-    <div class="sr-is-focusable" tabindex="-1"></div>
+  <div class="has-breadcrumbs hd-3">
     <nav class="breadcrumbs list-inline" aria-label="Example of pre-rendered breadcrumbs navigation">
       <span class="nav-item">
           <a href="/components/breadcrumbs/">Initial page</a>
@@ -50,5 +49,5 @@ js:                     "/examples/breadcrumbs-js.html"
       </span>
       <span class="nav-item">buzz</span>
     </nav>
-  </header>
+  </div>
 </div>
