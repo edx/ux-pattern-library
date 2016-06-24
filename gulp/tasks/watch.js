@@ -19,7 +19,7 @@ gulp.task('watch', ['browserSync'], function() {
     gulp.watch(config.jekyll.posts, ['jekyll-rebuild']);
     gulp.watch(config.jekyll.components, ['jekyll-rebuild']);
     gulp.watch(config.jekyll.design_elements, ['jekyll-rebuild']);
-    gulp.watch(config.jekyll.includes, ['jekyll-rebuild']);
+    gulp.watch(config.jekyll.includes, ['pldoc-scripts', 'jekyll-rebuild']);
     gulp.watch(config.jekyll.examples, ['jekyll-rebuild']);
     gulp.watch(config.jekyll.demo, ['jekyll-rebuild']);
     gulp.watch(config.jekyll.layouts, ['jekyll-rebuild']);

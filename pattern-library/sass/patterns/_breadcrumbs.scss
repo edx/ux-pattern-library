@@ -1,0 +1,20 @@
+.breadcrumbs {
+    font-family: $font-family-sans-serif;
+    font-size: font-size(small);
+    line-height: line-height(small);
+
+    .nav-item {
+        @include margin-left($baseline/4);
+        display: inline-block;
+    }
+
+    .fa-angle-right {
+        @include margin-left($baseline/4);
+        display: inline-block;
+        color: palette(grayscale, light);
+
+        @include rtl {
+            @include transform(rotateY(180deg));
+        }
+    }
+}
