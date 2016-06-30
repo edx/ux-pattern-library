@@ -111,7 +111,7 @@ info:               Forms allow users to interact with the interface, set prefer
                 <label class="field-label" for="search-03">Search (with visible label and icon)</label>
                 <input class="field-input input-text" type="search" id="search-03" name="search-03" placeholder="Search this website">
                 <button class="btn-brand btn-small" type="button">
-                    <span class="icon icon-search" aria-hidden="true"></span>
+                    <span class="icon fa fa-search" aria-hidden="true"></span>
                     <span class="sr-only">Search</span>
                 </button>
             </div>

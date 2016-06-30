@@ -22,7 +22,7 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 <div class="example-set">
     <div class="alert alert-error" role="alert" aria-labelledby="alert-title-error"
          tabindex="-1">
-        <span class="icon alert-icon icon-warning" aria-hidden="true"></span>
+        <span class="icon alert-icon fa fa-warning" aria-hidden="true"></span>
 
         <div class="alert-message-with-action">
             <h3 class="sr-only alert-title" id="alert-title-error">
@@ -44,7 +44,7 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 <div class="example-set">
     <div class="alert alert-success" role="alert" aria-labelledby="alert-title-success"
          tabindex="-1">
-        <span class="icon alert-icon icon-check" aria-hidden="true"></span>
+        <span class="icon alert-icon fa fa-check" aria-hidden="true"></span>
 
         <div class="alert-message">
             <h3 class="alert-title" id="alert-title-success">
@@ -65,7 +65,7 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 <div class="example-set">
     <div class="alert alert-warning" role="alert" aria-labelledby="alert-title-warning"
          tabindex="-1">
-        <span class="icon alert-icon icon-warning" aria-hidden="true"></span>
+        <span class="icon alert-icon fa fa-warning" aria-hidden="true"></span>
 
         <div class="alert-message-with-action">
             <h3 class="alert-title" id="alert-title-warning">
@@ -91,7 +91,7 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 <div class="example-set">
     <div class="alert alert-warning" role="alert" aria-labelledby="alert-warning-publish-title"
          tabindex="-1">
-        <span class="icon alert-icon icon-warning" aria-hidden="true"></span>
+        <span class="icon alert-icon fa fa-warning" aria-hidden="true"></span>
 
         <div class="alert-message">
             <h3 class="sr-only alert-title" id="alert-warning-publish-title">
@@ -111,7 +111,7 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
 <div class="example-set">
     <div class="alert alert-information" role="alert" aria-labelledby="alert-title-information"
          tabindex="-1">
-        <span class="icon alert-icon icon-bullhorn" aria-hidden="true"></span>
+        <span class="icon alert-icon fa fa-bullhorn" aria-hidden="true"></span>
 
         <div class="alert-message">
             <h3 class="alert-title" id="alert-title-information">

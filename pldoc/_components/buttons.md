@@ -38,7 +38,7 @@ info:          Buttons should be used for performing actions within the edX envi
 <h3 class="example-set-hd">Neutral with Icons</h3>
 <div class="example-set">
     <button type="button" class="btn-neutral">
-        <span class="icon icon-comment" aria-hidden="true"></span>
+        <span class="icon fa fa-comment" aria-hidden="true"></span>
         Add your thoughts to this thread
     </button>
 </div>
