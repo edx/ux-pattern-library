@@ -6,5 +6,7 @@ require(
         '../../_includes/examples/breadcrumbs-js.html',
         './edx-icons.js'
     ],
-    function($, Ui) {}
+    function() {
+        'use strict';
+    }
 );

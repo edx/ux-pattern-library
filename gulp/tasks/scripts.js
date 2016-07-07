@@ -5,7 +5,7 @@ var gulp            = require('gulp'),
     config          = require('../config'),
     uglify          = require('gulp-uglify');
 
-gulp.task('scripts', ['scripts-lint'], function() {
+gulp.task('scripts', ['lint'], function() {
     return gulp.src([
             // setup script sequence
             config.scripts.src + '/select-replace.js',

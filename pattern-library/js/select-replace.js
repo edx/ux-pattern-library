@@ -1,7 +1,7 @@
 define([
     'jquery'
-    ], function($) {
-
+], function($) {
+    'use strict';
     /*
      * Select menu replacement
      * Handles functionality for the replacement select menus, which
@@ -12,18 +12,16 @@ define([
      * Choosing an option in the replacement menu also updates the
      * default select menu thus maintaining accessibility.
      */
-
-
     var CustomSelectReplacement = {
 
         vars: {
-            replaced:       $('.replace-select'),
-            replacedClass:  'is-replaced is-transparent',
-            customClass:    'wrapper-custom-select',
-            wrapperClass:   'wrapper-replace-select',
-            valueClass:     'replace-value',
-            iconClass:      'icon-caret-down',
-            hoverClass:     'is-hover'
+            replaced: $('.replace-select'),
+            replacedClass: 'is-replaced is-transparent',
+            customClass: 'wrapper-custom-select',
+            wrapperClass: 'wrapper-replace-select',
+            valueClass: 'replace-value',
+            iconClass: 'icon-caret-down',
+            hoverClass: 'is-hover'
         },
 
         init: function() {
@@ -36,7 +34,6 @@ define([
             var variables = this.vars;
 
             if (variables.replaced.length) {
-
                 variables.replaced.each(function(index, el) {
                     var $el = $(el),
                         replaced = $el.clone(),
@@ -58,6 +55,7 @@ define([
 
                     $el.addClass(variables.replacedClass);
 
+                    /* eslint-disable indent, max-len */
                     $el.replaceWith([
                         '<div class="' + variables.wrapperClass + '">',
                             '<select class="' + replaced[0].className + ' is-replaced" id="' + replaced[0].id + '" name="' + replaced[0].name + '" ' + disabled + '>' + replaced[0].innerHTML + '</select>',
@@ -69,7 +67,8 @@ define([
                                 '</span>',
                             '</span>',
                         '</div>'
-                        ].join(''));
+                    ].join(''));
+                    /* eslint-enable indent, max-len */
                 });
             }
         },

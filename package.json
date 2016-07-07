@@ -37,12 +37,15 @@
     "css-loader": "~0.23.1",
     "del": "*",
     "edx-ui-toolkit": "~1.4.1",
+    "eslint": "~2.13.1",
+    "eslint-config-edx": "~1.2.0",
     "extract-text-webpack-plugin": "~1.0.1",
     "file-loader": "0.8.5",
     "font-awesome-loader": "0.0.1",
     "gulp": "*",
     "gulp-changed": "*",
     "gulp-concat": "*",
+    "gulp-eslint": "^2.0.0",
     "gulp-filesize": "*",
     "gulp-filter": "*",
     "gulp-gh-pages": "~0.5.4",
@@ -69,6 +72,7 @@
   "scripts": {
     "production": "gulp build-production",
     "gulp": "gulp",
-    "development": "gulp build-development"
+    "development": "gulp build-development",
+    "lint": "gulp lint"
   }
 }

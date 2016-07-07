@@ -5,7 +5,7 @@ var gulp            = require('gulp'),
     config          = require('../config').scripts,
     uglify          = require('gulp-uglify');
 
-gulp.task('demo-scripts', ['scripts-lint'], function() {
+gulp.task('demo-scripts', ['lint'], function() {
     return gulp.src([
             // setup script sequence
             config.demo_src + '/pattern-library.js'

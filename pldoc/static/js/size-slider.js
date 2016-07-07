@@ -1,6 +1,7 @@
 define([
     'jquery'
-    ], function($) {
+], function($) {
+    'use strict';
 
     /*
      * Icon size slider
@@ -42,8 +43,8 @@ define([
         },
 
         updateIconSize: function(size) {
-            IconFontSliderControl.vars.example.css({ fontSize: size + 'px' });
-            IconFontSliderControl.vars.exampleContainer.css({ width: size + 'px' });
+            IconFontSliderControl.vars.example.css({fontSize: size + 'px'});
+            IconFontSliderControl.vars.exampleContainer.css({width: size + 'px'});
         },
 
         updateInputText: function(size) {
