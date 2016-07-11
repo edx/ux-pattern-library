@@ -81,6 +81,9 @@ module.exports = {
         demo_src:               demoSrc + '/static/js',
         demo_src_files:         demoSrc + '/static/js/**/*.js'
     },
+    exampleHtmlFiles:           {
+        pldoc_src_files:        pldocSrc + '/_includes/examples/*.html'
+    },
     lib:                    {
         // third party libraries
         src:                    './node_modules'

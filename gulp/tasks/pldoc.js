@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     ghPages = require('gulp-gh-pages'),
     runSequence = require('run-sequence');
 
-gulp.task('pldoc-scripts', ['scripts-lint'], function() {
+gulp.task('pldoc-scripts', ['lint'], function() {
     return gulp.src([configScripts.pldoc_src + '/**.js'])
         .pipe(uglify())
         .pipe(browserSync.reload({stream: true}))
