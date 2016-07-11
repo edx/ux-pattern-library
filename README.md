@@ -53,7 +53,7 @@ Also, the Pattern Library currently relies on the following thrd party libraries
 | [bi-app-sass](https://github.com/anasnakawa/bi-app-sass)        | latest        | right-to-left/left-to-right directional support for layouts   |  
 | [breakpoint-sass](https://github.com/at-import/breakpoint)      | 2.6.1         | CSS breakpoint/media-query management                         |  
 | [susy](https://github.com/ericam/susy)                          | 2.2.9         | Grid configuration and utilities                              |  
-| [A Font Garde](https://github.com/filamentgroup/a-font-garde)   | 0.1.6         | A set of reliable (nay, bulletproof) patterns for icon fonts. |  
+| [Font Awesome](https://github.com/FortAwesome/Font-Awesome)     | 4.6.3         | Accessibility-minded iconic font |  
 
 ## Documentation
 

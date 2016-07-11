@@ -2,6 +2,12 @@
 
 - - -
 
+## 0.16.0 (2016-07-11)
+* Add eslint-config-edx v1.2.0
+* Remove edx-icons, aFontGarde, and modernizr files
+
+- - -
+
 ## 0.15.0 (2016-06-24)
 * Add breadcrumbs pattern example and styles
 
