@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.16.1 (2016-07-15)
+* Remove edx-icons font variable
+
+- - -
+
 ## 0.16.0 (2016-07-11)
 * Add eslint-config-edx v1.2.0
 * Remove edx-icons, aFontGarde, and modernizr files

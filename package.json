@@ -1,6 +1,6 @@
 {
   "name": "edx-pattern-library",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "author": "edX Pattern Library Team <pattern-library@edx.org>",
   "license": "Apache-2.0",
   "description": "The (working) Visual, UI, and Front End Styleguide for edX Apps",
