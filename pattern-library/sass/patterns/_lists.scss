@@ -36,16 +36,16 @@ $list-bulleted-indent: spacing-horizontal(large) !default;
 $list-ordered-style: decimal !default;
 $list-ordered-indent: spacing-horizontal(large) !default;
 
-$list-divided-divider-color: palette(grayscale-cool, x-light) !default;
+$list-divided-divider-color: palette(grayscale, x-light) !default;
 $list-divided-spacing: spacing-vertical(x-small) !default;
 
 $list-inline-spacing: spacing-vertical(x-small) !default;
 
-$list-grouped-border-color: palette(grayscale-cool, x-light) !default;
+$list-grouped-border-color: palette(grayscale, x-light) !default;
 $list-grouped-padding: spacing-vertical(x-small) spacing-vertical(small) !default;
-$list-grouped-divider-color: palette(grayscale-cool, x-light) !default;
+$list-grouped-divider-color: palette(grayscale, x-light) !default;
 $list-grouped-bg: inherit !default;
-$list-grouped-focus-bg: palette(grayscale-cool, xx-trans) !default;
+$list-grouped-focus-bg: palette(grayscale, trans) !default;
 
 
 // ----------------------------
@@ -352,4 +352,3 @@ dd,
 .list-grouped {
     @extend %list-grouped;
 }
-

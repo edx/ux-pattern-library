@@ -3,6 +3,7 @@ define([
     './tabs.js',
     './size-slider.js',
     './color-contrast.js',
+    './colors.js',
     'edx-pattern-library/js/select-replace.js',
     'edx-ui-toolkit/js/disclosure/disclosure-view.js'
 ], function($) {

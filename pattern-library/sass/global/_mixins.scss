@@ -30,15 +30,15 @@
     width: 100%;
     height: rem($baseline/2);
     border: 0;
-    border-radius: $input-slider-border-radius;
-    background: $input-slider-track;
+    border-radius: 3px;
+    background: palette(grayscale, back);
     @if $is-interactive == true {
         cursor: pointer;
     }
 }
 
 @mixin input-track-hover {
-    background: $input-slider-hover;
+    background: palette(primary, back);
 }
 
 @mixin input-thumb {
@@ -46,53 +46,62 @@
     @include transition(all timing(xx-fast) ease-in-out 0s);
     border: 0;
     border-radius: 50%;
-    background: $input-slider-handle;
+    background: palette(primary, base);
     -webkit-appearance: none;
 }
 
 @mixin input-thumb-hover {
     @include size(rem($baseline));
     margin-top: -(rem($baseline/3.25));
-    background: $input-slider-handle-focus;
+    background: palette(primary, accent);
 }
 
 @mixin input-progress-complete {
     @include transition(all timing(xx-fast) ease-in-out 0s);
     @include input-track-hover;
-    border-radius: $input-progress-border-radius;
+    border-radius: 3px;
 }
 
 @mixin input-radio {
     @include transition(all timing(xx-fast) ease-in-out 0s);
     @include margin-right(spacing-horizontal(small));
-    border: 1px solid $input-default-border-color;
+    border: 1px solid palette(primary, accent);
     border-radius: 50%;
-    background: $input-check-radio-checked-background;
-    box-shadow: inset 0 0 0 3px palette(grayscale, white);
+    background: $white;
+    box-shadow: inset 0 0 0 3px palette(primary, x-back);
 }
 
 @mixin input-radio-checked {
-    border-color: transparent;
-    background: palette(grayscale, white);
-    box-shadow: inset 0 0 0 6px $input-check-radio-checked-background;
+    border-color: palette(primary, base);
+    background: $white;
+    box-shadow: inset 0 0 0 6px palette(primary, base);
 }
 
 @mixin input-checkbox {
     @include transition(all timing(xx-fast) ease-in-out 0s);
     @include margin-right(spacing-horizontal(small));
-    border: 1px solid $input-default-border-color;
-    background: $input-check-radio-background;
-    box-shadow: inset 0 0 0 3px palette(grayscale, white);
+    border: 1px solid palette(primary, accent);
+    background: $white;
+    box-shadow: inset 0 0 0 3px palette(primary, x-back);
 }
 
 @mixin input-checkbox-checked {
-    border-color: transparent;
-    background: palette(grayscale, white);
-    box-shadow: inset 0 0 0 6px $input-check-radio-checked-background;
+    border-color: palette(primary, base);
+    background: $white;
+    box-shadow: inset 0 0 0 6px palette(primary, base);
 }
 
-@mixin input-radio-checkbox-disabled {
-    background: palette(grayscale, white);
-    box-shadow: none;
+@mixin input-radio-disabled {
+    border: 1px solid palette(grayscale, back);
+    border-radius: 50%;
+    background: $white;
+    box-shadow: inset 0 0 0 3px palette(grayscale, x-back);
+    cursor: not-allowed;
+}
+
+@mixin input-checkbox-disabled {
+    border: 1px solid palette(grayscale, back);
+    background: $white;
+    box-shadow: inset 0 0 0 3px palette(grayscale, x-back);
     cursor: not-allowed;
 }

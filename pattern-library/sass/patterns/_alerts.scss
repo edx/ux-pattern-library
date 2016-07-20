@@ -4,35 +4,19 @@
 // About: Contains base styling for alerts.
 // ----------------------------
 
-// #CONFIG
 // #UTILITIES
 // #GENERAL
 // #INDIVIDUAL CASES
 
-
-// ----------------------------
-// #CONFIG
-// ----------------------------
-$alert-background-color: palette(grayscale, white) !default;
-$alert-icon-color: palette(grayscale, white) !default;
-$alert-border-radius: spacing-vertical(xx-small) !default;
-// border around the sides and bottom
-$alert-border: rem(1) solid palette(grayscale-cool, light) !default;
-
-// alert colors
-$alert-information-color: palette(information, base) !default;
-$alert-warning-color: palette(warning, base) !default;
-$alert-error-color: palette(error, base) !default;
-$alert-success-color: palette(success, base) !default;
-
 // ----------------------------
 // #UTILITIES
 // ----------------------------
-@mixin alert($alert-color) {
-    border-top:  rem(2) solid $alert-color;
+@mixin alert($alert-color, $alert-color-glow) {
+    border: rem(1) solid $alert-color;
+    box-shadow: inset 0 0 0 rem(4) $alert-color-glow;
 
     .alert-icon {
-        color: $alert-icon-color;
+        color: $white;
         background-color: $alert-color;
     }
 }
@@ -57,14 +41,42 @@ $alert-success-color: palette(success, base) !default;
 // #GENERAL
 // ----------------------------
 .alert {
-    background-color: $alert-background-color;
-    border: $alert-border;
-    border-radius: $alert-border-radius;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    background-color: $white;
+    border: rem(1) solid palette(grayscale, accent);
     padding: spacing-vertical(small) spacing-horizontal(base);
+    box-shadow: inset 0 0 0 rem(4) palette(grayscale, back);
     overflow: auto;
-    box-shadow: 0 rem(2) rem(2) 0 palette(grayscale-cool, xx-light);
+    
+    &.alert-slim {
+        padding: spacing-vertical(x-small);
+        
+        .alert-message {
+            padding: spacing-vertical(small) spacing-horizontal(base);
+            font-size: font-size(small);
+
+            .copy {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.alert-tiny {
+        padding: spacing-vertical(x-small);
+        
+        .alert-message {
+            padding: spacing-vertical(x-small) spacing-horizontal(small);
+            font-size: font-size(small);
+
+            .copy {
+                margin-bottom: 0;
+                
+                .icon {
+                    display: inline-block;
+                    margin-right: $baseline;
+                }
+            }
+        }
+    }
 }
 
 .alert-icon {
@@ -131,20 +143,20 @@ $alert-success-color: palette(success, base) !default;
 
 // information-based alert
 .alert-information {
-    @include alert($alert-information-color);
+    @include alert(palette(information, accent), palette(information, back));
 }
 
 // warning-based alert
 .alert-warning {
-    @include alert($alert-warning-color);
+    @include alert(palette(warning, accent), palette(warning, back));
 }
 
 // error-based alert
 .alert-error {
-    @include alert($alert-error-color);
+    @include alert(palette(error, accent), palette(error, back));
 }
 
 // success-based alert
 .alert-success {
-    @include alert($alert-success-color);
+    @include alert(palette(success, accent), palette(success, back));
 }

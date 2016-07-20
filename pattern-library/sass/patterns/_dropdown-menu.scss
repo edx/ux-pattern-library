@@ -31,7 +31,7 @@ $dropdown-menu-list-font-color: $black !default;
 $dropdown-menu-list-hover-color: palette(primary, base) !default;
 $dropdown-menu-background-color: $white !default;
 $dropdown-menu-border-color: $gray !default;
-$dropdown-menu-list-border-color: $gray-cool !default;
+$dropdown-menu-list-border-color: palette(grayscale, dark) !default;
 $dropdown-menu-list-border-bottom: 1px dotted $dropdown-menu-list-border-color !default;
 
 // ----------------------------

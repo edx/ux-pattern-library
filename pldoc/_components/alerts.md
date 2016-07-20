@@ -125,3 +125,44 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
         </div>
     </div>
 </div>
+
+<h3 class="hd-6 example-set-hd">Slim Information Alert</h3>
+<div class="example-set">
+    <div class="alert alert-information alert-slim" role="alert" aria-labelledby="alert-title-information" tabindex="-1">
+        <div class="alert-message">
+            <h3 class="alert-title" id="alert-title-information">
+                A better measure of total interest in your course
+            </h3>
+
+            <p class="copy">
+                The total enrollment metric below now includes all students who
+                have ever registered for this course.
+            </p>
+        </div>
+    </div>
+</div>
+
+<h3 class="hd-6 example-set-hd">Tiny Information Alert</h3>
+<div class="example-set">
+    <div class="alert alert-information alert-slim" role="alert" aria-label="Heads-up!" tabindex="-1">
+        <div class="alert-message">
+            <p class="copy">
+                The total enrollment metric below now includes all students who
+                have ever registered for this course.
+            </p>
+        </div>
+    </div>
+</div>
+
+<h3 class="hd-6 example-set-hd">Tiny Information Alert with an icon</h3>
+<div class="example-set">
+    <div class="alert alert-information alert-slim" role="alert" aria-label="Heads-up!" tabindex="-1">
+        <div class="alert-message">
+            <p class="copy">
+                <span class="icon fa fa-bullhorn" aria-hidden="true"></span> 
+                The total enrollment metric below now includes all students who
+                have ever registered for this course.
+            </p>
+        </div>
+    </div>
+</div>

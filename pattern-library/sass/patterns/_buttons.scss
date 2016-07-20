@@ -40,69 +40,6 @@ $btn-small-padding-vertical: spacing-vertical(x-small);
 $btn-small-padding-horizontal: spacing-horizontal(small);
 $btn-small-font-size: font-size(small);
 
-// disabled button
-$btn-disabled-border-color:                 palette(grayscale, light) !default;
-$btn-disabled-background:                   palette(grayscale, white) !default;
-$btn-disabled-color:                        palette(grayscale, dark) !default;
-
-// base button
-$btn-default-border-color:                $transparent !default;
-$btn-default-background:                  $transparent !default;
-$btn-default-color:                       palette(primary, base) !default;
-$btn-default-focus-border-color:          palette(primary, base) !default;
-$btn-default-focus-color:                 palette(primary, base) !default;
-$btn-default-active-border-color:         palette(primary, base) !default;
-$btn-default-active-color:                palette(primary, base) !default;
-
-// neutral button
-$btn-neutral-border-color:                  palette(primary, base) !default;
-$btn-neutral-background:                    palette(grayscale, white) !default;
-$btn-neutral-color:                         palette(primary, base) !default;
-$btn-neutral-focus-background:              palette(primary, base) !default;
-$btn-neutral-focus-color:                   palette(grayscale, white) !default;
-$btn-neutral-active-border-color:           palette(primary, dark) !default;
-$btn-neutral-active-background:             palette(primary, dark) !default;
-
-// brand button
-$btn-brand-border-color:                  palette(primary, base) !default;
-$btn-brand-background:                    palette(primary, base) !default;
-$btn-brand-color:                         palette(grayscale, white) !default;
-$btn-brand-focus-color:                   $btn-brand-color !default;
-$btn-brand-focus-border-color:            palette(primary, accent) !default;
-$btn-brand-focus-background:              palette(primary, accent) !default;
-$btn-brand-active-border-color:           palette(primary, base) !default;
-$btn-brand-active-background:             palette(primary, base) !default;
-$btn-brand-disabled-background:           palette(grayscale, x-light) !default;
-$btn-brand-disabled-color:                palette(grayscale, dark) !default;
-
-// elevated
-$btn-elevated-border-color:                 palette(primary, base) !default;
-$btn-elevated-background:                   palette(primary, base) !default;
-$btn-elevated-color:                        palette(grayscale, white) !default;
-$btn-elevated-shadow:                       inset 0 0 -$btn-shadow 0 0 palette(primary, dark) !default;
-$btn-elevated-focus-color:                  $btn-elevated-color !default;
-$btn-elevated-focus-background:             palette(primary, accent) !default;
-$btn-elevated-focus-shadow:                 inset 0 0 -$btn-shadow 0 0 palette(primary, dark) !default;
-$btn-elevated-active-background:            palette(primary, dark) !default;
-$btn-elevated-active-shadow:                inset 0 $btn-shadow 0 0 palette(primary, x-dark) !default;
-$btn-elevated-disabled-border-color:        palette(grayscale, x-light) !default;
-$btn-elevated-disabled-background:          palette(grayscale, x-light) !default;
-$btn-elevated-disabled-shadow:              inset 0 -1px 0 palette(grayscale, light);
-
-// inverse
-$btn-inverse-border-color:                  palette(grayscale, white) !default;
-$btn-inverse-background:                    $transparent !default;
-$btn-inverse-color:                         palette(grayscale, white) !default;
-$btn-inverse-focus-background:              palette(grayscale, white) !default;
-$btn-inverse-focus-color:                   palette(primary, base) !default;
-$btn-inverse-active-color:                  palette(primary, dark) !default;
-$btn-inverse-disabled-border-color:         palette(grayscale, trans) !default;
-$btn-inverse-disabled-color:                palette(grayscale, white) !default;
-$btn-inverse-disabled-focus-color:          palette(grayscale, white) !default;
-$btn-inverse-disabled-focus-border-color:   palette(grayscale, trans) !default;
-$btn-inverse-disabled-focus-background:     $transparent !default;
-
-
 // ----------------------------
 // #GLOBALS
 // ----------------------------
@@ -167,32 +104,34 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
 // ----------------------------
 %btn-default {
     @extend %btn;
-    border-color: $btn-default-border-color;
-    background: $btn-default-background;
-    color: $btn-default-color;
+    border-color: palette(primary, base);
+    background: $white;
+    color: palette(primary, base);
 
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
     &:focus,
     &.is-focused {
-        border-color: $btn-default-focus-border-color;
-        color: $btn-default-focus-color;
+        border-color: palette(primary, accent);
+        background: palette(primary, x-back);
+        color: palette(primary, accent);
     }
 
     // STATE: is pressed or active
     &:active,
     &.is-pressed,
     &.is-active {
-        border-color: $btn-default-active-border-color;
-        color: $btn-default-active-color;
+        border-color: palette(primary, dark);
+        background: palette(primary, back);
+        color: palette(primary, dark);
     }
 
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: $btn-disabled-border-color;
-        color: $btn-disabled-color;
+        border-color: palette(grayscale, back);
+        color: palette(grayscale, back);
     }
 }
 
@@ -202,33 +141,34 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
 // ----------------------------
 %btn-neutral {
     @extend %btn;
-    border-color: $btn-neutral-border-color;
-    background: $btn-neutral-background;
-    color: $btn-neutral-color;
+    border-color: palette(grayscale, base);
+    background: palette(grayscale, x-back);
+    color: palette(grayscale, base);
 
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
     &:focus,
     &.is-focused {
-        background: $btn-neutral-focus-background;
-        color: $btn-neutral-focus-color;
+        background: palette(primary, accent);
+        border-color: palette(primary, base);
+        color: palette(primary, x-back);
     }
 
     // STATE: is pressed or active
     &:active,
     &.is-pressed,
     &.is-active {
-        border-color: $btn-neutral-active-border-color;
-        background: $btn-neutral-active-background;
+        border-color: palette(primary, base);
+        background: palette(primary, base);
     }
 
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: $btn-disabled-border-color;
-        background: $btn-disabled-background;
-        color: $btn-disabled-color;
+        border-color: palette(grayscale, back);
+        background: palette(grayscale, x-back);
+        color: palette(grayscale, back);
     }
 }
 
@@ -239,34 +179,35 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
 // ----------------------------
 %btn-brand {
     @extend %btn;
-    border-color: $btn-brand-border-color;
-    background: $btn-brand-background;
-    color: $btn-brand-color;
+    border-color: palette(primary, base);
+    background: palette(primary, base);
+    color: palette(primary, x-back);
 
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
     &:focus,
     &.is-focused {
-        border-color: $btn-brand-focus-border-color;
-        background: $btn-brand-focus-background;
-        color: $btn-brand-focus-color;
+        border-color: palette(primary, accent);
+        background: palette(primary, accent);
+        color: palette(primary, x-back);
     }
 
     // STATE: is pressed or active
     &:active,
     &.is-pressed,
     &.is-active {
-        border-color: $btn-brand-active-border-color;
-        background: $btn-brand-active-background;
+        border-color: palette(primary, base);
+        background: palette(primary, base);
+        color: palette(primary, back);
     }
 
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: $btn-disabled-border-color;
-        background: $btn-brand-disabled-background;
-        color: $btn-brand-disabled-color;
+        border-color: palette(grayscale, back);
+        background: palette(grayscale, x-back);
+        color: palette(grayscale, back);
     }
 }
 
@@ -297,36 +238,37 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
 // ----------------------------
 %btn-elevated {
     @extend %btn;
-    border-color: $btn-elevated-border-color;
-    box-shadow: $btn-elevated-shadow;
-    background: $btn-elevated-background;
-    color: $btn-elevated-color;
+    border-color: palette(primary, base);
+    box-shadow: inset 0 -3px 0 0 palette(primary, dark);
+    background: palette(primary, base);
+    color: palette(primary, x-back);
 
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
     &:focus,
     &.is-focused {
-        box-shadow: $btn-elevated-focus-shadow;
-        background: $btn-elevated-focus-background;
-        color: $btn-elevated-focus-color;
+        box-shadow: inset 0 -3px 0 0 palette(primary, base);
+        background: palette(primary, accent);
+        color: palette(primary, x-back);
     }
 
     // STATE: is pressed or active
     &:active,
     &.is-pressed,
     &.is-active {
-        box-shadow: $btn-elevated-active-shadow;
-        background: $btn-elevated-active-background;
+        box-shadow: inset 0 3px 0 0 palette(primary, dark);
+        background: palette(primary, base);
+        color: palette(primary, back);
     }
 
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: $btn-elevated-disabled-border-color;
-        box-shadow: $btn-elevated-disabled-shadow;
-        background: $btn-elevated-disabled-background;
-        color: $btn-disabled-color;
+        box-shadow: none;
+        border-color: palette(grayscale, back);
+        background: palette(grayscale, x-back);
+        color: palette(grayscale, back);
     }
 }
 
@@ -367,17 +309,17 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
 // ----------------------------
 %btn-inverse {
     @extend %btn;
-    border-color: $btn-inverse-border-color;
-    background: $btn-inverse-background;
-    color: $btn-inverse-color;
+    border-color: palette(primary, x-back);
+    background: $transparent;
+    color: palette(primary, x-back);
 
     // STATE: hover and focus
     &:hover,
     &.is-hovered,
     &:focus,
     &.is-focused {
-        background: $btn-inverse-focus-background;
-        color: $btn-inverse-focus-color;
+        background: palette(primary, x-back);
+        color: palette(primary, accent);
 
     }
 
@@ -385,19 +327,18 @@ $btn-inverse-disabled-focus-background:     $transparent !default;
     &:active,
     &.is-pressed,
     &.is-active {
-        color: $btn-inverse-active-color;
+        color: palette(primary, base);
     }
 
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: $btn-inverse-disabled-border-color;
-        color: $btn-inverse-disabled-color;
+        border-color: palette(grayscale, back);
+        color: palette(grayscale, back);
 
         &:hover {
-            border-color: $btn-inverse-disabled-focus-border-color;
-            background: $btn-inverse-disabled-focus-background;
-            color: $btn-inverse-disabled-focus-color;
+            border-color: palette(grayscale, back);
+            color: palette(grayscale, back);
         }
     }
 }

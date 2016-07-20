@@ -75,8 +75,8 @@
 }
 
 %a11y-ensure-contrast {
-    background: palette(grayscale, black-t) !important; // a11y: Ensuring that color contrast is high for legibility
-    color: palette(grayscale, white-t) !important; // a11y: Ensuring that color contrast is high for legibility
+    background: $black !important; // a11y: Ensuring that color contrast is high for legibility
+    color: $white !important; // a11y: Ensuring that color contrast is high for legibility
 }
 
 // ----------------------------
@@ -133,13 +133,14 @@
     &:active,
     &:focus {
         color: $link-focus-color;
+        text-decoration: underline;
     }
 
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
         display: none;
-        color: palette(grayscale, light);
+        color: palette(grayscale, base);
     }
 
     // STATE: is pressed or active
@@ -158,13 +159,6 @@
     );
 
     box-shadow: 0 1px 0 0 $transparent;
-
-    // STATE: hover, active, focus
-    &:hover,
-    &:active,
-    &:focus {
-        box-shadow: 0 1px 0 0 $link-focus-color;
-    }
 }
 
 // align text
