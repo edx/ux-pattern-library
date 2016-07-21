@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     ghPages = require('gulp-gh-pages'),
     runSequence = require('run-sequence');
 
-gulp.task('pldoc-scripts', ['lint'], function() {
+gulp.task('pldoc-scripts', ['lint-src'], function() {
     return gulp.src([configScripts.pldoc_src + '/**.js'])
         .pipe(uglify())
         .pipe(browserSync.reload({stream: true}))
@@ -35,8 +35,7 @@ gulp.task('pldoc-scripts', function() {
             source: config.documentation.rootJavaScriptFile,
             targetDirectory: config.documentation.pldocDest
         }
-    )
-        .pipe(browserSync.stream());
+    ).pipe(browserSync.stream());
 });
 
 gulp.task('pldoc-styles', function() {
@@ -46,8 +45,7 @@ gulp.task('pldoc-styles', function() {
             targetDirectory: config.documentation.pldocDest,
             patternLibraryPath: '/public/edx-pattern-library'
         }
-    )
-        .pipe(browserSync.stream());
+    ).pipe(browserSync.stream());
 });
 
 gulp.task('doc-publish', ['jekyll-build'], function() {

@@ -1,13 +1,12 @@
 'use strict';
 
-var gulp            = require('gulp'),
-    browserSync     = require('browser-sync'),
-    changed         = require('gulp-changed'),
-    config          = require('../config').fonts,
-    merge           = require('merge-stream');
+var gulp = require('gulp'),
+    browserSync = require('browser-sync'),
+    changed = require('gulp-changed'),
+    config = require('../config').fonts,
+    merge = require('merge-stream');
 
 gulp.task('fonts', function() {
-
     var fonts = gulp.src(config.src_files),
         pldocFonts = gulp.src(config.pldoc_src_files),
         demoFonts = gulp.src(config.demo_src_files);

@@ -53,12 +53,14 @@
     "gulp-minify-css": "*",
     "gulp-notify": "*",
     "gulp-rename": "*",
+    "gulp-shell": "^0.5.2",
     "gulp-uglify": "*",
     "gulp-util": "*",
     "lodash": "*",
     "merge-stream": "*",
     "minimist": "*",
     "node-sass": "~3.7.0",
+    "pretty-hrtime": "^1.0.2",
     "require-dir": "*",
     "run-sequence": "*",
     "sass-loader": "~3.2.0",
@@ -73,6 +75,6 @@
     "production": "gulp build-production",
     "gulp": "gulp",
     "development": "gulp build-development",
-    "lint": "gulp lint"
+    "lint": "eslint ."
   }
 }
