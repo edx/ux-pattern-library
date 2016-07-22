@@ -6,11 +6,9 @@ var gulp = require('gulp'),
     webpackUtil = require('../util/webpack');
 
 gulp.task('demo-styles', function() {
-    return webpackUtil.packageCss(
-        {
-            source: config.documentation.rootDemoSassFile,
-            targetDirectory: config.documentation.pldocDest,
-            patternLibraryPath: '/public/edx-pattern-library'
-        })
-        .pipe(browserSync.stream());
+    return webpackUtil.packageCss({
+        source: config.documentation.rootDemoSassFile,
+        targetDirectory: config.documentation.pldocDest,
+        patternLibraryPath: '/public/edx-pattern-library'
+    }).pipe(browserSync.stream());
 });

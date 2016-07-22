@@ -1,8 +1,9 @@
-var gulp    = require('gulp'),
-    config  = require('../config');
+'use strict';
+
+var gulp = require('gulp'),
+    config = require('../config');
 
 gulp.task('watch', ['browserSync'], function() {
-
     // patterns and documentation site
     gulp.watch(config.styles.src_files, ['pldoc-styles', 'demo-styles', 'styles']);
     gulp.watch(config.styles.pldoc_src_files, ['pldoc-styles']);

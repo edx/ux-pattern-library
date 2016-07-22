@@ -1,3 +1,5 @@
 _preview_site
 _site
 node_modules
+!pldoc/_includes/examples
+pldoc/public

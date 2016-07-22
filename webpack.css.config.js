@@ -1,29 +1,29 @@
-(function() {
-    'use strict';
+/* eslint "strict": ["error", "global"] */
 
-    var path = require('path'),
-        ExtractTextPlugin = require('extract-text-webpack-plugin');
+'use strict';
 
-    module.exports = {
-        modulesDirectories: ['node_modules'],
-        module: {
-            loaders: [
-                {
-                    test: /\.scss$/,
-                    loader: ExtractTextPlugin.extract('style', 'css!sass')
-                }
-            ]
-        },
-        plugins: [
-            new ExtractTextPlugin('[name]')
-        ],
-        sassLoader: {
-            includePaths: [
-                path.resolve(__dirname, './node_modules'),
-                path.resolve(__dirname, './node_modules/edx-pattern-library/node_modules')
-            ]
-        },
-        debug: true,
-        devtool: 'inline-source-map'
-    };
-})();
+var path = require('path'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = {
+    modulesDirectories: ['node_modules'],
+    module: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract('style', 'css!sass')
+            }
+        ]
+    },
+    plugins: [
+        new ExtractTextPlugin('[name]')
+    ],
+    sassLoader: {
+        includePaths: [
+            path.resolve(__dirname, './node_modules'),
+            path.resolve(__dirname, './node_modules/edx-pattern-library/node_modules')
+        ]
+    },
+    debug: true,
+    devtool: 'inline-source-map'
+};
