@@ -5,25 +5,26 @@ var gulp = require('gulp'),
     gulpIgnore = require('gulp-ignore'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     path = require('path'),
-    _ = require('underscore'),
-    webpackConfigJS = require('../../webpack.config.js'),
-    webpackConfigCSS = require('../../webpack.css.config.js');
+    _ = require('underscore');
 
 module.exports = {
     /**
      * Packages a JavaScript file using Webpack.
      */
     packageJavaScript: function(options) {
-        var sourceExtension = path.extname(options.source),
+        // @TODO: All requires should be done at global scope so they can be statically analyzed by module tools.
+        // Doing so here breaks our Webpack configuration, for some reason.
+        var webpackConfig = require('../../webpack.config.js'),  // eslint-disable-line global-require
+            sourceExtension = path.extname(options.source),
             targetExtension = '.js',
             baseName = path.basename(options.source, sourceExtension),
             packageConfig = _.extend(
                 {},
-                webpackConfigJS,
+                webpackConfig,
                 {
                     output: _.extend(
                         {},
-                        webpackConfigJS.output,
+                        webpackConfig.output,
                         {
                             filename: baseName + targetExtension,
                             chunkFilename: baseName + '-[id]' + targetExtension
@@ -43,7 +44,10 @@ module.exports = {
      * Packages a CSS file using Webpack.
      */
     packageCss: function(options) {
-        var sourceExtension = path.extname(options.source),
+        // @TODO: All requires should be done at global scope so they can be statically analyzed by module tools.
+        // Doing so here breaks our Webpack configuration, for some reason.
+        var webpackConfig = require('../../webpack.css.config.js'),  // eslint-disable-line global-require
+            sourceExtension = path.extname(options.source),
             targetExtension = '.css',
             baseName = path.basename(options.source, sourceExtension),
             targetPath = '../../' + options.targetDirectory + '/' + baseName + targetExtension,
@@ -51,7 +55,7 @@ module.exports = {
             patternLibraryPath = options.patternLibraryPath,
             packageConfig = _.extend(
                 {},
-                webpackConfigCSS,
+                webpackConfig,
                 {
                     entry: {},
                     output: {
