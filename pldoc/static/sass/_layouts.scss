@@ -57,19 +57,20 @@
     h1 {
         @extend %hd-3;
         line-height: 1;
-        color: palette(primary, x-dark);
+        color: palette(primary, dark);
     }
 
     h2 {
         @extend %hd-4;
-        color: palette(primary, x-dark);
+        color: palette(primary, dark);
     }
 }
 
 // sidebar
 .pldoc-wrapper-content-supplemental {
-    background-color: palette(grayscale-cool, xx-light);
+    background-color: palette(grayscale, x-back);
     padding: spacing-vertical(small);
+    @include padding-left(0);
 
     @include susy-breakpoint($bp-screen-md, $susy-default) {
         @include span(3 first);
@@ -78,7 +79,7 @@
 
 // pattern
 .pldoc-wrapper-pattern {
-    border-bottom: rem(2) solid palette(grayscale, mid-dark);
+    border-bottom: rem(2) solid palette(grayscale, back);
     box-shadow: inset spacing-horizontal(xx-small) 0 0 0 $transparent;
 
     &:last-child {

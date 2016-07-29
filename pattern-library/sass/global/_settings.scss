@@ -54,114 +54,71 @@ $bp-screen-xl:                  1280px !default;
 // color: config
 $transparent:                   rgba(0, 0, 0, 0);
 
-$black:                         rgb(17, 16, 16);
-$black-t:                       rgb(0, 0, 0); // true black
-$white:                         rgb(252, 252, 252);
-$white-t:                       rgb(255, 255, 255); // true white
-$gray:                          rgb(167, 164, 164);
-$gray-cool:                     rgb(158, 177, 185);
+$black:                         rgb(22, 22, 22);
+$white:                         rgb(255, 255, 255);
+$gray:                          rgb(138, 143, 143);
 $red:                           rgb(178, 6, 16);
-$yellow:                        rgb(253, 188, 86);
-$green:                         rgb(37, 184, 90);
-$blue:                          rgb(0, 121, 188);
-$pink:                          rgb(203, 89, 141);
+$yellow:                        rgb(255, 192, 31);
+$green:                         rgb(0, 129, 0);
+$blue:                          rgba(0, 117, 180, 100);
+$pink:                          rgba(194, 56, 125, 100);
 
 // colors:                      brand
 $brand-primary:                 $blue !default;
-$brand-primary-accent:          rgb(14, 166, 236) !default;
 $brand-secondary:               $pink !default;
-$brand-secondary-accent:        rgb(242, 108, 170) !default;
 
 // colors: utilities
-$success: $green !default;
-$warning: $yellow !default;
-$error: $red !default;
-$information: mix($gray-cool, $brand-primary, 70%) !default;
+$success:                       $green !default;
+$warning:                       $yellow !default;
+$error:                         $red !default;
+$information:                   $blue !default;
 
 // colors: palettes
 $palettes: (
     primary: (
-        base:       $brand-primary,
-        light:      mix($white, $brand-primary, 33%),
-        x-light:    mix($white, $brand-primary, 66%),
-        dark:       mix($black, $brand-primary, 33%),
-        x-dark:     mix($black, $brand-primary, 66%),
-        accent:     $brand-primary-accent,
-        x-accent:   saturate($brand-primary-accent, 25%),
-        trans:      transparentize($brand-primary, 0.50),
-        x-trans:    transparentize($brand-primary, 0.75),
-        xx-trans:   transparentize($brand-primary, 0.95)
+        dark:       rgba(6, 86, 131, 100),
+        base:       rgba(0, 117, 180, 100),
+        accent:     rgba(41, 145, 195, 100),
+        back:       rgba(204, 227, 240, 100),
+        x-back:     rgba(242, 248, 251, 100)
     ),
     secondary: (
-        base:       $brand-secondary,
-        light:      mix($white, $brand-secondary, 33%),
-        x-light:    mix($white, $brand-secondary, 66%),
-        dark:       mix($black, $brand-secondary, 33%),
-        x-dark:     mix($black, $brand-secondary, 66%),
-        accent:     $brand-secondary-accent
+        dark:       rgba(152, 44, 98, 100),
+        base:       rgba(194, 56, 125, 100),
+        accent:     rgba(224, 155, 190, 100),
+        back:       rgba(243, 215, 229, 100),
+        x-back:     rgba(252, 245, 248, 100)
     ),
     grayscale: (
-        base:       $gray,
-        light:      mix($white, $gray, 50%),
-        x-light:    mix($white, $gray, 75%),
-        xx-light:   mix($white, $gray, 85%),
-        white:      $white,
-        white-t:    $white-t,
-        dark:       mix($black, $gray, 40%),
-        x-dark:     mix($black, $gray, 60%),
-        black:      $black,
-        black-t:    $black-t,
-        trans:      transparentize($gray, 0.50),
-        x-trans:    transparentize($gray, 0.75),
-        xx-trans:   transparentize($gray, 0.95)
-    ),
-    grayscale-cool: (
-        base:       $gray-cool,
-        light:      mix($white, $gray-cool, 50%),
-        x-light:    mix($white, $gray-cool, 75%),
-        xx-light:   mix($white, $gray-cool, 85%),
-        dark:       mix($black, $gray-cool, 50%),
-        x-dark:     mix($black, $gray-cool, 75%),
-        trans:      transparentize($gray-cool, 0.50),
-        x-trans:    transparentize($gray-cool, 0.75),
-        xx-trans:   transparentize($gray-cool, 0.95)
+        dark:       rgba(17, 17, 17, 100),
+        base:       rgba(65, 65, 65, 100),
+        accent:     rgba(160, 160, 160, 100),
+        back:       rgba(217, 217, 217, 100),
+        x-back:     rgba(245, 245, 245, 100)
     ),
     success: (
-        base:       $success,
-        light:      mix($white, $success, 33%),
-        dark:       mix($black, $success, 33%),
-        trans:      transparentize($success, 0.50),
-        x-trans:    transparentize($success, 0.75),
-        xx-trans:   transparentize($success, 0.95)
+        text:       $success,
+        accent:     lighten($success, 5%),
+        back:       desaturate(lighten($success, 70%), 45%)
     ),
     error: (
-        base:       $error,
-        light:      mix($white, $error, 33%),
-        dark:       mix($black, $error, 33%),
-        trans:      transparentize($error, 0.50),
-        x-trans:    transparentize($error, 0.75),
-        xx-trans:   transparentize($error, 0.95)
+        text:       $error,
+        accent:     lighten($error, 5%),
+        back:       lighten($error, 60%)
     ),
     warning: (
-        base:       $warning,
-        light:      mix($white, $warning, 33%),
-        dark:       mix($black, $warning, 33%),
-        trans:      transparentize($warning, 0.50),
-        x-trans:    transparentize($warning, 0.75),
-        xx-trans:   transparentize($warning, 0.95)
+        accent:     $warning,
+        back:       lighten($warning, 40%)
     ),
     information: (
-        base:       $information,
-        light:      mix($white, $information, 33%),
-        dark:       mix($black, $information, 33%),
-        trans:      transparentize($information, 0.50),
-        x-trans:    transparentize($information, 0.75),
-        xx-trans:   transparentize($information, 0.95)
+        text:       $information,
+        accent:     lighten($information, 5%),
+        back:       lighten($information, 58%)
     ),
 );
 
 // shadows
-$shadow: transparentize(palette(grayscale, black-t), .5);
+$shadow:            rgba(0, 0, 0, .25);
 
 
 // ----------------------------
@@ -347,8 +304,8 @@ $timing: (
 // ----------------------------
 // base component settings
 $component-focus-color:                     inherit !default;
-$component-focus-bg:                        palette(primary, xx-trans) !default;
-$component-active-color:                    palette(grayscale, white) !default;
+$component-focus-bg:                        palette(primary, x-light) !default;
+$component-active-color:                    palette(grayscale, base) !default;
 $component-active-bg:                       palette(primary, base) !default;
 $component-border-radius:                   3px !default;
 
@@ -356,9 +313,9 @@ $component-border-radius:                   3px !default;
 $text-base-font-family:                     $font-family-sans-serif !default;
 $text-base-color:                           palette(grayscale, x-dark) !default;
 $text-base-font-weight:                     font-weight(normal) !default;
-$text-base-focus-color:                     palette(grayscale, black-t) !default;
+$text-base-focus-color:                     palette(grayscale, black) !default;
 
-$text-emphasized-color:                     palette(grayscale, black-t) !default;
+$text-emphasized-color:                     palette(grayscale, black) !default;
 $text-emphasized-font-weight:               font-weight(normal) !default;
 
 $text-de-emphasized-color:                  palette(grayscale, dark) !default;
@@ -366,6 +323,12 @@ $text-de-emphasized-font-weight:            font-weight(normal) !default;
 
 
 // links
-$link-color:                                palette(primary, dark) !default;
-$link-focus-color:                          palette(primary, base) !default;
+$link-color:                                palette(primary, base) !default;
+$link-focus-color:                          palette(primary, light) !default;
 $link-visited-color:                        palette(primary, dark) !default;
+
+
+// hide focus of programmatic elements
+[tabindex="-1"] {
+    outline: none;
+}

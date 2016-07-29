@@ -31,49 +31,6 @@ $input-width: (
     block:          null // value here is irrelevant but required. Null is easy to understand.
 );
 
-$label-color:                               $text-base-color !default;
-$label-color-active:                        palette(grayscale, x-dark) !default;
-
-$input-placeholder-text:                    palette(grayscale-cool, light) !default;
-
-$input-default-background:                  palette(grayscale, white) !default;
-$input-default-background-focus:            $input-default-background !default;
-$input-check-radio-background:              palette(grayscale-cool, x-light) !default;
-$input-check-radio-checked-background:      palette(primary, base) !default;
-$input-default-border-color:                palette(grayscale, x-light) !default;
-$input-default-focus-border-color:          palette(primary, accent) !default;
-$input-default-color:                       palette(grayscale-cool, x-dark) !default;
-$input-default-focus-color:                 palette(grayscale-cool, x-dark) !default;
-$input-control-color:                       palette(primary, base) !default;
-
-$input-disabled-background:                 palette(grayscale-cool, x-light) !default;
-$input-disabled-border-color:               palette(grayscale-cool, light) !default;
-$input-disabled-text:                       palette(grayscale-cool, light) !default;
-
-$input-alt-background:                      $transparent !default;
-$input-alt-focus-border-color:              palette(grayscale, x-dark) !default;
-
-$input-slider-track:                        palette(grayscale, x-light) !default;
-$input-slider-border:                       $input-slider-track !default;
-$input-slider-border-radius:                $component-border-radius !default;
-$input-slider-handle:                       palette(primary, light) !default;
-$input-slider-handle-focus:                 palette(primary, base) !default;
-$input-slider-focus:                        palette(primary, accent) !default;
-$input-slider-hover:                        palette(primary, x-accent) !default;
-$input-slider-disabled-track:               palette(grayscale, x-light) !default;
-$input-slider-disabled-border:              $input-slider-disabled-track !default;
-$input-slider-disabled-handle:              palette(grayscale, base) !default;
-$input-slider-disabled-focus:               palette(grayscale, light) !default;
-
-$input-progress-track:                      palette(grayscale, x-light) !default;
-$input-progress-border:                     $input-progress-track !default;
-$input-progress-border-radius:              $component-border-radius !default;
-$input-progress-completed-track:            palette(primary, accent) !default;
-
-$field-tip-color:                           palette(grayscale-cool, dark) !default;
-$field-required-color:                      $label-color !default;
-
-
 // ----------------------------
 // #GLOBAL
 // ----------------------------
@@ -97,7 +54,7 @@ $field-required-color:                      $label-color !default;
 
         .field-hint {
             font-size: font-size(small);
-            color: $field-tip-color;
+            color: palette(grayscale, dark);
         }
     }
 }
@@ -123,7 +80,7 @@ $field-required-color:                      $label-color !default;
             @include margin-left(spacing-horizontal(mid-large));
             margin-top: spacing-vertical(xx-small);
             font-size: font-size(small);
-            color: $field-tip-color;
+            color: palette(grayscale, dark);
         }
     }
 }
@@ -134,7 +91,7 @@ $field-required-color:                      $label-color !default;
     margin-bottom: spacing-vertical(x-small);
     font-size: font-size(base);
     line-height: 100%;
-    color: $label-color;
+    color: palette(grayscale, base);
 
     // presents the label inline with the form control
     &.label-inline {
@@ -148,19 +105,19 @@ $field-required-color:                      $label-color !default;
     &.is-active,
     &.is-selected {
         @include transition(all timing(xx-fast) ease-in-out 0s);
-        color: $label-color-active;
+        color: palette(primary, base);
     }
 }
 
 .field-message {
     font-size: font-size(small);
-    border-bottom-left-radius: $component-border-radius;
-    border-bottom-right-radius: $component-border-radius;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 
     &.has-error {
         padding: spacing-vertical(x-small);
-        background: palette(error, base);
-        color: palette(grayscale, white);
+        background: palette(error, text);
+        color: $white;
     }
 }
 
@@ -178,7 +135,7 @@ $field-required-color:                      $label-color !default;
             @include margin-left(spacing-horizontal(x-small));
             content: "*";
             font-size: font-size(small);
-            color: $field-required-color;
+            color: palette(grayscale, base);
         }
     }
 
@@ -190,7 +147,7 @@ $field-required-color:                      $label-color !default;
             @include margin-left(spacing-horizontal(x-small));
             content: "*";
             font-size: font-size(small);
-            color: $field-required-color;
+            color: palette(grayscale, base);
         }
     }
 }
@@ -209,67 +166,66 @@ $field-required-color:                      $label-color !default;
 .field-input,
 .field-select,
 .field-textarea {
-    @include placeholder { color: $input-placeholder-text; }
+    @include placeholder { color: palette(grayscale, back); }
     @include transition(all timing(xx-fast) ease-in-out 0s);
     display: inline-block;
     padding: rem($baseline/2);
-    border: 1px solid $input-default-border-color;
-    background: $input-default-background;
+    border: 1px solid palette(grayscale, back);
+    background: palette(grayscale, x-back);
     font-size: font-size(base);
-    color: $input-default-color;
+    color: palette(grayscale, dark);
 
     // STATE: is active or has focus
     &:focus,
     &.is-active {
-        border-color: $input-default-focus-border-color;
-        color: $input-default-focus-color;
-        outline: none;
+        border-color: palette(grayscale, base);
+        color: palette(grayscale, dark);
     }
 
     // STATE: disabled
     &:disabled,
     &.is-disabled {
-        border-color: $input-disabled-border-color;
-        background: $input-disabled-background;
+        border-color: palette(grayscale, back);
+        background: palette(grayscale, x-back);
         cursor: not-allowed;
     }
 
     // STATE: has an error
     &.has-error {
-        border-color: palette(error, base);
+        border-color: palette(error, text);
 
         & + .field-hint {
-            color: palette(error, dark);
+            color: palette(error, text);
         }
 
         .icon {
-            fill: palette(error, base);
+            fill: palette(error, text);
         }
     }
 
     // STATE: has a warning
     &.has-warning {
-        border-color: palette(warning, base);
+        border-color: palette(warning, text);
 
         & + .field-hint {
-            color: palette(warning, dark);
+            color: palette(warning, text);
         }
 
         .icon {
-            fill: palette(warning, base);
+            fill: palette(warning, text);
         }
     }
 
     // STATE: is complete or valid
     &.has-success {
-        border-color: palette(success, base);
+        border-color: palette(success, text);
 
         // & + .field-hint {
-        //     color: palette(success, dark);
+        //     color: palette(success, text);
         // }
 
         .icon {
-            fill: palette(success, base);
+            fill: palette(success, text);
         }
     }
 }
@@ -287,18 +243,18 @@ $field-required-color:                      $label-color !default;
     &.input-alt {
         padding: spacing-verical(small) 0;
         border-width: 0 0 2px 0;
-        background: $input-alt-background;
+        background: $white;
 
         // STATE: is active or has focus
         &:focus,
         &.is-active {
-            border-color: $input-alt-focus-border-color;
-            background: $input-alt-background;
+            border-color: palette(grayscale, base);
+            background: $white;
         }
 
         &.has-error {
             border-width: 1px 1px 2px 1px;
-            border-color: palette(error, base);
+            border-color: palette(error, text);
         }
     }
 }
@@ -350,7 +306,7 @@ $field-required-color:                      $label-color !default;
         position: absolute;
         @include right(rem(($baseline/4)));
         margin-top: rem(-($baseline/10)); // vertically centers the down caret icon
-        color: $input-control-color;
+        color: palette(grayscale, base);
         vertical-align: middle;
     }
 
@@ -363,7 +319,7 @@ $field-required-color:                      $label-color !default;
         @extend %state-disabled;
 
         .icon {
-            fill: $input-disabled-border-color;
+            fill: palette(grayscale, accent);
         }
     }
 }
@@ -428,12 +384,10 @@ $field-required-color:                      $label-color !default;
 
             & + .field-input-label {
                 // disabled state of replaced checkboxes
-                color: palette(grayscale, base);
+                color: palette(grayscale, accent);
 
                 &:before {
-                    & + .field-input-label:before {
-                        @include input-radio-checkbox-disabled();
-                    }
+                    @include input-checkbox-disabled();
                 }
             }
         }
@@ -442,10 +396,10 @@ $field-required-color:                      $label-color !default;
 
             & + .field-input-label {
                 // disabled state of normal radio buttons
-                color: palette(grayscale, base);
+                color: palette(grayscale, accent);
 
                 &:before {
-                    @include input-radio-checkbox-disabled();
+                    @include input-radio-disabled();
                 }
             }
         }
@@ -483,7 +437,7 @@ $field-required-color:                      $label-color !default;
 .input-slider {
     @include transition(all timing(xx-fast) ease-in-out 0s); // needed here for Firefox which doesn't use the pseudo element for the track
     border: none;
-    border-radius: $input-progress-border-radius;
+    border-radius: 3px;
     -webkit-appearance: none;
     appearance: none;
 
@@ -578,9 +532,9 @@ $field-required-color:                      $label-color !default;
 // ----------------------------
 .input-progress {
     height: rem($baseline/2);
-    background: $input-progress-track; // Firefox doesn't use the psuedo
+    background: palette(grayscale, back); // Firefox doesn't use the psuedo
     border: none;
-    border-radius: $input-progress-border-radius; // Firefox doesn't use the psudeo
+    border-radius: 3px; // Firefox doesn't use the psudeo
 
     &[value] {
         -webkit-appearance: none;

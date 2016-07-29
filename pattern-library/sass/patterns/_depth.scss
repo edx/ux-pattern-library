@@ -11,12 +11,14 @@
 // ----------------------------
 // #SETTINGS
 // ----------------------------
-$depth--3-bg:   palette(grayscale-cool, x-dark)   !default;  // -3 depth level
-$depth--2-bg:   palette(grayscale-cool, dark)   !default;  // -2 depth level
-$depth--1-bg:   palette(grayscale-cool, x-light)   !default;  // -1 depth level
-$depth-0-bg:    palette(grayscale-cool, xx-light)   !default;  // -0 depth level
-$depth-1-bg:    palette(grayscale, white)   !default;  // +1 depth level
-$depth-2-bg:    palette(grayscale, white)   !default;  // +2 depth level
+$depth--3-bg:       palette(grayscale, dark) !default;  // -3 depth level
+$depth--3-color:    $white !default;
+$depth--2-bg:       palette(grayscale, base) !default;  // -2 depth level
+$depth--2-color:    $white !default;
+$depth--1-bg:       palette(grayscale, back) !default;  // -1 depth level
+$depth-0-bg:        palette(grayscale, x-back) !default;  // -0 depth level
+$depth-1-bg:        $white !default;  // +1 depth level
+$depth-2-bg:        $white !default;  // +2 depth level
 
 
 // ----------------------------
@@ -24,10 +26,12 @@ $depth-2-bg:    palette(grayscale, white)   !default;  // +2 depth level
 // ----------------------------
 %depth--3 {
     background: $depth--3-bg;
+    color: $depth--3-color;
 }
 
 %depth--2 {
     background: $depth--2-bg;
+    color: $depth--2-color;
 }
 
 %depth--1 {
@@ -44,13 +48,13 @@ $depth-2-bg:    palette(grayscale, white)   !default;  // +2 depth level
 
 %depth-2 {
     background: $depth-2-bg;
-    box-shadow: 0 1px 2px 1px palette(grayscale, x-trans);
+    box-shadow: 0 1px 2px 1px $shadow;
 }
 
 // specific UI elements based on depth
 %well {
     @extend %depth--1;
-    box-shadow: inset 0 1px 2px 1px palette(grayscale, x-trans);
+    box-shadow: inset 0 1px 2px 1px $shadow;
     padding: spacing-vertical(small) spacing-horizontal(base);
 }
 

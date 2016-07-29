@@ -7,120 +7,126 @@ define([
      * Runs through our list of swatches checking the contrast variance between foreground
      * and background, and highlights those swatch color combinations that don't meet AA
      * acceptance criteria.
-     *
-     * The majority of this code was adapted from Jared Smith of WebAIM.org
-     * http://webaim.org/resources/contrastchecker
      */
-    var AccessibilityColorContrast = {
+    var AccessibilityColorContrast = (function() {
+        return {
+            vars: {
+                failClass: 'fail-a11y-color' // Class for failed palettes
+            },
 
-        vars: {
-            failClass: 'fail-a11y-color' // Class for failed palettes
-        },
+            init: function() {
+                AccessibilityColorContrast.checkContrast();
+            },
 
-        init: function() {
-            this.checkContrast();
-        },
+            checkContrast: function() {
+                var bg, fg, ratio, ratios;
 
-        rgbaToHex: function(rgba) {
-            var rgbaValue = rgba.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i),
-                hex;
+                $('button.swatch').each(function() {
+                    bg = AccessibilityColorContrast.getL(
+                        AccessibilityColorContrast.rgbaToHex(
+                            $(this).css('backgroundColor')
+                        )
+                    );
+                    fg = AccessibilityColorContrast.getL(
+                        AccessibilityColorContrast.rgbaToHex(
+                            $(this).parent().parent()
+                                .css('backgroundColor')
+                        )
+                    );
 
-            hex = (rgbaValue && rgbaValue.length === 4) ? '#' +
-                ('0' + parseInt(rgbaValue[1], 10).toString(16)).slice(-2) +
-                ('0' + parseInt(rgbaValue[2], 10).toString(16)).slice(-2) +
-                ('0' + parseInt(rgbaValue[3], 10).toString(16)).slice(-2) : '';
+                    ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05);
+                    ratios = [4.5, 3]; // 4.5 normal text AA, 3 large text AA
 
-            hex = hex.replace('#', '');
+                    if (ratio < ratios[0]) {
+                        // Text should pass for normal sized text (non-headings)
+                        AccessibilityColorContrast.applyHighlighting($(this));
+                    }
 
-            return hex;
-        },
+                    if (ratio < ratios[1]) {
+                        // Text should pass for heading sized text
+                        // Unused at this time, since text is smaller
+                    }
+                });
+            },
 
-        checkContrast: function() {
-            var bg, fg, ratio, ratios;
+            rgbaToHex: function(rgba) {
+                // matches rgba(r, g, b, a)
+                var rgbaValue = rgba.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i),
+                    hex;
 
-            $('.example-color').each(function() {
-                bg = AccessibilityColorContrast.getL(
-                    AccessibilityColorContrast.rgbaToHex(
-                        $(this).css('backgroundColor')
-                    )
-                );
-                fg = AccessibilityColorContrast.getL(
-                    AccessibilityColorContrast.rgbaToHex(
-                        $(this).find('.color-class').css('color')
-                    )
-                );
+                hex = (rgbaValue && rgbaValue.length === 4) ? '#' +
+                    ('0' + parseInt(rgbaValue[1], 10).toString(16)).slice(-2) +
+                    ('0' + parseInt(rgbaValue[2], 10).toString(16)).slice(-2) +
+                    ('0' + parseInt(rgbaValue[3], 10).toString(16)).slice(-2) : '';
 
-                ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05);
-                ratios = [4.5, 3]; // 4.5 normal text AA, 3 large text AA
+                hex = hex.replace('#', '');
 
-                if (ratio < ratios[0]) {
-                    // Text should pass for normal sized text (non-headings)
-                    AccessibilityColorContrast.applyHighlighting($(this));
+                return hex;
+            },
+
+            getL: function(color) {
+                var R, G, B, L,
+                    update = false;
+
+                if (color.length === 3) {
+                    R = AccessibilityColorContrast.getsRGB(color.substring(0, 1) + color.substring(0, 1));
+                    G = AccessibilityColorContrast.getsRGB(color.substring(1, 2) + color.substring(1, 2));
+                    B = AccessibilityColorContrast.getsRGB(color.substring(2, 3) + color.substring(2, 3));
+                    update = true;
+                } else if (color.length === 6) {
+                    R = AccessibilityColorContrast.getsRGB(color.substring(0, 2));
+                    G = AccessibilityColorContrast.getsRGB(color.substring(2, 4));
+                    B = AccessibilityColorContrast.getsRGB(color.substring(4, 6));
+                    update = true;
+                } else {
+                    update = false;
                 }
 
-                if (ratio < ratios[1]) {
-                    // Text should pass for heading sized text
-                    // Unused at this time, since text is smaller
+                if (update) {
+                    L = (0.2126 * R + 0.7152 * G + 0.0722 * B);
+                    return L;
+                } else {
+                    return false;
                 }
-            });
-        },
+            },
 
-        getL: function(color) {
-            var R, G, B, L,
-                update = false;
+            getsRGB: function(color) {
+                var colorValue = AccessibilityColorContrast.getRGB(color);
+                if (colorValue !== false) {
+                    colorValue = colorValue / 255;
+                    colorValue = (colorValue <= 0.03928) ? colorValue / 12.92 :
+                                 Math.pow(((colorValue + 0.055) / 1.055), 2.4);
+                    return colorValue;
+                } else {
+                    return false;
+                }
+            },
 
-            if (color.length === 3) {
-                R = AccessibilityColorContrast.getsRGB(color.substring(0, 1) + color.substring(0, 1));
-                G = AccessibilityColorContrast.getsRGB(color.substring(1, 2) + color.substring(1, 2));
-                B = AccessibilityColorContrast.getsRGB(color.substring(2, 3) + color.substring(2, 3));
-                update = true;
-            } else if (color.length === 6) {
-                R = AccessibilityColorContrast.getsRGB(color.substring(0, 2));
-                G = AccessibilityColorContrast.getsRGB(color.substring(2, 4));
-                B = AccessibilityColorContrast.getsRGB(color.substring(4, 6));
-                update = true;
-            } else {
-                update = false;
+            getRGB: function(col) {
+                var color;
+
+                try {
+                    color = parseInt(col, 16);
+                } catch (err) {
+                    color = false;
+                }
+
+                return color;
+            },
+
+            applyHighlighting: function(swatch) {
+                var title, newTitle;
+
+                $(swatch)
+                    .addClass(AccessibilityColorContrast.vars.failClass);
+
+                title = $(swatch).attr('title');
+                newTitle = title + '. Take care when using this color with certain color combinations!';
+
+                $(swatch).attr('title', newTitle);
             }
+        };
+    }());
 
-            if (update) {
-                L = (0.2126 * R + 0.7152 * G + 0.0722 * B);
-                return L;
-            } else {
-                return false;
-            }
-        },
-
-        getsRGB: function(color) {
-            var colorValue = AccessibilityColorContrast.getRGB(color);
-            if (colorValue !== false) {
-                colorValue = colorValue / 255;
-                colorValue = (colorValue <= 0.03928) ? colorValue / 12.92 :
-                             Math.pow(((colorValue + 0.055) / 1.055), 2.4);
-                return colorValue;
-            } else {
-                return false;
-            }
-        },
-
-        getRGB: function(col) {
-            var color;
-
-            try {
-                color = parseInt(col, 16);
-            } catch (err) {
-                color = false;
-            }
-
-            return color;
-        },
-
-        applyHighlighting: function(swatch) {
-            $(swatch)
-                .addClass(AccessibilityColorContrast.vars.failClass);
-        }
-
-    };
-
-    AccessibilityColorContrast.init();
+    return AccessibilityColorContrast;
 });

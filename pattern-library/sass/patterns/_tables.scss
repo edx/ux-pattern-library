@@ -16,12 +16,12 @@
 // tables
 $table-cell-padding:                        spacing-vertical(x-small) spacing-horizontal(small) !default;
 $table-condensed-cell-padding:              spacing-vertical(xx-small) spacing-horizontal(x-small) !default;
-$table-extra-cell-padding:              spacing-vertical(small) spacing-horizontal(base) !default;
-$table-bg:                                  palette(grayscale, white) !default;
-$table-accent-bg:                           palette(primary, accent) !default;
-$table-focus-bg:                            palette(grayscale, xx-trans) !default;
+$table-extra-cell-padding:                  spacing-vertical(small) spacing-horizontal(base) !default;
+$table-bg:                                  palette(grayscale, base) !default;
+$table-accent-bg:                           palette(primary, light) !default;
+$table-focus-bg:                            palette(grayscale, trans) !default;
 $table-active-bg:                           $component-active-bg !default;
-$table-border-color:                        palette(grayscale, x-light) !default;
+$table-border-color:                        palette(grayscale, base) !default;
 
 
 // ----------------------------
@@ -29,7 +29,7 @@ $table-border-color:                        palette(grayscale, x-light) !default
 // ----------------------------
 
 %highlight {
-  background-color: palette(warning, x-trans);
+  background-color: palette(warning, back);
 }
 
 %table-base {
@@ -59,7 +59,7 @@ $table-border-color:                        palette(grayscale, x-light) !default
   tfoot {
 
     tr {
-      border-top: 2px solid palette(grayscale, light);
+      border-top: 2px solid palette(grayscale, base);
       font-weight: font-weight(semi-bold);
     }
   }
@@ -163,7 +163,7 @@ $table-border-color:                        palette(grayscale, x-light) !default
       position: absolute;
       @include right(0);
       border: 0;
-      color: palette(grayscale, light);
+      color: palette(grayscale, base);
 
       &:hover {
         color: palette(primary, base);
@@ -178,4 +178,3 @@ $table-border-color:                        palette(grayscale, x-light) !default
     }
   }
 }
-

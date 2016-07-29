@@ -25,7 +25,7 @@
     @extend %clear-last-child;
     @include clearfix();
     padding-bottom: spacing-vertical(base);
-    border-bottom: rem(2) solid palette(grayscale-cool, x-light);
+    border-bottom: rem(2) solid palette(grayscale, x-back);
     margin-bottom: spacing-vertical(base);
 
     .button-overlay-demo {
@@ -63,7 +63,7 @@
 // #HEADER
 // ------------------------------
 .pldoc-wrapper-header-site {
-    background: palette(grayscale, white);
+    background: palette(grayscale, x-back);
 }
 
 
@@ -131,7 +131,7 @@
     .pldoc-nav-title {
         @extend %spaced-nav;
         text-transform: uppercase;
-        color: palette(primary, x-dark);
+        color: palette(primary, dark);
         font-size: font-size(small);
     }
 
@@ -150,7 +150,7 @@
     }
 
     .is-current {
-        background-color: palette(grayscale-cool, x-trans);
+        
     }
 
 }
@@ -167,20 +167,18 @@
 
 .pldoc-tab {
 
-    &:focus {
-        outline: none;
-    }
 }
 
 .pldoc-tab-content {
     @extend %depth-2;
     @include transition(box-shadow timing(fast) ease-in-out);
-    border: rem(1) solid palette(grayscale, x-light);
+    border: rem(1) solid palette(grayscale, accent);
+    border-top: none;
     padding: spacing-horizontal(base);
 }
 
 .pldoc-settings {
-    background: palette(grayscale, xx-light);
+    background: palette(grayscale, x-back);
     margin-bottom: spacing-vertical(large);
     padding: spacing-vertical(small) spacing-horizontal(small);
 }
@@ -245,7 +243,7 @@
 .pldoc-tab-labels {
     @include clearfix();
     @extend %reset-lists;
-    border-bottom: $pldoc-tab-label-height solid palette(grayscale, x-light);
+    border-bottom: $pldoc-tab-label-height solid palette(grayscale, back);
 }
 
 .pldoc-tab-heading {
@@ -276,8 +274,8 @@
         }
 
         &.is-active {
-            border-bottom-color: palette(grayscale, x-dark);
-            color: palette(grayscale, x-dark);
+            border-bottom-color: palette(grayscale, dark);
+            color: palette(grayscale, dark);
         }
     }
 }
@@ -297,389 +295,313 @@
 // color swatches
 .pldoc-pattern-colors {
 
-    .brand-primary {
-
-        &.base {
-            background: palette(primary, base);
-        }
-
-        &.light {
-            background: palette(primary, light);
-        }
-
-        &.x-light {
-            background: palette(primary, x-light);
-        }
-
-        &.dark {
-            background: palette(primary, dark);
-        }
-
-        &.x-dark {
-            background: palette(primary, x-dark);
-        }
-
-        &.accent {
-            background: palette(primary, accent);
-        }
-
-        &.x-accent {
-            background: palette(primary, x-accent);
-        }
-
-        &.trans {
-            background: palette(primary, trans);
-        }
-
-        &.x-trans {
-            background: palette(primary, x-trans);
-        }
-
-        &.xx-trans {
-            background: palette(primary, xx-trans);
-        }
-    }
-
-    .brand-secondary {
-        background: palette(secondary, base);
-
-        &.base {
-            background: palette(secondary, base);
-        }
-
-        &.light {
-            background: palette(secondary, light);
-        }
-
-        &.x-light {
-            background: palette(secondary, x-light);
-        }
-
-        &.dark {
-            background: palette(secondary, dark);
-        }
-
-        &.x-dark {
-            background: palette(secondary, x-dark);
-        }
-
-        &.accent {
-            background: palette(secondary, accent);
-        }
-    }
-
-    .grayscale {
-        background: palette(grayscale, base);
-
-        &.base {
-            background: palette(grayscale, base);
-        }
-
-        &.light {
-            background: palette(grayscale, light);
-        }
-
-        &.x-light {
-            background: palette(grayscale, x-light);
-        }
-
-        &.xx-light {
-            background: palette(grayscale, xx-light);
-        }
-
-        &.white {
-            background: palette(grayscale, white);
-        }
-
-        &.white-t {
-            background: palette(grayscale, white-t);
-        }
-
-        &.dark {
-            background: palette(grayscale, dark);
-        }
-
-        &.x-dark {
-            background: palette(grayscale, x-dark);
-        }
-
-        &.black {
-            background: palette(grayscale, black);
-        }
-
-        &.black-t {
-            background: palette(grayscale, black-t);
-        }
-
-        &.trans {
-            background: palette(grayscale, trans);
-        }
-
-        &.x-trans {
-            background: palette(grayscale, x-trans);
-        }
-
-        &.xx-trans {
-            background: palette(grayscale, xx-trans);
-        }
-    }
-
-    .grayscale-cool {
-        background: palette(grayscale-cool, base);
-
-        &.base {
-            background: palette(grayscale-cool, base);
-        }
-
-        &.light {
-            background: palette(grayscale-cool, light);
-        }
-
-        &.x-light {
-            background: palette(grayscale-cool, x-light);
-        }
-
-        &.xx-light {
-            background: palette(grayscale-cool, xx-light);
-        }
-
-        &.dark {
-            background: palette(grayscale-cool, dark);
-        }
-
-        &.x-dark {
-            background: palette(grayscale-cool, x-dark);
-        }
-
-        &.trans {
-            background: palette(grayscale-cool, trans);
-        }
-
-        &.x-trans {
-            background: palette(grayscale-cool, x-trans);
-        }
-
-        &.xx-trans {
-            background: palette(grayscale-cool, xx-trans);
-        }
-    }
-
-    .success {
-        background: palette(success, base);
-
-        &.base {
-            background: palette(success, base);
-        }
-
-        &.light {
-            background: palette(success, light);
-        }
-
-        &.dark {
-            background: palette(success, dark);
-        }
-
-        &.trans {
-            background: palette(success, trans);
-        }
-
-        &.x-trans {
-            background: palette(success, x-trans);
-        }
-
-        &.xx-trans {
-            background: palette(success, xx-trans);
-        }
-    }
-
-    .warning {
-        background: palette(warning, base);
-
-        &.base {
-            background: palette(warning, base);
-        }
-
-        &.light {
-            background: palette(warning, light);
-        }
-
-        &.dark {
-            background: palette(warning, dark);
-        }
-
-        &.trans {
-            background: palette(warning, trans);
-        }
-
-        &.x-trans {
-            background: palette(warning, x-trans);
-        }
-
-        &.xx-trans {
-            background: palette(warning, xx-trans);
-        }
-    }
-
-    .error {
-        background: palette(error, base);
-
-        &.base {
-            background: palette(error, base);
-        }
-
-        &.light {
-            background: palette(error, light);
-        }
-
-        &.dark {
-            background: palette(error, dark);
-        }
-
-        &.trans {
-            background: palette(error, trans);
-        }
-
-        &.x-trans {
-            background: palette(error, x-trans);
-        }
-
-        &.xx-trans {
-            background: palette(error, xx-trans);
-        }
-    }
-
-    .information {
-        background: palette(information, base);
-
-        &.base {
-            background: palette(information, base);
-        }
-
-        &.light {
-            background: palette(information, light);
-        }
-
-        &.dark {
-            background: palette(information, dark);
-        }
-
-        &.trans {
-            background: palette(information, trans);
-        }
-
-        &.x-trans {
-            background: palette(information, x-trans);
-        }
-
-        &.xx-trans {
-            background: palette(information, xx-trans);
-        }
-    }
-
-    .example-color {
-        @include transition(all timing(x-fast) ease-in-out);
-        @include span(12 of 12);
+    .pldoc-tab-content {
         position: relative;
-        border: 0;
-        border-radius: 0;
-        padding: spacing-vertical(small) spacing-horizontal(base);
-        box-shadow: none;
-        color: palette(grayscale, white);
 
-        &.fail-a11y-color {
-            border-left: rem($baseline/4) solid palette(warning, base);
-        }
-
-        // STATE: hover, focus, and active
-        &:hover,
-        &:focus,
-        &:active {
-            @include transform(scale(1.02));
+        .info-pane {
+            position: fixed;
+            left: 37.5%;
+            width: 640px;
+            height: 420px;
+            border: rem(1) solid palette(grayscale, accent);
+            background: $white;
+            box-shadow: 0 0 5px $shadow;
             z-index: z-index(mid-front);
+
+            .info-pane-header {
+                padding: spacing-vertical(small);
+                background: palette(grayscale, x-back);
+
+                .close-button {
+                    @include float(right);
+                    border: 0;
+                    background: transparent;
+                    color: palette(primary, base);
+                }
+
+                .color-info-title {
+                    margin-bottom: 0;
+                    font-weight: font-weight(bold);
+                }
+
+                .color-description {
+                    margin-bottom: 0;
+                }
+            }
+
+            .color-info-content {
+                padding: spacing-vertical(small);
+                background: $white;
+                
+                .color-usage {
+                    
+                    .list-background,
+                    .list-foreground {
+                        @include padding-right(5%);
+                        display: inline-block;
+                        width: 49%;
+                        vertical-align: top;
+                    }
+                }
+                
+                .color-technics {
+                    margin-top: spacing-vertical(small);
+                    
+                    dl {
+                        margin-bottom: 0;
+                        
+                        dt {
+                            display: inline-block;
+                            width: 19%;
+                            margin-top: 0;
+                            vertical-align: top;
+                        }
+                        
+                        dd {
+                            display: inline-block;
+                            width: 79%;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
         }
+    }
+    
+    .example-set {
+        
+        .row {
+            padding: spacing-vertical(x-small) 0;
+            
+            &.on-white { background: $white; }
+            
+            &.on-dark-primary { background: palette(primary, dark); color: palette(primary, x-back); }
+            &.on-base-primary { background: palette(primary, base); color: palette(primary, x-back); }
+            &.on-accent-primary { background: palette(primary, accent); color: palette(primary, x-back); }
+            &.on-back-primary { background: palette(primary, back); color: palette(primary, dark); }
+            &.on-x-back-primary { background: palette(primary, x-back); color: palette(primary, dark); }
+                
+            &.on-dark-secondary { background: palette(secondary, dark); color: palette(primary, x-back); }
+            &.on-base-secondary { background: palette(secondary, base); color: palette(primary, x-back); }
+            &.on-accent-secondary { background: palette(secondary, accent); color: palette(primary, x-back); }
+            &.on-back-secondary { background: palette(secondary, back); color: palette(primary, dark); }
+            &.on-x-back-secondary { background: palette(secondary, x-back); color: palette(primary, dark); }
+                
+            &.on-dark-grayscale { background: palette(grayscale, dark); color: palette(primary, x-back); }
+            &.on-base-grayscale { background: palette(grayscale, base); color: palette(primary, x-back); }
+            &.on-accent-grayscale { background: palette(grayscale, accent); color: palette(primary, x-back); }
+            &.on-back-grayscale { background: palette(grayscale, back); color: palette(primary, dark); }
+            &.on-x-back-grayscale { background: palette(grayscale, x-back); color: palette(primary, dark); }
+            
+            &.on-dark-success {
+                background: palette(success, text);
+                color: palette(success, back);
+            }
+            
+            &.on-dark-error {
+                background: palette(error, text);
+                color: palette(error, back);
+            }
+            
+            &.on-dark-warning {
+                background: palette(warning, text);
+                color: palette(warning, back);
+            }
+            
+            &.on-dark-information {
+                background: palette(information, text);
+                color: palette(information, back);
+            }
+        }
+        
+        button.swatch {
+            border: rem(1) solid rgba(0, 0, 0, .15);
+        }
+    
+        .swatch {
+            @include transition(all timing(x-fast) ease-in-out);
+            @include span(12 of 12);
+            position: relative;
+            border: 0;
+            padding: spacing-vertical(base) spacing-horizontal(x-small);
+            
+            &.color-description {
+                padding: spacing-vertical(small) 0 0 0;
+                font-size: font-size(small);
+            }
+            
+            &.primary {
+                background: palette(primary, base);
+                
+                &.dark {
+                    background: palette(primary, dark);
+                }
+                
+                &.base {
+                    background: palette(primary, base);
+                }
+                
+                &.accent {
+                    background: palette(primary, accent);
+                }
+                
+                &.back {
+                    background: palette(primary, back);
+                }
+                
+                &.x-back {
+                    background: palette(primary, x-back);
+                }
+            }
+            
+            &.secondary {
+                background: palette(secondary, base);
+                
+                &.dark {
+                    background: palette(secondary, dark);
+                }
+                
+                &.base {
+                    background: palette(secondary, base);
+                }
+                
+                &.accent {
+                    background: palette(secondary, accent);
+                }
+                
+                &.back {
+                    background: palette(secondary, back);
+                }
+                
+                &.x-back {
+                    background: palette(secondary, x-back);
+                }
+            }
+            
+            &.grayscale {
+                background: palette(grayscale, base);
+                
+                &.dark {
+                    background: palette(grayscale, dark);
+                }
+                
+                &.base {
+                    background: palette(grayscale, base);
+                }
+                
+                &.accent {
+                    background: palette(grayscale, accent);
+                }
+                
+                &.back {
+                    background: palette(grayscale, back);
+                }
+                
+                &.x-back {
+                    background: palette(grayscale, x-back);
+                }
+            }
+            
+            &.success {
+                background: palette(success, text);
+                
+                &.text {
+                    background: palette(success, text);
+                }
+                
+                &.accent {
+                    background: palette(success, accent);
+                }
+                
+                &.back {
+                    background: palette(success, back);
+                }
+            }
+            
+            &.error {
+                background: palette(error, text);
+                
+                &.text {
+                    background: palette(error, text);
+                }
+                
+                &.accent {
+                    background: palette(error, accent);
+                }
+                
+                &.back {
+                    background: palette(error, back);
+                }
+            }
+            
+            &.warning {
+                background: palette(warning, text);
+                
+                &.text {
+                    background: palette(warning, text);
+                }
+                
+                &.accent {
+                    background: palette(warning, accent);
+                }
+                
+                &.back {
+                    background: palette(warning, back);
+                }
+            }
+            
+            &.fail-a11y-color {
 
-        // CASE: dark text on light bg
-        &.dol {
-
-            .color-class,
-            .color-reference,
+                &:before {
+                    // warning icon
+                    display: inline-block;
+                    position: absolute;
+                    left: $baseline;
+                    top: $baseline;
+                    content: "\F071";
+                    font: normal normal normal 16px/1 FontAwesome;
+                    color: palette(warning, accent);
+                    text-shadow: -1px -1px 0px $white, 1px 1px 0px $shadow;
+                }
+            }
+            
             .color-meta {
-                color: palette(grayscale, black);
-            }
-        }
-
-        // CASE: light text on dark bg
-        &.lod {
-
-            .color-class,
-            .color-reference,
-            .color-meta {
-                color: palette(grayscale, white);
-            }
-        }
-
-        // color info
-        .color-info {
-            @include span(12);
-            margin-bottom: spacing-vertical(small);
-
-            @include susy-breakpoint($bp-screen-md, $susy-default) {
-                @include span(6 first);
-                margin-bottom: 0;
-            }
-        }
-
-        // color name/class
-        .color-class {
-            display: block;
-            width: 100%;
-            margin-bottom: spacing-vertical(x-small);
-            font-size: font-size(small);
-            font-weight: font-weight(semi-bold);
-            text-transform: lowercase;
-        }
-
-        // CASE: base color
-        &.base {
-            padding-top: spacing-vertical(base);
-            padding-bottom: spacing-vertical(base);
-
-            .color-class {
-                font-size: font-size(base);
-                font-weight: font-weight(bold);
-            }
-        }
-
-        // color reference
-        .color-reference {
-            display: block;
-            font-size: font-size(x-small);
-        }
-
-        // color metadata
-        .color-meta {
-            @include span(12);
-            font-size: font-size(x-small);
-            color: palette(grayscale, white);
-
-            @include susy-breakpoint($bp-screen-md, $susy-default) {
-                @include span(6 last);
-                @include text-align(right);
+                opacity: 0;
             }
 
-            .color-rgb,
-            .color-hex {
-                vertical-align: middle;
+            // color info
+            .color-info {
+                display: block;
                 text-align: center;
             }
 
-            .color-rgb {
-                @include ellipsis();
-                @include margin-right(spacing-horizontal(small));
+            // color name/class
+            .color-class {
+                display: block;
+                font-size: font-size(small);
+                font-weight: font-weight(semi-bold);
+                text-transform: lowercase;
+                text-align: center;
             }
 
-            .color-hex {
-                text-transform: uppercase;
+            // color reference and meta
+            .color-reference,
+            .color-meta {
+                display: block;
+                font-size: font-size(x-small);
+                text-align: center;
+            }
+
+            // color metadata
+            .color-meta {
+
+                .color-rgb {
+                    @include ellipsis();
+                }
+
+                .color-hex {
+                    text-transform: uppercase;
+                }
             }
         }
     }
@@ -753,11 +675,12 @@
     .depth--3 {
 
         .hd {
-            color: palette(grayscale, white);
+            color: $white;
         }
 
-        .copy {
-            color: palette(grayscale, x-light);
+        .copy,
+        .copy-meta {
+            color: $white;
         }
     }
 
@@ -805,7 +728,7 @@
     .example-label {
         @extend %copy-micro;
         display: block;
-        color: palette(grayscale, black-t);
+        color: palette(grayscale, dark);
     }
 }
 
@@ -1124,6 +1047,6 @@
     .example-label {
         @extend %copy-micro;
         display: block;
-        color: palette(grayscale, black-t);
+        color: palette(grayscale, dark);
     }
 }

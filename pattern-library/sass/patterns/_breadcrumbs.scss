@@ -11,7 +11,7 @@
     .fa-angle-right {
         @include margin-left($baseline/4);
         display: inline-block;
-        color: palette(grayscale, light);
+        color: palette(grayscale, x-dark);
 
         @include rtl {
             @include transform(rotateY(180deg));
