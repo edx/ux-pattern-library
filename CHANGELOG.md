@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.16.2 (2016-07-29)
+* Updated our color options and the swatch layout
+* Fixed regressions throughout as a result of the changed colors
+* Updated alerts to meet more needs of the UX team
+
 ## 0.16.1 (2016-07-15)
 * Remove edx-icons font variable
 
