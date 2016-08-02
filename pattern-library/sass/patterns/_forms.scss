@@ -257,6 +257,15 @@ $input-width: (
             border-color: palette(error, text);
         }
     }
+
+    // Input fields immediately followed by a button (ie, search boxes) should eliminate the spacing
+    // between them and adopt matching styling/sizing to emphasize that they are connected.
+    &[type=search] + button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-size: font-size(base);
+        margin-left: (-1 * $baseline / 4);
+    }
 }
 
 
