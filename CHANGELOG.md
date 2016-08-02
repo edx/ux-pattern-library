@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.16.4 (2016-08-02)
+* Update styling of search boxes/buttons to be more coherent, and expose default HTML5 functionality
+
+- - -
+
 ## 0.16.3 (2016-07-29)
 * Minor update to do some cleanup after time-sensitive 0.16.2
 
