@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.16.5 (2016-08-05)
+* Fixes for button styling, along with button documentation clean up
+
+- - -
+
 ## 0.16.4 (2016-08-02)
 * Update styling of search boxes/buttons to be more coherent, and expose default HTML5 functionality
 
