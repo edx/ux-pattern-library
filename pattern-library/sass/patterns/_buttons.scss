@@ -80,6 +80,13 @@ $btn-small-font-size: font-size(small);
             margin-right: 0;
         }
     }
+
+    // Don't show underlines on links that are styled as buttons
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 
@@ -114,8 +121,8 @@ $btn-small-font-size: font-size(small);
     &:focus,
     &.is-focused {
         border-color: palette(primary, accent);
-        background: palette(primary, x-back);
-        color: palette(primary, accent);
+        background: palette(primary, accent);
+        color: palette(primary, x-back);
     }
 
     // STATE: is pressed or active
@@ -150,8 +157,8 @@ $btn-small-font-size: font-size(small);
     &.is-hovered,
     &:focus,
     &.is-focused {
+        border-color: palette(primary, accent);
         background: palette(primary, accent);
-        border-color: palette(primary, base);
         color: palette(primary, x-back);
     }
 
@@ -297,8 +304,8 @@ $btn-small-font-size: font-size(small);
         }
 
         &:only-child {
-          @include margin-left(0);
-          border-radius: $btn-border-radius;
+            @include margin-left(0);
+            border-radius: $btn-border-radius;
         }
     }
 }

@@ -610,7 +610,10 @@
 // buttons
 .pldoc-pattern-buttons {
 
-    .btn {
+    .btn,
+    .btn-neutral,
+    .btn-brand,
+    .btn-elevated {
         display: inline-block;
         vertical-align: middle;
         margin-right: spacing-horizontal(x-small);
