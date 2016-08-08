@@ -166,12 +166,12 @@ $input-width: (
 .field-input,
 .field-select,
 .field-textarea {
-    @include placeholder { color: palette(grayscale, back); }
+    @include placeholder { color: palette(grayscale, accent); }
     @include transition(all timing(xx-fast) ease-in-out 0s);
     display: inline-block;
     padding: rem($baseline/2);
     border: 1px solid palette(grayscale, back);
-    background: palette(grayscale, x-back);
+    background: $white;
     font-size: font-size(base);
     color: palette(grayscale, dark);
 
@@ -241,7 +241,7 @@ $input-width: (
 .input-text {
 
     &.input-alt {
-        padding: spacing-verical(small) 0;
+        padding: spacing-vertical(small) 0;
         border-width: 0 0 2px 0;
         background: $white;
 
