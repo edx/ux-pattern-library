@@ -25,7 +25,7 @@
     "jquery": "^1.11.1",
     "requirejs": "^2.1.22",
     "requirejs-plugins": "^1.0.2",
-    "sizzle": "^2.3.0",
+    "sizzle": "2.3.0",
     "susy": "^2.2.9"
   },
   "peerDependencies": {
