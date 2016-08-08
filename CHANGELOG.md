@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.16.6 (2016-08-08)
+* Fixes for color contrast with form fields
+
+- - -
+
 ## 0.16.5 (2016-08-05)
 * Fixes for button styling, along with button documentation clean up
 
