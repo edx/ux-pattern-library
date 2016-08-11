@@ -1,6 +1,6 @@
 approvals:
   ignore: pr_opener  # cannot approve a PR you opened
-  pattern: "(:\+1:|:thumbsup:|:shipit:|lgtm|LGTM)"  # :+1:, :thumbsup:, :shipit:, lgtm or LGTM
+  pattern: "(:\\+1:|:thumbsup:|:shipit:|lgtm|LGTM)"  # :+1:, :thumbsup:, :shipit:, lgtm or LGTM
   minimum: 3  # Need UX, engineering and a11y approval
   groups:
     # at least 1 approval from UX
