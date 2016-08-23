@@ -4,5 +4,5 @@
 nick: uxpl
 oeps: {}
 openedx-release: {ref: master}
-owner: MUST FILL IN OWNER
+owner: edx/edx-ux-team
 track-pulls: true
