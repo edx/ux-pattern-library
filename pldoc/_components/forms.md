@@ -25,7 +25,16 @@ info:               Forms allow users to interact with the interface, set prefer
         <fieldset class="form-group">
             <legend class="form-group-hd sr-only">Personal Details</legend>
             <div class="field">
-                <label class="field-label" for="full-name-default">Your name (default text field)</label>
+                <label class="field-label" for="full-name-adaptive">Your name (adaptive placeholder, best for accessibility)</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text" type="text" id="full-name-adaptive" name="full-name-adaptive" aria-describedby="full-name-adaptive-hint" required>
+                    <div class="field-hint" id="full-name-adaptive-hint">
+                        <p>Example: Jane Doe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="field-label" for="full-name-default">Your name (legacy text field with placeholder <i>and</i> visible label)</label>
                 <input class="field-input input-text" type="text" id="full-name-default" name="full-name-default" placeholder="e.g. Jane Doe" aria-describedby="full-name-default-hint">
                 <div class="field-hint" id="full-name-default-hint">
                     <p>Example: Jane Doe</p>
