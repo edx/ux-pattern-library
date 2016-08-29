@@ -293,13 +293,17 @@ $input-width: (
 
     .field-input:focus,
     .field-input:valid {
-        & + .field-hint {
+        & ~ .field-hint {
             background-color: $white;
             font-size: font-size(small) !important;
             margin-top: (-$baseline / 2 - 2);
             @include margin-left(rem($baseline / 2));
             padding: 2px;
         }
+    }
+
+    .input-alt ~ .field-hint {
+        padding: spacing-vertical(small) 0;
     }
 }
 
