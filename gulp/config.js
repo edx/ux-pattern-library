@@ -8,10 +8,7 @@ var patternLibrarySrc = './pattern-library',
 
     // documentation site
     pldocSrc = './pldoc',
-    pldocDest = pldocSrc + '/public',
-
-    // example demo
-    demoSrc = './demo';
+    pldocDest = pldocSrc + '/public';
 
 module.exports = {
     patternLibrary: {
@@ -35,11 +32,7 @@ module.exports = {
 
         // documentation site
         pldoc_src: pldocSrc + '/static/sass',
-        pldoc_src_files: pldocSrc + '/static/sass/**/*.scss',
-
-        // example demo
-        demo_src: demoSrc + '/static/sass',
-        demo_src_files: demoSrc + '/static/sass/**/*.scss'
+        pldoc_src_files: pldocSrc + '/static/sass/**/*.scss'
     },
     fonts: {
         // pattern library
@@ -49,11 +42,7 @@ module.exports = {
 
         // documentation site
         pldoc_src: pldocSrc + '/static/fonts',
-        pldoc_src_files: pldocSrc + '/static/fonts/**/*',
-
-        // example demo
-        demo_src: demoSrc + '/static/fonts',
-        demo_src_files: demoSrc + '/static/fonts/**/*'
+        pldoc_src_files: pldocSrc + '/static/fonts/**/*'
     },
     images: {
         // pattern library
@@ -63,11 +52,7 @@ module.exports = {
 
         // documentation site
         pldoc_src: pldocSrc + '/static/images',
-        pldoc_src_files: pldocSrc + '/static/images/**/*',
-
-        // example demo
-        demo_src: demoSrc + '/static/images',
-        demo_src_files: demoSrc + '/static/images/**/*'
+        pldoc_src_files: pldocSrc + '/static/images/**/*'
     },
     scripts: {
         // pattern library
@@ -77,11 +62,7 @@ module.exports = {
 
         // documentation site
         pldoc_src: pldocSrc + '/static/js',
-        pldoc_src_files: pldocSrc + '/static/js/**/*.js',
-
-        // example demo
-        demo_src: demoSrc + '/static/js',
-        demo_src_files: demoSrc + '/static/js/**/*.js'
+        pldoc_src_files: pldocSrc + '/static/js/**/*.js'
     },
     exampleHtmlFiles: {
         pldoc_src_files: pldocSrc + '/_includes/examples/*.html'
@@ -97,13 +78,11 @@ module.exports = {
         design_elements: './pldoc/_design_elements/**/*',
         includes: './pldoc/_includes/**/*',
         examples: './pldoc/examples/**/*',
-        demo: './pldoc/demo/**/*.html',
         layouts: './pldoc/_layouts/**/*'
     },
     documentation: {
         rootJavaScriptFile: './pldoc/static/js/pattern-library-doc.js',
         rootSassFile: './pldoc/static/sass/pattern-library-doc.scss',
-        rootDemoSassFile: './pldoc/demo/static/sass/demo-ltr.scss',
         pldocDest: pldocDest,
         gitHubPages: {
             files: './_site/**/*'
