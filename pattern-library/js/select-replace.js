@@ -20,7 +20,7 @@ define([
             customClass: 'wrapper-custom-select',
             wrapperClass: 'wrapper-replace-select',
             valueClass: 'replace-value',
-            iconClass: 'icon-caret-down',
+            iconClass: 'fa-caret-down',
             hoverClass: 'is-hover'
         },
 
@@ -61,10 +61,8 @@ define([
                             '<select class="' + replaced[0].className + ' is-replaced" id="' + replaced[0].id + '" name="' + replaced[0].name + '" ' + disabled + '>' + replaced[0].innerHTML + '</select>',
                             '<span class="' + variables.customClass + ' ' + statuses.join(' ') + '" aria-hidden="true">',
                                 '<span class="' + variables.valueClass + '">' + CustomSelectReplacement.setInitialText($el) + '</span>',
-                                '<span class="icon-fallback-glyph">',
-                                    '<span class="icon ' + variables.iconClass + '" aria-hidden="true"></span>',
-                                    '<span class="text">Down arrow</span>',
-                                '</span>',
+                                    '<span class="icon fa ' + variables.iconClass + '" aria-hidden="true"></span>',
+                                    '<span class="sr-only">Down arrow</span>',
                             '</span>',
                         '</div>'
                     ].join(''));

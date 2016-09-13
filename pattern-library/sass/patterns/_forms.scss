@@ -261,11 +261,15 @@ $input-width: (
     // Input fields immediately followed by a button (ie, search boxes) should eliminate the spacing
     // between them and adopt matching styling/sizing to emphasize that they are connected.
     &[type=search] + button {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        @include border-top-left-radius(0);
+        @include border-bottom-left-radius(0);
+        @include border-top-right-radius(3px);
+        @include border-bottom-right-radius(3px);
+        @include margin-left(-1 * $baseline / 4);
+        @include margin-right(0);
         font-size: font-size(base);
-        margin-left: (-1 * $baseline / 4);
     }
+
 }
 
 
@@ -314,13 +318,7 @@ $input-width: (
         @include size(rem($baseline));
         position: absolute;
         @include right(rem(($baseline/4)));
-        margin-top: rem(-($baseline/10)); // vertically centers the down caret icon
-        color: palette(grayscale, base);
         vertical-align: middle;
-    }
-
-    .icon-fallback-glyph .icon:before {
-        content: "\25BE"; // system glyph down arrow
     }
 
     &:disabled,
