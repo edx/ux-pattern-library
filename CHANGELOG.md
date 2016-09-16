@@ -2,6 +2,13 @@
 
 - - -
 
+## 0.16.7 (2016-09-16)
+* Fixes RTL margin side of the search button
+* Fixes search input text -webkit-appearance for Safari
+* Fixes the down arrow screenreader text in dropdown menu icon span
+
+- - -
+
 ## 0.16.6 (2016-08-08)
 * Fixes for color contrast with form fields
 
