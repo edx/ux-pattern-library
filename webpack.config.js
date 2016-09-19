@@ -4,8 +4,7 @@
 
 var path = require('path'),
     webpack = require('webpack'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    outputRoot = process.env.OUTPUT_ROOT ? process.env.OUTPUT_ROOT : 'pldoc/public/';
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var devServerConfig = {
     hot: true,
@@ -22,12 +21,10 @@ var devServerConfig = {
 };
 
 var configFactory = function(options) {
-    var debug = typeof(options.debug) === 'undefined' ? process.env.NODE_ENV !== 'production' : options.debug;
-
     var wpconfig = {
         output: {
-            path: path.resolve(__dirname, outputRoot),
-            publicPath: 'public/',
+            path: path.resolve(__dirname, 'pldoc/public/'),
+            publicPath: (options.publicPath || '/') + 'public/',
             filename: '[name].js',
             chunkFilename: 'chunk.[id].js'
         },
@@ -48,11 +45,11 @@ var configFactory = function(options) {
                 },
                 {
                     test: /\.css$/,  // Required for precompiled FontAwesome
-                    loader: debug ? 'style!css' : ExtractTextPlugin.extract('style', 'css')
+                    loader: options.debug ? 'style!css' : ExtractTextPlugin.extract('style', 'css')
                 },
                 {
                     test: /\.scss$/,
-                    loader: debug ? 'style!css!sass' : ExtractTextPlugin.extract('style', 'css!sass')
+                    loader: options.debug ? 'style!css!sass' : ExtractTextPlugin.extract('style', 'css!sass')
                 }
             ]
         },
@@ -70,14 +67,13 @@ var configFactory = function(options) {
         plugins: [
             new webpack.NoErrorsPlugin()
         ],
-        debug: debug,
-        devtool: debug ? 'source-map' : null,
-        devServer: devServerConfig
+        debug: options.debug,
+        devtool: options.debug ? 'source-map' : null
     };
 
     // In debug (local) mode, we want hot module reload and CSS inlined into JS.
     // In prod mode, we disable HMR and use ExtractTextPlugin to generate .css files, avoiding a FOUC
-    if (debug) {
+    if (options.debug) {
         wpconfig.entry['pattern-library-doc'] = [].concat(
             'webpack/hot/dev-server',
             wpconfig.entry['pattern-library-doc']
@@ -86,6 +82,7 @@ var configFactory = function(options) {
             new webpack.HotModuleReplacementPlugin(),
             wpconfig.plugins
         );
+        wpconfig.devServer = devServerConfig;
     } else {
         wpconfig.plugins = [].concat(
             new ExtractTextPlugin('[name].css'),
@@ -98,7 +95,7 @@ var configFactory = function(options) {
 };
 
 module.exports = {
-    default: configFactory({debug: true}),
+    default: configFactory({debug: process.env.NODE_ENV !== 'production'}),
     configFactory: configFactory,
     devServerConfig: devServerConfig
 };

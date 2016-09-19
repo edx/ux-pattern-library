@@ -15,27 +15,23 @@
 'use strict';
 
 var gulp = require('gulp'),
-    runSequence = require('run-sequence'),
     childProcess = require('child_process'),
     gitUtils = require('../util/gitUtils'),
     previewConfigFile = '_tmp_preview_config.yml',
     previewSiteDir = '_preview_site',
     previewDomain = process.env.S3_PREVIEW_DOMAIN;
 
-gulp.task('preview', function(callback) {
-    runSequence(
-        'build-preview',
-        'upload-preview',
-        'show-preview',
-        callback
-    );
-});
+gulp.task('preview', [
+    'build-preview',
+    'upload-preview',
+    'show-preview'
+]);
 
-gulp.task('build-preview', ['webpack-prod'], function() {
+gulp.task('build-preview', ['webpack-public-path-git-branch'], function() {
     var branch = gitUtils.currentBranch(),
         previewBaseUrl = '/' + branch + '/';
 
-    process.env.SITE_ROOT = '/' + branch + '/';
+
     // Create a temporary Jekyll configuration file which specifies the base URL for the preview site
     childProcess.execSync('echo \'baseurl: ' + previewBaseUrl + '\' > ' + previewConfigFile);
 
@@ -49,7 +45,7 @@ gulp.task('build-preview', ['webpack-prod'], function() {
     childProcess.execSync('rm ' + previewConfigFile);
 });
 
-gulp.task('upload-preview', function() {
+gulp.task('upload-preview', ['build-preview'], function() {
     var branch = gitUtils.currentBranch();
     if (previewDomain) {
         childProcess.execSync(
@@ -63,7 +59,7 @@ gulp.task('upload-preview', function() {
     }
 });
 
-gulp.task('show-preview', function() {
+gulp.task('show-preview', ['upload-preview'], function() {
     var branch = gitUtils.currentBranch();
     childProcess.execSync(
         'open http://' + previewDomain + '/' + branch

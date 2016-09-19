@@ -16,12 +16,6 @@ module.exports = {
         src: patternLibrarySrc,
         dest: pldocDest + '/edx-pattern-library'
     },
-    browserSync: {
-        server: {
-            // Serve up our build folder
-            baseDir: local
-        }
-    },
     styles: {
         // pattern library
         rootLtrSassFile: patternLibrarySrc + '/sass/edx-pattern-library-ltr.scss',
