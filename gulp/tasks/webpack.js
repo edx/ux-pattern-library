@@ -5,7 +5,6 @@ var gulp = require('gulp'),
     webpack = require('webpack'),
     WebpackDevServer = require('webpack-dev-server'),
     gitUtils = require('../util/gitUtils'),
-    config = require('../config.js'),
     wpConfig = require('../../webpack.config.js'),
     wpConfigFactory = wpConfig.configFactory,
     wpConfigDevServer = wpConfig.devServerConfig;
