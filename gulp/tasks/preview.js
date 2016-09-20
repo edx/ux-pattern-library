@@ -31,7 +31,6 @@ gulp.task('build-preview', ['webpack-public-path-git-branch'], function() {
     var branch = gitUtils.currentBranch(),
         previewBaseUrl = '/' + branch + '/';
 
-
     // Create a temporary Jekyll configuration file which specifies the base URL for the preview site
     childProcess.execSync('echo \'baseurl: ' + previewBaseUrl + '\' > ' + previewConfigFile);
 

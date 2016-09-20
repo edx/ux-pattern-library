@@ -1,7 +1,6 @@
 'use strict';
 
-var gulp = require('gulp'),
-    gulpUtil = require('gulp-util');
+var gulp = require('gulp');
 
 gulp.task('build-production', [
     'jekyll-build',
