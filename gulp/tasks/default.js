@@ -1,12 +1,8 @@
 'use strict';
 
-var gulp = require('gulp'),
-    runSequence = require('run-sequence');
+var gulp = require('gulp');
 
-gulp.task('default', function(cb) {
-    runSequence(
-        'build-development',
-        'watch',
-        cb
-    );
-});
+gulp.task('default', [
+    'jekyll-serve',
+    'webpack-dev'
+]);

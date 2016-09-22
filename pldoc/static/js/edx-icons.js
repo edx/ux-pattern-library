@@ -1,1 +1,0 @@
-require('font-awesome-loader');

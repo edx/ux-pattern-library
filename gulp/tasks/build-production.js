@@ -1,14 +1,8 @@
 'use strict';
 
-var gulp = require('gulp'),
-    runSequence = require('run-sequence');
+var gulp = require('gulp');
 
-gulp.task('build-production', function(callback) {
-    runSequence(
-        'clean',
-        'build-development',
-        'scripts-uglify',
-        'webpack',
-        callback
-    );
-});
+gulp.task('build-production', [
+    'jekyll-build',
+    'webpack-prod'
+]);

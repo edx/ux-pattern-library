@@ -28,6 +28,7 @@
         @include float(left);
         height: 40px;
         margin-right: spacing-horizontal(small);
+        content: url('../images/edx-logo.svg');
     }
 }
 
