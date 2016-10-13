@@ -104,7 +104,8 @@ var path = require('path'),
             // For more on this WDS/HMR configuration, see:
             // http://webpack.github.io/docs/webpack-dev-server.html#hot-module-replacement
             wpconfig.entry['pattern-library-doc'] = [].concat(
-                'webpack/hot/dev-server',
+                'webpack-dev-server/client?http://localhost:8080',
+                'webpack/hot/only-dev-server',
                 wpconfig.entry['pattern-library-doc']
             );
             wpconfig.plugins = [].concat(

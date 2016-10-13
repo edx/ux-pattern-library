@@ -127,6 +127,10 @@ $susy-debug: layout($susy-default show);
     }
 }
 
+* {
+    color: blue;
+}
+
 .row {
     @extend %grid-row;
 }
