@@ -86,6 +86,9 @@ var path = require('path'),
             sassLoader: {
                 // Similar to the aliases above, so we can @import the pattern library from a cleaner base in the pldoc
                 data: "$pattern-library-path: '../../../pattern-library' !default;",
+                includePaths: [
+                    './node_modules'
+                ],
                 sourceMap: true  // Enable Sass sourcemaps regardless of environment type
             },
             plugins: [
