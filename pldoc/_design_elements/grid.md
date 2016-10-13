@@ -4,7 +4,7 @@ title:              Grid System
 date:               2015-10-05 00:00:00
 
 categories:         design_element
-tags:               
+tags:
 - atomic
 - pattern
 - grid
@@ -17,7 +17,7 @@ url_documentation:  Styleguide:-Grid-System
 
 description:        Grid system and settings that can be used throughout layouts.
 
-info:               A responsive, mobile first fluid grid system, based on Susy and Breakpoint, that appropriately scales up to 12 columns as the device or viewport size increases. It includes some predefined classes for easy layout options, while providing Sass utilities for generating more semantic layouts.
+info:               A responsive, mobile first fluid grid system based on Flexbox that appropriately scales up to 12 columns as the device or viewport size increases. It includes some predefined classes for easy layout options, while providing Sass utilities for generating more semantic layouts.
 ---
 
 <h3 class="hd-6 example-set-hd">Basic Grid</h3>
@@ -28,52 +28,52 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
 
 <div class="example-set">
     <div class="example-grid example-grid-basic">
-        <div class="grid-container">
-            <div class="col col-first">
+        <div class="grid-manual">
+            <div class="col col-1 col-first">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                <span class="example-label">Col</span>
             </div>
 
-            <div class="col">
+            <div class="col col-1">
                 <span class="example-label">Col</span>
             </div>
 
-            <div class="col col-last">
+            <div class="col col-1 col-last">
                 <span class="example-label">Col</span>
             </div>
         </div>
@@ -88,99 +88,97 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
 
 <div class="example-set">
     <div class="example-grid example-grid-shifts">
-        <div class="grid-container">
-            <section class="shifts-pre">
-                <div class="col col-A">
-                    <span class="example-label">Pre 1 Col</span>
-                </div>
+        <section class="shifts-pre">
+            <div class="col col-A">
+                <span class="example-label">Pre 1 Col</span>
+            </div>
 
-                <div class="col col-B">
-                    <span class="example-label">Pre 2 Col</span>
-                </div>
+            <div class="col col-B">
+                <span class="example-label">Pre 2 Col</span>
+            </div>
 
-                <div class="col col-C">
-                    <span class="example-label">Pre 3 Col</span>
-                </div>
+            <div class="col col-C">
+                <span class="example-label">Pre 3 Col</span>
+            </div>
 
-                <div class="col col-D">
-                    <span class="example-label">Pre 4 Col</span>
-                </div>
+            <div class="col col-D">
+                <span class="example-label">Pre 4 Col</span>
+            </div>
 
-                <div class="col col-E">
-                    <span class="example-label">Pre 5 Col</span>
-                </div>
+            <div class="col col-E">
+                <span class="example-label">Pre 5 Col</span>
+            </div>
 
-                <div class="col col-F">
-                    <span class="example-label">Pre 6 Col</span>
-                </div>
+            <div class="col col-F">
+                <span class="example-label">Pre 6 Col</span>
+            </div>
 
-                <div class="col col-G">
-                    <span class="example-label">Pre 7 Col</span>
-                </div>
+            <div class="col col-G">
+                <span class="example-label">Pre 7 Col</span>
+            </div>
 
-                <div class="col col-H">
-                    <span class="example-label">Pre 8 Col</span>
-                </div>
+            <div class="col col-H">
+                <span class="example-label">Pre 8 Col</span>
+            </div>
 
-                <div class="col col-I">
-                    <span class="example-label">Pre 9 Col</span>
-                </div>
+            <div class="col col-I">
+                <span class="example-label">Pre 9 Col</span>
+            </div>
 
-                <div class="col col-J">
-                   <span class="example-label">Pre 10 Col</span>
-                </div>
+            <div class="col col-J">
+                <span class="example-label">Pre 10 Col</span>
+            </div>
 
-                <div class="col col-K">
-                    <span class="example-label">Pre 11 Col</span>
-                </div>
-            </section>
+            <div class="col col-K">
+                <span class="example-label">Pre 11 Col</span>
+            </div>
+        </section>
 
-            <section class="shifts-post">
-                <div class="col col-A">
-                    <span class="example-label">Post 1 Col</span>
-                </div>
+        <section class="shifts-post">
+            <div class="col col-A">
+                <span class="example-label">Post 1 Col</span>
+            </div>
 
-                <div class="col col-B">
-                    <span class="example-label">Post 2 Col</span>
-                </div>
+            <div class="col col-B">
+                <span class="example-label">Post 2 Col</span>
+            </div>
 
-                <div class="col col-C">
-                    <span class="example-label">Post 3 Col</span>
-                </div>
+            <div class="col col-C">
+                <span class="example-label">Post 3 Col</span>
+            </div>
 
-                <div class="col col-D">
-                    <span class="example-label">Post 4 Col</span>
-                </div>
+            <div class="col col-D">
+                <span class="example-label">Post 4 Col</span>
+            </div>
 
-                <div class="col col-E">
-                    <span class="example-label">Post 5 Col</span>
-                </div>
+            <div class="col col-E">
+                <span class="example-label">Post 5 Col</span>
+            </div>
 
-                <div class="col col-F">
-                    <span class="example-label">Post 6 Col</span>
-                </div>
+            <div class="col col-F">
+                <span class="example-label">Post 6 Col</span>
+            </div>
 
-                <div class="col col-G">
-                    <span class="example-label">Post 7 Col</span>
-                </div>
+            <div class="col col-G">
+                <span class="example-label">Post 7 Col</span>
+            </div>
 
-                <div class="col col-H">
-                    <span class="example-label">Post 8 Col</span>
-                </div>
+            <div class="col col-H">
+                <span class="example-label">Post 8 Col</span>
+            </div>
 
-                <div class="col col-I">
-                    <span class="example-label">Post 9 Col</span>
-                </div>
+            <div class="col col-I">
+                <span class="example-label">Post 9 Col</span>
+            </div>
 
-                <div class="col col-J">
-                   <span class="example-label">Post 10 Col</span>
-                </div>
+            <div class="col col-J">
+                <span class="example-label">Post 10 Col</span>
+            </div>
 
-                <div class="col col-K">
-                    <span class="example-label">Post 11 Col</span>
-                </div>
-            </section>
-        </div>
+            <div class="col col-K">
+                <span class="example-label">Post 11 Col</span>
+            </div>
+        </section>
     </div>
 </div>
 
@@ -192,7 +190,7 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
 
 <div class="example-set">
     <div class="example-grid example-grid-classes">
-        <div class="grid-container grid-manual">
+        <div class="grid-manual">
             <div class="row">
                 <div class="col col-1">
                     <span class="example-label">col-1</span>
@@ -313,25 +311,33 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                     <span class="example-label">pre-5</span>
                     <span class="example-label">post-5</span>
                 </div>
+            </div>
 
+            <div class="row">
                 <div class="col col-4 pre-4 post-4">
                     <span class="example-label">col-4</span>
                     <span class="example-label">pre-4</span>
                     <span class="example-label">post-4</span>
                 </div>
+            </div>
 
+            <div class="row">
                 <div class="col col-6 pre-3 post-3">
                     <span class="example-label">col-6</span>
                     <span class="example-label">pre-3</span>
                     <span class="example-label">post-3</span>
                 </div>
+            </div>
 
+            <div class="row">
                 <div class="col col-8 pre-2 post-2">
                     <span class="example-label">col-8</span>
                     <span class="example-label">pre-2</span>
                     <span class="example-label">post-2</span>
                 </div>
+            </div>
 
+            <div class="row">
                 <div class="col col-10 pre-1 post-1">
                     <span class="example-label">col-10</span>
                     <span class="example-label">pre-1</span>
@@ -340,7 +346,7 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
             </div>
         </div>
     </div>
-</div>
+</div
 
 <h3 class="hd-6 example-set-hd">Utility Class-based Responsive Grid</h3>
 
@@ -349,56 +355,54 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
 </div>
 
 <div class="example-set">
-    <div class="example-grid example-grid-responsive grid-container">
-        <div class="grid-container grid-manual">
-            <div class="row">
-                <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
-                    <span class="example-label">xl-col-2</span>
-                    <span class="example-label">lg-col-2</span>
-                    <span class="example-label">md-col-4</span>
-                    <span class="example-label">sm-col-6</span>
-                    <span class="example-label">col-12 (base)</span>
-                </div>
+    <div class="example-grid example-grid-responsive">
+        <div class="grid-manual">
+            <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
+                <span class="example-label">xl-col-2</span>
+                <span class="example-label">lg-col-2</span>
+                <span class="example-label">md-col-4</span>
+                <span class="example-label">sm-col-6</span>
+                <span class="example-label">col-12 (base)</span>
+            </div>
 
-                <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
-                    <span class="example-label">xl-col-2</span>
-                    <span class="example-label">lg-col-2</span>
-                    <span class="example-label">md-col-4</span>
-                    <span class="example-label">sm-col-6</span>
-                    <span class="example-label">col-12 (base)</span>
-                </div>
+            <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
+                <span class="example-label">xl-col-2</span>
+                <span class="example-label">lg-col-2</span>
+                <span class="example-label">md-col-4</span>
+                <span class="example-label">sm-col-6</span>
+                <span class="example-label">col-12 (base)</span>
+            </div>
 
-                <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
-                    <span class="example-label">xl-col-2</span>
-                    <span class="example-label">lg-col-2</span>
-                    <span class="example-label">md-col-4</span>
-                    <span class="example-label">sm-col-6</span>
-                    <span class="example-label">col-12 (base)</span>
-                </div>
+            <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
+                <span class="example-label">xl-col-2</span>
+                <span class="example-label">lg-col-2</span>
+                <span class="example-label">md-col-4</span>
+                <span class="example-label">sm-col-6</span>
+                <span class="example-label">col-12 (base)</span>
+            </div>
 
-                <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
-                    <span class="example-label">xl-col-2</span>
-                    <span class="example-label">lg-col-2</span>
-                    <span class="example-label">md-col-4</span>
-                    <span class="example-label">sm-col-6</span>
-                    <span class="example-label">col-12 (base)</span>
-                </div>
+            <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
+                <span class="example-label">xl-col-2</span>
+                <span class="example-label">lg-col-2</span>
+                <span class="example-label">md-col-4</span>
+                <span class="example-label">sm-col-6</span>
+                <span class="example-label">col-12 (base)</span>
+            </div>
 
-                <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
-                    <span class="example-label">xl-col-2</span>
-                    <span class="example-label">lg-col-2</span>
-                    <span class="example-label">md-col-4</span>
-                    <span class="example-label">sm-col-6</span>
-                    <span class="example-label">col-12 (base)</span>
-                </div>
+            <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
+                <span class="example-label">xl-col-2</span>
+                <span class="example-label">lg-col-2</span>
+                <span class="example-label">md-col-4</span>
+                <span class="example-label">sm-col-6</span>
+                <span class="example-label">col-12 (base)</span>
+            </div>
 
-                <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
-                    <span class="example-label">xl-col-2</span>
-                    <span class="example-label">lg-col-2</span>
-                    <span class="example-label">md-col-4</span>
-                    <span class="example-label">sm-col-6</span>
-                    <span class="example-label">col-12 (base)</span>
-                </div>
+            <div class="col col-12 sm-col-6 md-col-4 lg-col-2 xl-col-2">
+                <span class="example-label">xl-col-2</span>
+                <span class="example-label">lg-col-2</span>
+                <span class="example-label">md-col-4</span>
+                <span class="example-label">sm-col-6</span>
+                <span class="example-label">col-12 (base)</span>
             </div>
         </div>
     </div>
@@ -508,19 +512,9 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                 <img class="photo-source" src="http://placehold.it/1000x500" alt="Puppies playing in a field">
                 <figcaption class="photo-caption copy-meta">Wobbled this darn and warthog compatibly that smoothly tediously ashamed while grouped around tangibly inanimately unkindly wailed awkward</figcaption>
             </figure>
-
-            <figure class="photo">
-                <img class="photo-source" src="http://placehold.it/1000x500" alt="Puppies playing in a field">
-                <figcaption class="photo-caption copy-meta">Wobbled this darn and warthog compatibly that smoothly tediously ashamed while grouped around tangibly inanimately unkindly wailed awkward</figcaption>
-            </figure>
         </section>
 
         <section class="photo-gallery">
-            <figure class="photo">
-                <img class="photo-source" src="http://placehold.it/500x250" alt="Puppies playing in a field">
-                <figcaption class="photo-caption copy-micro">Wobbled this darn and warthog compatibly that smoothly tediously ashamed while grouped around tangibly inanimately unkindly wailed awkward</figcaption>
-            </figure>
-
             <figure class="photo">
                 <img class="photo-source" src="http://placehold.it/500x250" alt="Puppies playing in a field">
                 <figcaption class="photo-caption copy-micro">Wobbled this darn and warthog compatibly that smoothly tediously ashamed while grouped around tangibly inanimately unkindly wailed awkward</figcaption>
@@ -621,15 +615,6 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                 <li class="gallery-item">
                     <span class="example-label">gallery-item</span>
                 </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
             </ul>
 
             <span class="example-label example-label-container">
@@ -637,9 +622,6 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                 gallery gallery-2
             </span>
             <ul class="gallery gallery-2">
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
                 <li class="gallery-item">
                     <span class="example-label">gallery-item</span>
                 </li>
@@ -707,15 +689,6 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                 <li class="gallery-item">
                     <span class="example-label">gallery-item</span>
                 </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
             </ul>
 
             <span class="example-label example-label-container">
@@ -723,12 +696,6 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                 gallery gallery-4
             </span>
             <ul class="gallery gallery-4">
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
                 <li class="gallery-item">
                     <span class="example-label">gallery-item</span>
                 </li>
@@ -799,9 +766,6 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                 <li class="gallery-item">
                     <span class="example-label">gallery-item</span>
                 </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
             </ul>
         </div>
     </div>
@@ -822,15 +786,6 @@ info:               A responsive, mobile first fluid grid system, based on Susy 
                 gallery gallery-6 sm-gallery-6 md-gallery-4 lg-gallery-3
             </span>
             <ul class="gallery gallery-6 sm-gallery-6 md-gallery-4 lg-gallery-3">
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
-                <li class="gallery-item">
-                    <span class="example-label">gallery-item</span>
-                </li>
                 <li class="gallery-item">
                     <span class="example-label">gallery-item</span>
                 </li>

@@ -66,11 +66,6 @@
     background: palette(grayscale, x-back);
 }
 
-
-.pldoc-header-site {
-
-}
-
 // ------------------------------
 // #NAVIGATION
 // ------------------------------
@@ -82,7 +77,6 @@
 }
 
 .pldoc-nav {
-
     padding-bottom: spacing-vertical(small);
 
     &:last-child {
@@ -90,17 +84,8 @@
     }
 
     .pldoc-link {
-
-        // STATE: hover, active, and focus
-        &:hover,
-        &:active,
-        &:focus {
-
-        }
-
         // CASE: item is current
         &.is-current {
-
             .pldoc-link:before {
                 display: inline-block;
             }
@@ -109,7 +94,6 @@
 
     // CASE: pattern listing
     .list-patterns {
-
         .pattern {
             @include clearfix();
 
@@ -139,7 +123,7 @@
         @extend %spaced-nav;
         display: inline-block;
 
-        @include susy-media($bp-screen-md) {
+        @media(min-width: $bp-screen-md) {
             display: block;
         }
 
@@ -148,25 +132,6 @@
             width: 100%;
         }
     }
-
-    .is-current {
-        
-    }
-
-}
-
-// internal site navigation
-.pldoc-nav-internal {
-
-}
-
-// external site navigation
-.pldoc-nav-external {
-
-}
-
-.pldoc-tab {
-
 }
 
 .pldoc-tab-content {
@@ -194,30 +159,15 @@
 }
 
 // ------------------------------
-// #SIDEBAR
-// ------------------------------
-.pldoc-wrapper-content-supplemental {
-
-}
-
-// ------------------------------
-// #MAIN CONTENT
-// ------------------------------
-.pldoc-wrapper-content-main {
-
-}
-
-// ------------------------------
 // #FOOTER
 // ------------------------------
 .pldoc-footer-site {
-    @extend %grid-container;
+    @include grid-container;
 
     padding-top: spacing-horizontal(small);
 }
 
 .pldoc-footer-site-copyright {
-
     .pldoc-copy {
         font-size: font-size(small);
         margin: 0;
@@ -228,7 +178,6 @@
 // #PATTERNS
 // ------------------------------
 .pldoc-pattern {
-
     .example-set-hd {
         margin-bottom: spacing-vertical(small);
     }
@@ -294,7 +243,6 @@
 // ------------------------------
 // color swatches
 .pldoc-pattern-colors {
-
     .pldoc-tab-content {
         position: relative;
 
@@ -332,9 +280,8 @@
             .color-info-content {
                 padding: spacing-vertical(small);
                 background: $white;
-                
+
                 .color-usage {
-                    
                     .list-background,
                     .list-foreground {
                         @include padding-right(5%);
@@ -343,20 +290,20 @@
                         vertical-align: top;
                     }
                 }
-                
+
                 .color-technics {
                     margin-top: spacing-vertical(small);
-                    
+
                     dl {
                         margin-bottom: 0;
-                        
+
                         dt {
                             display: inline-block;
                             width: 19%;
                             margin-top: 0;
                             vertical-align: top;
                         }
-                        
+
                         dd {
                             display: inline-block;
                             width: 79%;
@@ -367,189 +314,188 @@
             }
         }
     }
-    
+
     .example-set {
-        
         .row {
             padding: spacing-vertical(x-small) 0;
-            
+
             &.on-white { background: $white; }
-            
+
             &.on-dark-primary { background: palette(primary, dark); color: palette(primary, x-back); }
             &.on-base-primary { background: palette(primary, base); color: palette(primary, x-back); }
             &.on-accent-primary { background: palette(primary, accent); color: palette(primary, x-back); }
             &.on-back-primary { background: palette(primary, back); color: palette(primary, dark); }
             &.on-x-back-primary { background: palette(primary, x-back); color: palette(primary, dark); }
-                
+
             &.on-dark-secondary { background: palette(secondary, dark); color: palette(primary, x-back); }
             &.on-base-secondary { background: palette(secondary, base); color: palette(primary, x-back); }
             &.on-accent-secondary { background: palette(secondary, accent); color: palette(primary, x-back); }
             &.on-back-secondary { background: palette(secondary, back); color: palette(primary, dark); }
             &.on-x-back-secondary { background: palette(secondary, x-back); color: palette(primary, dark); }
-                
+
             &.on-dark-grayscale { background: palette(grayscale, dark); color: palette(primary, x-back); }
             &.on-base-grayscale { background: palette(grayscale, base); color: palette(primary, x-back); }
             &.on-accent-grayscale { background: palette(grayscale, accent); color: palette(primary, x-back); }
             &.on-back-grayscale { background: palette(grayscale, back); color: palette(primary, dark); }
             &.on-x-back-grayscale { background: palette(grayscale, x-back); color: palette(primary, dark); }
-            
+
             &.on-dark-success {
                 background: palette(success, text);
                 color: palette(success, back);
             }
-            
+
             &.on-dark-error {
                 background: palette(error, text);
                 color: palette(error, back);
             }
-            
+
             &.on-dark-warning {
                 background: palette(warning, text);
                 color: palette(warning, back);
             }
-            
+
             &.on-dark-information {
                 background: palette(information, text);
                 color: palette(information, back);
             }
         }
-        
+
         button.swatch {
             border: rem(1) solid rgba(0, 0, 0, .15);
         }
-    
+
         .swatch {
             @include transition(all timing(x-fast) ease-in-out);
-            @include span(12 of 12);
+            @include span(12);
             position: relative;
             border: 0;
             padding: spacing-vertical(base) spacing-horizontal(x-small);
-            
+
             &.color-description {
                 padding: spacing-vertical(small) 0 0 0;
                 font-size: font-size(small);
             }
-            
+
             &.primary {
                 background: palette(primary, base);
-                
+
                 &.dark {
                     background: palette(primary, dark);
                 }
-                
+
                 &.base {
                     background: palette(primary, base);
                 }
-                
+
                 &.accent {
                     background: palette(primary, accent);
                 }
-                
+
                 &.back {
                     background: palette(primary, back);
                 }
-                
+
                 &.x-back {
                     background: palette(primary, x-back);
                 }
             }
-            
+
             &.secondary {
                 background: palette(secondary, base);
-                
+
                 &.dark {
                     background: palette(secondary, dark);
                 }
-                
+
                 &.base {
                     background: palette(secondary, base);
                 }
-                
+
                 &.accent {
                     background: palette(secondary, accent);
                 }
-                
+
                 &.back {
                     background: palette(secondary, back);
                 }
-                
+
                 &.x-back {
                     background: palette(secondary, x-back);
                 }
             }
-            
+
             &.grayscale {
                 background: palette(grayscale, base);
-                
+
                 &.dark {
                     background: palette(grayscale, dark);
                 }
-                
+
                 &.base {
                     background: palette(grayscale, base);
                 }
-                
+
                 &.accent {
                     background: palette(grayscale, accent);
                 }
-                
+
                 &.back {
                     background: palette(grayscale, back);
                 }
-                
+
                 &.x-back {
                     background: palette(grayscale, x-back);
                 }
             }
-            
+
             &.success {
                 background: palette(success, text);
-                
+
                 &.text {
                     background: palette(success, text);
                 }
-                
+
                 &.accent {
                     background: palette(success, accent);
                 }
-                
+
                 &.back {
                     background: palette(success, back);
                 }
             }
-            
+
             &.error {
                 background: palette(error, text);
-                
+
                 &.text {
                     background: palette(error, text);
                 }
-                
+
                 &.accent {
                     background: palette(error, accent);
                 }
-                
+
                 &.back {
                     background: palette(error, back);
                 }
             }
-            
+
             &.warning {
                 background: palette(warning, text);
-                
+
                 &.text {
                     background: palette(warning, text);
                 }
-                
+
                 &.accent {
                     background: palette(warning, accent);
                 }
-                
+
                 &.back {
                     background: palette(warning, back);
                 }
             }
-            
+
             &.fail-a11y-color {
 
                 &:before {
@@ -564,7 +510,7 @@
                     text-shadow: -1px -1px 0px $white, 1px 1px 0px $shadow;
                 }
             }
-            
+
             .color-meta {
                 opacity: 0;
             }
@@ -594,7 +540,6 @@
 
             // color metadata
             .color-meta {
-
                 .color-rgb {
                     @include ellipsis();
                 }
@@ -609,7 +554,6 @@
 
 // buttons
 .pldoc-pattern-buttons {
-
     .btn,
     .btn-neutral,
     .btn-brand,
@@ -636,7 +580,6 @@
 
 // icons
 .pldoc-pattern-icons {
-
     .example-icon {
         @include text-align(center);
         display: inline-block;
@@ -658,16 +601,11 @@
             font-size: font-size(small);
             color: palette(grayscale, dark);
         }
-
-        @include susy-breakpoint($bp-screen-md, $susy-default) {
-            @include gallery(3 of 12);
-        }
     }
 }
 
 // ui depth
 .pldoc-pattern-depth {
-
     // padding for demo purposes
     .depth {
         padding: spacing-vertical(small) spacing-horizontal(base);
@@ -676,7 +614,6 @@
     // light text on darker backgrounds for demo purposes
     .depth--2,
     .depth--3 {
-
         .hd {
             color: $white;
         }
@@ -713,18 +650,16 @@
 %demo-grid-column {
     background: $grid-debug-color;
     border: 1px solid saturate($grid-debug-color, 100%);
-    // border-right: 2px solid saturate($grid-debug-color, 100%);
 
-
-    @include susy-breakpoint($bp-screen-md, $susy-default) {
+    @media(min-width: $bp-screen-md) {
         background: saturate($grid-debug-color, 33%);
     }
 
-    @include susy-breakpoint($bp-screen-lg, $susy-default) {
+    @media(min-width: $bp-screen-lg) {
         background: saturate($grid-debug-color, 66%);
     }
 
-    @include susy-breakpoint($bp-screen-xl, $susy-default) {
+    @media(min-width: $bp-screen-xl) {
         background: saturate($grid-debug-color, 100%);
     }
 
@@ -741,7 +676,6 @@
 
 // post
 .pldoc-pattern-grid {
-
     .col,
     .gallery-item {
         @include text-align(center);
@@ -758,154 +692,145 @@
     }
 
     .example-grid {
-
         .example-label {
             @extend %copy-micro;
             display: block;
         }
 
         .example-label-container {
-            @include full();
             margin-bottom: spacing-vertical(x-small);
         }
     }
 
-    // basic example
-    .example-grid-basic {
-
-        .col {
-            @include span(1);
-
-            // mark every 12th col as last
-            &:nth-child(12n+12) {
-                @include omega();
-            }
-        }
-    }
-
-    // semantic shift example
+    // "Basic Grid With Column Shifts"
     .example-grid-shifts {
+        .shifts-pre,
+        .shifts-post {
+            @include grid-container;
+            flex-wrap: wrap;
+        }
 
         // shifts - before col
         .shifts-pre {
+            justify-content: flex-end;
 
             .col-A {
-                @include span(11);
+                @include span(11, none);
                 @include pre(1);
             }
 
             .col-B {
-                @include span(10);
+                @include span(10, none);
                 @include pre(2);
             }
 
             .col-C {
-                @include span(9);
+                @include span(9, none);
                 @include pre(3);
             }
 
             .col-D {
-                @include span(8);
+                @include span(8, none);
                 @include pre(4);
             }
 
             .col-E {
-                @include span(7);
+                @include span(7, none);
                 @include pre(5);
             }
 
             .col-F {
-                @include span(6);
+                @include span(6, none);
                 @include pre(6);
             }
 
             .col-G {
-                @include span(5);
+                @include span(5, none);
                 @include pre(7);
             }
 
             .col-H {
-                @include span(4);
+                @include span(4, none);
                 @include pre(8);
             }
 
             .col-I {
-                @include span(3);
+                @include span(3, none);
                 @include pre(9);
             }
 
             .col-J {
-                @include span(2);
+                @include span(2, none);
                 @include pre(10);
             }
 
             .col-K {
-                @include span(1);
+                @include span(1, none);
                 @include pre(11);
             }
         }
 
         // shifts - after col
         .shifts-post {
+            justify-content: flex-start;
 
             .col-A {
-                @include span(11);
+                @include span(11, none);
                 @include post(1);
             }
 
             .col-B {
-                @include span(10);
+                @include span(10, none);
                 @include post(2);
             }
 
             .col-C {
-                @include span(9);
+                @include span(9, none);
                 @include post(3);
             }
 
             .col-D {
-                @include span(8);
+                @include span(8, none);
                 @include post(4);
             }
 
             .col-E {
-                @include span(7);
+                @include span(7, none);
                 @include post(5);
             }
 
             .col-F {
-                @include span(6);
+                @include span(6, none);
                 @include post(6);
             }
 
             .col-G {
-                @include span(5);
+                @include span(5, none);
                 @include post(7);
             }
 
             .col-H {
-                @include span(4);
+                @include span(4, none);
                 @include post(8);
             }
 
             .col-I {
-                @include span(3);
+                @include span(3, none);
                 @include post(9);
             }
 
             .col-J {
-                @include span(2);
+                @include span(2, none);
                 @include post(10);
             }
 
             .col-K {
-                @include span(1);
+                @include span(1, none);
                 @include post(11);
             }
         }
 
         section {
-            @include clearfix();
             margin-bottom: spacing-vertical(mid-small);
 
             &:last-child {
@@ -914,66 +839,60 @@
         }
     }
 
-
-    // semantic example
+    // "Semantic-based Grid"
     .example-grid-semantic {
-
         .wrapper-content {
-            @include container();
+            @include grid-container;
         }
 
         .content-main {
-            @include span(8 of 12 first);
+            @include span(8);
             @extend %demo-grid-column;
-        }
+            @include grid-container;
 
-        .story {
-            @extend %demo-grid-column;
-            margin-bottom: spacing-vertical(small);
+            .story {
+                @extend %demo-grid-column;
+                margin-bottom: spacing-vertical(small);
 
-            &:last-child {
-                margin-bottom: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
-        }
 
-        .story-main {
-            @include break();
-        }
+            .story-secondary {
+                @include span(6);
+                @extend %demo-grid-column;
 
-        .story-secondary {
-            @include span(4 of 8);
-            @extend %demo-grid-column;
+                &:nth-child(2n) {
+                    @include span(6, after);
+                }
 
-            &:nth-child(2n+1) {
-                @include omega();
+                &:nth-child(2n+1) {
+                    @include span(6, before);
+                }
             }
         }
 
         .content-secondary {
-            @include span(4 of 12 last);
+            @include span(4);
             @extend %demo-grid-column;
-        }
 
-        .list-related {
-            @extend %reset-lists;
+            .list-related {
+                @extend %reset-lists;
+            }
         }
     }
 
-    // semantic gallery example
+    // "Semantic Gallery" example
     .example-grid-gallery-semantic {
-
         .photo-gallery {
-            @include clearfix();
+            @include grid-container;
             margin-bottom: spacing-vertical(base);
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-
             .photo {
-                @include gallery(4);
+                @include span(4);
                 @extend %demo-grid-column;
-                margin-bottom: gutter(12);
+                margin-bottom: spacing-vertical(small);
             }
 
             .photo-source {
@@ -981,16 +900,11 @@
                 width: 100%;
                 margin-bottom: spacing-vertical(x-small);
             }
-
-            .photo-caption {
-
-            }
         }
 
         .photo-gallery-large {
-
             .photo {
-                @include gallery(6);
+                @include span(6);
             }
         }
     }
@@ -998,21 +912,12 @@
     // manual (+ responsive) gallery example
     .example-grid-gallery-classes,
     .example-grid-gallery-responsive {
-
         .gallery {
             margin-bottom: spacing-vertical(mid-small);
-
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
 
         .gallery-item {
             margin-bottom: spacing-vertical(small);
-
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
     }
 }
@@ -1025,24 +930,22 @@
     background: $grid-debug-color;
     border: 1px solid saturate($grid-debug-color, 100%);
 
-    @include susy-breakpoint($bp-screen-md, $susy-default) {
+    @media(min-width: $bp-screen-md) {
         background: saturate($grid-debug-color, 33%);
     }
 
-    @include susy-breakpoint($bp-screen-lg, $susy-default) {
+    @media(min-width: $bp-screen-lg) {
         background: saturate($grid-debug-color, 66%);
     }
 
-    @include susy-breakpoint($bp-screen-xl, $susy-default) {
+    @media(min-width: $bp-screen-xl) {
         background: saturate($grid-debug-color, 100%);
     }
 }
 
 .example-layout {
-
     .layout-col,
-    .layout-view-col
-     {
+    .layout-view-col {
        @extend %demo-layout-column;
        padding: spacing-vertical(small) spacing-horizontal(small);
     }

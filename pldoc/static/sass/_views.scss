@@ -41,7 +41,7 @@
 .pldoc-view-example-depth {
 
     .example-set {
-        @extend %grid-container;
+        @include grid-container;
         margin-bottom: spacing-vertical(base);
     }
 
@@ -87,9 +87,7 @@
 // #EXAMPLE - GRID
 // ------------------------------
 .pldoc-view-example-grid {
-
     .example-grid {
-
         .row {
             margin-bottom: spacing-vertical(mid-small);
 
@@ -105,13 +103,13 @@
 
     // semantic grid
     #example-grid-1 {
-
         .wrapper-content {
-            @include container();
+            @include grid-container;
         }
 
         .content-main {
-            @include span(8 of 12 first);
+            @include span(8, after);
+            @include grid-container;
             @extend %demo-grid-column;
         }
 
@@ -124,21 +122,21 @@
             }
         }
 
-        .story-main {
-            @include break();
-        }
-
         .story-secondary {
-            @include span(4 of 8);
+            @include span(6);
             @extend %demo-grid-column;
 
+            &:nth-child(2n) {
+                @include span(6, after);
+            }
+
             &:nth-child(2n+1) {
-                @include omega();
+                @include span(6, before);
             }
         }
 
         .content-secondary {
-            @include span(4 of 12 last);
+            @include span(4, before);
             @extend %demo-grid-column;
         }
 
@@ -162,7 +160,7 @@
     }
 
     .example-layout-hd {
-        @extend %grid-container;
+        @include grid-container;
     }
 }
 

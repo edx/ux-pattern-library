@@ -33,11 +33,8 @@ $em-base: 16; // deliberately sets bourbon-based em-base (http://bourbon.io/docs
 // grid - dimensions
 $grid-max-width:                rem(1170) !default;
 $grid-column-count:             12 !default;
-$grid-gutter-width:             (1/3) !default;  // set to fraction to be proportional to fluid column widths (see - http://susydocs.oddbird.net/en/latest/settings/#gutters)
-$grid-container-position:       center !default;
-$grid-gutter-position:          after !default;
-$grid-manual-gutter-position:   inside !default;
-$grid-column-width:             false !default;  // set to false for fluid columns by default (see - http://susydocs.oddbird.net/en/latest/settings/#column-width)
+$grid-gutter-width:             rem($em-base) !default;
+$grid-direction:                row !default; // set to 'row-reverse' to reverse. Follows flexbox spec.
 $grid-debug-color:              rgba(203, 89, 141, 0.33) !default;
 $grid-debug-color-alt:          rgba(0, 121, 188, 0.33) !default;
 

@@ -12,7 +12,7 @@
 }
 
 .pldoc-header-site {
-    @extend %grid-container;
+    @include grid-container;
     padding-top: spacing-vertical(x-small);
 
     .pldoc-header-links {
@@ -43,7 +43,7 @@
 }
 
 .pldoc-content {
-    @extend %grid-container;
+    @include grid-container;
     margin-top: spacing-vertical(x-small);
 }
 
@@ -51,8 +51,8 @@
 .pldoc-wrapper-content-main {
     padding-top: spacing-vertical(small);
 
-    @include susy-breakpoint($bp-screen-md, $susy-default) {
-        @include span(9 last);
+    @media(min-width: $bp-screen-md) {
+        @include span(9);
     }
 
     h1 {
@@ -73,8 +73,8 @@
     padding: spacing-vertical(small);
     @include padding-left(0);
 
-    @include susy-breakpoint($bp-screen-md, $susy-default) {
-        @include span(3 first);
+    @media(min-width: $bp-screen-md) {
+        @include span(3);
     }
 }
 
@@ -89,11 +89,16 @@
 }
 
 .pldoc-pattern {
-    @extend %grid-row;
+    @include grid-row;
 }
 
 .pldoc-pattern-header {
     @include clearfix();
+
+    @media(min-width: $bp-screen-xl) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .pldoc-pattern-title {
@@ -101,24 +106,24 @@
     font-size: font-size(xx-large);
     line-height: 1;
 
-    @include susy-breakpoint($bp-screen-xl, $susy-default) {
-        @include span(6 first);
+    @media(min-width: $bp-screen-xl) {
+        flex-grow: 1;
         margin-bottom: 0;
     }
 }
 
 .pldoc-pattern-meta {
-    @include susy-breakpoint($bp-screen-xl, $susy-default) {
-        @include span(6 last);
-        @include text-align(right);
-    }
-
     .meta-updated {
         margin-bottom: spacing-vertical(x-small);
 
-        @include susy-breakpoint($bp-screen-md, $susy-default) {
+        @media(min-width: $bp-screen-md) {
             margin-bottom: 0;
         }
+    }
+
+    @media(min-width: $bp-screen-xl) {
+        flex-grow: 1;
+        @include text-align(right);
     }
 }
 
@@ -130,12 +135,17 @@
 
     .pldoc-wrapper-view-header {
         margin-bottom: spacing-vertical(base);
-        padding: spacing-vertical(mid-small) gutter();
+        padding: spacing-vertical(mid-small);
         @extend %depth-1;
     }
 
     .pldoc-view-header {
-        @include container();
+        @include grid-container;
+
+        .pldoc-breadcrumbs,
+        .pldoc-view-header-title {
+            @include span(12);
+        }
     }
 
     .example {
