@@ -25,8 +25,7 @@
     "font-awesome": "^4.6.3",
     "jquery": "^1.11.1",
     "requirejs": "^2.1.22",
-    "requirejs-plugins": "^1.0.2",
-    "susy": "^2.2.9"
+    "requirejs-plugins": "^1.0.2"
   },
   "peerDependencies": {
     "font-awesome": "^4.6.3"
@@ -52,8 +51,8 @@
     "style-loader": "^0.13.1",
     "text-loader": "0.0.1",
     "url-loader": "^0.5.7",
-    "webpack": "~1.12.14",
-    "webpack-dev-server": "^1.15.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
     "start": "gulp",

@@ -86,6 +86,9 @@ var path = require('path'),
             sassLoader: {
                 // Similar to the aliases above, so we can @import the pattern library from a cleaner base in the pldoc
                 data: "$pattern-library-path: '../../../pattern-library' !default;",
+                includePaths: [
+                    './node_modules'
+                ],
                 sourceMap: true  // Enable Sass sourcemaps regardless of environment type
             },
             plugins: [
@@ -101,7 +104,8 @@ var path = require('path'),
             // For more on this WDS/HMR configuration, see:
             // http://webpack.github.io/docs/webpack-dev-server.html#hot-module-replacement
             wpconfig.entry['pattern-library-doc'] = [].concat(
-                'webpack/hot/dev-server',
+                'webpack-dev-server/client?http://localhost:8080',
+                'webpack/hot/only-dev-server',
                 wpconfig.entry['pattern-library-doc']
             );
             wpconfig.plugins = [].concat(

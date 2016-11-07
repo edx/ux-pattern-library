@@ -137,7 +137,7 @@ $table-border-color:                        palette(grayscale, base) !default;
     display: none;
   }
 
-  @include susy-breakpoint($bp-screen-md, $susy-default) {
+  @media(min-width: $bp-screen-md) {
 
     th.supplemental,
     td.supplemental {
