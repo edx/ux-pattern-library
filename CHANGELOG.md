@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.17.0 (2016-11-07)
+* Updates the grid system to remove dependency on Susy. ([TNL-5781](https://openedx.atlassian.net/browse/TNL-5781))
+
+- - -
+
 ## 0.16.7 (2016-09-16)
 * Fixes RTL margin side of the search button
 * Fixes search input text -webkit-appearance for Safari
