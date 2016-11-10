@@ -24,6 +24,10 @@
     }
 }
 
+.layout-col {
+    @include grid-row;
+}
+
 // 1/4 + 3/4 Layout
 .layout-1q3q {
 
