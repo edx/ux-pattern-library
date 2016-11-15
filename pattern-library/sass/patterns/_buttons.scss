@@ -26,6 +26,7 @@ $btn-border-size:                           1px !default;
 $btn-shadow:                                3px !default;
 $btn-font-weight:                           font-weight(semi-bold) !default;
 $btn-border-radius:                         $component-border-radius !default;
+$btn-focus-color:                           palette(primary, dark) !default;
 
 // sizes
 $btn-large-padding-vertical: spacing-vertical(small);
@@ -80,13 +81,6 @@ $btn-small-font-size: font-size(small);
             margin-right: 0;
         }
     }
-
-    // Don't show underlines on links that are styled as buttons
-    &:hover,
-    &:active,
-    &:focus {
-        text-decoration: none;
-    }
 }
 
 
@@ -120,8 +114,8 @@ $btn-small-font-size: font-size(small);
     &.is-hovered,
     &:focus,
     &.is-focused {
-        border-color: palette(primary, accent);
-        background: palette(primary, accent);
+        border-color: $btn-focus-color;
+        background: $btn-focus-color;
         color: palette(primary, x-back);
     }
 
@@ -157,8 +151,8 @@ $btn-small-font-size: font-size(small);
     &.is-hovered,
     &:focus,
     &.is-focused {
-        border-color: palette(primary, accent);
-        background: palette(primary, accent);
+        border-color: $btn-focus-color;
+        background: $btn-focus-color;
         color: palette(primary, x-back);
     }
 
@@ -195,8 +189,8 @@ $btn-small-font-size: font-size(small);
     &.is-hovered,
     &:focus,
     &.is-focused {
-        border-color: palette(primary, accent);
-        background: palette(primary, accent);
+        border-color: $btn-focus-color;
+        background: $btn-focus-color;
         color: palette(primary, x-back);
     }
 
@@ -256,7 +250,7 @@ $btn-small-font-size: font-size(small);
     &:focus,
     &.is-focused {
         box-shadow: inset 0 -3px 0 0 palette(primary, base);
-        background: palette(primary, accent);
+        background: $btn-focus-color;
         color: palette(primary, x-back);
     }
 

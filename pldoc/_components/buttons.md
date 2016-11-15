@@ -93,7 +93,7 @@ info:          Buttons should be used for performing actions within the edX envi
         <button type="button" class="btn-inverse">Inverse</button>
         <button type="button" class="btn-inverse btn-large">Inverse Large</button>
         <button type="button" class="btn-inverse btn-small">Inverse Small</button>
-        <button type="button" class="btn-inverse" disabled>Inverse Disabled</button>
+        <button type="button" class="btn" disabled>Base Disabled</button>
     </div>
 </div>
 
