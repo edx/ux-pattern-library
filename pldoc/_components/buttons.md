@@ -93,7 +93,7 @@ info:          Buttons should be used for performing actions within the edX envi
 </div>
 
 <h3 class="example-set-hd">Links without visual styling</h3>
-<p>To indicate 'read' or 'visited' links in content areas, use color Primary Dark.</p>
+<p>Note: unread links use the primary color, while read/visited links use primary dark.</p>
 <div class="example-set">
     <button type="button" class="btn-link">Link</button>
     <button type="button" class="btn-link btn-large">Link Large</button>

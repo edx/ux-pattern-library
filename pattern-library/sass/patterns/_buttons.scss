@@ -26,6 +26,10 @@ $btn-shadow:                                3px !default;
 $btn-font-weight:                           font-weight(semi-bold) !default;
 $btn-border-radius:                         $component-border-radius !default;
 $btn-focus-color:                           palette(primary, dark) !default;
+$btn-focus-text-color:                      palette(primary, x-back) !default;
+$btn-disabled-text-color:                   palette(grayscale, accent) !default;
+$btn-disabled-background-color:             palette(grayscale, x-back) !default;
+$btn-disabled-border-color:                 palette(grayscale, back) !default;
 
 // sizes
 $btn-large-padding-vertical: spacing-vertical(small);
@@ -122,7 +126,7 @@ $btn-small-font-size: font-size(small);
     &.is-focused {
         border-color: $btn-focus-color;
         background: $btn-focus-color;
-        color: palette(primary, x-back);
+        color: $btn-focus-text-color;
     }
 
     // STATE: is pressed or active
@@ -137,8 +141,8 @@ $btn-small-font-size: font-size(small);
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, back);
-        color: palette(grayscale, accent);
+        border-color: $btn-disabled-border-color;
+        color: $btn-disabled-text-color;
     }
 }
 
@@ -159,7 +163,7 @@ $btn-small-font-size: font-size(small);
     &.is-focused {
         border-color: $btn-focus-color;
         background: $btn-focus-color;
-        color: palette(primary, x-back);
+        color: $btn-focus-text-color;
     }
 
     // STATE: is pressed or active
@@ -173,9 +177,9 @@ $btn-small-font-size: font-size(small);
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, back);
-        background: palette(grayscale, x-back);
-        color: palette(grayscale, accent);
+        border-color: $btn-disabled-border-color;
+        background: $btn-disabled-background-color;
+        color: $btn-disabled-text-color;
     }
 }
 
@@ -197,7 +201,7 @@ $btn-small-font-size: font-size(small);
     &.is-focused {
         border-color: $btn-focus-color;
         background: $btn-focus-color;
-        color: palette(primary, x-back);
+        color: $btn-focus-text-color;
     }
 
     // STATE: is pressed or active
@@ -212,9 +216,9 @@ $btn-small-font-size: font-size(small);
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, back);
-        background: palette(grayscale, x-back);
-        color: palette(grayscale, accent);
+        border-color: $btn-disabled-border-color;
+        background: $btn-disabled-background-color;
+        color: $btn-disabled-text-color;
     }
 }
 
@@ -307,7 +311,7 @@ $btn-small-font-size: font-size(small);
     &:disabled,
     &.is-disabled {
         border-color: palette(grayscale, accent);
-        color: palette(grayscale, accent);
+        color: $btn-disabled-text-color;
     }
 }
 
