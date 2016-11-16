@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.17.1 (2016-11-16)
+* Fixes issue where grid-based preset layouts did not work on screens < 768px.
+
+- - -
+
 ## 0.17.0 (2016-11-07)
 * Updates the grid system to remove dependency on Susy. ([TNL-5781](https://openedx.atlassian.net/browse/TNL-5781))
 
