@@ -94,7 +94,6 @@ info: These are the predefined colors used throughout our patterns. Each color i
     <div class="example-container">
         <div class="grid-container grid-manual">
             <div class="row">
-                <div class="col col-2"></div>
                 <div class="col col-2 pre-2">
                     <div class="swatch">
                         <div class="color-info">
@@ -382,7 +381,6 @@ info: These are the predefined colors used throughout our patterns. Each color i
     <div class="example-container">
         <div class="grid-container grid-manual">
             <div class="row">
-                <div class="col col-2"></div>
                 <div class="col col-2 pre-2">
                     <div class="swatch">
                         <div class="color-info">
@@ -670,7 +668,6 @@ info: These are the predefined colors used throughout our patterns. Each color i
     <div class="example-container">
         <div class="grid-container grid-manual">
             <div class="row">
-                <div class="col col-2"></div>
                 <div class="col col-2 pre-2">
                     <div class="swatch">
                         <div class="color-info">
