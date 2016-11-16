@@ -334,7 +334,6 @@ $btn-small-font-size: font-size(small);
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        background: palette(primary, base);
         border-color: palette(grayscale, accent);
         color: palette(grayscale, accent);
     }
