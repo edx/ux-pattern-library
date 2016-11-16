@@ -346,7 +346,7 @@ info:               A responsive, mobile first fluid grid system based on Flexbo
             </div>
         </div>
     </div>
-</div
+</div>
 
 <h3 class="hd-6 example-set-hd">Utility Class-based Responsive Grid</h3>
 
