@@ -93,7 +93,7 @@ info:          Buttons should be used for performing actions within the edX envi
         <button type="button" class="btn-inverse">Inverse</button>
         <button type="button" class="btn-inverse btn-large">Inverse Large</button>
         <button type="button" class="btn-inverse btn-small">Inverse Small</button>
-        <button type="button" class="btn" disabled>Base Disabled</button>
+        <button type="button" class="btn-inverse" disabled>Inverse Disabled</button>
     </div>
 </div>
 
@@ -106,6 +106,7 @@ info:          Buttons should be used for performing actions within the edX envi
 </div>
 
 <h3 class="example-set-hd">Links without visual styling</h3>
+<p>To indicate 'read' or 'visited' links in content areas, use color Primary Dark.</p>
 <div class="example-set">
     <button type="button" class="btn-link">Link</button>
     <button type="button" class="btn-link btn-large">Link Large</button>

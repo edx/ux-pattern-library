@@ -334,13 +334,9 @@ $btn-small-font-size: font-size(small);
     // STATE: is disabled
     &:disabled,
     &.is-disabled {
-        border-color: palette(grayscale, back);
-        color: palette(grayscale, back);
-
-        &:hover {
-            border-color: palette(grayscale, back);
-            color: palette(grayscale, back);
-        }
+        background: palette(primary, base);
+        border-color: palette(grayscale, accent);
+        color: palette(grayscale, accent);
     }
 }
 
