@@ -43,14 +43,6 @@ info:          Buttons should be used for performing actions within the edX envi
     <button type="button" class="btn-brand" disabled>Primary Disabled</button>
 </div>
 
-<h3 class="example-set-hd">Elevated</h3>
-<div class="example-set">
-    <button type="button" class="btn-elevated">Elevated</button>
-    <button type="button" class="btn-elevated btn-large">Elevated Large</button>
-    <button type="button" class="btn-elevated btn-small">Elevated Small</button>
-    <button type="button" class="btn-elevated" disabled>Elevated Disabled</button>
-</div>
-
 <h3 class="example-set-hd">Buttons with icons</h3>
 <div class="example-set">
     <button type="button" class="btn">
@@ -64,10 +56,6 @@ info:          Buttons should be used for performing actions within the edX envi
     <button type="button" class="btn-brand">
         <span class="icon fa fa-comment" aria-hidden="true"></span>
         Brand
-    </button>
-    <button type="button" class="btn-elevated">
-        <span class="icon fa fa-comment" aria-hidden="true"></span>
-        Elevated
     </button>
 </div>
 
@@ -102,7 +90,6 @@ info:          Buttons should be used for performing actions within the edX envi
     <a href="http://ux.edx.org/" class="btn">View the UX Pattern Library</a>
     <a href="http://ux.edx.org/" class="btn-neutral">View the UX Pattern Library</a>
     <a href="http://ux.edx.org/" class="btn-brand">View the UX Pattern Library</a>
-    <a href="http://ux.edx.org/" class="btn-elevated">View the UX Pattern Library</a>
 </div>
 
 <h3 class="example-set-hd">Links without visual styling</h3>

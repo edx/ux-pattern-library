@@ -11,7 +11,6 @@
 // #NEUTRAL
 // #BRAND
 // #LINK
-// #ELEVATED
 // #INVERSE
 // #COMBO
 // #APPLICATION
@@ -81,6 +80,13 @@ $btn-small-font-size: font-size(small);
             margin-right: 0;
         }
     }
+
+    // Don't show underlines on links that are styled as buttons
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 
@@ -132,7 +138,7 @@ $btn-small-font-size: font-size(small);
     &:disabled,
     &.is-disabled {
         border-color: palette(grayscale, back);
-        color: palette(grayscale, back);
+        color: palette(grayscale, accent);
     }
 }
 
@@ -169,7 +175,7 @@ $btn-small-font-size: font-size(small);
     &.is-disabled {
         border-color: palette(grayscale, back);
         background: palette(grayscale, x-back);
-        color: palette(grayscale, back);
+        color: palette(grayscale, accent);
     }
 }
 
@@ -208,7 +214,7 @@ $btn-small-font-size: font-size(small);
     &.is-disabled {
         border-color: palette(grayscale, back);
         background: palette(grayscale, x-back);
-        color: palette(grayscale, back);
+        color: palette(grayscale, accent);
     }
 }
 
@@ -226,50 +232,16 @@ $btn-small-font-size: font-size(small);
     padding: 1px;
     background: $transparent;
 
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+
     &:disabled {
         // disabled links shouldn't be in the interface
         // plus, having them pass AA guidelines would make them no longer look disabled
         display: none;
-    }
-}
-
-
-// ----------------------------
-// #ELEVATED
-// ----------------------------
-%btn-elevated {
-    @extend %btn;
-    border-color: palette(primary, base);
-    box-shadow: inset 0 -3px 0 0 palette(primary, dark);
-    background: palette(primary, base);
-    color: palette(primary, x-back);
-
-    // STATE: hover and focus
-    &:hover,
-    &.is-hovered,
-    &:focus,
-    &.is-focused {
-        box-shadow: inset 0 -3px 0 0 palette(primary, base);
-        background: $btn-focus-color;
-        color: palette(primary, x-back);
-    }
-
-    // STATE: is pressed or active
-    &:active,
-    &.is-pressed,
-    &.is-active {
-        box-shadow: inset 0 3px 0 0 palette(primary, dark);
-        background: palette(primary, base);
-        color: palette(primary, back);
-    }
-
-    // STATE: is disabled
-    &:disabled,
-    &.is-disabled {
-        box-shadow: none;
-        border-color: palette(grayscale, back);
-        background: palette(grayscale, x-back);
-        color: palette(grayscale, back);
     }
 }
 
@@ -361,11 +333,6 @@ $btn-small-font-size: font-size(small);
 // link
 .btn-link {
     @extend %btn-link;
-}
-
-// elevated
-.btn-elevated {
-    @extend %btn-elevated;
 }
 
 // inverse
