@@ -2,6 +2,11 @@
 
 - - -
 
+## 0.18.0 (2016-11-17)
+* Accessibility updates to buttons. ([FEDX-231](https://openedx.atlassian.net/browse/FEDX-231))
+
+- - -
+
 ## 0.17.1 (2016-11-16)
 * Fixes issue where grid-based preset layouts did not work on screens < 768px.
 
