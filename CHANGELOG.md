@@ -1,6 +1,10 @@
 # Changelog
 
 - - -
+## 0.18.1 (2017-03-03)
+* Pin Bourbon to 4.2.x to avoid deprecation warnings.
+
+- - -
 
 ## 0.18.0 (2016-11-17)
 * Accessibility updates to buttons. ([FEDX-231](https://openedx.atlassian.net/browse/FEDX-231))
