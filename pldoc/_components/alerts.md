@@ -148,7 +148,7 @@ info:           When something goes wrong, alerts clarify an issue and/or notify
         <div class="alert-message">
             <p class="copy">
                 The total enrollment metric below now includes all students who
-                have ever registered for this course.
+                have ever registered for this course. asdfasdf
             </p>
         </div>
     </div>
