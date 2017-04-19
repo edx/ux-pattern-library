@@ -1,5 +1,7 @@
 # edX Pattern Library
 
+Testing approval process with Zappr
+
 The (working) UI library and Front End Styleguide for edX/Open edX applications and sites.
 
 [![GitHub version](https://badge.fury.io/gh/edx%2Fux-pattern-library.svg)](https://badge.fury.io/gh/edx%2Fux-pattern-library)
