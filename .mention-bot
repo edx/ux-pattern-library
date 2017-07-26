@@ -1,8 +1,0 @@
-{
-  "userBlacklist": [
-    "dan-f",
-    "talbs",
-    "peter-fogg"
-  ],
-  "skipAlreadyMentionedPR": true
-}
