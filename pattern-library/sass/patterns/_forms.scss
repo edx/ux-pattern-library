@@ -272,6 +272,44 @@ $input-width: (
 
 }
 
+.field-adaptive-placeholder {
+    padding-top: spacing-vertical(x-small);
+    position: relative;
+
+    .field-hint {
+        padding: rem($baseline/2);
+        margin: 0;
+        position: absolute;
+        top: spacing-vertical(x-small);
+        border: 1px solid transparent;
+        width: auto;
+        font-size: inherit !important;
+        color: palette(grayscale, base);
+        background-color: transparent;
+        pointer-events: none;
+        transition: margin 0.2s ease, font-size 0.2s ease, background-color 0.2s ease;
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .field-input:focus,
+    .field-input:valid {
+        & ~ .field-hint {
+            background-color: $white;
+            font-size: font-size(small) !important;
+            margin-top: (-$baseline / 2 - 2);
+            @include margin-left(rem($baseline / 2));
+            padding: 2px;
+        }
+    }
+
+    .input-alt ~ .field-hint {
+        padding: spacing-vertical(small) 0;
+    }
+}
 
 // ----------------------------
 // #SELECT

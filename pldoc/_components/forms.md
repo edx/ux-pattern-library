@@ -4,7 +4,7 @@ title:              Forms
 date:               2015-05-12 16:02:35
 
 categories:         component
-tags:               
+tags:
 - atomic
 - pattern
 - forms
@@ -15,17 +15,80 @@ url_documentation:  Styleguide:-Forms
 
 description:        These examples demonstrate how to use form controls within your application.  We've grouped the form controls by type and for each type, provided proper CSS classes to achieve the desired visual presentation. In some cases, we've created optional classes which enhance the presentation. All of the examples have been tested to be accessible. Theming is available as well so form controls can match your institutions look and feel.
 
-info:               Forms allow users to interact with the interface, set preferences, and enter any necessary personal information. They also form the base of individual exercises within each class. The examples below demonstrate how to use each type of form control and provides any applicable display options. Note the markup in each case to get a sense of semantics and structure.
+info: |
+    Forms allow users to interact with the interface, set preferences, and enter any necessary personal information. They also form the base of individual exercises within each class. The examples below demonstrate how to use each type of form control and provides any applicable display options. Note the markup in each case to get a sense of semantics and structure.
+    </p><p class="copy-base">
+    For form fields where you would like to provide guidance to the user via placeholder, an adaptive placeholder which persists through input is available. However, this feature currently incompatible with form fields that use HTML5 validation (eg.g, <code>required</code>, <code>pattern="\d+"</code>, <code>type="email"</code>, etc). For this reason, the legacy placeholder pattern (HTML <code>placeholder</code> attribute in addition to a visible, persistent label) is also available.
 
 ---
 
-<h4 class="hd-6 example-set-hd">Text inputs</h4>
+<h4 class="hd-6 example-set-hd">Text inputs (adaptive placeholder)</h4>
 <div class="example-set">
     <form class="form">
         <fieldset class="form-group">
             <legend class="form-group-hd sr-only">Personal Details</legend>
             <div class="field">
-                <label class="field-label" for="full-name-default">Your name (default text field)</label>
+                <label class="field-label" for="full-name-adaptive">Your name (adaptive placeholder, best for accessibility)</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text" type="text" id="full-name-adaptive" name="full-name-adaptive" aria-describedby="full-name-adaptive-hint" required>
+                    <div class="field-hint" id="full-name-adaptive-hint">
+                        <p>Example: Jane Doe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="field-label" for="full-name-simple">Your name (simple text field)</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text input-alt" type="text" id="full-name-simple" name="full-name-simple" aria-describedby="full-name-simple-hint" required>
+                    <div class="field-hint" id="full-name-simple-hint">
+                        <p>Example: Jane Doe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="field-label" for="full-name-simple-error">Your name (simple text field, error)</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text input-alt has-error" type="text" id="full-name-simple-error" name="full-name-simple-error" aria-describedby="full-name-simple-error-hint" value="JD" required>
+                    <div class="field-hint" id="full-name-simple-error-hint">
+                        <p>Example: Jane Doe</p>
+                    </div>
+                </div>
+                <div class="field-message has-error">
+                    <span class="field-message-content">
+                        You must provide your real name.
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <label class="field-label" for="full-name-simple-success">Your name (simple text field, success)</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text input-alt has-success" type="text" id="full-name-simple-success" name="full-name-simple-success" aria-describedby="full-name-simple-success-hint" value="Jane Doe" required>
+                    <div class="field-hint" id="full-name-simple-success-hint">
+                        <p>Example: Jane Doe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="field-label" for="full-name-simple-disabled">Your name (disabled simple text field)</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text input-alt" type="text" id="full-name-simple-disabled" name="full-name-simple-disabled" aria-describedby="full-name-simple-disabled-hint" required disabled>
+                    <div class="field-hint" id="full-name-simple-disabled-hint">
+                        <p>Example: Jane Doe</p>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<h4 class="hd-6 example-set-hd">Text inputs (legacy placeholders)</h4>
+<div class="example-set">
+    <form class="form">
+        <p class="copy-base">
+            Form fields with validation must use legacy placeholders. Create a visible label and link it to the input using an <code>aria</code> attribute.
+        </p>
+        <fieldset class="form-group">
+            <div class="field">
+                <label class="field-label" for="full-name-default">Your name (legacy text field with placeholder <i>and</i> visible label)</label>
                 <input class="field-input input-text" type="text" id="full-name-default" name="full-name-default" placeholder="e.g. Jane Doe" aria-describedby="full-name-default-hint">
                 <div class="field-hint" id="full-name-default-hint">
                     <p>Example: Jane Doe</p>
@@ -47,8 +110,8 @@ info:               Forms allow users to interact with the interface, set prefer
             </div>
             <div class="field">
                 <label class="field-label field-required" for="email-address-default-error-hint">Email address (default, has error)</label>
-                <input class="field-input input-text has-error" type="email" id="email-address-default-error-hint" name="email-address-default-error-hint" placeholder="e.g. jane@email.com" value="jane@domain" required>
-                <div class="field-message has-error">
+                <input class="field-input input-text has-error" type="email" id="email-address-default-error-hint" name="email-address-default-error-hint" placeholder="e.g. jane@email.com" value="jane@domain" aria-describedby="email-address-default-error-hint" required>
+                <div class="field-message has-error" id="email-address-default-error-hint">
                     <span class="field-message-content">
                         You must provide a valid, properly-formed email address.
                     </span>
@@ -56,34 +119,10 @@ info:               Forms allow users to interact with the interface, set prefer
             </div>
             <div class="field">
                 <label class="field-label field-required" for="email-address-default-succuess-helper">Email address (default, has success)</label>
-                <input class="field-input input-text has-success" type="email" id="email-address-default-succuess-helper" name="email-address-default-succuess-hint" placeholder="e.g. jane@email.com" value="jane@domain.com" aria-describedby="email-address-default-succuess-hint" required>
-                <div class="field-hint" id="email-address-default-succuess-hint">
+                <input class="field-input input-text has-success" type="email" id="email-address-default-succuess-helper" name="email-address-default-succuess-hint" placeholder="e.g. jane@email.com" value="jane@domain.com" aria-describedby="email-address-default-success-hint" required>
+                <div class="field-hint" id="email-address-default-success-hint">
                     <p>Your email address will never be shared. We promise.</p>
                 </div>
-            </div>
-            <div class="field">
-                <label class="field-label" for="full-name-simple">Your name (simple text field)</label>
-                <input class="field-input input-text input-alt" type="text" id="full-name-simple" name="full-name-simple" placeholder="e.g. Jane Doe" aria-describedby="full-name-simple-hint" required>
-                <div class="field-hint" id="full-name-simple-hint">
-                    <p>Example: Jane Doe</p>
-                </div>
-            </div>
-            <div class="field">
-                <label class="field-label" for="full-name-simple-error">Your name (simple text field, error)</label>
-                <input class="field-input input-text input-alt has-error" type="text" id="full-name-simple-error" name="full-name-simple-error" placeholder="e.g. Jane Doe" value="JD" required>
-                <div class="field-message has-error">
-                    <span class="field-message-content">
-                        You must provide your real name.
-                    </span>
-                </div>
-            </div>
-            <div class="field">
-                <label class="field-label" for="full-name-simple-success">Your name (simple text field, success)</label>
-                <input class="field-input input-text input-alt has-success" type="text" id="full-name-simple-success" name="full-name-simple-success" placeholder="e.g. Jane Doe" value="Jane Doe" required>
-            </div>
-            <div class="field">
-                <label class="field-label" for="full-name-simple-disabled">Your name (disabled simple text field)</label>
-                <input class="field-input input-text input-alt" type="text" id="full-name-simple-disabled" name="full-name-simple-disabled" placeholder="e.g. Jane Doe" required disabled>
             </div>
         </fieldset>
     </form>
@@ -95,26 +134,28 @@ info:               Forms allow users to interact with the interface, set prefer
         <fieldset class="form-group">
             <legend class="form-group-hd sr-only">Search examples</legend>
             <div class="field">
-                <label class="field-label" for="search-01">Search (with visible label)</label>
-                <input class="field-input input-text" type="search" id="search-01" name="search-01" placeholder="Search this website">
-                <button class="btn-brand btn-small" type="button">Search</button>
-            </div>
-            <div class="field">
-                <label class="field-label sr-only" for="search-02">Search</label>
-                <input class="field-input input-text" type="search" id="search-02" name="search-02" placeholder="Search this website" aria-describedby="search-02-hint">
-                <button class="btn-brand btn-small" type="button">Search</button>
-                <div class="field-hint" id="search-02-hint">
-                    <p>(This field has a label that's hidden yet still accessible.)</p>
+                <label class="field-label" for="search-01">Search</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text" type="search" id="search-01" name="search-01" aria-describedby="search-01-hint" required>
+                    <button class="btn-brand btn-small" type="button">Search</button>
+                    <div class="field-hint" id="search-01-hint">
+                        <p>Search this website</p>
+                    </div>
                 </div>
             </div>
             <div class="field">
-                <label class="field-label" for="search-03">Search (with visible label and icon)</label>
-                <input class="field-input input-text" type="search" id="search-03" name="search-03" placeholder="Search this website">
-                <button class="btn-brand btn-small" type="button">
-                    <span class="icon fa fa-search" aria-hidden="true">
-                        <span class="sr-only">Search</span>
-                    </span>
-                </button>
+                <label class="field-label" for="search-01">Search (with icon)</label>
+                <div class="field-adaptive-placeholder">
+                    <input class="field-input input-text" type="search" id="search-03" name="search-03" aria-describedby="search-03-hint" required>
+                    <button class="btn-brand btn-small" type="button">
+                        <span class="icon fa fa-search" aria-hidden="true">
+                            <span class="sr-only">Search</span>
+                        </span>
+                    </button>
+                    <div class="field-hint" id="search-03-hint">
+                        <p>Search this website</p>
+                    </div>
+                </div>
             </div>
         </fieldset>
     </form>
