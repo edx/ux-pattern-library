@@ -9,6 +9,20 @@
 // ----------------------------
 // FUNCTIONS
 // ----------------------------
+// Verbatim port of Bourbon 4's rem function, which has been
+// deprecated.
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $em-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+
 // get colors from defined palettes map values
 @function palette($palette, $tone: 'base') {
     @return map-get(map-get($palettes, $palette), $tone);
