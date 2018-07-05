@@ -3,6 +3,5 @@
 
 nick: uxpl
 oeps: {}
-openedx-release: {ref: master}
 owner: edx/edx-ux-team
 track-pulls: true
