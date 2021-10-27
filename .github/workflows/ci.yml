@@ -1,0 +1,42 @@
+name: node_js CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  run_tests:
+    name: Node Tests
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node: [4, 6]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version:  ${{ matrix.node }}
+
+      - name: Install Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Bundle Install
+        run: bundle install
+
+      - name: Run Gulp Build
+        run: gulp build-production
+
+      - name: Run Gulp Lint
+        run: gulp lint
