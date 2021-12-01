@@ -2,7 +2,6 @@
 .bowerrc
 .gitignore
 .pr_cover_letter.md.j2
-.travis.yml
 CNAME
 Gemfile
 Gemfile.lock
