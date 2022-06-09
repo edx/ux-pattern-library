@@ -12,4 +12,4 @@ The Pattern Library is an open source project that is hosted on
 
 [![edX Pattern Library](https://nodei.co/npm/edx-pattern-library.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/edx-pattern-library/)
 
-You can read more on the [edX Front End Development wiki](https://openedx.atlassian.net/wiki/display/FEDX/).
+You can read more on the [edX Front End Development wiki](https://2u-internal.atlassian.net/wiki/spaces/FEDX/overview).
