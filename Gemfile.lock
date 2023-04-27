@@ -118,7 +118,7 @@ GEM
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
     tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (~> 1.0) 
 
 PLATFORMS
   ruby
