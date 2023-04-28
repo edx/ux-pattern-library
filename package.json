@@ -23,7 +23,7 @@
     "bourbon": "~4.2.7",
     "breakpoint-sass": "^2.6.1",
     "font-awesome": "^4.6.3",
-    "jquery": "^1.11.1",
+    "jquery": "^3.5.0",
     "requirejs": "^2.1.22",
     "requirejs-plugins": "^1.0.2"
   },
