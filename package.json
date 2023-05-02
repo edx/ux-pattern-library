@@ -44,7 +44,7 @@
     "gulp-notify": "*",
     "gulp-shell": "^0.5.2",
     "gulp-util": "*",
-    "node-sass": "^3.10.0",
+    "node-sass": "^8.0.0",
     "pretty-hrtime": "^1.0.2",
     "require-dir": "*",
     "sass-loader": "~4.0.2",
