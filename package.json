@@ -34,7 +34,7 @@
     "backbone": "*",
     "css-loader": "~0.23.1",
     "del": "*",
-    "edx-ui-toolkit": "^1.5.3",
+    "edx-ui-toolkit": "^1.5.4",
     "eslint": "~8.39.0",
     "eslint-config-edx": "~4.0.4",
     "extract-text-webpack-plugin": "^1.0.1",
