@@ -8,7 +8,7 @@ var path = require('path'),
 
     // Config specifically for webpack-dev-server (appended to main config in local development)
     devServerConfig = {
-        // enables Hot Module Replacement (https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
+        // enables Hot Module Replacement (https://webpack.js.org/guides/hot-module-replacement/)
         hot: true,
         publicPath: '/public',
 
@@ -41,7 +41,7 @@ var path = require('path'),
 
                 // Webpack 'chunks' are a loading mechanism for common code, more chunks can improve perf (esp. with H2)
                 // There is more optimization to be done here! For more see:
-                // https://webpack.github.io/docs/code-splitting.html
+                // https://webpack.js.org/guides/code-splitting/
                 chunkFilename: 'chunk.[id].js'
             },
             entry: {
@@ -102,7 +102,7 @@ var path = require('path'),
         // In prod mode, we disable HMR and use ExtractTextPlugin to generate .css files, avoiding a FOUC
         if (options.debug) {
             // For more on this WDS/HMR configuration, see:
-            // http://webpack.github.io/docs/webpack-dev-server.html#hot-module-replacement
+            // https://webpack.js.org/guides/hot-module-replacement/
             wpconfig.entry['pattern-library-doc'] = [].concat(
                 'webpack-dev-server/client?http://localhost:8080',
                 'webpack/hot/only-dev-server',
